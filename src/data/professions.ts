@@ -1,0 +1,68 @@
+import type { ProfessionInfo } from '../types';
+
+export const professionList: ProfessionInfo[] = [
+  {
+    id: 'service',
+    name: '服务业员工',
+    icon: 'Handshake',
+    color: '#E8A87C',
+    bg: 'bg-[#FDF0E6]/60',
+    description: '酒店、餐饮、零售等一线服务行业从业者',
+  },
+  {
+    id: 'student',
+    name: '学生',
+    icon: 'GraduationCap',
+    color: '#6B9AC4',
+    bg: 'bg-[#E8F0F8]/60',
+    description: '在校大学生或研究生',
+  },
+  {
+    id: 'office',
+    name: '职场白领',
+    icon: 'Briefcase',
+    color: '#8E7CC3',
+    bg: 'bg-[#F0ECF8]/60',
+    description: '企业办公室职员、中层管理者',
+  },
+  {
+    id: 'civil',
+    name: '公职人员',
+    icon: 'Building2',
+    color: '#5B8C5A',
+    bg: 'bg-[#E8F0E6]/60',
+    description: '政府机关、事业单位工作人员',
+  },
+  {
+    id: 'artist',
+    name: '文艺工作者',
+    icon: 'Palette',
+    color: '#D96459',
+    bg: 'bg-[#FBE8E6]/60',
+    description: '设计师、作家、音乐人、演员等创意从业者',
+  },
+  {
+    id: 'media',
+    name: '自媒体工作者',
+    icon: 'Camera',
+    color: '#C97BBF',
+    bg: 'bg-[#F8ECF6]/60',
+    description: '短视频创作者、博主、直播主播等',
+  },
+  {
+    id: 'teacher',
+    name: '教育工作者',
+    icon: 'BookOpen',
+    color: '#4A9FB0',
+    bg: 'bg-[#E6F4F6]/60',
+    description: '教师、教辅、培训讲师、学生辅导员等教育从业者',
+  },
+  {
+    id: 'doctor',
+    name: '医务工作者',
+    icon: 'Stethoscope',
+    color: '#3D85C6',
+    bg: 'bg-[#E6F0FA]/60',
+    description: '医生、护士、医技、药师等所有医护工作者',
+  },
+];
