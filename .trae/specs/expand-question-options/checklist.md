@@ -1,0 +1,10 @@
+- [x] student.ts 第3/5/9/17/18题各新增选项E，权重字段完整
+- [x] service.ts 第10题新增选项E，权重字段完整
+- [x] office.ts 第3/6题各新增选项E，权重字段完整
+- [x] civil.ts 第9/19题各新增选项E，权重字段完整
+- [x] artist.ts 第3/17题各新增选项E，权重字段完整
+- [x] media.ts 第1/6题各新增选项E，权重字段完整
+- [x] teacher.ts 第5/17题各新增选项E，权重字段完整
+- [x] doctor.ts 第3/19题各新增选项E，权重字段完整
+- [x] tsc --noEmit 类型检查通过，0错误
+- [x] vite build 构建成功，无报错

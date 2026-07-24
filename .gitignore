@@ -16,7 +16,10 @@ dist-ssr
 .vscode/*
 !.vscode/extensions.json
 .idea
-.trae/
+# 忽略 .trae/ 下的 IDE 缓存/状态，但保留 documents/ 与 specs/ 文档
+.trae/*
+!.trae/documents/
+!.trae/specs/
 .DS_Store
 *.suo
 *.ntvs*
