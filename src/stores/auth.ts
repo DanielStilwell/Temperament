@@ -22,6 +22,8 @@ interface AuthState {
   signOut: () => Promise<void>;
   // 清空错误
   clearError: () => void;
+  // 升级 tier（Pro→Max 等）
+  upgradeTier: (newTier: Exclude<AccountTier, 'free'>) => Promise<{ error: string | null }>;
 }
 
 // 把 supabase profiles 行映射为前端 Profile
@@ -139,4 +141,22 @@ export const useAuthStore = create<AuthState>((set, get) => ({
   },
 
   clearError: () => set({ error: null }),
+
+  upgradeTier: async (newTier) => {
+    const user = get().user;
+    if (!user) return { error: '未登录' };
+
+    const { error } = await supabase
+      .from('profiles')
+      .update({ tier: newTier, payment_status: 'paid', paid_at: new Date().toISOString() })
+      .eq('id', user.id);
+
+    if (error) {
+      console.error('[upgradeTier]', error);
+      return { error: error.message };
+    }
+
+    await get().fetchProfile();
+    return { error: null };
+  },
 }));

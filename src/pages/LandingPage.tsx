@@ -1,6 +1,7 @@
 import { useNavigate } from 'react-router-dom';
 import { Sparkles, Users, Target } from 'lucide-react';
 import Disclaimer from '../components/ui/Disclaimer';
+import { useAuthStore } from '../stores/auth';
 import type { AccountTier } from '../types/account';
 
 interface TierCardConfig {
@@ -61,13 +62,37 @@ const TIERS: TierCardConfig[] = [
 
 export default function LandingPage() {
   const navigate = useNavigate();
+  const { user, profile } = useAuthStore();
 
   const handleSelect = (tier: AccountTier) => {
     if (tier === 'free') {
       navigate('/free');
-    } else {
-      navigate(`/register/${tier}`);
+      return;
     }
+
+    // 已登录用户：根据当前 tier 决定行为
+    if (user && profile) {
+      const currentTier = profile.tier;
+
+      // 已是该版本或更高版本 → 直接进入工作台
+      if (currentTier === tier || (currentTier === 'max' && tier === 'pro')) {
+        navigate(`/${currentTier === 'max' ? 'max' : tier}`);
+        return;
+      }
+
+      // Pro → Max 升级：跳转升级页（补差价 $20）
+      if (currentTier === 'pro' && tier === 'max') {
+        navigate('/register/max?upgrade=true');
+        return;
+      }
+
+      // free → Pro/Max：跳转注册页（新购买）
+      navigate(`/register/${tier}`);
+      return;
+    }
+
+    // 未登录 → 注册页
+    navigate(`/register/${tier}`);
   };
 
   return (

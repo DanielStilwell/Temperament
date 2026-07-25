@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { useNavigate, Link } from 'react-router-dom';
+import { useNavigate, Link, useSearchParams } from 'react-router-dom';
 import { ArrowLeft, Sparkles, Loader2, Save, FileText } from 'lucide-react';
 import Button from '../components/ui/Button';
 import Disclaimer from '../components/ui/Disclaimer';
@@ -44,6 +44,7 @@ const THINKING_FIELDS: { key: keyof TaskParams['thinking']; label: string; left:
 
 export default function TaskBuilderPage() {
   const navigate = useNavigate();
+  const [searchParams] = useSearchParams();
   const [observers, setObservers] = useState<Observer[]>([]);
   const [loadingObservers, setLoadingObservers] = useState(true);
   const [name, setName] = useState('');
@@ -55,12 +56,21 @@ export default function TaskBuilderPage() {
   const [mode, setMode] = useState<'template' | 'custom'>('template');
   const [activeTemplateId, setActiveTemplateId] = useState<string | null>(TASK_TEMPLATES[0]?.id ?? null);
 
-  // 加载被观察者列表
+  // 加载被观察者列表，并应用 URL 中的预选成员
   useEffect(() => {
     (async () => {
       const list = await listObservers();
       setObservers(list);
       setLoadingObservers(false);
+
+      // 从 URL ?preselect=id1,id2,id3 接收预选成员
+      const preselect = searchParams.get('preselect');
+      if (preselect) {
+        const ids = preselect.split(',').filter((id) => list.some((o) => o.id === id));
+        if (ids.length > 0) {
+          setSelectedIds(ids);
+        }
+      }
     })();
   }, []);
 

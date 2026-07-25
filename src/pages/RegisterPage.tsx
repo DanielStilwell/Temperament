@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
-import { useNavigate, useParams, Link } from 'react-router-dom';
-import { ArrowLeft, Mail, Lock, User as UserIcon, AlertCircle, Loader2, CheckCircle2 } from 'lucide-react';
+import { useNavigate, useParams, Link, useSearchParams } from 'react-router-dom';
+import { ArrowLeft, Mail, Lock, User as UserIcon, AlertCircle, Loader2, CheckCircle2, ArrowUpCircle } from 'lucide-react';
 import Button from '../components/ui/Button';
 import Disclaimer from '../components/ui/Disclaimer';
 import { useAuthStore } from '../stores/auth';
@@ -11,10 +11,16 @@ const TIER_INFO: Record<Exclude<AccountTier, 'free'>, { name: string; price: str
   max: { name: 'Max 版', price: '$37', gradient: 'from-[#C9A86A] via-[#D4B575] to-[#E5C58A]' },
 };
 
+// 升级差价映射
+const UPGRADE_PRICE: Record<string, string> = {
+  'pro→max': '$20', // 补差价：37 - 17 = 20
+};
+
 export default function RegisterPage() {
   const { tier } = useParams<{ tier: string }>();
   const navigate = useNavigate();
-  const { signUp, loading, error, clearError } = useAuthStore();
+  const [searchParams] = useSearchParams();
+  const { signUp, upgradeTier, user, profile, loading: authLoading, error, clearError } = useAuthStore();
 
   const [nickname, setNickname] = useState('');
   const [email, setEmail] = useState('');
@@ -26,11 +32,24 @@ export default function RegisterPage() {
   const targetTier = (tier as Exclude<AccountTier, 'free'>) || 'pro';
   const info = TIER_INFO[targetTier] || TIER_INFO.pro;
 
+  // 升级模式检测：URL 有 ?upgrade=true 且当前已登录
+  const isUpgrade = searchParams.get('upgrade') === 'true' && !!user && !!profile;
+  const upgradeFrom = profile?.tier;
+  const upgradeKey = upgradeFrom ? `${upgradeFrom}→${targetTier}` : '';
+  const upgradePrice = UPGRADE_PRICE[upgradeKey] ?? info.price;
+
   useEffect(() => {
     if (targetTier !== 'pro' && targetTier !== 'max') {
       navigate('/', { replace: true });
     }
   }, [targetTier, navigate]);
+
+  // 升级模式下，已登录用户直接进入支付步骤
+  useEffect(() => {
+    if (isUpgrade && step === 'form') {
+      setStep('payment');
+    }
+  }, [isUpgrade, step]);
 
   const handleRegister = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -52,6 +71,16 @@ export default function RegisterPage() {
     // TODO: 接入连连国际后，改为调用后端 Edge Function 生成签名订单并跳转连连支付页
     // 当前模拟：等待 1.2s 后标记为已支付（仅用于开发联调，上线前必须移除）
     await new Promise((r) => setTimeout(r, 1200));
+
+    // 升级模式：支付成功后更新 tier
+    if (isUpgrade) {
+      const { error: upgradeError } = await upgradeTier(targetTier);
+      if (upgradeError) {
+        setPaying(false);
+        return;
+      }
+    }
+
     setPaying(false);
     setStep('done');
   };
@@ -70,12 +99,28 @@ export default function RegisterPage() {
 
         {/* 版本标识 */}
         <div className={`rounded-[20px] bg-gradient-to-br ${info.gradient} p-6 text-white text-center`}>
-          <h2 className="text-2xl font-bold mb-1" style={{ fontFamily: "'Nunito', 'PingFang SC', sans-serif" }}>
-            注册 {info.name}
-          </h2>
-          <p className="text-white/80 text-sm">
-            一次性付费 {info.price} · 永久权限
-          </p>
+          {isUpgrade ? (
+            <>
+              <div className="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center mx-auto mb-3">
+                <ArrowUpCircle className="w-5 h-5 text-white" />
+              </div>
+              <h2 className="text-2xl font-bold mb-1" style={{ fontFamily: "'Nunito', 'PingFang SC', sans-serif" }}>
+                升级到 {info.name}
+              </h2>
+              <p className="text-white/80 text-sm">
+                从 {TIER_INFO[upgradeFrom as 'pro']?.name ?? '免费版'} 升级 · 补差价 {upgradePrice} · 永久权限
+              </p>
+            </>
+          ) : (
+            <>
+              <h2 className="text-2xl font-bold mb-1" style={{ fontFamily: "'Nunito', 'PingFang SC', sans-serif" }}>
+                注册 {info.name}
+              </h2>
+              <p className="text-white/80 text-sm">
+                一次性付费 {info.price} · 永久权限
+              </p>
+            </>
+          )}
         </div>
 
         {step === 'form' && (
@@ -145,30 +190,54 @@ export default function RegisterPage() {
         {step === 'payment' && (
           <div className="rounded-[20px] bg-white/60 backdrop-blur-[10px] border border-white/50 p-6 flex flex-col gap-4 text-center">
             <div className="w-12 h-12 rounded-full bg-[#5B4FCF]/10 flex items-center justify-center mx-auto">
-              <Mail className="w-6 h-6 text-[#5B4FCF]" />
+              {isUpgrade ? (
+                <ArrowUpCircle className="w-6 h-6 text-[#5B4FCF]" />
+              ) : (
+                <Mail className="w-6 h-6 text-[#5B4FCF]" />
+              )}
             </div>
             <div>
-              <h3 className="text-lg font-bold text-[#3D3A5C] mb-1">注册成功，请完成支付</h3>
+              <h3 className="text-lg font-bold text-[#3D3A5C] mb-1">
+                {isUpgrade ? '请完成升级支付' : '注册成功，请完成支付'}
+              </h3>
               <p className="text-sm text-[#8E8CA8] leading-relaxed">
-                我们已向 <span className="font-medium text-[#3D3A5C]">{email}</span> 发送验证邮件。
-                <br />
-                支付 {info.price} 后即可永久使用 {info.name} 全部功能。
+                {isUpgrade ? (
+                  <>
+                    您当前为 {TIER_INFO[upgradeFrom as 'pro']?.name ?? '免费版'} 用户，
+                    升级到 {info.name} 需补差价 {upgradePrice}。
+                    <br />
+                    升级后被观察者上限从 60 位扩展至 160 位，并解锁任务预判功能。
+                  </>
+                ) : (
+                  <>
+                    我们已向 <span className="font-medium text-[#3D3A5C]">{email}</span> 发送验证邮件。
+                    <br />
+                    支付 {info.price} 后即可永久使用 {info.name} 全部功能。
+                  </>
+                )}
               </p>
             </div>
 
             <div className="rounded-2xl bg-[#5B4FCF]/5 border border-[#5B4FCF]/15 p-4 text-left">
-              <p className="text-xs text-[#5B4FCF] font-semibold mb-2">订单信息</p>
+              <p className="text-xs text-[#5B4FCF] font-semibold mb-2">
+                {isUpgrade ? '升级订单' : '订单信息'}
+              </p>
               <div className="flex justify-between text-sm text-[#3D3A5C] mb-1">
                 <span>版本</span>
-                <span className="font-medium">{info.name} · 永久权限</span>
+                <span className="font-medium">
+                  {isUpgrade
+                    ? `${TIER_INFO[upgradeFrom as 'pro']?.name ?? '免费版'} → ${info.name}`
+                    : `${info.name} · 永久权限`
+                  }
+                </span>
               </div>
               <div className="flex justify-between text-sm text-[#3D3A5C] mb-1">
                 <span>账号</span>
-                <span className="font-medium">{email}</span>
+                <span className="font-medium">{isUpgrade ? user?.email : email}</span>
               </div>
               <div className="flex justify-between text-base text-[#3D3A5C] mt-2 pt-2 border-t border-[#5B4FCF]/15">
                 <span className="font-semibold">应付金额</span>
-                <span className="font-bold text-[#5B4FCF]">{info.price} USD</span>
+                <span className="font-bold text-[#5B4FCF]">{upgradePrice} USD</span>
               </div>
             </div>
 
@@ -179,7 +248,7 @@ export default function RegisterPage() {
                   正在跳转支付...
                 </>
               ) : (
-                `使用连连国际支付 ${info.price}`
+                `使用连连国际支付 ${upgradePrice}`
               )}
             </Button>
 
@@ -197,9 +266,14 @@ export default function RegisterPage() {
               <CheckCircle2 className="w-7 h-7 text-green-600" />
             </div>
             <div>
-              <h3 className="text-xl font-bold text-[#3D3A5C] mb-2">支付完成，权限已开通</h3>
+              <h3 className="text-xl font-bold text-[#3D3A5C] mb-2">
+                {isUpgrade ? '升级完成，新权限已生效' : '支付完成，权限已开通'}
+              </h3>
               <p className="text-sm text-[#8E8CA8] leading-relaxed">
-                您的 {info.name} 已激活，现在可以开始管理团队被观察者。
+                {isUpgrade
+                  ? `您的${info.name}已激活，被观察者上限已扩展，任务预判功能已解锁。`
+                  : `您的${info.name}已激活，现在可以开始管理团队被观察者。`
+                }
               </p>
             </div>
             <Button variant="primary" size="lg" fullWidth onClick={handleEnterWorkspace}>
