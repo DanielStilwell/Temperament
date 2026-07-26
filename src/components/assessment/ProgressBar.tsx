@@ -10,7 +10,7 @@ export default function ProgressBar({ current, total }: ProgressBarProps) {
     <div className="w-full">
       <div className="flex items-center justify-between mb-2">
         <span className="text-xs font-medium text-[#8E8CA8]">
-          第 {current + 1} / {total} 题
+          Q {current + 1} / {total}
         </span>
         <span className="text-xs font-semibold text-[#5B4FCF]">{percentage}%</span>
       </div>

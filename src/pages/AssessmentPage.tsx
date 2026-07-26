@@ -50,7 +50,7 @@ export default function AssessmentPage() {
   if (!scenarios || scenarios.length === 0) {
     return (
       <div className="min-h-screen flex items-center justify-center text-[#8E8CA8]">
-        加载中...
+        Loading...
       </div>
     );
   }
@@ -95,7 +95,7 @@ export default function AssessmentPage() {
   if (!scenario) {
     return (
       <div className="min-h-screen flex items-center justify-center text-[#8E8CA8]">
-        加载中...
+        Loading...
       </div>
     );
   }

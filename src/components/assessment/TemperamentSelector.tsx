@@ -13,34 +13,34 @@ interface TemperamentSelectorProps {
 }
 
 const temperamentOptions: { id: TemperamentType; name: string; desc: string; color: string }[] = [
-  { id: 'sanguine', name: '多血质', desc: '活泼外向、反应迅速', color: '#E8A87C' },
-  { id: 'choleric', name: '胆汁质', desc: '果断热情、行动力强', color: '#D96459' },
-  { id: 'phlegmatic', name: '黏液质', desc: '稳重安静、情绪稳定', color: '#6B9AC4' },
-  { id: 'melancholic', name: '抑郁质', desc: '敏感细腻、思考深入', color: '#8E7CC3' },
+  { id: 'sanguine', name: 'Sanguine', desc: 'Sociable, quick response', color: '#E8A87C' },
+  { id: 'choleric', name: 'Choleric', desc: 'Decisive, strong drive', color: '#D96459' },
+  { id: 'phlegmatic', name: 'Phlegmatic', desc: 'Calm, emotionally stable', color: '#6B9AC4' },
+  { id: 'melancholic', name: 'Melancholic', desc: 'Sensitive, deep thinker', color: '#8E7CC3' },
 ];
 
 const behaviorOptions = [
-  { id: 'proactive', name: '积极主动', desc: '主动采取行动，不等待观望' },
-  { id: 'rational', name: '理性分析', desc: '冷静思考，权衡利弊' },
-  { id: 'collaborative', name: '沟通协作', desc: '寻求他人支持，共同解决' },
-  { id: 'creative', name: '创新突破', desc: '尝试新方法，不拘泥常规' },
+  { id: 'proactive', name: 'Proactive', desc: 'Takes initiative, not waiting' },
+  { id: 'rational', name: 'Rational Analysis', desc: 'Calm thinking, weighing pros & cons' },
+  { id: 'collaborative', name: 'Collaborative', desc: 'Seeks support, solves together' },
+  { id: 'creative', name: 'Innovative', desc: 'Tries new methods, breaks conventions' },
 ];
 
 const abilityOptions: { id: AbilityDimension; name: string }[] = [
-  { id: 'communication', name: '沟通力' },
-  { id: 'leadership', name: '领导力' },
-  { id: 'creativity', name: '创造力' },
-  { id: 'analysis', name: '分析力' },
-  { id: 'resilience', name: '抗压力' },
-  { id: 'empathy', name: '同理心' },
+  { id: 'communication', name: 'Communication' },
+  { id: 'leadership', name: 'Leadership' },
+  { id: 'creativity', name: 'Creativity' },
+  { id: 'analysis', name: 'Analysis' },
+  { id: 'resilience', name: 'Resilience' },
+  { id: 'empathy', name: 'Empathy' },
 ];
 
 const emotionOptions = [
-  { id: 'positive', name: '正面积极', color: '#4CAF50' },
-  { id: 'neutral', name: '中性客观', color: '#9E9E9E' },
-  { id: 'negative', name: '消极回避', color: '#FF9800' },
-  { id: 'anxious', name: '焦虑内耗', color: '#F44336' },
-  { id: 'unknown', name: '不确定/难以判断', color: '#8E8CA8' },
+  { id: 'positive', name: 'Positive', color: '#4CAF50' },
+  { id: 'neutral', name: 'Neutral', color: '#9E9E9E' },
+  { id: 'negative', name: 'Negative/Avoidant', color: '#FF9800' },
+  { id: 'anxious', name: 'Anxious', color: '#F44336' },
+  { id: 'unknown', name: 'Uncertain', color: '#8E8CA8' },
 ];
 
 export default function TemperamentSelector({ onSelect }: TemperamentSelectorProps) {
@@ -73,14 +73,14 @@ export default function TemperamentSelector({ onSelect }: TemperamentSelectorPro
   return (
     <div className="fixed inset-0 bg-black/30 backdrop-blur-sm flex items-center justify-center p-4 z-50 overflow-y-auto">
       <div className="w-full max-w-[440px] rounded-[24px] bg-white p-5 shadow-xl my-4">
-        <h3 className="text-lg font-bold text-[#3D3A5C] mb-1">综合评价这个行为倾向</h3>
-        <p className="text-sm text-[#8E8CA8] mb-4">请根据被观察者的真实情况进行判断</p>
+        <h3 className="text-lg font-bold text-[#3D3A5C] mb-1">Evaluate this behavioral tendency</h3>
+        <p className="text-sm text-[#8E8CA8] mb-4">Judge based on the observer's real situation</p>
 
         {/* 气质类型 */}
         <div className="mb-4">
           <h4 className="text-sm font-semibold text-[#5A5880] mb-2 flex items-center gap-2">
             <span className="w-1.5 h-1.5 rounded-full bg-[#5B4FCF]" />
-            气质类型 <span className="text-[#F44336]">*</span>
+            Temperament Type <span className="text-[#F44336]">*</span>
           </h4>
           <div className="grid grid-cols-2 gap-2">
             {temperamentOptions.map((opt) => (
@@ -109,7 +109,7 @@ export default function TemperamentSelector({ onSelect }: TemperamentSelectorPro
         <div className="mb-4">
           <h4 className="text-sm font-semibold text-[#5A5880] mb-2 flex items-center gap-2">
             <span className="w-1.5 h-1.5 rounded-full bg-[#5B4FCF]" />
-            行为倾向 <span className="text-xs text-[#8E8CA8]">（可多选）</span>
+            Behavioral Tendency <span className="text-xs text-[#8E8CA8]">(multiple)</span>
           </h4>
           <div className="grid grid-cols-2 gap-2">
             {behaviorOptions.map((opt) => (
@@ -133,7 +133,7 @@ export default function TemperamentSelector({ onSelect }: TemperamentSelectorPro
         <div className="mb-4">
           <h4 className="text-sm font-semibold text-[#5A5880] mb-2 flex items-center gap-2">
             <span className="w-1.5 h-1.5 rounded-full bg-[#5B4FCF]" />
-            突出能力 <span className="text-xs text-[#8E8CA8]">（可多选）</span>
+            Key Abilities <span className="text-xs text-[#8E8CA8]">(multiple)</span>
           </h4>
           <div className="flex flex-wrap gap-2">
             {abilityOptions.map((opt) => (
@@ -156,7 +156,7 @@ export default function TemperamentSelector({ onSelect }: TemperamentSelectorPro
         <div className="mb-5">
           <h4 className="text-sm font-semibold text-[#5A5880] mb-2 flex items-center gap-2">
             <span className="w-1.5 h-1.5 rounded-full bg-[#5B4FCF]" />
-            情绪态度 <span className="text-[#F44336]">*</span>
+            Emotional Tone <span className="text-[#F44336]">*</span>
           </h4>
           <div className="flex flex-wrap gap-2">
             {emotionOptions.map((opt) => (
@@ -185,14 +185,14 @@ export default function TemperamentSelector({ onSelect }: TemperamentSelectorPro
             })}
             className="flex-1 py-3 rounded-full border-2 border-[#E8E6F5] text-[#8E8CA8] font-semibold transition-all hover:bg-[#F5F3FF]"
           >
-            跳过（自动分析）
+            Skip (auto-analyze)
           </button>
           <button
             onClick={handleConfirm}
             disabled={!isValid}
             className="flex-1 py-3 rounded-full bg-[#5B4FCF] text-white font-semibold transition-all hover:bg-[#4B3FBF] disabled:opacity-40 disabled:cursor-not-allowed"
           >
-            确认评价
+            Confirm
           </button>
         </div>
       </div>

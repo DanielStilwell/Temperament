@@ -13,6 +13,7 @@ import ProWorkspace from './pages/ProWorkspace';
 import MaxWorkspace from './pages/MaxWorkspace';
 import TaskBuilderPage from './pages/TaskBuilderPage';
 import TaskResultPage from './pages/TaskResultPage';
+import PaymentCallbackPage from './pages/PaymentCallbackPage';
 import AuthGuard from './components/workspace/AuthGuard';
 
 export default function App() {
@@ -31,6 +32,9 @@ export default function App() {
           {/* 注册/登录 */}
           <Route path="/register/:tier" element={<RegisterPage />} />
           <Route path="/login" element={<LoginPage />} />
+
+          {/* 支付回调 */}
+          <Route path="/payment-callback" element={<PaymentCallbackPage />} />
 
           {/* Pro 工作台 */}
           <Route path="/pro" element={<ProWorkspace />} />

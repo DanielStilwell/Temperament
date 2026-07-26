@@ -13,18 +13,18 @@ import type { TaskRecord } from '../types/account';
 import type { AbilityDimension } from '../types';
 
 const ABILITY_LABELS: Record<AbilityDimension, string> = {
-  communication: '沟通',
-  leadership: '领导',
-  creativity: '创造',
-  analysis: '分析',
-  resilience: '抗压',
-  empathy: '共情',
+  communication: 'Communication',
+  leadership: 'Leadership',
+  creativity: 'Creativity',
+  analysis: 'Analysis',
+  resilience: 'Resilience',
+  empathy: 'Empathy',
 };
 
 const RISK_COLORS = {
-  yellow: { bg: 'bg-amber-50/70', border: 'border-amber-200/60', text: 'text-amber-700', label: '轻微风险' },
-  orange: { bg: 'bg-orange-50/70', border: 'border-orange-200/60', text: 'text-orange-700', label: '明显风险' },
-  red: { bg: 'bg-red-50/70', border: 'border-red-200/60', text: 'text-red-700', label: '严重风险' },
+  yellow: { bg: 'bg-amber-50/70', border: 'border-amber-200/60', text: 'text-amber-700', label: 'Low' },
+  orange: { bg: 'bg-orange-50/70', border: 'border-orange-200/60', text: 'text-orange-700', label: 'Medium' },
+  red: { bg: 'bg-red-50/70', border: 'border-red-200/60', text: 'text-red-700', label: 'High' },
 };
 
 export default function TaskResultPage() {
@@ -44,7 +44,7 @@ export default function TaskResultPage() {
 
   const handleDelete = async () => {
     if (!task) return;
-    if (!confirm(`确认删除任务「${task.name}」？`)) return;
+    if (!confirm(`Confirm delete task "${task.name}"?`)) return;
     setDeleting(true);
     try {
       await deleteTask(task.id);
@@ -65,8 +65,8 @@ export default function TaskResultPage() {
   if (!task) {
     return (
       <div className="min-h-screen flex flex-col items-center justify-center gap-3">
-        <p className="text-sm text-[#8E8CA8]">未找到该任务</p>
-        <Link to="/max" className="text-sm text-[#5B4FCF] hover:underline">返回 Max 工作台</Link>
+        <p className="text-sm text-[#8E8CA8]">Task not found</p>
+        <Link to="/max" className="text-sm text-[#5B4FCF] hover:underline">Back to Max Workspace</Link>
       </div>
     );
   }
@@ -80,7 +80,7 @@ export default function TaskResultPage() {
 
   // 完成概率配色
   const probColor = p.completionProbability >= 70 ? '#5B8C5A' : p.completionProbability >= 40 ? '#C9A86A' : '#D96459';
-  const probLabel = p.completionProbability >= 70 ? '完成前景良好' : p.completionProbability >= 40 ? '存在一定风险' : '完成前景堪忧';
+  const probLabel = p.completionProbability >= 70 ? 'Good prospects' : p.completionProbability >= 40 ? 'Moderate risk' : 'Poor prospects';
 
   return (
     <div className="min-h-screen p-4 pb-10">
@@ -88,7 +88,7 @@ export default function TaskResultPage() {
         <div className="flex items-center justify-between">
           <Link to="/max" className="inline-flex items-center gap-1.5 text-sm text-[#8E8CA8] hover:text-[#5B4FCF] transition-colors">
             <ArrowLeft className="w-4 h-4" />
-            返回 Max 工作台
+            Back to Max Workspace
           </Link>
           <button
             onClick={handleDelete}
@@ -96,7 +96,7 @@ export default function TaskResultPage() {
             className="inline-flex items-center gap-1.5 text-sm text-red-500 hover:text-red-600 transition-colors disabled:opacity-40"
           >
             {deleting ? <Loader2 className="w-4 h-4 animate-spin" /> : <Trash2 className="w-4 h-4" />}
-            删除任务
+            Delete Task
           </button>
         </div>
 
@@ -104,19 +104,19 @@ export default function TaskResultPage() {
         <div className="rounded-[20px] bg-gradient-to-br from-[#C9A86A] via-[#D4B575] to-[#E5C58A] p-6 text-white">
           <div className="flex items-center gap-2 mb-1">
             <Target className="w-4 h-4" />
-            <span className="text-xs text-white/80">任务预判结果</span>
+            <span className="text-xs text-white/80">Task Prediction Result</span>
           </div>
           <h2 className="text-2xl font-bold mb-1" style={{ fontFamily: "'Nunito', 'PingFang SC', sans-serif" }}>
             {task.name}
           </h2>
           <p className="text-white/85 text-sm">
-            基于选中的 {task.teamConfig.selectedObserverIds.length} 位被观察者的气质与能力维度预判
+            Based on {task.teamConfig.selectedObserverIds.length} selected observers' temperament and ability dimensions
           </p>
         </div>
 
         {/* 完成概率 */}
         <div className="rounded-[20px] bg-white/60 backdrop-blur-[10px] border border-white/50 p-6 text-center">
-          <div className="text-xs text-[#8E8CA8] mb-2">完成概率预估</div>
+          <div className="text-xs text-[#8E8CA8] mb-2">Completion Probability</div>
           <div className="text-5xl font-bold mb-2" style={{ color: probColor }}>
             {p.completionProbability}%
           </div>
@@ -124,16 +124,16 @@ export default function TaskResultPage() {
             {probLabel}
           </div>
           <div className="mt-3 text-xs text-[#8E8CA8] leading-relaxed max-w-md mx-auto">
-            整体适配度 {p.overallFit} · 难度系数 {task.params.base.difficulty} · 时间压力 {task.params.base.timePressure} · 风险容忍度 {task.params.base.riskTolerance}
+            Fit Score {p.overallFit} · Difficulty {task.params.base.difficulty} · Time Pressure {task.params.base.timePressure} · Risk Tolerance {task.params.base.riskTolerance}
           </div>
         </div>
 
         {/* 适配度雷达图 */}
         <div className="rounded-[20px] bg-white/60 backdrop-blur-[10px] border border-white/50 p-5">
-          <h3 className="text-base font-bold text-[#3D3A5C] mb-2">能力适配度雷达图</h3>
+          <h3 className="text-base font-bold text-[#3D3A5C] mb-2">Fit Radar Chart</h3>
           <p className="text-xs text-[#8E8CA8] mb-3">
-            <span className="inline-block w-3 h-0.5 bg-[#C9A86A] align-middle mr-1" />任务要求
-            <span className="inline-block w-3 h-0.5 bg-[#5B4FCF] align-middle mr-1 ml-3" />团队实际
+            <span className="inline-block w-3 h-0.5 bg-[#C9A86A] align-middle mr-1" />Task Requirements
+            <span className="inline-block w-3 h-0.5 bg-[#5B4FCF] align-middle mr-1 ml-3" />Team Actual
           </p>
           <div className="h-80">
             <ResponsiveContainer width="100%" height="100%">
@@ -141,8 +141,8 @@ export default function TaskResultPage() {
                 <PolarGrid stroke="#E8E6F5" />
                 <PolarAngleAxis dataKey="dimension" tick={{ fill: '#3D3A5C', fontSize: 13 }} />
                 <PolarRadiusAxis domain={[0, 100]} tick={{ fill: '#8E8CA8', fontSize: 10 }} />
-                <Radar name="任务要求" dataKey="required" stroke="#C9A86A" strokeWidth={2} fill="#C9A86A" fillOpacity={0.15} />
-                <Radar name="团队实际" dataKey="actual" stroke="#5B4FCF" strokeWidth={2} fill="#5B4FCF" fillOpacity={0.3} />
+                <Radar name="Task Requirements" dataKey="required" stroke="#C9A86A" strokeWidth={2} fill="#C9A86A" fillOpacity={0.15} />
+                <Radar name="Team Actual" dataKey="actual" stroke="#5B4FCF" strokeWidth={2} fill="#5B4FCF" fillOpacity={0.3} />
               </RechartsRadar>
             </ResponsiveContainer>
           </div>
@@ -153,7 +153,7 @@ export default function TaskResultPage() {
           <div className="rounded-[20px] bg-white/60 backdrop-blur-[10px] border border-white/50 p-5">
             <div className="flex items-center gap-2 mb-3">
               <Trophy className="w-4 h-4 text-[#C9A86A]" />
-              <h3 className="text-base font-bold text-[#3D3A5C]">推荐核心成员（综合适配 Top 3）</h3>
+              <h3 className="text-base font-bold text-[#3D3A5C]">Recommended Core Members (Top 3 by Fit)</h3>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
               {p.recommendedMembers.map((m, i) => (
@@ -163,7 +163,7 @@ export default function TaskResultPage() {
                     <span className="text-xs text-[#8E8CA8]">#{i + 1}</span>
                   </div>
                   <div className="text-2xl font-bold text-[#C9A86A]">{m.fitScore}</div>
-                  <div className="text-xs text-[#8E8CA8]">综合适配分</div>
+                  <div className="text-xs text-[#8E8CA8]">Overall Fit Score</div>
                 </div>
               ))}
             </div>
@@ -175,14 +175,14 @@ export default function TaskResultPage() {
           <div className="rounded-[20px] bg-white/60 backdrop-blur-[10px] border border-white/50 p-5">
             <div className="flex items-center gap-2 mb-3">
               <CheckCircle2 className="w-4 h-4 text-green-600" />
-              <h3 className="text-base font-bold text-[#3D3A5C]">团队优势项</h3>
+              <h3 className="text-base font-bold text-[#3D3A5C]">Strengths</h3>
             </div>
             <div className="flex flex-col gap-2">
               {p.strengths.map((s, i) => (
                 <div key={i} className="flex items-center justify-between p-3 rounded-2xl bg-green-50/60 border border-green-200/40">
                   <div>
                     <div className="text-sm font-medium text-[#3D3A5C]">{s.label}</div>
-                    <div className="text-xs text-[#8E8CA8]">要求 {s.required} · 实际 {s.actual}</div>
+                    <div className="text-xs text-[#8E8CA8]">Required {s.required} · Actual {s.actual}</div>
                   </div>
                   <span className="text-sm font-bold text-green-700">+{s.surplus}</span>
                 </div>
@@ -196,7 +196,7 @@ export default function TaskResultPage() {
           <div className="rounded-[20px] bg-white/60 backdrop-blur-[10px] border border-white/50 p-5">
             <div className="flex items-center gap-2 mb-3">
               <AlertTriangle className="w-4 h-4 text-amber-500" />
-              <h3 className="text-base font-bold text-[#3D3A5C]">风险点（{p.risks.length}）</h3>
+              <h3 className="text-base font-bold text-[#3D3A5C]">Risk Points ({p.risks.length})</h3>
             </div>
             <div className="flex flex-col gap-2">
               {p.risks.map((r, i) => {
@@ -208,7 +208,7 @@ export default function TaskResultPage() {
                       <span className={`text-xs font-medium ${c.text}`}>{c.label}</span>
                     </div>
                     <div className="text-xs text-[#8E8CA8] mb-1">
-                      要求 {r.required} · 实际 {r.actual} · 差距 {r.gap}
+                      Required {r.required} · Actual {r.actual} · Gap {r.gap}
                     </div>
                     <div className="text-xs text-[#5B4FCF]">{r.suggestion}</div>
                   </div>
@@ -219,22 +219,22 @@ export default function TaskResultPage() {
         ) : (
           <div className="rounded-[20px] bg-green-50/50 border border-green-200/40 p-5 text-center">
             <CheckCircle2 className="w-6 h-6 text-green-600 mx-auto mb-2" />
-            <p className="text-sm text-green-700">未检测到明显风险点，团队配置与任务要求匹配良好</p>
+            <p className="text-sm text-green-700">No risk points detected, team configuration matches task requirements well</p>
           </div>
         )}
 
         {/* 详细匹配表 */}
         <div className="rounded-[20px] bg-white/60 backdrop-blur-[10px] border border-white/50 p-5">
-          <h3 className="text-base font-bold text-[#3D3A5C] mb-3">详细匹配情况</h3>
-          <MatchTable title="能力维度" matches={p.abilityMatches} />
-          <MatchTable title="动机匹配" matches={p.motivationMatches} />
-          <MatchTable title="思维倾向" matches={p.thinkingMatches} />
+          <h3 className="text-base font-bold text-[#3D3A5C] mb-3">Detailed Match</h3>
+          <MatchTable title="Ability Dimensions" matches={p.abilityMatches} />
+          <MatchTable title="Motivation Match" matches={p.motivationMatches} />
+          <MatchTable title="Thinking Style" matches={p.thinkingMatches} />
         </div>
 
         <Disclaimer />
 
         <Button variant="outline" size="md" fullWidth onClick={() => navigate('/max')}>
-          返回 Max 工作台
+          Back to Max Workspace
         </Button>
       </div>
     </div>
@@ -252,8 +252,8 @@ function MatchTable({ title, matches }: { title: string; matches: { label: strin
           return (
             <div key={i} className="grid grid-cols-4 gap-2 text-xs px-2 py-1.5 rounded-lg bg-white/40">
               <span className="text-[#3D3A5C] font-medium">{m.label}</span>
-              <span className="text-[#8E8CA8]">要求 {m.required}</span>
-              <span className="text-[#8E8CA8]">实际 {m.actual}</span>
+              <span className="text-[#8E8CA8]">Required {m.required}</span>
+              <span className="text-[#8E8CA8]">Actual {m.actual}</span>
               <span className={`font-medium ${isRisk ? 'text-red-600' : isStrength ? 'text-green-600' : 'text-[#5B4FCF]'}`}>
                 {m.matchScore}
               </span>

@@ -12,16 +12,16 @@ export default function BrandSection() {
       {/* 顶部装饰线 */}
       <div className="relative inline-flex items-center gap-2 mb-6 px-4 py-1.5 rounded-full bg-white/15 text-white/80 text-sm font-medium">
         <span className="w-1.5 h-1.5 rounded-full bg-[#F5D5A0]" />
-        气质洞察
+        Temperament Insight
         <span className="w-1.5 h-1.5 rounded-full bg-[#F5D5A0]" />
       </div>
 
       <h1 className="relative text-3xl font-bold tracking-tight mb-3" style={{ fontFamily: "'Nunito', 'PingFang SC', sans-serif" }}>
-        了解气质，洞察潜能
+        Understand Temperament, Unlock Potential
       </h1>
 
       <p className="relative text-white/75 text-base leading-relaxed max-w-xs mx-auto">
-        基于情境行为观察法的性格与能力评估工具，帮助您以客观视角理解他人
+        A temperament & ability assessment tool based on situational behavioral observation, helping you understand others objectively
       </p>
     </div>
   );

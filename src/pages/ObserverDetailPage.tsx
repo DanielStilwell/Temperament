@@ -11,10 +11,10 @@ import ThinkingAnalysis from '../components/result/ThinkingAnalysis';
 import Disclaimer from '../components/ui/Disclaimer';
 
 const GENDER_LABEL: Record<string, string> = {
-  male: '男',
-  female: '女',
-  other: '其他',
-  unknown: '不便透露',
+  male: 'Male',
+  female: 'Female',
+  other: 'Other',
+  unknown: 'Prefer not to say',
 };
 
 export default function ObserverDetailPage() {
@@ -35,7 +35,7 @@ export default function ObserverDetailPage() {
 
   const handleDelete = async () => {
     if (!observer) return;
-    if (!confirm(`确认删除被观察者「${observer.name}」？`)) return;
+    if (!confirm(`Delete observer "${observer.name}"?`)) return;
     setDeleting(true);
     try {
       await deleteObserver(observer.id);
@@ -56,8 +56,8 @@ export default function ObserverDetailPage() {
   if (!observer || !observer.result) {
     return (
       <div className="min-h-screen flex flex-col items-center justify-center gap-3">
-        <p className="text-sm text-[#8E8CA8]">未找到该被观察者</p>
-        <Link to="/" className="text-sm text-[#5B4FCF] hover:underline">返回首页</Link>
+        <p className="text-sm text-[#8E8CA8]">Observer not found</p>
+        <Link to="/" className="text-sm text-[#5B4FCF] hover:underline">Back to Home</Link>
       </div>
     );
   }
@@ -73,7 +73,7 @@ export default function ObserverDetailPage() {
             className="inline-flex items-center gap-1.5 text-sm text-[#8E8CA8] hover:text-[#5B4FCF] transition-colors"
           >
             <ArrowLeft className="w-4 h-4" />
-            返回列表
+            Back to List
           </button>
           <button
             onClick={handleDelete}
@@ -81,11 +81,11 @@ export default function ObserverDetailPage() {
             className="inline-flex items-center gap-1.5 text-sm text-red-500 hover:text-red-600 transition-colors disabled:opacity-40"
           >
             {deleting ? <Loader2 className="w-4 h-4 animate-spin" /> : <Trash2 className="w-4 h-4" />}
-            删除
+            Delete
           </button>
         </div>
 
-        {/* 被观察者信息卡 */}
+        {/* Observer Profile */}
         <div className="rounded-[20px] bg-white/60 backdrop-blur-[10px] border border-white/50 p-5">
           <div className="flex items-center gap-3">
             <div className="w-12 h-12 rounded-full bg-gradient-to-br from-[#5B4FCF]/15 to-[#7B6FE0]/15 flex items-center justify-center text-[#5B4FCF] font-bold text-lg">
@@ -95,7 +95,7 @@ export default function ObserverDetailPage() {
               <h2 className="text-lg font-bold text-[#3D3A5C]">{observer.name}</h2>
               <div className="text-xs text-[#8E8CA8] mt-0.5">
                 {GENDER_LABEL[observer.gender] && <span>{GENDER_LABEL[observer.gender]} · </span>}
-                {observer.profession || '未指定职业'}
+                {observer.profession || 'Profession not specified'}
                 {observer.note && ` · ${observer.note}`}
               </div>
             </div>

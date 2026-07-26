@@ -11,35 +11,35 @@ import { predictTask, TASK_TEMPLATES, emptyTaskParams } from '../data/prediction
 import type { TaskParams, TaskTeamConfig, Observer, TaskType } from '../types/account';
 
 const TASK_TYPE_LABELS: Record<TaskType, string> = {
-  creative: '创意',
-  execution: '执行',
-  communication: '沟通',
-  analysis: '分析',
-  leadership: '领导',
-  resilience: '抗压',
+  creative: 'Creative',
+  execution: 'Execution',
+  communication: 'Communication',
+  analysis: 'Analysis',
+  leadership: 'Leadership',
+  resilience: 'Resilience',
 };
 
 const ABILITY_FIELDS: { key: keyof TaskParams['abilities']; label: string }[] = [
-  { key: 'communication', label: '沟通' },
-  { key: 'leadership', label: '领导' },
-  { key: 'creativity', label: '创造' },
-  { key: 'analysis', label: '分析' },
-  { key: 'resilience', label: '抗压' },
-  { key: 'empathy', label: '共情' },
+  { key: 'communication', label: 'Communication' },
+  { key: 'leadership', label: 'Leadership' },
+  { key: 'creativity', label: 'Creativity' },
+  { key: 'analysis', label: 'Analysis' },
+  { key: 'resilience', label: 'Resilience' },
+  { key: 'empathy', label: 'Empathy' },
 ];
 
 const MOTIVATION_FIELDS: { key: keyof TaskParams['motivations']; label: string }[] = [
-  { key: 'achievement', label: '成就' },
-  { key: 'affiliation', label: '亲和' },
-  { key: 'power', label: '权力' },
-  { key: 'security', label: '安全' },
+  { key: 'achievement', label: 'Achievement' },
+  { key: 'affiliation', label: 'Affiliation' },
+  { key: 'power', label: 'Power' },
+  { key: 'security', label: 'Security' },
 ];
 
 const THINKING_FIELDS: { key: keyof TaskParams['thinking']; label: string; left: string; right: string }[] = [
-  { key: 'proactive', label: '行动', left: '反应', right: '主动' },
-  { key: 'rational', label: '决策', left: '感性', right: '理性' },
-  { key: 'collaborative', label: '方式', left: '独立', right: '协作' },
-  { key: 'innovative', label: '创新', left: '常规', right: '创新' },
+  { key: 'proactive', label: 'Action', left: 'Reactive', right: 'Proactive' },
+  { key: 'rational', label: 'Decision', left: 'Intuitive', right: 'Rational' },
+  { key: 'collaborative', label: 'Style', left: 'Independent', right: 'Collaborative' },
+  { key: 'innovative', label: 'Innovation', left: 'Conventional', right: 'Innovative' },
 ];
 
 export default function TaskBuilderPage() {
@@ -122,7 +122,7 @@ export default function TaskBuilderPage() {
       navigate(`/task/${record.id}`);
     } catch (e: any) {
       console.error(e);
-      alert(e?.message || '预判失败，请重试');
+      alert(e?.message || 'Prediction failed, please retry');
     } finally {
       setSubmitting(false);
     }
@@ -133,7 +133,7 @@ export default function TaskBuilderPage() {
       <div className="max-w-[420px] md:max-w-[820px] lg:max-w-[960px] mx-auto flex flex-col gap-5">
         <Link to="/max" className="inline-flex items-center gap-1.5 text-sm text-[#8E8CA8] hover:text-[#5B4FCF] transition-colors w-fit">
           <ArrowLeft className="w-4 h-4" />
-          返回 Max 工作台
+          Back to Max Workspace
         </Link>
 
         <div className="rounded-[20px] bg-gradient-to-br from-[#C9A86A] via-[#D4B575] to-[#E5C58A] p-6 text-white">
@@ -142,28 +142,28 @@ export default function TaskBuilderPage() {
               <Sparkles className="w-5 h-5" />
             </div>
             <h2 className="text-xl font-bold" style={{ fontFamily: "'Nunito', 'PingFang SC', sans-serif" }}>
-              新建任务预判
+              New Task Prediction
             </h2>
           </div>
           <p className="text-white/85 text-sm leading-relaxed">
-            配置任务参数与执行团队，系统将基于气质与能力维度预判完成情况
+            Configure task parameters and team, system will predict completion based on temperament and ability dimensions
           </p>
         </div>
 
         {/* 任务名称 + 模板切换 */}
         <div className="rounded-[20px] bg-white/60 backdrop-blur-[10px] border border-white/50 p-5 flex flex-col gap-4">
           <label className="flex flex-col gap-1.5">
-            <span className="text-sm font-medium text-[#3D3A5C]">任务名称</span>
+            <span className="text-sm font-medium text-[#3D3A5C]">Task Name</span>
             <input
               value={name}
               onChange={(e) => setName(e.target.value)}
-              placeholder="例如：Q4 产品上线攻坚"
+              placeholder="e.g., Q4 Product Launch Sprint"
               className="w-full px-4 py-3 rounded-2xl bg-white/70 border border-[#E8E6F5] text-[#3D3A5C] text-sm placeholder:text-[#8E8CA8]/60 focus:outline-none focus:border-[#C9A86A] focus:bg-white transition-all"
             />
           </label>
 
           <div className="flex flex-col gap-2">
-            <span className="text-sm font-medium text-[#3D3A5C]">录入模式</span>
+            <span className="text-sm font-medium text-[#3D3A5C]">Input Mode</span>
             <div className="grid grid-cols-2 gap-2">
               <button
                 type="button"
@@ -173,7 +173,7 @@ export default function TaskBuilderPage() {
                 }`}
               >
                 <FileText className="w-3.5 h-3.5" />
-                模板模式
+                Template
               </button>
               <button
                 type="button"
@@ -182,14 +182,14 @@ export default function TaskBuilderPage() {
                   mode === 'custom' ? 'border-[#C9A86A] bg-[#C9A86A]/5 text-[#C9A86A]' : 'border-[#E8E6F5] bg-white/40 text-[#3D3A5C]'
                 }`}
               >
-                自定义模式
+                Custom
               </button>
             </div>
           </div>
 
           {mode === 'template' && (
             <div className="flex flex-col gap-2">
-              <span className="text-sm font-medium text-[#3D3A5C]">选择任务模板</span>
+              <span className="text-sm font-medium text-[#3D3A5C]">Select Task Template</span>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
                 {TASK_TEMPLATES.map((tpl) => (
                   <button
@@ -207,15 +207,15 @@ export default function TaskBuilderPage() {
                   </button>
                 ))}
               </div>
-              <p className="text-xs text-[#8E8CA8] mt-1">选定模板后可在下方继续微调</p>
+              <p className="text-xs text-[#8E8CA8] mt-1">You can fine-tune parameters after selecting a template</p>
             </div>
           )}
         </div>
 
         {/* 任务基础参数 */}
-        <Section title="基础参数">
+        <Section title="Basic Parameters">
           <div className="flex flex-col gap-2 mb-4">
-            <span className="text-xs font-medium text-[#3D3A5C]">任务类型（多选）</span>
+            <span className="text-xs font-medium text-[#3D3A5C]">Task Types (multiple)</span>
             <div className="flex flex-wrap gap-2">
               {(Object.keys(TASK_TYPE_LABELS) as TaskType[]).map((t) => (
                 <button
@@ -235,7 +235,7 @@ export default function TaskBuilderPage() {
           </div>
 
           <Slider
-            label="难度系数"
+            label="Difficulty"
             value={params.base.difficulty}
             min={1}
             max={10}
@@ -245,7 +245,7 @@ export default function TaskBuilderPage() {
             accent="#C9A86A"
           />
           <Slider
-            label="协作强度"
+            label="Collaboration"
             value={params.base.collaboration}
             min={0}
             max={100}
@@ -253,11 +253,11 @@ export default function TaskBuilderPage() {
             display={`${params.base.collaboration}%`}
             onChange={(v) => setParams((p) => ({ ...p, base: { ...p.base, collaboration: v } }))}
             accent="#C9A86A"
-            leftLabel="独立"
-            rightLabel="全员协同"
+            leftLabel="Independent"
+            rightLabel="Full Collaboration"
           />
           <Slider
-            label="时间压力"
+            label="Time Pressure"
             value={params.base.timePressure}
             min={1}
             max={10}
@@ -265,11 +265,11 @@ export default function TaskBuilderPage() {
             display={`${params.base.timePressure} / 10`}
             onChange={(v) => setParams((p) => ({ ...p, base: { ...p.base, timePressure: v } }))}
             accent="#C9A86A"
-            leftLabel="宽松"
-            rightLabel="紧急"
+            leftLabel="Relaxed"
+            rightLabel="Urgent"
           />
           <Slider
-            label="风险容忍度"
+            label="Risk Tolerance"
             value={params.base.riskTolerance}
             min={0}
             max={100}
@@ -277,14 +277,14 @@ export default function TaskBuilderPage() {
             display={`${params.base.riskTolerance}%`}
             onChange={(v) => setParams((p) => ({ ...p, base: { ...p.base, riskTolerance: v } }))}
             accent="#C9A86A"
-            leftLabel="零失误"
-            rightLabel="鼓励冒险"
+            leftLabel="Zero Error"
+            rightLabel="Encourage Risk"
           />
         </Section>
 
         {/* 能力要求 */}
-        <Section title="能力维度要求（0-100）">
-          <p className="text-xs text-[#8E8CA8] mb-3">该任务对各项能力的最低要求门槛，可直接叠加到雷达图与团队实际能力对比</p>
+        <Section title="Ability Requirements (0-100)">
+          <p className="text-xs text-[#8E8CA8] mb-3">Minimum ability thresholds for this task, overlay on radar chart to compare with team abilities</p>
           <div className="flex flex-col gap-3">
             {ABILITY_FIELDS.map((f) => (
               <Slider
@@ -303,8 +303,8 @@ export default function TaskBuilderPage() {
         </Section>
 
         {/* 动机要求 */}
-        <Section title="动机匹配要求（0-100）">
-          <p className="text-xs text-[#8E8CA8] mb-3">任务对执行者在该动机维度上的强度期望，越高越依赖</p>
+        <Section title="Motivation Requirements (0-100)">
+          <p className="text-xs text-[#8E8CA8] mb-3">Expected motivation strength, higher means more dependent</p>
           <div className="flex flex-col gap-3">
             {MOTIVATION_FIELDS.map((f) => (
               <Slider
@@ -323,8 +323,8 @@ export default function TaskBuilderPage() {
         </Section>
 
         {/* 思维倾向要求 */}
-        <Section title="思维倾向要求（0-100）">
-          <p className="text-xs text-[#8E8CA8] mb-3">每对 0=偏左，100=偏右，50=中性</p>
+        <Section title="Thinking Style Requirements (0-100)">
+          <p className="text-xs text-[#8E8CA8] mb-3">0=left end, 100=right end, 50=neutral</p>
           <div className="flex flex-col gap-3">
             {THINKING_FIELDS.map((f) => (
               <Slider
@@ -345,9 +345,9 @@ export default function TaskBuilderPage() {
         </Section>
 
         {/* 团队配置 */}
-        <Section title="团队配置">
+        <Section title="Team Configuration">
           <p className="text-xs text-[#8E8CA8] mb-3">
-            从被观察者中勾选参与此任务的成员（已选 {selectedIds.length} 人）
+            Select observers for this task ({selectedIds.length} selected)
           </p>
           <ObserverList
             observers={observers}
@@ -356,7 +356,7 @@ export default function TaskBuilderPage() {
             selectable
             selectedIds={selectedIds}
             onToggleSelect={toggleSelectObserver}
-            emptyHint="尚未添加被观察者，请先在工作台添加"
+            emptyHint="No observers yet, add them in workspace first"
           />
 
           {selectedIds.length > 0 && (
@@ -371,7 +371,7 @@ export default function TaskBuilderPage() {
                   }}
                   className="w-4 h-4 accent-[#C9A86A]"
                 />
-                指定关键角色（主负责人，领导/抗压维度加倍权重）
+                Assign key role (lead, leadership/resilience weighted 2x)
               </label>
               {hasKeyRole && (
                 <select
@@ -379,7 +379,7 @@ export default function TaskBuilderPage() {
                   onChange={(e) => setKeyObserverId(e.target.value || null)}
                   className="w-full px-4 py-2.5 rounded-2xl bg-white/70 border border-[#E8E6F5] text-[#3D3A5C] text-sm focus:outline-none focus:border-[#C9A86A]"
                 >
-                  <option value="">请选择关键成员</option>
+                  <option value="">Select key member</option>
                   {observers
                     .filter((o) => selectedIds.includes(o.id))
                     .map((o) => (
@@ -406,12 +406,12 @@ export default function TaskBuilderPage() {
           {submitting ? (
             <>
               <Loader2 className="w-5 h-5 animate-spin" />
-              正在预判...
+              Predicting...
             </>
           ) : (
             <>
               <Save className="w-5 h-5" />
-              生成预判结果
+              Generate Prediction
             </>
           )}
         </Button>

@@ -35,14 +35,14 @@ export default function LoginPage() {
       <div className="w-full max-w-[420px] md:max-w-[480px] flex flex-col gap-5">
         <Link to="/" className="inline-flex items-center gap-1.5 text-sm text-[#8E8CA8] hover:text-[#5B4FCF] transition-colors">
           <ArrowLeft className="w-4 h-4" />
-          返回首页
+          Back to Home
         </Link>
 
         <div className="rounded-[20px] bg-gradient-to-br from-[#5B4FCF] to-[#7B6FE0] p-6 text-white text-center">
           <h2 className="text-2xl font-bold mb-1" style={{ fontFamily: "'Nunito', 'PingFang SC', sans-serif" }}>
-            欢迎回来
+            Welcome Back
           </h2>
-          <p className="text-white/80 text-sm">登录以继续管理您的团队</p>
+          <p className="text-white/80 text-sm">Log in to continue managing your team</p>
         </div>
 
         <form
@@ -50,7 +50,7 @@ export default function LoginPage() {
           className="rounded-[20px] bg-white/60 backdrop-blur-[10px] border border-white/50 p-6 flex flex-col gap-4"
         >
           <label className="flex flex-col gap-1.5">
-            <span className="text-sm font-medium text-[#3D3A5C]">邮箱</span>
+            <span className="text-sm font-medium text-[#3D3A5C]">Email</span>
             <div className="relative">
               <Mail className="w-4 h-4 absolute left-3 top-1/2 -translate-y-1/2 text-[#8E8CA8]" />
               <input
@@ -65,14 +65,14 @@ export default function LoginPage() {
           </label>
 
           <label className="flex flex-col gap-1.5">
-            <span className="text-sm font-medium text-[#3D3A5C]">密码</span>
+            <span className="text-sm font-medium text-[#3D3A5C]">Password</span>
             <div className="relative">
               <Lock className="w-4 h-4 absolute left-3 top-1/2 -translate-y-1/2 text-[#8E8CA8]" />
               <input
                 type="password"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
-                placeholder="请输入密码"
+                placeholder="Enter your password"
                 autoComplete="current-password"
                 className="w-full pl-10 pr-4 py-3 rounded-2xl bg-white/70 border border-[#E8E6F5] text-[#3D3A5C] text-sm placeholder:text-[#8E8CA8]/60 focus:outline-none focus:border-[#5B4FCF] focus:bg-white transition-all"
               />
@@ -97,17 +97,17 @@ export default function LoginPage() {
             {submitting ? (
               <>
                 <Loader2 className="w-5 h-5 animate-spin" />
-                登录中...
+                Logging in...
               </>
             ) : (
-              '登录'
+              'Log In'
             )}
           </Button>
 
           <p className="text-xs text-[#8E8CA8] text-center">
-            还没有 Pro / Max 账号？{' '}
+            Don't have a Pro / Max account?{' '}
             <Link to="/" className="text-[#5B4FCF] font-medium hover:underline">
-              选择版本注册
+              Choose a plan to sign up
             </Link>
           </p>
         </form>

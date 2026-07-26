@@ -16,7 +16,7 @@ export default function DimensionDetails({ scores }: DimensionDetailsProps) {
 
   return (
     <div className="rounded-[20px] bg-white/60 backdrop-blur-[10px] border border-white/50 p-5">
-      <h3 className="text-sm font-semibold text-[#3D3A5C] mb-3">维度详情</h3>
+      <h3 className="text-sm font-semibold text-[#3D3A5C] mb-3">Dimension Details</h3>
       <div className="space-y-2">
         {(Object.keys(scores) as AbilityDimension[]).map((key) => {
           const info = abilityMap[key];

@@ -4,22 +4,22 @@ import Card from '../ui/Card';
 const introItems = [
   {
     icon: Eye,
-    title: '观察者视角',
-    desc: '以第三方视角，客观评估被观察者的行为模式',
+    title: 'Observer Perspective',
+    desc: 'Evaluate behavior patterns from a third-party perspective',
     color: '#E8B4B8',
     bg: 'bg-[#F5E1E3]/60',
   },
   {
     icon: Users,
-    title: '真实情境',
-    desc: '基于20个真实生活场景，还原自然行为反应',
+    title: 'Real Scenarios',
+    desc: 'Based on 20 real-life scenarios, capturing natural behavioral responses',
     color: '#A3C4D9',
     bg: 'bg-[#DBEAF2]/60',
   },
   {
     icon: Target,
-    title: '客观判断',
-    desc: '多维分析气质与能力，提供非标签化评估',
+    title: 'Objective Assessment',
+    desc: 'Multi-dimensional analysis of temperament & abilities, non-labeling evaluation',
     color: '#B8C9A8',
     bg: 'bg-[#E5EDDE]/60',
   },

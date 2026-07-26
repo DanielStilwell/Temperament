@@ -14,26 +14,26 @@ const ABILITY_KEYS: AbilityDimension[] = ['communication', 'leadership', 'creati
 const MOTIVATION_KEYS: MotivationType[] = ['achievement', 'affiliation', 'power', 'security'];
 
 const ABILITY_LABELS: Record<AbilityDimension, string> = {
-  communication: '沟通',
-  leadership: '领导',
-  creativity: '创造',
-  analysis: '分析',
-  resilience: '抗压',
-  empathy: '共情',
+  communication: 'Communication',
+  leadership: 'Leadership',
+  creativity: 'Creativity',
+  analysis: 'Analysis',
+  resilience: 'Resilience',
+  empathy: 'Empathy',
 };
 
 const MOTIVATION_LABELS: Record<MotivationType, string> = {
-  achievement: '成就动机',
-  affiliation: '亲和动机',
-  power: '权力动机',
-  security: '安全动机',
+  achievement: 'Achievement',
+  affiliation: 'Affiliation',
+  power: 'Power',
+  security: 'Security',
 };
 
 const THINKING_LABELS = {
-  proactive: '主动倾向',
-  rational: '理性倾向',
-  collaborative: '协作倾向',
-  innovative: '创新倾向',
+  proactive: 'Proactive Tendency',
+  rational: 'Rational Tendency',
+  collaborative: 'Collaborative Tendency',
+  innovative: 'Innovative Tendency',
 };
 
 // clamp 工具
@@ -55,9 +55,9 @@ function riskLevel(gap: number): 'yellow' | 'orange' | 'red' {
 
 // 风险建议
 function riskSuggestion(label: string, gap: number): string {
-  if (gap >= 35) return `${label}维度严重不足，建议补充该维度 ≥ 70 的成员`;
-  if (gap >= 25) return `${label}维度明显偏弱，建议补充或加强培训`;
-  return `${label}维度略低于要求，可在执行中重点关注`;
+  if (gap >= 35) return `${label} dimension severely insufficient; recommend adding members with ≥ 70 in this dimension`;
+  if (gap >= 25) return `${label} dimension notably weak; recommend supplementing or strengthening training`;
+  return `${label} dimension slightly below requirement; can focus attention during execution`;
 }
 
 // 把单个被观察者的思维倾向（4 对）映射为 0-100（50=中性）
@@ -282,8 +282,8 @@ export interface TaskTemplate {
 export const TASK_TEMPLATES: TaskTemplate[] = [
   {
     id: 'product-launch',
-    name: '产品上线攻坚',
-    description: '高强度、跨职能、时间紧迫的产品发布任务',
+    name: 'Product Launch Sprint',
+    description: 'High-intensity, cross-functional, time-critical product release task',
     params: {
       base: {
         types: ['execution', 'leadership', 'communication'],
@@ -299,8 +299,8 @@ export const TASK_TEMPLATES: TaskTemplate[] = [
   },
   {
     id: 'client-negotiation',
-    name: '客户谈判',
-    description: '一对一或多对多的商务谈判场景',
+    name: 'Client Negotiation',
+    description: 'One-on-one or multi-party business negotiation scenario',
     params: {
       base: {
         types: ['communication', 'leadership', 'resilience'],
@@ -316,8 +316,8 @@ export const TASK_TEMPLATES: TaskTemplate[] = [
   },
   {
     id: 'cross-dept-project',
-    name: '跨部门协作项目',
-    description: '需要多部门配合的中长期项目',
+    name: 'Cross-Department Project',
+    description: 'Medium-to-long-term project requiring multi-department coordination',
     params: {
       base: {
         types: ['communication', 'leadership', 'analysis'],
@@ -333,8 +333,8 @@ export const TASK_TEMPLATES: TaskTemplate[] = [
   },
   {
     id: 'crisis-pr',
-    name: '危机公关',
-    description: '突发负面事件的紧急响应与对外沟通',
+    name: 'Crisis PR',
+    description: 'Emergency response and external communication for sudden negative events',
     params: {
       base: {
         types: ['communication', 'leadership', 'resilience'],
@@ -350,8 +350,8 @@ export const TASK_TEMPLATES: TaskTemplate[] = [
   },
   {
     id: 'daily-ops',
-    name: '日常运维',
-    description: '常规运营维护任务，节奏稳定',
+    name: 'Daily Operations',
+    description: 'Routine operations and maintenance tasks, steady pace',
     params: {
       base: {
         types: ['execution', 'analysis'],
@@ -367,8 +367,8 @@ export const TASK_TEMPLATES: TaskTemplate[] = [
   },
   {
     id: 'creative-campaign',
-    name: '创意策划活动',
-    description: '从 0 到 1 的创意产出与活动设计',
+    name: 'Creative Campaign',
+    description: 'From-scratch creative output and event design',
     params: {
       base: {
         types: ['creative', 'communication'],
@@ -384,8 +384,8 @@ export const TASK_TEMPLATES: TaskTemplate[] = [
   },
   {
     id: 'research-analysis',
-    name: '研究分析任务',
-    description: '深度数据研究与分析报告产出',
+    name: 'Research & Analysis',
+    description: 'In-depth data research and analysis report production',
     params: {
       base: {
         types: ['analysis', 'creative'],
@@ -401,8 +401,8 @@ export const TASK_TEMPLATES: TaskTemplate[] = [
   },
   {
     id: 'team-building',
-    name: '团队建设活动',
-    description: '提升团队凝聚力与氛围的活动组织',
+    name: 'Team Building',
+    description: 'Activities to enhance team cohesion and morale',
     params: {
       base: {
         types: ['communication', 'leadership'],

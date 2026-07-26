@@ -3,11 +3,11 @@ import type { Scenario } from '../../types';
 const mediaScenarios: Scenario[] = [
   {
     id: 1,
-    situation: '被观察者发布了一条内容，意外引发了争议，评论区出现了大量负面声音。他/她会怎么做？',
+    situation: 'The person posted content that unexpectedly sparked controversy, with a large number of negative comments in the comment section. What would he/she do?',
     options: [
       {
         id: '1a',
-        text: '冷静分析争议点，发布一条诚恳的回应，解释自己的本意',
+        text: 'Calmly analyze the points of controversy, post a sincere response explaining original intentions',
         weights: {
           sanguine: 0,
           choleric: 0,
@@ -35,7 +35,7 @@ const mediaScenarios: Scenario[] = [
       },
       {
         id: '1b',
-        text: '删除争议内容，发一条道歉声明',
+        text: 'Delete the controversial content and post an apology statement',
         weights: {
           sanguine: 0,
           choleric: 0,
@@ -63,7 +63,7 @@ const mediaScenarios: Scenario[] = [
       },
       {
         id: '1c',
-        text: '坚持自己的观点，和评论区的网友理性讨论',
+        text: 'Stick to own viewpoint and engage in rational discussion with commenters',
         weights: {
           sanguine: 0,
           choleric: 3,
@@ -91,7 +91,7 @@ const mediaScenarios: Scenario[] = [
       },
       {
         id: '1d',
-        text: '暂时冷处理，等热度过去后再看情况',
+        text: 'Let it cool down for now, wait for the hype to pass before reassessing',
         weights: {
           sanguine: 0,
           choleric: 0,
@@ -119,7 +119,7 @@ const mediaScenarios: Scenario[] = [
       },
       {
         id: '1e',
-        text: '借势而为，利用争议热度进一步扩大传播，黑红也是红',
+        text: 'Ride the wave, leverage the controversy to further amplify reach — bad press is still press',
         weights: {
           sanguine: 0,
           choleric: 3,
@@ -147,7 +147,7 @@ const mediaScenarios: Scenario[] = [
       },
       {
         id: '1f',
-        text: '焦虑得睡不着，反复刷评论区，被负面言论影响情绪好久',
+        text: 'Too anxious to sleep, repeatedly refreshing the comments, affected by negative remarks for a long time',
         weights: {
           sanguine: 0,
           choleric: 0,
@@ -177,11 +177,11 @@ const mediaScenarios: Scenario[] = [
   },
   {
     id: 2,
-    situation: '被观察者发现自己的内容数据在持续下滑，粉丝增长停滞。他/她会怎么做？',
+    situation: 'The person notices their content metrics are steadily declining and follower growth has stagnated. What would he/she do?',
     options: [
       {
         id: '2a',
-        text: '深入分析数据，找出问题所在，调整内容策略',
+        text: 'Deeply analyze the data, identify the problem, and adjust the content strategy',
         weights: {
           sanguine: 0,
           choleric: 0,
@@ -209,7 +209,7 @@ const mediaScenarios: Scenario[] = [
       },
       {
         id: '2b',
-        text: '尝试全新的内容类型和风格，寻找新的增长点',
+        text: 'Try entirely new content types and styles, looking for new growth opportunities',
         weights: {
           sanguine: 0,
           choleric: 0,
@@ -237,7 +237,7 @@ const mediaScenarios: Scenario[] = [
       },
       {
         id: '2c',
-        text: '回归初心，做自己真正想做的内容，数据不是唯一标准',
+        text: 'Return to the original passion, create the content truly wanted — data isn\'t the only measure',
         weights: {
           sanguine: 0,
           choleric: 0,
@@ -265,7 +265,7 @@ const mediaScenarios: Scenario[] = [
       },
       {
         id: '2d',
-        text: '参考竞品，看看什么内容正流行，模仿爆款',
+        text: 'Reference competitors, see what content is trending, and replicate hit formats',
         weights: {
           sanguine: 0,
           choleric: 0,
@@ -293,7 +293,7 @@ const mediaScenarios: Scenario[] = [
       },
       {
         id: '2e',
-        text: '觉得数据起伏很正常，不放在心上，按自己的节奏继续做',
+        text: 'Think data fluctuations are normal, don\'t dwell on it, keep going at own pace',
         weights: {
           sanguine: 0,
           choleric: 0,
@@ -321,7 +321,7 @@ const mediaScenarios: Scenario[] = [
       },
       {
         id: '2f',
-        text: '在创作者社群里吐槽，问问同行是怎么应对瓶颈期的',
+        text: 'Vent in creator communities, ask peers how they cope with bottlenecks',
         weights: {
           sanguine: 0,
           choleric: 0,
@@ -351,11 +351,11 @@ const mediaScenarios: Scenario[] = [
   },
   {
     id: 3,
-    situation: '被观察者收到一个品牌合作邀请，但产品自己并不了解。他/她会怎么做？',
+    situation: 'The person receives a brand collaboration invitation, but is unfamiliar with the product. What would he/she do?',
     options: [
       {
         id: '3a',
-        text: '先深入了解产品，确认质量后再决定是否合作',
+        text: 'First learn about the product in depth, confirm quality before deciding whether to collaborate',
         weights: {
           sanguine: 0,
           choleric: 0,
@@ -383,7 +383,7 @@ const mediaScenarios: Scenario[] = [
       },
       {
         id: '3b',
-        text: '如果报酬合适就接，广告内容按要求做就好',
+        text: 'Accept if the pay is right, just produce the ad content as requested',
         weights: {
           sanguine: 0,
           choleric: 0,
@@ -411,7 +411,7 @@ const mediaScenarios: Scenario[] = [
       },
       {
         id: '3c',
-        text: '婉拒不了解的产品，不想因为广告损害粉丝信任',
+        text: 'Politely decline unfamiliar products, not wanting to damage followers\' trust with ads',
         weights: {
           sanguine: 0,
           choleric: 0,
@@ -439,7 +439,7 @@ const mediaScenarios: Scenario[] = [
       },
       {
         id: '3d',
-        text: '和品牌方沟通，希望先试用产品再做决定',
+        text: 'Communicate with the brand, request to try the product first before making a decision',
         weights: {
           sanguine: 0,
           choleric: 0,
@@ -467,7 +467,7 @@ const mediaScenarios: Scenario[] = [
       },
       {
         id: '3e',
-        text: '直接拒绝所有不了解的产品，反正不缺这一单',
+        text: 'Directly reject all unfamiliar products — not missing this one deal anyway',
         weights: {
           sanguine: 0,
           choleric: 3,
@@ -495,7 +495,7 @@ const mediaScenarios: Scenario[] = [
       },
       {
         id: '3f',
-        text: '找懂行的朋友帮忙参谋一下这个品牌靠不靠谱',
+        text: 'Ask a knowledgeable friend to help evaluate whether the brand is reliable',
         weights: {
           sanguine: 0,
           choleric: 0,
@@ -525,11 +525,11 @@ const mediaScenarios: Scenario[] = [
   },
   {
     id: 4,
-    situation: '被观察者精心制作的内容反响平平，随手发的一条却爆了。他/我会怎么想？',
+    situation: 'The person\'s carefully crafted content got a lukewarm response, but a casually posted piece went viral. What would he/she think?',
     options: [
       {
         id: '4a',
-        text: '分析爆款内容的特点，找到规律并融入后续创作',
+        text: 'Analyze the characteristics of the viral content, find the pattern and incorporate it into future creations',
         weights: {
           sanguine: 0,
           choleric: 0,
@@ -557,7 +557,7 @@ const mediaScenarios: Scenario[] = [
       },
       {
         id: '4b',
-        text: '保持平常心，爆款有偶然性，继续做好内容',
+        text: 'Stay level-headed, virality has an element of chance, keep focusing on good content',
         weights: {
           sanguine: 0,
           choleric: 0,
@@ -585,7 +585,7 @@ const mediaScenarios: Scenario[] = [
       },
       {
         id: '4c',
-        text: '顺势而为，围绕爆款话题做一系列内容',
+        text: 'Ride the momentum, create a series around the viral topic',
         weights: {
           sanguine: 0,
           choleric: 1,
@@ -613,7 +613,7 @@ const mediaScenarios: Scenario[] = [
       },
       {
         id: '4d',
-        text: '觉得有趣，和粉丝分享这个反差',
+        text: 'Find it amusing, share the contrast with followers',
         weights: {
           sanguine: 2,
           choleric: 0,
@@ -641,7 +641,7 @@ const mediaScenarios: Scenario[] = [
       },
       {
         id: '4e',
-        text: '觉得数据本来就有偶然性，干脆不在意，随心发就好',
+        text: 'Think data is inherently random anyway, don\'t care, just post whatever feels right',
         weights: {
           sanguine: 0,
           choleric: 0,
@@ -669,7 +669,7 @@ const mediaScenarios: Scenario[] = [
       },
       {
         id: '4f',
-        text: '感到挫败又无奈，发条动态吐槽一下自己的运气',
+        text: 'Feel frustrated yet helpless, post a status venting about own luck',
         weights: {
           sanguine: 2,
           choleric: 0,
@@ -699,11 +699,11 @@ const mediaScenarios: Scenario[] = [
   },
   {
     id: 5,
-    situation: '被观察者发现有人在搬运自己的内容到其他平台，且未标注来源。他/她会怎么做？',
+    situation: 'The person discovers someone is reposting their content on other platforms without credit. What would he/she do?',
     options: [
       {
         id: '5a',
-        text: '联系平台投诉侵权，要求下架',
+        text: 'File a complaint with the platform for copyright infringement, request takedown',
         weights: {
           sanguine: 0,
           choleric: 2,
@@ -731,7 +731,7 @@ const mediaScenarios: Scenario[] = [
       },
       {
         id: '5b',
-        text: '先联系对方，友好沟通要求标注来源',
+        text: 'Reach out to the person first, communicate amicably and request they add credit',
         weights: {
           sanguine: 0,
           choleric: 0,
@@ -759,7 +759,7 @@ const mediaScenarios: Scenario[] = [
       },
       {
         id: '5c',
-        text: '在自己的内容里加水印，加强版权保护',
+        text: 'Add watermarks to own content, strengthen copyright protection',
         weights: {
           sanguine: 0,
           choleric: 0,
@@ -787,7 +787,7 @@ const mediaScenarios: Scenario[] = [
       },
       {
         id: '5d',
-        text: '觉得被搬运也是一种认可，不太在意',
+        text: 'Consider being reposted as a form of recognition, don\'t really mind',
         weights: {
           sanguine: 0,
           choleric: 0,
@@ -815,7 +815,7 @@ const mediaScenarios: Scenario[] = [
       },
       {
         id: '5e',
-        text: '公开点名批评搬运者，让粉丝一起去声讨',
+        text: 'Publicly call out the reposter, mobilize followers to collectively condemn them',
         weights: {
           sanguine: 0,
           choleric: 3,
@@ -843,7 +843,7 @@ const mediaScenarios: Scenario[] = [
       },
       {
         id: '5f',
-        text: '借此机会做一期关于版权意识的专题内容，把坏事变成选题',
+        text: 'Seize the opportunity to create a special episode about copyright awareness, turning a bad thing into content',
         weights: {
           sanguine: 0,
           choleric: 0,
@@ -873,11 +873,11 @@ const mediaScenarios: Scenario[] = [
   },
   {
     id: 6,
-    situation: '被观察者收到私信，有人用恶毒的语言进行人身攻击。他/她会怎么做？',
+    situation: 'The person receives a private message with vicious personal attacks. What would he/she do?',
     options: [
       {
         id: '6a',
-        text: '无视并拉黑，不让负面情绪影响自己',
+        text: 'Ignore and block, not letting negative emotions affect oneself',
         weights: {
           sanguine: 0,
           choleric: 0,
@@ -905,7 +905,7 @@ const mediaScenarios: Scenario[] = [
       },
       {
         id: '6b',
-        text: '截图保存证据，必要时报案处理',
+        text: 'Screenshot and save evidence, report to authorities if necessary',
         weights: {
           sanguine: 0,
           choleric: 0,
@@ -933,7 +933,7 @@ const mediaScenarios: Scenario[] = [
       },
       {
         id: '6c',
-        text: '在社群中公开讨论网络暴力，呼吁大家理性上网',
+        text: 'Openly discuss cyberbullying in the community, calling for rational online behavior',
         weights: {
           sanguine: 0,
           choleric: 0,
@@ -961,7 +961,7 @@ const mediaScenarios: Scenario[] = [
       },
       {
         id: '6d',
-        text: '虽然难过但选择不回应，让平台处理',
+        text: 'Feel hurt but choose not to respond, let the platform handle it',
         weights: {
           sanguine: 0,
           choleric: 0,
@@ -989,7 +989,7 @@ const mediaScenarios: Scenario[] = [
       },
       {
         id: '6e',
-        text: '怒怼回去，让对方知道我不是好欺负的',
+        text: 'Fire back angrily, letting them know I\'m not to be messed with',
         weights: {
           sanguine: 0,
           choleric: 4,
@@ -1017,7 +1017,7 @@ const mediaScenarios: Scenario[] = [
       },
       {
         id: '6f',
-        text: '被恶毒言论刺激得情绪崩溃，好几天不敢看私信，影响正常创作',
+        text: 'Emotionally devastated by the vicious remarks, too afraid to check messages for days, affecting normal creative work',
         weights: {
           sanguine: 0,
           choleric: 0,
@@ -1047,11 +1047,11 @@ const mediaScenarios: Scenario[] = [
   },
   {
     id: 7,
-    situation: '被观察者需要考虑是否要"蹭热点"来增加曝光。他/她会怎么做？',
+    situation: 'The person is considering whether to "ride trending topics" to increase exposure. What would he/she do?',
     options: [
       {
         id: '7a',
-        text: '只蹭与自己内容相关且有价值的热点，不做无意义跟风',
+        text: 'Only ride trends relevant to own content that add value, don\'t follow trends mindlessly',
         weights: {
           sanguine: 0,
           choleric: 0,
@@ -1079,7 +1079,7 @@ const mediaScenarios: Scenario[] = [
       },
       {
         id: '7b',
-        text: '积极蹭热点，流量时代曝光就是一切',
+        text: 'Actively ride trends — in the traffic era, exposure is everything',
         weights: {
           sanguine: 0,
           choleric: 1,
@@ -1107,7 +1107,7 @@ const mediaScenarios: Scenario[] = [
       },
       {
         id: '7c',
-        text: '用自己独特的角度解读热点，提供差异化内容',
+        text: 'Interpret the trend from own unique angle, providing differentiated content',
         weights: {
           sanguine: 0,
           choleric: 0,
@@ -1135,7 +1135,7 @@ const mediaScenarios: Scenario[] = [
       },
       {
         id: '7d',
-        text: '不刻意蹭热点，只做自己感兴趣的内容',
+        text: 'Don\'t deliberately chase trends, only create content genuinely interested in',
         weights: {
           sanguine: 0,
           choleric: 0,
@@ -1163,7 +1163,7 @@ const mediaScenarios: Scenario[] = [
       },
       {
         id: '7e',
-        text: '看到热点就觉得烦，从来不关注这些跟风内容',
+        text: 'Find trending topics annoying, never pay attention to bandwagon content',
         weights: {
           sanguine: 0,
           choleric: 0,
@@ -1191,7 +1191,7 @@ const mediaScenarios: Scenario[] = [
       },
       {
         id: '7f',
-        text: '和粉丝互动，问问大家对这个热点的看法再决定要不要做',
+        text: 'Interact with followers, ask what they think of the trend before deciding whether to cover it',
         weights: {
           sanguine: 0,
           choleric: 0,
@@ -1221,11 +1221,11 @@ const mediaScenarios: Scenario[] = [
   },
   {
     id: 8,
-    situation: '被观察者做自媒体后作息越来越不规律，熬夜剪辑是常态，影响了身体健康和社交生活。他/她会怎么做？',
+    situation: 'Since becoming a content creator, the person\'s schedule has become increasingly irregular — late-night editing is the norm, affecting physical health and social life. What would he/she do?',
     options: [
       {
         id: '8a',
-        text: '制定严格的作息表，把创作时间固定在白天，到点就停工绝不熬夜',
+        text: 'Set a strict schedule, fix creative work during daytime hours, stop working on time and never stay up late',
         weights: {
           sanguine: 0,
           choleric: 3,
@@ -1253,7 +1253,7 @@ const mediaScenarios: Scenario[] = [
       },
       {
         id: '8b',
-        text: '分析自己的内容产出节奏，提前批量录制囤稿，留出缓冲时间',
+        text: 'Analyze own content production rhythm, batch record content in advance and stockpile drafts, creating buffer time',
         weights: {
           sanguine: 0,
           choleric: 0,
@@ -1281,7 +1281,7 @@ const mediaScenarios: Scenario[] = [
       },
       {
         id: '8c',
-        text: '雇个助理帮忙分担剪辑和运营工作，自己只专注核心创作',
+        text: 'Hire an assistant to share the editing and operations workload, focus only on core creative work',
         weights: {
           sanguine: 0,
           choleric: 0,
@@ -1309,7 +1309,7 @@ const mediaScenarios: Scenario[] = [
       },
       {
         id: '8d',
-        text: '主动减少更新频率，把精力集中在打造精品内容上，少而精',
+        text: 'Proactively reduce update frequency, focus energy on crafting premium content — fewer but better',
         weights: {
           sanguine: 0,
           choleric: 0,
@@ -1337,7 +1337,7 @@ const mediaScenarios: Scenario[] = [
       },
       {
         id: '8e',
-        text: '焦虑得睡不着，既担心身体垮掉又舍不得流量，反复纠结要不要休息',
+        text: 'Too anxious to sleep, worried about health collapsing but reluctant to give up traffic, torn over whether to take a break',
         weights: {
           sanguine: 0,
           choleric: 0,
@@ -1365,7 +1365,7 @@ const mediaScenarios: Scenario[] = [
       },
       {
         id: '8f',
-        text: '无所谓，身体扛得住，趁着有热度先多做几期再说',
+        text: 'Don\'t care, the body can handle it, keep producing more while the momentum is there',
         weights: {
           sanguine: 0,
           choleric: 0,
@@ -1395,11 +1395,11 @@ const mediaScenarios: Scenario[] = [
   },
   {
     id: 9,
-    situation: '被观察者的账号突然被平台限流，原因不明。他/她会怎么做？',
+    situation: 'The person\'s account suddenly gets shadowbanned by the platform for unknown reasons. What would he/she do?',
     options: [
       {
         id: '9a',
-        text: '冷静分析近期的内容，排查可能的原因',
+        text: 'Calmly analyze recent content, investigate possible causes',
         weights: {
           sanguine: 0,
           choleric: 0,
@@ -1427,7 +1427,7 @@ const mediaScenarios: Scenario[] = [
       },
       {
         id: '9b',
-        text: '联系平台客服，了解具体原因',
+        text: 'Contact platform customer service to understand the specific reasons',
         weights: {
           sanguine: 0,
           choleric: 0,
@@ -1455,7 +1455,7 @@ const mediaScenarios: Scenario[] = [
       },
       {
         id: '9c',
-        text: '在粉丝群中说明情况，保持更新频率等待恢复',
+        text: 'Explain the situation in the follower group, maintain update frequency and wait for recovery',
         weights: {
           sanguine: 0,
           choleric: 0,
@@ -1483,7 +1483,7 @@ const mediaScenarios: Scenario[] = [
       },
       {
         id: '9d',
-        text: '开始在其他平台同步运营，分散风险',
+        text: 'Start operating on other platforms simultaneously, diversifying risk',
         weights: {
           sanguine: 0,
           choleric: 0,
@@ -1511,7 +1511,7 @@ const mediaScenarios: Scenario[] = [
       },
       {
         id: '9e',
-        text: '焦虑得睡不着，发条动态抱怨平台规则不透明',
+        text: 'Too anxious to sleep, post a status complaining about the platform\'s opaque rules',
         weights: {
           sanguine: 0,
           choleric: 0,
@@ -1539,7 +1539,7 @@ const mediaScenarios: Scenario[] = [
       },
       {
         id: '9f',
-        text: '找同样被限流过的同行取经，看看他们是怎么解决的',
+        text: 'Ask peers who have also been shadowbanned for advice on how they resolved it',
         weights: {
           sanguine: 0,
           choleric: 0,
@@ -1569,11 +1569,11 @@ const mediaScenarios: Scenario[] = [
   },
   {
     id: 10,
-    situation: '被观察者需要决定是否要"露脸"做内容，之前一直是匿名。他/她会怎么选？',
+    situation: 'The person needs to decide whether to show their face in content — they\'ve been anonymous until now. What would he/she choose?',
     options: [
       {
         id: '10a',
-        text: '先评估露脸对内容价值的增量，值得就做',
+        text: 'First assess the incremental value showing face adds to the content — if it\'s worth it, do it',
         weights: {
           sanguine: 0,
           choleric: 0,
@@ -1601,7 +1601,7 @@ const mediaScenarios: Scenario[] = [
       },
       {
         id: '10b',
-        text: '大胆尝试，露脸能拉近和粉丝的距离',
+        text: 'Boldly give it a try, showing face can bring closer connection with followers',
         weights: {
           sanguine: 2,
           choleric: 1,
@@ -1629,7 +1629,7 @@ const mediaScenarios: Scenario[] = [
       },
       {
         id: '10c',
-        text: '继续匿名，保持神秘感也是一种风格',
+        text: 'Continue staying anonymous, maintaining an air of mystery is also a style',
         weights: {
           sanguine: 0,
           choleric: 0,
@@ -1657,7 +1657,7 @@ const mediaScenarios: Scenario[] = [
       },
       {
         id: '10d',
-        text: '先小范围测试，看看粉丝的反馈',
+        text: 'Test it on a small scale first, see how followers react',
         weights: {
           sanguine: 0,
           choleric: 0,
@@ -1685,7 +1685,7 @@ const mediaScenarios: Scenario[] = [
       },
       {
         id: '10e',
-        text: '完全无所谓，露不露脸不重要，内容本身才是关键',
+        text: 'Completely don\'t care, whether to show face or not is unimportant, the content itself is what matters',
         weights: {
           sanguine: 0,
           choleric: 0,
@@ -1713,7 +1713,7 @@ const mediaScenarios: Scenario[] = [
       },
       {
         id: '10f',
-        text: '找其他已经露脸的同行聊聊他们的真实体验再决定',
+        text: 'Talk to other creators who have shown their faces about their real experience before deciding',
         weights: {
           sanguine: 0,
           choleric: 0,
@@ -1743,11 +1743,11 @@ const mediaScenarios: Scenario[] = [
   },
   {
     id: 11,
-    situation: '被观察者被粉丝要求评价另一位创作者。他/她会怎么做？',
+    situation: 'The person is asked by followers to evaluate another creator. What would he/she do?',
     options: [
       {
         id: '11a',
-        text: '只评价作品不评价人，保持专业和尊重',
+        text: 'Only evaluate the work, not the person, maintaining professionalism and respect',
         weights: {
           sanguine: 0,
           choleric: 0,
@@ -1775,7 +1775,7 @@ const mediaScenarios: Scenario[] = [
       },
       {
         id: '11b',
-        text: '坦诚表达自己的看法，好的就说好，不好的也客观指出',
+        text: 'Frankly express own views — praise what\'s good, objectively point out what\'s not',
         weights: {
           sanguine: 0,
           choleric: 2,
@@ -1803,7 +1803,7 @@ const mediaScenarios: Scenario[] = [
       },
       {
         id: '11c',
-        text: '委婉拒绝，不想卷入同行之间的评价',
+        text: 'Politely decline, not wanting to get involved in evaluating fellow creators',
         weights: {
           sanguine: 0,
           choleric: 0,
@@ -1831,7 +1831,7 @@ const mediaScenarios: Scenario[] = [
       },
       {
         id: '11d',
-        text: '用幽默的方式带过，不正面回答',
+        text: 'Deflect with humor, without giving a direct answer',
         weights: {
           sanguine: 2,
           choleric: 0,
@@ -1859,7 +1859,7 @@ const mediaScenarios: Scenario[] = [
       },
       {
         id: '11e',
-        text: '直接拒绝，并对粉丝的这种要求表示不满',
+        text: 'Directly refuse, and express displeasure at followers making such requests',
         weights: {
           sanguine: 0,
           choleric: 3,
@@ -1887,7 +1887,7 @@ const mediaScenarios: Scenario[] = [
       },
       {
         id: '11f',
-        text: '把问题抛回给粉丝，反问大家觉得呢',
+        text: 'Bounce the question back to followers, asking what everyone else thinks',
         weights: {
           sanguine: 0,
           choleric: 0,
@@ -1917,11 +1917,11 @@ const mediaScenarios: Scenario[] = [
   },
   {
     id: 12,
-    situation: '被观察者发现自己的内容风格和最初定位发生了很大偏移。他/她会怎么看？',
+    situation: 'The person notices their content style has drifted significantly from the original positioning. What would he/she think?',
     options: [
       {
         id: '12a',
-        text: '这是内容进化的自然过程，只要核心价值不变就好',
+        text: 'This is a natural process of content evolution, as long as the core values remain unchanged',
         weights: {
           sanguine: 0,
           choleric: 0,
@@ -1949,7 +1949,7 @@ const mediaScenarios: Scenario[] = [
       },
       {
         id: '12b',
-        text: '重新审视自己的定位，做出有意识的调整',
+        text: 'Re-examine own positioning, make a conscious adjustment',
         weights: {
           sanguine: 0,
           choleric: 0,
@@ -1977,7 +1977,7 @@ const mediaScenarios: Scenario[] = [
       },
       {
         id: '12c',
-        text: '顺应粉丝的喜好，做大家想看的内容',
+        text: 'Go along with followers\' preferences, create what they want to see',
         weights: {
           sanguine: 0,
           choleric: 0,
@@ -2005,7 +2005,7 @@ const mediaScenarios: Scenario[] = [
       },
       {
         id: '12d',
-        text: '回归初心，制作自己最初想做的内容',
+        text: 'Return to the original passion, create the content initially set out to make',
         weights: {
           sanguine: 0,
           choleric: 0,
@@ -2033,7 +2033,7 @@ const mediaScenarios: Scenario[] = [
       },
       {
         id: '12e',
-        text: '无所谓风格变不变，反正有流量就行，跟着感觉走',
+        text: 'Don\'t care whether the style changes or not, as long as there\'s traffic, just go with the flow',
         weights: {
           sanguine: 0,
           choleric: 0,
@@ -2061,7 +2061,7 @@ const mediaScenarios: Scenario[] = [
       },
       {
         id: '12f',
-        text: '焦虑地向粉丝道歉，觉得自己辜负了大家的期待',
+        text: 'Anxiously apologize to followers, feeling like letting everyone down',
         weights: {
           sanguine: 0,
           choleric: 0,
@@ -2091,11 +2091,11 @@ const mediaScenarios: Scenario[] = [
   },
   {
     id: 13,
-    situation: '被观察者第一次组建小团队（助理、剪辑等），需要从个人创作者转型为管理者。他/她会怎么做？',
+    situation: 'The person is building a small team (assistant, editor, etc.) for the first time, needing to transition from solo creator to manager. What would he/she do?',
     options: [
       {
         id: '13a',
-        text: '主动学习团队管理知识，制定清晰的工作流程和分工',
+        text: 'Proactively learn team management, establish clear workflows and division of labor',
         weights: {
           sanguine: 0,
           choleric: 3,
@@ -2123,7 +2123,7 @@ const mediaScenarios: Scenario[] = [
       },
       {
         id: '13b',
-        text: '找有团队管理经验的同行请教，听听他们的实战经验',
+        text: 'Ask peers with team management experience for their practical advice',
         weights: {
           sanguine: 0,
           choleric: 0,
@@ -2151,7 +2151,7 @@ const mediaScenarios: Scenario[] = [
       },
       {
         id: '13c',
-        text: '用协作工具把任务拆解分配，进度可视化，谁做什么一目了然',
+        text: 'Use collaboration tools to break down and assign tasks, visualize progress so everyone knows what to do',
         weights: {
           sanguine: 0,
           choleric: 0,
@@ -2179,7 +2179,7 @@ const mediaScenarios: Scenario[] = [
       },
       {
         id: '13d',
-        text: '尝试远程异步协作或项目制合作等新型工作模式，不拘泥于传统雇佣',
+        text: 'Try new work models like remote async collaboration or project-based partnerships, not constrained by traditional employment',
         weights: {
           sanguine: 0,
           choleric: 0,
@@ -2207,7 +2207,7 @@ const mediaScenarios: Scenario[] = [
       },
       {
         id: '13e',
-        text: '先招一个人试水，跑通流程再慢慢扩大团队',
+        text: 'Hire one person first as a trial, validate the process before gradually expanding the team',
         weights: {
           sanguine: 0,
           choleric: 0,
@@ -2235,7 +2235,7 @@ const mediaScenarios: Scenario[] = [
       },
       {
         id: '13f',
-        text: '焦虑得睡不着，担心自己管不好团队，辜负大家的信任',
+        text: 'Too anxious to sleep, worried about not being able to manage the team well and letting everyone down',
         weights: {
           sanguine: 0,
           choleric: 0,
@@ -2263,7 +2263,7 @@ const mediaScenarios: Scenario[] = [
       },
       {
         id: '13g',
-        text: '无所谓，顺其自然，招来的人自己会干活，不用刻意管理',
+        text: 'Don\'t care, let nature take its course — hired people will figure out the work themselves, no need to deliberately manage',
         weights: {
           sanguine: 0,
           choleric: 0,
@@ -2293,11 +2293,11 @@ const mediaScenarios: Scenario[] = [
   },
   {
     id: 14,
-    situation: '被观察者面临一个选择：是加入MCN机构获得更多资源，还是保持独立运营。他/她会怎么选？',
+    situation: 'The person faces a choice: join an MCN agency for more resources, or stay independent. What would he/she choose?',
     options: [
       {
         id: '14a',
-        text: '仔细研究合同条款，评估MCN能带来的实际价值',
+        text: 'Carefully study the contract terms, evaluate the actual value an MCN can bring',
         weights: {
           sanguine: 0,
           choleric: 0,
@@ -2325,7 +2325,7 @@ const mediaScenarios: Scenario[] = [
       },
       {
         id: '14b',
-        text: '加入MCN，相信专业团队能帮助自己更快成长',
+        text: 'Join the MCN, believing a professional team can help grow faster',
         weights: {
           sanguine: 0,
           choleric: 0,
@@ -2353,7 +2353,7 @@ const mediaScenarios: Scenario[] = [
       },
       {
         id: '14c',
-        text: '保持独立，不想被合同束缚，自由最重要',
+        text: 'Stay independent, not wanting to be bound by contracts — freedom is most important',
         weights: {
           sanguine: 0,
           choleric: 2,
@@ -2381,7 +2381,7 @@ const mediaScenarios: Scenario[] = [
       },
       {
         id: '14d',
-        text: '和已签约的同行聊聊，了解真实情况再决定',
+        text: 'Chat with peers who have already signed, understand the real situation before deciding',
         weights: {
           sanguine: 0,
           choleric: 0,
@@ -2409,7 +2409,7 @@ const mediaScenarios: Scenario[] = [
       },
       {
         id: '14e',
-        text: '无所谓签不签，看心情决定，顺其自然',
+        text: 'Don\'t care whether to sign or not, decide based on mood, let it be',
         weights: {
           sanguine: 0,
           choleric: 0,
@@ -2437,7 +2437,7 @@ const mediaScenarios: Scenario[] = [
       },
       {
         id: '14f',
-        text: '焦虑得睡不着，反复纠结到底哪个选择更好',
+        text: 'Too anxious to sleep, agonizing over which choice is better',
         weights: {
           sanguine: 0,
           choleric: 0,
@@ -2467,11 +2467,11 @@ const mediaScenarios: Scenario[] = [
   },
   {
     id: 15,
-    situation: '被观察者发现自己的创作灵感枯竭，不知道该做什么内容了。他/她会怎么做？',
+    situation: 'The person finds their creative inspiration has dried up and doesn\'t know what content to make anymore. What would he/she do?',
     options: [
       {
         id: '15a',
-        text: '暂时停更，给自己放个假，去体验生活收集素材',
+        text: 'Take a break from posting, go on vacation, experience life and gather material',
         weights: {
           sanguine: 0,
           choleric: 0,
@@ -2499,7 +2499,7 @@ const mediaScenarios: Scenario[] = [
       },
       {
         id: '15b',
-        text: '看大量同行的内容，从中寻找灵感',
+        text: 'Consume a large amount of peer content, looking for inspiration from it',
         weights: {
           sanguine: 0,
           choleric: 0,
@@ -2527,7 +2527,7 @@ const mediaScenarios: Scenario[] = [
       },
       {
         id: '15c',
-        text: '和粉丝互动，听听大家想看什么',
+        text: 'Interact with followers, hear what they want to see',
         weights: {
           sanguine: 0,
           choleric: 0,
@@ -2555,7 +2555,7 @@ const mediaScenarios: Scenario[] = [
       },
       {
         id: '15d',
-        text: '坚持更新，即使质量不高也保持频率',
+        text: 'Keep posting, even if the quality drops, maintain the frequency',
         weights: {
           sanguine: 0,
           choleric: 2,
@@ -2583,7 +2583,7 @@ const mediaScenarios: Scenario[] = [
       },
       {
         id: '15e',
-        text: '觉得灵感枯竭就枯竭吧，先躺平一段时间再说',
+        text: 'If inspiration is gone, it\'s gone — give up trying for now and lie flat for a while',
         weights: {
           sanguine: 0,
           choleric: 0,
@@ -2611,7 +2611,7 @@ const mediaScenarios: Scenario[] = [
       },
       {
         id: '15f',
-        text: '找其他创作者一起开个会，互相激发灵感',
+        text: 'Get other creators together for a brainstorming session, spark inspiration from each other',
         weights: {
           sanguine: 0,
           choleric: 0,
@@ -2641,11 +2641,11 @@ const mediaScenarios: Scenario[] = [
   },
   {
     id: 16,
-    situation: '被观察者被粉丝要求在线下见面。他/她会怎么做？',
+    situation: 'The person is asked by followers to meet in person. What would he/she do?',
     options: [
       {
         id: '16a',
-        text: '组织粉丝见面会，在安全可控的环境下和粉丝互动',
+        text: 'Organize a fan meetup, interact with followers in a safe and controlled environment',
         weights: {
           sanguine: 2,
           choleric: 0,
@@ -2673,7 +2673,7 @@ const mediaScenarios: Scenario[] = [
       },
       {
         id: '16b',
-        text: '婉拒个人见面，保持创作者和观众的适当距离',
+        text: 'Politely decline a personal meeting, maintain appropriate distance between creator and audience',
         weights: {
           sanguine: 0,
           choleric: 0,
@@ -2701,7 +2701,7 @@ const mediaScenarios: Scenario[] = [
       },
       {
         id: '16c',
-        text: '在公开场合见面，确保安全',
+        text: 'Meet in a public place, ensuring safety',
         weights: {
           sanguine: 0,
           choleric: 0,
@@ -2729,7 +2729,7 @@ const mediaScenarios: Scenario[] = [
       },
       {
         id: '16d',
-        text: '很高兴被邀请，爽快答应',
+        text: 'Happy to be invited, readily agree',
         weights: {
           sanguine: 3,
           choleric: 0,
@@ -2757,7 +2757,7 @@ const mediaScenarios: Scenario[] = [
       },
       {
         id: '16e',
-        text: '直接拒绝，觉得粉丝要求见面很过分',
+        text: 'Directly refuse, feeling that followers asking to meet is inappropriate',
         weights: {
           sanguine: 0,
           choleric: 3,
@@ -2785,7 +2785,7 @@ const mediaScenarios: Scenario[] = [
       },
       {
         id: '16f',
-        text: '找有经验的同行请教线下见面的注意事项',
+        text: 'Ask experienced peers for advice on precautions for in-person meetings',
         weights: {
           sanguine: 0,
           choleric: 0,
@@ -2815,11 +2815,11 @@ const mediaScenarios: Scenario[] = [
   },
   {
     id: 17,
-    situation: '被观察者发现自己在内容创作上越来越依赖数据和算法推荐，失去了创作的乐趣。他/她会怎么做？',
+    situation: 'The person finds themselves increasingly relying on data and algorithm recommendations in content creation, having lost the joy of creating. What would he/she do?',
     options: [
       {
         id: '17a',
-        text: '重新找回创作的初心，做自己真正想做的内容',
+        text: 'Rediscover the original passion for creation, make the content truly wanted',
         weights: {
           sanguine: 0,
           choleric: 0,
@@ -2847,7 +2847,7 @@ const mediaScenarios: Scenario[] = [
       },
       {
         id: '17b',
-        text: '在数据驱动和创作表达之间找到平衡',
+        text: 'Find a balance between data-driven decisions and creative expression',
         weights: {
           sanguine: 0,
           choleric: 0,
@@ -2875,7 +2875,7 @@ const mediaScenarios: Scenario[] = [
       },
       {
         id: '17c',
-        text: '接受这个现实，做自媒体就是要有数据思维',
+        text: 'Accept the reality — being a content creator means having a data-driven mindset',
         weights: {
           sanguine: 0,
           choleric: 0,
@@ -2903,7 +2903,7 @@ const mediaScenarios: Scenario[] = [
       },
       {
         id: '17d',
-        text: '开辟一个小号，专门做自己想做的内容',
+        text: 'Create an alt account specifically for the content truly wanting to make',
         weights: {
           sanguine: 0,
           choleric: 0,
@@ -2931,7 +2931,7 @@ const mediaScenarios: Scenario[] = [
       },
       {
         id: '17e',
-        text: '焦虑又迷茫，发条动态吐槽做自媒体太心累了',
+        text: 'Anxious and lost, post a status venting about how exhausting being a content creator is',
         weights: {
           sanguine: 0,
           choleric: 0,
@@ -2959,7 +2959,7 @@ const mediaScenarios: Scenario[] = [
       },
       {
         id: '17f',
-        text: '找同样做自媒体的朋友聊聊，看看他们是怎么平衡的',
+        text: 'Talk to fellow content creators about how they balance data and creativity',
         weights: {
           sanguine: 0,
           choleric: 0,
@@ -2989,11 +2989,11 @@ const mediaScenarios: Scenario[] = [
   },
   {
     id: 18,
-    situation: '被观察者想学习一项新技能（如视频剪辑、数据分析、摄影等）来提升内容质量，但时间有限。他/她会怎么做？',
+    situation: 'The person wants to learn a new skill (e.g., video editing, data analysis, photography) to improve content quality, but has limited time. What would he/she do?',
     options: [
       {
         id: '18a',
-        text: '果断报名一门系统课程，按部就班地学，打好基础',
+        text: 'Resolutely enroll in a systematic course, study step by step, build a solid foundation',
         weights: {
           sanguine: 0,
           choleric: 3,
@@ -3021,7 +3021,7 @@ const mediaScenarios: Scenario[] = [
       },
       {
         id: '18b',
-        text: '找擅长这项技能的同行朋友，请他手把手带自己入门',
+        text: 'Find a peer friend skilled in this area, ask them to mentor from scratch',
         weights: {
           sanguine: 0,
           choleric: 0,
@@ -3049,7 +3049,7 @@ const mediaScenarios: Scenario[] = [
       },
       {
         id: '18c',
-        text: '梳理自己的薄弱环节，利用碎片时间针对性地看教程补足',
+        text: 'Identify weak areas, use fragmented time to watch targeted tutorials and fill gaps',
         weights: {
           sanguine: 0,
           choleric: 0,
@@ -3077,7 +3077,7 @@ const mediaScenarios: Scenario[] = [
       },
       {
         id: '18d',
-        text: '在实战中边做边学，接到什么项目就现学什么技能',
+        text: 'Learn by doing in real projects, picking up whatever skills are needed for each project',
         weights: {
           sanguine: 0,
           choleric: 0,
@@ -3105,7 +3105,7 @@ const mediaScenarios: Scenario[] = [
       },
       {
         id: '18e',
-        text: '焦虑纠结到底学哪个技能最有用，迟迟下不了决心开始',
+        text: 'Anxious and agonizing over which skill would be most useful, unable to commit to starting',
         weights: {
           sanguine: 0,
           choleric: 0,
@@ -3133,7 +3133,7 @@ const mediaScenarios: Scenario[] = [
       },
       {
         id: '18f',
-        text: '无所谓，现有的水平够用了，学新东西太累不如把旧的做好',
+        text: 'Don\'t care, current skill level is good enough, learning new things is too tiring — better to refine what already exists',
         weights: {
           sanguine: 0,
           choleric: 0,
@@ -3163,11 +3163,11 @@ const mediaScenarios: Scenario[] = [
   },
   {
     id: 19,
-    situation: '被观察者的粉丝群体中出现了不同阵营的对立，互相攻击，甚至波及到被观察者本人。他/她会怎么做？',
+    situation: 'Opposing factions have emerged among the person\'s follower base, attacking each other and even dragging the person into it. What would he/she do?',
     options: [
       {
         id: '19a',
-        text: '第一时间发声明，呼吁粉丝理性讨论，明确反对人身攻击',
+        text: 'Immediately issue a statement, urging followers to discuss rationally, clearly opposing personal attacks',
         weights: {
           sanguine: 0,
           choleric: 3,
@@ -3195,7 +3195,7 @@ const mediaScenarios: Scenario[] = [
       },
       {
         id: '19b',
-        text: '分别了解两方粉丝的诉求，充当沟通桥梁化解矛盾',
+        text: 'Listen to both sides\' concerns separately, act as a bridge to mediate the conflict',
         weights: {
           sanguine: 0,
           choleric: 0,
@@ -3223,7 +3223,7 @@ const mediaScenarios: Scenario[] = [
       },
       {
         id: '19c',
-        text: '制定社区规则，明确禁止人身攻击，违规者直接禁言',
+        text: 'Establish community rules explicitly prohibiting personal attacks, ban violators immediately',
         weights: {
           sanguine: 0,
           choleric: 0,
@@ -3251,7 +3251,7 @@ const mediaScenarios: Scenario[] = [
       },
       {
         id: '19d',
-        text: '把这次粉丝对立做成一期探讨内容，引导大家理性思考',
+        text: 'Turn the follower conflict into a discussion piece, guiding everyone toward rational thinking',
         weights: {
           sanguine: 0,
           choleric: 0,
@@ -3279,7 +3279,7 @@ const mediaScenarios: Scenario[] = [
       },
       {
         id: '19e',
-        text: '暂不回应，等热度自然过去，相信时间会冲淡一切',
+        text: 'Hold off on responding, wait for the hype to naturally pass, believing time will fade everything',
         weights: {
           sanguine: 0,
           choleric: 0,
@@ -3307,7 +3307,7 @@ const mediaScenarios: Scenario[] = [
       },
       {
         id: '19f',
-        text: '焦虑得不敢看消息，觉得自己没管理好粉丝群体，陷入自责',
+        text: 'Too anxious to check messages, feeling like failing to manage the follower community, falling into self-blame',
         weights: {
           sanguine: 0,
           choleric: 0,
@@ -3335,7 +3335,7 @@ const mediaScenarios: Scenario[] = [
       },
       {
         id: '19g',
-        text: '无所谓，粉丝吵架很正常，当热闹看就行，不掺和',
+        text: 'Don\'t care, follower drama is normal, just watch it as entertainment, don\'t get involved',
         weights: {
           sanguine: 0,
           choleric: 0,
@@ -3365,11 +3365,11 @@ const mediaScenarios: Scenario[] = [
   },
   {
     id: 20,
-    situation: '被观察者回顾自己的自媒体之路，最看重什么？',
+    situation: 'Looking back on the content creation journey, what does the person value most?',
     options: [
       {
         id: '20a',
-        text: '通过内容影响了很多人，收获了真实的连接',
+        text: 'Having influenced many people through content, gained genuine connections',
         weights: {
           sanguine: 0,
           choleric: 0,
@@ -3397,7 +3397,7 @@ const mediaScenarios: Scenario[] = [
       },
       {
         id: '20b',
-        text: '实现了自我表达，找到了自己的声音',
+        text: 'Having achieved self-expression, found own voice',
         weights: {
           sanguine: 0,
           choleric: 0,
@@ -3425,7 +3425,7 @@ const mediaScenarios: Scenario[] = [
       },
       {
         id: '20c',
-        text: '获得了经济独立和自由的生活方式',
+        text: 'Having gained financial independence and a free lifestyle',
         weights: {
           sanguine: 0,
           choleric: 0,
@@ -3453,7 +3453,7 @@ const mediaScenarios: Scenario[] = [
       },
       {
         id: '20d',
-        text: '不断学习和成长，成为了更好的自己',
+        text: 'Continuous learning and growth, becoming a better version of oneself',
         weights: {
           sanguine: 0,
           choleric: 0,
@@ -3481,7 +3481,7 @@ const mediaScenarios: Scenario[] = [
       },
       {
         id: '20e',
-        text: '无所谓什么最看重，能做一天算一天，没有想那么多',
+        text: 'Don\'t care about what\'s most valued, just take it one day at a time, haven\'t thought that deeply',
         weights: {
           sanguine: 0,
           choleric: 0,
@@ -3509,7 +3509,7 @@ const mediaScenarios: Scenario[] = [
       },
       {
         id: '20f',
-        text: '最看重和粉丝朋友们的情谊，他们就像家人一样',
+        text: 'Most value the bond with followers and friends, they\'re like family',
         weights: {
           sanguine: 2,
           choleric: 0,

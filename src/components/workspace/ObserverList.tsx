@@ -4,16 +4,16 @@ import type { Observer } from '../../types/account';
 import type { TemperamentType } from '../../types';
 
 const TEMPERAMENT_BADGE: Record<TemperamentType, { label: string; bg: string; color: string }> = {
-  sanguine: { label: '多血', bg: 'bg-[#FDF0E6]', color: 'text-[#E8A87C]' },
-  choleric: { label: '胆汁', bg: 'bg-[#FBE8E6]', color: 'text-[#D96459]' },
-  phlegmatic: { label: '黏液', bg: 'bg-[#E8F0F8]', color: 'text-[#6B9AC4]' },
-  melancholic: { label: '抑郁', bg: 'bg-[#F0ECF8]', color: 'text-[#8E7CC3]' },
+  sanguine: { label: 'San', bg: 'bg-[#FDF0E6]', color: 'text-[#E8A87C]' },
+  choleric: { label: 'Cho', bg: 'bg-[#FBE8E6]', color: 'text-[#D96459]' },
+  phlegmatic: { label: 'Phl', bg: 'bg-[#E8F0F8]', color: 'text-[#6B9AC4]' },
+  melancholic: { label: 'Mel', bg: 'bg-[#F0ECF8]', color: 'text-[#8E7CC3]' },
 };
 
 const GENDER_LABEL: Record<string, string> = {
-  male: '男',
-  female: '女',
-  other: '其他',
+  male: 'M',
+  female: 'F',
+  other: 'Other',
   unknown: '',
 };
 
@@ -41,7 +41,7 @@ export default function ObserverList({
   const [deletingId, setDeletingId] = useState<string | null>(null);
 
   const handleDelete = async (id: string, name: string) => {
-    if (!confirm(`确认删除被观察者「${name}」？此操作不可恢复。`)) return;
+    if (!confirm(`Confirm delete observer "${name}"? This action cannot be undone.`)) return;
     setDeletingId(id);
     try {
       await onDelete(id);
@@ -64,7 +64,7 @@ export default function ObserverList({
         <div className="w-12 h-12 rounded-full bg-[#5B4FCF]/10 flex items-center justify-center mx-auto mb-3">
           <UserIcon className="w-6 h-6 text-[#5B4FCF]" />
         </div>
-        <p className="text-sm text-[#8E8CA8]">{emptyHint || '尚未添加被观察者'}</p>
+        <p className="text-sm text-[#8E8CA8]">{emptyHint || 'No observers yet'}</p>
       </div>
     );
   }
@@ -109,7 +109,7 @@ export default function ObserverList({
                   <span className={`px-1.5 py-0.5 rounded text-xs ${badge.bg} ${badge.color}`}>{badge.label}</span>
                 </div>
                 <div className="text-xs text-[#8E8CA8] mt-0.5 truncate">
-                  {ob.profession || '未指定职业'}
+                  {ob.profession || 'No profession specified'}
                   {ob.note && ` · ${ob.note}`}
                 </div>
               </div>
@@ -124,7 +124,7 @@ export default function ObserverList({
                 onClick={() => handleDelete(ob.id, ob.name)}
                 disabled={deletingId === ob.id}
                 className="flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center text-[#8E8CA8] hover:text-red-500 hover:bg-red-50/60 transition-all disabled:opacity-40"
-                title="删除"
+                title="Delete"
               >
                 {deletingId === ob.id ? (
                   <Loader2 className="w-4 h-4 animate-spin" />

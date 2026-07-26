@@ -1,14 +1,14 @@
 import { useState, useEffect } from 'react';
 import { useNavigate, useParams, Link, useSearchParams } from 'react-router-dom';
-import { ArrowLeft, Mail, Lock, User as UserIcon, AlertCircle, Loader2, CheckCircle2, ArrowUpCircle } from 'lucide-react';
+import { ArrowLeft, Mail, Lock, User as UserIcon, AlertCircle, Loader2, ArrowUpCircle } from 'lucide-react';
 import Button from '../components/ui/Button';
 import Disclaimer from '../components/ui/Disclaimer';
 import { useAuthStore } from '../stores/auth';
 import type { AccountTier } from '../types/account';
 
 const TIER_INFO: Record<Exclude<AccountTier, 'free'>, { name: string; price: string; gradient: string }> = {
-  pro: { name: 'Pro 版', price: '$17', gradient: 'from-[#5B4FCF] to-[#7B6FE0]' },
-  max: { name: 'Max 版', price: '$37', gradient: 'from-[#C9A86A] via-[#D4B575] to-[#E5C58A]' },
+  pro: { name: 'Pro', price: '$17', gradient: 'from-[#5B4FCF] to-[#7B6FE0]' },
+  max: { name: 'Max', price: '$37', gradient: 'from-[#C9A86A] via-[#D4B575] to-[#E5C58A]' },
 };
 
 // 升级差价映射
@@ -20,14 +20,15 @@ export default function RegisterPage() {
   const { tier } = useParams<{ tier: string }>();
   const navigate = useNavigate();
   const [searchParams] = useSearchParams();
-  const { signUp, upgradeTier, user, profile, loading: authLoading, error, clearError } = useAuthStore();
+  const { signUp, user, profile, loading: authLoading, error, clearError } = useAuthStore();
 
   const [nickname, setNickname] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const [step, setStep] = useState<'form' | 'payment' | 'done'>('form');
+  const [step, setStep] = useState<'form' | 'payment'>('form');
   const [submitting, setSubmitting] = useState(false);
   const [paying, setPaying] = useState(false);
+  const [payError, setPayError] = useState<string | null>(null);
 
   const targetTier = (tier as Exclude<AccountTier, 'free'>) || 'pro';
   const info = TIER_INFO[targetTier] || TIER_INFO.pro;
@@ -65,28 +66,62 @@ export default function RegisterPage() {
     }
   };
 
-  // 连连国际未完善：此处为占位逻辑，正式接入后替换为连连 Hosted Payment 调用
+  // Call Supabase Edge Function to create LianLian payment order, then redirect to checkout
   const handlePay = async () => {
     setPaying(true);
-    // TODO: 接入连连国际后，改为调用后端 Edge Function 生成签名订单并跳转连连支付页
-    // 当前模拟：等待 1.2s 后标记为已支付（仅用于开发联调，上线前必须移除）
-    await new Promise((r) => setTimeout(r, 1200));
+    setPayError(null);
+    try {
+      const supabaseUrl = import.meta.env.VITE_SUPABASE_URL;
+      const currentUserId = user?.id;
+      const currentTier = profile?.tier ?? 'free';
 
-    // 升级模式：支付成功后更新 tier
-    if (isUpgrade) {
-      const { error: upgradeError } = await upgradeTier(targetTier);
-      if (upgradeError) {
+      if (!currentUserId) {
+        setPayError('Please log in before payment.');
         setPaying(false);
         return;
       }
+
+      // Determine payment amount
+      const isProToMax = isUpgrade && upgradeFrom === 'pro' && targetTier === 'max';
+      const amount = isProToMax ? 20 : (targetTier === 'max' ? 37 : 17);
+
+      const res = await fetch(`${supabaseUrl}/functions/v1/create-payment`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          Authorization: `Bearer ${import.meta.env.VITE_SUPABASE_ANON_KEY}`,
+        },
+        body: JSON.stringify({
+          user_id: currentUserId,
+          tier: targetTier,
+          amount,
+          is_upgrade: isUpgrade,
+          upgrade_from: isUpgrade ? currentTier : null,
+        }),
+      });
+
+      const data = await res.json();
+
+      if (data.error) {
+        console.error('[handlePay] Edge Function error:', data.error, data.detail);
+        setPayError(data.detail || data.error || 'Payment initialization failed. Please try again.');
+        setPaying(false);
+        return;
+      }
+
+      // Redirect user to LianLian hosted checkout page
+      if (data.checkout_url) {
+        window.location.href = data.checkout_url;
+      } else {
+        console.error('[handlePay] No checkout_url returned');
+        setPayError('No checkout URL returned. Please contact support.');
+        setPaying(false);
+      }
+    } catch (err) {
+      console.error('[handlePay] Error:', err);
+      setPayError('Network error. Please check your connection and try again.');
+      setPaying(false);
     }
-
-    setPaying(false);
-    setStep('done');
-  };
-
-  const handleEnterWorkspace = () => {
-    navigate(`/${targetTier}`);
   };
 
   return (
@@ -94,7 +129,7 @@ export default function RegisterPage() {
       <div className="w-full max-w-[420px] md:max-w-[480px] flex flex-col gap-5">
         <Link to="/" className="inline-flex items-center gap-1.5 text-sm text-[#8E8CA8] hover:text-[#5B4FCF] transition-colors">
           <ArrowLeft className="w-4 h-4" />
-          返回首页
+          Back to Home
         </Link>
 
         {/* 版本标识 */}
@@ -105,19 +140,19 @@ export default function RegisterPage() {
                 <ArrowUpCircle className="w-5 h-5 text-white" />
               </div>
               <h2 className="text-2xl font-bold mb-1" style={{ fontFamily: "'Nunito', 'PingFang SC', sans-serif" }}>
-                升级到 {info.name}
+                Upgrade to {info.name}
               </h2>
               <p className="text-white/80 text-sm">
-                从 {TIER_INFO[upgradeFrom as 'pro']?.name ?? '免费版'} 升级 · 补差价 {upgradePrice} · 永久权限
+                From {TIER_INFO[upgradeFrom as 'pro']?.name ?? 'Free'} · Upgrade price {upgradePrice} · Lifetime access
               </p>
             </>
           ) : (
             <>
               <h2 className="text-2xl font-bold mb-1" style={{ fontFamily: "'Nunito', 'PingFang SC', sans-serif" }}>
-                注册 {info.name}
+                Sign Up — {info.name}
               </h2>
               <p className="text-white/80 text-sm">
-                一次性付费 {info.price} · 永久权限
+                One-time payment {info.price} · Lifetime access
               </p>
             </>
           )}
@@ -126,16 +161,16 @@ export default function RegisterPage() {
         {step === 'form' && (
           <form onSubmit={handleRegister} className="rounded-[20px] bg-white/60 backdrop-blur-[10px] border border-white/50 p-6 flex flex-col gap-4">
             <Field
-              label="昵称"
+              label="Nickname"
               icon={<UserIcon className="w-4 h-4" />}
               value={nickname}
               onChange={setNickname}
-              placeholder="希望我们如何称呼您"
+              placeholder="How should we address you"
               type="text"
               autoComplete="nickname"
             />
             <Field
-              label="真实邮箱"
+              label="Email"
               icon={<Mail className="w-4 h-4" />}
               value={email}
               onChange={setEmail}
@@ -144,11 +179,11 @@ export default function RegisterPage() {
               autoComplete="email"
             />
             <Field
-              label="密码"
+              label="Password"
               icon={<Lock className="w-4 h-4" />}
               value={password}
               onChange={setPassword}
-              placeholder="至少 6 位"
+              placeholder="At least 6 characters"
               type="password"
               autoComplete="new-password"
             />
@@ -171,17 +206,17 @@ export default function RegisterPage() {
               {submitting ? (
                 <>
                   <Loader2 className="w-5 h-5 animate-spin" />
-                  注册中...
+                  Signing up...
                 </>
               ) : (
-                `注册并继续支付 ${info.price}`
+                `Sign Up & Pay ${info.price}`
               )}
             </Button>
 
             <p className="text-xs text-[#8E8CA8] text-center">
-              已有账号？{' '}
+              Already have an account?{' '}
               <Link to="/login" className="text-[#5B4FCF] font-medium hover:underline">
-                直接登录
+                Log In
               </Link>
             </p>
           </form>
@@ -198,21 +233,21 @@ export default function RegisterPage() {
             </div>
             <div>
               <h3 className="text-lg font-bold text-[#3D3A5C] mb-1">
-                {isUpgrade ? '请完成升级支付' : '注册成功，请完成支付'}
+                {isUpgrade ? 'Complete Upgrade Payment' : 'Sign up successful, complete payment'}
               </h3>
               <p className="text-sm text-[#8E8CA8] leading-relaxed">
                 {isUpgrade ? (
                   <>
-                    您当前为 {TIER_INFO[upgradeFrom as 'pro']?.name ?? '免费版'} 用户，
-                    升级到 {info.name} 需补差价 {upgradePrice}。
+                    You are currently a {TIER_INFO[upgradeFrom as 'pro']?.name ?? 'Free'} user.
+                    Upgrading to {info.name} requires a price difference of {upgradePrice}.
                     <br />
-                    升级后被观察者上限从 60 位扩展至 160 位，并解锁任务预判功能。
+                    Observer limit will expand from 60 to 160, and the prediction feature will be unlocked.
                   </>
                 ) : (
                   <>
-                    我们已向 <span className="font-medium text-[#3D3A5C]">{email}</span> 发送验证邮件。
+                    We've sent a verification email to <span className="font-medium text-[#3D3A5C]">{email}</span>.
                     <br />
-                    支付 {info.price} 后即可永久使用 {info.name} 全部功能。
+                    Pay {info.price} to get lifetime access to all {info.name} features.
                   </>
                 )}
               </p>
@@ -220,65 +255,50 @@ export default function RegisterPage() {
 
             <div className="rounded-2xl bg-[#5B4FCF]/5 border border-[#5B4FCF]/15 p-4 text-left">
               <p className="text-xs text-[#5B4FCF] font-semibold mb-2">
-                {isUpgrade ? '升级订单' : '订单信息'}
+                {isUpgrade ? 'Upgrade Order' : 'Order Details'}
               </p>
               <div className="flex justify-between text-sm text-[#3D3A5C] mb-1">
-                <span>版本</span>
+                <span>Version</span>
                 <span className="font-medium">
                   {isUpgrade
-                    ? `${TIER_INFO[upgradeFrom as 'pro']?.name ?? '免费版'} → ${info.name}`
-                    : `${info.name} · 永久权限`
+                    ? `${TIER_INFO[upgradeFrom as 'pro']?.name ?? 'Free'} → ${info.name}`
+                    : `${info.name} · Lifetime access`
                   }
                 </span>
               </div>
               <div className="flex justify-between text-sm text-[#3D3A5C] mb-1">
-                <span>账号</span>
+                <span>Account</span>
                 <span className="font-medium">{isUpgrade ? user?.email : email}</span>
               </div>
               <div className="flex justify-between text-base text-[#3D3A5C] mt-2 pt-2 border-t border-[#5B4FCF]/15">
-                <span className="font-semibold">应付金额</span>
+                <span className="font-semibold">Amount Due</span>
                 <span className="font-bold text-[#5B4FCF]">{upgradePrice} USD</span>
               </div>
             </div>
+
+            {payError && (
+              <div className="flex items-start gap-2 text-sm text-red-600 bg-red-50/70 border border-red-200/50 rounded-2xl p-3 text-left">
+                <AlertCircle className="w-4 h-4 flex-shrink-0 mt-0.5" />
+                <span>{payError}</span>
+              </div>
+            )}
 
             <Button variant="primary" size="lg" fullWidth onClick={handlePay} disabled={paying}>
               {paying ? (
                 <>
                   <Loader2 className="w-5 h-5 animate-spin" />
-                  正在跳转支付...
+                  Redirecting to payment...
                 </>
               ) : (
-                `使用连连国际支付 ${upgradePrice}`
+                `Pay with LianLian Pay ${upgradePrice}`
               )}
             </Button>
 
             <p className="text-xs text-[#8E8CA8]/80 leading-relaxed">
-              支付通道：连连国际（LianLian Pay）· 银行收款：DBS Bank (Hong Kong)
+              Payment: LianLian Pay · Receiving bank: DBS Bank (Hong Kong)
               <br />
-              支付完成后权限立即生效
+              Access enabled immediately after payment
             </p>
-          </div>
-        )}
-
-        {step === 'done' && (
-          <div className="rounded-[20px] bg-white/60 backdrop-blur-[10px] border border-white/50 p-8 flex flex-col gap-4 text-center">
-            <div className="w-14 h-14 rounded-full bg-green-100 flex items-center justify-center mx-auto">
-              <CheckCircle2 className="w-7 h-7 text-green-600" />
-            </div>
-            <div>
-              <h3 className="text-xl font-bold text-[#3D3A5C] mb-2">
-                {isUpgrade ? '升级完成，新权限已生效' : '支付完成，权限已开通'}
-              </h3>
-              <p className="text-sm text-[#8E8CA8] leading-relaxed">
-                {isUpgrade
-                  ? `您的${info.name}已激活，被观察者上限已扩展，任务预判功能已解锁。`
-                  : `您的${info.name}已激活，现在可以开始管理团队被观察者。`
-                }
-              </p>
-            </div>
-            <Button variant="primary" size="lg" fullWidth onClick={handleEnterWorkspace}>
-              进入 {info.name} 工作台
-            </Button>
           </div>
         )}
 

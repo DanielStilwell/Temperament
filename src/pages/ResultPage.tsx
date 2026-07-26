@@ -22,7 +22,7 @@ export default function ResultPage() {
   if (!result) {
     return (
       <div className="min-h-screen flex items-center justify-center text-[#8E8CA8]">
-        加载中...
+        Loading...
       </div>
     );
   }

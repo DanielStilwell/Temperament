@@ -3,11 +3,11 @@ import type { Scenario } from '../../types';
 const teacherScenarios: Scenario[] = [
   {
     id: 1,
-    situation: '被观察者发现所负责的一位学生近期表现反常,成绩/状态突然大幅下滑,且经常走神或情绪低落。他/她会怎么做?',
+    situation: 'The person notices that a student they are responsible for has been behaving abnormally recently, with grades/status suddenly declining significantly, and frequently zoning out or appearing depressed. What would he/she do?',
     options: [
       {
         id: '1a',
-        text: '课后找学生私下谈心,了解背后的原因',
+        text: 'Talk to the student privately after class to understand the underlying reasons',
         weights: {
           sanguine: 0,
           choleric: 0,
@@ -35,7 +35,7 @@ const teacherScenarios: Scenario[] = [
       },
       {
         id: '1b',
-        text: '联系家长,了解家庭情况,共同寻找解决方案',
+        text: 'Contact the parents to understand the family situation and jointly find a solution',
         weights: {
           sanguine: 0,
           choleric: 0,
@@ -63,7 +63,7 @@ const teacherScenarios: Scenario[] = [
       },
       {
         id: '1c',
-        text: '在日常工作和接触中多关注该学生,给予更多鼓励和机会',
+        text: 'Pay more attention to the student in daily work and interactions, giving more encouragement and opportunities',
         weights: {
           sanguine: 0,
           choleric: 0,
@@ -91,7 +91,7 @@ const teacherScenarios: Scenario[] = [
       },
       {
         id: '1d',
-        text: '请心理老师或专业人员介入,专业评估学生状态',
+        text: 'Ask the school counselor or professional to intervene and professionally assess the student\'s condition',
         weights: {
           sanguine: 0,
           choleric: 0,
@@ -119,7 +119,7 @@ const teacherScenarios: Scenario[] = [
       },
       {
         id: '1e',
-        text: '暂不行动,认为状态波动属于正常现象,过段时间再观察',
+        text: 'Take no action for now, considering the fluctuation normal, and observe for a while',
         weights: {
           sanguine: 0,
           choleric: 0,
@@ -147,7 +147,7 @@ const teacherScenarios: Scenario[] = [
       },
       {
         id: '1f',
-        text: '心里很着急,反复琢磨是不是自己的教学出了问题,但又不知从何下手,纠结要不要主动找学生谈',
+        text: 'Feel very anxious, repeatedly wonder if something is wrong with their own teaching, but don\'t know where to start, hesitating whether to approach the student',
         weights: {
           sanguine: 0,
           choleric: 0,
@@ -177,11 +177,11 @@ const teacherScenarios: Scenario[] = [
   },
   {
     id: 2,
-    situation: '被观察者精心准备的一次公开课/示范课/展示课,效果远不如预期,学生的参与度很低。他/她会怎么做?',
+    situation: 'The person carefully prepared a public/demonstration/showcase lesson, but the results fell far short of expectations, with very low student engagement. What would he/she do?',
     options: [
       {
         id: '2a',
-        text: '课后认真复盘,分析问题所在,重新设计方案',
+        text: 'Review the lesson carefully afterwards, analyze the problems, and redesign the plan',
         weights: {
           sanguine: 0,
           choleric: 0,
@@ -209,7 +209,7 @@ const teacherScenarios: Scenario[] = [
       },
       {
         id: '2b',
-        text: '向有经验的同事请教,学习他们的方法',
+        text: 'Seek advice from experienced colleagues and learn their methods',
         weights: {
           sanguine: 0,
           choleric: 0,
@@ -237,7 +237,7 @@ const teacherScenarios: Scenario[] = [
       },
       {
         id: '2c',
-        text: '调整心态,一次失败不代表什么,下次再努力',
+        text: 'Adjust mindset — one failure doesn\'t define everything, try harder next time',
         weights: {
           sanguine: 0,
           choleric: 0,
@@ -265,7 +265,7 @@ const teacherScenarios: Scenario[] = [
       },
       {
         id: '2d',
-        text: '尝试用更互动、更有趣的方式重新设计内容',
+        text: 'Try redesigning the content in a more interactive and engaging way',
         weights: {
           sanguine: 0,
           choleric: 0,
@@ -293,7 +293,7 @@ const teacherScenarios: Scenario[] = [
       },
       {
         id: '2e',
-        text: '感到挫败沮丧,一段时间难以释怀,回避类似的展示机会',
+        text: 'Feel frustrated and defeated, unable to let it go for a while, avoiding similar showcase opportunities',
         weights: {
           sanguine: 0,
           choleric: 0,
@@ -321,7 +321,7 @@ const teacherScenarios: Scenario[] = [
       },
       {
         id: '2f',
-        text: '反复回放课堂上的每个细节,担心领导和同事会怎么看自己,连续几天吃不好睡不好',
+        text: 'Keep replaying every detail of the class, worrying about how leaders and colleagues will judge them, unable to eat or sleep well for days',
         weights: {
           sanguine: 0,
           choleric: 0,
@@ -351,11 +351,11 @@ const teacherScenarios: Scenario[] = [
   },
   {
     id: 3,
-    situation: '被观察者认为单位推行的某项教育改革/制度不合理,但同事们似乎都接受了。他/她会怎么做?',
+    situation: 'The person believes an education reform/policy introduced by the school is unreasonable, but colleagues seem to have accepted it. What would he/she do?',
     options: [
       {
         id: '3a',
-        text: '整理自己的思考和依据,在会议上有理有据地提出不同意见',
+        text: 'Organize their thoughts and evidence, and present well-reasoned objections at meetings',
         weights: {
           sanguine: 0,
           choleric: 0,
@@ -383,7 +383,7 @@ const teacherScenarios: Scenario[] = [
       },
       {
         id: '3b',
-        text: '先在自己的工作中尝试优化,用实践证明可行性',
+        text: 'Try optimizing in their own work first, proving feasibility through practice',
         weights: {
           sanguine: 0,
           choleric: 1,
@@ -411,7 +411,7 @@ const teacherScenarios: Scenario[] = [
       },
       {
         id: '3c',
-        text: '遵守单位安排,尽量在执行中优化',
+        text: 'Follow the school\'s arrangement, trying to optimize during implementation',
         weights: {
           sanguine: 0,
           choleric: 0,
@@ -439,7 +439,7 @@ const teacherScenarios: Scenario[] = [
       },
       {
         id: '3d',
-        text: '和信得过的同事私下讨论,看看大家的真实想法',
+        text: 'Discuss privately with trusted colleagues to gauge everyone\'s true opinions',
         weights: {
           sanguine: 0,
           choleric: 0,
@@ -467,7 +467,7 @@ const teacherScenarios: Scenario[] = [
       },
       {
         id: '3e',
-        text: '表面按要求执行,实际上还是按自己原来的方式工作',
+        text: 'Outwardly comply with the requirements but actually continue working the original way',
         weights: {
           sanguine: 0,
           choleric: 0,
@@ -495,7 +495,7 @@ const teacherScenarios: Scenario[] = [
       },
       {
         id: '3f',
-        text: '心里很不认同但又不敢提出来,反复纠结要不要表态,担心说了得罪领导、不说又憋屈',
+        text: 'Strongly disagree but don\'t dare to speak up, repeatedly torn about whether to voice their stance, worried that speaking up will offend leaders and staying silent feels oppressive',
         weights: {
           sanguine: 0,
           choleric: 0,
@@ -525,11 +525,11 @@ const teacherScenarios: Scenario[] = [
   },
   {
     id: 4,
-    situation: '被观察者发现所负责的学生群体中存在小团体排挤个别同学的现象。他/她会怎么做?',
+    situation: 'The person discovers that cliques in the student group they are responsible for are excluding individual students. What would he/she do?',
     options: [
       {
         id: '4a',
-        text: '设计团队合作活动,让学生们在协作中打破隔阂',
+        text: 'Design team collaboration activities to break down barriers through cooperation',
         weights: {
           sanguine: 0,
           choleric: 0,
@@ -557,7 +557,7 @@ const teacherScenarios: Scenario[] = [
       },
       {
         id: '4b',
-        text: '分别找各方谈话,了解情况,引导大家互相尊重',
+        text: 'Talk to each side separately to understand the situation and guide everyone to respect each other',
         weights: {
           sanguine: 0,
           choleric: 0,
@@ -585,7 +585,7 @@ const teacherScenarios: Scenario[] = [
       },
       {
         id: '4c',
-        text: '在集体场合公开讨论尊重和包容的重要性',
+        text: 'Openly discuss the importance of respect and inclusion in a group setting',
         weights: {
           sanguine: 0,
           choleric: 0,
@@ -613,7 +613,7 @@ const teacherScenarios: Scenario[] = [
       },
       {
         id: '4d',
-        text: '重点关注被排挤的学生,给予更多支持和鼓励',
+        text: 'Focus on the excluded student, giving more support and encouragement',
         weights: {
           sanguine: 0,
           choleric: 0,
@@ -641,7 +641,7 @@ const teacherScenarios: Scenario[] = [
       },
       {
         id: '4e',
-        text: '觉得这是学生间的小事,不主动介入,顺其自然',
+        text: 'Consider this a minor issue among students, not proactively intervening, letting it take its course',
         weights: {
           sanguine: 0,
           choleric: 0,
@@ -669,7 +669,7 @@ const teacherScenarios: Scenario[] = [
       },
       {
         id: '4f',
-        text: '很担心事情会越闹越大,又怕介入不当反而激化矛盾,反复纠结到底该怎么处理',
+        text: 'Very worried the situation will escalate, and afraid that improper intervention might worsen the conflict, repeatedly agonizing over how to handle it',
         weights: {
           sanguine: 0,
           choleric: 0,
@@ -699,11 +699,11 @@ const teacherScenarios: Scenario[] = [
   },
   {
     id: 5,
-    situation: '被观察者发现一位学生在考试或作业中作弊/抄袭。他/她会怎么处理?',
+    situation: 'The person discovers a student cheating/plagiarizing on an exam or assignment. How would they handle it?',
     options: [
       {
         id: '5a',
-        text: '按照单位规定处理,但课后找学生谈话,了解原因并引导',
+        text: 'Handle according to school rules, but talk to the student afterwards to understand the reasons and provide guidance',
         weights: {
           sanguine: 0,
           choleric: 0,
@@ -731,7 +731,7 @@ const teacherScenarios: Scenario[] = [
       },
       {
         id: '5b',
-        text: '严肃处理,必须让学生明白诚信的重要性',
+        text: 'Handle strictly, making sure the student understands the importance of integrity',
         weights: {
           sanguine: 0,
           choleric: 3,
@@ -759,7 +759,7 @@ const teacherScenarios: Scenario[] = [
       },
       {
         id: '5c',
-        text: '给予一次警告机会,让学生写检讨并承诺不再犯',
+        text: 'Give a warning, have the student write a self-criticism and promise not to repeat the offense',
         weights: {
           sanguine: 0,
           choleric: 0,
@@ -787,7 +787,7 @@ const teacherScenarios: Scenario[] = [
       },
       {
         id: '5d',
-        text: '在集体场合匿名讨论诚信问题,不给具体学生贴标签',
+        text: 'Anonymously discuss the integrity issue in a group setting, without labeling the specific student',
         weights: {
           sanguine: 0,
           choleric: 0,
@@ -815,7 +815,7 @@ const teacherScenarios: Scenario[] = [
       },
       {
         id: '5e',
-        text: '上报相关领导或部门,按既定流程统一处理',
+        text: 'Report to relevant leaders or departments, following established procedures',
         weights: {
           sanguine: 0,
           choleric: 0,
@@ -843,7 +843,7 @@ const teacherScenarios: Scenario[] = [
       },
       {
         id: '5f',
-        text: '很纠结,既怕处理太重伤了学生自尊,又怕处理太轻起不到警示作用,反复犹豫该怎么定夺',
+        text: 'Very conflicted — afraid that strict handling will hurt the student\'s self-esteem, but also that leniency won\'t serve as a deterrent, repeatedly hesitating over the right approach',
         weights: {
           sanguine: 0,
           choleric: 0,
@@ -873,11 +873,11 @@ const teacherScenarios: Scenario[] = [
   },
   {
     id: 6,
-    situation: '被观察者发现自己在教育工作中产生了职业倦怠,对学生失去了耐心。他/她会怎么做?',
+    situation: 'The person realizes they are experiencing burnout in their teaching work and have lost patience with students. What would he/she do?',
     options: [
       {
         id: '6a',
-        text: '主动寻求专业心理支持,正视自己的职业倦怠',
+        text: 'Proactively seek professional psychological support, facing their burnout head-on',
         weights: {
           sanguine: 0,
           choleric: 0,
@@ -905,7 +905,7 @@ const teacherScenarios: Scenario[] = [
       },
       {
         id: '6b',
-        text: '尝试新的工作方法,给日常注入新鲜感',
+        text: 'Try new work methods to inject freshness into the daily routine',
         weights: {
           sanguine: 0,
           choleric: 0,
@@ -933,7 +933,7 @@ const teacherScenarios: Scenario[] = [
       },
       {
         id: '6c',
-        text: '和同事交流,分享工作中的困惑和感受',
+        text: 'Communicate with colleagues, sharing their work struggles and feelings',
         weights: {
           sanguine: 0,
           choleric: 0,
@@ -961,7 +961,7 @@ const teacherScenarios: Scenario[] = [
       },
       {
         id: '6d',
-        text: '暂时减少额外工作,给自己留出恢复空间',
+        text: 'Temporarily reduce extra work, leaving room for recovery',
         weights: {
           sanguine: 0,
           choleric: 0,
@@ -989,7 +989,7 @@ const teacherScenarios: Scenario[] = [
       },
       {
         id: '6e',
-        text: '选择躺平,按部就班完成基本工作,不再追求突破',
+        text: 'Choose to coast, completing only basic tasks by the book, no longer pursuing breakthroughs',
         weights: {
           sanguine: 0,
           choleric: 0,
@@ -1017,7 +1017,7 @@ const teacherScenarios: Scenario[] = [
       },
       {
         id: '6f',
-        text: '陷入深深的自责和焦虑,觉得自己不适合当老师了,却又不知道还能做什么,反复内耗',
+        text: 'Fall into deep self-blame and anxiety, feeling unsuited to be a teacher anymore but not knowing what else to do, repeatedly draining themselves emotionally',
         weights: {
           sanguine: 0,
           choleric: 0,
@@ -1047,11 +1047,11 @@ const teacherScenarios: Scenario[] = [
   },
   {
     id: 7,
-    situation: '被观察者需要给一个行为习惯较差、屡教不改的学生做思想工作。他/她会怎么做?',
+    situation: 'The person needs to counsel a student with poor behavioral habits who repeatedly fails to improve. What would he/she do?',
     options: [
       {
         id: '7a',
-        text: '深入了解学生的家庭背景和成长环境,找到行为背后的原因',
+        text: 'Thoroughly investigate the student\'s family background and upbringing to find the root causes of the behavior',
         weights: {
           sanguine: 0,
           choleric: 0,
@@ -1079,7 +1079,7 @@ const teacherScenarios: Scenario[] = [
       },
       {
         id: '7b',
-        text: '和学生建立信任关系,用耐心和真诚慢慢引导',
+        text: 'Build a trust relationship with the student, gradually guiding them with patience and sincerity',
         weights: {
           sanguine: 0,
           choleric: 0,
@@ -1107,7 +1107,7 @@ const teacherScenarios: Scenario[] = [
       },
       {
         id: '7c',
-        text: '制定明确的行为规范和奖惩机制,严格执行',
+        text: 'Establish clear behavioral norms and reward-punishment mechanisms, strictly enforcing them',
         weights: {
           sanguine: 0,
           choleric: 2,
@@ -1135,7 +1135,7 @@ const teacherScenarios: Scenario[] = [
       },
       {
         id: '7d',
-        text: '给该学生安排一些正向责任,通过激励改变行为',
+        text: 'Assign the student positive responsibilities, using motivation to change behavior',
         weights: {
           sanguine: 0,
           choleric: 0,
@@ -1163,7 +1163,7 @@ const teacherScenarios: Scenario[] = [
       },
       {
         id: '7e',
-        text: '联系家长和其他相关老师,共同商讨应对策略',
+        text: 'Contact parents and other relevant teachers to jointly discuss strategies',
         weights: {
           sanguine: 0,
           choleric: 0,
@@ -1191,7 +1191,7 @@ const teacherScenarios: Scenario[] = [
       },
       {
         id: '7f',
-        text: '感到很挫败也很无力,反复怀疑是不是自己能力不行,纠结要不要放弃这个学生',
+        text: 'Feel very defeated and powerless, repeatedly doubting their own ability, torn about whether to give up on the student',
         weights: {
           sanguine: 0,
           choleric: 0,
@@ -1221,11 +1221,11 @@ const teacherScenarios: Scenario[] = [
   },
   {
     id: 8,
-    situation: '被观察者被要求参加一个与教学/核心业务无关的行政任务,占用了大量本职工作准备时间。他/她会怎么做?',
+    situation: 'The person is required to participate in an administrative task unrelated to teaching/core duties, which takes up a lot of preparation time for their main work. What would he/she do?',
     options: [
       {
         id: '8a',
-        text: '和领导沟通,说明本职工作已经饱和,请求合理分配',
+        text: 'Communicate with leadership, explaining that core duties are already saturated, and request reasonable allocation',
         weights: {
           sanguine: 0,
           choleric: 0,
@@ -1253,7 +1253,7 @@ const teacherScenarios: Scenario[] = [
       },
       {
         id: '8b',
-        text: '尽力完成,但提高效率,减少对核心工作的影响',
+        text: 'Try their best to complete it, but improve efficiency to minimize impact on core work',
         weights: {
           sanguine: 0,
           choleric: 0,
@@ -1281,7 +1281,7 @@ const teacherScenarios: Scenario[] = [
       },
       {
         id: '8c',
-        text: '服从安排,把核心工作放在第一位,行政任务能拖就拖',
+        text: 'Comply with the arrangement, prioritize core work, and delay the administrative task as much as possible',
         weights: {
           sanguine: 0,
           choleric: 0,
@@ -1309,7 +1309,7 @@ const teacherScenarios: Scenario[] = [
       },
       {
         id: '8d',
-        text: '和同事协调,看看能否互相分担',
+        text: 'Coordinate with colleagues to see if they can share the burden',
         weights: {
           sanguine: 0,
           choleric: 0,
@@ -1337,7 +1337,7 @@ const teacherScenarios: Scenario[] = [
       },
       {
         id: '8e',
-        text: '直接拒绝接受,认为这不该是教育工作者职责范围',
+        text: 'Directly refuse, believing this is outside the scope of an educator\'s responsibilities',
         weights: {
           sanguine: 0,
           choleric: 4,
@@ -1365,7 +1365,7 @@ const teacherScenarios: Scenario[] = [
       },
       {
         id: '8f',
-        text: '一边应付行政任务一边担心本职工作做不好,两头都顾不上,焦虑得睡不着觉',
+        text: 'Juggle the administrative task while worrying about failing at core duties, unable to manage either well, too anxious to sleep',
         weights: {
           sanguine: 0,
           choleric: 0,
@@ -1395,11 +1395,11 @@ const teacherScenarios: Scenario[] = [
   },
   {
     id: 9,
-    situation: '被观察者负责的学生中,有一个非常有天赋但学习态度不端正。他/她会怎么做?',
+    situation: 'Among the students the person is responsible for, there is one who is very talented but has a poor attitude toward learning. What would he/she do?',
     options: [
       {
         id: '9a',
-        text: '发掘学生的兴趣点,用挑战性的内容激发学习动力',
+        text: 'Discover the student\'s interests and use challenging content to ignite their motivation',
         weights: {
           sanguine: 0,
           choleric: 0,
@@ -1427,7 +1427,7 @@ const teacherScenarios: Scenario[] = [
       },
       {
         id: '9b',
-        text: '单独和学生谈话,帮助他/她认识到自己的潜力',
+        text: 'Talk to the student individually, helping them recognize their potential',
         weights: {
           sanguine: 0,
           choleric: 0,
@@ -1455,7 +1455,7 @@ const teacherScenarios: Scenario[] = [
       },
       {
         id: '9c',
-        text: '给该学生设定更高的目标,用适度的压力激发潜能',
+        text: 'Set higher goals for the student, using moderate pressure to unlock potential',
         weights: {
           sanguine: 0,
           choleric: 2,
@@ -1483,7 +1483,7 @@ const teacherScenarios: Scenario[] = [
       },
       {
         id: '9d',
-        text: '让他/她承担一些带教或辅导任务,在教学中增强责任感',
+        text: 'Have them take on mentoring or tutoring tasks, building responsibility through teaching',
         weights: {
           sanguine: 0,
           choleric: 0,
@@ -1511,7 +1511,7 @@ const teacherScenarios: Scenario[] = [
       },
       {
         id: '9e',
-        text: '推荐学生参加各类竞赛或社团活动,让天赋有更大发挥空间',
+        text: 'Recommend the student for competitions or club activities, giving their talent more room to flourish',
         weights: {
           sanguine: 0,
           choleric: 0,
@@ -1539,7 +1539,7 @@ const teacherScenarios: Scenario[] = [
       },
       {
         id: '9f',
-        text: '觉得天赋再高态度不行也没用,不想在一个不上进的学生身上浪费太多精力',
+        text: 'Feel that talent without the right attitude is useless, and don\'t want to waste too much energy on an unmotivated student',
         weights: {
           sanguine: 0,
           choleric: 0,
@@ -1569,73 +1569,73 @@ const teacherScenarios: Scenario[] = [
   },
   {
     id: 10,
-    situation: '被观察者参与一次跨学科集体备课,各科老师对教学重点和方式产生了分歧。他/她会怎么做?',
+    situation: 'The person receives a complaint from a parent who believes their child has been treated unfairly or graded unreasonably. What would he/she do?',
     options: [
       {
         id: '10a',
-        text: '主动牵头梳理各方意见,整合成一个兼顾各学科重点的综合教学方案',
+        text: 'Patiently listen to the parent\'s concerns, show relevant records and grading criteria, and resolve misunderstandings through rational communication',
         weights: {
           sanguine: 0,
-          choleric: 2,
+          choleric: 0,
           phlegmatic: 0,
           melancholic: 0,
-          communication: 2,
-          leadership: 4,
+          communication: 4,
+          leadership: 0,
           creativity: 0,
           analysis: 1,
           resilience: 0,
-          empathy: 0,
-          achievement: 3,
-          affiliation: 1,
-          power: 2,
+          empathy: 2,
+          achievement: 2,
+          affiliation: 2,
+          power: 1,
           security: 1,
           proactive: 3,
           reactive: 0,
-          rational: 2,
-          emotional: 0,
+          rational: 3,
+          emotional: 1,
           independent: 1,
-          collaborative: 3,
-          innovative: 1,
-          conventional: 1,
+          collaborative: 2,
+          innovative: 0,
+          conventional: 2,
         },
       },
       {
         id: '10b',
-        text: '收集各班学生的学习反馈和数据,用客观依据说服大家达成共识',
+        text: 'First self-check whether there were any oversights in their work; if yes, sincerely apologize and improve; if not, explain with reasoning',
         weights: {
           sanguine: 0,
           choleric: 0,
           phlegmatic: 0,
           melancholic: 2,
-          communication: 1,
+          communication: 2,
           leadership: 0,
           creativity: 0,
-          analysis: 4,
+          analysis: 3,
           resilience: 0,
-          empathy: 0,
+          empathy: 2,
           achievement: 2,
-          affiliation: 0,
+          affiliation: 1,
           power: 1,
           security: 1,
-          proactive: 2,
+          proactive: 3,
           reactive: 0,
           rational: 3,
           emotional: 0,
           independent: 2,
-          collaborative: 2,
-          innovative: 1,
-          conventional: 1,
+          collaborative: 1,
+          innovative: 0,
+          conventional: 2,
         },
       },
       {
         id: '10c',
-        text: '坚持自己学科的教学重点和方式,认为本学科的专业性不应被妥协',
+        text: 'Stand by their professional judgment, believing the grading is well-founded, and not accept unreasonable accusations',
         weights: {
           sanguine: 0,
-          choleric: 4,
+          choleric: 3,
           phlegmatic: 0,
           melancholic: 0,
-          communication: 0,
+          communication: 1,
           leadership: 0,
           creativity: 0,
           analysis: 0,
@@ -1645,7 +1645,7 @@ const teacherScenarios: Scenario[] = [
           affiliation: 0,
           power: 3,
           security: 1,
-          proactive: 3,
+          proactive: 2,
           reactive: 0,
           rational: 2,
           emotional: 0,
@@ -1657,63 +1657,63 @@ const teacherScenarios: Scenario[] = [
       },
       {
         id: '10d',
-        text: '提出一个各方都能接受的折中方案,保留各科核心诉求的同时做出让步',
+        text: 'Invite the grade-level coordinator or a leader to join the meeting, as a third party makes it fairer',
         weights: {
           sanguine: 0,
           choleric: 0,
           phlegmatic: 1,
           melancholic: 0,
-          communication: 4,
+          communication: 2,
           leadership: 0,
-          creativity: 1,
+          creativity: 0,
           analysis: 0,
           resilience: 0,
-          empathy: 1,
+          empathy: 0,
           achievement: 1,
-          affiliation: 2,
-          power: 1,
-          security: 2,
+          affiliation: 1,
+          power: 0,
+          security: 3,
           proactive: 2,
           reactive: 0,
           rational: 2,
-          emotional: 1,
-          independent: 1,
+          emotional: 0,
+          independent: 0,
           collaborative: 3,
-          innovative: 1,
-          conventional: 1,
+          innovative: 0,
+          conventional: 2,
         },
       },
       {
         id: '10e',
-        text: '跳出单学科框架,设计一门跨学科融合课程,让各科重点在同一主题中自然呈现',
+        text: 'Appropriately soothe the parent\'s emotions, and in practice give the student more attention and opportunities',
         weights: {
           sanguine: 0,
           choleric: 0,
-          phlegmatic: 0,
+          phlegmatic: 2,
           melancholic: 0,
-          communication: 0,
+          communication: 1,
           leadership: 0,
-          creativity: 5,
+          creativity: 0,
           analysis: 0,
           resilience: 0,
-          empathy: 0,
-          achievement: 3,
-          affiliation: 1,
-          power: 1,
-          security: 0,
-          proactive: 3,
-          reactive: 0,
-          rational: 2,
-          emotional: 0,
-          independent: 2,
+          empathy: 4,
+          achievement: 1,
+          affiliation: 3,
+          power: 0,
+          security: 1,
+          proactive: 2,
+          reactive: 1,
+          rational: 1,
+          emotional: 2,
+          independent: 1,
           collaborative: 2,
-          innovative: 3,
-          conventional: 0,
+          innovative: 0,
+          conventional: 2,
         },
       },
       {
         id: '10f',
-        text: '面对各科老师的争论不知该听谁的,怕支持一方得罪另一方,反复纠结不敢表态',
+        text: 'Very nervous, worried the parent will escalate to leadership and affect them, repeatedly wondering if they actually did something wrong, torn about whether to proactively explain to leadership',
         weights: {
           sanguine: 0,
           choleric: 0,
@@ -1724,14 +1724,14 @@ const teacherScenarios: Scenario[] = [
           creativity: 0,
           analysis: 1,
           resilience: 0,
-          empathy: 0,
-          achievement: 0,
-          affiliation: 1,
+          empathy: 1,
+          achievement: 1,
+          affiliation: 0,
           power: 0,
           security: 3,
           proactive: 0,
           reactive: 3,
-          rational: 0,
+          rational: 1,
           emotional: 2,
           independent: 0,
           collaborative: 0,
@@ -1741,7 +1741,7 @@ const teacherScenarios: Scenario[] = [
       },
       {
         id: '10g',
-        text: '觉得争论没什么意义,最后大家怎么定就怎么执行,随大流就行',
+        text: 'Think the parent is being unreasonable, don\'t want to waste breath — let them complain if they want, and continue doing things the same way',
         weights: {
           sanguine: 0,
           choleric: 0,
@@ -1754,15 +1754,15 @@ const teacherScenarios: Scenario[] = [
           resilience: 0,
           empathy: 0,
           achievement: 0,
-          affiliation: 1,
+          affiliation: 0,
           power: 0,
           security: 3,
           proactive: 0,
           reactive: 3,
           rational: 1,
           emotional: 0,
-          independent: 0,
-          collaborative: 1,
+          independent: 2,
+          collaborative: 0,
           innovative: 0,
           conventional: 2,
         },
@@ -1771,11 +1771,11 @@ const teacherScenarios: Scenario[] = [
   },
   {
     id: 11,
-    situation: '被观察者发现学生沉迷手机游戏或网络,严重影响了学习。他/她会怎么做?',
+    situation: 'The person discovers a student is addicted to mobile games or the internet, seriously affecting their learning. What would he/she do?',
     options: [
       {
         id: '11a',
-        text: '和家长沟通,家校配合共同管理学生的电子产品使用',
+        text: 'Communicate with parents, coordinating home-school efforts to manage the student\'s device usage',
         weights: {
           sanguine: 0,
           choleric: 0,
@@ -1803,7 +1803,7 @@ const teacherScenarios: Scenario[] = [
       },
       {
         id: '11b',
-        text: '在集体场合讨论电子产品的利弊,引导学生自我管理',
+        text: 'Discuss the pros and cons of electronic devices in a group setting, guiding students toward self-management',
         weights: {
           sanguine: 0,
           choleric: 0,
@@ -1831,7 +1831,7 @@ const teacherScenarios: Scenario[] = [
       },
       {
         id: '11c',
-        text: '把游戏元素融入教学/活动,用游戏化方式激发学习兴趣',
+        text: 'Incorporate game elements into teaching/activities, using gamification to spark learning interest',
         weights: {
           sanguine: 0,
           choleric: 0,
@@ -1859,7 +1859,7 @@ const teacherScenarios: Scenario[] = [
       },
       {
         id: '11d',
-        text: '制定严格的电子产品使用规范',
+        text: 'Establish strict rules for electronic device usage',
         weights: {
           sanguine: 0,
           choleric: 2,
@@ -1887,7 +1887,7 @@ const teacherScenarios: Scenario[] = [
       },
       {
         id: '11e',
-        text: '上报学校,建议出台全校统一的管理政策',
+        text: 'Report to the school, suggesting a unified school-wide management policy',
         weights: {
           sanguine: 0,
           choleric: 0,
@@ -1915,7 +1915,7 @@ const teacherScenarios: Scenario[] = [
       },
       {
         id: '11f',
-        text: '觉得这是普遍现象,管也管不过来,和家长说了也未必听,索性随他去吧',
+        text: 'Consider this a widespread phenomenon — impossible to manage, and parents may not listen anyway, so just let it be',
         weights: {
           sanguine: 1,
           choleric: 0,
@@ -1945,11 +1945,11 @@ const teacherScenarios: Scenario[] = [
   },
   {
     id: 12,
-    situation: '被观察者被要求在新学期尝试一种全新的教育/教学模式或方法。他/她会怎么做?',
+    situation: 'The person is asked to try a completely new teaching/education model or method in the new semester. What would he/she do?',
     options: [
       {
         id: '12a',
-        text: '积极拥抱变化,认真研究新模式,将其与自己的工作风格融合',
+        text: 'Embrace the change positively, study the new model carefully, and integrate it with their own work style',
         weights: {
           sanguine: 0,
           choleric: 0,
@@ -1977,7 +1977,7 @@ const teacherScenarios: Scenario[] = [
       },
       {
         id: '12b',
-        text: '先小范围试点,观察效果后再决定是否全面推广',
+        text: 'Pilot on a small scale first, and decide whether to fully adopt after observing the results',
         weights: {
           sanguine: 0,
           choleric: 0,
@@ -2005,7 +2005,7 @@ const teacherScenarios: Scenario[] = [
       },
       {
         id: '12c',
-        text: '按要求执行,在实践中逐步调整',
+        text: 'Execute as required, gradually adjusting in practice',
         weights: {
           sanguine: 0,
           choleric: 0,
@@ -2033,7 +2033,7 @@ const teacherScenarios: Scenario[] = [
       },
       {
         id: '12d',
-        text: '和同事一起探讨,共同摸索最佳实践方式',
+        text: 'Discuss with colleagues and jointly explore the best way to implement it',
         weights: {
           sanguine: 0,
           choleric: 0,
@@ -2061,7 +2061,7 @@ const teacherScenarios: Scenario[] = [
       },
       {
         id: '12e',
-        text: '担心失败,迟迟不开始,等大家都有成熟经验了再尝试',
+        text: 'Worry about failure, delay starting, and wait until others have mature experience before trying',
         weights: {
           sanguine: 0,
           choleric: 0,
@@ -2089,7 +2089,7 @@ const teacherScenarios: Scenario[] = [
       },
       {
         id: '12f',
-        text: '很担心自己搞砸了影响学生成绩,反复纠结要不要先按老办法教,迟迟不敢动手尝试',
+        text: 'Very worried about messing up and affecting student grades, repeatedly torn about whether to stick with the old method first, hesitating and not daring to try',
         weights: {
           sanguine: 0,
           choleric: 0,
@@ -2119,11 +2119,11 @@ const teacherScenarios: Scenario[] = [
   },
   {
     id: 13,
-    situation: '被观察者发现一位学生有自残或轻生倾向。他/她会怎么做?',
+    situation: 'The person discovers a student showing signs of self-harm or suicidal tendencies. What would he/she do?',
     options: [
       {
         id: '13a',
-        text: '立即联系学校心理老师和家长,启动危机干预流程',
+        text: 'Immediately contact the school counselor and parents, initiating crisis intervention procedures',
         weights: {
           sanguine: 0,
           choleric: 0,
@@ -2151,7 +2151,7 @@ const teacherScenarios: Scenario[] = [
       },
       {
         id: '13b',
-        text: '先和学生私下谈心,了解情况后再决定下一步',
+        text: 'First talk to the student privately, understanding the situation before deciding the next step',
         weights: {
           sanguine: 0,
           choleric: 0,
@@ -2179,7 +2179,7 @@ const teacherScenarios: Scenario[] = [
       },
       {
         id: '13c',
-        text: '按照单位安全流程,上报并记录,不擅自处理',
+        text: 'Follow the school\'s safety procedures, report and document, without handling it independently',
         weights: {
           sanguine: 0,
           choleric: 0,
@@ -2207,7 +2207,7 @@ const teacherScenarios: Scenario[] = [
       },
       {
         id: '13d',
-        text: '在集体中营造温暖支持的氛围,默默关注该学生',
+        text: 'Create a warm and supportive atmosphere in the group, quietly monitoring the student',
         weights: {
           sanguine: 0,
           choleric: 0,
@@ -2235,7 +2235,7 @@ const teacherScenarios: Scenario[] = [
       },
       {
         id: '13e',
-        text: '联合多方资源(家长、心理老师、班级同学),构建全方位的支持体系',
+        text: 'Mobilize multiple resources (parents, counselor, classmates) to build a comprehensive support system',
         weights: {
           sanguine: 0,
           choleric: 0,
@@ -2263,7 +2263,7 @@ const teacherScenarios: Scenario[] = [
       },
       {
         id: '13f',
-        text: '非常害怕处理不当会出大事,反复纠结自己该不该介入、怎么介入才不会刺激到学生,整晚睡不着',
+        text: 'Very afraid that mishandling could lead to a tragedy, repeatedly agonizing over whether to intervene and how to do so without distressing the student, unable to sleep all night',
         weights: {
           sanguine: 0,
           choleric: 0,
@@ -2293,11 +2293,11 @@ const teacherScenarios: Scenario[] = [
   },
   {
     id: 14,
-    situation: '被观察者需要在同行面前展示一次教育活动(如公开课、教研活动、示范指导),在场的还有几位公认的优秀同行。他/她会怎么做?',
+    situation: 'The person needs to present an educational activity (such as a public lesson, teaching research activity, or demonstration) before colleagues, with several recognized outstanding peers present. What would he/she do?',
     options: [
       {
         id: '14a',
-        text: '把这当作学习机会,认真准备,不在意比较',
+        text: 'Treat it as a learning opportunity, prepare diligently, and not worry about comparisons',
         weights: {
           sanguine: 0,
           choleric: 0,
@@ -2325,7 +2325,7 @@ const teacherScenarios: Scenario[] = [
       },
       {
         id: '14b',
-        text: '全力以赴,精心设计这次活动,展现最好的自己',
+        text: 'Go all out, carefully designing the activity to show their best self',
         weights: {
           sanguine: 0,
           choleric: 2,
@@ -2353,7 +2353,7 @@ const teacherScenarios: Scenario[] = [
       },
       {
         id: '14c',
-        text: '在内容设计上创新,用独特的方式差异化',
+        text: 'Innovate in content design, using a unique approach to differentiate',
         weights: {
           sanguine: 0,
           choleric: 0,
@@ -2381,7 +2381,7 @@ const teacherScenarios: Scenario[] = [
       },
       {
         id: '14d',
-        text: '向优秀同行学习,课后主动交流心得',
+        text: 'Learn from outstanding peers, proactively exchanging insights afterwards',
         weights: {
           sanguine: 0,
           choleric: 0,
@@ -2409,7 +2409,7 @@ const teacherScenarios: Scenario[] = [
       },
       {
         id: '14e',
-        text: '感到紧张焦虑,担心表现不如他人,反复纠结准备内容',
+        text: 'Feel nervous and anxious, worrying about performing worse than others, repeatedly agonizing over preparation',
         weights: {
           sanguine: 0,
           choleric: 0,
@@ -2437,7 +2437,7 @@ const teacherScenarios: Scenario[] = [
       },
       {
         id: '14f',
-        text: '无所谓,反正是完成任务,差不多过得去就行,不必非得跟优秀同行比',
+        text: 'Indifferent — it\'s just completing a task, good enough is fine, no need to compete with outstanding peers',
         weights: {
           sanguine: 0,
           choleric: 0,
@@ -2467,11 +2467,11 @@ const teacherScenarios: Scenario[] = [
   },
   {
     id: 15,
-    situation: '被观察者发现所使用的教材/资料中的某个内容可能已经过时或不准确。他/她会怎么做?',
+    situation: 'The person discovers that certain content in the textbook/materials being used may be outdated or inaccurate. What would he/she do?',
     options: [
       {
         id: '15a',
-        text: '查阅最新资料,在课堂上/辅导中补充更新更准确的信息',
+        text: 'Research the latest materials, supplementing with updated and more accurate information in class/tutoring',
         weights: {
           sanguine: 0,
           choleric: 0,
@@ -2499,7 +2499,7 @@ const teacherScenarios: Scenario[] = [
       },
       {
         id: '15b',
-        text: '在教研组/部门提出这个问题,推动资料更新',
+        text: 'Raise the issue in the teaching research group/department, pushing for materials to be updated',
         weights: {
           sanguine: 0,
           choleric: 1,
@@ -2527,7 +2527,7 @@ const teacherScenarios: Scenario[] = [
       },
       {
         id: '15c',
-        text: '按教材教学,认为教材经过了审核不会有问题',
+        text: 'Teach according to the textbook, believing it has been reviewed and won\'t have problems',
         weights: {
           sanguine: 0,
           choleric: 0,
@@ -2555,7 +2555,7 @@ const teacherScenarios: Scenario[] = [
       },
       {
         id: '15d',
-        text: '在教学中提醒学生教材的局限性,培养批判性思维',
+        text: 'Remind students of the textbook\'s limitations during teaching, cultivating critical thinking',
         weights: {
           sanguine: 0,
           choleric: 0,
@@ -2583,7 +2583,7 @@ const teacherScenarios: Scenario[] = [
       },
       {
         id: '15e',
-        text: '觉得这不是自己的责任,按要求完成教学任务即可',
+        text: 'Feel this isn\'t their responsibility — just complete the teaching tasks as required',
         weights: {
           sanguine: 0,
           choleric: 0,
@@ -2611,7 +2611,7 @@ const teacherScenarios: Scenario[] = [
       },
       {
         id: '15f',
-        text: '觉得可能有错但又不确定,怕改了反而教错、不改又误人子弟,反复纠结到底该不该提',
+        text: 'Think there might be an error but aren\'t sure — afraid that correcting it might teach something wrong, and not correcting it might mislead students, repeatedly torn about whether to raise it',
         weights: {
           sanguine: 0,
           choleric: 0,
@@ -2641,11 +2641,11 @@ const teacherScenarios: Scenario[] = [
   },
   {
     id: 16,
-    situation: '被观察者评职称需要发表论文或做课题研究,但日常工作已经很忙。他/她会怎么做?',
+    situation: 'The person needs to publish papers or conduct research for professional title evaluation, but daily work is already very busy. What would he/she do?',
     options: [
       {
         id: '16a',
-        text: '主动挤出整块时间,下班后和周末都投入到课题研究中,先把论文写出来再说',
+        text: 'Proactively carve out dedicated blocks of time, devoting evenings and weekends to research, getting the paper written first',
         weights: {
           sanguine: 0,
           choleric: 3,
@@ -2673,7 +2673,7 @@ const teacherScenarios: Scenario[] = [
       },
       {
         id: '16b',
-        text: '盘点手头工作和可用时间,制定详细的进度计划,利用碎片时间系统推进研究',
+        text: 'Inventory current work and available time, create a detailed schedule, and systematically advance research using fragmented time',
         weights: {
           sanguine: 0,
           choleric: 0,
@@ -2701,7 +2701,7 @@ const teacherScenarios: Scenario[] = [
       },
       {
         id: '16c',
-        text: '找几位志同道合的同事合作研究,分工负责、共享成果,减轻各自压力',
+        text: 'Find like-minded colleagues to collaborate on research, dividing responsibilities and sharing results to reduce individual pressure',
         weights: {
           sanguine: 0,
           choleric: 0,
@@ -2729,7 +2729,7 @@ const teacherScenarios: Scenario[] = [
       },
       {
         id: '16d',
-        text: '主动向学校说明评职称的需求,申请适当减少课时或调整工作安排以腾出研究时间',
+        text: 'Proactively explain the title evaluation needs to the school, requesting reduced teaching hours or adjusted work arrangements to free up research time',
         weights: {
           sanguine: 0,
           choleric: 2,
@@ -2757,7 +2757,7 @@ const teacherScenarios: Scenario[] = [
       },
       {
         id: '16e',
-        text: '把课题研究和日常教学结合起来,用行动研究的方式让工作和研究相互促进',
+        text: 'Integrate research with daily teaching, using action research to make work and research mutually reinforcing',
         weights: {
           sanguine: 0,
           choleric: 0,
@@ -2785,7 +2785,7 @@ const teacherScenarios: Scenario[] = [
       },
       {
         id: '16f',
-        text: '一想到要写论文就焦虑,白天忙教学没精力,晚上熬夜看资料却写不出东西,反复内耗',
+        text: 'Feel anxious just thinking about writing papers — too drained from teaching during the day, staying up late reading materials at night but unable to write anything, repeatedly draining themselves',
         weights: {
           sanguine: 0,
           choleric: 0,
@@ -2813,7 +2813,7 @@ const teacherScenarios: Scenario[] = [
       },
       {
         id: '16g',
-        text: '觉得评职称太麻烦,教学任务已经够累了,论文的事以后再说,不想给自己太大压力',
+        text: 'Feel title evaluation is too troublesome, teaching is already exhausting enough, papers can wait, don\'t want too much pressure',
         weights: {
           sanguine: 1,
           choleric: 0,
@@ -2843,11 +2843,11 @@ const teacherScenarios: Scenario[] = [
   },
   {
     id: 17,
-    situation: '被观察者和一位同事在教学理念上有根本分歧,经常在教研活动中产生争论。他/她会怎么做?',
+    situation: 'The person has a fundamental disagreement with a colleague about teaching philosophy, frequently arguing during teaching research activities. What would he/she do?',
     options: [
       {
         id: '17a',
-        text: '主动约对方私下交流,坦诚表达自己的想法,也认真倾听对方,努力求同存异',
+        text: 'Proactively arrange a private conversation, honestly expressing their views while sincerely listening to the other side, striving to find common ground',
         weights: {
           sanguine: 0,
           choleric: 0,
@@ -2875,7 +2875,7 @@ const teacherScenarios: Scenario[] = [
       },
       {
         id: '17b',
-        text: '整理自己理念背后的教学数据和学生案例,用事实和证据说服对方',
+        text: 'Organize teaching data and student cases behind their philosophy, persuading the other with facts and evidence',
         weights: {
           sanguine: 0,
           choleric: 0,
@@ -2903,7 +2903,7 @@ const teacherScenarios: Scenario[] = [
       },
       {
         id: '17c',
-        text: '坚持自己的教学理念,在教研中据理力争,推动自己的方案落地',
+        text: 'Stand by their teaching philosophy, arguing forcefully in research discussions, pushing their plan forward',
         weights: {
           sanguine: 0,
           choleric: 3,
@@ -2931,7 +2931,7 @@ const teacherScenarios: Scenario[] = [
       },
       {
         id: '17d',
-        text: '尝试把两种理念中合理的部分融合起来,设计出一套兼顾各方的新方案',
+        text: 'Try to merge the reasonable parts of both philosophies, designing a new plan that accommodates all sides',
         weights: {
           sanguine: 0,
           choleric: 0,
@@ -2959,7 +2959,7 @@ const teacherScenarios: Scenario[] = [
       },
       {
         id: '17e',
-        text: '请教研组长或学校专家出面协调,借助第三方视角化解分歧',
+        text: 'Ask the teaching research leader or school expert to mediate, using a third-party perspective to resolve the disagreement',
         weights: {
           sanguine: 0,
           choleric: 0,
@@ -2987,7 +2987,7 @@ const teacherScenarios: Scenario[] = [
       },
       {
         id: '17f',
-        text: '尽量减少和这位同事的接触,教研时少发言,避免正面冲突',
+        text: 'Minimize contact with this colleague, speak less during research discussions, avoiding direct confrontation',
         weights: {
           sanguine: 0,
           choleric: 0,
@@ -3015,7 +3015,7 @@ const teacherScenarios: Scenario[] = [
       },
       {
         id: '17g',
-        text: '每次教研前都提心吊胆,怕又起争论,事后又反复琢磨自己说的话对不对,心力交瘁',
+        text: 'Anxious before every research discussion, fearing another argument, and afterwards repeatedly second-guessing what they said, emotionally exhausted',
         weights: {
           sanguine: 0,
           choleric: 0,
@@ -3045,11 +3045,11 @@ const teacherScenarios: Scenario[] = [
   },
   {
     id: 18,
-    situation: '被观察者发现两个学生在课堂上/集体活动中发生了激烈争吵。他/她会怎么做?',
+    situation: 'The person discovers two students having a heated argument during class or a group activity. What would he/she do?',
     options: [
       {
         id: '18a',
-        text: '先让双方冷静下来,课后分别了解情况,公平处理',
+        text: 'First let both sides calm down, then understand the situation from each separately after class, handling it fairly',
         weights: {
           sanguine: 0,
           choleric: 0,
@@ -3077,7 +3077,7 @@ const teacherScenarios: Scenario[] = [
       },
       {
         id: '18b',
-        text: '立即制止,严肃批评,让双方认识到错误',
+        text: 'Immediately intervene with stern criticism, making both sides recognize their mistakes',
         weights: {
           sanguine: 0,
           choleric: 3,
@@ -3105,7 +3105,7 @@ const teacherScenarios: Scenario[] = [
       },
       {
         id: '18c',
-        text: '把这件事当作教育契机,让全班讨论解决冲突的方式',
+        text: 'Use this as a teachable moment, having the whole class discuss ways to resolve conflicts',
         weights: {
           sanguine: 0,
           choleric: 0,
@@ -3133,7 +3133,7 @@ const teacherScenarios: Scenario[] = [
       },
       {
         id: '18d',
-        text: '让双方各自写一份事情的经过,通过书写来反思',
+        text: 'Have both sides each write an account of what happened, using writing as reflection',
         weights: {
           sanguine: 0,
           choleric: 0,
@@ -3161,7 +3161,7 @@ const teacherScenarios: Scenario[] = [
       },
       {
         id: '18e',
-        text: '自己也被情绪影响,当场发火批评双方',
+        text: 'Get emotionally affected themselves, losing their temper and criticizing both sides on the spot',
         weights: {
           sanguine: 0,
           choleric: 3,
@@ -3189,7 +3189,7 @@ const teacherScenarios: Scenario[] = [
       },
       {
         id: '18f',
-        text: '一下子慌了神不知所措,事后反复回想自己当时处理得对不对,担心家长会来闹',
+        text: 'Panicked and at a loss in the moment, afterwards repeatedly second-guessing whether they handled it correctly, worrying that parents will come to complain',
         weights: {
           sanguine: 0,
           choleric: 0,
@@ -3219,11 +3219,11 @@ const teacherScenarios: Scenario[] = [
   },
   {
     id: 19,
-    situation: '被观察者回顾自己的教育生涯,觉得最大的成就感来自哪里?',
+    situation: 'The person reflects on their teaching career — where does the greatest sense of achievement come from?',
     options: [
       {
         id: '19a',
-        text: '看到学生成长和进步,成为对社会有用的人',
+        text: 'Seeing students grow and improve, becoming useful members of society',
         weights: {
           sanguine: 0,
           choleric: 0,
@@ -3251,7 +3251,7 @@ const teacherScenarios: Scenario[] = [
       },
       {
         id: '19b',
-        text: '在工作中不断创新,形成了自己的工作风格',
+        text: 'Continuously innovating in their work, developing their own professional style',
         weights: {
           sanguine: 0,
           choleric: 0,
@@ -3279,7 +3279,7 @@ const teacherScenarios: Scenario[] = [
       },
       {
         id: '19c',
-        text: '得到了学生、家长和同行的认可和尊重',
+        text: 'Receiving recognition and respect from students, parents, and peers',
         weights: {
           sanguine: 0,
           choleric: 0,
@@ -3307,7 +3307,7 @@ const teacherScenarios: Scenario[] = [
       },
       {
         id: '19d',
-        text: '培养出了一批批优秀的学生,桃李满天下',
+        text: 'Having nurtured batches of outstanding students, with former students everywhere',
         weights: {
           sanguine: 0,
           choleric: 0,
@@ -3335,7 +3335,7 @@ const teacherScenarios: Scenario[] = [
       },
       {
         id: '19e',
-        text: '在教育研究和实践创新中持续精进,影响和带动更多同行',
+        text: 'Continuously improving through educational research and practical innovation, influencing and inspiring more peers',
         weights: {
           sanguine: 0,
           choleric: 0,
@@ -3363,7 +3363,7 @@ const teacherScenarios: Scenario[] = [
       },
       {
         id: '19f',
-        text: '没什么特别的成就感,工作就是一份职业,按部就班做完领工资就行',
+        text: 'No particular sense of achievement — work is just a job, complete the routine and collect the paycheck',
         weights: {
           sanguine: 0,
           choleric: 0,

@@ -34,7 +34,7 @@ export default function TeamAggregateView({ observers }: Props) {
   if (observers.length === 0) {
     return (
       <div className="rounded-[20px] bg-white/60 backdrop-blur-[10px] border border-white/50 p-8 text-center">
-        <p className="text-sm text-[#8E8CA8]">尚未添加被观察者，无法生成团队分析</p>
+        <p className="text-sm text-[#8E8CA8]">No observers added, unable to generate team analysis</p>
       </div>
     );
   }
@@ -54,18 +54,18 @@ export default function TeamAggregateView({ observers }: Props) {
 
   // 动机数据
   const motivationData = [
-    { name: '成就', value: aggregate.averageMotivations.achievement },
-    { name: '亲和', value: aggregate.averageMotivations.affiliation },
-    { name: '权力', value: aggregate.averageMotivations.power },
-    { name: '安全', value: aggregate.averageMotivations.security },
+    { name: 'Achievement', value: aggregate.averageMotivations.achievement },
+    { name: 'Affiliation', value: aggregate.averageMotivations.affiliation },
+    { name: 'Power', value: aggregate.averageMotivations.power },
+    { name: 'Security', value: aggregate.averageMotivations.security },
   ];
 
   // 思维倾向数据（4 对）
   const thinkingData = [
-    { name: '主动', value: aggregate.averageThinking.proactive, left: '反应', right: '主动' },
-    { name: '理性', value: aggregate.averageThinking.rational, left: '感性', right: '理性' },
-    { name: '协作', value: aggregate.averageThinking.collaborative, left: '独立', right: '协作' },
-    { name: '创新', value: aggregate.averageThinking.innovative, left: '常规', right: '创新' },
+    { name: 'Proactive', value: aggregate.averageThinking.proactive, left: 'Reactive', right: 'Proactive' },
+    { name: 'Rational', value: aggregate.averageThinking.rational, left: 'Intuitive', right: 'Rational' },
+    { name: 'Collaborative', value: aggregate.averageThinking.collaborative, left: 'Independent', right: 'Collaborative' },
+    { name: 'Innovative', value: aggregate.averageThinking.innovative, left: 'Conventional', right: 'Innovative' },
   ];
 
   return (
@@ -73,8 +73,8 @@ export default function TeamAggregateView({ observers }: Props) {
       {/* 团队特质标签 */}
       <div className="rounded-[20px] bg-white/60 backdrop-blur-[10px] border border-white/50 p-5">
         <div className="flex items-center justify-between mb-3">
-          <h3 className="text-base font-bold text-[#3D3A5C]">团队特质画像</h3>
-          <span className="text-xs text-[#8E8CA8]">基于 {aggregate.size} 位被观察者</span>
+          <h3 className="text-base font-bold text-[#3D3A5C]">Team Trait Profile</h3>
+          <span className="text-xs text-[#8E8CA8]">Based on {aggregate.size} observers</span>
         </div>
         <div className="flex flex-wrap gap-2">
           {aggregate.teamTraits.map((trait, i) => (
@@ -89,18 +89,18 @@ export default function TeamAggregateView({ observers }: Props) {
         <div className="grid grid-cols-2 gap-3 mt-4 pt-4 border-t border-[#E8E6F5]">
           <div className="text-center">
             <div className="text-2xl font-bold text-[#5B4FCF]">{aggregate.diversity.temperament}</div>
-            <div className="text-xs text-[#8E8CA8] mt-0.5">气质多样性</div>
+            <div className="text-xs text-[#8E8CA8] mt-0.5">Temperament Diversity</div>
           </div>
           <div className="text-center">
             <div className="text-2xl font-bold text-[#C9A86A]">{aggregate.diversity.abilities}</div>
-            <div className="text-xs text-[#8E8CA8] mt-0.5">能力多样性</div>
+            <div className="text-xs text-[#8E8CA8] mt-0.5">Ability Diversity</div>
           </div>
         </div>
       </div>
 
       {/* 能力雷达图 */}
       <div className="rounded-[20px] bg-white/60 backdrop-blur-[10px] border border-white/50 p-5">
-        <h3 className="text-base font-bold text-[#3D3A5C] mb-4">团队能力均值</h3>
+        <h3 className="text-base font-bold text-[#3D3A5C] mb-4">Team Ability Average</h3>
         <div className="h-72">
           <ResponsiveContainer width="100%" height="100%">
             <RechartsRadar data={radarData} outerRadius="70%">
@@ -108,7 +108,7 @@ export default function TeamAggregateView({ observers }: Props) {
               <PolarAngleAxis dataKey="dimension" tick={{ fill: '#3D3A5C', fontSize: 13 }} />
               <PolarRadiusAxis domain={[0, 100]} tick={{ fill: '#8E8CA8', fontSize: 10 }} />
               <Radar
-                name="团队能力"
+                name="Team Ability"
                 dataKey="score"
                 stroke="#5B4FCF"
                 strokeWidth={2}
@@ -122,7 +122,7 @@ export default function TeamAggregateView({ observers }: Props) {
 
       {/* 气质分布柱状图 */}
       <div className="rounded-[20px] bg-white/60 backdrop-blur-[10px] border border-white/50 p-5">
-        <h3 className="text-base font-bold text-[#3D3A5C] mb-4">主导气质分布</h3>
+        <h3 className="text-base font-bold text-[#3D3A5C] mb-4">Dominant Temperament Distribution</h3>
         <div className="h-56">
           <ResponsiveContainer width="100%" height="100%">
             <BarChart data={temperamentData} margin={{ top: 10, right: 10, left: -20, bottom: 0 }}>
@@ -137,7 +137,7 @@ export default function TeamAggregateView({ observers }: Props) {
                   borderRadius: '12px',
                   fontSize: '13px',
                 }}
-                formatter={(v: number) => [`${v}%`, '占比']}
+                formatter={(v: number) => [`${v}%`, 'Percentage']}
               />
               <Bar dataKey="value" radius={[8, 8, 0, 0]}>
                 {temperamentData.map((entry, i) => (
@@ -152,7 +152,7 @@ export default function TeamAggregateView({ observers }: Props) {
       {/* 动机与思维倾向 */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
         <div className="rounded-[20px] bg-white/60 backdrop-blur-[10px] border border-white/50 p-5">
-          <h3 className="text-base font-bold text-[#3D3A5C] mb-3">动机均值</h3>
+          <h3 className="text-base font-bold text-[#3D3A5C] mb-3">Motivation Average</h3>
           <div className="flex flex-col gap-2.5">
             {motivationData.map((m) => (
               <BarRow key={m.name} label={m.name} value={m.value} color="#6B9AC4" />
@@ -160,7 +160,7 @@ export default function TeamAggregateView({ observers }: Props) {
           </div>
         </div>
         <div className="rounded-[20px] bg-white/60 backdrop-blur-[10px] border border-white/50 p-5">
-          <h3 className="text-base font-bold text-[#3D3A5C] mb-3">思维倾向均值</h3>
+          <h3 className="text-base font-bold text-[#3D3A5C] mb-3">Thinking Style Average</h3>
           <div className="flex flex-col gap-2.5">
             {thinkingData.map((t) => (
               <div key={t.name} className="flex flex-col gap-1">

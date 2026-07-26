@@ -144,7 +144,7 @@ export const useAuthStore = create<AuthState>((set, get) => ({
 
   upgradeTier: async (newTier) => {
     const user = get().user;
-    if (!user) return { error: '未登录' };
+    if (!user) return { error: 'Not logged in' };
 
     const { error } = await supabase
       .from('profiles')

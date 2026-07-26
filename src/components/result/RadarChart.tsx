@@ -21,7 +21,7 @@ function CustomTooltip({ active, payload }: { active?: boolean; payload?: Array<
   return (
     <div className="rounded-xl bg-white/90 backdrop-blur-[10px] shadow-lg border border-white/60 px-3 py-2">
       <p className="text-sm font-semibold text-[#3D3A5C]">{data.dimension}</p>
-      <p className="text-lg font-bold text-[#5B4FCF]">{data.score}<span className="text-xs font-normal text-[#A9A7C8] ml-0.5">分</span></p>
+      <p className="text-lg font-bold text-[#5B4FCF]">{data.score}<span className="text-xs font-normal text-[#A9A7C8] ml-0.5">pts</span></p>
     </div>
   );
 }
@@ -57,7 +57,7 @@ export default function RadarChart({ scores }: RadarChartProps) {
 
   return (
     <div className="rounded-[20px] bg-white/60 backdrop-blur-[10px] border border-white/50 p-5">
-      <h3 className="text-sm font-semibold text-[#3D3A5C] mb-2">能力雷达图</h3>
+      <h3 className="text-sm font-semibold text-[#3D3A5C] mb-2">Ability Radar Chart</h3>
       <div className="w-full h-72">
         <ResponsiveContainer width="100%" height="100%">
           <RechartsRadar data={data} cx="50%" cy="50%" outerRadius="70%">
@@ -80,7 +80,7 @@ export default function RadarChart({ scores }: RadarChartProps) {
               axisLine={false}
             />
             <Radar
-              name="能力得分"
+              name="Ability Score"
               dataKey="score"
               stroke="#5B4FCF"
               strokeWidth={2.5}
@@ -109,15 +109,15 @@ export default function RadarChart({ scores }: RadarChartProps) {
       <div className="flex justify-center gap-4 mt-2 text-xs text-[#A9A7C8]">
         <span className="flex items-center gap-1">
           <span className="inline-block w-2 h-2 rounded-full bg-[#5B4FCF]" />
-          70+ 突出
+          70+ Strong
         </span>
         <span className="flex items-center gap-1">
           <span className="inline-block w-2 h-2 rounded-full bg-[#8B7FD4]" />
-          40-69 均衡
+          40-69 Balanced
         </span>
         <span className="flex items-center gap-1">
           <span className="inline-block w-2 h-2 rounded-full bg-[#B8B0E8]" />
-          &lt;40 成长空间
+          &lt;40 Growth Area
         </span>
       </div>
     </div>

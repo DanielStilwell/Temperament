@@ -27,7 +27,7 @@ export default function NavigationBar({
         className="flex-1 disabled:opacity-30 disabled:cursor-not-allowed"
       >
         <ChevronLeft className="w-4 h-4" />
-        上一题
+        Previous
       </Button>
       <Button
         variant="primary"
@@ -36,7 +36,7 @@ export default function NavigationBar({
         disabled={!hasSelected}
         className="flex-1 disabled:opacity-30 disabled:cursor-not-allowed"
       >
-        {isLast ? '查看结果' : '下一题'}
+        {isLast ? 'View Results' : 'Next'}
         <ChevronRight className="w-4 h-4" />
       </Button>
     </div>

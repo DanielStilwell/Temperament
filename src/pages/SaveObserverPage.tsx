@@ -49,7 +49,7 @@ export default function SaveObserverPage() {
       await fetchProfile();
     } catch (e: any) {
       console.error(e);
-      setError(e?.message || '保存失败，请重试');
+      setError(e?.message || 'Save failed, please try again');
     } finally {
       setSubmitting(false);
     }
@@ -69,13 +69,13 @@ export default function SaveObserverPage() {
             <div className="w-14 h-14 rounded-full bg-green-100 flex items-center justify-center">
               <CheckCircle2 className="w-7 h-7 text-green-600" />
             </div>
-            <h3 className="text-xl font-bold text-[#3D3A5C]">被观察者已保存</h3>
+            <h3 className="text-xl font-bold text-[#3D3A5C]">Observer Saved</h3>
             <p className="text-sm text-[#8E8CA8] leading-relaxed">
-              <span className="font-medium text-[#3D3A5C]">{observerDraft.name}</span> 的测评结果已加入您的团队，
-              您可以随时在工作台查看。
+              Assessment results for <span className="font-medium text-[#3D3A5C]">{observerDraft.name}</span> have been added to your team.
+              You can view them anytime from the workspace.
             </p>
             <Button variant="primary" size="lg" fullWidth onClick={handleDone}>
-              返回工作台
+              Back to Workspace
             </Button>
           </div>
         </div>
@@ -92,36 +92,36 @@ export default function SaveObserverPage() {
               <Save className="w-5 h-5" />
             </div>
             <h2 className="text-xl font-bold" style={{ fontFamily: "'Nunito', 'PingFang SC', sans-serif" }}>
-              确认保存被观察者
+              Confirm Save Observer
             </h2>
           </div>
-          <p className="text-white/80 text-sm">请确认以下信息后保存到团队</p>
+          <p className="text-white/80 text-sm">Please confirm the information below before saving to your team</p>
         </div>
 
         <div className="rounded-[20px] bg-white/60 backdrop-blur-[10px] border border-white/50 p-6 flex flex-col gap-3">
-          <InfoRow label="姓名" value={observerDraft.name} />
+          <InfoRow label="Name" value={observerDraft.name} />
           <InfoRow
-            label="性别"
+            label="Gender"
             value={
-              { male: '男', female: '女', other: '其他', unknown: '不便透露' }[observerDraft.gender]
+              { male: 'Male', female: 'Female', other: 'Other', unknown: 'Prefer not to say' }[observerDraft.gender]
             }
           />
-          <InfoRow label="职业领域" value={profession} />
-          {observerDraft.note && <InfoRow label="备注" value={observerDraft.note} />}
+          <InfoRow label="Profession" value={profession} />
+          {observerDraft.note && <InfoRow label="Note" value={observerDraft.note} />}
           <InfoRow
-            label="主导气质"
+            label="Dominant Temperament"
             value={
               {
-                sanguine: '多血质',
-                choleric: '胆汁质',
-                phlegmatic: '黏液质',
-                melancholic: '抑郁质',
+                sanguine: 'Sanguine',
+                choleric: 'Choleric',
+                phlegmatic: 'Phlegmatic',
+                melancholic: 'Melancholic',
               }[result.temperament]
             }
           />
           {profile && (tier === 'pro' || tier === 'max') && (
             <div className="text-xs text-[#8E8CA8] mt-2 pt-3 border-t border-[#E8E6F5]">
-              当前版本：{tier.toUpperCase()} · 被观察者上限 {TIER_LIMITS[tier]} 人
+              Current plan: {tier.toUpperCase()} · Observer limit: {TIER_LIMITS[tier]}
             </div>
           )}
         </div>
@@ -146,10 +146,10 @@ export default function SaveObserverPage() {
           {submitting ? (
             <>
               <Loader2 className="w-5 h-5 animate-spin" />
-              保存中...
+              Saving...
             </>
           ) : (
-            '确认保存到团队'
+            'Confirm Save to Team'
           )}
         </Button>
       </div>

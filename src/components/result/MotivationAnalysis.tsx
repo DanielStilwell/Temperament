@@ -6,40 +6,40 @@ interface MotivationAnalysisProps {
 
 const motivationInfo = {
   achievement: {
-    name: '成就动机',
+    name: 'Achievement',
     icon: '🎯',
     color: '#FF6B6B',
-    description: '追求卓越、目标导向、渴望成功与成就',
-    highDesc: '被观察者具有强烈的成就动机，渴望成功和卓越表现，喜欢挑战自我，追求目标达成。在面对任务时，倾向于设定高标准并努力实现。',
-    mediumDesc: '被观察者具有一定的成就动机，会为达成目标而努力，但也能平衡工作与生活的关系，不过分追求完美。',
-    lowDesc: '被观察者的成就动机相对较弱，更注重过程体验而非结果导向，对竞争和挑战的兴趣较低，更倾向于安稳和舒适的状态。',
+    description: 'Pursuing excellence, goal-oriented, driven by success',
+    highDesc: 'The observer has a strong achievement motive, driven by success and excellence. They enjoy challenging themselves and pursuing goal attainment. When facing tasks, they tend to set high standards and strive to meet them.',
+    mediumDesc: 'The observer has a moderate achievement motive, working toward goals while maintaining work-life balance, without excessive perfectionism.',
+    lowDesc: 'The observer has a relatively weak achievement motive, focusing more on the process experience than outcome orientation, with lower interest in competition and challenges, preferring a stable and comfortable state.',
   },
   affiliation: {
-    name: '亲和动机',
+    name: 'Affiliation',
     icon: '🤝',
     color: '#4ECDC4',
-    description: '重视人际关系、归属感与和谐共处',
-    highDesc: '被观察者具有强烈的亲和动机，非常重视人际关系和归属感，喜欢与人交往，善于建立和维护社交网络，在团队中表现活跃。',
-    mediumDesc: '被观察者具有一定的亲和动机，重视人际关系，但也保持适度的独立性，既享受社交也接受独处。',
-    lowDesc: '被观察者的亲和动机相对较弱，更享受独立工作，对社交活动的需求较低，可能在团队合作中需要更多鼓励。',
+    description: 'Valuing relationships, belonging, and harmony',
+    highDesc: 'The observer has a strong affiliation motive, deeply valuing interpersonal relationships and a sense of belonging. They enjoy socializing, are skilled at building and maintaining social networks, and are active in teams.',
+    mediumDesc: 'The observer has a moderate affiliation motive, valuing relationships while maintaining appropriate independence, enjoying both social interaction and solitude.',
+    lowDesc: 'The observer has a relatively weak affiliation motive, preferring independent work with lower need for social activities, and may need more encouragement in teamwork.',
   },
   power: {
-    name: '权力动机',
+    name: 'Power',
     icon: '⚡',
     color: '#FFE66D',
-    description: '追求影响力、控制感与决策主导权',
-    highDesc: '被观察者具有强烈的权力动机，渴望影响他人和掌控局面，喜欢主导决策过程，在领导岗位上能够发挥优势。',
-    mediumDesc: '被观察者具有一定的权力动机，能够在需要时承担领导责任，但也尊重他人意见，不过分追求主导地位。',
-    lowDesc: '被观察者的权力动机相对较弱，更倾向于配合而非主导，对管理和控制他人的兴趣较低，适合执行层面的角色。',
+    description: 'Seeking influence, control, and decision-making authority',
+    highDesc: 'The observer has a strong power motive, desiring to influence others and control situations. They enjoy leading decision-making processes and can leverage their strengths in leadership roles.',
+    mediumDesc: 'The observer has a moderate power motive, able to take on leadership responsibilities when needed while respecting others\' opinions, without excessive desire for dominance.',
+    lowDesc: 'The observer has a relatively weak power motive, preferring to cooperate rather than lead, with lower interest in managing or controlling others, suited for execution-level roles.',
   },
   security: {
-    name: '安全动机',
+    name: 'Security',
     icon: '🛡️',
     color: '#A8E6CF',
-    description: '追求稳定、规避风险、强调安全与保障',
-    highDesc: '被观察者具有强烈的安全动机，追求稳定和可预测的环境，谨慎决策，避免风险，重视长期规划和保障措施。',
-    mediumDesc: '被观察者具有一定的安全动机，在决策时会考虑风险因素，但不过分保守，能够在安全与冒险间找到平衡。',
-    lowDesc: '被观察者的安全动机相对较弱，更愿意冒险和尝试新事物，对不确定性的容忍度较高，适合创新型或挑战性的任务。',
+    description: 'Seeking stability, avoiding risk, emphasizing safety and security',
+    highDesc: 'The observer has a strong security motive, pursuing stable and predictable environments, making cautious decisions, avoiding risks, and valuing long-term planning and safeguards.',
+    mediumDesc: 'The observer has a moderate security motive, considering risk factors in decisions without being overly conservative, able to balance security and risk-taking.',
+    lowDesc: 'The observer has a relatively weak security motive, more willing to take risks and try new things, with higher tolerance for uncertainty, suited for innovative or challenging tasks.',
   },
 };
 
@@ -65,7 +65,7 @@ export default function MotivationAnalysis({ scores }: MotivationAnalysisProps) 
   return (
     <div className="rounded-[20px] bg-white/60 backdrop-blur-[10px] border border-white/50 p-5">
       <h3 className="text-base font-semibold text-[#3D3A5C] mb-3 flex items-center gap-2">
-        💡 动机类型分析
+        💡 Motivation Analysis
       </h3>
 
       {/* 主要动机 */}
@@ -73,7 +73,7 @@ export default function MotivationAnalysis({ scores }: MotivationAnalysisProps) 
         <div className="flex items-center gap-2 mb-2">
           <span className="text-lg">{dominantMotivation.info.icon}</span>
           <span className="text-sm font-semibold text-[#3D3A5C]">
-            主导动机：{dominantMotivation.info.name}
+            Dominant: {dominantMotivation.info.name}
           </span>
         </div>
         <p className="text-sm text-[#6B6990] leading-[1.6]">
@@ -87,7 +87,7 @@ export default function MotivationAnalysis({ scores }: MotivationAnalysisProps) 
           <div className="flex items-center gap-2 mb-2">
             <span className="text-lg">{secondaryMotivation.info.icon}</span>
             <span className="text-sm font-medium text-[#5A5880]">
-              次要动机：{secondaryMotivation.info.name}
+              Secondary: {secondaryMotivation.info.name}
             </span>
           </div>
           <p className="text-sm text-[#8E8CA8] leading-[1.6]">

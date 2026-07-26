@@ -111,9 +111,7 @@ drop policy if exists "profiles_select_own" on public.profiles;
 create policy "profiles_select_own" on public.profiles
   for select using (auth.uid() = id);
 
-drop policy if exists "profiles_update_own" on public.profiles;
-create policy "profiles_update_own" on public.profiles
-  for update using (auth.uid() = id) with check (auth.uid() = id);
+-- profiles_update_own 已移至第 9 节（收紧后）
 
 drop policy if exists "profiles_insert_own" on public.profiles;
 create policy "profiles_insert_own" on public.profiles
@@ -187,3 +185,54 @@ drop trigger if exists observers_check_limit on public.observers;
 create trigger observers_check_limit
   before insert on public.observers
   for each row execute function public.check_observer_limit();
+
+-- ----------------------------------------------------------------------
+-- 8. payment_orders 表（跟踪连连国际支付订单）
+-- ----------------------------------------------------------------------
+create table if not exists public.payment_orders (
+  id                      text primary key,  -- merchant_transaction_id
+  user_id                 uuid not null references auth.users(id) on delete cascade,
+  tier                    text not null,      -- 目标 tier (pro/max)
+  amount                  numeric not null,   -- 支付金额 (17/20/37)
+  is_upgrade              boolean not null default false,
+  upgrade_from            text,               -- 升级来源 tier
+  status                  text not null default 'pending' check (status in ('pending','paid','failed')),
+  lianlian_order_id       text,               -- 连连返回的 order_id
+  lianlian_payment_status text,               -- 连连返回的 payment_status
+  paid_at                 timestamptz,
+  created_at              timestamptz not null default now(),
+  updated_at              timestamptz not null default now()
+);
+
+create index if not exists payment_orders_user_id_idx on public.payment_orders(user_id);
+
+alter table public.payment_orders enable row level security;
+
+-- payment_orders：用户只能查看自己的订单
+drop policy if exists "payment_orders_select_own" on public.payment_orders;
+create policy "payment_orders_select_own" on public.payment_orders
+  for select using (auth.uid() = user_id);
+
+-- payment_orders：INSERT/UPDATE 仅通过 service_role (Edge Function)
+-- 不允许前端直接 insert/update，RLS 默认无 policy 即拒绝
+
+drop trigger if exists payment_orders_set_updated_at on public.payment_orders;
+create trigger payment_orders_set_updated_at
+  before update on public.payment_orders
+  for each row execute function public.set_updated_at();
+
+-- ----------------------------------------------------------------------
+-- 9. 收紧 profiles RLS：前端不能直接更新 tier/payment_status
+--    tier 更新只能通过 Edge Function (service_role) 在 webhook 验签后执行
+-- ----------------------------------------------------------------------
+
+-- 替换原有的 profiles_update_own：只允许更新 nickname 等非支付字段
+drop policy if exists "profiles_update_own" on public.profiles;
+create policy "profiles_update_own" on public.profiles
+  for update using (auth.uid() = id)
+  with check (
+    auth.uid() = id
+    -- 不允许前端修改 tier 和 payment_status，这些字段由 Edge Function 更新
+    and tier = (select tier from public.profiles where id = auth.uid())
+    and payment_status = (select payment_status from public.profiles where id = auth.uid())
+  );

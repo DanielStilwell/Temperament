@@ -35,10 +35,10 @@ export default function HomePage() {
         {/* 职业选择区域 */}
         <div className="rounded-[20px] bg-white/60 backdrop-blur-[10px] border border-white/50 p-5">
           <h3 className="text-sm font-semibold text-[#3D3A5C] mb-3">
-            请选择被观察者的职业领域
+            Select the observer's professional field
           </h3>
           <p className="text-xs text-[#8E8CA8] mb-4 leading-relaxed">
-            不同职业将匹配不同的真实情境题目，使评估更加精准
+            Different professions match different real-world scenarios for more precise assessment
           </p>
           <div className="grid grid-cols-2 gap-2">
             {professionList.map((prof) => {
@@ -83,7 +83,7 @@ export default function HomePage() {
           className="disabled:opacity-40 disabled:cursor-not-allowed"
         >
           <Sparkles className="w-5 h-5" />
-          {selectedProfession ? '开始评估' : '请先选择职业领域'}
+          {selectedProfession ? 'Start Assessment' : 'Please select a profession first'}
         </Button>
       </div>
     </div>

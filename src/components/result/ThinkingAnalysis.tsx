@@ -7,23 +7,23 @@ interface ThinkingAnalysisProps {
 const thinkingDimensions = [
   {
     pair: ['proactive', 'reactive'],
-    left: { name: '主动型', desc: '主动采取行动，积极寻求解决方案', color: '#FF6B6B' },
-    right: { name: '被动型', desc: '等待观望，倾向于回应而非发起', color: '#4ECDC4' },
+    left: { name: 'Proactive', desc: 'Takes initiative, actively seeks solutions', color: '#FF6B6B' },
+    right: { name: 'Reactive', desc: 'Waits and observes, tends to respond rather than initiate', color: '#4ECDC4' },
   },
   {
     pair: ['rational', 'emotional'],
-    left: { name: '理性型', desc: '注重逻辑分析，客观权衡利弊', color: '#6B9AC4' },
-    right: { name: '感性型', desc: '重视情感体验，凭直觉做判断', color: '#E8A87C' },
+    left: { name: 'Rational', desc: 'Focuses on logical analysis, objectively weighing pros and cons', color: '#6B9AC4' },
+    right: { name: 'Intuitive', desc: 'Values emotional experience, makes judgments by intuition', color: '#E8A87C' },
   },
   {
     pair: ['independent', 'collaborative'],
-    left: { name: '独立型', desc: '偏好独立思考，自主完成任务', color: '#D96459' },
-    right: { name: '协作型', desc: '善于团队合作，重视集体智慧', color: '#8E7CC3' },
+    left: { name: 'Independent', desc: 'Prefers independent thinking, completes tasks autonomously', color: '#D96459' },
+    right: { name: 'Collaborative', desc: 'Skilled at teamwork, values collective wisdom', color: '#8E7CC3' },
   },
   {
     pair: ['innovative', 'conventional'],
-    left: { name: '创新型', desc: '追求新颖独特，勇于打破常规', color: '#5B4FCF' },
-    right: { name: '传统型', desc: '遵循既定规范，稳健可靠', color: '#A8E6CF' },
+    left: { name: 'Innovative', desc: 'Pursues novel and unique approaches, breaks conventions', color: '#5B4FCF' },
+    right: { name: 'Conventional', desc: 'Follows established norms, steady and reliable', color: '#A8E6CF' },
   },
 ];
 
@@ -31,7 +31,7 @@ export default function ThinkingAnalysis({ scores }: ThinkingAnalysisProps) {
   return (
     <div className="rounded-[20px] bg-white/60 backdrop-blur-[10px] border border-white/50 p-5">
       <h3 className="text-base font-semibold text-[#3D3A5C] mb-3 flex items-center gap-2">
-        🧠 思维行为倾向
+        🧠 Thinking & Behavioral Tendencies
       </h3>
 
       <div className="space-y-4">
@@ -44,11 +44,11 @@ export default function ThinkingAnalysis({ scores }: ThinkingAnalysisProps) {
           // 判断倾向程度
           let tendency = '';
           if (leftPercent >= 65) {
-            tendency = `偏${left.name}`;
+            tendency = `${left.name} Lean`;
           } else if (leftPercent <= 35) {
-            tendency = `偏${right.name}`;
+            tendency = `${right.name} Lean`;
           } else {
-            tendency = '均衡型';
+            tendency = 'Balanced';
           }
 
           return (
@@ -91,7 +91,7 @@ export default function ThinkingAnalysis({ scores }: ThinkingAnalysisProps) {
 
               {/* 解读 */}
               <p className="text-xs text-[#8E8CA8] mt-2 leading-[1.5]">
-                {leftPercent >= 65 ? left.desc : leftPercent <= 35 ? right.desc : '两者特点兼具，能够根据情境灵活调整思维和行为方式'}
+                {leftPercent >= 65 ? left.desc : leftPercent <= 35 ? right.desc : 'Combines both traits, able to flexibly adjust thinking and behavior based on context'}
               </p>
             </div>
           );
@@ -99,7 +99,7 @@ export default function ThinkingAnalysis({ scores }: ThinkingAnalysisProps) {
       </div>
 
       <p className="text-xs text-[#8E8CA8] mt-3 italic">
-        * 思维行为倾向并非固定不变，会随情境和成长而调整
+        * Thinking & behavioral tendencies are not fixed and may adjust with context and personal growth
       </p>
     </div>
   );

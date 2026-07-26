@@ -57,19 +57,19 @@ function ProWorkspaceInner() {
           <div>
             <div className="flex items-center gap-2 mb-1">
               <Users className="w-4 h-4" />
-              <span className="text-xs text-white/80">Pro 版工作台</span>
+              <span className="text-xs text-white/80">Pro Workspace</span>
             </div>
             <h2 className="text-xl font-bold" style={{ fontFamily: "'Nunito', 'PingFang SC', sans-serif" }}>
-              欢迎，{profile?.nickname || '管理者'}
+              Welcome, {profile?.nickname || 'Manager'}
             </h2>
-            <p className="text-white/80 text-xs mt-1">被观察者容量：{usage}</p>
+            <p className="text-white/80 text-xs mt-1">Observer Capacity: {usage}</p>
           </div>
           <button
             onClick={handleSignOut}
             className="flex items-center gap-1.5 px-3 py-2 rounded-full bg-white/15 hover:bg-white/25 text-white text-xs font-medium transition-all"
           >
             <LogOut className="w-3.5 h-3.5" />
-            退出
+            Sign Out
           </button>
         </div>
 
@@ -77,7 +77,7 @@ function ProWorkspaceInner() {
         <div className="flex gap-3">
           <Button variant="primary" size="md" onClick={() => navigate('/add-observer/pro')} className="flex-1">
             <UserPlus className="w-4 h-4" />
-            添加被观察者
+            Add Observer
           </Button>
           <Button
             variant="outline"
@@ -93,21 +93,21 @@ function ProWorkspaceInner() {
         {/* 被观察者列表 */}
         <div>
           <div className="flex items-center justify-between mb-3">
-            <h3 className="text-base font-bold text-[#3D3A5C]">被观察者列表</h3>
-            <span className="text-xs text-[#8E8CA8]">{observers.length} 位</span>
+            <h3 className="text-base font-bold text-[#3D3A5C]">Observers</h3>
+            <span className="text-xs text-[#8E8CA8]">{observers.length}</span>
           </div>
           <ObserverList
             observers={observers}
             loading={loading}
             onDelete={handleDelete}
             onSelect={handleSelectObserver}
-            emptyHint="尚未添加被观察者，点击上方按钮开始"
+            emptyHint="No observers yet. Click the button above to add"
           />
         </div>
 
         {/* 团队聚合分析 */}
         <div>
-          <h3 className="text-base font-bold text-[#3D3A5C] mb-3">团队整体画像</h3>
+          <h3 className="text-base font-bold text-[#3D3A5C] mb-3">Team Profile</h3>
           <TeamAggregateView observers={observers} />
         </div>
 

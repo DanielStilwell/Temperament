@@ -68,7 +68,7 @@ export default function CustomOptionItem({ isSelected, customText, onSelect }: C
               isSelected && !isEditing ? 'text-[#3D3A5C] font-medium' : 'text-[#6B6990]'
             }`}
           >
-            {isSelected && customText ? customText : '其他（请描述真实情况）'}
+            {isSelected && customText ? customText : 'Other (describe the real situation)'}
           </span>
         </button>
 
@@ -77,7 +77,7 @@ export default function CustomOptionItem({ isSelected, customText, onSelect }: C
             <textarea
               value={inputValue}
               onChange={(e) => setInputValue(e.target.value)}
-              placeholder="请描述被观察者的真实反应..."
+              placeholder="Describe the observer's actual reaction..."
               className="w-full p-3 rounded-xl border-2 border-[#E8E6F5] bg-white/50 text-[15px] leading-[1.6] text-[#3D3A5C] resize-none focus:outline-none focus:border-[#5B4FCF] transition-all"
               rows={2}
               autoFocus
@@ -87,14 +87,14 @@ export default function CustomOptionItem({ isSelected, customText, onSelect }: C
                 onClick={handleCancel}
                 className="px-4 py-2 rounded-lg text-sm text-[#8E8CA8] border border-[#E8E6F5] bg-white/50 hover:bg-[#F5F3FF] transition-all"
               >
-                取消
+                Cancel
               </button>
               <button
                 onClick={handleConfirm}
                 disabled={!inputValue.trim()}
                 className="px-4 py-2 rounded-lg text-sm text-white bg-[#5B4FCF] hover:bg-[#4B3FBF] transition-all disabled:opacity-40 disabled:cursor-not-allowed"
               >
-                确认
+                Confirm
               </button>
             </div>
           </div>

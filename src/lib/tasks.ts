@@ -43,7 +43,7 @@ export async function createTask(params: {
   prediction: TaskPrediction;
 }): Promise<TaskRecord> {
   const { data: { user } } = await supabase.auth.getUser();
-  if (!user) throw new Error('未登录');
+  if (!user) throw new Error('Not logged in');
 
   const { data, error } = await supabase
     .from('tasks')

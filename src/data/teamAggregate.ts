@@ -2,10 +2,10 @@ import type { Observer, TeamAggregate } from '../types/account';
 import type { TemperamentType, AbilityDimension, MotivationType } from '../types';
 
 const TEMPERAMENT_LABELS: Record<TemperamentType, string> = {
-  sanguine: '多血质',
-  choleric: '胆汁质',
-  phlegmatic: '黏液质',
-  melancholic: '抑郁质',
+  sanguine: 'Sanguine',
+  choleric: 'Choleric',
+  phlegmatic: 'Phlegmatic',
+  melancholic: 'Melancholic',
 };
 
 const ABILITY_KEYS: AbilityDimension[] = ['communication', 'leadership', 'creativity', 'analysis', 'resilience', 'empathy'];
@@ -36,19 +36,19 @@ function generateTeamTraits(
   const traits: string[] = [];
 
   // 规模标签
-  if (size === 0) return ['暂无成员'];
-  if (size <= 5) traits.push('小型紧密团队');
-  else if (size <= 15) traits.push('中等规模团队');
-  else traits.push('大型多元团队');
+  if (size === 0) return ['No members'];
+  if (size <= 5) traits.push('Small close-knit team');
+  else if (size <= 15) traits.push('Medium-sized team');
+  else traits.push('Large diverse team');
 
   // 主导气质
   const sorted = [...TEMPERAMENT_KEYS].sort((a, b) => temperamentDistribution[b] - temperamentDistribution[a]);
   const dominant = sorted[0];
   const dominantPct = Math.round(temperamentDistribution[dominant]);
   if (dominantPct >= 50) {
-    traits.push(`${TEMPERAMENT_LABELS[dominant]}主导（${dominantPct}%）`);
+    traits.push(`${TEMPERAMENT_LABELS[dominant]} dominant (${dominantPct}%)`);
   } else {
-    traits.push('气质分布均衡');
+    traits.push('Balanced temperament distribution');
   }
 
   // 突出能力
@@ -56,34 +56,34 @@ function generateTeamTraits(
   abilityEntries.sort((a, b) => b.v - a.v);
   const topAbility = abilityEntries[0];
   if (topAbility.v >= 65) {
-    traits.push(`擅长${ABILITY_LABELS[topAbility.k]}`);
+    traits.push(`Strong in ${ABILITY_LABELS[topAbility.k]}`);
   }
   const bottomAbility = abilityEntries[abilityEntries.length - 1];
   if (bottomAbility.v <= 35) {
-    traits.push(`${ABILITY_LABELS[bottomAbility.k]}偏弱`);
+    traits.push(`${ABILITY_LABELS[bottomAbility.k]} needs development`);
   }
 
   // 多样性标签
   if (diversity.temperament >= 25) {
-    traits.push('气质多元互补');
+    traits.push('Temperament diversity & complementarity');
   } else if (diversity.temperament <= 10 && size >= 3) {
-    traits.push('气质高度同质');
+    traits.push('Highly homogeneous temperament');
   }
 
   if (diversity.abilities >= 20) {
-    traits.push('能力梯度丰富');
+    traits.push('Rich ability gradient');
   }
 
   return traits;
 }
 
 const ABILITY_LABELS: Record<AbilityDimension, string> = {
-  communication: '沟通',
-  leadership: '领导',
-  creativity: '创造',
-  analysis: '分析',
-  resilience: '抗压',
-  empathy: '共情',
+  communication: 'Communication',
+  leadership: 'Leadership',
+  creativity: 'Creativity',
+  analysis: 'Analysis',
+  resilience: 'Resilience',
+  empathy: 'Empathy',
 };
 
 // 主聚合函数

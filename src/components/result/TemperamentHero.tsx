@@ -45,7 +45,7 @@ export default function TemperamentHero({ temperament, temperamentScores, abilit
 
       {/* 气质维度得分 */}
       <div className="rounded-[20px] bg-white/60 backdrop-blur-[10px] border border-white/50 p-5">
-        <h3 className="text-sm font-semibold text-[#3D3A5C] mb-3">气质维度分布</h3>
+        <h3 className="text-sm font-semibold text-[#3D3A5C] mb-3">Temperament Distribution</h3>
         <div className="space-y-2.5">
           {(['sanguine', 'choleric', 'phlegmatic', 'melancholic'] as TemperamentType[]).map((t) => {
             const ti = temperamentMap[t];
@@ -72,7 +72,7 @@ export default function TemperamentHero({ temperament, temperamentScores, abilit
 
       {/* 综合解读 */}
       <div className="rounded-[20px] bg-white/60 backdrop-blur-[10px] border border-white/50 p-5">
-        <h3 className="text-sm font-semibold text-[#3D3A5C] mb-3">综合解读</h3>
+        <h3 className="text-sm font-semibold text-[#3D3A5C] mb-3">Comprehensive Interpretation</h3>
         <p className="text-[15px] leading-[1.8] text-[#5A5880] whitespace-pre-line">
           {interpretation}
         </p>

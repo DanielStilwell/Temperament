@@ -22,9 +22,9 @@ interface TierCardConfig {
 const TIERS: TierCardConfig[] = [
   {
     tier: 'free',
-    title: '免费版',
-    subtitle: '个人气质与能力探索',
-    features: ['测气质类型', '分析 6 项能力维度'],
+    title: 'Free',
+    subtitle: 'Personal temperament & ability exploration',
+    features: ['Assess temperament type', 'Analyze 6 ability dimensions'],
     icon: Sparkles,
     gradient: 'from-[#E8E6F5] to-[#D5D0E8]',
     iconBg: 'bg-white/70',
@@ -34,10 +34,10 @@ const TIERS: TierCardConfig[] = [
   },
   {
     tier: 'pro',
-    title: 'Pro 版',
-    subtitle: '团队气质与能力洞察',
+    title: 'Pro',
+    subtitle: 'Team temperament & ability insights',
     price: '$17',
-    features: ['最多 60 位被观察者', '团队气质能力聚合分析', '永久权限'],
+    features: ['Up to 60 observers', 'Team temperament & ability analysis', 'Lifetime access'],
     icon: Users,
     gradient: 'from-[#5B4FCF] to-[#7B6FE0]',
     iconBg: 'bg-white/20',
@@ -47,10 +47,10 @@ const TIERS: TierCardConfig[] = [
   },
   {
     tier: 'max',
-    title: 'Max 版',
-    subtitle: '任务完成情况预判',
+    title: 'Max',
+    subtitle: 'Task completion prediction',
     price: '$37',
-    features: ['最多 160 位被观察者', '团队聚合分析', '任务适配度预判', '永久权限'],
+    features: ['Up to 160 observers', 'Team aggregate analysis', 'Task fit prediction', 'Lifetime access'],
     icon: Target,
     gradient: 'from-[#C9A86A] via-[#D4B575] to-[#E5C58A]',
     iconBg: 'bg-white/25',
@@ -116,7 +116,7 @@ export default function LandingPage() {
             </span>
           </h1>
           <p className="text-sm md:text-base text-[#8E8CA8] leading-relaxed max-w-md mx-auto">
-            从个体气质洞察出发，构建团队合力 — 选择适合你的版本
+            Start from individual temperament insights, build team synergy — choose your plan
           </p>
         </header>
 
@@ -151,7 +151,7 @@ export default function LandingPage() {
                   {isPaid && (
                     <div className="flex items-baseline gap-1">
                       <span className={`text-2xl font-bold ${card.accentColor}`}>{card.price}</span>
-                      <span className={`text-xs ${isPaid ? 'text-white/70' : 'text-[#8E8CA8]'}`}>永久权限</span>
+                      <span className={`text-xs ${isPaid ? 'text-white/70' : 'text-[#8E8CA8]'}`}>Lifetime access</span>
                     </div>
                   )}
 
@@ -176,7 +176,7 @@ export default function LandingPage() {
                         : 'bg-white/50 text-[#5B4FCF] group-hover:bg-white/80'
                     }`}
                   >
-                    {isPaid ? `选择 ${card.title}` : '开始免费体验'}
+                    {isPaid ? `Select ${card.title}` : 'Start Free'}
                   </div>
                 </div>
               </button>
@@ -187,7 +187,7 @@ export default function LandingPage() {
         <Disclaimer />
 
         <footer className="text-center text-xs text-[#8E8CA8]/70">
-          © {new Date().getFullYear()} Temperament Insight · 仅用于自我探索与团队洞察参考
+          © {new Date().getFullYear()} Temperament Insight · For self-exploration & team insight reference only
         </footer>
       </div>
     </div>
