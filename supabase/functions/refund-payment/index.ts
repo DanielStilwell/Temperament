@@ -199,7 +199,7 @@ serve(async (req: Request) => {
     const signature = await rsaSign(privateKey, signString);
 
     // Call LianLian API
-    const apiUrl = `${API_BASE}/v3/merchants/${MERCHANT_ID}/refunds`;
+    const apiUrl = `${API_BASE}/v3/merchants/${MERCHANT_ID}/refund`;
     console.log('[refund-payment] calling:', apiUrl);
 
     const response = await fetch(apiUrl, {
