@@ -147,7 +147,7 @@ serve(async (req: Request) => {
         merchant_user_no: user_id,
         merchant_order_time: orderTime,
         order_description: `Temperament App - ${tier.toUpperCase()} Version${is_upgrade ? ` (Upgrade from ${upgrade_from})` : ''}`,
-        order_amount: Number(amount).toFixed(2),
+        order_amount: Math.round(Number(amount) * 100) / 100,
         order_currency_code: 'USD',
         products: [
           {
@@ -155,7 +155,7 @@ serve(async (req: Request) => {
             name: `Temperament ${tier.toUpperCase()} Version`,
             description: `Lifetime access to ${tier.toUpperCase()} features`,
             quantity: '1',
-            price: Number(amount).toFixed(2),
+            price: Math.round(Number(amount) * 100) / 100,
             currency_code: 'USD',
           },
         ],

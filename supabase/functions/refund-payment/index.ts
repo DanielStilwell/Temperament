@@ -109,10 +109,25 @@ function serializeValue(key: string, value: unknown): string {
 }
 
 // ─── Timestamp ───
-function llTimestamp(): string {
+// Supabase Edge Functions run in UTC, so we must format in the target timezone
+// to match the timezone declared in the request header.
+const TIMEZONE = 'Asia/Shanghai';
+
+function llTimestamp(timeZone = TIMEZONE): string {
   const now = new Date();
-  const pad = (n: number, w = 2) => String(n).padStart(w, '0');
-  return `${now.getFullYear()}${pad(now.getMonth() + 1)}${pad(now.getDate())}${pad(now.getHours())}${pad(now.getMinutes())}${pad(now.getSeconds())}`;
+  const parts = new Intl.DateTimeFormat('en-US', {
+    timeZone,
+    year: 'numeric',
+    month: '2-digit',
+    day: '2-digit',
+    hour: '2-digit',
+    minute: '2-digit',
+    second: '2-digit',
+    hour12: false,
+  }).formatToParts(now);
+
+  const get = (type: string) => parts.find((p) => p.type === type)?.value ?? '00';
+  return `${get('year')}${get('month')}${get('day')}${get('hour')}${get('minute')}${get('second')}`;
 }
 
 // ─── Main handler ───
@@ -180,15 +195,22 @@ serve(async (req: Request) => {
     const amount = refund_amount ?? order.amount;
 
     // Build refund request body
+    // See: https://doc.lianlianpay.com/doc-api/open-api/refund
+    // merchant_transaction_id = new refund transaction ID (unique)
+    // original_transaction_id = the original payment order ID
+    // refund_data is a nested object containing refund_amount and refund_currency_code
     const refundBody: Record<string, unknown> = {
       merchant_id: MERCHANT_ID,
       sub_merchant_id: SUB_MERCHANT_ID,
-      merchant_transaction_id: order.id,
-      merchant_refund_id: merchantRefundId,
-      refund_amount: Number(amount).toFixed(2),
-      refund_currency_code: 'USD',
-      refund_reason: refund_reason ?? 'User requested refund',
+      merchant_transaction_id: merchantRefundId,
+      merchant_refund_time: reqTimestamp,
+      original_transaction_id: order.id,
       notification_url: `${SUPABASE_URL}/functions/v1/lianlian-webhook`,
+      refund_data: {
+        refund_amount: Math.round(Number(amount) * 100) / 100,
+        refund_currency_code: 'USD',
+      },
+      reason: refund_reason ?? 'User requested refund',
     };
 
     // Sign
@@ -199,7 +221,8 @@ serve(async (req: Request) => {
     const signature = await rsaSign(privateKey, signString);
 
     // Call LianLian API
-    const apiUrl = `${API_BASE}/v3/refund`;
+    // POST /v3/merchants/<merchant_id>/payments/<original_transaction_id>/refunds
+    const apiUrl = `${API_BASE}/v3/merchants/${MERCHANT_ID}/payments/${order.id}/refunds`;
     console.log('[refund-payment] calling:', apiUrl);
 
     const response = await fetch(apiUrl, {
@@ -207,7 +230,7 @@ serve(async (req: Request) => {
       headers: {
         'Content-Type': 'application/json',
         'signature': signature,
-        'timezone': 'Asia/Shanghai',
+        'timezone': TIMEZONE,
         'timestamp': reqTimestamp,
       },
       body: JSON.stringify(refundBody),
@@ -233,14 +256,19 @@ serve(async (req: Request) => {
     }
 
     // Update order with refund info
-    const refundInfo = result.refund ?? {};
+    // Response structure: { return_code, return_message, trace_id, order: { ll_transaction_id, merchant_transaction_id, original_transaction_id, refund_data: {...} } }
+    // return_code=SUCCESS means request accepted, NOT that refund is complete.
+    // Refund completion is notified via webhook when refund_status = "RS".
+    const refundOrder = result.order ?? {};
+    const llTransactionId = refundOrder.ll_transaction_id ?? null;
+
     const { error: updateError } = await supabase
       .from('payment_orders')
       .update({
         refund_status: 'pending',
         refund_amount: amount,
         merchant_refund_id: merchantRefundId,
-        lianlian_refund_id: refundInfo.refund_id ?? null,
+        lianlian_refund_id: llTransactionId,
         refund_reason: refund_reason ?? 'User requested refund',
         refund_requested_at: new Date().toISOString(),
         updated_at: new Date().toISOString(),
@@ -254,7 +282,7 @@ serve(async (req: Request) => {
     return json({
       success: true,
       merchant_refund_id: merchantRefundId,
-      lianlian_refund_id: refundInfo.refund_id ?? null,
+      lianlian_refund_id: llTransactionId,
     });
 
   } catch (err) {

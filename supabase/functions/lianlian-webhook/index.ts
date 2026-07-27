@@ -135,34 +135,40 @@ serve(async (req: Request) => {
     // 3. Determine notification type
     const returnCode = notification.return_code;
     const orderInfo = notification.order as Record<string, unknown> | undefined;
-    const refundInfo = notification.refund as Record<string, unknown> | undefined;
+    const refundData = notification.refund_data as Record<string, unknown> | undefined;
 
     const supabase = createClient(SUPABASE_URL, SUPABASE_SERVICE_ROLE_KEY);
 
     // ─── Refund notification ───
-    if (refundInfo) {
-      const merchantRefundId = String(refundInfo.merchant_refund_id ?? '');
-      const refundStatus = String(refundInfo.refund_status ?? '');
-      const merchantTransactionId = String(refundInfo.merchant_transaction_id ?? '');
+    // LianLian Global Pay refund notification structure:
+    //   { ll_transaction_id, merchant_transaction_id, original_transaction_id, refund_data: { refund_status, ... } }
+    // refund_status = "RS" means refund success. Notification is only sent when status = RS.
+    // See: https://doc.lianlianpay.com/doc-api/open-news/refund-result
+    if (refundData) {
+      const merchantRefundId = String(notification.merchant_transaction_id ?? '');
+      const refundStatus = String(refundData.refund_status ?? '');
+      const llTransactionId = String(notification.ll_transaction_id ?? '');
+      const originalTransactionId = String(notification.original_transaction_id ?? '');
 
       console.log('[webhook] Refund notification');
-      console.log('[webhook] merchant_refund_id:', merchantRefundId);
+      console.log('[webhook] merchant_transaction_id (refund):', merchantRefundId);
+      console.log('[webhook] original_transaction_id (order):', originalTransactionId);
+      console.log('[webhook] ll_transaction_id:', llTransactionId);
       console.log('[webhook] refund_status:', refundStatus);
-      console.log('[webhook] merchant_transaction_id:', merchantTransactionId);
 
       if (!merchantRefundId) {
-        console.error('[webhook] No merchant_refund_id');
+        console.error('[webhook] No merchant_transaction_id in refund notification');
         return ok();
       }
 
-      // LianLian refund_status: '1' usually means refunded success
-      const isRefunded = returnCode === 'SUCCESS' && refundStatus === '1';
+      // LianLian Global Pay: refund_status "RS" = refund success
+      const isRefunded = refundStatus === 'RS';
 
       const { error: refundUpdateError } = await supabase
         .from('payment_orders')
         .update({
           refund_status: isRefunded ? 'refunded' : 'failed',
-          lianlian_refund_id: String(refundInfo.refund_id ?? ''),
+          lianlian_refund_id: llTransactionId,
           refunded_at: isRefunded ? new Date().toISOString() : null,
           status: isRefunded ? 'refunded' : undefined,
           updated_at: new Date().toISOString(),
@@ -251,6 +257,9 @@ serve(async (req: Request) => {
 });
 
 function ok(): Response {
+  // LianLian Global Pay requires this exact format to acknowledge a notification.
+  // See: https://doc.lianlianpay.com/doc-api/open-news/refund-result
+  // If it doesn't receive this, it treats the notification as failed and retries (up to 15 times).
   return new Response(JSON.stringify({ code: '200', message: 'success' }), {
     status: 200,
     headers: { 'Content-Type': 'application/json' },
