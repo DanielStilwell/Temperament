@@ -36,7 +36,7 @@ const TIERS: TierCardConfig[] = [
     tier: 'pro',
     title: 'Pro',
     subtitle: 'Team temperament & ability insights',
-    price: '$17',
+    price: '$9',
     features: ['Up to 60 observers', 'Team temperament & ability analysis', 'Lifetime access'],
     icon: Users,
     gradient: 'from-[#5B4FCF] to-[#7B6FE0]',
