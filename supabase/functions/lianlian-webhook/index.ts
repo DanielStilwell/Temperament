@@ -132,12 +132,55 @@ serve(async (req: Request) => {
       console.log('[webhook] Signature verified using sorted params');
     }
 
-    // 3. Process the notification
+    // 3. Determine notification type
     const returnCode = notification.return_code;
     const orderInfo = notification.order as Record<string, unknown> | undefined;
+    const refundInfo = notification.refund as Record<string, unknown> | undefined;
 
+    const supabase = createClient(SUPABASE_URL, SUPABASE_SERVICE_ROLE_KEY);
+
+    // ─── Refund notification ───
+    if (refundInfo) {
+      const merchantRefundId = String(refundInfo.merchant_refund_id ?? '');
+      const refundStatus = String(refundInfo.refund_status ?? '');
+      const merchantTransactionId = String(refundInfo.merchant_transaction_id ?? '');
+
+      console.log('[webhook] Refund notification');
+      console.log('[webhook] merchant_refund_id:', merchantRefundId);
+      console.log('[webhook] refund_status:', refundStatus);
+      console.log('[webhook] merchant_transaction_id:', merchantTransactionId);
+
+      if (!merchantRefundId) {
+        console.error('[webhook] No merchant_refund_id');
+        return ok();
+      }
+
+      // LianLian refund_status: '1' usually means refunded success
+      const isRefunded = returnCode === 'SUCCESS' && refundStatus === '1';
+
+      const { error: refundUpdateError } = await supabase
+        .from('payment_orders')
+        .update({
+          refund_status: isRefunded ? 'refunded' : 'failed',
+          lianlian_refund_id: String(refundInfo.refund_id ?? ''),
+          refunded_at: isRefunded ? new Date().toISOString() : null,
+          status: isRefunded ? 'refunded' : undefined,
+          updated_at: new Date().toISOString(),
+        })
+        .eq('merchant_refund_id', merchantRefundId);
+
+      if (refundUpdateError) {
+        console.error('[webhook] Refund update error:', refundUpdateError);
+      } else {
+        console.log(`[webhook] Refund ${merchantRefundId} marked as ${isRefunded ? 'refunded' : 'failed'}`);
+      }
+
+      return ok();
+    }
+
+    // ─── Payment notification ───
     if (!orderInfo) {
-      console.error('[webhook] No order info in notification');
+      console.error('[webhook] No order or refund info in notification');
       return ok();
     }
 
@@ -149,13 +192,12 @@ serve(async (req: Request) => {
       return ok();
     }
 
+    console.log('[webhook] Payment notification');
     console.log('[webhook] merchant_transaction_id:', merchantTransactionId);
     console.log('[webhook] payment_status:', paymentStatus);
     console.log('[webhook] return_code:', returnCode);
 
     // 4. Look up the order in our database
-    const supabase = createClient(SUPABASE_URL, SUPABASE_SERVICE_ROLE_KEY);
-
     const { data: order, error: orderError } = await supabase
       .from('payment_orders')
       .select('*')

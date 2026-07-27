@@ -196,10 +196,18 @@ create table if not exists public.payment_orders (
   amount                  numeric not null,   -- 支付金额 (17/20/37)
   is_upgrade              boolean not null default false,
   upgrade_from            text,               -- 升级来源 tier
-  status                  text not null default 'pending' check (status in ('pending','paid','failed')),
+  status                  text not null default 'pending' check (status in ('pending','paid','failed','refunded')),
   lianlian_order_id       text,               -- 连连返回的 order_id
   lianlian_payment_status text,               -- 连连返回的 payment_status
   paid_at                 timestamptz,
+  -- 退款相关字段
+  refund_status           text default null check (refund_status in (null,'pending','refunded','failed')),
+  refund_amount           numeric,
+  merchant_refund_id      text,               -- 我方生成的退款单号
+  lianlian_refund_id      text,               -- 连连返回的 refund_id
+  refund_reason           text,
+  refund_requested_at     timestamptz,
+  refunded_at             timestamptz,
   created_at              timestamptz not null default now(),
   updated_at              timestamptz not null default now()
 );
