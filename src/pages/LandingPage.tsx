@@ -49,7 +49,7 @@ const TIERS: TierCardConfig[] = [
     tier: 'max',
     title: 'Max',
     subtitle: 'Task completion prediction',
-    price: '$37',
+    price: '$19',
     features: ['Up to 160 observers', 'Team aggregate analysis', 'Task fit prediction', 'Lifetime access'],
     icon: Target,
     gradient: 'from-[#C9A86A] via-[#D4B575] to-[#E5C58A]',

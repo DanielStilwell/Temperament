@@ -7,13 +7,13 @@ import { useAuthStore } from '../stores/auth';
 import type { AccountTier } from '../types/account';
 
 const TIER_INFO: Record<Exclude<AccountTier, 'free'>, { name: string; price: string; gradient: string }> = {
-  pro: { name: 'Pro', price: '$17', gradient: 'from-[#5B4FCF] to-[#7B6FE0]' },
-  max: { name: 'Max', price: '$37', gradient: 'from-[#C9A86A] via-[#D4B575] to-[#E5C58A]' },
+  pro: { name: 'Pro', price: '$9', gradient: 'from-[#5B4FCF] to-[#7B6FE0]' },
+  max: { name: 'Max', price: '$19', gradient: 'from-[#C9A86A] via-[#D4B575] to-[#E5C58A]' },
 };
 
 // 升级差价映射
 const UPGRADE_PRICE: Record<string, string> = {
-  'pro→max': '$20', // 补差价：37 - 17 = 20
+  'pro→max': '$10', // 补差价：19 - 9 = 10
 };
 
 export default function RegisterPage() {
@@ -83,7 +83,7 @@ export default function RegisterPage() {
 
       // Determine payment amount
       const isProToMax = isUpgrade && upgradeFrom === 'pro' && targetTier === 'max';
-      const amount = isProToMax ? 20 : (targetTier === 'max' ? 37 : 17);
+      const amount = isProToMax ? 10 : (targetTier === 'max' ? 19 : 9);
 
       const res = await fetch(`${supabaseUrl}/functions/v1/create-payment`, {
         method: 'POST',
