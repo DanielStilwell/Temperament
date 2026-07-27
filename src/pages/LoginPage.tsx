@@ -19,14 +19,11 @@ export default function LoginPage() {
     const { error } = await signIn({ email: email.trim(), password });
     setSubmitting(false);
     if (!error) {
-      // 登录成功后，等 fetchProfile 完成再根据 tier 跳转
-      // 通过 setTimeout 让 zustand 状态更新
-      setTimeout(() => {
-        const { profile } = useAuthStore.getState();
-        if (profile?.tier === 'pro') navigate('/pro');
-        else if (profile?.tier === 'max') navigate('/max');
-        else navigate('/');
-      }, 100);
+      // signIn 内部已 await fetchProfile()，profile 此时已就绪
+      const { profile } = useAuthStore.getState();
+      if (profile?.tier === 'pro') navigate('/pro');
+      else if (profile?.tier === 'max') navigate('/max');
+      else navigate('/');
     }
   };
 
