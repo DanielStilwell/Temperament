@@ -16,6 +16,7 @@ export interface Profile {
   tier: AccountTier;
   paymentStatus: PaymentStatus;
   paidAt: string | null;
+  tierExpiresAt: string | null;  // 订阅过期时间（年度订阅）；free 用户为 null
   createdAt: string;
   updatedAt: string;
 }

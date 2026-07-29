@@ -143,7 +143,7 @@ export default function RegisterPage() {
                 Upgrade to {info.name}
               </h2>
               <p className="text-white/80 text-sm">
-                From {TIER_INFO[upgradeFrom as 'pro']?.name ?? 'Free'} · Upgrade price {upgradePrice} · Lifetime access
+                From {TIER_INFO[upgradeFrom as 'pro']?.name ?? 'Free'} · Upgrade price {upgradePrice} · 1 year access
               </p>
             </>
           ) : (
@@ -247,7 +247,7 @@ export default function RegisterPage() {
                   <>
                     We've sent a verification email to <span className="font-medium text-[#3D3A5C]">{email}</span>.
                     <br />
-                    Pay {info.price} to get lifetime access to all {info.name} features.
+                    Pay {info.price} to get 1 year access to all {info.name} features.
                   </>
                 )}
               </p>
@@ -262,7 +262,7 @@ export default function RegisterPage() {
                 <span className="font-medium">
                   {isUpgrade
                     ? `${TIER_INFO[upgradeFrom as 'pro']?.name ?? 'Free'} → ${info.name}`
-                    : `${info.name} · Lifetime access`
+                    : `${info.name} · 1 year access`
                   }
                 </span>
               </div>

@@ -28,12 +28,25 @@ interface AuthState {
 
 // 把 supabase profiles 行映射为前端 Profile
 function mapProfile(row: any): Profile {
+  const tier = row.tier ?? 'free';
+  const tierExpiresAt = row.tier_expires_at ?? null;
+
+  // 年度订阅过期检查：tier 非 free 且过期时间已过 → 前端视为 free
+  let effectiveTier: AccountTier = tier;
+  if (tier !== 'free' && tierExpiresAt) {
+    const expires = new Date(tierExpiresAt).getTime();
+    if (Date.now() > expires) {
+      effectiveTier = 'free';
+    }
+  }
+
   return {
     id: row.id,
     nickname: row.nickname ?? '',
-    tier: row.tier ?? 'free',
+    tier: effectiveTier,
     paymentStatus: row.payment_status ?? 'none',
     paidAt: row.paid_at ?? null,
+    tierExpiresAt,
     createdAt: row.created_at,
     updatedAt: row.updated_at,
   };

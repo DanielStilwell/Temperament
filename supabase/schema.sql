@@ -17,6 +17,7 @@ create table if not exists public.profiles (
   tier            text not null default 'free' check (tier in ('free','pro','max')),
   payment_status  text not null default 'none' check (payment_status in ('none','pending','paid')),
   paid_at         timestamptz,
+  tier_expires_at timestamptz,  -- 订阅过期时间（年度订阅 = 支付成功时间 + 1 年；free 永远为 null）
   created_at      timestamptz not null default now(),
   updated_at      timestamptz not null default now()
 );
@@ -240,7 +241,8 @@ create policy "profiles_update_own" on public.profiles
   for update using (auth.uid() = id)
   with check (
     auth.uid() = id
-    -- 不允许前端修改 tier 和 payment_status，这些字段由 Edge Function 更新
+    -- 不允许前端修改 tier / payment_status / tier_expires_at，这些字段由 Edge Function 更新
     and tier = (select tier from public.profiles where id = auth.uid())
     and payment_status = (select payment_status from public.profiles where id = auth.uid())
+    and tier_expires_at is not distinct from (select tier_expires_at from public.profiles where id = auth.uid())
   );

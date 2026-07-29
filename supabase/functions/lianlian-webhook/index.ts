@@ -231,19 +231,24 @@ serve(async (req: Request) => {
 
     // 6. If paid, update user's tier
     if (isPaid && order.user_id) {
+      // 年度订阅：过期时间 = 当前 + 1 年
+      const expiresAt = new Date();
+      expiresAt.setFullYear(expiresAt.getFullYear() + 1);
+
       const { error: profileError } = await supabase
         .from('profiles')
         .update({
           tier: order.tier,
           payment_status: 'paid',
           paid_at: new Date().toISOString(),
+          tier_expires_at: expiresAt.toISOString(),
         })
         .eq('id', order.user_id);
 
       if (profileError) {
         console.error('[webhook] Profile update error:', profileError);
       } else {
-        console.log(`[webhook] User ${order.user_id} upgraded to ${order.tier}`);
+        console.log(`[webhook] User ${order.user_id} upgraded to ${order.tier}, expires at ${expiresAt.toISOString()}`);
       }
     }
 

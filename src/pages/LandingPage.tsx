@@ -37,7 +37,7 @@ const TIERS: TierCardConfig[] = [
     title: 'Pro',
     subtitle: 'Team temperament & ability insights',
     price: '$9',
-    features: ['Up to 60 observers', 'Team temperament & ability analysis', 'Lifetime access'],
+    features: ['Up to 60 observers', 'Team temperament & ability analysis', '1 year access'],
     icon: Users,
     gradient: 'from-[#5B4FCF] to-[#7B6FE0]',
     iconBg: 'bg-white/20',
@@ -50,7 +50,7 @@ const TIERS: TierCardConfig[] = [
     title: 'Max',
     subtitle: 'Task completion prediction',
     price: '$19',
-    features: ['Up to 160 observers', 'Team aggregate analysis', 'Task fit prediction', 'Lifetime access'],
+    features: ['Up to 160 observers', 'Team aggregate analysis', 'Task fit prediction', '1 year access'],
     icon: Target,
     gradient: 'from-[#C9A86A] via-[#D4B575] to-[#E5C58A]',
     iconBg: 'bg-white/25',
@@ -80,7 +80,7 @@ export default function LandingPage() {
         return;
       }
 
-      // Pro → Max 升级：跳转升级页（补差价 $20）
+      // Pro → Max 升级：跳转升级页（补差价 $10）
       if (currentTier === 'pro' && tier === 'max') {
         navigate('/register/max?upgrade=true');
         return;
@@ -151,7 +151,7 @@ export default function LandingPage() {
                   {isPaid && (
                     <div className="flex items-baseline gap-1">
                       <span className={`text-2xl font-bold ${card.accentColor}`}>{card.price}</span>
-                      <span className={`text-xs ${isPaid ? 'text-white/70' : 'text-[#8E8CA8]'}`}>Lifetime access</span>
+                      <span className={`text-xs ${isPaid ? 'text-white/70' : 'text-[#8E8CA8]'}`}>1 year access</span>
                     </div>
                   )}
 

@@ -153,7 +153,7 @@ serve(async (req: Request) => {
           {
             product_id: '1',
             name: `Temperament ${tier.toUpperCase()} Version`,
-            description: `Lifetime access to ${tier.toUpperCase()} features`,
+            description: `1 year access to ${tier.toUpperCase()} features`,
             quantity: '1',
             price: Math.round(Number(amount) * 100) / 100,
             currency_code: 'USD',

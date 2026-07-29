@@ -67,14 +67,16 @@ serve(async (req: Request) => {
     }
 
     // Activate the order and upgrade tier
-    const now = new Date().toISOString();
+    const now = new Date();
+    const expiresAt = new Date();
+    expiresAt.setFullYear(expiresAt.getFullYear() + 1);
 
     const { error: updateOrderError } = await supabase
       .from('payment_orders')
       .update({
         status: 'paid',
-        paid_at: now,
-        updated_at: now,
+        paid_at: now.toISOString(),
+        updated_at: now.toISOString(),
       })
       .eq('id', orderId);
 
@@ -88,7 +90,8 @@ serve(async (req: Request) => {
       .update({
         tier: order.tier,
         payment_status: 'paid',
-        paid_at: now,
+        paid_at: now.toISOString(),
+        tier_expires_at: expiresAt.toISOString(),
       })
       .eq('id', userId);
 
@@ -97,7 +100,7 @@ serve(async (req: Request) => {
       return json({ error: 'Failed to upgrade profile' }, 500);
     }
 
-    console.log(`[activate-payment] User ${userId} activated to ${order.tier} for order ${orderId}`);
+    console.log(`[activate-payment] User ${userId} activated to ${order.tier} for order ${orderId}, expires at ${expiresAt.toISOString()}`);
     return json({ activated: true, tier: order.tier });
 
   } catch (err) {
