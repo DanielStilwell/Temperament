@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useNavigate, useSearchParams, Link } from 'react-router-dom';
-import { CheckCircle2, Loader2, AlertCircle, RefreshCw } from 'lucide-react';
+import { CheckCircle2, Loader2, AlertCircle } from 'lucide-react';
 import Button from '../components/ui/Button';
 import Disclaimer from '../components/ui/Disclaimer';
 import { useAuthStore } from '../stores/auth';
@@ -9,10 +9,9 @@ import { supabase } from '../lib/supabase';
 export default function PaymentCallbackPage() {
   const navigate = useNavigate();
   const [searchParams] = useSearchParams();
-  const { fetchProfile, user, profile } = useAuthStore();
+  const { fetchProfile } = useAuthStore();
 
   const [status, setStatus] = useState<'checking' | 'success' | 'pending' | 'error'>('checking');
-  const [fallbackBusy, setFallbackBusy] = useState(false);
   const orderId = searchParams.get('order');
   const tier = searchParams.get('tier') as 'pro' | 'max' | null;
   const isUpgrade = searchParams.get('upgrade') === '1';
@@ -27,8 +26,8 @@ export default function PaymentCallbackPage() {
   }, [orderId, tier]);
 
   const checkPaymentStatus = async () => {
-    // Poll the payment_orders table for up to 30s
-    for (let i = 0; i < 10; i++) {
+    // Poll the payment_orders table for up to 60s (20 attempts × 3s)
+    for (let i = 0; i < 20; i++) {
       const { data, error } = await supabase
         .from('payment_orders')
         .select('status')
@@ -56,54 +55,17 @@ export default function PaymentCallbackPage() {
       await new Promise((r) => setTimeout(r, 3000));
     }
 
-    // Webhook hasn't arrived yet — try the fallback activation
-    await fallbackActivate();
-  };
-
-  // Fallback: ask Edge Function to activate this order based on redirect return
-  const fallbackActivate = async () => {
-    if (!orderId || !user) {
-      setStatus('pending');
-      return;
-    }
-
-    setFallbackBusy(true);
-    try {
-      const session = await supabase.auth.getSession();
-      const accessToken = session.data.session?.access_token;
-      if (!accessToken) {
-        setStatus('pending');
-        return;
-      }
-
-      const res = await fetch(`${import.meta.env.VITE_SUPABASE_URL}/functions/v1/activate-payment`, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          Authorization: `Bearer ${accessToken}`,
-        },
-        body: JSON.stringify({ order_id: orderId }),
-      });
-
-      const data = await res.json();
-
-      if (data.activated) {
-        await fetchProfile();
-        setStatus('success');
-      } else {
-        console.error('[PaymentCallback] Fallback activation failed:', data);
-        setStatus('pending');
-      }
-    } catch (err) {
-      console.error('[PaymentCallback] Fallback error:', err);
-      setStatus('pending');
-    } finally {
-      setFallbackBusy(false);
-    }
+    // Webhook hasn't arrived yet — show pending state
+    setStatus('pending');
   };
 
   const handleEnterWorkspace = () => {
     navigate(`/${tier}`);
+  };
+
+  const handleRetry = () => {
+    setStatus('checking');
+    checkPaymentStatus();
   };
 
   return (
@@ -147,29 +109,13 @@ export default function PaymentCallbackPage() {
             <h3 className="text-xl font-bold text-[#3D3A5C]">Payment is being processed</h3>
             <p className="text-sm text-[#8E8CA8] leading-relaxed">
               Your payment was submitted successfully. It may take a few moments to confirm.
-              If access is not enabled yet, click below to activate it now.
+              If access is not enabled shortly, please contact support.
             </p>
-            <Button
-              variant="primary"
-              size="lg"
-              fullWidth
-              onClick={fallbackActivate}
-              disabled={fallbackBusy}
-            >
-              {fallbackBusy ? (
-                <>
-                  <Loader2 className="w-5 h-5 animate-spin" />
-                  Activating...
-                </>
-              ) : (
-                <>
-                  <RefreshCw className="w-5 h-5" />
-                  Activate {tier?.toUpperCase()} Access
-                </>
-              )}
+            <Button variant="primary" size="lg" fullWidth onClick={handleRetry}>
+              Check Again
             </Button>
-            <Button variant="secondary" size="lg" fullWidth onClick={handleEnterWorkspace}>
-              Go to {tier?.toUpperCase()} Workspace
+            <Button variant="secondary" size="lg" fullWidth onClick={() => navigate('/')}>
+              Back to Home
             </Button>
           </div>
         )}
