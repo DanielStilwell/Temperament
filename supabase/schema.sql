@@ -201,6 +201,7 @@ create table if not exists public.payment_orders (
   status                  text not null default 'pending' check (status in ('pending','paid','failed','refunded')),
   lianlian_order_id       text,               -- 连连返回的 order_id
   lianlian_payment_status text,               -- 连连返回的 payment_status
+  creem_checkout_id       text,               -- Creem checkout session ID
   paid_at                 timestamptz,
   -- 退款相关字段
   refund_status           text default null check (refund_status in (null,'pending','refunded','failed')),

@@ -75,7 +75,7 @@ export default function RegisterPage() {
     }
   };
 
-  // Call Supabase Edge Function to create payment order, then redirect to checkout
+  // Call Supabase Edge Function to create Creem checkout session, then redirect
   const handlePay = async () => {
     setPaying(true);
     setPayError(null);
@@ -90,7 +90,7 @@ export default function RegisterPage() {
         return;
       }
 
-      const res = await fetch(`${supabaseUrl}/functions/v1/create-payment`, {
+      const res = await fetch(`${supabaseUrl}/functions/v1/create-checkout`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -99,7 +99,6 @@ export default function RegisterPage() {
         body: JSON.stringify({
           user_id: currentUserId,
           tier: targetTier,
-          amount: displayAmount,
           billing_period: selectedPeriod,
           is_upgrade: isUpgrade,
           upgrade_from: isUpgrade ? currentTier : null,

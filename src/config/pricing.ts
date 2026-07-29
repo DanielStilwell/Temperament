@@ -9,6 +9,7 @@ export interface PriceOption {
   price: number;        // 数字金额
   display: string;      // 显示用：$5 / $17 / $27
   perMonth?: string;    // 每月等效价格（用于展示性价比）
+  creemProductId: string; // Creem 产品 ID
 }
 
 export interface TierPricing {
@@ -19,16 +20,16 @@ export interface TierPricing {
 
 // Pro 版定价：$5/月，$17/6个月，$27/年
 export const PRO_PRICING: TierPricing = {
-  monthly:  { period: 'monthly',  label: 'Monthly',  price: 5,  display: '$5',  perMonth: '$5.00/mo' },
-  '6months': { period: '6months', label: '6 Months', price: 17, display: '$17', perMonth: '$2.83/mo' },
-  yearly:   { period: 'yearly',  label: '1 Year',   price: 27, display: '$27', perMonth: '$2.25/mo' },
+  monthly:  { period: 'monthly',  label: 'Monthly',  price: 5,  display: '$5',  perMonth: '$5.00/mo',  creemProductId: 'prod_1bD0wRZrQvyejqXEdoTMcv' },
+  '6months': { period: '6months', label: '6 Months', price: 17, display: '$17', perMonth: '$2.83/mo',  creemProductId: 'prod_2cRZOTck6I6K7i8sY4tToo' },
+  yearly:   { period: 'yearly',  label: '1 Year',   price: 27, display: '$27', perMonth: '$2.25/mo',  creemProductId: 'prod_7TMnCVzDqJsgpVjRHaobKU' },
 };
 
 // Max 版定价：$12/月，$43/6个月，$79/年
 export const MAX_PRICING: TierPricing = {
-  monthly:  { period: 'monthly',  label: 'Monthly',  price: 12, display: '$12', perMonth: '$12.00/mo' },
-  '6months': { period: '6months', label: '6 Months', price: 43, display: '$43', perMonth: '$7.17/mo' },
-  yearly:   { period: 'yearly',  label: '1 Year',   price: 79, display: '$79', perMonth: '$6.58/mo' },
+  monthly:  { period: 'monthly',  label: 'Monthly',  price: 12, display: '$12', perMonth: '$12.00/mo', creemProductId: 'prod_2LMQlE6aSZadj0qG4IhFs4' },
+  '6months': { period: '6months', label: '6 Months', price: 43, display: '$43', perMonth: '$7.17/mo',  creemProductId: 'prod_3GRj5lLztO4RibQqMSDGbD' },
+  yearly:   { period: 'yearly',  label: '1 Year',   price: 79, display: '$79', perMonth: '$6.58/mo',  creemProductId: 'prod_1gZLxvQwUK16CKvC5aQfFg' },
 };
 
 export const TIER_PRICING = {
