@@ -231,9 +231,16 @@ serve(async (req: Request) => {
 
     // 6. If paid, update user's tier
     if (isPaid && order.user_id) {
-      // 年度订阅：过期时间 = 当前 + 1 年
+      // 根据 billing_period 计算订阅过期时间
+      const period = order.billing_period || 'yearly';
       const expiresAt = new Date();
-      expiresAt.setFullYear(expiresAt.getFullYear() + 1);
+      if (period === 'monthly') {
+        expiresAt.setDate(expiresAt.getDate() + 30);       // 30 天
+      } else if (period === '6months') {
+        expiresAt.setDate(expiresAt.getDate() + 180);      // 180 天
+      } else {
+        expiresAt.setFullYear(expiresAt.getFullYear() + 1); // 1 年
+      }
 
       const { error: profileError } = await supabase
         .from('profiles')
@@ -248,7 +255,7 @@ serve(async (req: Request) => {
       if (profileError) {
         console.error('[webhook] Profile update error:', profileError);
       } else {
-        console.log(`[webhook] User ${order.user_id} upgraded to ${order.tier}, expires at ${expiresAt.toISOString()}`);
+        console.log(`[webhook] User ${order.user_id} upgraded to ${order.tier} (${period}), expires at ${expiresAt.toISOString()}`);
       }
     }
 

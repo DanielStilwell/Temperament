@@ -194,7 +194,8 @@ create table if not exists public.payment_orders (
   id                      text primary key,  -- merchant_transaction_id
   user_id                 uuid not null references auth.users(id) on delete cascade,
   tier                    text not null,      -- 目标 tier (pro/max)
-  amount                  numeric not null,   -- 支付金额 (17/20/37)
+  amount                  numeric not null,   -- 支付金额
+  billing_period          text not null default 'yearly' check (billing_period in ('monthly','6months','yearly')),
   is_upgrade              boolean not null default false,
   upgrade_from            text,               -- 升级来源 tier
   status                  text not null default 'pending' check (status in ('pending','paid','failed','refunded')),

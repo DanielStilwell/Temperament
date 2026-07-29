@@ -68,8 +68,17 @@ serve(async (req: Request) => {
 
     // Activate the order and upgrade tier
     const now = new Date();
+
+    // 根据 billing_period 计算订阅过期时间
+    const period = order.billing_period || 'yearly';
     const expiresAt = new Date();
-    expiresAt.setFullYear(expiresAt.getFullYear() + 1);
+    if (period === 'monthly') {
+      expiresAt.setDate(expiresAt.getDate() + 30);       // 30 天
+    } else if (period === '6months') {
+      expiresAt.setDate(expiresAt.getDate() + 180);      // 180 天
+    } else {
+      expiresAt.setFullYear(expiresAt.getFullYear() + 1); // 1 年
+    }
 
     const { error: updateOrderError } = await supabase
       .from('payment_orders')
@@ -100,7 +109,7 @@ serve(async (req: Request) => {
       return json({ error: 'Failed to upgrade profile' }, 500);
     }
 
-    console.log(`[activate-payment] User ${userId} activated to ${order.tier} for order ${orderId}, expires at ${expiresAt.toISOString()}`);
+    console.log(`[activate-payment] User ${userId} activated to ${order.tier} (${period}) for order ${orderId}, expires at ${expiresAt.toISOString()}`);
     return json({ activated: true, tier: order.tier });
 
   } catch (err) {

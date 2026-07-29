@@ -1,14 +1,15 @@
+import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Sparkles, Users, Target } from 'lucide-react';
 import Disclaimer from '../components/ui/Disclaimer';
 import { useAuthStore } from '../stores/auth';
 import type { AccountTier } from '../types/account';
+import { TIER_PRICING, type BillingPeriod } from '../config/pricing';
 
 interface TierCardConfig {
   tier: AccountTier;
   title: string;
   subtitle: string;
-  price?: string;
   features: string[];
   icon: React.ComponentType<{ className?: string }>;
   // 卡片配色（差异化气质色）
@@ -36,8 +37,7 @@ const TIERS: TierCardConfig[] = [
     tier: 'pro',
     title: 'Pro',
     subtitle: 'Team temperament & ability insights',
-    price: '$9',
-    features: ['Up to 60 observers', 'Team temperament & ability analysis', '1 year access'],
+    features: ['Up to 60 observers', 'Team temperament & ability analysis'],
     icon: Users,
     gradient: 'from-[#5B4FCF] to-[#7B6FE0]',
     iconBg: 'bg-white/20',
@@ -49,8 +49,7 @@ const TIERS: TierCardConfig[] = [
     tier: 'max',
     title: 'Max',
     subtitle: 'Task completion prediction',
-    price: '$19',
-    features: ['Up to 160 observers', 'Team aggregate analysis', 'Task fit prediction', '1 year access'],
+    features: ['Up to 160 observers', 'Team aggregate analysis', 'Task fit prediction'],
     icon: Target,
     gradient: 'from-[#C9A86A] via-[#D4B575] to-[#E5C58A]',
     iconBg: 'bg-white/25',
@@ -60,9 +59,16 @@ const TIERS: TierCardConfig[] = [
   },
 ];
 
+const PERIOD_LABELS: Record<BillingPeriod, string> = {
+  monthly: 'Monthly',
+  '6months': '6 Months',
+  yearly: '1 Year',
+};
+
 export default function LandingPage() {
   const navigate = useNavigate();
   const { user, profile } = useAuthStore();
+  const [selectedPeriod, setSelectedPeriod] = useState<BillingPeriod>('yearly');
 
   const handleSelect = (tier: AccountTier) => {
     if (tier === 'free') {
@@ -80,19 +86,19 @@ export default function LandingPage() {
         return;
       }
 
-      // Pro → Max 升级：跳转升级页（补差价 $10）
+      // Pro → Max 升级：跳转升级页
       if (currentTier === 'pro' && tier === 'max') {
-        navigate('/register/max?upgrade=true');
+        navigate(`/register/max?upgrade=true&period=${selectedPeriod}`);
         return;
       }
 
-      // free → Pro/Max：跳转注册页（新购买）
-      navigate(`/register/${tier}`);
+      // free → Pro/Max：跳转注册页
+      navigate(`/register/${tier}?period=${selectedPeriod}`);
       return;
     }
 
     // 未登录 → 注册页
-    navigate(`/register/${tier}`);
+    navigate(`/register/${tier}?period=${selectedPeriod}`);
   };
 
   return (
@@ -120,11 +126,32 @@ export default function LandingPage() {
           </p>
         </header>
 
+        {/* 周期切换器 */}
+        <div className="flex justify-center">
+          <div className="inline-flex p-1 rounded-full bg-white/60 backdrop-blur-[10px] border border-white/50">
+            {(Object.keys(PERIOD_LABELS) as BillingPeriod[]).map((period) => (
+              <button
+                key={period}
+                onClick={() => setSelectedPeriod(period)}
+                className={`px-4 py-2 rounded-full text-xs font-medium transition-all ${
+                  selectedPeriod === period
+                    ? 'bg-[#5B4FCF] text-white shadow-sm'
+                    : 'text-[#8E8CA8] hover:text-[#5B4FCF]'
+                }`}
+              >
+                {PERIOD_LABELS[period]}
+              </button>
+            ))}
+          </div>
+        </div>
+
         {/* 三张卡片 */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-5">
           {TIERS.map((card) => {
             const Icon = card.icon;
-            const isPaid = !!card.price;
+            const isPaid = card.tier === 'pro' || card.tier === 'max';
+            const pricing = isPaid ? TIER_PRICING[card.tier as 'pro' | 'max'][selectedPeriod] : null;
+
             return (
               <button
                 key={card.tier}
@@ -148,10 +175,19 @@ export default function LandingPage() {
                     </p>
                   </div>
 
-                  {isPaid && (
-                    <div className="flex items-baseline gap-1">
-                      <span className={`text-2xl font-bold ${card.accentColor}`}>{card.price}</span>
-                      <span className={`text-xs ${isPaid ? 'text-white/70' : 'text-[#8E8CA8]'}`}>1 year access</span>
+                  {isPaid && pricing && (
+                    <div className="flex flex-col gap-0.5">
+                      <div className="flex items-baseline gap-1.5">
+                        <span className={`text-2xl font-bold ${card.accentColor}`}>{pricing.display}</span>
+                        <span className={`text-xs ${isPaid ? 'text-white/70' : 'text-[#8E8CA8]'}`}>
+                          / {PERIOD_LABELS[selectedPeriod].toLowerCase()}
+                        </span>
+                      </div>
+                      {selectedPeriod !== 'monthly' && pricing.perMonth && (
+                        <span className={`text-[10px] ${isPaid ? 'text-white/60' : 'text-[#8E8CA8]'}`}>
+                          {pricing.perMonth} billed as {pricing.display}
+                        </span>
+                      )}
                     </div>
                   )}
 

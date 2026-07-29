@@ -5,16 +5,14 @@ import Button from '../components/ui/Button';
 import Disclaimer from '../components/ui/Disclaimer';
 import { useAuthStore } from '../stores/auth';
 import type { AccountTier } from '../types/account';
+import { TIER_PRICING, calculateUpgradePrice, PERIOD_LABELS, type BillingPeriod } from '../config/pricing';
 
-const TIER_INFO: Record<Exclude<AccountTier, 'free'>, { name: string; price: string; gradient: string }> = {
-  pro: { name: 'Pro', price: '$9', gradient: 'from-[#5B4FCF] to-[#7B6FE0]' },
-  max: { name: 'Max', price: '$19', gradient: 'from-[#C9A86A] via-[#D4B575] to-[#E5C58A]' },
+const TIER_INFO: Record<Exclude<AccountTier, 'free'>, { name: string; gradient: string }> = {
+  pro: { name: 'Pro', gradient: 'from-[#5B4FCF] to-[#7B6FE0]' },
+  max: { name: 'Max', gradient: 'from-[#C9A86A] via-[#D4B575] to-[#E5C58A]' },
 };
 
-// 升级差价映射
-const UPGRADE_PRICE: Record<string, string> = {
-  'pro→max': '$10', // 补差价：19 - 9 = 10
-};
+export { PERIOD_LABELS };
 
 export default function RegisterPage() {
   const { tier } = useParams<{ tier: string }>();
@@ -33,11 +31,22 @@ export default function RegisterPage() {
   const targetTier = (tier as Exclude<AccountTier, 'free'>) || 'pro';
   const info = TIER_INFO[targetTier] || TIER_INFO.pro;
 
-  // 升级模式检测：URL 有 ?upgrade=true 且当前已登录
+  // 从 URL 读取计费周期，默认 yearly
+  const periodParam = searchParams.get('period') as BillingPeriod | null;
+  const [selectedPeriod, setSelectedPeriod] = useState<BillingPeriod>(
+    periodParam && ['monthly', '6months', 'yearly'].includes(periodParam) ? periodParam : 'yearly'
+  );
+
+  // 升级模式检测
   const isUpgrade = searchParams.get('upgrade') === 'true' && !!user && !!profile;
   const upgradeFrom = profile?.tier;
-  const upgradeKey = upgradeFrom ? `${upgradeFrom}→${targetTier}` : '';
-  const upgradePrice = UPGRADE_PRICE[upgradeKey] ?? info.price;
+
+  // 当前定价信息
+  const pricing = TIER_PRICING[targetTier][selectedPeriod];
+  const isProToMax = isUpgrade && upgradeFrom === 'pro' && targetTier === 'max';
+  const upgradeAmount = isProToMax ? calculateUpgradePrice('pro', 'max', selectedPeriod) : pricing.price;
+  const displayAmount = isUpgrade ? upgradeAmount : pricing.price;
+  const displayPriceStr = `$${displayAmount}`;
 
   useEffect(() => {
     if (targetTier !== 'pro' && targetTier !== 'max') {
@@ -66,7 +75,7 @@ export default function RegisterPage() {
     }
   };
 
-  // Call Supabase Edge Function to create LianLian payment order, then redirect to checkout
+  // Call Supabase Edge Function to create payment order, then redirect to checkout
   const handlePay = async () => {
     setPaying(true);
     setPayError(null);
@@ -81,10 +90,6 @@ export default function RegisterPage() {
         return;
       }
 
-      // Determine payment amount
-      const isProToMax = isUpgrade && upgradeFrom === 'pro' && targetTier === 'max';
-      const amount = isProToMax ? 10 : (targetTier === 'max' ? 19 : 9);
-
       const res = await fetch(`${supabaseUrl}/functions/v1/create-payment`, {
         method: 'POST',
         headers: {
@@ -94,7 +99,8 @@ export default function RegisterPage() {
         body: JSON.stringify({
           user_id: currentUserId,
           tier: targetTier,
-          amount,
+          amount: displayAmount,
+          billing_period: selectedPeriod,
           is_upgrade: isUpgrade,
           upgrade_from: isUpgrade ? currentTier : null,
         }),
@@ -109,7 +115,6 @@ export default function RegisterPage() {
         return;
       }
 
-      // Redirect user to LianLian hosted checkout page
       if (data.checkout_url) {
         window.location.href = data.checkout_url;
       } else {
@@ -143,7 +148,7 @@ export default function RegisterPage() {
                 Upgrade to {info.name}
               </h2>
               <p className="text-white/80 text-sm">
-                From {TIER_INFO[upgradeFrom as 'pro']?.name ?? 'Free'} · Upgrade price {upgradePrice} · 1 year access
+                From {TIER_INFO[upgradeFrom as 'pro']?.name ?? 'Free'} · {displayPriceStr} · {PERIOD_LABELS[selectedPeriod]} access
               </p>
             </>
           ) : (
@@ -152,7 +157,7 @@ export default function RegisterPage() {
                 Sign Up — {info.name}
               </h2>
               <p className="text-white/80 text-sm">
-                One-time payment {info.price} · Lifetime access
+                {pricing.display} · {PERIOD_LABELS[selectedPeriod]} access
               </p>
             </>
           )}
@@ -209,7 +214,7 @@ export default function RegisterPage() {
                   Signing up...
                 </>
               ) : (
-                `Sign Up & Pay ${info.price}`
+                `Sign Up & Pay ${pricing.display}`
               )}
             </Button>
 
@@ -239,7 +244,7 @@ export default function RegisterPage() {
                 {isUpgrade ? (
                   <>
                     You are currently a {TIER_INFO[upgradeFrom as 'pro']?.name ?? 'Free'} user.
-                    Upgrading to {info.name} requires a price difference of {upgradePrice}.
+                    Upgrading to {info.name} requires a price difference of {displayPriceStr}.
                     <br />
                     Observer limit will expand from 60 to 160, and the prediction feature will be unlocked.
                   </>
@@ -247,10 +252,28 @@ export default function RegisterPage() {
                   <>
                     We've sent a verification email to <span className="font-medium text-[#3D3A5C]">{email}</span>.
                     <br />
-                    Pay {info.price} to get 1 year access to all {info.name} features.
+                    Pay {pricing.display} to get {PERIOD_LABELS[selectedPeriod].toLowerCase()} access to all {info.name} features.
                   </>
                 )}
               </p>
+            </div>
+
+            {/* 周期选择器（支付页可选周期） */}
+            <div className="flex justify-center gap-1 p-1 rounded-full bg-white/60 border border-[#E8E6F5]">
+              {(Object.keys(PERIOD_LABELS) as BillingPeriod[]).map((period) => (
+                <button
+                  key={period}
+                  type="button"
+                  onClick={() => setSelectedPeriod(period)}
+                  className={`px-3 py-1.5 rounded-full text-xs font-medium transition-all ${
+                    selectedPeriod === period
+                      ? 'bg-[#5B4FCF] text-white'
+                      : 'text-[#8E8CA8] hover:text-[#5B4FCF]'
+                  }`}
+                >
+                  {PERIOD_LABELS[period]}
+                </button>
+              ))}
             </div>
 
             <div className="rounded-2xl bg-[#5B4FCF]/5 border border-[#5B4FCF]/15 p-4 text-left">
@@ -262,7 +285,7 @@ export default function RegisterPage() {
                 <span className="font-medium">
                   {isUpgrade
                     ? `${TIER_INFO[upgradeFrom as 'pro']?.name ?? 'Free'} → ${info.name}`
-                    : `${info.name} · 1 year access`
+                    : `${info.name} · ${PERIOD_LABELS[selectedPeriod]}`
                   }
                 </span>
               </div>
@@ -272,7 +295,7 @@ export default function RegisterPage() {
               </div>
               <div className="flex justify-between text-base text-[#3D3A5C] mt-2 pt-2 border-t border-[#5B4FCF]/15">
                 <span className="font-semibold">Amount Due</span>
-                <span className="font-bold text-[#5B4FCF]">{upgradePrice} USD</span>
+                <span className="font-bold text-[#5B4FCF]">{displayPriceStr} USD</span>
               </div>
             </div>
 
@@ -290,13 +313,11 @@ export default function RegisterPage() {
                   Redirecting to payment...
                 </>
               ) : (
-                `Pay with LianLian Pay ${upgradePrice}`
+                `Pay ${displayPriceStr}`
               )}
             </Button>
 
             <p className="text-xs text-[#8E8CA8]/80 leading-relaxed">
-              Payment: LianLian Pay · Receiving bank: DBS Bank (Hong Kong)
-              <br />
               Access enabled immediately after payment
             </p>
           </div>

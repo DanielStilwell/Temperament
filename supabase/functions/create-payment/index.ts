@@ -121,11 +121,18 @@ serve(async (req: Request) => {
   }
 
   try {
-    const { user_id, tier, amount, is_upgrade, upgrade_from } = await req.json();
+    const { user_id, tier, amount, billing_period, is_upgrade, upgrade_from } = await req.json();
 
     if (!user_id || !tier || !amount) {
       return json({ error: 'Missing required fields: user_id, tier, amount' }, 400);
     }
+
+    // 验证 billing_period
+    const validPeriods = ['monthly', '6months', 'yearly'];
+    const period = validPeriods.includes(billing_period) ? billing_period : 'yearly';
+
+    // 根据周期计算订阅时长描述
+    const periodDesc = period === 'monthly' ? '1 month' : period === '6months' ? '6 months' : '1 year';
 
     // Generate unique order IDs
     const timestamp = Date.now();
@@ -146,14 +153,14 @@ serve(async (req: Request) => {
         merchant_order_id: merchantOrderId,
         merchant_user_no: user_id,
         merchant_order_time: orderTime,
-        order_description: `Temperament App - ${tier.toUpperCase()} Version${is_upgrade ? ` (Upgrade from ${upgrade_from})` : ''}`,
+        order_description: `Temperament App - ${tier.toUpperCase()} Version (${periodDesc})${is_upgrade ? ` (Upgrade from ${upgrade_from})` : ''}`,
         order_amount: Math.round(Number(amount) * 100) / 100,
         order_currency_code: 'USD',
         products: [
           {
             product_id: '1',
             name: `Temperament ${tier.toUpperCase()} Version`,
-            description: `1 year access to ${tier.toUpperCase()} features`,
+            description: `${periodDesc} access to ${tier.toUpperCase()} features`,
             quantity: '1',
             price: Math.round(Number(amount) * 100) / 100,
             currency_code: 'USD',
@@ -214,6 +221,7 @@ serve(async (req: Request) => {
       user_id,
       tier,
       amount,
+      billing_period: period,
       is_upgrade: is_upgrade ?? false,
       upgrade_from: upgrade_from ?? null,
       status: 'pending',
