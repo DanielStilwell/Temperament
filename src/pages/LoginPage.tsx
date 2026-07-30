@@ -109,6 +109,34 @@ export default function LoginPage() {
           </p>
         </form>
 
+        {/* 页脚链接和邮箱 */}
+        <div className="flex flex-col items-center gap-3 pt-2">
+          <div className="flex items-center gap-4 text-xs">
+            <Link
+              to="/privacy"
+              className="text-[#8E8CA8] hover:text-[#5B4FCF] transition-colors"
+            >
+              隐私政策
+            </Link>
+            <span className="text-[#8E8CA8]/50">|</span>
+            <Link
+              to="/terms"
+              className="text-[#8E8CA8] hover:text-[#5B4FCF] transition-colors"
+            >
+              服务条款
+            </Link>
+          </div>
+          <div className="flex items-center gap-1.5 text-xs text-[#8E8CA8]">
+            <Mail className="w-3.5 h-3.5" />
+            <a
+              href="mailto:tempesup@qq.com"
+              className="hover:text-[#5B4FCF] transition-colors"
+            >
+              tempesup@qq.com
+            </a>
+          </div>
+        </div>
+
         <Disclaimer />
       </div>
     </div>
