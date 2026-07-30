@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import { Sparkles, Users, Target } from 'lucide-react';
 import Disclaimer from '../components/ui/Disclaimer';
 import { useAuthStore } from '../stores/auth';
@@ -218,6 +218,22 @@ export default function LandingPage() {
               </button>
             );
           })}
+        </div>
+
+        {/* 隐私政策和服务条款按钮 */}
+        <div className="flex justify-center gap-6">
+          <Link
+            to="/privacy"
+            className="text-xs text-[#8E8CA8] hover:text-[#5B4FCF] transition-colors"
+          >
+            Privacy Policy
+          </Link>
+          <Link
+            to="/terms"
+            className="text-xs text-[#8E8CA8] hover:text-[#5B4FCF] transition-colors"
+          >
+            Terms of Service
+          </Link>
         </div>
 
         <Disclaimer />
