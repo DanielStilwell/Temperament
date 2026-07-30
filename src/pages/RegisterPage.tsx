@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useNavigate, useParams, Link, useSearchParams } from 'react-router-dom';
-import { ArrowLeft, Mail, Lock, User as UserIcon, AlertCircle, Loader2, ArrowUpCircle } from 'lucide-react';
+import { ArrowLeft, Mail, Lock, User as UserIcon, AlertCircle, Loader2, ArrowUpCircle, Check } from 'lucide-react';
 import Button from '../components/ui/Button';
 import Disclaimer from '../components/ui/Disclaimer';
 import { useAuthStore } from '../stores/auth';
