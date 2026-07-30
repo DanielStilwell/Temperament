@@ -27,6 +27,7 @@ export default function RegisterPage() {
   const [submitting, setSubmitting] = useState(false);
   const [paying, setPaying] = useState(false);
   const [payError, setPayError] = useState<string | null>(null);
+  const [agreed, setAgreed] = useState(false);
 
   const targetTier = (tier as Exclude<AccountTier, 'free'>) || 'pro';
   const info = TIER_INFO[targetTier] || TIER_INFO.pro;
@@ -199,12 +200,51 @@ export default function RegisterPage() {
               </div>
             )}
 
+            {/* 已阅声明勾选框 */}
+            <label className="flex items-start gap-2.5 cursor-pointer group p-3 rounded-2xl bg-white/40 border border-[#E8E6F5] hover:border-[#5B4FCF]/40 transition-all">
+              <span
+                className={`flex-shrink-0 mt-0.5 w-5 h-5 rounded-md border-2 flex items-center justify-center transition-all ${
+                  agreed
+                    ? 'bg-[#5B4FCF] border-[#5B4FCF]'
+                    : 'bg-white border-[#C9C7DC] group-hover:border-[#5B4FCF]'
+                }`}
+              >
+                {agreed && <Check className="w-3.5 h-3.5 text-white" strokeWidth={3} />}
+              </span>
+              <input
+                type="checkbox"
+                checked={agreed}
+                onChange={(e) => setAgreed(e.target.checked)}
+                className="sr-only"
+              />
+              <span className="text-xs text-[#5D5A7C] leading-relaxed">
+                I have read and agree to the{' '}
+                <Link
+                  to="/privacy"
+                  target="_blank"
+                  onClick={(e) => e.stopPropagation()}
+                  className="text-[#5B4FCF] font-medium hover:underline"
+                >
+                  Privacy Policy
+                </Link>
+                {' '}and{' '}
+                <Link
+                  to="/terms"
+                  target="_blank"
+                  onClick={(e) => e.stopPropagation()}
+                  className="text-[#5B4FCF] font-medium hover:underline"
+                >
+                  Terms of Service
+                </Link>
+              </span>
+            </label>
+
             <Button
               type="submit"
               variant="primary"
               size="lg"
               fullWidth
-              disabled={submitting || !nickname.trim() || !email.trim() || password.length < 6}
+              disabled={submitting || !nickname.trim() || !email.trim() || password.length < 6 || !agreed}
               className="disabled:opacity-40 disabled:cursor-not-allowed"
             >
               {submitting ? (
@@ -305,7 +345,46 @@ export default function RegisterPage() {
               </div>
             )}
 
-            <Button variant="primary" size="lg" fullWidth onClick={handlePay} disabled={paying}>
+            {/* 已阅声明勾选框 */}
+            <label className="flex items-start gap-2.5 cursor-pointer group p-3 rounded-2xl bg-white/40 border border-[#E8E6F5] hover:border-[#5B4FCF]/40 transition-all text-left">
+              <span
+                className={`flex-shrink-0 mt-0.5 w-5 h-5 rounded-md border-2 flex items-center justify-center transition-all ${
+                  agreed
+                    ? 'bg-[#5B4FCF] border-[#5B4FCF]'
+                    : 'bg-white border-[#C9C7DC] group-hover:border-[#5B4FCF]'
+                }`}
+              >
+                {agreed && <Check className="w-3.5 h-3.5 text-white" strokeWidth={3} />}
+              </span>
+              <input
+                type="checkbox"
+                checked={agreed}
+                onChange={(e) => setAgreed(e.target.checked)}
+                className="sr-only"
+              />
+              <span className="text-xs text-[#5D5A7C] leading-relaxed">
+                I have read and agree to the{' '}
+                <Link
+                  to="/privacy"
+                  target="_blank"
+                  onClick={(e) => e.stopPropagation()}
+                  className="text-[#5B4FCF] font-medium hover:underline"
+                >
+                  Privacy Policy
+                </Link>
+                {' '}and{' '}
+                <Link
+                  to="/terms"
+                  target="_blank"
+                  onClick={(e) => e.stopPropagation()}
+                  className="text-[#5B4FCF] font-medium hover:underline"
+                >
+                  Terms of Service
+                </Link>
+              </span>
+            </label>
+
+            <Button variant="primary" size="lg" fullWidth onClick={handlePay} disabled={paying || !agreed}>
               {paying ? (
                 <>
                   <Loader2 className="w-5 h-5 animate-spin" />
