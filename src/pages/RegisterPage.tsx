@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { useNavigate, useParams, Link, useSearchParams } from 'react-router-dom';
+import { useNavigate, useParams, Link, useSearchParams, useLocation } from 'react-router-dom';
 import { ArrowLeft, Mail, Lock, User as UserIcon, AlertCircle, Loader2, ArrowUpCircle, Check } from 'lucide-react';
 import Button from '../components/ui/Button';
 import Disclaimer from '../components/ui/Disclaimer';
@@ -17,6 +17,7 @@ export { PERIOD_LABELS };
 export default function RegisterPage() {
   const { tier } = useParams<{ tier: string }>();
   const navigate = useNavigate();
+  const location = useLocation();
   const [searchParams] = useSearchParams();
   const { signUp, user, profile, loading: authLoading, error, clearError } = useAuthStore();
 
@@ -221,7 +222,7 @@ export default function RegisterPage() {
                 I have read and agree to the{' '}
                 <Link
                   to="/privacy"
-                  target="_blank"
+                  state={{ from: location.pathname + location.search }}
                   onClick={(e) => e.stopPropagation()}
                   className="text-[#5B4FCF] font-medium hover:underline"
                 >
@@ -230,7 +231,7 @@ export default function RegisterPage() {
                 {' '}and{' '}
                 <Link
                   to="/terms"
-                  target="_blank"
+                  state={{ from: location.pathname + location.search }}
                   onClick={(e) => e.stopPropagation()}
                   className="text-[#5B4FCF] font-medium hover:underline"
                 >
@@ -366,7 +367,7 @@ export default function RegisterPage() {
                 I have read and agree to the{' '}
                 <Link
                   to="/privacy"
-                  target="_blank"
+                  state={{ from: location.pathname + location.search }}
                   onClick={(e) => e.stopPropagation()}
                   className="text-[#5B4FCF] font-medium hover:underline"
                 >
@@ -375,7 +376,7 @@ export default function RegisterPage() {
                 {' '}and{' '}
                 <Link
                   to="/terms"
-                  target="_blank"
+                  state={{ from: location.pathname + location.search }}
                   onClick={(e) => e.stopPropagation()}
                   className="text-[#5B4FCF] font-medium hover:underline"
                 >
