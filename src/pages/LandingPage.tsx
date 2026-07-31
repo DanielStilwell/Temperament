@@ -224,12 +224,14 @@ export default function LandingPage() {
         <div className="flex justify-center gap-6">
           <Link
             to="/privacy"
+            state={{ from: '/' }}
             className="text-xs text-[#8E8CA8] hover:text-[#5B4FCF] transition-colors"
           >
             Privacy Policy
           </Link>
           <Link
             to="/terms"
+            state={{ from: '/' }}
             className="text-xs text-[#8E8CA8] hover:text-[#5B4FCF] transition-colors"
           >
             Terms of Service

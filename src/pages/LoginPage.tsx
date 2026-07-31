@@ -114,16 +114,18 @@ export default function LoginPage() {
           <div className="flex items-center gap-4 text-xs">
             <Link
               to="/privacy"
+              state={{ from: '/login' }}
               className="text-[#8E8CA8] hover:text-[#5B4FCF] transition-colors"
             >
-              隐私政策
+              Privacy Policy
             </Link>
             <span className="text-[#8E8CA8]/50">|</span>
             <Link
               to="/terms"
+              state={{ from: '/login' }}
               className="text-[#8E8CA8] hover:text-[#5B4FCF] transition-colors"
             >
-              服务条款
+              Terms of Service
             </Link>
           </div>
           <div className="flex items-center gap-1.5 text-xs text-[#8E8CA8]">

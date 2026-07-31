@@ -1,16 +1,19 @@
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { ArrowLeft } from 'lucide-react';
 
 export default function TermsOfServicePage() {
+  const location = useLocation();
+  const backTo = (location.state as { from?: string } | null)?.from || '/login';
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-[#F8F7FC] to-[#F0EEF8] p-4 md:p-8">
       <div className="max-w-3xl mx-auto">
         <Link
-          to="/login"
+          to={backTo}
           className="inline-flex items-center gap-1.5 text-sm text-[#8E8CA8] hover:text-[#5B4FCF] transition-colors mb-6"
         >
           <ArrowLeft className="w-4 h-4" />
-          Back to Login
+          Back
         </Link>
 
         <div className="rounded-[20px] bg-white/70 backdrop-blur-[10px] border border-white/50 p-8 md:p-10">
