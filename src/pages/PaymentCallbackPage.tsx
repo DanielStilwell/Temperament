@@ -9,12 +9,31 @@ import { supabase } from '../lib/supabase';
 export default function PaymentCallbackPage() {
   const navigate = useNavigate();
   const [searchParams] = useSearchParams();
-  const { fetchProfile } = useAuthStore();
+  const { fetchProfile, user, signOut } = useAuthStore();
 
-  const [status, setStatus] = useState<'checking' | 'success' | 'pending' | 'error'>('checking');
+  const [status, setStatus] = useState<'checking' | 'success' | 'pending' | 'error' | 'cleaned'>('checking');
   const orderId = searchParams.get('order');
   const tier = searchParams.get('tier') as 'pro' | 'max' | null;
   const isUpgrade = searchParams.get('upgrade') === '1';
+
+  // 删除未支付用户（仅首次注册用户，非升级用户）
+  const cleanupUnpaidUser = async () => {
+    if (!user || isUpgrade) return;
+    try {
+      const supabaseUrl = import.meta.env.VITE_SUPABASE_URL;
+      await fetch(`${supabaseUrl}/functions/v1/delete-unpaid-user`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          Authorization: `Bearer ${import.meta.env.VITE_SUPABASE_ANON_KEY}`,
+        },
+        body: JSON.stringify({ user_id: user.id }),
+      });
+      await signOut();
+    } catch (err) {
+      console.error('[PaymentCallback] Cleanup error:', err);
+    }
+  };
 
   useEffect(() => {
     if (!orderId || !tier) {
@@ -47,6 +66,8 @@ export default function PaymentCallbackPage() {
       }
 
       if (data?.status === 'failed') {
+        // 支付失败 → 自动删除未支付用户
+        await cleanupUnpaidUser();
         setStatus('error');
         return;
       }
@@ -66,6 +87,12 @@ export default function PaymentCallbackPage() {
   const handleRetry = () => {
     setStatus('checking');
     checkPaymentStatus();
+  };
+
+  // 用户主动放弃支付 → 删除账户并返回首页
+  const handleGiveUp = async () => {
+    await cleanupUnpaidUser();
+    setStatus('cleaned');
   };
 
   return (
@@ -114,6 +141,11 @@ export default function PaymentCallbackPage() {
             <Button variant="primary" size="lg" fullWidth onClick={handleRetry}>
               Check Again
             </Button>
+            {!isUpgrade && (
+              <Button variant="secondary" size="lg" fullWidth onClick={handleGiveUp}>
+                Cancel &amp; Delete Account
+              </Button>
+            )}
             <Button variant="secondary" size="lg" fullWidth onClick={() => navigate('/')}>
               Back to Home
             </Button>
@@ -129,6 +161,21 @@ export default function PaymentCallbackPage() {
             <p className="text-sm text-[#8E8CA8] leading-relaxed">
               We could not confirm your payment. If you believe this is an error, please contact support
               or try again.
+            </p>
+            <Button variant="primary" size="lg" fullWidth onClick={() => navigate('/')}>
+              Back to Home
+            </Button>
+          </div>
+        )}
+
+        {status === 'cleaned' && (
+          <div className="rounded-[20px] bg-white/60 backdrop-blur-[10px] border border-white/50 p-8 flex flex-col gap-4 text-center">
+            <div className="w-14 h-14 rounded-full bg-[#5B4FCF]/10 flex items-center justify-center mx-auto">
+              <AlertCircle className="w-7 h-7 text-[#5B4FCF]" />
+            </div>
+            <h3 className="text-xl font-bold text-[#3D3A5C]">Account deleted</h3>
+            <p className="text-sm text-[#8E8CA8] leading-relaxed">
+              Your unpaid account has been removed. You can register again anytime.
             </p>
             <Button variant="primary" size="lg" fullWidth onClick={() => navigate('/')}>
               Back to Home

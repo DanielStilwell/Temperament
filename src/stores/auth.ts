@@ -143,6 +143,30 @@ export const useAuthStore = create<AuthState>((set, get) => ({
       set({ error: error.message });
       return { error: error.message };
     }
+
+    // 检查是否为未支付用户 → 删除并拒绝登录
+    const { data: profileRow } = await supabase
+      .from('profiles')
+      .select('payment_status, tier_expires_at')
+      .eq('id', data.user.id)
+      .maybeSingle();
+
+    if (profileRow && profileRow.payment_status === 'pending' && !profileRow.tier_expires_at) {
+      // 未支付用户 → 删除账户
+      const supabaseUrl = import.meta.env.VITE_SUPABASE_URL;
+      await fetch(`${supabaseUrl}/functions/v1/delete-unpaid-user`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          Authorization: `Bearer ${import.meta.env.VITE_SUPABASE_ANON_KEY}`,
+        },
+        body: JSON.stringify({ user_id: data.user.id }),
+      });
+      await supabase.auth.signOut();
+      set({ user: null, session: null, profile: null, error: 'This account was not activated. Please register again.' });
+      return { error: 'This account was not activated. Please register again.' };
+    }
+
     set({ user: data.user, session: data.session });
     await get().fetchProfile();
     return { error: null };
