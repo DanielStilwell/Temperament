@@ -56,12 +56,12 @@ export default function RegisterPage() {
     }
   }, [targetTier, navigate]);
 
-  // 升级模式下，已登录用户直接进入支付步骤
+  // 已登录用户直接进入支付步骤（无论是升级还是首次付费）
   useEffect(() => {
-    if (isUpgrade && step === 'form') {
+    if (!!user && step === 'form') {
       setStep('payment');
     }
-  }, [isUpgrade, step]);
+  }, [user, step]);
 
   const handleRegister = async (e: React.FormEvent) => {
     e.preventDefault();
