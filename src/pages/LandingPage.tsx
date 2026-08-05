@@ -115,15 +115,12 @@ export default function LandingPage() {
             className="text-2xl md:text-3xl lg:text-4xl font-bold tracking-tight text-[#3D3A5C] mb-3"
             style={{ fontFamily: "'Nunito', 'PingFang SC', sans-serif" }}
           >
-            Figure out individual personalities first,
+            Start from individual temperament insights,
             <br />
             <span className="bg-gradient-to-r from-[#5B4FCF] to-[#C9A86A] bg-clip-text text-transparent">
-              then unify the team
+              build team synergy — choose your plan
             </span>
           </h1>
-          <p className="text-sm md:text-base text-[#8E8CA8] leading-relaxed max-w-md mx-auto">
-            Start from individual temperament insights, build team synergy — choose your plan
-          </p>
         </header>
 
         {/* 周期切换器 */}
