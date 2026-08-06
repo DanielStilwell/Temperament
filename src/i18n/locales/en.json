@@ -1,0 +1,635 @@
+{
+  "common": {
+    "back": "Back",
+    "backToHome": "Back to Home",
+    "cancel": "Cancel",
+    "confirm": "Confirm",
+    "delete": "Delete",
+    "save": "Save",
+    "loading": "Loading...",
+    "next": "Next",
+    "previous": "Previous",
+    "skip": "Skip",
+    "email": "Email",
+    "password": "Password",
+    "nickname": "Nickname",
+    "search": "Search",
+    "select": "Select",
+    "selectAll": "Select All",
+    "clear": "Clear",
+    "close": "Close",
+    "yes": "Yes",
+    "no": "No"
+  },
+  "language": {
+    "switch": "Language",
+    "select": "Select Language"
+  },
+  "disclaimer": {
+    "text": "This app is for self-exploration and entertainment only. It does not constitute professional psychological assessment or medical advice."
+  },
+  "periods": {
+    "monthly": "Monthly",
+    "6months": "6 Months",
+    "yearly": "1 Year"
+  },
+  "tiers": {
+    "free": {
+      "name": "Free",
+      "subtitle": "Personal temperament & ability exploration",
+      "cta": "Start Free",
+      "feature1": "Assess temperament type",
+      "feature2": "Analyze 6 ability dimensions"
+    },
+    "pro": {
+      "name": "Pro",
+      "subtitle": "Team temperament & ability insights",
+      "cta": "Select Pro",
+      "feature1": "Up to 60 observers",
+      "feature2": "Team temperament & ability analysis"
+    },
+    "max": {
+      "name": "Max",
+      "subtitle": "Task completion prediction",
+      "cta": "Select Max",
+      "feature1": "Up to 160 observers",
+      "feature2": "Team aggregate analysis",
+      "feature3": "Task fit prediction"
+    }
+  },
+  "landing": {
+    "badge": "Temperament Insight",
+    "titleLine1": "Start from individual temperament insights,",
+    "titleLine2": "build team synergy — choose your plan",
+    "privacyPolicy": "Privacy Policy",
+    "termsOfService": "Terms of Service",
+    "footer": "© {{year}} Temperament Insight · For self-exploration & team insight reference only",
+    "perPeriod": "/ {{period}}",
+    "billedAs": "{{perMonth}} billed as {{display}}"
+  },
+  "home": {
+    "selectProfession": "Select the observer's professional field",
+    "selectProfessionHint": "Different professions match different real-world scenarios for more precise assessment",
+    "startAssessment": "Start Assessment",
+    "pleaseSelectProfession": "Please select a profession first",
+    "brandBadge": "Temperament Insight",
+    "brandTitle": "Understand Temperament, Unlock Potential",
+    "brandSubtitle": "A temperament & ability assessment tool based on situational behavioral observation, helping you understand others objectively",
+    "introObserverTitle": "Observer Perspective",
+    "introObserverDesc": "Evaluate behavior patterns from a third-party perspective",
+    "introScenariosTitle": "Real Scenarios",
+    "introScenariosDesc": "Based on 20 real-life scenarios, capturing natural behavioral responses",
+    "introObjectiveTitle": "Objective Assessment",
+    "introObjectiveDesc": "Multi-dimensional analysis of temperament & abilities, non-labeling evaluation"
+  },
+  "login": {
+    "welcomeBack": "Welcome Back",
+    "subtitle": "Log in to continue managing your team",
+    "emailPlaceholder": "example@email.com",
+    "passwordPlaceholder": "Enter your password",
+    "loggingIn": "Logging in...",
+    "loginButton": "Log In",
+    "noAccount": "Don't have a Pro / Max account?",
+    "choosePlan": "Choose a plan to sign up",
+    "support": "support"
+  },
+  "register": {
+    "backToHome": "Back to Home",
+    "signUpTitle": "Sign Up — {{tier}}",
+    "upgradeTitle": "Upgrade to {{tier}}",
+    "upgradeSubtitle": "From {{fromTier}} · {{amount}} · {{period}} access",
+    "signUpSubtitle": "{{display}} · {{period}} access",
+    "nicknameLabel": "Nickname",
+    "nicknamePlaceholder": "How should we address you",
+    "emailPlaceholder": "example@email.com",
+    "passwordLabel": "Password",
+    "passwordPlaceholder": "At least 6 characters",
+    "signingUp": "Signing up...",
+    "signUpPay": "Sign Up & Pay {{amount}}",
+    "haveAccount": "Already have an account?",
+    "logIn": "Log In",
+    "agreementText": "I have read and agree to the <privacy>Privacy Policy</privacy> and <terms>Terms of Service</terms>",
+    "paymentStepTitle": "Sign up successful, complete payment",
+    "upgradeStepTitle": "Complete Upgrade Payment",
+    "paymentStepDesc": "We've sent a verification email to <email>{{email}}</email>.<br/>Pay {{amount}} to get {{period}} access to all {{tier}} features.",
+    "upgradeStepDesc": "You are currently a {{fromTier}} user. Upgrading to {{tier}} requires a price difference of {{amount}}.<br/>Observer limit will expand from 60 to 160, and the prediction feature will be unlocked.",
+    "orderDetails": "Order Details",
+    "upgradeOrder": "Upgrade Order",
+    "version": "Version",
+    "account": "Account",
+    "amountDue": "Amount Due",
+    "paying": "Redirecting to payment...",
+    "payButton": "Pay {{amount}}",
+    "paymentAccess": "Access enabled immediately after payment",
+    "pleaseLoginFirst": "Please log in before payment.",
+    "payInitFailed": "Payment initialization failed. Please try again.",
+    "noCheckoutUrl": "No checkout URL returned. Please contact support.",
+    "networkError": "Network error. Please check your connection and try again."
+  },
+  "paymentCallback": {
+    "backToHome": "← Back to Home",
+    "verifying": "Verifying payment...",
+    "verifyHint": "Please wait while we confirm your payment.",
+    "successTitle": "Payment successful!",
+    "upgradeSuccessTitle": "Upgrade complete!",
+    "successDesc": "Your {{tier}} version is now active. You can now manage team observers.",
+    "upgradeSuccessDesc": "Your {{tier}} version is now active. Observer limit expanded, prediction feature unlocked.",
+    "enterWorkspace": "Enter {{tier}} Workspace",
+    "pendingTitle": "Payment is being processed",
+    "pendingDesc": "Your payment was submitted successfully. It may take a few moments to confirm. If access is not enabled shortly, please contact support.",
+    "checkAgain": "Check Again",
+    "cancelBack": "Cancel & Back to Register",
+    "errorTitle": "Payment not confirmed",
+    "errorDesc": "We could not confirm your payment. Please try again.",
+    "backToRegister": "Back to Register"
+  },
+  "assessment": {
+    "loading": "Loading...",
+    "progressQ": "Q {{current}} / {{total}}",
+    "previous": "Previous",
+    "next": "Next",
+    "viewResults": "View Results",
+    "customOptionDefault": "Other (describe the real situation)",
+    "customPlaceholder": "Describe the observer's actual reaction...",
+    "customConfirm": "Confirm",
+    "customCancel": "Cancel",
+    "selectorTitle": "Evaluate this behavioral tendency",
+    "selectorHint": "Judge based on the observer's real situation",
+    "temperamentType": "Temperament Type",
+    "temperamentTypeRequired": "Temperament Type *",
+    "behavioralTendency": "Behavioral Tendency",
+    "behavioralTendencyHint": "Behavioral Tendency (multiple)",
+    "keyAbilities": "Key Abilities",
+    "keyAbilitiesHint": "Key Abilities (multiple)",
+    "emotionalTone": "Emotional Tone",
+    "emotionalToneRequired": "Emotional Tone *",
+    "skipAuto": "Skip (auto-analyze)",
+    "selectorConfirm": "Confirm"
+  },
+  "temperament": {
+    "sanguine": {
+      "name": "Sanguine",
+      "desc": "Sociable, quick response",
+      "badge": "San"
+    },
+    "choleric": {
+      "name": "Choleric",
+      "desc": "Decisive, strong drive",
+      "badge": "Cho"
+    },
+    "phlegmatic": {
+      "name": "Phlegmatic",
+      "desc": "Calm, emotionally stable",
+      "badge": "Phl"
+    },
+    "melancholic": {
+      "name": "Melancholic",
+      "desc": "Sensitive, deep thinker",
+      "badge": "Mel"
+    }
+  },
+  "behaviors": {
+    "proactive": "Proactive",
+    "proactiveDesc": "Takes initiative, not waiting",
+    "rational": "Rational Analysis",
+    "rationalDesc": "Calm thinking, weighing pros & cons",
+    "collaborative": "Collaborative",
+    "collaborativeDesc": "Seeks support, solves together",
+    "creative": "Innovative",
+    "creativeDesc": "Tries new methods, breaks conventions"
+  },
+  "emotions": {
+    "positive": "Positive",
+    "neutral": "Neutral",
+    "negative": "Negative/Avoidant",
+    "anxious": "Anxious",
+    "unknown": "Uncertain"
+  },
+  "abilities": {
+    "communication": "Communication",
+    "leadership": "Leadership",
+    "creativity": "Creativity",
+    "analysis": "Analysis",
+    "resilience": "Resilience",
+    "empathy": "Empathy"
+  },
+  "professions": {
+    "service": "Service Worker",
+    "student": "Student",
+    "office": "Office Professional",
+    "civil": "Civil Servant",
+    "artist": "Creative Professional",
+    "media": "Content Creator",
+    "teacher": "Educator",
+    "doctor": "Healthcare Worker"
+  },
+  "result": {
+    "loading": "Loading...",
+    "temperamentDistribution": "Temperament Distribution",
+    "comprehensiveInterpretation": "Comprehensive Interpretation",
+    "abilityRadar": "Ability Radar Chart",
+    "radarStrong": "70+ Strong",
+    "radarBalanced": "40-69 Balanced",
+    "radarGrowth": "<40 Growth Area",
+    "radarPoints": "pts",
+    "dimensionDetails": "Dimension Details",
+    "motivationAnalysis": "💡 Motivation Analysis",
+    "dominant": "Dominant: {{name}}",
+    "secondary": "Secondary: {{name}}",
+    "thinkingTitle": "🧠 Thinking & Behavioral Tendencies",
+    "thinkingBalanced": "Balanced",
+    "thinkingLean": "{{name}} Lean",
+    "thinkingBalancedDesc": "Combines both traits, able to flexibly adjust thinking and behavior based on context",
+    "thinkingFooter": "* Thinking & behavioral tendencies are not fixed and may adjust with context and personal growth",
+    "retake": "Retake",
+    "share": "Share",
+    "shareSuccess": "Link copied to clipboard. Share it with friends!",
+    "shareFail": "Share feature is currently unavailable",
+    "discard": "Discard",
+    "saveToTeam": "Save to Team",
+    "discardConfirm": "Discard this observer's assessment result?"
+  },
+  "motivations": {
+    "achievement": {
+      "name": "Achievement",
+      "desc": "Pursuing excellence, goal-oriented, driven by success",
+      "high": "The observer has a strong achievement motive, driven by success and excellence. They enjoy challenging themselves and pursuing goal attainment. When facing tasks, they tend to set high standards and strive to meet them.",
+      "medium": "The observer has a moderate achievement motive, working toward goals while maintaining work-life balance, without excessive perfectionism.",
+      "low": "The observer has a relatively weak achievement motive, focusing more on the process experience than outcome orientation, with lower interest in competition and challenges, preferring a stable and comfortable state."
+    },
+    "affiliation": {
+      "name": "Affiliation",
+      "desc": "Valuing relationships, belonging, and harmony",
+      "high": "The observer has a strong affiliation motive, deeply valuing interpersonal relationships and a sense of belonging. They enjoy socializing, are skilled at building and maintaining social networks, and are active in teams.",
+      "medium": "The observer has a moderate affiliation motive, valuing relationships while maintaining appropriate independence, enjoying both social interaction and solitude.",
+      "low": "The observer has a relatively weak affiliation motive, preferring independent work with lower need for social activities, and may need more encouragement in teamwork."
+    },
+    "power": {
+      "name": "Power",
+      "desc": "Seeking influence, control, and decision-making authority",
+      "high": "The observer has a strong power motive, desiring to influence others and control situations. They enjoy leading decision-making processes and can leverage their strengths in leadership roles.",
+      "medium": "The observer has a moderate power motive, able to take on leadership responsibilities when needed while respecting others' opinions, without excessive desire for dominance.",
+      "low": "The observer has a relatively weak power motive, preferring to cooperate rather than lead, with lower interest in managing or controlling others, suited for execution-level roles."
+    },
+    "security": {
+      "name": "Security",
+      "desc": "Seeking stability, avoiding risk, emphasizing safety and security",
+      "high": "The observer has a strong security motive, pursuing stable and predictable environments, making cautious decisions, avoiding risks, and valuing long-term planning and safeguards.",
+      "medium": "The observer has a moderate security motive, considering risk factors in decisions without being overly conservative, able to balance security and risk-taking.",
+      "low": "The observer has a relatively weak security motive, more willing to take risks and try new things, with higher tolerance for uncertainty, suited for innovative or challenging tasks."
+    }
+  },
+  "thinking": {
+    "proactive": {
+      "name": "Proactive",
+      "desc": "Takes initiative, actively seeks solutions"
+    },
+    "reactive": {
+      "name": "Reactive",
+      "desc": "Waits and observes, tends to respond rather than initiate"
+    },
+    "rational": {
+      "name": "Rational",
+      "desc": "Focuses on logical analysis, objectively weighing pros and cons"
+    },
+    "intuitive": {
+      "name": "Intuitive",
+      "desc": "Values emotional experience, makes judgments by intuition"
+    },
+    "independent": {
+      "name": "Independent",
+      "desc": "Prefers independent thinking, completes tasks autonomously"
+    },
+    "collaborative": {
+      "name": "Collaborative",
+      "desc": "Skilled at teamwork, values collective wisdom"
+    },
+    "innovative": {
+      "name": "Innovative",
+      "desc": "Pursues novel and unique approaches, breaks conventions"
+    },
+    "conventional": {
+      "name": "Conventional",
+      "desc": "Follows established norms, steady and reliable"
+    }
+  },
+  "observer": {
+    "add": {
+      "backToWorkspace": "Back to Workspace",
+      "title": "Add Observer",
+      "subtitle": "Proxy mode: Based on your real understanding of the observer, select their reaction in each scenario",
+      "nameLabel": "Observer Name",
+      "nameHint": "(alias/code OK)",
+      "namePlaceholder": "e.g. Alex / Obs-001",
+      "gender": "Gender",
+      "male": "Male",
+      "female": "Female",
+      "other": "Other",
+      "unknown": "Prefer not to say",
+      "profession": "Profession",
+      "professionHint": "Different professions match different scenario questions",
+      "noteLabel": "Note (optional)",
+      "notePlaceholder": "Department, role, relationship, etc.",
+      "preparing": "Preparing questions...",
+      "startAssessment": "Start Assessment"
+    },
+    "save": {
+      "title": "Confirm Save Observer",
+      "subtitle": "Please confirm the information below before saving to your team",
+      "name": "Name",
+      "gender": "Gender",
+      "profession": "Profession",
+      "note": "Note",
+      "dominantTemperament": "Dominant Temperament",
+      "currentPlan": "Current plan: {{tier}} · Observer limit: {{limit}}",
+      "saving": "Saving...",
+      "confirmSave": "Confirm Save to Team",
+      "savedTitle": "Observer Saved",
+      "savedDesc": "Assessment results for <name>{{name}}</name> have been added to your team. You can view them anytime from the workspace.",
+      "backToWorkspace": "Back to Workspace",
+      "saveFailed": "Save failed, please try again"
+    },
+    "detail": {
+      "backToList": "Back to List",
+      "notFound": "Observer not found",
+      "professionNotSpecified": "Profession not specified"
+    }
+  },
+  "proWorkspace": {
+    "badge": "Pro Workspace",
+    "welcome": "Welcome, {{name}}",
+    "manager": "Manager",
+    "capacity": "Observer Capacity: {{usage}}",
+    "signOut": "Sign Out",
+    "addObserver": "Add Observer",
+    "observers": "Observers",
+    "teamProfile": "Team Profile",
+    "emptyHint": "No observers yet. Click the button above to add"
+  },
+  "maxWorkspace": {
+    "badge": "Max Workspace",
+    "welcome": "Welcome, {{name}}",
+    "manager": "Manager",
+    "capacity": "Observer Capacity: {{usage}}",
+    "signOut": "Sign Out",
+    "addObserver": "Add Observer",
+    "newPrediction": "New Prediction",
+    "observers": "Observers",
+    "selectCombine": "Select & Combine",
+    "exitSelection": "Exit Selection",
+    "selected": "{{count}} selected",
+    "selectAll": "Select All",
+    "clear": "Clear",
+    "predictTeam": "Predict This Team",
+    "teamProfile": "Team Profile",
+    "selectedTeamProfile": "Selected Team Profile ({{count}})",
+    "predictionRecords": "Prediction Records",
+    "emptyObservers": "No observers yet. Click the button above to add",
+    "emptyPredictions": "No predictions yet. Click the button above to start",
+    "noProfession": "No profession specified",
+    "members": "{{count}} members",
+    "fitScore": "Fit Score {{score}}",
+    "confirmDeletePrediction": "Confirm delete this prediction?"
+  },
+  "teamAggregate": {
+    "empty": "No observers added, unable to generate team analysis",
+    "teamTraitProfile": "Team Trait Profile",
+    "basedOn": "Based on {{count}} observers",
+    "temperamentDiversity": "Temperament Diversity",
+    "abilityDiversity": "Ability Diversity",
+    "teamAbilityAverage": "Team Ability Average",
+    "temperamentDistribution": "Dominant Temperament Distribution",
+    "motivationAverage": "Motivation Average",
+    "thinkingStyleAverage": "Thinking Style Average",
+    "percentage": "Percentage"
+  },
+  "observerList": {
+    "empty": "No observers yet",
+    "noProfession": "No profession specified",
+    "delete": "Delete",
+    "deleteConfirm": "Confirm delete observer \"{{name}}\"? This action cannot be undone."
+  },
+  "taskBuilder": {
+    "backToMax": "Back to Max Workspace",
+    "title": "New Task Prediction",
+    "subtitle": "Configure task parameters and team, system will predict completion based on temperament and ability dimensions",
+    "taskName": "Task Name",
+    "taskNamePlaceholder": "e.g., Q4 Product Launch Sprint",
+    "inputMode": "Input Mode",
+    "template": "Template",
+    "custom": "Custom",
+    "selectTemplate": "Select Task Template",
+    "templateHint": "You can fine-tune parameters after selecting a template",
+    "basicParameters": "Basic Parameters",
+    "taskTypes": "Task Types (multiple)",
+    "difficulty": "Difficulty",
+    "collaboration": "Collaboration",
+    "timePressure": "Time Pressure",
+    "riskTolerance": "Risk Tolerance",
+    "independent": "Independent",
+    "fullCollaboration": "Full Collaboration",
+    "relaxed": "Relaxed",
+    "urgent": "Urgent",
+    "zeroError": "Zero Error",
+    "encourageRisk": "Encourage Risk",
+    "abilityRequirements": "Ability Requirements (0-100)",
+    "abilityReqHint": "Minimum ability thresholds for this task, overlay on radar chart to compare with team abilities",
+    "motivationRequirements": "Motivation Requirements (0-100)",
+    "motivationReqHint": "Expected motivation strength, higher means more dependent",
+    "thinkingRequirements": "Thinking Style Requirements (0-100)",
+    "thinkingReqHint": "0=left end, 100=right end, 50=neutral",
+    "teamConfiguration": "Team Configuration",
+    "teamConfigHint": "Select observers for this task ({{count}} selected)",
+    "emptyObservers": "No observers yet, add them in workspace first",
+    "assignKeyRole": "Assign key role (lead, leadership/resilience weighted 2x)",
+    "selectKeyMember": "Select key member",
+    "predicting": "Predicting...",
+    "generatePrediction": "Generate Prediction",
+    "predictionFailed": "Prediction failed, please retry"
+  },
+  "taskTypes": {
+    "creative": "Creative",
+    "execution": "Execution",
+    "communication": "Communication",
+    "analysis": "Analysis",
+    "leadership": "Leadership",
+    "resilience": "Resilience"
+  },
+  "taskResult": {
+    "backToMax": "Back to Max Workspace",
+    "taskNotFound": "Task not found",
+    "deleteTask": "Delete Task",
+    "badge": "Task Prediction Result",
+    "basedOn": "Based on {{count}} selected observers' temperament and ability dimensions",
+    "completionProbability": "Completion Probability",
+    "goodProspects": "Good prospects",
+    "moderateRisk": "Moderate risk",
+    "poorProspects": "Poor prospects",
+    "fitMeta": "Fit Score {{fit}} · Difficulty {{difficulty}} · Time Pressure {{timePressure}} · Risk Tolerance {{riskTolerance}}",
+    "fitRadar": "Fit Radar Chart",
+    "taskRequirements": "Task Requirements",
+    "teamActual": "Team Actual",
+    "recommendedMembers": "Recommended Core Members (Top 3 by Fit)",
+    "overallFitScore": "Overall Fit Score",
+    "strengths": "Strengths",
+    "requiredActual": "Required {{required}} · Actual {{actual}}",
+    "riskPoints": "Risk Points ({{count}})",
+    "riskRequired": "Required {{required}} · Actual {{actual}} · Gap {{gap}}",
+    "noRisk": "No risk points detected, team configuration matches task requirements well",
+    "detailedMatch": "Detailed Match",
+    "abilityDimensions": "Ability Dimensions",
+    "motivationMatch": "Motivation Match",
+    "thinkingStyle": "Thinking Style",
+    "riskLow": "Low",
+    "riskMedium": "Medium",
+    "riskHigh": "High",
+    "confirmDeleteTask": "Confirm delete task \"{{name}}\"?"
+  },
+  "privacy": {
+    "title": "Privacy Policy",
+    "back": "Back",
+    "lastUpdated": "Last updated: July 30, 2026",
+    "sections": {
+      "infoCollection": {
+        "title": "1. Information Collection",
+        "p1": "We collect information including but not limited to: email addresses, account passwords (encrypted), assessment results, and team management data. This information is used to provide personalized services, improve user experience, and protect account security.",
+        "p2": "For free version users, data is stored locally in the browser and not uploaded to servers. For Pro and Max version users, data is stored on our secure servers to enable cross-device access and team collaboration features."
+      },
+      "infoUsage": {
+        "title": "2. Information Usage",
+        "p1": "We use the collected information to:",
+        "l1": "Provide, maintain, and improve our services",
+        "l2": "Process your subscriptions and payments",
+        "l3": "Send service-related notifications and updates",
+        "l4": "Analyze usage trends to optimize product features",
+        "l5": "Prevent fraud and ensure platform security"
+      },
+      "infoSharing": {
+        "title": "3. Information Sharing",
+        "p1": "We do not sell, trade, or otherwise transfer your personal information to third parties. However, we may share your information in the following circumstances:",
+        "l1": "With your explicit consent",
+        "l2": "With service providers who help us operate (such as payment processors, cloud service providers)",
+        "l3": "To comply with legal obligations or respond to lawful government requests",
+        "l4": "To protect our rights, privacy, safety, or property"
+      },
+      "dataSecurity": {
+        "title": "4. Data Security",
+        "p1": "We employ industry-standard security measures to protect your information, including but not limited to: encrypted data transmission (HTTPS), password hashing, access controls, and regular security audits. However, no internet transmission or electronic storage method is 100% secure, and we cannot guarantee absolute security."
+      },
+      "cookies": {
+        "title": "5. Cookies and Tracking Technologies",
+        "p1": "We use cookies and similar tracking technologies to collect information, improve service performance, and personalize user experience. You can manage cookie preferences in your browser settings, but disabling cookies may affect the functionality of certain features."
+      },
+      "rights": {
+        "title": "6. Your Rights",
+        "p1": "You have the right to:",
+        "l1": "Access and update your personal information",
+        "l2": "Request deletion of your account and related data",
+        "l3": "Opt out of marketing communications",
+        "l4": "Request a copy of your data",
+        "l5": "Object to certain data processing activities"
+      },
+      "policyUpdates": {
+        "title": "7. Policy Updates",
+        "p1": "We may update this privacy policy from time to time. Significant changes will be notified to you prominently on this page. Continued use of our services indicates your acceptance of the updated policy."
+      },
+      "contact": {
+        "title": "8. Contact Us",
+        "p1": "If you have any questions or suggestions about this privacy policy, please contact us at:"
+      }
+    }
+  },
+  "terms": {
+    "title": "Terms of Service",
+    "back": "Back",
+    "lastUpdated": "Last updated: July 30, 2026",
+    "sections": {
+      "serviceDesc": {
+        "title": "1. Service Description",
+        "p1": "Personality Assessment is a personality assessment tool based on psychological theory, designed to help users with self-exploration and personal growth. We offer a free version and paid subscription versions (Pro and Max).",
+        "p2": "<strong>Important Disclaimer:</strong> This application is for self-exploration and entertainment purposes only and does not constitute professional psychological assessment or medical advice. Assessment results should not be used as the sole basis for clinical diagnosis, medical decisions, or career choices."
+      },
+      "userAccount": {
+        "title": "2. User Account",
+        "p1": "Using Pro or Max versions requires account registration. You agree to:",
+        "l1": "Provide accurate, complete, and up-to-date registration information",
+        "l2": "Protect the security and confidentiality of your account password",
+        "l3": "Take responsibility for all activities under your account",
+        "l4": "Notify us immediately if you discover unauthorized use"
+      },
+      "subscriptions": {
+        "title": "3. Subscriptions and Payments",
+        "p1": "<strong>Subscription Plans:</strong>",
+        "l1": "Pro Version: $5/month, $17/6 months, $27/year",
+        "l2": "Max Version: $12/month, $43/6 months, $79/year",
+        "p2": "<strong>Payment Policy:</strong>",
+        "l3": "Subscriptions auto-renew unless canceled before the renewal date",
+        "l4": "Prices may change at any time; existing subscriptions are unaffected",
+        "l5": "All fees are in USD and may include taxes",
+        "l6": "Payments are processed through third-party payment platforms"
+      },
+      "refund": {
+        "title": "4. Refund Policy",
+        "p1": "We offer the following refund policy:",
+        "l1": "Full refund available within 7 days of first subscription",
+        "l2": "Renewal fees are non-refundable unless the service has significant defects",
+        "l3": "Refund requests must be submitted via support email",
+        "l4": "Refunds will be processed within 5-10 business days after approval"
+      },
+      "acceptableUse": {
+        "title": "5. Acceptable Use",
+        "p1": "You agree not to:",
+        "l1": "Use the service for illegal purposes or violate any laws",
+        "l2": "Infringe upon the intellectual property or other rights of others",
+        "l3": "Spread viruses, malicious code, or other harmful content",
+        "l4": "Attempt to crack, reverse engineer, or interfere with service operation",
+        "l5": "Impersonate others or provide false information",
+        "l6": "Share your account with others"
+      },
+      "intellectualProperty": {
+        "title": "6. Intellectual Property",
+        "p1": "All content, features, and services are protected by intellectual property laws. Without our written permission, you may not:",
+        "l1": "Copy, modify, distribute, or display any content",
+        "l2": "Create derivative works or use content for commercial purposes",
+        "l3": "Remove any copyright notices or ownership markings"
+      },
+      "disclaimer": {
+        "title": "7. Disclaimer",
+        "p1": "<strong>The service is provided \"as is\" without any express or implied warranties.</strong> We are not liable for:",
+        "l1": "The continuity, security, or error-free nature of the service",
+        "l2": "The accuracy or applicability of assessment results",
+        "l3": "Any decisions made based on assessment results",
+        "l4": "Losses resulting from the use or inability to use the service",
+        "l5": "Third-party actions or content"
+      },
+      "liability": {
+        "title": "8. Limitation of Liability",
+        "p1": "To the maximum extent permitted by applicable law, our total liability shall not exceed the fees you paid in the past 12 months. We are not liable for any indirect, incidental, special, or consequential damages."
+      },
+      "serviceChanges": {
+        "title": "9. Service Changes and Termination",
+        "p1": "We reserve the right to:",
+        "l1": "Modify, suspend, or terminate the service (in whole or in part) at any time",
+        "l2": "Delete accounts and all related data",
+        "l3": "Restrict usage permissions for certain users",
+        "l4": "Change pricing and features",
+        "p2": "If service is terminated, we will notify users 30 days in advance and provide reasonable refund or compensation options."
+      },
+      "disputes": {
+        "title": "10. Dispute Resolution",
+        "p1": "Any disputes arising from these terms shall first be resolved through friendly negotiation. If negotiation fails, the dispute shall be submitted to the court with jurisdiction in the location of the service provider. These terms are governed by the laws of the People's Republic of China."
+      },
+      "miscellaneous": {
+        "title": "11. Miscellaneous",
+        "l1": "These terms constitute the entire agreement between you and us",
+        "l2": "Our failure to exercise any right does not constitute a waiver of that right",
+        "l3": "If any provision of these terms is found invalid, the remaining terms remain in effect",
+        "l4": "We may assign this agreement at any time; you need our consent to assign"
+      },
+      "contact": {
+        "title": "12. Contact Us",
+        "p1": "For any questions or suggestions, please contact:"
+      }
+    }
+  }
+}

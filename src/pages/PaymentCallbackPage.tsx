@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useNavigate, useSearchParams, Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import { CheckCircle2, Loader2, AlertCircle } from 'lucide-react';
 import Button from '../components/ui/Button';
 import Disclaimer from '../components/ui/Disclaimer';
@@ -7,6 +8,7 @@ import { useAuthStore } from '../stores/auth';
 import { supabase } from '../lib/supabase';
 
 export default function PaymentCallbackPage() {
+  const { t } = useTranslation();
   const navigate = useNavigate();
   const [searchParams] = useSearchParams();
   const { fetchProfile, user, signOut } = useAuthStore();
@@ -107,14 +109,14 @@ export default function PaymentCallbackPage() {
     <div className="min-h-screen flex items-center justify-center p-4">
       <div className="w-full max-w-[420px] md:max-w-[480px] flex flex-col gap-5">
         <Link to="/" className="inline-flex items-center gap-1.5 text-sm text-[#8E8CA8] hover:text-[#5B4FCF] transition-colors">
-          ← Back to Home
+          {t('paymentCallback.backToHome')}
         </Link>
 
         {status === 'checking' && (
           <div className="rounded-[20px] bg-white/60 backdrop-blur-[10px] border border-white/50 p-8 flex flex-col gap-4 text-center">
             <Loader2 className="w-10 h-10 text-[#5B4FCF] animate-spin mx-auto" />
-            <h3 className="text-lg font-bold text-[#3D3A5C]">Verifying payment...</h3>
-            <p className="text-sm text-[#8E8CA8]">Please wait while we confirm your payment.</p>
+            <h3 className="text-lg font-bold text-[#3D3A5C]">{t('paymentCallback.verifying')}</h3>
+            <p className="text-sm text-[#8E8CA8]">{t('paymentCallback.verifyHint')}</p>
           </div>
         )}
 
@@ -124,14 +126,15 @@ export default function PaymentCallbackPage() {
               <CheckCircle2 className="w-7 h-7 text-green-600" />
             </div>
             <h3 className="text-xl font-bold text-[#3D3A5C]">
-              {isUpgrade ? 'Upgrade complete!' : 'Payment successful!'}
+              {isUpgrade ? t('paymentCallback.upgradeSuccessTitle') : t('paymentCallback.successTitle')}
             </h3>
             <p className="text-sm text-[#8E8CA8] leading-relaxed">
-              Your {tier?.toUpperCase()} version is now active.
-              {isUpgrade ? ' Observer limit expanded, prediction feature unlocked.' : ' You can now manage team observers.'}
+              {isUpgrade
+                ? t('paymentCallback.upgradeSuccessDesc', { tier: tier?.toUpperCase() })
+                : t('paymentCallback.successDesc', { tier: tier?.toUpperCase() })}
             </p>
             <Button variant="primary" size="lg" fullWidth onClick={handleEnterWorkspace}>
-              Enter {tier?.toUpperCase()} Workspace
+              {t('paymentCallback.enterWorkspace', { tier: tier?.toUpperCase() })}
             </Button>
           </div>
         )}
@@ -141,16 +144,15 @@ export default function PaymentCallbackPage() {
             <div className="w-14 h-14 rounded-full bg-amber-100 flex items-center justify-center mx-auto">
               <Loader2 className="w-7 h-7 text-amber-600" />
             </div>
-            <h3 className="text-xl font-bold text-[#3D3A5C]">Payment is being processed</h3>
+            <h3 className="text-xl font-bold text-[#3D3A5C]">{t('paymentCallback.pendingTitle')}</h3>
             <p className="text-sm text-[#8E8CA8] leading-relaxed">
-              Your payment was submitted successfully. It may take a few moments to confirm.
-              If access is not enabled shortly, please contact support.
+              {t('paymentCallback.pendingDesc')}
             </p>
             <Button variant="primary" size="lg" fullWidth onClick={handleRetry}>
-              Check Again
+              {t('paymentCallback.checkAgain')}
             </Button>
             <Button variant="secondary" size="lg" fullWidth onClick={handleGiveUp}>
-              Cancel &amp; Back to Register
+              {t('paymentCallback.cancelBack')}
             </Button>
           </div>
         )}
@@ -160,12 +162,12 @@ export default function PaymentCallbackPage() {
             <div className="w-14 h-14 rounded-full bg-red-100 flex items-center justify-center mx-auto">
               <AlertCircle className="w-7 h-7 text-red-600" />
             </div>
-            <h3 className="text-xl font-bold text-[#3D3A5C]">Payment not confirmed</h3>
+            <h3 className="text-xl font-bold text-[#3D3A5C]">{t('paymentCallback.errorTitle')}</h3>
             <p className="text-sm text-[#8E8CA8] leading-relaxed">
-              We could not confirm your payment. Please try again.
+              {t('paymentCallback.errorDesc')}
             </p>
             <Button variant="primary" size="lg" fullWidth onClick={handleBackToRegister}>
-              Back to Register
+              {t('paymentCallback.backToRegister')}
             </Button>
           </div>
         )}

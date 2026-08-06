@@ -7,8 +7,8 @@ import {
   ResponsiveContainer,
   Tooltip,
 } from 'recharts';
+import { useTranslation } from 'react-i18next';
 import type { AbilityScores, AbilityDimension } from '../../types';
-import { abilityMap } from '../../data/results';
 
 interface RadarChartProps {
   scores: AbilityScores;
@@ -16,28 +16,29 @@ interface RadarChartProps {
 
 // 自定义Tooltip
 function CustomTooltip({ active, payload }: { active?: boolean; payload?: Array<{ payload: { dimension: string; score: number } }> }) {
+  const { t } = useTranslation();
   if (!active || !payload || payload.length === 0) return null;
   const data = payload[0].payload;
   return (
     <div className="rounded-xl bg-white/90 backdrop-blur-[10px] shadow-lg border border-white/60 px-3 py-2">
-      <p className="text-sm font-semibold text-[#3D3A5C]">{data.dimension}</p>
-      <p className="text-lg font-bold text-[#5B4FCF]">{data.score}<span className="text-xs font-normal text-[#A9A7C8] ml-0.5">pts</span></p>
+      <p className="text-sm font-semibold text-[#3D3A5C]">{t(`abilities.${data.dimension}`)}</p>
+      <p className="text-lg font-bold text-[#5B4FCF]">{data.score}<span className="text-xs font-normal text-[#A9A7C8] ml-0.5">{t('result.radarPoints')}</span></p>
     </div>
   );
 }
 
 // 自定义轴标签（带分数）
 function CustomTick({ x, y, payload, scores }: { x: number; y: number; payload: { value: string }; scores: AbilityScores }) {
-  const dimensionName = payload.value;
+  const { t } = useTranslation();
+  const dimensionKey = payload.value as AbilityDimension;
   // 找到对应的分数
-  const scoreEntry = Object.entries(abilityMap).find(([, info]) => info.name === dimensionName);
-  const score = scoreEntry ? scores[scoreEntry[0] as AbilityDimension] : 0;
+  const score = scores[dimensionKey] ?? 0;
   const scoreColor = score >= 70 ? '#5B4FCF' : score >= 40 ? '#8B7FD4' : '#B8B0E8';
 
   return (
     <g>
       <text x={x} y={y - 8} textAnchor="middle" fill="#5A5880" fontSize={12} fontWeight={500}>
-        {dimensionName}
+        {t(`abilities.${dimensionKey}`)}
       </text>
       <text x={x} y={y + 7} textAnchor="middle" fill={scoreColor} fontSize={13} fontWeight={700}>
         {score}
@@ -47,17 +48,18 @@ function CustomTick({ x, y, payload, scores }: { x: number; y: number; payload: 
 }
 
 export default function RadarChart({ scores }: RadarChartProps) {
+  const { t } = useTranslation();
   const data: { dimension: string; score: number; fullMark: number }[] = (
     Object.keys(scores) as AbilityDimension[]
   ).map((key) => ({
-    dimension: abilityMap[key].name,
+    dimension: key,
     score: scores[key],
     fullMark: 100,
   }));
 
   return (
     <div className="rounded-[20px] bg-white/60 backdrop-blur-[10px] border border-white/50 p-5">
-      <h3 className="text-sm font-semibold text-[#3D3A5C] mb-2">Ability Radar Chart</h3>
+      <h3 className="text-sm font-semibold text-[#3D3A5C] mb-2">{t('result.abilityRadar')}</h3>
       <div className="w-full h-72">
         <ResponsiveContainer width="100%" height="100%">
           <RechartsRadar data={data} cx="50%" cy="50%" outerRadius="70%">
@@ -109,15 +111,15 @@ export default function RadarChart({ scores }: RadarChartProps) {
       <div className="flex justify-center gap-4 mt-2 text-xs text-[#A9A7C8]">
         <span className="flex items-center gap-1">
           <span className="inline-block w-2 h-2 rounded-full bg-[#5B4FCF]" />
-          70+ Strong
+          {t('result.radarStrong')}
         </span>
         <span className="flex items-center gap-1">
           <span className="inline-block w-2 h-2 rounded-full bg-[#8B7FD4]" />
-          40-69 Balanced
+          {t('result.radarBalanced')}
         </span>
         <span className="flex items-center gap-1">
           <span className="inline-block w-2 h-2 rounded-full bg-[#B8B0E8]" />
-          &lt;40 Growth Area
+          {t('result.radarGrowth')}
         </span>
       </div>
     </div>

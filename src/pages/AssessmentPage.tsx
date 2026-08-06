@@ -1,10 +1,12 @@
 import { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import useAssessmentStore from '../stores/assessment';
 import ProgressBar from '../components/assessment/ProgressBar';
 import ScenarioCard from '../components/assessment/ScenarioCard';
 import OptionList from '../components/assessment/OptionList';
 import NavigationBar from '../components/assessment/NavigationBar';
+import LanguageSwitcher from '../components/ui/LanguageSwitcher';
 import { analyzeTemperamentFromText, getWeightsFromEvaluation } from '../data/keywordMatching';
 import type { TemperamentType, AbilityDimension, DimensionWeights } from '../types';
 
@@ -17,6 +19,7 @@ interface ComprehensiveEvaluation {
 }
 
 export default function AssessmentPage() {
+  const { t } = useTranslation();
   const navigate = useNavigate();
   const {
     answers,
@@ -50,7 +53,7 @@ export default function AssessmentPage() {
   if (!scenarios || scenarios.length === 0) {
     return (
       <div className="min-h-screen flex items-center justify-center text-[#8E8CA8]">
-        Loading...
+        {t('assessment.loading')}
       </div>
     );
   }
@@ -95,7 +98,7 @@ export default function AssessmentPage() {
   if (!scenario) {
     return (
       <div className="min-h-screen flex items-center justify-center text-[#8E8CA8]">
-        Loading...
+        {t('assessment.loading')}
       </div>
     );
   }
@@ -103,6 +106,10 @@ export default function AssessmentPage() {
   return (
     <div className="min-h-screen flex items-center justify-center p-4">
       <div className="w-full max-w-[420px] md:max-w-[520px] lg:max-w-[640px] xl:max-w-[720px] flex flex-col gap-5">
+        <div className="flex justify-end">
+          <LanguageSwitcher />
+        </div>
+
         <ProgressBar current={currentIndex} total={scenarios.length} />
 
         <ScenarioCard situation={scenario.situation} index={currentIndex} />

@@ -1,0 +1,635 @@
+{
+  "common": {
+    "back": "Retour",
+    "backToHome": "Retour à l'accueil",
+    "cancel": "Annuler",
+    "confirm": "Confirmer",
+    "delete": "Supprimer",
+    "save": "Enregistrer",
+    "loading": "Chargement...",
+    "next": "Suivant",
+    "previous": "Précédent",
+    "skip": "Passer",
+    "email": "E-mail",
+    "password": "Mot de passe",
+    "nickname": "Pseudo",
+    "search": "Rechercher",
+    "select": "Sélectionner",
+    "selectAll": "Tout sélectionner",
+    "clear": "Effacer",
+    "close": "Fermer",
+    "yes": "Oui",
+    "no": "Non"
+  },
+  "language": {
+    "switch": "Langue",
+    "select": "Sélectionner la langue"
+  },
+  "disclaimer": {
+    "text": "Cette application est destinée à l'auto-exploration et au divertissement uniquement. Elle ne constitue pas une évaluation psychologique professionnelle ou un conseil médical."
+  },
+  "periods": {
+    "monthly": "Mensuel",
+    "6months": "6 mois",
+    "yearly": "1 an"
+  },
+  "tiers": {
+    "free": {
+      "name": "Gratuit",
+      "subtitle": "Exploration personnelle du tempérament et des aptitudes",
+      "cta": "Commencer gratuitement",
+      "feature1": "Évaluer le type de tempérament",
+      "feature2": "Analyser 6 dimensions d'aptitude"
+    },
+    "pro": {
+      "name": "Pro",
+      "subtitle": "Aperçus du tempérament et des aptitudes d'équipe",
+      "cta": "Choisir Pro",
+      "feature1": "Jusqu'à 60 observés",
+      "feature2": "Analyse du tempérament et des aptitudes d'équipe"
+    },
+    "max": {
+      "name": "Max",
+      "subtitle": "Prédiction de l'accomplissement des tâches",
+      "cta": "Choisir Max",
+      "feature1": "Jusqu'à 160 observés",
+      "feature2": "Analyse agrégée de l'équipe",
+      "feature3": "Prédiction de l'adéquation aux tâches"
+    }
+  },
+  "landing": {
+    "badge": "Aperçu du Tempérament",
+    "titleLine1": "Partez des aperçus individuels du tempérament,",
+    "titleLine2": " bâtissez la synergie d'équipe — choisissez votre offre",
+    "privacyPolicy": "Politique de confidentialité",
+    "termsOfService": "Conditions d'utilisation",
+    "footer": "© {{year}} Aperçu du Tempérament · Pour l'auto-exploration et la référence en matière d'aperçu d'équipe uniquement",
+    "perPeriod": "/ {{period}}",
+    "billedAs": "{{perMonth}} facturé comme {{display}}"
+  },
+  "home": {
+    "selectProfession": "Sélectionnez le domaine professionnel de l'observé",
+    "selectProfessionHint": "Différentes professions correspondent à différents scénarios réels pour une évaluation plus précise",
+    "startAssessment": "Commencer l'évaluation",
+    "pleaseSelectProfession": "Veuillez d'abord sélectionner une profession",
+    "brandBadge": "Aperçu du Tempérament",
+    "brandTitle": "Comprendre le tempérament, libérer le potentiel",
+    "brandSubtitle": "Un outil d'évaluation du tempérament et des aptitudes basé sur l'observation comportementale situationnelle, vous aidant à comprendre les autres de manière objective",
+    "introObserverTitle": "Perspective de l'observateur",
+    "introObserverDesc": "Évaluez les schémas comportementaux d'un point de vue tiers",
+    "introScenariosTitle": "Scénarios réels",
+    "introScenariosDesc": "Basé sur 20 scénarios de la vie réelle, capturant des réactions comportementales naturelles",
+    "introObjectiveTitle": "Évaluation objective",
+    "introObjectiveDesc": "Analyse multidimensionnelle du tempérament et des aptitudes, évaluation sans étiquetage"
+  },
+  "login": {
+    "welcomeBack": "Bon retour",
+    "subtitle": "Connectez-vous pour continuer à gérer votre équipe",
+    "emailPlaceholder": "exemple@email.com",
+    "passwordPlaceholder": "Entrez votre mot de passe",
+    "loggingIn": "Connexion...",
+    "loginButton": "Se connecter",
+    "noAccount": "Vous n'avez pas de compte Pro / Max ?",
+    "choosePlan": "Choisissez une offre pour vous inscrire",
+    "support": "support"
+  },
+  "register": {
+    "backToHome": "Retour à l'accueil",
+    "signUpTitle": "Inscription — {{tier}}",
+    "upgradeTitle": "Passer à {{tier}}",
+    "upgradeSubtitle": "Depuis {{fromTier}} · {{amount}} · accès {{period}}",
+    "signUpSubtitle": "{{display}} · accès {{period}}",
+    "nicknameLabel": "Pseudo",
+    "nicknamePlaceholder": "Comment devrions-nous vous appeler",
+    "emailPlaceholder": "exemple@email.com",
+    "passwordLabel": "Mot de passe",
+    "passwordPlaceholder": "Au moins 6 caractères",
+    "signingUp": "Inscription...",
+    "signUpPay": "S'inscrire et payer {{amount}}",
+    "haveAccount": "Vous avez déjà un compte ?",
+    "logIn": "Se connecter",
+    "agreementText": "J'ai lu et j'accepte la <privacy>Politique de confidentialité</privacy> et les <terms>Conditions d'utilisation</terms>",
+    "paymentStepTitle": "Inscription réussie, finalisez le paiement",
+    "upgradeStepTitle": "Finaliser le paiement de la mise à niveau",
+    "paymentStepDesc": "Nous avons envoyé un e-mail de vérification à <email>{{email}}</email>.<br/>Payez {{amount}} pour obtenir un accès {{period}} à toutes les fonctionnalités {{tier}}.",
+    "upgradeStepDesc": "Vous êtes actuellement un utilisateur {{fromTier}}. La mise à niveau vers {{tier}} nécessite un complément de {{amount}}.<br/>La limite d'observés passera de 60 à 160, et la fonction de prédiction sera déverrouillée.",
+    "orderDetails": "Détails de la commande",
+    "upgradeOrder": "Commande de mise à niveau",
+    "version": "Version",
+    "account": "Compte",
+    "amountDue": "Montant à payer",
+    "paying": "Redirection vers le paiement...",
+    "payButton": "Payer {{amount}}",
+    "paymentAccess": "Accès activé immédiatement après le paiement",
+    "pleaseLoginFirst": "Veuillez vous connecter avant le paiement.",
+    "payInitFailed": "L'initialisation du paiement a échoué. Veuillez réessayer.",
+    "noCheckoutUrl": "Aucune URL de paiement renvoyée. Veuillez contacter le support.",
+    "networkError": "Erreur réseau. Veuillez vérifier votre connexion et réessayer."
+  },
+  "paymentCallback": {
+    "backToHome": "← Retour à l'accueil",
+    "verifying": "Vérification du paiement...",
+    "verifyHint": "Veuillez patienter pendant que nous confirmons votre paiement.",
+    "successTitle": "Paiement réussi !",
+    "upgradeSuccessTitle": "Mise à niveau terminée !",
+    "successDesc": "Votre version {{tier}} est maintenant active. Vous pouvez désormais gérer les observés de l'équipe.",
+    "upgradeSuccessDesc": "Votre version {{tier}} est maintenant active. Limite d'observés étendue, fonction de prédiction déverrouillée.",
+    "enterWorkspace": "Entrer dans l'espace {{tier}}",
+    "pendingTitle": "Paiement en cours de traitement",
+    "pendingDesc": "Votre paiement a été soumis avec succès. La confirmation peut prendre quelques instants. Si l'accès n'est pas activé sous peu, veuillez contacter le support.",
+    "checkAgain": "Vérifier à nouveau",
+    "cancelBack": "Annuler et retour à l'inscription",
+    "errorTitle": "Paiement non confirmé",
+    "errorDesc": "Nous n'avons pas pu confirmer votre paiement. Veuillez réessayer.",
+    "backToRegister": "Retour à l'inscription"
+  },
+  "assessment": {
+    "loading": "Chargement...",
+    "progressQ": "Q {{current}} / {{total}}",
+    "previous": "Précédent",
+    "next": "Suivant",
+    "viewResults": "Voir les résultats",
+    "customOptionDefault": "Autre (décrivez la situation réelle)",
+    "customPlaceholder": "Décrivez la réaction réelle de l'observé...",
+    "customConfirm": "Confirmer",
+    "customCancel": "Annuler",
+    "selectorTitle": "Évaluez cette tendance comportementale",
+    "selectorHint": "Jugez en fonction de la situation réelle de l'observé",
+    "temperamentType": "Type de tempérament",
+    "temperamentTypeRequired": "Type de tempérament *",
+    "behavioralTendency": "Tendance comportementale",
+    "behavioralTendencyHint": "Tendance comportementale (plusieurs)",
+    "keyAbilities": "Aptitudes clés",
+    "keyAbilitiesHint": "Aptitudes clés (plusieurs)",
+    "emotionalTone": "Tonalité émotionnelle",
+    "emotionalToneRequired": "Tonalité émotionnelle *",
+    "skipAuto": "Passer (analyse automatique)",
+    "selectorConfirm": "Confirmer"
+  },
+  "temperament": {
+    "sanguine": {
+      "name": "Sanguin",
+      "desc": "Sociable, réaction rapide",
+      "badge": "San"
+    },
+    "choleric": {
+      "name": "Colérique",
+      "desc": "Décisif, forte détermination",
+      "badge": "Col"
+    },
+    "phlegmatic": {
+      "name": "Phlegmatique",
+      "desc": "Calme, émotionnellement stable",
+      "badge": "Phl"
+    },
+    "melancholic": {
+      "name": "Mélancolique",
+      "desc": "Sensible, penseur profond",
+      "badge": "Mél"
+    }
+  },
+  "behaviors": {
+    "proactive": "Proactif",
+    "proactiveDesc": "Prend des initiatives, n'attend pas",
+    "rational": "Analyse rationnelle",
+    "rationalDesc": "Réflexion calme, soupèse le pour et le contre",
+    "collaborative": "Collaboratif",
+    "collaborativeDesc": "Cherche du soutien, résout ensemble",
+    "creative": "Innovant",
+    "creativeDesc": "Essaie de nouvelles méthodes, brise les conventions"
+  },
+  "emotions": {
+    "positive": "Positif",
+    "neutral": "Neutre",
+    "negative": "Négatif/Évitant",
+    "anxious": "Anxieux",
+    "unknown": "Incertain"
+  },
+  "abilities": {
+    "communication": "Communication",
+    "leadership": "Leadership",
+    "creativity": "Créativité",
+    "analysis": "Analyse",
+    "resilience": "Résilience",
+    "empathy": "Empathie"
+  },
+  "professions": {
+    "service": "Professionnel du service",
+    "student": "Étudiant",
+    "office": "Professionnel de bureau",
+    "civil": "Fonctionnaire",
+    "artist": "Professionnel créatif",
+    "media": "Créateur de contenu",
+    "teacher": "Éducateur",
+    "doctor": "Professionnel de santé"
+  },
+  "result": {
+    "loading": "Chargement...",
+    "temperamentDistribution": "Distribution du tempérament",
+    "comprehensiveInterpretation": "Interprétation globale",
+    "abilityRadar": "Diagramme radar des aptitudes",
+    "radarStrong": "70+ Fort",
+    "radarBalanced": "40-69 Équilibré",
+    "radarGrowth": "<40 Zone de progression",
+    "radarPoints": "pts",
+    "dimensionDetails": "Détails des dimensions",
+    "motivationAnalysis": "💡 Analyse des motivations",
+    "dominant": "Dominant : {{name}}",
+    "secondary": "Secondaire : {{name}}",
+    "thinkingTitle": "🧠 Tendances de pensée et de comportement",
+    "thinkingBalanced": "Équilibré",
+    "thinkingLean": "Inclinaison {{name}}",
+    "thinkingBalancedDesc": "Combine les deux traits, capable d'ajuster flexiblement la pensée et le comportement selon le contexte",
+    "thinkingFooter": "* Les tendances de pensée et de comportement ne sont pas fixes et peuvent s'ajuster selon le contexte et le développement personnel",
+    "retake": "Repasser",
+    "share": "Partager",
+    "shareSuccess": "Lien copié dans le presse-papiers. Partagez-le avec vos amis !",
+    "shareFail": "La fonction de partage est actuellement indisponible",
+    "discard": "Abandonner",
+    "saveToTeam": "Enregistrer dans l'équipe",
+    "discardConfirm": "Abandonner le résultat d'évaluation de cet observé ?"
+  },
+  "motivations": {
+    "achievement": {
+      "name": "Accomplissement",
+      "desc": "Recherche de l'excellence, orienté objectifs, motivé par le succès",
+      "high": "L'observé a une forte motivation d'accomplissement, animé par le succès et l'excellence. Il aime se lancer des défis et poursuivre l'atteinte de ses objectifs. Face aux tâches, il a tendance à fixer des normes élevées et à s'efforcer de les atteindre.",
+      "medium": "L'observé a une motivation d'accomplissement modérée, travaillant vers ses objectifs tout en maintenant un équilibre vie pro-vie perso, sans perfectionnisme excessif.",
+      "low": "L'observé a une motivation d'accomplissement relativement faible, se concentrant davantage sur l'expérience du processus que sur l'orientation résultat, avec un intérêt moindre pour la compétition et les défis, préférant un état stable et confortable."
+    },
+    "affiliation": {
+      "name": "Affiliation",
+      "desc": "Valorise les relations, l'appartenance et l'harmonie",
+      "high": "L'observé a une forte motivation d'affiliation, accordant une grande importance aux relations interpersonnelles et au sentiment d'appartenance. Il aime socialiser, est habile pour bâtir et entretenir son réseau social, et est actif au sein des équipes.",
+      "medium": "L'observé a une motivation d'affiliation modérée, valorisant les relations tout en maintenant une indépendance appropriée, appréciant autant l'interaction sociale que la solitude.",
+      "low": "L'observé a une motivation d'affiliation relativement faible, préférant le travail indépendant avec un moindre besoin d'activités sociales, et pouvant nécessiter davantage d'encouragement en travail d'équipe."
+    },
+    "power": {
+      "name": "Pouvoir",
+      "desc": "Recherche de l'influence, du contrôle et de l'autorité décisionnelle",
+      "high": "L'observé a une forte motivation de pouvoir, désirant influencer les autres et contrôler les situations. Il aime diriger les processus de décision et peut tirer parti de ses atouts dans des rôles de leadership.",
+      "medium": "L'observé a une motivation de pouvoir modérée, capable d'assumer des responsabilités de leadership lorsque c'est nécessaire tout en respectant les opinions des autres, sans désir excessif de domination.",
+      "low": "L'observé a une motivation de pouvoir relativement faible, préférant coopérer plutôt que diriger, avec un intérêt moindre pour la gestion ou le contrôle des autres, adapté aux rôles d'exécution."
+    },
+    "security": {
+      "name": "Sécurité",
+      "desc": "Recherche de stabilité, évitement du risque, accent sur la sûreté et la sécurité",
+      "high": "L'observé a une forte motivation de sécurité, recherchant des environnements stables et prévisibles, prenant des décisions prudentes, évitant les risques, et valorisant la planification et les garanties à long terme.",
+      "medium": "L'observé a une motivation de sécurité modérée, prenant en compte les facteurs de risque dans ses décisions sans être excessivement conservateur, capable d'équilibrer sécurité et prise de risque.",
+      "low": "L'observé a une motivation de sécurité relativement faible, plus enclin à prendre des risques et à essayer de nouvelles choses, avec une plus grande tolérance à l'incertitude, adapté aux tâches innovantes ou stimulantes."
+    }
+  },
+  "thinking": {
+    "proactive": {
+      "name": "Proactif",
+      "desc": "Prend des initiatives, cherche activement des solutions"
+    },
+    "reactive": {
+      "name": "Réactif",
+      "desc": "Attend et observe, tend à répondre plutôt qu'à initier"
+    },
+    "rational": {
+      "name": "Rationnel",
+      "desc": "Se concentre sur l'analyse logique, soupèse objectivement le pour et le contre"
+    },
+    "intuitive": {
+      "name": "Intuitif",
+      "desc": "Valorise l'expérience émotionnelle, porte des jugements par intuition"
+    },
+    "independent": {
+      "name": "Indépendant",
+      "desc": "Préfère la réflexion indépendante, accomplit les tâches de manière autonome"
+    },
+    "collaborative": {
+      "name": "Collaboratif",
+      "desc": "Habile au travail d'équipe, valorise la sagesse collective"
+    },
+    "innovative": {
+      "name": "Innovant",
+      "desc": "Recherche des approches nouvelles et uniques, brise les conventions"
+    },
+    "conventional": {
+      "name": "Conventionnel",
+      "desc": "Suit les normes établies, stable et fiable"
+    }
+  },
+  "observer": {
+    "add": {
+      "backToWorkspace": "Retour à l'espace de travail",
+      "title": "Ajouter un observé",
+      "subtitle": "Mode proxy : en fonction de votre connaissance réelle de l'observé, sélectionnez sa réaction dans chaque scénario",
+      "nameLabel": "Nom de l'observé",
+      "nameHint": "(alias/code accepté)",
+      "namePlaceholder": "ex. Alex / Obs-001",
+      "gender": "Genre",
+      "male": "Homme",
+      "female": "Femme",
+      "other": "Autre",
+      "unknown": "Préfère ne pas répondre",
+      "profession": "Profession",
+      "professionHint": "Différentes professions correspondent à différentes questions de scénario",
+      "noteLabel": "Note (facultatif)",
+      "notePlaceholder": "Département, rôle, relation, etc.",
+      "preparing": "Préparation des questions...",
+      "startAssessment": "Commencer l'évaluation"
+    },
+    "save": {
+      "title": "Confirmer l'enregistrement de l'observé",
+      "subtitle": "Veuillez confirmer les informations ci-dessous avant l'enregistrement dans votre équipe",
+      "name": "Nom",
+      "gender": "Genre",
+      "profession": "Profession",
+      "note": "Note",
+      "dominantTemperament": "Tempérament dominant",
+      "currentPlan": "Offre actuelle : {{tier}} · Limite d'observés : {{limit}}",
+      "saving": "Enregistrement...",
+      "confirmSave": "Confirmer l'enregistrement dans l'équipe",
+      "savedTitle": "Observé enregistré",
+      "savedDesc": "Les résultats d'évaluation de <name>{{name}}</name> ont été ajoutés à votre équipe. Vous pouvez les consulter à tout moment depuis l'espace de travail.",
+      "backToWorkspace": "Retour à l'espace de travail",
+      "saveFailed": "Échec de l'enregistrement, veuillez réessayer"
+    },
+    "detail": {
+      "backToList": "Retour à la liste",
+      "notFound": "Observé introuvable",
+      "professionNotSpecified": "Profession non précisée"
+    }
+  },
+  "proWorkspace": {
+    "badge": "Espace Pro",
+    "welcome": "Bienvenue, {{name}}",
+    "manager": "Gestionnaire",
+    "capacity": "Capacité d'observés : {{usage}}",
+    "signOut": "Se déconnecter",
+    "addObserver": "Ajouter un observé",
+    "observers": "Observés",
+    "teamProfile": "Profil d'équipe",
+    "emptyHint": "Aucun observé pour le moment. Cliquez sur le bouton ci-dessus pour en ajouter"
+  },
+  "maxWorkspace": {
+    "badge": "Espace Max",
+    "welcome": "Bienvenue, {{name}}",
+    "manager": "Gestionnaire",
+    "capacity": "Capacité d'observés : {{usage}}",
+    "signOut": "Se déconnecter",
+    "addObserver": "Ajouter un observé",
+    "newPrediction": "Nouvelle prédiction",
+    "observers": "Observés",
+    "selectCombine": "Sélectionner et combiner",
+    "exitSelection": "Quitter la sélection",
+    "selected": "{{count}} sélectionné(s)",
+    "selectAll": "Tout sélectionner",
+    "clear": "Effacer",
+    "predictTeam": "Prédire cette équipe",
+    "teamProfile": "Profil d'équipe",
+    "selectedTeamProfile": "Profil de l'équipe sélectionnée ({{count}})",
+    "predictionRecords": "Historique des prédictions",
+    "emptyObservers": "Aucun observé pour le moment. Cliquez sur le bouton ci-dessus pour en ajouter",
+    "emptyPredictions": "Aucune prédiction pour le moment. Cliquez sur le bouton ci-dessus pour commencer",
+    "noProfession": "Aucune profession précisée",
+    "members": "{{count}} membres",
+    "fitScore": "Score d'adéquation {{score}}",
+    "confirmDeletePrediction": "Confirmer la suppression de cette prédiction ?"
+  },
+  "teamAggregate": {
+    "empty": "Aucun observé ajouté, impossible de générer l'analyse d'équipe",
+    "teamTraitProfile": "Profil de traits de l'équipe",
+    "basedOn": "Basé sur {{count}} observés",
+    "temperamentDiversity": "Diversité des tempéraments",
+    "abilityDiversity": "Diversité des aptitudes",
+    "teamAbilityAverage": "Moyenne des aptitudes de l'équipe",
+    "temperamentDistribution": "Distribution du tempérament dominant",
+    "motivationAverage": "Moyenne des motivations",
+    "thinkingStyleAverage": "Moyenne des styles de pensée",
+    "percentage": "Pourcentage"
+  },
+  "observerList": {
+    "empty": "Aucun observé pour le moment",
+    "noProfession": "Aucune profession précisée",
+    "delete": "Supprimer",
+    "deleteConfirm": "Confirmer la suppression de l'observé « {{name}} » ? Cette action est irréversible."
+  },
+  "taskBuilder": {
+    "backToMax": "Retour à l'espace Max",
+    "title": "Nouvelle prédiction de tâche",
+    "subtitle": "Configurez les paramètres de la tâche et de l'équipe, le système prédira l'accomplissement en fonction des dimensions de tempérament et d'aptitude",
+    "taskName": "Nom de la tâche",
+    "taskNamePlaceholder": "ex. Sprint de lancement produit T4",
+    "inputMode": "Mode de saisie",
+    "template": "Modèle",
+    "custom": "Personnalisé",
+    "selectTemplate": "Sélectionner un modèle de tâche",
+    "templateHint": "Vous pouvez affiner les paramètres après avoir sélectionné un modèle",
+    "basicParameters": "Paramètres de base",
+    "taskTypes": "Types de tâches (plusieurs)",
+    "difficulty": "Difficulté",
+    "collaboration": "Collaboration",
+    "timePressure": "Pression temporelle",
+    "riskTolerance": "Tolérance au risque",
+    "independent": "Indépendant",
+    "fullCollaboration": "Collaboration totale",
+    "relaxed": "Détendu",
+    "urgent": "Urgent",
+    "zeroError": "Zéro erreur",
+    "encourageRisk": "Encourager le risque",
+    "abilityRequirements": "Exigences d'aptitude (0-100)",
+    "abilityReqHint": "Seuils minimum d'aptitude pour cette tâche, superposés sur le diagramme radar pour comparer avec les aptitudes de l'équipe",
+    "motivationRequirements": "Exigences de motivation (0-100)",
+    "motivationReqHint": "Intensité de motivation attendue, plus élevée signifie plus de dépendance",
+    "thinkingRequirements": "Exigences de style de pensée (0-100)",
+    "thinkingReqHint": "0=extrémité gauche, 100=extrémité droite, 50=neutre",
+    "teamConfiguration": "Configuration de l'équipe",
+    "teamConfigHint": "Sélectionnez les observés pour cette tâche ({{count}} sélectionné(s))",
+    "emptyObservers": "Aucun observé pour le moment, ajoutez-en d'abord dans l'espace de travail",
+    "assignKeyRole": "Assigner un rôle clé (chef, leadership/résilience pondérés 2x)",
+    "selectKeyMember": "Sélectionner le membre clé",
+    "predicting": "Prédiction...",
+    "generatePrediction": "Générer la prédiction",
+    "predictionFailed": "Échec de la prédiction, veuillez réessayer"
+  },
+  "taskTypes": {
+    "creative": "Créatif",
+    "execution": "Exécution",
+    "communication": "Communication",
+    "analysis": "Analyse",
+    "leadership": "Leadership",
+    "resilience": "Résilience"
+  },
+  "taskResult": {
+    "backToMax": "Retour à l'espace Max",
+    "taskNotFound": "Tâche introuvable",
+    "deleteTask": "Supprimer la tâche",
+    "badge": "Résultat de la prédiction de tâche",
+    "basedOn": "Basé sur les dimensions de tempérament et d'aptitude de {{count}} observés sélectionnés",
+    "completionProbability": "Probabilité d'accomplissement",
+    "goodProspects": "Bonnes perspectives",
+    "moderateRisk": "Risque modéré",
+    "poorProspects": "Perspectives faibles",
+    "fitMeta": "Score d'adéquation {{fit}} · Difficulté {{difficulty}} · Pression temporelle {{timePressure}} · Tolérance au risque {{riskTolerance}}",
+    "fitRadar": "Diagramme radar d'adéquation",
+    "taskRequirements": "Exigences de la tâche",
+    "teamActual": "Réel de l'équipe",
+    "recommendedMembers": "Membres principaux recommandés (Top 3 par adéquation)",
+    "overallFitScore": "Score d'adéquation global",
+    "strengths": "Points forts",
+    "requiredActual": "Requis {{required}} · Réel {{actual}}",
+    "riskPoints": "Points de risque ({{count}})",
+    "riskRequired": "Requis {{required}} · Réel {{actual}} · Écart {{gap}}",
+    "noRisk": "Aucun point de risque détecté, la configuration de l'équipe correspond bien aux exigences de la tâche",
+    "detailedMatch": "Correspondance détaillée",
+    "abilityDimensions": "Dimensions d'aptitude",
+    "motivationMatch": "Correspondance des motivations",
+    "thinkingStyle": "Style de pensée",
+    "riskLow": "Faible",
+    "riskMedium": "Moyen",
+    "riskHigh": "Élevé",
+    "confirmDeleteTask": "Confirmer la suppression de la tâche « {{name}} » ?"
+  },
+  "privacy": {
+    "title": "Politique de confidentialité",
+    "back": "Retour",
+    "lastUpdated": "Dernière mise à jour : 30 juillet 2026",
+    "sections": {
+      "infoCollection": {
+        "title": "1. Collecte d'informations",
+        "p1": "Nous collectons des informations incluant mais sans s'y limiter : les adresses e-mail, les mots de passe de compte (chiffrés), les résultats d'évaluation et les données de gestion d'équipe. Ces informations sont utilisées pour fournir des services personnalisés, améliorer l'expérience utilisateur et protéger la sécurité du compte.",
+        "p2": "Pour les utilisateurs de la version gratuite, les données sont stockées localement dans le navigateur et ne sont pas téléchargées sur les serveurs. Pour les utilisateurs des versions Pro et Max, les données sont stockées sur nos serveurs sécurisés pour permettre l'accès multi-appareils et les fonctionnalités de collaboration d'équipe."
+      },
+      "infoUsage": {
+        "title": "2. Utilisation des informations",
+        "p1": "Nous utilisons les informations collectées pour :",
+        "l1": "Fournir, maintenir et améliorer nos services",
+        "l2": "Traiter vos abonnements et paiements",
+        "l3": "Envoyer des notifications et mises à jour liées au service",
+        "l4": "Analyser les tendances d'utilisation pour optimiser les fonctionnalités du produit",
+        "l5": "Prévenir la fraude et assurer la sécurité de la plateforme"
+      },
+      "infoSharing": {
+        "title": "3. Partage d'informations",
+        "p1": "Nous ne vendons, n'échangeons ni ne transférons autrement vos informations personnelles à des tiers. Toutefois, nous pouvons partager vos informations dans les circonstances suivantes :",
+        "l1": "Avec votre consentement explicite",
+        "l2": "Avec les prestataires de services qui nous aident à fonctionner (tels que les processeurs de paiement, les fournisseurs de services cloud)",
+        "l3": "Pour nous conformer aux obligations légales ou répondre aux demandes gouvernementales légales",
+        "l4": "Pour protéger nos droits, notre vie privée, notre sécurité ou nos biens"
+      },
+      "dataSecurity": {
+        "title": "4. Sécurité des données",
+        "p1": "Nous employons des mesures de sécurité conformes aux normes de l'industrie pour protéger vos informations, incluant mais sans s'y limiter : transmission chiffrée des données (HTTPS), hachage des mots de passe, contrôles d'accès et audits de sécurité réguliers. Toutefois, aucune transmission Internet ni méthode de stockage électronique n'est sécurisée à 100 %, et nous ne pouvons garantir une sécurité absolue."
+      },
+      "cookies": {
+        "title": "5. Cookies et technologies de suivi",
+        "p1": "Nous utilisons des cookies et des technologies de suivi similaires pour collecter des informations, améliorer les performances du service et personnaliser l'expérience utilisateur. Vous pouvez gérer les préférences de cookies dans les paramètres de votre navigateur, mais la désactivation des cookies peut affecter le fonctionnement de certaines fonctionnalités."
+      },
+      "rights": {
+        "title": "6. Vos droits",
+        "p1": "Vous avez le droit de :",
+        "l1": "Accéder à vos informations personnelles et les mettre à jour",
+        "l2": "Demander la suppression de votre compte et des données associées",
+        "l3": "Vous désabonner des communications marketing",
+        "l4": "Demander une copie de vos données",
+        "l5": "Vous opposer à certaines activités de traitement de données"
+      },
+      "policyUpdates": {
+        "title": "7. Mises à jour de la politique",
+        "p1": "Nous pouvons mettre à jour cette politique de confidentialité de temps à autre. Les changements importants vous seront notifiés de manière bien visible sur cette page. L'utilisation continue de nos services indique votre acceptation de la politique mise à jour."
+      },
+      "contact": {
+        "title": "8. Nous contacter",
+        "p1": "Si vous avez des questions ou des suggestions concernant cette politique de confidentialité, veuillez nous contacter à :"
+      }
+    }
+  },
+  "terms": {
+    "title": "Conditions d'utilisation",
+    "back": "Retour",
+    "lastUpdated": "Dernière mise à jour : 30 juillet 2026",
+    "sections": {
+      "serviceDesc": {
+        "title": "1. Description du service",
+        "p1": "L'évaluation de personnalité est un outil d'évaluation de personnalité basé sur la théorie psychologique, conçu pour aider les utilisateurs dans leur auto-exploration et leur développement personnel. Nous proposons une version gratuite et des versions d'abonnement payantes (Pro et Max).",
+        "p2": "<strong>Avertissement important :</strong> Cette application est destinée à l'auto-exploration et au divertissement uniquement et ne constitue pas une évaluation psychologique professionnelle ou un conseil médical. Les résultats de l'évaluation ne doivent pas être utilisés comme seule base pour un diagnostic clinique, des décisions médicales ou des choix de carrière."
+      },
+      "userAccount": {
+        "title": "2. Compte utilisateur",
+        "p1": "L'utilisation des versions Pro ou Max nécessite une inscription au compte. Vous acceptez de :",
+        "l1": "Fournir des informations d'inscription exactes, complètes et à jour",
+        "l2": "Protéger la sécurité et la confidentialité du mot de passe de votre compte",
+        "l3": "Assumer la responsabilité de toutes les activités sous votre compte",
+        "l4": "Nous notifier immédiatement en cas d'utilisation non autorisée"
+      },
+      "subscriptions": {
+        "title": "3. Abonnements et paiements",
+        "p1": "<strong>Offres d'abonnement :</strong>",
+        "l1": "Version Pro : $5/mois, $17/6 mois, $27/an",
+        "l2": "Version Max : $12/mois, $43/6 mois, $79/an",
+        "p2": "<strong>Politique de paiement :</strong>",
+        "l3": "Les abonnements se renouvellent automatiquement sauf annulation avant la date de renouvellement",
+        "l4": "Les prix peuvent changer à tout moment ; les abonnements existants ne sont pas affectés",
+        "l5": "Tous les frais sont en USD et peuvent inclure des taxes",
+        "l6": "Les paiements sont traités via des plateformes de paiement tierces"
+      },
+      "refund": {
+        "title": "4. Politique de remboursement",
+        "p1": "Nous proposons la politique de remboursement suivante :",
+        "l1": "Remboursement intégral disponible dans les 7 jours suivant le premier abonnement",
+        "l2": "Les frais de renouvellement ne sont pas remboursables sauf si le service présente des défauts significatifs",
+        "l3": "Les demandes de remboursement doivent être soumises via l'e-mail de support",
+        "l4": "Les remboursements seront traités dans un délai de 5 à 10 jours ouvrables après approbation"
+      },
+      "acceptableUse": {
+        "title": "5. Utilisation acceptable",
+        "p1": "Vous acceptez de ne pas :",
+        "l1": "Utiliser le service à des fins illégales ou enfreindre toute loi",
+        "l2": "Porter atteinte à la propriété intellectuelle ou à d'autres droits d'autrui",
+        "l3": "Diffuser des virus, du code malveillant ou d'autres contenus nuisibles",
+        "l4": "Tenter de craquer, de faire de l'ingénierie inverse ou d'interférer avec le fonctionnement du service",
+        "l5": "Usurper l'identité d'autrui ou fournir de fausses informations",
+        "l6": "Partager votre compte avec d'autres"
+      },
+      "intellectualProperty": {
+        "title": "6. Propriété intellectuelle",
+        "p1": "Tout le contenu, les fonctionnalités et les services sont protégés par les lois sur la propriété intellectuelle. Sans notre autorisation écrite, vous ne pouvez pas :",
+        "l1": "Copier, modifier, distribuer ou afficher tout contenu",
+        "l2": "Créer des œuvres dérivées ou utiliser le contenu à des fins commerciales",
+        "l3": "Supprimer les mentions de copyright ou les marquages de propriété"
+      },
+      "disclaimer": {
+        "title": "7. Avertissement",
+        "p1": "<strong>Le service est fourni « tel quel » sans aucune garantie expresse ou implicite.</strong> Nous ne sommes pas responsables de :",
+        "l1": "La continuité, la sécurité ou l'absence d'erreur du service",
+        "l2": "L'exactitude ou l'applicabilité des résultats d'évaluation",
+        "l3": "Toute décision prise sur la base des résultats d'évaluation",
+        "l4": "Des pertes résultant de l'utilisation ou de l'impossibilité d'utiliser le service",
+        "l5": "Des actions ou contenus de tiers"
+      },
+      "liability": {
+        "title": "8. Limitation de responsabilité",
+        "p1": "Dans la mesure maximale permise par la loi applicable, notre responsabilité totale ne dépassera pas les frais que vous avez payés au cours des 12 derniers mois. Nous ne sommes pas responsables des dommages indirects, accessoires, spéciaux ou consécutifs."
+      },
+      "serviceChanges": {
+        "title": "9. Modifications et résiliation du service",
+        "p1": "Nous nous réservons le droit de :",
+        "l1": "Modifier, suspendre ou résilier le service (en tout ou partie) à tout moment",
+        "l2": "Supprimer des comptes et toutes les données associées",
+        "l3": "Restreindre les permissions d'utilisation pour certains utilisateurs",
+        "l4": "Modifier les prix et les fonctionnalités",
+        "p2": "Si le service est résilié, nous notifierons les utilisateurs 30 jours à l'avance et fournirons des options de remboursement ou de compensation raisonnables."
+      },
+      "disputes": {
+        "title": "10. Résolution des litiges",
+        "p1": "Tout litige découlant de ces conditions sera d'abord résolu par négociation à l'amiable. En cas d'échec de la négociation, le litige sera soumis au tribunal compétent dans le lieu du prestataire de services. Ces conditions sont régies par les lois de la République populaire de Chine."
+      },
+      "miscellaneous": {
+        "title": "11. Divers",
+        "l1": "Ces conditions constituent l'intégralité de l'accord entre vous et nous",
+        "l2": "Notre non-exercice d'un droit ne constitue pas une renonciation à ce droit",
+        "l3": "Si une disposition de ces conditions est jugée invalide, les autres conditions restent en vigueur",
+        "l4": "Nous pouvons céder cet accord à tout moment ; vous avez besoin de notre consentement pour le céder"
+      },
+      "contact": {
+        "title": "12. Nous contacter",
+        "p1": "Pour toute question ou suggestion, veuillez contacter :"
+      }
+    }
+  }
+}

@@ -1,13 +1,14 @@
 import { useState } from 'react';
 import { Trash2, ChevronRight, User as UserIcon, Loader2 } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 import type { Observer } from '../../types/account';
 import type { TemperamentType } from '../../types';
 
-const TEMPERAMENT_BADGE: Record<TemperamentType, { label: string; bg: string; color: string }> = {
-  sanguine: { label: 'San', bg: 'bg-[#FDF0E6]', color: 'text-[#E8A87C]' },
-  choleric: { label: 'Cho', bg: 'bg-[#FBE8E6]', color: 'text-[#D96459]' },
-  phlegmatic: { label: 'Phl', bg: 'bg-[#E8F0F8]', color: 'text-[#6B9AC4]' },
-  melancholic: { label: 'Mel', bg: 'bg-[#F0ECF8]', color: 'text-[#8E7CC3]' },
+const TEMPERAMENT_BADGE: Record<TemperamentType, { bg: string; color: string }> = {
+  sanguine: { bg: 'bg-[#FDF0E6]', color: 'text-[#E8A87C]' },
+  choleric: { bg: 'bg-[#FBE8E6]', color: 'text-[#D96459]' },
+  phlegmatic: { bg: 'bg-[#E8F0F8]', color: 'text-[#6B9AC4]' },
+  melancholic: { bg: 'bg-[#F0ECF8]', color: 'text-[#8E7CC3]' },
 };
 
 const GENDER_LABEL: Record<string, string> = {
@@ -38,10 +39,11 @@ export default function ObserverList({
   onToggleSelect,
   emptyHint,
 }: Props) {
+  const { t } = useTranslation();
   const [deletingId, setDeletingId] = useState<string | null>(null);
 
   const handleDelete = async (id: string, name: string) => {
-    if (!confirm(`Confirm delete observer "${name}"? This action cannot be undone.`)) return;
+    if (!confirm(t('observerList.deleteConfirm', { name }))) return;
     setDeletingId(id);
     try {
       await onDelete(id);
@@ -64,7 +66,7 @@ export default function ObserverList({
         <div className="w-12 h-12 rounded-full bg-[#5B4FCF]/10 flex items-center justify-center mx-auto mb-3">
           <UserIcon className="w-6 h-6 text-[#5B4FCF]" />
         </div>
-        <p className="text-sm text-[#8E8CA8]">{emptyHint || 'No observers yet'}</p>
+        <p className="text-sm text-[#8E8CA8]">{emptyHint || t('observerList.empty')}</p>
       </div>
     );
   }
@@ -72,7 +74,8 @@ export default function ObserverList({
   return (
     <div className="rounded-[20px] bg-white/60 backdrop-blur-[10px] border border-white/50 overflow-hidden">
       {observers.map((ob, i) => {
-        const badge = TEMPERAMENT_BADGE[ob.result?.temperament || 'sanguine'];
+        const temperamentKey = ob.result?.temperament || 'sanguine';
+        const badge = TEMPERAMENT_BADGE[temperamentKey];
         const isSelected = selectedIds.includes(ob.id);
         return (
           <div
@@ -106,10 +109,10 @@ export default function ObserverList({
                   {GENDER_LABEL[ob.gender] && (
                     <span className="text-xs text-[#8E8CA8]">{GENDER_LABEL[ob.gender]}</span>
                   )}
-                  <span className={`px-1.5 py-0.5 rounded text-xs ${badge.bg} ${badge.color}`}>{badge.label}</span>
+                  <span className={`px-1.5 py-0.5 rounded text-xs ${badge.bg} ${badge.color}`}>{t(`temperament.${temperamentKey}.badge`)}</span>
                 </div>
                 <div className="text-xs text-[#8E8CA8] mt-0.5 truncate">
-                  {ob.profession || 'No profession specified'}
+                  {ob.profession || t('observerList.noProfession')}
                   {ob.note && ` · ${ob.note}`}
                 </div>
               </div>
@@ -124,7 +127,7 @@ export default function ObserverList({
                 onClick={() => handleDelete(ob.id, ob.name)}
                 disabled={deletingId === ob.id}
                 className="flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center text-[#8E8CA8] hover:text-red-500 hover:bg-red-50/60 transition-all disabled:opacity-40"
-                title="Delete"
+                title={t('observerList.delete')}
               >
                 {deletingId === ob.id ? (
                   <Loader2 className="w-4 h-4 animate-spin" />

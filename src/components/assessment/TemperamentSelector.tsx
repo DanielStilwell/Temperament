@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import type { TemperamentType, AbilityDimension } from '../../types';
+import { useTranslation } from 'react-i18next';
 
 interface ComprehensiveEvaluation {
   temperament: TemperamentType | 'unknown';
@@ -12,38 +13,39 @@ interface TemperamentSelectorProps {
   onSelect: (evaluation: ComprehensiveEvaluation) => void;
 }
 
-const temperamentOptions: { id: TemperamentType; name: string; desc: string; color: string }[] = [
-  { id: 'sanguine', name: 'Sanguine', desc: 'Sociable, quick response', color: '#E8A87C' },
-  { id: 'choleric', name: 'Choleric', desc: 'Decisive, strong drive', color: '#D96459' },
-  { id: 'phlegmatic', name: 'Phlegmatic', desc: 'Calm, emotionally stable', color: '#6B9AC4' },
-  { id: 'melancholic', name: 'Melancholic', desc: 'Sensitive, deep thinker', color: '#8E7CC3' },
+const temperamentOptions: { id: TemperamentType; color: string }[] = [
+  { id: 'sanguine', color: '#E8A87C' },
+  { id: 'choleric', color: '#D96459' },
+  { id: 'phlegmatic', color: '#6B9AC4' },
+  { id: 'melancholic', color: '#8E7CC3' },
 ];
 
 const behaviorOptions = [
-  { id: 'proactive', name: 'Proactive', desc: 'Takes initiative, not waiting' },
-  { id: 'rational', name: 'Rational Analysis', desc: 'Calm thinking, weighing pros & cons' },
-  { id: 'collaborative', name: 'Collaborative', desc: 'Seeks support, solves together' },
-  { id: 'creative', name: 'Innovative', desc: 'Tries new methods, breaks conventions' },
+  { id: 'proactive' },
+  { id: 'rational' },
+  { id: 'collaborative' },
+  { id: 'creative' },
 ];
 
-const abilityOptions: { id: AbilityDimension; name: string }[] = [
-  { id: 'communication', name: 'Communication' },
-  { id: 'leadership', name: 'Leadership' },
-  { id: 'creativity', name: 'Creativity' },
-  { id: 'analysis', name: 'Analysis' },
-  { id: 'resilience', name: 'Resilience' },
-  { id: 'empathy', name: 'Empathy' },
+const abilityOptions: { id: AbilityDimension }[] = [
+  { id: 'communication' },
+  { id: 'leadership' },
+  { id: 'creativity' },
+  { id: 'analysis' },
+  { id: 'resilience' },
+  { id: 'empathy' },
 ];
 
 const emotionOptions = [
-  { id: 'positive', name: 'Positive', color: '#4CAF50' },
-  { id: 'neutral', name: 'Neutral', color: '#9E9E9E' },
-  { id: 'negative', name: 'Negative/Avoidant', color: '#FF9800' },
-  { id: 'anxious', name: 'Anxious', color: '#F44336' },
-  { id: 'unknown', name: 'Uncertain', color: '#8E8CA8' },
+  { id: 'positive', color: '#4CAF50' },
+  { id: 'neutral', color: '#9E9E9E' },
+  { id: 'negative', color: '#FF9800' },
+  { id: 'anxious', color: '#F44336' },
+  { id: 'unknown', color: '#8E8CA8' },
 ];
 
 export default function TemperamentSelector({ onSelect }: TemperamentSelectorProps) {
+  const { t } = useTranslation();
   const [temperament, setTemperament] = useState<TemperamentType | 'unknown' | null>(null);
   const [behaviors, setBehaviors] = useState<string[]>([]);
   const [abilities, setAbilities] = useState<AbilityDimension[]>([]);
@@ -73,14 +75,14 @@ export default function TemperamentSelector({ onSelect }: TemperamentSelectorPro
   return (
     <div className="fixed inset-0 bg-black/30 backdrop-blur-sm flex items-center justify-center p-4 z-50 overflow-y-auto">
       <div className="w-full max-w-[440px] rounded-[24px] bg-white p-5 shadow-xl my-4">
-        <h3 className="text-lg font-bold text-[#3D3A5C] mb-1">Evaluate this behavioral tendency</h3>
-        <p className="text-sm text-[#8E8CA8] mb-4">Judge based on the observer's real situation</p>
+        <h3 className="text-lg font-bold text-[#3D3A5C] mb-1">{t('assessment.selectorTitle')}</h3>
+        <p className="text-sm text-[#8E8CA8] mb-4">{t('assessment.selectorHint')}</p>
 
         {/* 气质类型 */}
         <div className="mb-4">
           <h4 className="text-sm font-semibold text-[#5A5880] mb-2 flex items-center gap-2">
             <span className="w-1.5 h-1.5 rounded-full bg-[#5B4FCF]" />
-            Temperament Type <span className="text-[#F44336]">*</span>
+            {t('assessment.temperamentType')} <span className="text-[#F44336]">*</span>
           </h4>
           <div className="grid grid-cols-2 gap-2">
             {temperamentOptions.map((opt) => (
@@ -96,8 +98,8 @@ export default function TemperamentSelector({ onSelect }: TemperamentSelectorPro
                 <div className="flex items-center gap-2">
                   <div className="w-2.5 h-2.5 rounded-full" style={{ backgroundColor: opt.color }} />
                   <div>
-                    <div className="text-sm font-semibold text-[#3D3A5C]">{opt.name}</div>
-                    <div className="text-xs text-[#8E8CA8]">{opt.desc}</div>
+                    <div className="text-sm font-semibold text-[#3D3A5C]">{t(`temperament.${opt.id}.name`)}</div>
+                    <div className="text-xs text-[#8E8CA8]">{t(`temperament.${opt.id}.desc`)}</div>
                   </div>
                 </div>
               </button>
@@ -109,7 +111,7 @@ export default function TemperamentSelector({ onSelect }: TemperamentSelectorPro
         <div className="mb-4">
           <h4 className="text-sm font-semibold text-[#5A5880] mb-2 flex items-center gap-2">
             <span className="w-1.5 h-1.5 rounded-full bg-[#5B4FCF]" />
-            Behavioral Tendency <span className="text-xs text-[#8E8CA8]">(multiple)</span>
+            {t('assessment.behavioralTendency')} <span className="text-xs text-[#8E8CA8]">(multiple)</span>
           </h4>
           <div className="grid grid-cols-2 gap-2">
             {behaviorOptions.map((opt) => (
@@ -122,8 +124,8 @@ export default function TemperamentSelector({ onSelect }: TemperamentSelectorPro
                     : 'border-[#E8E6F5] bg-white hover:border-[#C5C0E8]'
                 }`}
               >
-                <div className="text-sm font-medium text-[#3D3A5C]">{opt.name}</div>
-                <div className="text-xs text-[#8E8CA8]">{opt.desc}</div>
+                <div className="text-sm font-medium text-[#3D3A5C]">{t(`behaviors.${opt.id}`)}</div>
+                <div className="text-xs text-[#8E8CA8]">{t(`behaviors.${opt.id}Desc`)}</div>
               </button>
             ))}
           </div>
@@ -133,7 +135,7 @@ export default function TemperamentSelector({ onSelect }: TemperamentSelectorPro
         <div className="mb-4">
           <h4 className="text-sm font-semibold text-[#5A5880] mb-2 flex items-center gap-2">
             <span className="w-1.5 h-1.5 rounded-full bg-[#5B4FCF]" />
-            Key Abilities <span className="text-xs text-[#8E8CA8]">(multiple)</span>
+            {t('assessment.keyAbilities')} <span className="text-xs text-[#8E8CA8]">(multiple)</span>
           </h4>
           <div className="flex flex-wrap gap-2">
             {abilityOptions.map((opt) => (
@@ -146,7 +148,7 @@ export default function TemperamentSelector({ onSelect }: TemperamentSelectorPro
                     : 'border-[#E8E6F5] bg-white text-[#5A5880] hover:border-[#C5C0E8]'
                 }`}
               >
-                {opt.name}
+                {t(`abilities.${opt.id}`)}
               </button>
             ))}
           </div>
@@ -156,7 +158,7 @@ export default function TemperamentSelector({ onSelect }: TemperamentSelectorPro
         <div className="mb-5">
           <h4 className="text-sm font-semibold text-[#5A5880] mb-2 flex items-center gap-2">
             <span className="w-1.5 h-1.5 rounded-full bg-[#5B4FCF]" />
-            Emotional Tone <span className="text-[#F44336]">*</span>
+            {t('assessment.emotionalTone')} <span className="text-[#F44336]">*</span>
           </h4>
           <div className="flex flex-wrap gap-2">
             {emotionOptions.map((opt) => (
@@ -169,7 +171,7 @@ export default function TemperamentSelector({ onSelect }: TemperamentSelectorPro
                     : 'border-[#E8E6F5] bg-white text-[#5A5880] hover:border-[#C5C0E8]'
                 }`}
               >
-                {opt.name}
+                {t(`emotions.${opt.id}`)}
               </button>
             ))}
           </div>
@@ -185,14 +187,14 @@ export default function TemperamentSelector({ onSelect }: TemperamentSelectorPro
             })}
             className="flex-1 py-3 rounded-full border-2 border-[#E8E6F5] text-[#8E8CA8] font-semibold transition-all hover:bg-[#F5F3FF]"
           >
-            Skip (auto-analyze)
+            {t('assessment.skipAuto')}
           </button>
           <button
             onClick={handleConfirm}
             disabled={!isValid}
             className="flex-1 py-3 rounded-full bg-[#5B4FCF] text-white font-semibold transition-all hover:bg-[#4B3FBF] disabled:opacity-40 disabled:cursor-not-allowed"
           >
-            Confirm
+            {t('assessment.selectorConfirm')}
           </button>
         </div>
       </div>

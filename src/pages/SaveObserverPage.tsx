@@ -1,8 +1,10 @@
 import { useState, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
-import { Save, Loader2, CheckCircle2, AlertCircle } from 'lucide-react';
+import { useNavigate, Link } from 'react-router-dom';
+import { Save, Loader2, CheckCircle2, AlertCircle, ArrowLeft } from 'lucide-react';
+import { useTranslation, Trans } from 'react-i18next';
 import Button from '../components/ui/Button';
 import Disclaimer from '../components/ui/Disclaimer';
+import LanguageSwitcher from '../components/ui/LanguageSwitcher';
 import useAssessmentStore from '../stores/assessment';
 import { useAuthStore } from '../stores/auth';
 import { createObserver } from '../lib/observers';
@@ -10,6 +12,7 @@ import { TIER_LIMITS } from '../lib/supabase';
 import type { AccountTier } from '../types/account';
 
 export default function SaveObserverPage() {
+  const { t } = useTranslation();
   const navigate = useNavigate();
   const { result, answers, profession, observerDraft, reset, clearObserverDraft } = useAssessmentStore.getState();
   const profile = useAuthStore((s) => s.profile);
@@ -49,7 +52,7 @@ export default function SaveObserverPage() {
       await fetchProfile();
     } catch (e: any) {
       console.error(e);
-      setError(e?.message || 'Save failed, please try again');
+      setError(e?.message || t('observer.save.saveFailed'));
     } finally {
       setSubmitting(false);
     }
@@ -69,13 +72,16 @@ export default function SaveObserverPage() {
             <div className="w-14 h-14 rounded-full bg-green-100 flex items-center justify-center">
               <CheckCircle2 className="w-7 h-7 text-green-600" />
             </div>
-            <h3 className="text-xl font-bold text-[#3D3A5C]">Observer Saved</h3>
+            <h3 className="text-xl font-bold text-[#3D3A5C]">{t('observer.save.savedTitle')}</h3>
             <p className="text-sm text-[#8E8CA8] leading-relaxed">
-              Assessment results for <span className="font-medium text-[#3D3A5C]">{observerDraft.name}</span> have been added to your team.
-              You can view them anytime from the workspace.
+              <Trans
+                i18nKey="observer.save.savedDesc"
+                components={{ name: <span className="font-medium text-[#3D3A5C]" /> }}
+                values={{ name: observerDraft.name }}
+              />
             </p>
             <Button variant="primary" size="lg" fullWidth onClick={handleDone}>
-              Back to Workspace
+              {t('observer.save.backToWorkspace')}
             </Button>
           </div>
         </div>
@@ -86,42 +92,40 @@ export default function SaveObserverPage() {
   return (
     <div className="min-h-screen flex items-center justify-center p-4">
       <div className="w-full max-w-[420px] md:max-w-[520px] flex flex-col gap-5">
+        <div className="flex items-center justify-between">
+          <Link to={backLink} className="inline-flex items-center gap-1.5 text-sm text-[#8E8CA8] hover:text-[#5B4FCF] transition-colors">
+            <ArrowLeft className="w-4 h-4" />
+            {t('observer.save.backToWorkspace')}
+          </Link>
+          <LanguageSwitcher />
+        </div>
         <div className="rounded-[20px] bg-gradient-to-br from-[#5B4FCF] to-[#7B6FE0] p-6 text-white">
           <div className="flex items-center gap-3 mb-2">
             <div className="w-10 h-10 rounded-xl bg-white/20 flex items-center justify-center">
               <Save className="w-5 h-5" />
             </div>
             <h2 className="text-xl font-bold" style={{ fontFamily: "'Nunito', 'PingFang SC', sans-serif" }}>
-              Confirm Save Observer
+              {t('observer.save.title')}
             </h2>
           </div>
-          <p className="text-white/80 text-sm">Please confirm the information below before saving to your team</p>
+          <p className="text-white/80 text-sm">{t('observer.save.subtitle')}</p>
         </div>
 
         <div className="rounded-[20px] bg-white/60 backdrop-blur-[10px] border border-white/50 p-6 flex flex-col gap-3">
-          <InfoRow label="Name" value={observerDraft.name} />
+          <InfoRow label={t('observer.save.name')} value={observerDraft.name} />
           <InfoRow
-            label="Gender"
-            value={
-              { male: 'Male', female: 'Female', other: 'Other', unknown: 'Prefer not to say' }[observerDraft.gender]
-            }
+            label={t('observer.save.gender')}
+            value={t(`observer.add.${observerDraft.gender}`)}
           />
-          <InfoRow label="Profession" value={profession} />
-          {observerDraft.note && <InfoRow label="Note" value={observerDraft.note} />}
+          <InfoRow label={t('observer.save.profession')} value={profession} />
+          {observerDraft.note && <InfoRow label={t('observer.save.note')} value={observerDraft.note} />}
           <InfoRow
-            label="Dominant Temperament"
-            value={
-              {
-                sanguine: 'Sanguine',
-                choleric: 'Choleric',
-                phlegmatic: 'Phlegmatic',
-                melancholic: 'Melancholic',
-              }[result.temperament]
-            }
+            label={t('observer.save.dominantTemperament')}
+            value={t(`temperament.${result.temperament}.name`)}
           />
           {profile && (tier === 'pro' || tier === 'max') && (
             <div className="text-xs text-[#8E8CA8] mt-2 pt-3 border-t border-[#E8E6F5]">
-              Current plan: {tier.toUpperCase()} · Observer limit: {TIER_LIMITS[tier]}
+              {t('observer.save.currentPlan', { tier: tier.toUpperCase(), limit: TIER_LIMITS[tier] })}
             </div>
           )}
         </div>
@@ -146,10 +150,10 @@ export default function SaveObserverPage() {
           {submitting ? (
             <>
               <Loader2 className="w-5 h-5 animate-spin" />
-              Saving...
+              {t('observer.save.saving')}
             </>
           ) : (
-            'Confirm Save to Team'
+            t('observer.save.confirmSave')
           )}
         </Button>
       </div>

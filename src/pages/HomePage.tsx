@@ -1,10 +1,11 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Sparkles, Handshake, GraduationCap, Briefcase, Building2, Palette, Camera, BookOpen, Stethoscope } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 import BrandSection from '../components/home/BrandSection';
 import IntroCards from '../components/home/IntroCards';
 import Disclaimer from '../components/ui/Disclaimer';
-import Card from '../components/ui/Card';
+import LanguageSwitcher from '../components/ui/LanguageSwitcher';
 import Button from '../components/ui/Button';
 import useAssessmentStore from '../stores/assessment';
 import { professionList } from '../data/professions';
@@ -15,6 +16,7 @@ const iconMap: Record<string, React.ComponentType<{ className?: string; style?: 
 };
 
 export default function HomePage() {
+  const { t } = useTranslation();
   const navigate = useNavigate();
   const setProfession = useAssessmentStore((s) => s.setProfession);
   const [selectedProfession, setSelectedProfession] = useState<ProfessionType | null>(null);
@@ -28,17 +30,22 @@ export default function HomePage() {
 
   return (
     <div className="min-h-screen flex items-center justify-center p-4">
-      <div className="w-full max-w-[420px] md:max-w-[520px] lg:max-w-[640px] xl:max-w-[720px] flex flex-col gap-5">
+      <div className="w-full max-w-[420px] md:max-w-[520px] lg:max-w-[640px] xl:max-w-[720px] flex flex-col gap-5 relative">
+        {/* 语言切换器 */}
+        <div className="flex justify-end">
+          <LanguageSwitcher />
+        </div>
+
         <BrandSection />
         <IntroCards />
 
         {/* 职业选择区域 */}
         <div className="rounded-[20px] bg-white/60 backdrop-blur-[10px] border border-white/50 p-5">
           <h3 className="text-sm font-semibold text-[#3D3A5C] mb-3">
-            Select the observer's professional field
+            {t('home.selectProfession')}
           </h3>
           <p className="text-xs text-[#8E8CA8] mb-4 leading-relaxed">
-            Different professions match different real-world scenarios for more precise assessment
+            {t('home.selectProfessionHint')}
           </p>
           <div className="grid grid-cols-2 gap-2">
             {professionList.map((prof) => {
@@ -64,7 +71,7 @@ export default function HomePage() {
                       isSelected ? 'text-[#5B4FCF]' : 'text-[#3D3A5C]'
                     }`}
                   >
-                    {prof.name}
+                    {t(`professions.${prof.id}`)}
                   </span>
                 </button>
               );
@@ -83,7 +90,7 @@ export default function HomePage() {
           className="disabled:opacity-40 disabled:cursor-not-allowed"
         >
           <Sparkles className="w-5 h-5" />
-          {selectedProfession ? 'Start Assessment' : 'Please select a profession first'}
+          {selectedProfession ? t('home.startAssessment') : t('home.pleaseSelectProfession')}
         </Button>
       </div>
     </div>

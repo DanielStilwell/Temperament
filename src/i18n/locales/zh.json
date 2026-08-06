@@ -1,0 +1,635 @@
+{
+  "common": {
+    "back": "返回",
+    "backToHome": "返回首页",
+    "cancel": "取消",
+    "confirm": "确认",
+    "delete": "删除",
+    "save": "保存",
+    "loading": "加载中...",
+    "next": "下一步",
+    "previous": "上一步",
+    "skip": "跳过",
+    "email": "邮箱",
+    "password": "密码",
+    "nickname": "昵称",
+    "search": "搜索",
+    "select": "选择",
+    "selectAll": "全选",
+    "clear": "清空",
+    "close": "关闭",
+    "yes": "是",
+    "no": "否"
+  },
+  "language": {
+    "switch": "语言",
+    "select": "选择语言"
+  },
+  "disclaimer": {
+    "text": "本应用仅供自我探索和娱乐参考，不构成专业心理评估或医疗建议。"
+  },
+  "periods": {
+    "monthly": "按月",
+    "6months": "6 个月",
+    "yearly": "1 年"
+  },
+  "tiers": {
+    "free": {
+      "name": "免费版",
+      "subtitle": "个人气质与能力探索",
+      "cta": "免费开始",
+      "feature1": "评估气质类型",
+      "feature2": "分析 6 项能力维度"
+    },
+    "pro": {
+      "name": "Pro",
+      "subtitle": "团队气质与能力洞察",
+      "cta": "选择 Pro",
+      "feature1": "最多 60 位被观察者",
+      "feature2": "团队气质与能力分析"
+    },
+    "max": {
+      "name": "Max",
+      "subtitle": "任务完成度预测",
+      "cta": "选择 Max",
+      "feature1": "最多 160 位被观察者",
+      "feature2": "团队聚合分析",
+      "feature3": "任务匹配度预测"
+    }
+  },
+  "landing": {
+    "badge": "气质洞察",
+    "titleLine1": "从个人气质洞察出发，",
+    "titleLine2": "构建团队协同 —— 选择适合你的方案",
+    "privacyPolicy": "隐私政策",
+    "termsOfService": "服务条款",
+    "footer": "© {{year}} 气质洞察 · 仅供自我探索与团队洞察参考",
+    "perPeriod": "/ {{period}}",
+    "billedAs": "{{perMonth}} 按 {{display}} 计费"
+  },
+  "home": {
+    "selectProfession": "选择被观察者的职业领域",
+    "selectProfessionHint": "不同职业匹配不同真实场景，评估更精准",
+    "startAssessment": "开始评估",
+    "pleaseSelectProfession": "请先选择职业",
+    "brandBadge": "气质洞察",
+    "brandTitle": "理解气质，释放潜能",
+    "brandSubtitle": "基于情境行为观察的气质与能力评估工具，帮助你客观地了解他人",
+    "introObserverTitle": "观察者视角",
+    "introObserverDesc": "从第三方视角评估行为模式",
+    "introScenariosTitle": "真实场景",
+    "introScenariosDesc": "基于 20 个真实生活场景，捕捉自然的行为反应",
+    "introObjectiveTitle": "客观评估",
+    "introObjectiveDesc": "多维分析气质与能力，非标签化评估"
+  },
+  "login": {
+    "welcomeBack": "欢迎回来",
+    "subtitle": "登录以继续管理你的团队",
+    "emailPlaceholder": "example@email.com",
+    "passwordPlaceholder": "请输入密码",
+    "loggingIn": "登录中...",
+    "loginButton": "登录",
+    "noAccount": "还没有 Pro / Max 账号？",
+    "choosePlan": "选择方案以注册",
+    "support": "客服支持"
+  },
+  "register": {
+    "backToHome": "返回首页",
+    "signUpTitle": "注册 —— {{tier}}",
+    "upgradeTitle": "升级至 {{tier}}",
+    "upgradeSubtitle": "从 {{fromTier}} · {{amount}} · {{period}} 使用权",
+    "signUpSubtitle": "{{display}} · {{period}} 使用权",
+    "nicknameLabel": "昵称",
+    "nicknamePlaceholder": "我们该如何称呼你",
+    "emailPlaceholder": "example@email.com",
+    "passwordLabel": "密码",
+    "passwordPlaceholder": "至少 6 个字符",
+    "signingUp": "注册中...",
+    "signUpPay": "注册并支付 {{amount}}",
+    "haveAccount": "已有账号？",
+    "logIn": "登录",
+    "agreementText": "我已阅读并同意<privacy>隐私政策</privacy>和<terms>服务条款</terms>",
+    "paymentStepTitle": "注册成功，完成支付",
+    "upgradeStepTitle": "完成升级支付",
+    "paymentStepDesc": "我们已向 <email>{{email}}</email> 发送验证邮件。<br/>支付 {{amount}} 即可获得 {{period}} 的 {{tier}} 全部功能使用权。",
+    "upgradeStepDesc": "你当前是 {{fromTier}} 用户。升级至 {{tier}} 需补差价 {{amount}}。<br/>被观察者上限将从 60 扩展到 160，并解锁预测功能。",
+    "orderDetails": "订单详情",
+    "upgradeOrder": "升级订单",
+    "version": "版本",
+    "account": "账号",
+    "amountDue": "应付金额",
+    "paying": "正在跳转到支付...",
+    "payButton": "支付 {{amount}}",
+    "paymentAccess": "支付完成后立即开通使用权限",
+    "pleaseLoginFirst": "支付前请先登录。",
+    "payInitFailed": "支付初始化失败，请重试。",
+    "noCheckoutUrl": "未返回支付链接，请联系客服。",
+    "networkError": "网络异常，请检查网络后重试。"
+  },
+  "paymentCallback": {
+    "backToHome": "← 返回首页",
+    "verifying": "正在验证支付...",
+    "verifyHint": "请稍候，我们正在确认你的支付。",
+    "successTitle": "支付成功！",
+    "upgradeSuccessTitle": "升级完成！",
+    "successDesc": "你的 {{tier}} 版本已开通。现在可以管理团队被观察者了。",
+    "upgradeSuccessDesc": "你的 {{tier}} 版本已开通。被观察者上限已扩展，预测功能已解锁。",
+    "enterWorkspace": "进入 {{tier}} 工作台",
+    "pendingTitle": "支付正在处理中",
+    "pendingDesc": "你的支付已成功提交，确认可能需要片刻。若权限未能及时开通，请联系客服。",
+    "checkAgain": "再次查询",
+    "cancelBack": "取消并返回注册",
+    "errorTitle": "支付未确认",
+    "errorDesc": "我们无法确认你的支付，请重试。",
+    "backToRegister": "返回注册"
+  },
+  "assessment": {
+    "loading": "加载中...",
+    "progressQ": "第 {{current}} / {{total}} 题",
+    "previous": "上一题",
+    "next": "下一题",
+    "viewResults": "查看结果",
+    "customOptionDefault": "其他（描述真实情况）",
+    "customPlaceholder": "描述被观察者的实际反应...",
+    "customConfirm": "确认",
+    "customCancel": "取消",
+    "selectorTitle": "评估这一行为倾向",
+    "selectorHint": "根据被观察者的真实情况判断",
+    "temperamentType": "气质类型",
+    "temperamentTypeRequired": "气质类型 *",
+    "behavioralTendency": "行为倾向",
+    "behavioralTendencyHint": "行为倾向（可多选）",
+    "keyAbilities": "关键能力",
+    "keyAbilitiesHint": "关键能力（可多选）",
+    "emotionalTone": "情绪基调",
+    "emotionalToneRequired": "情绪基调 *",
+    "skipAuto": "跳过（自动分析）",
+    "selectorConfirm": "确认"
+  },
+  "temperament": {
+    "sanguine": {
+      "name": "多血质",
+      "desc": "善于社交，反应敏捷",
+      "badge": "多血"
+    },
+    "choleric": {
+      "name": "胆汁质",
+      "desc": "果断坚决，驱动力强",
+      "badge": "胆汁"
+    },
+    "phlegmatic": {
+      "name": "黏液质",
+      "desc": "沉稳冷静，情绪稳定",
+      "badge": "黏液"
+    },
+    "melancholic": {
+      "name": "抑郁质",
+      "desc": "心思细腻，思考深入",
+      "badge": "抑郁"
+    }
+  },
+  "behaviors": {
+    "proactive": "主动型",
+    "proactiveDesc": "主动出击，不被动等待",
+    "rational": "理性分析",
+    "rationalDesc": "冷静思考，权衡利弊",
+    "collaborative": "协作型",
+    "collaborativeDesc": "寻求支持，共同解决",
+    "creative": "创新型",
+    "creativeDesc": "尝试新方法，突破常规"
+  },
+  "emotions": {
+    "positive": "积极",
+    "neutral": "中性",
+    "negative": "消极/回避",
+    "anxious": "焦虑",
+    "unknown": "不确定"
+  },
+  "abilities": {
+    "communication": "沟通能力",
+    "leadership": "领导能力",
+    "creativity": "创造能力",
+    "analysis": "分析能力",
+    "resilience": "抗压能力",
+    "empathy": "共情能力"
+  },
+  "professions": {
+    "service": "服务行业人员",
+    "student": "学生",
+    "office": "职场办公人员",
+    "civil": "公务员",
+    "artist": "创意工作者",
+    "media": "内容创作者",
+    "teacher": "教育工作者",
+    "doctor": "医疗工作者"
+  },
+  "result": {
+    "loading": "加载中...",
+    "temperamentDistribution": "气质分布",
+    "comprehensiveInterpretation": "综合解读",
+    "abilityRadar": "能力雷达图",
+    "radarStrong": "70+ 优势",
+    "radarBalanced": "40-69 均衡",
+    "radarGrowth": "<40 待提升",
+    "radarPoints": "分",
+    "dimensionDetails": "维度详情",
+    "motivationAnalysis": "💡 动机分析",
+    "dominant": "主导气质：{{name}}",
+    "secondary": "次要气质：{{name}}",
+    "thinkingTitle": "🧠 思维与行为倾向",
+    "thinkingBalanced": "均衡型",
+    "thinkingLean": "倾向 {{name}}",
+    "thinkingBalancedDesc": "兼具两种特质，能够根据情境灵活调整思维与行为",
+    "thinkingFooter": "* 思维与行为倾向并非固定不变，可能随情境与个人成长而调整",
+    "retake": "重新评估",
+    "share": "分享",
+    "shareSuccess": "链接已复制到剪贴板，快去分享给朋友吧！",
+    "shareFail": "分享功能暂不可用",
+    "discard": "丢弃",
+    "saveToTeam": "保存到团队",
+    "discardConfirm": "确定丢弃这位被观察者的评估结果吗？"
+  },
+  "motivations": {
+    "achievement": {
+      "name": "成就动机",
+      "desc": "追求卓越，目标导向，以成功为驱动",
+      "high": "被观察者具有强烈的成就动机，以成功和卓越为驱动力。他们喜欢挑战自我，追求达成目标。面对任务时，他们倾向于设定高标准并努力达成。",
+      "medium": "被观察者具有中等程度的成就动机，在追求目标的同时保持工作与生活的平衡，不过度追求完美。",
+      "low": "被观察者的成就动机相对较弱，相比结果导向更关注过程体验，对竞争与挑战的兴趣较低，偏好稳定舒适的状态。"
+    },
+    "affiliation": {
+      "name": "亲和动机",
+      "desc": "重视关系、归属感与和谐",
+      "high": "被观察者具有强烈的亲和动机，高度重视人际关系与归属感。他们乐于社交，善于建立和维护社交网络，在团队中较为活跃。",
+      "medium": "被观察者具有中等程度的亲和动机，重视关系的同时保持适当的独立性，既能享受社交也能享受独处。",
+      "low": "被观察者的亲和动机相对较弱，更偏好独立工作，对社交活动的需求较低，在团队协作中可能需要更多鼓励。"
+    },
+    "power": {
+      "name": "权力动机",
+      "desc": "追求影响力、控制感与决策权",
+      "high": "被观察者具有强烈的权力动机，希望影响他人并掌控局面。他们喜欢主导决策过程，能够在领导角色中发挥所长。",
+      "medium": "被观察者具有中等程度的权力动机，能在需要时承担领导责任，同时尊重他人意见，不过度追求主导。",
+      "low": "被观察者的权力动机相对较弱，更偏好协作而非领导，对管理或控制他人的兴趣较低，适合执行类角色。"
+    },
+    "security": {
+      "name": "安全动机",
+      "desc": "追求稳定，规避风险，重视安全感",
+      "high": "被观察者具有强烈的安全动机，追求稳定可预期的环境，决策谨慎，规避风险，重视长期规划与保障。",
+      "medium": "被观察者具有中等程度的安全动机，决策时会考虑风险因素但不过于保守，能够在安全与冒险之间取得平衡。",
+      "low": "被观察者的安全动机相对较弱，更愿意冒险尝试新事物，对不确定性的容忍度较高，适合创新或挑战性任务。"
+    }
+  },
+  "thinking": {
+    "proactive": {
+      "name": "主动型",
+      "desc": "主动出击，积极寻求解决方案"
+    },
+    "reactive": {
+      "name": "反应型",
+      "desc": "先观察后行动，倾向于回应而非主动发起"
+    },
+    "rational": {
+      "name": "理性型",
+      "desc": "注重逻辑分析，客观权衡利弊"
+    },
+    "intuitive": {
+      "name": "直觉型",
+      "desc": "重视情感体验，凭直觉做出判断"
+    },
+    "independent": {
+      "name": "独立型",
+      "desc": "偏好独立思考，自主完成任务"
+    },
+    "collaborative": {
+      "name": "协作型",
+      "desc": "善于团队合作，重视集体智慧"
+    },
+    "innovative": {
+      "name": "创新型",
+      "desc": "追求新颖独特的方法，突破常规"
+    },
+    "conventional": {
+      "name": "常规型",
+      "desc": "遵循既有规范，稳健可靠"
+    }
+  },
+  "observer": {
+    "add": {
+      "backToWorkspace": "返回工作台",
+      "title": "添加被观察者",
+      "subtitle": "代理模式：根据你对被观察者的真实了解，选择其在每个场景中的反应",
+      "nameLabel": "被观察者姓名",
+      "nameHint": "（可用化名/编号）",
+      "namePlaceholder": "例如：Alex / Obs-001",
+      "gender": "性别",
+      "male": "男",
+      "female": "女",
+      "other": "其他",
+      "unknown": "不愿透露",
+      "profession": "职业",
+      "professionHint": "不同职业匹配不同的场景题目",
+      "noteLabel": "备注（可选）",
+      "notePlaceholder": "部门、角色、关系等",
+      "preparing": "正在准备题目...",
+      "startAssessment": "开始评估"
+    },
+    "save": {
+      "title": "确认保存被观察者",
+      "subtitle": "保存到团队前，请确认以下信息",
+      "name": "姓名",
+      "gender": "性别",
+      "profession": "职业",
+      "note": "备注",
+      "dominantTemperament": "主导气质",
+      "currentPlan": "当前方案：{{tier}} · 被观察者上限：{{limit}}",
+      "saving": "保存中...",
+      "confirmSave": "确认保存到团队",
+      "savedTitle": "被观察者已保存",
+      "savedDesc": "<name>{{name}}</name> 的评估结果已加入你的团队。可随时在工作台查看。",
+      "backToWorkspace": "返回工作台",
+      "saveFailed": "保存失败，请重试"
+    },
+    "detail": {
+      "backToList": "返回列表",
+      "notFound": "未找到被观察者",
+      "professionNotSpecified": "未指定职业"
+    }
+  },
+  "proWorkspace": {
+    "badge": "Pro 工作台",
+    "welcome": "欢迎，{{name}}",
+    "manager": "管理员",
+    "capacity": "被观察者容量：{{usage}}",
+    "signOut": "退出登录",
+    "addObserver": "添加被观察者",
+    "observers": "被观察者",
+    "teamProfile": "团队画像",
+    "emptyHint": "暂无被观察者，点击上方按钮添加"
+  },
+  "maxWorkspace": {
+    "badge": "Max 工作台",
+    "welcome": "欢迎，{{name}}",
+    "manager": "管理员",
+    "capacity": "被观察者容量：{{usage}}",
+    "signOut": "退出登录",
+    "addObserver": "添加被观察者",
+    "newPrediction": "新建预测",
+    "observers": "被观察者",
+    "selectCombine": "选择并组合",
+    "exitSelection": "退出选择",
+    "selected": "已选 {{count}} 项",
+    "selectAll": "全选",
+    "clear": "清空",
+    "predictTeam": "预测此团队",
+    "teamProfile": "团队画像",
+    "selectedTeamProfile": "所选团队画像（{{count}}）",
+    "predictionRecords": "预测记录",
+    "emptyObservers": "暂无被观察者，点击上方按钮添加",
+    "emptyPredictions": "暂无预测记录，点击上方按钮开始",
+    "noProfession": "未指定职业",
+    "members": "{{count}} 位成员",
+    "fitScore": "匹配度 {{score}}",
+    "confirmDeletePrediction": "确认删除此预测吗？"
+  },
+  "teamAggregate": {
+    "empty": "未添加被观察者，无法生成团队分析",
+    "teamTraitProfile": "团队特质画像",
+    "basedOn": "基于 {{count}} 位被观察者",
+    "temperamentDiversity": "气质多样性",
+    "abilityDiversity": "能力多样性",
+    "teamAbilityAverage": "团队能力均值",
+    "temperamentDistribution": "主导气质分布",
+    "motivationAverage": "动机均值",
+    "thinkingStyleAverage": "思维风格均值",
+    "percentage": "百分比"
+  },
+  "observerList": {
+    "empty": "暂无被观察者",
+    "noProfession": "未指定职业",
+    "delete": "删除",
+    "deleteConfirm": "确认删除被观察者 \"{{name}}\" 吗？此操作无法撤销。"
+  },
+  "taskBuilder": {
+    "backToMax": "返回 Max 工作台",
+    "title": "新建任务预测",
+    "subtitle": "配置任务参数与团队，系统将基于气质与能力维度预测完成情况",
+    "taskName": "任务名称",
+    "taskNamePlaceholder": "例如：Q4 产品上线冲刺",
+    "inputMode": "输入方式",
+    "template": "模板",
+    "custom": "自定义",
+    "selectTemplate": "选择任务模板",
+    "templateHint": "选择模板后可微调参数",
+    "basicParameters": "基本参数",
+    "taskTypes": "任务类型（可多选）",
+    "difficulty": "难度",
+    "collaboration": "协作度",
+    "timePressure": "时间压力",
+    "riskTolerance": "风险容忍度",
+    "independent": "独立完成",
+    "fullCollaboration": "完全协作",
+    "relaxed": "宽松",
+    "urgent": "紧迫",
+    "zeroError": "零容错",
+    "encourageRisk": "鼓励冒险",
+    "abilityRequirements": "能力要求（0-100）",
+    "abilityReqHint": "该任务所需的最低能力阈值，叠加在雷达图上与团队能力对比",
+    "motivationRequirements": "动机要求（0-100）",
+    "motivationReqHint": "预期的动机强度，数值越高表示依赖度越强",
+    "thinkingRequirements": "思维风格要求（0-100）",
+    "thinkingReqHint": "0=左端，100=右端，50=中性",
+    "teamConfiguration": "团队配置",
+    "teamConfigHint": "为该任务选择被观察者（已选 {{count}} 项）",
+    "emptyObservers": "暂无被观察者，请先在工作台添加",
+    "assignKeyRole": "分配关键角色（负责人，领导力/抗压能力权重 ×2）",
+    "selectKeyMember": "选择关键成员",
+    "predicting": "预测中...",
+    "generatePrediction": "生成预测",
+    "predictionFailed": "预测失败，请重试"
+  },
+  "taskTypes": {
+    "creative": "创意型",
+    "execution": "执行型",
+    "communication": "沟通型",
+    "analysis": "分析型",
+    "leadership": "领导型",
+    "resilience": "抗压型"
+  },
+  "taskResult": {
+    "backToMax": "返回 Max 工作台",
+    "taskNotFound": "未找到任务",
+    "deleteTask": "删除任务",
+    "badge": "任务预测结果",
+    "basedOn": "基于 {{count}} 位所选被观察者的气质与能力维度",
+    "completionProbability": "完成概率",
+    "goodProspects": "前景良好",
+    "moderateRisk": "中等风险",
+    "poorProspects": "前景欠佳",
+    "fitMeta": "匹配度 {{fit}} · 难度 {{difficulty}} · 时间压力 {{timePressure}} · 风险容忍度 {{riskTolerance}}",
+    "fitRadar": "匹配度雷达图",
+    "taskRequirements": "任务要求",
+    "teamActual": "团队实际",
+    "recommendedMembers": "推荐核心成员（按匹配度前 3 名）",
+    "overallFitScore": "综合匹配度",
+    "strengths": "优势项",
+    "requiredActual": "要求 {{required}} · 实际 {{actual}}",
+    "riskPoints": "风险点（{{count}}）",
+    "riskRequired": "要求 {{required}} · 实际 {{actual}} · 差距 {{gap}}",
+    "noRisk": "未检测到风险点，团队配置与任务要求匹配良好",
+    "detailedMatch": "详细匹配",
+    "abilityDimensions": "能力维度",
+    "motivationMatch": "动机匹配",
+    "thinkingStyle": "思维风格",
+    "riskLow": "低",
+    "riskMedium": "中",
+    "riskHigh": "高",
+    "confirmDeleteTask": "确认删除任务 \"{{name}}\" 吗？"
+  },
+  "privacy": {
+    "title": "隐私政策",
+    "back": "返回",
+    "lastUpdated": "最后更新：2026 年 7 月 30 日",
+    "sections": {
+      "infoCollection": {
+        "title": "1. 信息收集",
+        "p1": "我们收集的信息包括但不限于：邮箱地址、账号密码（加密存储）、评估结果以及团队管理数据。这些信息用于提供个性化服务、改善用户体验并保障账号安全。",
+        "p2": "对于免费版用户，数据存储在浏览器本地，不上传至服务器。对于 Pro 和 Max 版本用户，数据存储于我们的安全服务器，以支持跨设备访问和团队协作功能。"
+      },
+      "infoUsage": {
+        "title": "2. 信息使用",
+        "p1": "我们使用所收集的信息用于：",
+        "l1": "提供、维护和改进我们的服务",
+        "l2": "处理你的订阅与支付",
+        "l3": "发送服务相关的通知与更新",
+        "l4": "分析使用趋势以优化产品功能",
+        "l5": "防范欺诈并保障平台安全"
+      },
+      "infoSharing": {
+        "title": "3. 信息共享",
+        "p1": "我们不会向第三方出售、交易或以其他方式转让你的个人信息。但在以下情形下，我们可能会共享你的信息：",
+        "l1": "获得你的明确同意后",
+        "l2": "与协助我们运营的服务提供商（如支付处理方、云服务提供商）共享",
+        "l3": "为遵守法律义务或响应合法的政府要求",
+        "l4": "为保护我们的权利、隐私、安全或财产"
+      },
+      "dataSecurity": {
+        "title": "4. 数据安全",
+        "p1": "我们采用业界标准的安全措施保护你的信息，包括但不限于：加密数据传输（HTTPS）、密码哈希、访问控制以及定期安全审计。然而，没有任何互联网传输或电子存储方式是 100% 安全的，我们无法保证绝对安全。"
+      },
+      "cookies": {
+        "title": "5. Cookie 与跟踪技术",
+        "p1": "我们使用 Cookie 及类似的跟踪技术来收集信息、提升服务性能并个性化用户体验。你可以在浏览器设置中管理 Cookie 偏好，但禁用 Cookie 可能会影响部分功能的使用。"
+      },
+      "rights": {
+        "title": "6. 你的权利",
+        "p1": "你有权：",
+        "l1": "访问并更新你的个人信息",
+        "l2": "申请删除你的账号及相关数据",
+        "l3": "退出营销信息接收",
+        "l4": "申请获取你的数据副本",
+        "l5": "对某些数据处理活动提出异议"
+      },
+      "policyUpdates": {
+        "title": "7. 政策更新",
+        "p1": "我们可能会不时更新本隐私政策。重大变更将在此页面显著位置通知你。继续使用我们的服务即表示你接受更新后的政策。"
+      },
+      "contact": {
+        "title": "8. 联系我们",
+        "p1": "如对本隐私政策有任何疑问或建议，请通过以下方式联系我们："
+      }
+    }
+  },
+  "terms": {
+    "title": "服务条款",
+    "back": "返回",
+    "lastUpdated": "最后更新：2026 年 7 月 30 日",
+    "sections": {
+      "serviceDesc": {
+        "title": "1. 服务说明",
+        "p1": "气质洞察是一款基于心理学理论的气质评估工具，旨在帮助用户进行自我探索与个人成长。我们提供免费版本和付费订阅版本（Pro 和 Max）。",
+        "p2": "<strong>重要免责声明：</strong>本应用仅供自我探索和娱乐参考，不构成专业心理评估或医疗建议。评估结果不应作为临床诊断、医疗决策或职业选择的唯一依据。"
+      },
+      "userAccount": {
+        "title": "2. 用户账号",
+        "p1": "使用 Pro 或 Max 版本需注册账号。你同意：",
+        "l1": "提供准确、完整且最新的注册信息",
+        "l2": "保护账号密码的安全与保密",
+        "l3": "对你账号下的所有活动负责",
+        "l4": "如发现未经授权的使用，立即通知我们"
+      },
+      "subscriptions": {
+        "title": "3. 订阅与支付",
+        "p1": "<strong>订阅方案：</strong>",
+        "l1": "Pro 版本：$5/月，$17/6 个月，$27/年",
+        "l2": "Max 版本：$12/月，$43/6 个月，$79/年",
+        "p2": "<strong>支付政策：</strong>",
+        "l3": "订阅将自动续费，除非在续费日前取消",
+        "l4": "价格可能随时调整，已有订阅不受影响",
+        "l5": "所有费用以美元计价，可能包含税费",
+        "l6": "支付通过第三方支付平台处理"
+      },
+      "refund": {
+        "title": "4. 退款政策",
+        "p1": "我们提供以下退款政策：",
+        "l1": "首次订阅 7 天内可全额退款",
+        "l2": "续费费用不予退款，除非服务存在重大缺陷",
+        "l3": "退款申请须通过客服邮箱提交",
+        "l4": "退款将在批准后 5-10 个工作日内处理"
+      },
+      "acceptableUse": {
+        "title": "5. 合理使用",
+        "p1": "你同意不会：",
+        "l1": "将服务用于非法目的或违反任何法律",
+        "l2": "侵犯他人的知识产权或其他权利",
+        "l3": "传播病毒、恶意代码或其他有害内容",
+        "l4": "尝试破解、逆向工程或干扰服务运营",
+        "l5": "冒充他人或提供虚假信息",
+        "l6": "与他人共享你的账号"
+      },
+      "intellectualProperty": {
+        "title": "6. 知识产权",
+        "p1": "所有内容、功能和服务均受知识产权法保护。未经我们书面许可，你不得：",
+        "l1": "复制、修改、分发或展示任何内容",
+        "l2": "创作衍生作品或将内容用于商业用途",
+        "l3": "移除任何版权声明或所有权标识"
+      },
+      "disclaimer": {
+        "title": "7. 免责声明",
+        "p1": "<strong>本服务按\"现状\"提供，不附带任何明示或暗示的保证。</strong>我们不对以下情形承担责任：",
+        "l1": "服务的连续性、安全性或无差错性",
+        "l2": "评估结果的准确性或适用性",
+        "l3": "基于评估结果做出的任何决策",
+        "l4": "因使用或无法使用服务而导致的损失",
+        "l5": "第三方行为或内容"
+      },
+      "liability": {
+        "title": "8. 责任限制",
+        "p1": "在适用法律允许的最大范围内，我们的总责任不超过你在过去 12 个月内支付的费用。我们对任何间接、附带、特殊或后果性损害概不负责。"
+      },
+      "serviceChanges": {
+        "title": "9. 服务变更与终止",
+        "p1": "我们保留以下权利：",
+        "l1": "随时修改、暂停或终止服务（全部或部分）",
+        "l2": "删除账号及所有相关数据",
+        "l3": "限制某些用户的使用权限",
+        "l4": "调整定价与功能",
+        "p2": "若服务终止，我们将提前 30 天通知用户，并提供合理的退款或补偿方案。"
+      },
+      "disputes": {
+        "title": "10. 争议解决",
+        "p1": "因本条款产生的任何争议，应首先通过友好协商解决。协商不成的，应提交至服务提供方所在地有管辖权的法院。本条款受中华人民共和国法律管辖。"
+      },
+      "miscellaneous": {
+        "title": "11. 其他",
+        "l1": "本条款构成你与我们之间的完整协议",
+        "l2": "我们未行使某项权利不构成对该权利的放弃",
+        "l3": "若本条款任何条款被认定无效，其余条款仍然有效",
+        "l4": "我们可随时转让本协议；你转让需经我们同意"
+      },
+      "contact": {
+        "title": "12. 联系我们",
+        "p1": "如有任何疑问或建议，请联系："
+      }
+    }
+  }
+}

@@ -1,8 +1,10 @@
 import { useState, useEffect } from 'react';
 import { useNavigate, Link, useSearchParams } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import { ArrowLeft, Sparkles, Loader2, Save, FileText } from 'lucide-react';
 import Button from '../components/ui/Button';
 import Disclaimer from '../components/ui/Disclaimer';
+import LanguageSwitcher from '../components/ui/LanguageSwitcher';
 import ObserverList from '../components/workspace/ObserverList';
 import { useAuthStore } from '../stores/auth';
 import { listObservers } from '../lib/observers';
@@ -35,14 +37,15 @@ const MOTIVATION_FIELDS: { key: keyof TaskParams['motivations']; label: string }
   { key: 'security', label: 'Security' },
 ];
 
-const THINKING_FIELDS: { key: keyof TaskParams['thinking']; label: string; left: string; right: string }[] = [
-  { key: 'proactive', label: 'Action', left: 'Reactive', right: 'Proactive' },
-  { key: 'rational', label: 'Decision', left: 'Intuitive', right: 'Rational' },
-  { key: 'collaborative', label: 'Style', left: 'Independent', right: 'Collaborative' },
-  { key: 'innovative', label: 'Innovation', left: 'Conventional', right: 'Innovative' },
+const THINKING_FIELDS: { key: keyof TaskParams['thinking']; label: string; left: string; right: string; leftKey: string }[] = [
+  { key: 'proactive', label: 'Action', left: 'Reactive', right: 'Proactive', leftKey: 'thinking.reactive.name' },
+  { key: 'rational', label: 'Decision', left: 'Intuitive', right: 'Rational', leftKey: 'thinking.intuitive.name' },
+  { key: 'collaborative', label: 'Style', left: 'Independent', right: 'Collaborative', leftKey: 'thinking.independent.name' },
+  { key: 'innovative', label: 'Innovation', left: 'Conventional', right: 'Innovative', leftKey: 'thinking.conventional.name' },
 ];
 
 export default function TaskBuilderPage() {
+  const { t } = useTranslation();
   const navigate = useNavigate();
   const [searchParams] = useSearchParams();
   const [observers, setObservers] = useState<Observer[]>([]);
@@ -122,7 +125,7 @@ export default function TaskBuilderPage() {
       navigate(`/task/${record.id}`);
     } catch (e: any) {
       console.error(e);
-      alert(e?.message || 'Prediction failed, please retry');
+      alert(e?.message || t('taskBuilder.predictionFailed'));
     } finally {
       setSubmitting(false);
     }
@@ -131,10 +134,13 @@ export default function TaskBuilderPage() {
   return (
     <div className="min-h-screen p-4 pb-10">
       <div className="max-w-[420px] md:max-w-[820px] lg:max-w-[960px] mx-auto flex flex-col gap-5">
-        <Link to="/max" className="inline-flex items-center gap-1.5 text-sm text-[#8E8CA8] hover:text-[#5B4FCF] transition-colors w-fit">
-          <ArrowLeft className="w-4 h-4" />
-          Back to Max Workspace
-        </Link>
+        <div className="flex items-center justify-between">
+          <Link to="/max" className="inline-flex items-center gap-1.5 text-sm text-[#8E8CA8] hover:text-[#5B4FCF] transition-colors w-fit">
+            <ArrowLeft className="w-4 h-4" />
+            {t('taskBuilder.backToMax')}
+          </Link>
+          <LanguageSwitcher />
+        </div>
 
         <div className="rounded-[20px] bg-gradient-to-br from-[#C9A86A] via-[#D4B575] to-[#E5C58A] p-6 text-white">
           <div className="flex items-center gap-3 mb-2">
@@ -142,28 +148,28 @@ export default function TaskBuilderPage() {
               <Sparkles className="w-5 h-5" />
             </div>
             <h2 className="text-xl font-bold" style={{ fontFamily: "'Nunito', 'PingFang SC', sans-serif" }}>
-              New Task Prediction
+              {t('taskBuilder.title')}
             </h2>
           </div>
           <p className="text-white/85 text-sm leading-relaxed">
-            Configure task parameters and team, system will predict completion based on temperament and ability dimensions
+            {t('taskBuilder.subtitle')}
           </p>
         </div>
 
         {/* 任务名称 + 模板切换 */}
         <div className="rounded-[20px] bg-white/60 backdrop-blur-[10px] border border-white/50 p-5 flex flex-col gap-4">
           <label className="flex flex-col gap-1.5">
-            <span className="text-sm font-medium text-[#3D3A5C]">Task Name</span>
+            <span className="text-sm font-medium text-[#3D3A5C]">{t('taskBuilder.taskName')}</span>
             <input
               value={name}
               onChange={(e) => setName(e.target.value)}
-              placeholder="e.g., Q4 Product Launch Sprint"
+              placeholder={t('taskBuilder.taskNamePlaceholder')}
               className="w-full px-4 py-3 rounded-2xl bg-white/70 border border-[#E8E6F5] text-[#3D3A5C] text-sm placeholder:text-[#8E8CA8]/60 focus:outline-none focus:border-[#C9A86A] focus:bg-white transition-all"
             />
           </label>
 
           <div className="flex flex-col gap-2">
-            <span className="text-sm font-medium text-[#3D3A5C]">Input Mode</span>
+            <span className="text-sm font-medium text-[#3D3A5C]">{t('taskBuilder.inputMode')}</span>
             <div className="grid grid-cols-2 gap-2">
               <button
                 type="button"
@@ -173,7 +179,7 @@ export default function TaskBuilderPage() {
                 }`}
               >
                 <FileText className="w-3.5 h-3.5" />
-                Template
+                {t('taskBuilder.template')}
               </button>
               <button
                 type="button"
@@ -182,14 +188,14 @@ export default function TaskBuilderPage() {
                   mode === 'custom' ? 'border-[#C9A86A] bg-[#C9A86A]/5 text-[#C9A86A]' : 'border-[#E8E6F5] bg-white/40 text-[#3D3A5C]'
                 }`}
               >
-                Custom
+                {t('taskBuilder.custom')}
               </button>
             </div>
           </div>
 
           {mode === 'template' && (
             <div className="flex flex-col gap-2">
-              <span className="text-sm font-medium text-[#3D3A5C]">Select Task Template</span>
+              <span className="text-sm font-medium text-[#3D3A5C]">{t('taskBuilder.selectTemplate')}</span>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
                 {TASK_TEMPLATES.map((tpl) => (
                   <button
@@ -207,35 +213,35 @@ export default function TaskBuilderPage() {
                   </button>
                 ))}
               </div>
-              <p className="text-xs text-[#8E8CA8] mt-1">You can fine-tune parameters after selecting a template</p>
+              <p className="text-xs text-[#8E8CA8] mt-1">{t('taskBuilder.templateHint')}</p>
             </div>
           )}
         </div>
 
         {/* 任务基础参数 */}
-        <Section title="Basic Parameters">
+        <Section title={t('taskBuilder.basicParameters')}>
           <div className="flex flex-col gap-2 mb-4">
-            <span className="text-xs font-medium text-[#3D3A5C]">Task Types (multiple)</span>
+            <span className="text-xs font-medium text-[#3D3A5C]">{t('taskBuilder.taskTypes')}</span>
             <div className="flex flex-wrap gap-2">
-              {(Object.keys(TASK_TYPE_LABELS) as TaskType[]).map((t) => (
+              {(Object.keys(TASK_TYPE_LABELS) as TaskType[]).map((type) => (
                 <button
-                  key={t}
+                  key={type}
                   type="button"
-                  onClick={() => toggleTaskType(t)}
+                  onClick={() => toggleTaskType(type)}
                   className={`px-3 py-1.5 rounded-full text-xs font-medium border-2 transition-all ${
-                    params.base.types.includes(t)
+                    params.base.types.includes(type)
                       ? 'border-[#C9A86A] bg-[#C9A86A]/10 text-[#C9A86A]'
                       : 'border-[#E8E6F5] bg-white/40 text-[#3D3A5C]'
                   }`}
                 >
-                  {TASK_TYPE_LABELS[t]}
+                  {t(`taskTypes.${type}`)}
                 </button>
               ))}
             </div>
           </div>
 
           <Slider
-            label="Difficulty"
+            label={t('taskBuilder.difficulty')}
             value={params.base.difficulty}
             min={1}
             max={10}
@@ -245,7 +251,7 @@ export default function TaskBuilderPage() {
             accent="#C9A86A"
           />
           <Slider
-            label="Collaboration"
+            label={t('taskBuilder.collaboration')}
             value={params.base.collaboration}
             min={0}
             max={100}
@@ -253,11 +259,11 @@ export default function TaskBuilderPage() {
             display={`${params.base.collaboration}%`}
             onChange={(v) => setParams((p) => ({ ...p, base: { ...p.base, collaboration: v } }))}
             accent="#C9A86A"
-            leftLabel="Independent"
-            rightLabel="Full Collaboration"
+            leftLabel={t('taskBuilder.independent')}
+            rightLabel={t('taskBuilder.fullCollaboration')}
           />
           <Slider
-            label="Time Pressure"
+            label={t('taskBuilder.timePressure')}
             value={params.base.timePressure}
             min={1}
             max={10}
@@ -265,11 +271,11 @@ export default function TaskBuilderPage() {
             display={`${params.base.timePressure} / 10`}
             onChange={(v) => setParams((p) => ({ ...p, base: { ...p.base, timePressure: v } }))}
             accent="#C9A86A"
-            leftLabel="Relaxed"
-            rightLabel="Urgent"
+            leftLabel={t('taskBuilder.relaxed')}
+            rightLabel={t('taskBuilder.urgent')}
           />
           <Slider
-            label="Risk Tolerance"
+            label={t('taskBuilder.riskTolerance')}
             value={params.base.riskTolerance}
             min={0}
             max={100}
@@ -277,19 +283,19 @@ export default function TaskBuilderPage() {
             display={`${params.base.riskTolerance}%`}
             onChange={(v) => setParams((p) => ({ ...p, base: { ...p.base, riskTolerance: v } }))}
             accent="#C9A86A"
-            leftLabel="Zero Error"
-            rightLabel="Encourage Risk"
+            leftLabel={t('taskBuilder.zeroError')}
+            rightLabel={t('taskBuilder.encourageRisk')}
           />
         </Section>
 
         {/* 能力要求 */}
-        <Section title="Ability Requirements (0-100)">
-          <p className="text-xs text-[#8E8CA8] mb-3">Minimum ability thresholds for this task, overlay on radar chart to compare with team abilities</p>
+        <Section title={t('taskBuilder.abilityRequirements')}>
+          <p className="text-xs text-[#8E8CA8] mb-3">{t('taskBuilder.abilityReqHint')}</p>
           <div className="flex flex-col gap-3">
             {ABILITY_FIELDS.map((f) => (
               <Slider
                 key={f.key}
-                label={f.label}
+                label={t(`abilities.${f.key}`)}
                 value={params.abilities[f.key]}
                 min={0}
                 max={100}
@@ -303,13 +309,13 @@ export default function TaskBuilderPage() {
         </Section>
 
         {/* 动机要求 */}
-        <Section title="Motivation Requirements (0-100)">
-          <p className="text-xs text-[#8E8CA8] mb-3">Expected motivation strength, higher means more dependent</p>
+        <Section title={t('taskBuilder.motivationRequirements')}>
+          <p className="text-xs text-[#8E8CA8] mb-3">{t('taskBuilder.motivationReqHint')}</p>
           <div className="flex flex-col gap-3">
             {MOTIVATION_FIELDS.map((f) => (
               <Slider
                 key={f.key}
-                label={f.label}
+                label={t(`motivations.${f.key}.name`)}
                 value={params.motivations[f.key]}
                 min={0}
                 max={100}
@@ -323,8 +329,8 @@ export default function TaskBuilderPage() {
         </Section>
 
         {/* 思维倾向要求 */}
-        <Section title="Thinking Style Requirements (0-100)">
-          <p className="text-xs text-[#8E8CA8] mb-3">0=left end, 100=right end, 50=neutral</p>
+        <Section title={t('taskBuilder.thinkingRequirements')}>
+          <p className="text-xs text-[#8E8CA8] mb-3">{t('taskBuilder.thinkingReqHint')}</p>
           <div className="flex flex-col gap-3">
             {THINKING_FIELDS.map((f) => (
               <Slider
@@ -337,17 +343,17 @@ export default function TaskBuilderPage() {
                 display={`${params.thinking[f.key]}`}
                 onChange={(v) => setParams((p) => ({ ...p, thinking: { ...p.thinking, [f.key]: v } }))}
                 accent="#8E7CC3"
-                leftLabel={f.left}
-                rightLabel={f.right}
+                leftLabel={t(f.leftKey)}
+                rightLabel={t(`thinking.${f.key}.name`)}
               />
             ))}
           </div>
         </Section>
 
         {/* 团队配置 */}
-        <Section title="Team Configuration">
+        <Section title={t('taskBuilder.teamConfiguration')}>
           <p className="text-xs text-[#8E8CA8] mb-3">
-            Select observers for this task ({selectedIds.length} selected)
+            {t('taskBuilder.teamConfigHint', { count: selectedIds.length })}
           </p>
           <ObserverList
             observers={observers}
@@ -356,7 +362,7 @@ export default function TaskBuilderPage() {
             selectable
             selectedIds={selectedIds}
             onToggleSelect={toggleSelectObserver}
-            emptyHint="No observers yet, add them in workspace first"
+            emptyHint={t('taskBuilder.emptyObservers')}
           />
 
           {selectedIds.length > 0 && (
@@ -371,7 +377,7 @@ export default function TaskBuilderPage() {
                   }}
                   className="w-4 h-4 accent-[#C9A86A]"
                 />
-                Assign key role (lead, leadership/resilience weighted 2x)
+                {t('taskBuilder.assignKeyRole')}
               </label>
               {hasKeyRole && (
                 <select
@@ -379,7 +385,7 @@ export default function TaskBuilderPage() {
                   onChange={(e) => setKeyObserverId(e.target.value || null)}
                   className="w-full px-4 py-2.5 rounded-2xl bg-white/70 border border-[#E8E6F5] text-[#3D3A5C] text-sm focus:outline-none focus:border-[#C9A86A]"
                 >
-                  <option value="">Select key member</option>
+                  <option value="">{t('taskBuilder.selectKeyMember')}</option>
                   {observers
                     .filter((o) => selectedIds.includes(o.id))
                     .map((o) => (
@@ -406,12 +412,12 @@ export default function TaskBuilderPage() {
           {submitting ? (
             <>
               <Loader2 className="w-5 h-5 animate-spin" />
-              Predicting...
+              {t('taskBuilder.predicting')}
             </>
           ) : (
             <>
               <Save className="w-5 h-5" />
-              Generate Prediction
+              {t('taskBuilder.generatePrediction')}
             </>
           )}
         </Button>

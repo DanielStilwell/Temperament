@@ -1,8 +1,10 @@
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import { Target, LogOut, Plus, Trash2, Loader2, Users, ChevronRight, RefreshCw, CheckSquare, Square, Zap } from 'lucide-react';
 import Button from '../components/ui/Button';
 import Disclaimer from '../components/ui/Disclaimer';
+import LanguageSwitcher from '../components/ui/LanguageSwitcher';
 import AuthGuard from '../components/workspace/AuthGuard';
 import TeamAggregateView from '../components/workspace/TeamAggregateView';
 import { useAuthStore } from '../stores/auth';
@@ -27,6 +29,7 @@ const GENDER_LABEL: Record<string, string> = {
 };
 
 function MaxWorkspaceInner() {
+  const { t } = useTranslation();
   const navigate = useNavigate();
   const { profile, signOut } = useAuthStore();
   const [observers, setObservers] = useState<Observer[]>([]);
@@ -62,7 +65,7 @@ function MaxWorkspaceInner() {
   };
 
   const handleDeleteTask = async (id: string) => {
-    if (!confirm('Confirm delete this prediction?')) return;
+    if (!confirm(t('maxWorkspace.confirmDeletePrediction'))) return;
     setDeletingTaskId(id);
     try {
       await deleteTask(id);
@@ -108,27 +111,30 @@ function MaxWorkspaceInner() {
           <div>
             <div className="flex items-center gap-2 mb-1">
               <Target className="w-4 h-4" />
-              <span className="text-xs text-white/85">Max Workspace</span>
+              <span className="text-xs text-white/85">{t('maxWorkspace.badge')}</span>
             </div>
             <h2 className="text-xl font-bold" style={{ fontFamily: "'Nunito', 'PingFang SC', sans-serif" }}>
-              Welcome, {profile?.nickname || 'Manager'}
+              {t('maxWorkspace.welcome', { name: profile?.nickname || t('maxWorkspace.manager') })}
             </h2>
-            <p className="text-white/85 text-xs mt-1">Observer Capacity: {usage}</p>
+            <p className="text-white/85 text-xs mt-1">{t('maxWorkspace.capacity', { usage })}</p>
           </div>
-          <button
-            onClick={handleSignOut}
-            className="flex items-center gap-1.5 px-3 py-2 rounded-full bg-white/20 hover:bg-white/30 text-white text-xs font-medium transition-all"
-          >
-            <LogOut className="w-3.5 h-3.5" />
-            Sign Out
-          </button>
+          <div className="flex items-center gap-2">
+            <LanguageSwitcher variant="onColor" />
+            <button
+              onClick={handleSignOut}
+              className="flex items-center gap-1.5 px-3 py-2 rounded-full bg-white/20 hover:bg-white/30 text-white text-xs font-medium transition-all"
+            >
+              <LogOut className="w-3.5 h-3.5" />
+              {t('maxWorkspace.signOut')}
+            </button>
+          </div>
         </div>
 
         {/* 操作行 */}
         <div className="flex gap-3">
           <Button variant="primary" size="md" onClick={() => navigate('/add-observer/max')} className="flex-1">
             <Users className="w-4 h-4" />
-            Add Observer
+            {t('maxWorkspace.addObserver')}
           </Button>
           <Button
             variant="outline"
@@ -138,7 +144,7 @@ function MaxWorkspaceInner() {
             style={{ borderColor: '#C9A86A', color: '#C9A86A' }}
           >
             <Plus className="w-4 h-4" />
-            New Prediction
+            {t('maxWorkspace.newPrediction')}
           </Button>
           <Button
             variant="outline"
@@ -154,7 +160,7 @@ function MaxWorkspaceInner() {
         {/* 被观察者列表 + 自由选择/组合 */}
         <div>
           <div className="flex items-center justify-between mb-3">
-            <h3 className="text-base font-bold text-[#3D3A5C]">Observers</h3>
+            <h3 className="text-base font-bold text-[#3D3A5C]">{t('maxWorkspace.observers')}</h3>
             <div className="flex items-center gap-2">
               {observers.length > 0 && (
                 <button
@@ -166,7 +172,7 @@ function MaxWorkspaceInner() {
                   }`}
                 >
                   {selectMode ? <CheckSquare className="w-3 h-3" /> : <Square className="w-3 h-3" />}
-                  {selectMode ? 'Exit Selection' : 'Select & Combine'}
+                  {selectMode ? t('maxWorkspace.exitSelection') : t('maxWorkspace.selectCombine')}
                 </button>
               )}
               <span className="text-xs text-[#8E8CA8]">{observers.length}</span>
@@ -179,18 +185,18 @@ function MaxWorkspaceInner() {
                 onClick={selectAll}
                 className="px-3 py-1.5 rounded-full text-xs font-medium border-2 border-[#E8E6F5] bg-white/40 text-[#3D3A5C] hover:border-[#B5B0CC] transition-all"
               >
-                Select All
+                {t('maxWorkspace.selectAll')}
               </button>
               <button
                 onClick={clearSelection}
                 className="px-3 py-1.5 rounded-full text-xs font-medium border-2 border-[#E8E6F5] bg-white/40 text-[#3D3A5C] hover:border-[#B5B0CC] transition-all"
               >
-                Clear
+                {t('maxWorkspace.clear')}
               </button>
               {selectedIds.length > 0 && (
                 <>
                   <span className="text-xs text-[#5B4FCF] font-medium ml-auto">
-                    {selectedIds.length} selected
+                    {t('maxWorkspace.selected', { count: selectedIds.length })}
                   </span>
                   <Button
                     variant="primary"
@@ -200,7 +206,7 @@ function MaxWorkspaceInner() {
                     style={{ background: 'linear-gradient(135deg, #C9A86A, #D4B575)' }}
                   >
                     <Zap className="w-3.5 h-3.5" />
-                    Predict This Team
+                    {t('maxWorkspace.predictTeam')}
                   </Button>
                 </>
               )}
@@ -216,7 +222,7 @@ function MaxWorkspaceInner() {
               <div className="w-12 h-12 rounded-full bg-[#5B4FCF]/10 flex items-center justify-center mx-auto mb-3">
                 <Users className="w-6 h-6 text-[#5B4FCF]" />
               </div>
-              <p className="text-sm text-[#8E8CA8]">No observers yet. Click the button above to add</p>
+              <p className="text-sm text-[#8E8CA8]">{t('maxWorkspace.emptyObservers')}</p>
             </div>
           ) : (
             <div className="rounded-[20px] bg-white/60 backdrop-blur-[10px] border border-white/50 overflow-hidden">
@@ -258,7 +264,7 @@ function MaxWorkspaceInner() {
                           <span className={`px-1.5 py-0.5 rounded text-xs ${badge.bg} ${badge.color}`}>{badge.label}</span>
                         </div>
                         <div className="text-xs text-[#8E8CA8] mt-0.5 truncate">
-                          {ob.profession || 'No profession specified'}
+                          {ob.profession || t('maxWorkspace.noProfession')}
                         </div>
                       </div>
                     </button>
@@ -269,7 +275,7 @@ function MaxWorkspaceInner() {
                         <button
                           onClick={() => handleDeleteObserver(ob.id)}
                           className="flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center text-[#8E8CA8] hover:text-red-500 hover:bg-red-50/60 transition-all"
-                          title="Delete"
+                          title={t('common.delete')}
                         >
                           <Trash2 className="w-4 h-4" />
                         </button>
@@ -286,8 +292,8 @@ function MaxWorkspaceInner() {
         <div>
           <h3 className="text-base font-bold text-[#3D3A5C] mb-3">
             {selectMode && selectedIds.length > 0
-              ? `Selected Team Profile (${selectedIds.length})`
-              : 'Team Profile'
+              ? t('maxWorkspace.selectedTeamProfile', { count: selectedIds.length })
+              : t('maxWorkspace.teamProfile')
             }
           </h3>
           <TeamAggregateView observers={selectMode && selectedIds.length > 0 ? selectedObservers : observers} />
@@ -296,7 +302,7 @@ function MaxWorkspaceInner() {
         {/* 任务预判列表 */}
         <div>
           <div className="flex items-center justify-between mb-3">
-            <h3 className="text-base font-bold text-[#3D3A5C]">Prediction Records</h3>
+            <h3 className="text-base font-bold text-[#3D3A5C]">{t('maxWorkspace.predictionRecords')}</h3>
             <span className="text-xs text-[#8E8CA8]">{tasks.length}</span>
           </div>
           {loading ? (
@@ -308,21 +314,21 @@ function MaxWorkspaceInner() {
               <div className="w-12 h-12 rounded-full bg-[#C9A86A]/15 flex items-center justify-center mx-auto mb-3">
                 <Target className="w-6 h-6 text-[#C9A86A]" />
               </div>
-              <p className="text-sm text-[#8E8CA8]">No predictions yet. Click the button above to start</p>
+              <p className="text-sm text-[#8E8CA8]">{t('maxWorkspace.emptyPredictions')}</p>
             </div>
           ) : (
             <div className="rounded-[20px] bg-white/60 backdrop-blur-[10px] border border-white/50 overflow-hidden">
-              {tasks.map((t, i) => {
-                const prob = t.prediction.completionProbability;
+              {tasks.map((task, i) => {
+                const prob = task.prediction.completionProbability;
                 const probColor = prob >= 70 ? '#5B8C5A' : prob >= 40 ? '#C9A86A' : '#D96459';
                 return (
                   <div
-                    key={t.id}
+                    key={task.id}
                     className={`flex items-center gap-3 p-4 transition-colors hover:bg-white/40 ${
                       i > 0 ? 'border-t border-[#E8E6F5]' : ''
                     }`}
                   >
-                    <button onClick={() => navigate(`/task/${t.id}`)} className="flex-1 flex items-center gap-3 text-left min-w-0">
+                    <button onClick={() => navigate(`/task/${task.id}`)} className="flex-1 flex items-center gap-3 text-left min-w-0">
                       <div
                         className="flex-shrink-0 w-12 h-12 rounded-2xl flex flex-col items-center justify-center"
                         style={{ background: `${probColor}15` }}
@@ -330,19 +336,19 @@ function MaxWorkspaceInner() {
                         <span className="text-base font-bold" style={{ color: probColor }}>{prob}%</span>
                       </div>
                       <div className="flex-1 min-w-0">
-                        <div className="text-sm font-medium text-[#3D3A5C] truncate">{t.name}</div>
+                        <div className="text-sm font-medium text-[#3D3A5C] truncate">{task.name}</div>
                         <div className="text-xs text-[#8E8CA8] mt-0.5">
-                          {t.teamConfig.selectedObserverIds.length} members · Fit Score {t.prediction.overallFit}
+                          {t('maxWorkspace.members', { count: task.teamConfig.selectedObserverIds.length })} · {t('maxWorkspace.fitScore', { score: task.prediction.overallFit })}
                         </div>
                       </div>
                       <ChevronRight className="w-4 h-4 text-[#8E8CA8]" />
                     </button>
                     <button
-                      onClick={() => handleDeleteTask(t.id)}
-                      disabled={deletingTaskId === t.id}
+                      onClick={() => handleDeleteTask(task.id)}
+                      disabled={deletingTaskId === task.id}
                       className="flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center text-[#8E8CA8] hover:text-red-500 hover:bg-red-50/60 transition-all disabled:opacity-40"
                     >
-                      {deletingTaskId === t.id ? <Loader2 className="w-4 h-4 animate-spin" /> : <Trash2 className="w-4 h-4" />}
+                      {deletingTaskId === task.id ? <Loader2 className="w-4 h-4 animate-spin" /> : <Trash2 className="w-4 h-4" />}
                     </button>
                   </div>
                 );

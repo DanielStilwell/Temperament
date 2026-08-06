@@ -1,16 +1,15 @@
 import { useState, useEffect } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import { Sparkles, Users, Target } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 import Disclaimer from '../components/ui/Disclaimer';
+import LanguageSwitcher from '../components/ui/LanguageSwitcher';
 import { useAuthStore } from '../stores/auth';
 import type { AccountTier } from '../types/account';
-import { TIER_PRICING, type BillingPeriod } from '../config/pricing';
+import { TIER_PRICING, PERIOD_LABELS, type BillingPeriod } from '../config/pricing';
 
 interface TierCardConfig {
   tier: AccountTier;
-  title: string;
-  subtitle: string;
-  features: string[];
   icon: React.ComponentType<{ className?: string }>;
   // 卡片配色（差异化气质色）
   gradient: string;
@@ -23,9 +22,6 @@ interface TierCardConfig {
 const TIERS: TierCardConfig[] = [
   {
     tier: 'free',
-    title: 'Free',
-    subtitle: 'Personal temperament & ability exploration',
-    features: ['Assess temperament type', 'Analyze 6 ability dimensions'],
     icon: Sparkles,
     gradient: 'from-[#E8E6F5] to-[#D5D0E8]',
     iconBg: 'bg-white/70',
@@ -35,9 +31,6 @@ const TIERS: TierCardConfig[] = [
   },
   {
     tier: 'pro',
-    title: 'Pro',
-    subtitle: 'Team temperament & ability insights',
-    features: ['Up to 60 observers', 'Team temperament & ability analysis'],
     icon: Users,
     gradient: 'from-[#5B4FCF] to-[#7B6FE0]',
     iconBg: 'bg-white/20',
@@ -47,9 +40,6 @@ const TIERS: TierCardConfig[] = [
   },
   {
     tier: 'max',
-    title: 'Max',
-    subtitle: 'Task completion prediction',
-    features: ['Up to 160 observers', 'Team aggregate analysis', 'Task fit prediction'],
     icon: Target,
     gradient: 'from-[#C9A86A] via-[#D4B575] to-[#E5C58A]',
     iconBg: 'bg-white/25',
@@ -59,13 +49,8 @@ const TIERS: TierCardConfig[] = [
   },
 ];
 
-const PERIOD_LABELS: Record<BillingPeriod, string> = {
-  monthly: 'Monthly',
-  '6months': '6 Months',
-  yearly: '1 Year',
-};
-
 export default function LandingPage() {
+  const { t } = useTranslation();
   const navigate = useNavigate();
   const { user, profile, signOut } = useAuthStore();
   const [selectedPeriod, setSelectedPeriod] = useState<BillingPeriod>('yearly');
@@ -135,20 +120,25 @@ export default function LandingPage() {
     <div className="min-h-screen flex items-center justify-center p-4">
       <div className="w-full max-w-[420px] md:max-w-[820px] lg:max-w-[960px] flex flex-col gap-8">
         {/* 顶部主题 */}
-        <header className="text-center pt-4">
+        <header className="text-center pt-4 relative">
+          {/* 语言切换器：右上角 */}
+          <div className="absolute top-0 right-0">
+            <LanguageSwitcher />
+          </div>
+
           <div className="inline-flex items-center gap-2 mb-5 px-4 py-1.5 rounded-full bg-white/60 backdrop-blur-[10px] border border-white/50 text-[#5B4FCF] text-xs font-medium">
             <span className="w-1.5 h-1.5 rounded-full bg-[#5B4FCF]" />
-            Temperament Insight
+            {t('landing.badge')}
             <span className="w-1.5 h-1.5 rounded-full bg-[#5B4FCF]" />
           </div>
           <h1
             className="text-2xl md:text-3xl lg:text-4xl font-bold tracking-tight text-[#3D3A5C] mb-3"
             style={{ fontFamily: "'Nunito', 'PingFang SC', sans-serif" }}
           >
-            Start from individual temperament insights,
+            {t('landing.titleLine1')}
             <br />
             <span className="bg-gradient-to-r from-[#5B4FCF] to-[#C9A86A] bg-clip-text text-transparent">
-              build team synergy — choose your plan
+              {t('landing.titleLine2')}
             </span>
           </h1>
         </header>
@@ -178,6 +168,13 @@ export default function LandingPage() {
             const Icon = card.icon;
             const isPaid = card.tier === 'pro' || card.tier === 'max';
             const pricing = isPaid ? TIER_PRICING[card.tier as 'pro' | 'max'][selectedPeriod] : null;
+            const tierKey = card.tier as 'free' | 'pro' | 'max';
+
+            const features: string[] = [
+              t(`tiers.${tierKey}.feature1`),
+              t(`tiers.${tierKey}.feature2`),
+              ...(tierKey === 'max' ? [t('tiers.max.feature3')] : []),
+            ];
 
             return (
               <button
@@ -195,10 +192,10 @@ export default function LandingPage() {
 
                   <div>
                     <h3 className={`text-lg font-bold ${card.accentColor}`} style={{ fontFamily: "'Nunito', 'PingFang SC', sans-serif" }}>
-                      {card.title}
+                      {t(`tiers.${tierKey}.name`)}
                     </h3>
                     <p className={`text-xs ${isPaid ? 'text-white/80' : 'text-[#6B6491]'} mt-0.5`}>
-                      {card.subtitle}
+                      {t(`tiers.${tierKey}.subtitle`)}
                     </p>
                   </div>
 
@@ -207,19 +204,19 @@ export default function LandingPage() {
                       <div className="flex items-baseline gap-1.5">
                         <span className={`text-2xl font-bold ${card.accentColor}`}>{pricing.display}</span>
                         <span className={`text-xs ${isPaid ? 'text-white/70' : 'text-[#8E8CA8]'}`}>
-                          / {PERIOD_LABELS[selectedPeriod].toLowerCase()}
+                          {t('landing.perPeriod', { period: PERIOD_LABELS[selectedPeriod].toLowerCase() })}
                         </span>
                       </div>
                       {selectedPeriod !== 'monthly' && pricing.perMonth && (
                         <span className={`text-[10px] ${isPaid ? 'text-white/60' : 'text-[#8E8CA8]'}`}>
-                          {pricing.perMonth} billed as {pricing.display}
+                          {t('landing.billedAs', { perMonth: pricing.perMonth, display: pricing.display })}
                         </span>
                       )}
                     </div>
                   )}
 
                   <ul className="flex flex-col gap-1.5 mt-1">
-                    {card.features.map((f, i) => (
+                    {features.map((f, i) => (
                       <li
                         key={i}
                         className={`flex items-start gap-1.5 text-xs leading-relaxed ${
@@ -239,7 +236,7 @@ export default function LandingPage() {
                         : 'bg-white/50 text-[#5B4FCF] group-hover:bg-white/80'
                     }`}
                   >
-                    {isPaid ? `Select ${card.title}` : 'Start Free'}
+                    {t(`tiers.${tierKey}.cta`)}
                   </div>
                 </div>
               </button>
@@ -254,21 +251,21 @@ export default function LandingPage() {
             state={{ from: '/' }}
             className="text-xs text-[#8E8CA8] hover:text-[#5B4FCF] transition-colors"
           >
-            Privacy Policy
+            {t('landing.privacyPolicy')}
           </Link>
           <Link
             to="/terms"
             state={{ from: '/' }}
             className="text-xs text-[#8E8CA8] hover:text-[#5B4FCF] transition-colors"
           >
-            Terms of Service
+            {t('landing.termsOfService')}
           </Link>
         </div>
 
         <Disclaimer />
 
         <footer className="text-center text-xs text-[#8E8CA8]/70">
-          © {new Date().getFullYear()} Temperament Insight · For self-exploration & team insight reference only
+          {t('landing.footer', { year: new Date().getFullYear() })}
         </footer>
       </div>
     </div>

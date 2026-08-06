@@ -1,21 +1,19 @@
 import { useState } from 'react';
 import { useNavigate, useParams, Link } from 'react-router-dom';
 import { ArrowLeft, UserPlus, Loader2 } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 import Button from '../components/ui/Button';
 import Disclaimer from '../components/ui/Disclaimer';
+import LanguageSwitcher from '../components/ui/LanguageSwitcher';
 import { professionList } from '../data/professions';
 import useAssessmentStore from '../stores/assessment';
 import type { ProfessionType } from '../types';
 import type { Gender, AccountTier } from '../types/account';
 
-const GENDER_OPTIONS: { value: Gender; label: string }[] = [
-  { value: 'male', label: 'Male' },
-  { value: 'female', label: 'Female' },
-  { value: 'other', label: 'Other' },
-  { value: 'unknown', label: 'Prefer not to say' },
-];
+const GENDER_VALUES: Gender[] = ['male', 'female', 'other', 'unknown'];
 
 export default function AddObserverPage() {
+  const { t } = useTranslation();
   const { tier } = useParams<{ tier: AccountTier }>();
   const navigate = useNavigate();
   const startObserverMode = useAssessmentStore((s) => s.startObserverMode);
@@ -25,6 +23,8 @@ export default function AddObserverPage() {
   const [profession, setProfession] = useState<ProfessionType | null>(null);
   const [note, setNote] = useState('');
   const [submitting, setSubmitting] = useState(false);
+
+  const genderOptions = GENDER_VALUES.map((v) => ({ value: v, label: t(`observer.add.${v}`) }));
 
   const handleStart = async () => {
     if (!name.trim() || !profession) return;
@@ -42,10 +42,13 @@ export default function AddObserverPage() {
   return (
     <div className="min-h-screen flex items-center justify-center p-4">
       <div className="w-full max-w-[420px] md:max-w-[520px] lg:max-w-[640px] flex flex-col gap-5">
-        <Link to={backLink} className="inline-flex items-center gap-1.5 text-sm text-[#8E8CA8] hover:text-[#5B4FCF] transition-colors">
-          <ArrowLeft className="w-4 h-4" />
-          Back to Workspace
-        </Link>
+        <div className="flex items-center justify-between">
+          <Link to={backLink} className="inline-flex items-center gap-1.5 text-sm text-[#8E8CA8] hover:text-[#5B4FCF] transition-colors">
+            <ArrowLeft className="w-4 h-4" />
+            {t('observer.add.backToWorkspace')}
+          </Link>
+          <LanguageSwitcher />
+        </div>
 
         <div className="rounded-[20px] bg-gradient-to-br from-[#5B4FCF] to-[#7B6FE0] p-6 text-white">
           <div className="flex items-center gap-3 mb-2">
@@ -53,31 +56,31 @@ export default function AddObserverPage() {
               <UserPlus className="w-5 h-5" />
             </div>
             <h2 className="text-xl font-bold" style={{ fontFamily: "'Nunito', 'PingFang SC', sans-serif" }}>
-              Add Observer
+              {t('observer.add.title')}
             </h2>
           </div>
           <p className="text-white/80 text-sm leading-relaxed">
-            Proxy mode: Based on your real understanding of the observer, select their reaction in each scenario
+            {t('observer.add.subtitle')}
           </p>
         </div>
 
         <div className="rounded-[20px] bg-white/60 backdrop-blur-[10px] border border-white/50 p-6 flex flex-col gap-4">
           <label className="flex flex-col gap-1.5">
             <span className="text-sm font-medium text-[#3D3A5C]">
-              Observer Name <span className="text-[#8E8CA8] text-xs">(alias/code OK)</span>
+              {t('observer.add.nameLabel')} <span className="text-[#8E8CA8] text-xs">{t('observer.add.nameHint')}</span>
             </span>
             <input
               value={name}
               onChange={(e) => setName(e.target.value)}
-              placeholder="e.g. Alex / Obs-001"
+              placeholder={t('observer.add.namePlaceholder')}
               className="w-full px-4 py-3 rounded-2xl bg-white/70 border border-[#E8E6F5] text-[#3D3A5C] text-sm placeholder:text-[#8E8CA8]/60 focus:outline-none focus:border-[#5B4FCF] focus:bg-white transition-all"
             />
           </label>
 
           <div className="flex flex-col gap-1.5">
-            <span className="text-sm font-medium text-[#3D3A5C]">Gender</span>
+            <span className="text-sm font-medium text-[#3D3A5C]">{t('observer.add.gender')}</span>
             <div className="grid grid-cols-4 gap-2">
-              {GENDER_OPTIONS.map((opt) => (
+              {genderOptions.map((opt) => (
                 <button
                   key={opt.value}
                   type="button"
@@ -95,8 +98,8 @@ export default function AddObserverPage() {
           </div>
 
           <div className="flex flex-col gap-1.5">
-            <span className="text-sm font-medium text-[#3D3A5C]">Profession</span>
-            <p className="text-xs text-[#8E8CA8] mb-2">Different professions match different scenario questions</p>
+            <span className="text-sm font-medium text-[#3D3A5C]">{t('observer.add.profession')}</span>
+            <p className="text-xs text-[#8E8CA8] mb-2">{t('observer.add.professionHint')}</p>
             <div className="grid grid-cols-2 gap-2">
               {professionList.map((prof) => (
                 <button
@@ -109,7 +112,7 @@ export default function AddObserverPage() {
                       : 'border-[#E8E6F5] bg-white/40 text-[#3D3A5C] hover:border-[#C5C0E8]'
                   }`}
                 >
-                  {prof.name}
+                  {t(`professions.${prof.id}`)}
                 </button>
               ))}
             </div>
@@ -117,12 +120,12 @@ export default function AddObserverPage() {
 
           <label className="flex flex-col gap-1.5">
             <span className="text-sm font-medium text-[#3D3A5C]">
-              Note (optional)
+              {t('observer.add.noteLabel')}
             </span>
             <textarea
               value={note}
               onChange={(e) => setNote(e.target.value)}
-              placeholder="Department, role, relationship, etc."
+              placeholder={t('observer.add.notePlaceholder')}
               rows={2}
               className="w-full px-4 py-3 rounded-2xl bg-white/70 border border-[#E8E6F5] text-[#3D3A5C] text-sm placeholder:text-[#8E8CA8]/60 focus:outline-none focus:border-[#5B4FCF] focus:bg-white transition-all resize-none"
             />
@@ -142,10 +145,10 @@ export default function AddObserverPage() {
           {submitting ? (
             <>
               <Loader2 className="w-5 h-5 animate-spin" />
-              Preparing questions...
+              {t('observer.add.preparing')}
             </>
           ) : (
-            'Start Assessment'
+            t('observer.add.startAssessment')
           )}
         </Button>
       </div>

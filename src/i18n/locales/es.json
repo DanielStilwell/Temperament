@@ -1,0 +1,635 @@
+{
+  "common": {
+    "back": "Atrás",
+    "backToHome": "Volver al inicio",
+    "cancel": "Cancelar",
+    "confirm": "Confirmar",
+    "delete": "Eliminar",
+    "save": "Guardar",
+    "loading": "Cargando...",
+    "next": "Siguiente",
+    "previous": "Anterior",
+    "skip": "Omitir",
+    "email": "Correo electrónico",
+    "password": "Contraseña",
+    "nickname": "Apodo",
+    "search": "Buscar",
+    "select": "Seleccionar",
+    "selectAll": "Seleccionar todo",
+    "clear": "Limpiar",
+    "close": "Cerrar",
+    "yes": "Sí",
+    "no": "No"
+  },
+  "language": {
+    "switch": "Idioma",
+    "select": "Seleccionar idioma"
+  },
+  "disclaimer": {
+    "text": "Esta aplicación es solo para autoexploración y entretenimiento. No constituye una evaluación psicológica profesional ni consejo médico."
+  },
+  "periods": {
+    "monthly": "Mensual",
+    "6months": "6 Meses",
+    "yearly": "1 Año"
+  },
+  "tiers": {
+    "free": {
+      "name": "Gratis",
+      "subtitle": "Exploración de temperamento y habilidades personales",
+      "cta": "Comenzar gratis",
+      "feature1": "Evaluar tipo de temperamento",
+      "feature2": "Analizar 6 dimensiones de habilidades"
+    },
+    "pro": {
+      "name": "Pro",
+      "subtitle": "Insights de temperamento y habilidades del equipo",
+      "cta": "Seleccionar Pro",
+      "feature1": "Hasta 60 observados",
+      "feature2": "Análisis de temperamento y habilidades del equipo"
+    },
+    "max": {
+      "name": "Max",
+      "subtitle": "Predicción de finalización de tareas",
+      "cta": "Seleccionar Max",
+      "feature1": "Hasta 160 observados",
+      "feature2": "Análisis agregado del equipo",
+      "feature3": "Predicción de ajuste de tareas"
+    }
+  },
+  "landing": {
+    "badge": "Perspicacia del Temperamento",
+    "titleLine1": "Comienza con insights del temperamento individual,",
+    "titleLine2": "construye sinergia de equipo — elige tu plan",
+    "privacyPolicy": "Política de Privacidad",
+    "termsOfService": "Términos del Servicio",
+    "footer": "© {{year}} Perspicacia del Temperamento · Solo para referencia de autoexploración e insights de equipo",
+    "perPeriod": "/ {{period}}",
+    "billedAs": "{{perMonth}} facturado como {{display}}"
+  },
+  "home": {
+    "selectProfession": "Selecciona el campo profesional del observado",
+    "selectProfessionHint": "Diferentes profesiones se asocian con distintos escenarios reales para una evaluación más precisa",
+    "startAssessment": "Comenzar evaluación",
+    "pleaseSelectProfession": "Por favor, selecciona primero una profesión",
+    "brandBadge": "Perspicacia del Temperamento",
+    "brandTitle": "Comprende el temperamento, desbloquea el potencial",
+    "brandSubtitle": "Una herramienta de evaluación de temperamento y habilidades basada en la observación conductual situacional, que te ayuda a comprender a los demás de forma objetiva",
+    "introObserverTitle": "Perspectiva del observador",
+    "introObserverDesc": "Evalúa patrones de comportamiento desde una perspectiva de terceros",
+    "introScenariosTitle": "Escenarios reales",
+    "introScenariosDesc": "Basado en 20 escenarios de la vida real, capturando respuestas conductuales naturales",
+    "introObjectiveTitle": "Evaluación objetiva",
+    "introObjectiveDesc": "Análisis multidimensional del temperamento y las habilidades, evaluación sin etiquetado"
+  },
+  "login": {
+    "welcomeBack": "Bienvenido de nuevo",
+    "subtitle": "Inicia sesión para seguir gestionando tu equipo",
+    "emailPlaceholder": "ejemplo@email.com",
+    "passwordPlaceholder": "Ingresa tu contraseña",
+    "loggingIn": "Iniciando sesión...",
+    "loginButton": "Iniciar sesión",
+    "noAccount": "¿No tienes una cuenta Pro / Max?",
+    "choosePlan": "Elige un plan para registrarte",
+    "support": "soporte"
+  },
+  "register": {
+    "backToHome": "Volver al inicio",
+    "signUpTitle": "Registro — {{tier}}",
+    "upgradeTitle": "Mejorar a {{tier}}",
+    "upgradeSubtitle": "Desde {{fromTier}} · {{amount}} · acceso {{period}}",
+    "signUpSubtitle": "{{display}} · acceso {{period}}",
+    "nicknameLabel": "Apodo",
+    "nicknamePlaceholder": "¿Cómo deberíamos dirigirnos a ti",
+    "emailPlaceholder": "ejemplo@email.com",
+    "passwordLabel": "Contraseña",
+    "passwordPlaceholder": "Al menos 6 caracteres",
+    "signingUp": "Registrando...",
+    "signUpPay": "Registrarse y pagar {{amount}}",
+    "haveAccount": "¿Ya tienes una cuenta?",
+    "logIn": "Iniciar sesión",
+    "agreementText": "He leído y acepto la <privacy>Política de Privacidad</privacy> y los <terms>Términos del Servicio</terms>",
+    "paymentStepTitle": "Registro exitoso, completa el pago",
+    "upgradeStepTitle": "Completar pago de mejora",
+    "paymentStepDesc": "Hemos enviado un correo de verificación a <email>{{email}}</email>.<br/>Paga {{amount}} para obtener acceso {{period}} a todas las funciones de {{tier}}.",
+    "upgradeStepDesc": "Actualmente eres usuario de {{fromTier}}. Mejorar a {{tier}} requiere una diferencia de precio de {{amount}}.<br/>El límite de observados se ampliará de 60 a 160, y se desbloqueará la función de predicción.",
+    "orderDetails": "Detalles del pedido",
+    "upgradeOrder": "Pedido de mejora",
+    "version": "Versión",
+    "account": "Cuenta",
+    "amountDue": "Monto a pagar",
+    "paying": "Redirigiendo al pago...",
+    "payButton": "Pagar {{amount}}",
+    "paymentAccess": "Acceso habilitado inmediatamente después del pago",
+    "pleaseLoginFirst": "Por favor, inicia sesión antes del pago.",
+    "payInitFailed": "Error al inicializar el pago. Inténtalo de nuevo.",
+    "noCheckoutUrl": "No se devolvió una URL de pago. Contacta con soporte.",
+    "networkError": "Error de red. Revisa tu conexión e inténtalo de nuevo."
+  },
+  "paymentCallback": {
+    "backToHome": "← Volver al inicio",
+    "verifying": "Verificando pago...",
+    "verifyHint": "Por favor, espera mientras confirmamos tu pago.",
+    "successTitle": "¡Pago exitoso!",
+    "upgradeSuccessTitle": "¡Mejora completada!",
+    "successDesc": "Tu versión {{tier}} ya está activa. Ya puedes gestionar los observados del equipo.",
+    "upgradeSuccessDesc": "Tu versión {{tier}} ya está activa. Límite de observados ampliado, función de predicción desbloqueada.",
+    "enterWorkspace": "Entrar al espacio de {{tier}}",
+    "pendingTitle": "El pago se está procesando",
+    "pendingDesc": "Tu pago se envió correctamente. Puede tardar unos momentos en confirmarse. Si el acceso no se habilita en breve, contacta con soporte.",
+    "checkAgain": "Comprobar de nuevo",
+    "cancelBack": "Cancelar y volver al registro",
+    "errorTitle": "Pago no confirmado",
+    "errorDesc": "No pudimos confirmar tu pago. Inténtalo de nuevo.",
+    "backToRegister": "Volver al registro"
+  },
+  "assessment": {
+    "loading": "Cargando...",
+    "progressQ": "P {{current}} / {{total}}",
+    "previous": "Anterior",
+    "next": "Siguiente",
+    "viewResults": "Ver resultados",
+    "customOptionDefault": "Otro (describe la situación real)",
+    "customPlaceholder": "Describe la reacción real del observado...",
+    "customConfirm": "Confirmar",
+    "customCancel": "Cancelar",
+    "selectorTitle": "Evalúa esta tendencia conductual",
+    "selectorHint": "Juzga según la situación real del observado",
+    "temperamentType": "Tipo de temperamento",
+    "temperamentTypeRequired": "Tipo de temperamento *",
+    "behavioralTendency": "Tendencia conductual",
+    "behavioralTendencyHint": "Tendencia conductual (múltiple)",
+    "keyAbilities": "Habilidades clave",
+    "keyAbilitiesHint": "Habilidades clave (múltiple)",
+    "emotionalTone": "Tono emocional",
+    "emotionalToneRequired": "Tono emocional *",
+    "skipAuto": "Omitir (análisis automático)",
+    "selectorConfirm": "Confirmar"
+  },
+  "temperament": {
+    "sanguine": {
+      "name": "Sanguíneo",
+      "desc": "Sociable, respuesta rápida",
+      "badge": "San"
+    },
+    "choleric": {
+      "name": "Colérico",
+      "desc": "Decidido, gran determinación",
+      "badge": "Col"
+    },
+    "phlegmatic": {
+      "name": "Flemático",
+      "desc": "Tranquilo, emocionalmente estable",
+      "badge": "Fle"
+    },
+    "melancholic": {
+      "name": "Melancólico",
+      "desc": "Sensible, pensador profundo",
+      "badge": "Mel"
+    }
+  },
+  "behaviors": {
+    "proactive": "Proactivo",
+    "proactiveDesc": "Toma la iniciativa, sin esperar",
+    "rational": "Análisis racional",
+    "rationalDesc": "Pensamiento tranquilo, sopesando pros y contras",
+    "collaborative": "Colaborativo",
+    "collaborativeDesc": "Busca apoyo, resuelve en conjunto",
+    "creative": "Innovador",
+    "creativeDesc": "Prueba nuevos métodos, rompe convenciones"
+  },
+  "emotions": {
+    "positive": "Positivo",
+    "neutral": "Neutral",
+    "negative": "Negativo/Evitativo",
+    "anxious": "Ansioso",
+    "unknown": "Incierto"
+  },
+  "abilities": {
+    "communication": "Comunicación",
+    "leadership": "Liderazgo",
+    "creativity": "Creatividad",
+    "analysis": "Análisis",
+    "resilience": "Resiliencia",
+    "empathy": "Empatía"
+  },
+  "professions": {
+    "service": "Trabajador de servicios",
+    "student": "Estudiante",
+    "office": "Profesional de oficina",
+    "civil": "Funcionario público",
+    "artist": "Profesional creativo",
+    "media": "Creador de contenido",
+    "teacher": "Educador",
+    "doctor": "Profesional sanitario"
+  },
+  "result": {
+    "loading": "Cargando...",
+    "temperamentDistribution": "Distribución de temperamento",
+    "comprehensiveInterpretation": "Interpretación integral",
+    "abilityRadar": "Gráfico radar de habilidades",
+    "radarStrong": "70+ Fuerte",
+    "radarBalanced": "40-69 Equilibrado",
+    "radarGrowth": "<40 Área de crecimiento",
+    "radarPoints": "pts",
+    "dimensionDetails": "Detalles de dimensiones",
+    "motivationAnalysis": "💡 Análisis de motivación",
+    "dominant": "Dominante: {{name}}",
+    "secondary": "Secundario: {{name}}",
+    "thinkingTitle": "🧠 Tendencias de pensamiento y comportamiento",
+    "thinkingBalanced": "Equilibrado",
+    "thinkingLean": "Inclinación hacia {{name}}",
+    "thinkingBalancedDesc": "Combina ambos rasgos, capaz de ajustar de forma flexible el pensamiento y el comportamiento según el contexto",
+    "thinkingFooter": "* Las tendencias de pensamiento y comportamiento no son fijas y pueden ajustarse con el contexto y el crecimiento personal",
+    "retake": "Volver a realizar",
+    "share": "Compartir",
+    "shareSuccess": "Enlace copiado al portapapeles. ¡Compártelo con tus amigos!",
+    "shareFail": "La función de compartir no está disponible actualmente",
+    "discard": "Descartar",
+    "saveToTeam": "Guardar en el equipo",
+    "discardConfirm": "¿Descartar el resultado de la evaluación de este observado?"
+  },
+  "motivations": {
+    "achievement": {
+      "name": "Logro",
+      "desc": "Búsqueda de la excelencia, orientado a objetivos, impulsado por el éxito",
+      "high": "El observado tiene un fuerte motivo de logro, impulsado por el éxito y la excelencia. Disfruta desafiándose a sí mismo y persiguiendo la consecución de objetivos. Ante las tareas, tiende a establecer estándares altos y se esfuerza por cumplirlos.",
+      "medium": "El observado tiene un motivo de logro moderado, trabajando hacia sus objetivos manteniendo el equilibrio entre trabajo y vida personal, sin un perfeccionismo excesivo.",
+      "low": "El observado tiene un motivo de logro relativamente débil, centrándose más en la experiencia del proceso que en la orientación a resultados, con menor interés en la competición y los desafíos, prefiriendo un estado estable y cómodo."
+    },
+    "affiliation": {
+      "name": "Afiliación",
+      "desc": "Valoración de las relaciones, la pertenencia y la armonía",
+      "high": "El observado tiene un fuerte motivo de afiliación, valorando profundamente las relaciones interpersonales y el sentido de pertenencia. Disfruta socializando, es hábil en la construcción y mantenimiento de redes sociales, y es activo en los equipos.",
+      "medium": "El observado tiene un motivo de afiliación moderado, valorando las relaciones manteniendo una independencia adecuada, disfrutando tanto de la interacción social como de la soledad.",
+      "low": "El observado tiene un motivo de afiliación relativamente débil, prefiriendo el trabajo independiente con menor necesidad de actividades sociales, y puede necesitar más estímulo en el trabajo en equipo."
+    },
+    "power": {
+      "name": "Poder",
+      "desc": "Búsqueda de influencia, control y autoridad de decisión",
+      "high": "El observado tiene un fuerte motivo de poder, deseando influir en los demás y controlar las situaciones. Disfruta liderando procesos de toma de decisiones y puede aprovechar sus fortalezas en roles de liderazgo.",
+      "medium": "El observado tiene un motivo de poder moderado, capaz de asumir responsabilidades de liderazgo cuando es necesario respetando las opiniones de los demás, sin un deseo excesivo de dominio.",
+      "low": "El observado tiene un motivo de poder relativamente débil, prefiriendo cooperar a liderar, con menor interés en gestionar o controlar a los demás, adecuado para roles de ejecución."
+    },
+    "security": {
+      "name": "Seguridad",
+      "desc": "Búsqueda de estabilidad, evitación de riesgos, énfasis en la seguridad y protección",
+      "high": "El observado tiene un fuerte motivo de seguridad, persiguiendo entornos estables y predecibles, tomando decisiones cautelosas, evitando riesgos y valorando la planificación y las salvaguardas a largo plazo.",
+      "medium": "El observado tiene un motivo de seguridad moderado, considerando los factores de riesgo en las decisiones sin ser excesivamente conservador, capaz de equilibrar seguridad y asunción de riesgos.",
+      "low": "El observado tiene un motivo de seguridad relativamente débil, más dispuesto a asumir riesgos y probar cosas nuevas, con mayor tolerancia a la incertidumbre, adecuado para tareas innovadoras o desafiantes."
+    }
+  },
+  "thinking": {
+    "proactive": {
+      "name": "Proactivo",
+      "desc": "Toma la iniciativa, busca activamente soluciones"
+    },
+    "reactive": {
+      "name": "Reactivo",
+      "desc": "Espera y observa, tiende a responder en lugar de iniciar"
+    },
+    "rational": {
+      "name": "Racional",
+      "desc": "Se centra en el análisis lógico, sopesando objetivamente pros y contras"
+    },
+    "intuitive": {
+      "name": "Intuitivo",
+      "desc": "Valora la experiencia emocional, juzga por intuición"
+    },
+    "independent": {
+      "name": "Independiente",
+      "desc": "Prefiere el pensamiento independiente, completa tareas de forma autónoma"
+    },
+    "collaborative": {
+      "name": "Colaborativo",
+      "desc": "Hábil en el trabajo en equipo, valora la sabiduría colectiva"
+    },
+    "innovative": {
+      "name": "Innovador",
+      "desc": "Persigue enfoques novedosos y únicos, rompe convenciones"
+    },
+    "conventional": {
+      "name": "Convencional",
+      "desc": "Sigue normas establecidas, constante y fiable"
+    }
+  },
+  "observer": {
+    "add": {
+      "backToWorkspace": "Volver al espacio de trabajo",
+      "title": "Añadir observado",
+      "subtitle": "Modo proxy: Basado en tu conocimiento real del observado, selecciona su reacción en cada escenario",
+      "nameLabel": "Nombre del observado",
+      "nameHint": "(alias/código permitido)",
+      "namePlaceholder": "ej. Alex / Obs-001",
+      "gender": "Género",
+      "male": "Masculino",
+      "female": "Femenino",
+      "other": "Otro",
+      "unknown": "Prefiere no decir",
+      "profession": "Profesión",
+      "professionHint": "Diferentes profesiones se asocian con distintas preguntas de escenario",
+      "noteLabel": "Nota (opcional)",
+      "notePlaceholder": "Departamento, rol, relación, etc.",
+      "preparing": "Preparando preguntas...",
+      "startAssessment": "Comenzar evaluación"
+    },
+    "save": {
+      "title": "Confirmar guardado del observado",
+      "subtitle": "Confirma la información a continuación antes de guardarla en tu equipo",
+      "name": "Nombre",
+      "gender": "Género",
+      "profession": "Profesión",
+      "note": "Nota",
+      "dominantTemperament": "Temperamento dominante",
+      "currentPlan": "Plan actual: {{tier}} · Límite de observados: {{limit}}",
+      "saving": "Guardando...",
+      "confirmSave": "Confirmar guardado en el equipo",
+      "savedTitle": "Observado guardado",
+      "savedDesc": "Los resultados de la evaluación de <name>{{name}}</name> se han añadido a tu equipo. Puedes consultarlos en cualquier momento desde el espacio de trabajo.",
+      "backToWorkspace": "Volver al espacio de trabajo",
+      "saveFailed": "Error al guardar, inténtalo de nuevo"
+    },
+    "detail": {
+      "backToList": "Volver a la lista",
+      "notFound": "Observado no encontrado",
+      "professionNotSpecified": "Profesión no especificada"
+    }
+  },
+  "proWorkspace": {
+    "badge": "Espacio Pro",
+    "welcome": "Bienvenido, {{name}}",
+    "manager": "Gestor",
+    "capacity": "Capacidad de observados: {{usage}}",
+    "signOut": "Cerrar sesión",
+    "addObserver": "Añadir observado",
+    "observers": "Observados",
+    "teamProfile": "Perfil del equipo",
+    "emptyHint": "Aún no hay observados. Haz clic en el botón superior para añadir"
+  },
+  "maxWorkspace": {
+    "badge": "Espacio Max",
+    "welcome": "Bienvenido, {{name}}",
+    "manager": "Gestor",
+    "capacity": "Capacidad de observados: {{usage}}",
+    "signOut": "Cerrar sesión",
+    "addObserver": "Añadir observado",
+    "newPrediction": "Nueva predicción",
+    "observers": "Observados",
+    "selectCombine": "Seleccionar y combinar",
+    "exitSelection": "Salir de selección",
+    "selected": "{{count}} seleccionados",
+    "selectAll": "Seleccionar todo",
+    "clear": "Limpiar",
+    "predictTeam": "Predecir este equipo",
+    "teamProfile": "Perfil del equipo",
+    "selectedTeamProfile": "Perfil del equipo seleccionado ({{count}})",
+    "predictionRecords": "Registros de predicción",
+    "emptyObservers": "Aún no hay observados. Haz clic en el botón superior para añadir",
+    "emptyPredictions": "Aún no hay predicciones. Haz clic en el botón superior para comenzar",
+    "noProfession": "Sin profesión especificada",
+    "members": "{{count}} miembros",
+    "fitScore": "Puntuación de ajuste {{score}}",
+    "confirmDeletePrediction": "¿Confirmar eliminación de esta predicción?"
+  },
+  "teamAggregate": {
+    "empty": "No hay observados añadidos, no se puede generar el análisis de equipo",
+    "teamTraitProfile": "Perfil de rasgos del equipo",
+    "basedOn": "Basado en {{count}} observados",
+    "temperamentDiversity": "Diversidad de temperamento",
+    "abilityDiversity": "Diversidad de habilidades",
+    "teamAbilityAverage": "Promedio de habilidades del equipo",
+    "temperamentDistribution": "Distribución de temperamento dominante",
+    "motivationAverage": "Promedio de motivación",
+    "thinkingStyleAverage": "Promedio de estilo de pensamiento",
+    "percentage": "Porcentaje"
+  },
+  "observerList": {
+    "empty": "Aún no hay observados",
+    "noProfession": "Sin profesión especificada",
+    "delete": "Eliminar",
+    "deleteConfirm": "¿Confirmar eliminación del observado \"{{name}}\"? Esta acción no se puede deshacer."
+  },
+  "taskBuilder": {
+    "backToMax": "Volver al espacio Max",
+    "title": "Nueva predicción de tarea",
+    "subtitle": "Configura los parámetros de la tarea y el equipo; el sistema predecirá la finalización basándose en las dimensiones de temperamento y habilidades",
+    "taskName": "Nombre de la tarea",
+    "taskNamePlaceholder": "ej. Sprint de lanzamiento de producto Q4",
+    "inputMode": "Modo de entrada",
+    "template": "Plantilla",
+    "custom": "Personalizado",
+    "selectTemplate": "Seleccionar plantilla de tarea",
+    "templateHint": "Puedes ajustar los parámetros después de seleccionar una plantilla",
+    "basicParameters": "Parámetros básicos",
+    "taskTypes": "Tipos de tarea (múltiple)",
+    "difficulty": "Dificultad",
+    "collaboration": "Colaboración",
+    "timePressure": "Presión de tiempo",
+    "riskTolerance": "Tolerancia al riesgo",
+    "independent": "Independiente",
+    "fullCollaboration": "Colaboración total",
+    "relaxed": "Relajado",
+    "urgent": "Urgente",
+    "zeroError": "Cero errores",
+    "encourageRisk": "Fomentar riesgo",
+    "abilityRequirements": "Requisitos de habilidades (0-100)",
+    "abilityReqHint": "Umbrales mínimos de habilidades para esta tarea, superpón sobre el gráfico radar para comparar con las habilidades del equipo",
+    "motivationRequirements": "Requisitos de motivación (0-100)",
+    "motivationReqHint": "Fuerza de motivación esperada, mayor valor significa mayor dependencia",
+    "thinkingRequirements": "Requisitos de estilo de pensamiento (0-100)",
+    "thinkingReqHint": "0=extremo izquierdo, 100=extremo derecho, 50=neutral",
+    "teamConfiguration": "Configuración del equipo",
+    "teamConfigHint": "Selecciona los observados para esta tarea ({{count}} seleccionados)",
+    "emptyObservers": "Aún no hay observados, añádelos primero en el espacio de trabajo",
+    "assignKeyRole": "Asignar rol clave (líder, liderazgo/resiliencia ponderados 2x)",
+    "selectKeyMember": "Seleccionar miembro clave",
+    "predicting": "Prediciendo...",
+    "generatePrediction": "Generar predicción",
+    "predictionFailed": "Predicción fallida, inténtalo de nuevo"
+  },
+  "taskTypes": {
+    "creative": "Creativo",
+    "execution": "Ejecución",
+    "communication": "Comunicación",
+    "analysis": "Análisis",
+    "leadership": "Liderazgo",
+    "resilience": "Resiliencia"
+  },
+  "taskResult": {
+    "backToMax": "Volver al espacio Max",
+    "taskNotFound": "Tarea no encontrada",
+    "deleteTask": "Eliminar tarea",
+    "badge": "Resultado de predicción de tarea",
+    "basedOn": "Basado en las dimensiones de temperamento y habilidades de {{count}} observados seleccionados",
+    "completionProbability": "Probabilidad de finalización",
+    "goodProspects": "Buenas perspectivas",
+    "moderateRisk": "Riesgo moderado",
+    "poorProspects": "Malas perspectivas",
+    "fitMeta": "Puntuación de ajuste {{fit}} · Dificultad {{difficulty}} · Presión de tiempo {{timePressure}} · Tolerancia al riesgo {{riskTolerance}}",
+    "fitRadar": "Gráfico radar de ajuste",
+    "taskRequirements": "Requisitos de la tarea",
+    "teamActual": "Equipo real",
+    "recommendedMembers": "Miembros clave recomendados (Top 3 por ajuste)",
+    "overallFitScore": "Puntuación de ajuste global",
+    "strengths": "Fortalezas",
+    "requiredActual": "Requerido {{required}} · Real {{actual}}",
+    "riskPoints": "Puntos de riesgo ({{count}})",
+    "riskRequired": "Requerido {{required}} · Real {{actual}} · Brecha {{gap}}",
+    "noRisk": "No se detectan puntos de riesgo, la configuración del equipo coincide bien con los requisitos de la tarea",
+    "detailedMatch": "Coincidencia detallada",
+    "abilityDimensions": "Dimensiones de habilidades",
+    "motivationMatch": "Coincidencia de motivación",
+    "thinkingStyle": "Estilo de pensamiento",
+    "riskLow": "Bajo",
+    "riskMedium": "Medio",
+    "riskHigh": "Alto",
+    "confirmDeleteTask": "¿Confirmar eliminación de la tarea \"{{name}}\"?"
+  },
+  "privacy": {
+    "title": "Política de Privacidad",
+    "back": "Atrás",
+    "lastUpdated": "Última actualización: 30 de julio de 2026",
+    "sections": {
+      "infoCollection": {
+        "title": "1. Recopilación de información",
+        "p1": "Recopilamos información que incluye, entre otras: direcciones de correo electrónico, contraseñas de cuenta (cifradas), resultados de evaluaciones y datos de gestión de equipos. Esta información se utiliza para proporcionar servicios personalizados, mejorar la experiencia del usuario y proteger la seguridad de la cuenta.",
+        "p2": "Para los usuarios de la versión gratuita, los datos se almacenan localmente en el navegador y no se cargan en los servidores. Para los usuarios de las versiones Pro y Max, los datos se almacenan en nuestros servidores seguros para habilitar el acceso entre dispositivos y las funciones de colaboración en equipo."
+      },
+      "infoUsage": {
+        "title": "2. Uso de la información",
+        "p1": "Utilizamos la información recopilada para:",
+        "l1": "Proporcionar, mantener y mejorar nuestros servicios",
+        "l2": "Procesar tus suscripciones y pagos",
+        "l3": "Enviar notificaciones y actualizaciones relacionadas con el servicio",
+        "l4": "Analizar tendencias de uso para optimizar las funciones del producto",
+        "l5": "Prevenir el fraude y garantizar la seguridad de la plataforma"
+      },
+      "infoSharing": {
+        "title": "3. Compartición de información",
+        "p1": "No vendemos, comercializamos ni transferimos de otro modo tu información personal a terceros. Sin embargo, podemos compartir tu información en las siguientes circunstancias:",
+        "l1": "Con tu consentimiento explícito",
+        "l2": "Con proveedores de servicios que nos ayudan a operar (como procesadores de pago, proveedores de servicios en la nube)",
+        "l3": "Para cumplir con obligaciones legales o responder a solicitudes gubernamentales legítimas",
+        "l4": "Para proteger nuestros derechos, privacidad, seguridad o propiedad"
+      },
+      "dataSecurity": {
+        "title": "4. Seguridad de los datos",
+        "p1": "Empleamos medidas de seguridad estándar de la industria para proteger tu información, incluidas entre otras: transmisión cifrada de datos (HTTPS), hash de contraseñas, controles de acceso y auditorías de seguridad periódicas. Sin embargo, ningún método de transmisión por internet o almacenamiento electrónico es 100% seguro, y no podemos garantizar una seguridad absoluta."
+      },
+      "cookies": {
+        "title": "5. Cookies y tecnologías de seguimiento",
+        "p1": "Usamos cookies y tecnologías de seguimiento similares para recopilar información, mejorar el rendimiento del servicio y personalizar la experiencia del usuario. Puedes gestionar las preferencias de cookies en la configuración de tu navegador, pero deshabilitar las cookies puede afectar a la funcionalidad de ciertas características."
+      },
+      "rights": {
+        "title": "6. Tus derechos",
+        "p1": "Tienes derecho a:",
+        "l1": "Acceder y actualizar tu información personal",
+        "l2": "Solicitar la eliminación de tu cuenta y los datos relacionados",
+        "l3": "Excluire de las comunicaciones de marketing",
+        "l4": "Solicitar una copia de tus datos",
+        "l5": "Oponerte a ciertas actividades de procesamiento de datos"
+      },
+      "policyUpdates": {
+        "title": "7. Actualizaciones de la política",
+        "p1": "Podemos actualizar esta política de privacidad de vez en cuando. Los cambios significativos se te notificarán de forma destacada en esta página. El uso continuado de nuestros servicios indica tu aceptación de la política actualizada."
+      },
+      "contact": {
+        "title": "8. Contacto",
+        "p1": "Si tienes alguna pregunta o sugerencia sobre esta política de privacidad, contáctanos en:"
+      }
+    }
+  },
+  "terms": {
+    "title": "Términos del Servicio",
+    "back": "Atrás",
+    "lastUpdated": "Última actualización: 30 de julio de 2026",
+    "sections": {
+      "serviceDesc": {
+        "title": "1. Descripción del servicio",
+        "p1": "Personality Assessment es una herramienta de evaluación de personalidad basada en la teoría psicológica, diseñada para ayudar a los usuarios en la autoexploración y el crecimiento personal. Ofrecemos una versión gratuita y versiones de suscripción de pago (Pro y Max).",
+        "p2": "<strong>Aviso importante:</strong> Esta aplicación es solo para fines de autoexploración y entretenimiento y no constituye una evaluación psicológica profesional ni consejo médico. Los resultados de la evaluación no deben utilizarse como única base para el diagnóstico clínico, decisiones médicas o elecciones profesionales."
+      },
+      "userAccount": {
+        "title": "2. Cuenta de usuario",
+        "p1": "El uso de las versiones Pro o Max requiere registro de cuenta. Aceptas:",
+        "l1": "Proporcionar información de registro precisa, completa y actualizada",
+        "l2": "Proteger la seguridad y confidencialidad de la contraseña de tu cuenta",
+        "l3": "Responsabilizarte de todas las actividades realizadas bajo tu cuenta",
+        "l4": "Notificarnos inmediatamente si detectas un uso no autorizado"
+      },
+      "subscriptions": {
+        "title": "3. Suscripciones y pagos",
+        "p1": "<strong>Planes de suscripción:</strong>",
+        "l1": "Versión Pro: $5/mes, $17/6 meses, $27/año",
+        "l2": "Versión Max: $12/mes, $43/6 meses, $79/año",
+        "p2": "<strong>Política de pago:</strong>",
+        "l3": "Las suscripciones se renuevan automáticamente a menos que se cancelen antes de la fecha de renovación",
+        "l4": "Los precios pueden cambiar en cualquier momento; las suscripciones existentes no se ven afectadas",
+        "l5": "Todas las tarifas están en USD y pueden incluir impuestos",
+        "l6": "Los pagos se procesan a través de plataformas de pago de terceros"
+      },
+      "refund": {
+        "title": "4. Política de reembolso",
+        "p1": "Ofrecemos la siguiente política de reembolso:",
+        "l1": "Reembolso completo disponible dentro de los 7 días posteriores a la primera suscripción",
+        "l2": "Las tarifas de renovación no son reembolsables a menos que el servicio tenga defectos significativos",
+        "l3": "Las solicitudes de reembolso deben enviarse por correo electrónico de soporte",
+        "l4": "Los reembolsos se procesarán en un plazo de 5-10 días hábiles tras su aprobación"
+      },
+      "acceptableUse": {
+        "title": "5. Uso aceptable",
+        "p1": "Aceptas no:",
+        "l1": "Usar el servicio con fines ilegales o violar cualquier ley",
+        "l2": "Infringir la propiedad intelectual u otros derechos de terceros",
+        "l3": "Difundir virus, código malicioso u otro contenido dañino",
+        "l4": "Intentar descifrar, realizar ingeniería inversa o interferir con el funcionamiento del servicio",
+        "l5": "Suplantar a otros o proporcionar información falsa",
+        "l6": "Compartir tu cuenta con otros"
+      },
+      "intellectualProperty": {
+        "title": "6. Propiedad intelectual",
+        "p1": "Todo el contenido, las características y los servicios están protegidos por las leyes de propiedad intelectual. Sin nuestro permiso por escrito, no puedes:",
+        "l1": "Copiar, modificar, distribuir o mostrar ningún contenido",
+        "l2": "Crear obras derivadas o utilizar el contenido con fines comerciales",
+        "l3": "Eliminar ningún aviso de derechos de autor o marcas de propiedad"
+      },
+      "disclaimer": {
+        "title": "7. Aviso legal",
+        "p1": "<strong>El servicio se proporciona \"tal cual\" sin ninguna garantía expresa o implícita.</strong> No somos responsables de:",
+        "l1": "La continuidad, seguridad o ausencia de errores del servicio",
+        "l2": "La precisión o aplicabilidad de los resultados de la evaluación",
+        "l3": "Cualquier decisión tomada en función de los resultados de la evaluación",
+        "l4": "Pérdidas derivadas del uso o la imposibilidad de uso del servicio",
+        "l5": "Acciones o contenidos de terceros"
+      },
+      "liability": {
+        "title": "8. Limitación de responsabilidad",
+        "p1": "En la máxima medida permitida por la ley aplicable, nuestra responsabilidad total no excederá las tarifas que pagaste en los últimos 12 meses. No somos responsables de ningún daño indirecto, incidental, especial o consecuente."
+      },
+      "serviceChanges": {
+        "title": "9. Cambios y terminación del servicio",
+        "p1": "Nos reservamos el derecho de:",
+        "l1": "Modificar, suspender o terminar el servicio (total o parcialmente) en cualquier momento",
+        "l2": "Eliminar cuentas y todos los datos relacionados",
+        "l3": "Restringir los permisos de uso de ciertos usuarios",
+        "l4": "Cambiar precios y características",
+        "p2": "Si el servicio se termina, notificaremos a los usuarios con 30 días de antelación y proporcionaremos opciones razonables de reembolso o compensación."
+      },
+      "disputes": {
+        "title": "10. Resolución de disputas",
+        "p1": "Cualquier disputa derivada de estos términos se resolverá primero mediante negociación amistosa. Si la negociación fracasa, la disputa se someterá al tribunal con jurisdicción en la ubicación del proveedor del servicio. Estos términos se rigen por las leyes de la República Popular China."
+      },
+      "miscellaneous": {
+        "title": "11. Misceláneos",
+        "l1": "Estos términos constituyen el acuerdo completo entre tú y nosotros",
+        "l2": "Nuestra falta de ejercer cualquier derecho no constituye una renuncia a ese derecho",
+        "l3": "Si alguna disposición de estos términos se considera inválida, los términos restantes siguen vigentes",
+        "l4": "Podemos ceder este acuerdo en cualquier momento; tú necesitas nuestro consentimiento para cederlo"
+      },
+      "contact": {
+        "title": "12. Contacto",
+        "p1": "Para cualquier pregunta o sugerencia, contáctanos en:"
+      }
+    }
+  }
+}

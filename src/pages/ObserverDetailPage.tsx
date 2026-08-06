@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useNavigate, useParams, Link } from 'react-router-dom';
 import { ArrowLeft, Trash2, Loader2 } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 import type { Observer } from '../types/account';
 import { listObservers, deleteObserver } from '../lib/observers';
 import TemperamentHero from '../components/result/TemperamentHero';
@@ -9,15 +10,10 @@ import DimensionDetails from '../components/result/DimensionDetails';
 import MotivationAnalysis from '../components/result/MotivationAnalysis';
 import ThinkingAnalysis from '../components/result/ThinkingAnalysis';
 import Disclaimer from '../components/ui/Disclaimer';
-
-const GENDER_LABEL: Record<string, string> = {
-  male: 'Male',
-  female: 'Female',
-  other: 'Other',
-  unknown: 'Prefer not to say',
-};
+import LanguageSwitcher from '../components/ui/LanguageSwitcher';
 
 export default function ObserverDetailPage() {
+  const { t } = useTranslation();
   const { id } = useParams<{ id: string }>();
   const navigate = useNavigate();
   const [observer, setObserver] = useState<Observer | null>(null);
@@ -35,7 +31,7 @@ export default function ObserverDetailPage() {
 
   const handleDelete = async () => {
     if (!observer) return;
-    if (!confirm(`Delete observer "${observer.name}"?`)) return;
+    if (!confirm(t('observerList.deleteConfirm', { name: observer.name }))) return;
     setDeleting(true);
     try {
       await deleteObserver(observer.id);
@@ -56,8 +52,8 @@ export default function ObserverDetailPage() {
   if (!observer || !observer.result) {
     return (
       <div className="min-h-screen flex flex-col items-center justify-center gap-3">
-        <p className="text-sm text-[#8E8CA8]">Observer not found</p>
-        <Link to="/" className="text-sm text-[#5B4FCF] hover:underline">Back to Home</Link>
+        <p className="text-sm text-[#8E8CA8]">{t('observer.detail.notFound')}</p>
+        <Link to="/" className="text-sm text-[#5B4FCF] hover:underline">{t('common.backToHome')}</Link>
       </div>
     );
   }
@@ -68,20 +64,23 @@ export default function ObserverDetailPage() {
     <div className="min-h-screen flex items-center justify-center p-4 pb-8">
       <div className="w-full max-w-[420px] md:max-w-[520px] lg:max-w-[640px] xl:max-w-[720px] flex flex-col gap-5">
         <div className="flex items-center justify-between">
-          <button
-            onClick={() => navigate(-1)}
-            className="inline-flex items-center gap-1.5 text-sm text-[#8E8CA8] hover:text-[#5B4FCF] transition-colors"
-          >
-            <ArrowLeft className="w-4 h-4" />
-            Back to List
-          </button>
+          <div className="flex items-center gap-3">
+            <button
+              onClick={() => navigate(-1)}
+              className="inline-flex items-center gap-1.5 text-sm text-[#8E8CA8] hover:text-[#5B4FCF] transition-colors"
+            >
+              <ArrowLeft className="w-4 h-4" />
+              {t('observer.detail.backToList')}
+            </button>
+            <LanguageSwitcher />
+          </div>
           <button
             onClick={handleDelete}
             disabled={deleting}
             className="inline-flex items-center gap-1.5 text-sm text-red-500 hover:text-red-600 transition-colors disabled:opacity-40"
           >
             {deleting ? <Loader2 className="w-4 h-4 animate-spin" /> : <Trash2 className="w-4 h-4" />}
-            Delete
+            {t('observerList.delete')}
           </button>
         </div>
 
@@ -94,8 +93,8 @@ export default function ObserverDetailPage() {
             <div className="flex-1">
               <h2 className="text-lg font-bold text-[#3D3A5C]">{observer.name}</h2>
               <div className="text-xs text-[#8E8CA8] mt-0.5">
-                {GENDER_LABEL[observer.gender] && <span>{GENDER_LABEL[observer.gender]} · </span>}
-                {observer.profession || 'Profession not specified'}
+                {observer.gender && <span>{t(`observer.add.${observer.gender}`)} · </span>}
+                {observer.profession || t('observer.detail.professionNotSpecified')}
                 {observer.note && ` · ${observer.note}`}
               </div>
             </div>

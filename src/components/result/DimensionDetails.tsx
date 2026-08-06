@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { ChevronDown } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 import type { AbilityScores, AbilityDimension } from '../../types';
 import { abilityMap } from '../../data/results';
 
@@ -8,6 +9,7 @@ interface DimensionDetailsProps {
 }
 
 export default function DimensionDetails({ scores }: DimensionDetailsProps) {
+  const { t } = useTranslation();
   const [expanded, setExpanded] = useState<AbilityDimension | null>(null);
 
   const toggle = (key: AbilityDimension) => {
@@ -16,7 +18,7 @@ export default function DimensionDetails({ scores }: DimensionDetailsProps) {
 
   return (
     <div className="rounded-[20px] bg-white/60 backdrop-blur-[10px] border border-white/50 p-5">
-      <h3 className="text-sm font-semibold text-[#3D3A5C] mb-3">Dimension Details</h3>
+      <h3 className="text-sm font-semibold text-[#3D3A5C] mb-3">{t('result.dimensionDetails')}</h3>
       <div className="space-y-2">
         {(Object.keys(scores) as AbilityDimension[]).map((key) => {
           const info = abilityMap[key];
@@ -31,7 +33,7 @@ export default function DimensionDetails({ scores }: DimensionDetailsProps) {
                 className="w-full flex items-center justify-between p-4 text-left hover:bg-[#F8F7FF] transition-colors duration-200"
               >
                 <div className="flex items-center gap-3">
-                  <span className="text-sm font-medium text-[#3D3A5C]">{info.name}</span>
+                  <span className="text-sm font-medium text-[#3D3A5C]">{t(`abilities.${key}`)}</span>
                   <div className="w-20 h-2 bg-[#F0EEF8] rounded-full overflow-hidden">
                     <div
                       className="h-full rounded-full bg-gradient-to-r from-[#5B4FCF] to-[#7B6FE0] transition-all duration-500"

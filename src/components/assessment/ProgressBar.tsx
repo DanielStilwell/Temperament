@@ -1,16 +1,19 @@
+import { useTranslation } from 'react-i18next';
+
 interface ProgressBarProps {
   current: number;
   total: number;
 }
 
 export default function ProgressBar({ current, total }: ProgressBarProps) {
+  const { t } = useTranslation();
   const percentage = Math.round((current / total) * 100);
 
   return (
     <div className="w-full">
       <div className="flex items-center justify-between mb-2">
         <span className="text-xs font-medium text-[#8E8CA8]">
-          Q {current + 1} / {total}
+          {t('assessment.progressQ', { current: current + 1, total })}
         </span>
         <span className="text-xs font-semibold text-[#5B4FCF]">{percentage}%</span>
       </div>

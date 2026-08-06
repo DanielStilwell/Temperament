@@ -13,6 +13,7 @@ import {
   Tooltip,
   Cell,
 } from 'recharts';
+import { useTranslation } from 'react-i18next';
 import type { Observer } from '../../types/account';
 import { aggregateTeam, ABILITY_LABELS, TEMPERAMENT_LABELS } from '../../data/teamAggregate';
 import type { AbilityDimension, TemperamentType } from '../../types';
@@ -29,43 +30,44 @@ interface Props {
 }
 
 export default function TeamAggregateView({ observers }: Props) {
+  const { t } = useTranslation();
   const aggregate = useMemo(() => aggregateTeam(observers), [observers]);
 
   if (observers.length === 0) {
     return (
       <div className="rounded-[20px] bg-white/60 backdrop-blur-[10px] border border-white/50 p-8 text-center">
-        <p className="text-sm text-[#8E8CA8]">No observers added, unable to generate team analysis</p>
+        <p className="text-sm text-[#8E8CA8]">{t('teamAggregate.empty')}</p>
       </div>
     );
   }
 
   // 雷达图数据
   const radarData = (Object.keys(ABILITY_LABELS) as AbilityDimension[]).map((k) => ({
-    dimension: ABILITY_LABELS[k],
+    dimension: t(`abilities.${k}`),
     score: aggregate.averageAbilities[k],
   }));
 
   // 气质分布柱状图数据
   const temperamentData = (Object.keys(TEMPERAMENT_LABELS) as TemperamentType[]).map((k) => ({
-    name: TEMPERAMENT_LABELS[k],
+    name: t(`temperament.${k}.name`),
     value: Math.round(aggregate.temperamentDistribution[k]),
     color: TEMPERAMENT_COLORS[k],
   }));
 
   // 动机数据
   const motivationData = [
-    { name: 'Achievement', value: aggregate.averageMotivations.achievement },
-    { name: 'Affiliation', value: aggregate.averageMotivations.affiliation },
-    { name: 'Power', value: aggregate.averageMotivations.power },
-    { name: 'Security', value: aggregate.averageMotivations.security },
+    { name: t('motivations.achievement.name'), value: aggregate.averageMotivations.achievement },
+    { name: t('motivations.affiliation.name'), value: aggregate.averageMotivations.affiliation },
+    { name: t('motivations.power.name'), value: aggregate.averageMotivations.power },
+    { name: t('motivations.security.name'), value: aggregate.averageMotivations.security },
   ];
 
   // 思维倾向数据（4 对）
   const thinkingData = [
-    { name: 'Proactive', value: aggregate.averageThinking.proactive, left: 'Reactive', right: 'Proactive' },
-    { name: 'Rational', value: aggregate.averageThinking.rational, left: 'Intuitive', right: 'Rational' },
-    { name: 'Collaborative', value: aggregate.averageThinking.collaborative, left: 'Independent', right: 'Collaborative' },
-    { name: 'Innovative', value: aggregate.averageThinking.innovative, left: 'Conventional', right: 'Innovative' },
+    { name: t('thinking.proactive.name'), value: aggregate.averageThinking.proactive, left: t('thinking.reactive.name'), right: t('thinking.proactive.name') },
+    { name: t('thinking.rational.name'), value: aggregate.averageThinking.rational, left: t('thinking.intuitive.name'), right: t('thinking.rational.name') },
+    { name: t('thinking.collaborative.name'), value: aggregate.averageThinking.collaborative, left: t('thinking.independent.name'), right: t('thinking.collaborative.name') },
+    { name: t('thinking.innovative.name'), value: aggregate.averageThinking.innovative, left: t('thinking.conventional.name'), right: t('thinking.innovative.name') },
   ];
 
   return (
@@ -73,8 +75,8 @@ export default function TeamAggregateView({ observers }: Props) {
       {/* 团队特质标签 */}
       <div className="rounded-[20px] bg-white/60 backdrop-blur-[10px] border border-white/50 p-5">
         <div className="flex items-center justify-between mb-3">
-          <h3 className="text-base font-bold text-[#3D3A5C]">Team Trait Profile</h3>
-          <span className="text-xs text-[#8E8CA8]">Based on {aggregate.size} observers</span>
+          <h3 className="text-base font-bold text-[#3D3A5C]">{t('teamAggregate.teamTraitProfile')}</h3>
+          <span className="text-xs text-[#8E8CA8]">{t('teamAggregate.basedOn', { count: aggregate.size })}</span>
         </div>
         <div className="flex flex-wrap gap-2">
           {aggregate.teamTraits.map((trait, i) => (
@@ -89,18 +91,18 @@ export default function TeamAggregateView({ observers }: Props) {
         <div className="grid grid-cols-2 gap-3 mt-4 pt-4 border-t border-[#E8E6F5]">
           <div className="text-center">
             <div className="text-2xl font-bold text-[#5B4FCF]">{aggregate.diversity.temperament}</div>
-            <div className="text-xs text-[#8E8CA8] mt-0.5">Temperament Diversity</div>
+            <div className="text-xs text-[#8E8CA8] mt-0.5">{t('teamAggregate.temperamentDiversity')}</div>
           </div>
           <div className="text-center">
             <div className="text-2xl font-bold text-[#C9A86A]">{aggregate.diversity.abilities}</div>
-            <div className="text-xs text-[#8E8CA8] mt-0.5">Ability Diversity</div>
+            <div className="text-xs text-[#8E8CA8] mt-0.5">{t('teamAggregate.abilityDiversity')}</div>
           </div>
         </div>
       </div>
 
       {/* 能力雷达图 */}
       <div className="rounded-[20px] bg-white/60 backdrop-blur-[10px] border border-white/50 p-5">
-        <h3 className="text-base font-bold text-[#3D3A5C] mb-4">Team Ability Average</h3>
+        <h3 className="text-base font-bold text-[#3D3A5C] mb-4">{t('teamAggregate.teamAbilityAverage')}</h3>
         <div className="h-72">
           <ResponsiveContainer width="100%" height="100%">
             <RechartsRadar data={radarData} outerRadius="70%">
@@ -122,7 +124,7 @@ export default function TeamAggregateView({ observers }: Props) {
 
       {/* 气质分布柱状图 */}
       <div className="rounded-[20px] bg-white/60 backdrop-blur-[10px] border border-white/50 p-5">
-        <h3 className="text-base font-bold text-[#3D3A5C] mb-4">Dominant Temperament Distribution</h3>
+        <h3 className="text-base font-bold text-[#3D3A5C] mb-4">{t('teamAggregate.temperamentDistribution')}</h3>
         <div className="h-56">
           <ResponsiveContainer width="100%" height="100%">
             <BarChart data={temperamentData} margin={{ top: 10, right: 10, left: -20, bottom: 0 }}>
@@ -137,7 +139,7 @@ export default function TeamAggregateView({ observers }: Props) {
                   borderRadius: '12px',
                   fontSize: '13px',
                 }}
-                formatter={(v: number) => [`${v}%`, 'Percentage']}
+                formatter={(v: number) => [`${v}%`, t('teamAggregate.percentage')]}
               />
               <Bar dataKey="value" radius={[8, 8, 0, 0]}>
                 {temperamentData.map((entry, i) => (
@@ -152,7 +154,7 @@ export default function TeamAggregateView({ observers }: Props) {
       {/* 动机与思维倾向 */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
         <div className="rounded-[20px] bg-white/60 backdrop-blur-[10px] border border-white/50 p-5">
-          <h3 className="text-base font-bold text-[#3D3A5C] mb-3">Motivation Average</h3>
+          <h3 className="text-base font-bold text-[#3D3A5C] mb-3">{t('teamAggregate.motivationAverage')}</h3>
           <div className="flex flex-col gap-2.5">
             {motivationData.map((m) => (
               <BarRow key={m.name} label={m.name} value={m.value} color="#6B9AC4" />
@@ -160,7 +162,7 @@ export default function TeamAggregateView({ observers }: Props) {
           </div>
         </div>
         <div className="rounded-[20px] bg-white/60 backdrop-blur-[10px] border border-white/50 p-5">
-          <h3 className="text-base font-bold text-[#3D3A5C] mb-3">Thinking Style Average</h3>
+          <h3 className="text-base font-bold text-[#3D3A5C] mb-3">{t('teamAggregate.thinkingStyleAverage')}</h3>
           <div className="flex flex-col gap-2.5">
             {thinkingData.map((t) => (
               <div key={t.name} className="flex flex-col gap-1">

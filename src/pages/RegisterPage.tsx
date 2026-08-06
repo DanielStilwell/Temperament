@@ -1,8 +1,10 @@
 import { useState, useEffect } from 'react';
 import { useNavigate, useParams, Link, useSearchParams, useLocation } from 'react-router-dom';
 import { ArrowLeft, Mail, Lock, User as UserIcon, AlertCircle, Loader2, ArrowUpCircle, Check } from 'lucide-react';
+import { useTranslation, Trans } from 'react-i18next';
 import Button from '../components/ui/Button';
 import Disclaimer from '../components/ui/Disclaimer';
+import LanguageSwitcher from '../components/ui/LanguageSwitcher';
 import { useAuthStore } from '../stores/auth';
 import type { AccountTier } from '../types/account';
 import { TIER_PRICING, calculateUpgradePrice, PERIOD_LABELS, type BillingPeriod } from '../config/pricing';
@@ -15,6 +17,7 @@ const TIER_INFO: Record<Exclude<AccountTier, 'free'>, { name: string; gradient: 
 export { PERIOD_LABELS };
 
 export default function RegisterPage() {
+  const { t } = useTranslation();
   const { tier } = useParams<{ tier: string }>();
   const navigate = useNavigate();
   const location = useLocation();
@@ -88,7 +91,7 @@ export default function RegisterPage() {
       const currentTier = profile?.tier ?? 'free';
 
       if (!currentUserId) {
-        setPayError('Please log in before payment.');
+        setPayError(t('register.pleaseLoginFirst'));
         setPaying(false);
         return;
       }
@@ -112,7 +115,7 @@ export default function RegisterPage() {
 
       if (data.error) {
         console.error('[handlePay] Edge Function error:', data.error, data.detail);
-        setPayError(data.detail || data.error || 'Payment initialization failed. Please try again.');
+        setPayError(data.detail || data.error || t('register.payInitFailed'));
         setPaying(false);
         return;
       }
@@ -121,23 +124,37 @@ export default function RegisterPage() {
         window.location.href = data.checkout_url;
       } else {
         console.error('[handlePay] No checkout_url returned');
-        setPayError('No checkout URL returned. Please contact support.');
+        setPayError(t('register.noCheckoutUrl'));
         setPaying(false);
       }
     } catch (err) {
       console.error('[handlePay] Error:', err);
-      setPayError('Network error. Please check your connection and try again.');
+      setPayError(t('register.networkError'));
       setPaying(false);
     }
   };
 
+  // 升级副标题：From {fromTier} · {amount} · {period} access
+  const upgradeSubtitle = t('register.upgradeSubtitle', {
+    fromTier: upgradeFrom ? t(`tiers.${upgradeFrom}.name`) : t('tiers.free.name'),
+    amount: displayPriceStr,
+    period: PERIOD_LABELS[selectedPeriod],
+  });
+  const signUpSubtitle = t('register.signUpSubtitle', {
+    display: pricing.display,
+    period: PERIOD_LABELS[selectedPeriod],
+  });
+
   return (
     <div className="min-h-screen flex items-center justify-center p-4">
       <div className="w-full max-w-[420px] md:max-w-[480px] flex flex-col gap-5">
-        <Link to="/" className="inline-flex items-center gap-1.5 text-sm text-[#8E8CA8] hover:text-[#5B4FCF] transition-colors">
-          <ArrowLeft className="w-4 h-4" />
-          Back to Home
-        </Link>
+        <div className="flex items-center justify-between">
+          <Link to="/" className="inline-flex items-center gap-1.5 text-sm text-[#8E8CA8] hover:text-[#5B4FCF] transition-colors">
+            <ArrowLeft className="w-4 h-4" />
+            {t('register.backToHome')}
+          </Link>
+          <LanguageSwitcher />
+        </div>
 
         {/* 版本标识 */}
         <div className={`rounded-[20px] bg-gradient-to-br ${info.gradient} p-6 text-white text-center`}>
@@ -147,20 +164,16 @@ export default function RegisterPage() {
                 <ArrowUpCircle className="w-5 h-5 text-white" />
               </div>
               <h2 className="text-2xl font-bold mb-1" style={{ fontFamily: "'Nunito', 'PingFang SC', sans-serif" }}>
-                Upgrade to {info.name}
+                {t('register.upgradeTitle', { tier: info.name })}
               </h2>
-              <p className="text-white/80 text-sm">
-                From {TIER_INFO[upgradeFrom as 'pro']?.name ?? 'Free'} · {displayPriceStr} · {PERIOD_LABELS[selectedPeriod]} access
-              </p>
+              <p className="text-white/80 text-sm">{upgradeSubtitle}</p>
             </>
           ) : (
             <>
               <h2 className="text-2xl font-bold mb-1" style={{ fontFamily: "'Nunito', 'PingFang SC', sans-serif" }}>
-                Sign Up — {info.name}
+                {t('register.signUpTitle', { tier: info.name })}
               </h2>
-              <p className="text-white/80 text-sm">
-                {pricing.display} · {PERIOD_LABELS[selectedPeriod]} access
-              </p>
+              <p className="text-white/80 text-sm">{signUpSubtitle}</p>
             </>
           )}
         </div>
@@ -168,29 +181,29 @@ export default function RegisterPage() {
         {step === 'form' && (
           <form onSubmit={handleRegister} className="rounded-[20px] bg-white/60 backdrop-blur-[10px] border border-white/50 p-6 flex flex-col gap-4">
             <Field
-              label="Nickname"
+              label={t('register.nicknameLabel')}
               icon={<UserIcon className="w-4 h-4" />}
               value={nickname}
               onChange={setNickname}
-              placeholder="How should we address you"
+              placeholder={t('register.nicknamePlaceholder')}
               type="text"
               autoComplete="nickname"
             />
             <Field
-              label="Email"
+              label={t('common.email')}
               icon={<Mail className="w-4 h-4" />}
               value={email}
               onChange={setEmail}
-              placeholder="example@email.com"
+              placeholder={t('register.emailPlaceholder')}
               type="email"
               autoComplete="email"
             />
             <Field
-              label="Password"
+              label={t('register.passwordLabel')}
               icon={<Lock className="w-4 h-4" />}
               value={password}
               onChange={setPassword}
-              placeholder="At least 6 characters"
+              placeholder={t('register.passwordPlaceholder')}
               type="password"
               autoComplete="new-password"
             />
@@ -220,24 +233,13 @@ export default function RegisterPage() {
                 className="sr-only"
               />
               <span className="text-xs text-[#5D5A7C] leading-relaxed">
-                I have read and agree to the{' '}
-                <Link
-                  to="/privacy"
-                  state={{ from: location.pathname + location.search }}
-                  onClick={(e) => e.stopPropagation()}
-                  className="text-[#5B4FCF] font-medium hover:underline"
-                >
-                  Privacy Policy
-                </Link>
-                {' '}and{' '}
-                <Link
-                  to="/terms"
-                  state={{ from: location.pathname + location.search }}
-                  onClick={(e) => e.stopPropagation()}
-                  className="text-[#5B4FCF] font-medium hover:underline"
-                >
-                  Terms of Service
-                </Link>
+                <Trans
+                  i18nKey="register.agreementText"
+                  components={{
+                    privacy: <Link to="/privacy" state={{ from: location.pathname + location.search }} onClick={(e: React.MouseEvent) => e.stopPropagation()} className="text-[#5B4FCF] font-medium hover:underline" />,
+                    terms: <Link to="/terms" state={{ from: location.pathname + location.search }} onClick={(e: React.MouseEvent) => e.stopPropagation()} className="text-[#5B4FCF] font-medium hover:underline" />,
+                  }}
+                />
               </span>
             </label>
 
@@ -252,17 +254,17 @@ export default function RegisterPage() {
               {submitting ? (
                 <>
                   <Loader2 className="w-5 h-5 animate-spin" />
-                  Signing up...
+                  {t('register.signingUp')}
                 </>
               ) : (
-                `Sign Up & Pay ${pricing.display}`
+                t('register.signUpPay', { amount: pricing.display })
               )}
             </Button>
 
             <p className="text-xs text-[#8E8CA8] text-center">
-              Already have an account?{' '}
+              {t('register.haveAccount')}{' '}
               <Link to="/login" className="text-[#5B4FCF] font-medium hover:underline">
-                Log In
+                {t('register.logIn')}
               </Link>
             </p>
           </form>
@@ -279,22 +281,25 @@ export default function RegisterPage() {
             </div>
             <div>
               <h3 className="text-lg font-bold text-[#3D3A5C] mb-1">
-                {isUpgrade ? 'Complete Upgrade Payment' : 'Sign up successful, complete payment'}
+                {isUpgrade ? t('register.upgradeStepTitle') : t('register.paymentStepTitle')}
               </h3>
               <p className="text-sm text-[#8E8CA8] leading-relaxed">
                 {isUpgrade ? (
-                  <>
-                    You are currently a {TIER_INFO[upgradeFrom as 'pro']?.name ?? 'Free'} user.
-                    Upgrading to {info.name} requires a price difference of {displayPriceStr}.
-                    <br />
-                    Observer limit will expand from 60 to 160, and the prediction feature will be unlocked.
-                  </>
+                  <Trans
+                    i18nKey="register.upgradeStepDesc"
+                    values={{
+                      fromTier: upgradeFrom ? t(`tiers.${upgradeFrom}.name`) : t('tiers.free.name'),
+                      tier: info.name,
+                      amount: displayPriceStr,
+                    }}
+                    components={{ br: <br /> }}
+                  />
                 ) : (
-                  <>
-                    We've sent a verification email to <span className="font-medium text-[#3D3A5C]">{email}</span>.
-                    <br />
-                    Pay {pricing.display} to get {PERIOD_LABELS[selectedPeriod].toLowerCase()} access to all {info.name} features.
-                  </>
+                  <Trans
+                    i18nKey="register.paymentStepDesc"
+                    values={{ email, amount: pricing.display, period: PERIOD_LABELS[selectedPeriod].toLowerCase(), tier: info.name }}
+                    components={{ email: <span className="font-medium text-[#3D3A5C]" />, br: <br /> }}
+                  />
                 )}
               </p>
             </div>
@@ -319,23 +324,23 @@ export default function RegisterPage() {
 
             <div className="rounded-2xl bg-[#5B4FCF]/5 border border-[#5B4FCF]/15 p-4 text-left">
               <p className="text-xs text-[#5B4FCF] font-semibold mb-2">
-                {isUpgrade ? 'Upgrade Order' : 'Order Details'}
+                {isUpgrade ? t('register.upgradeOrder') : t('register.orderDetails')}
               </p>
               <div className="flex justify-between text-sm text-[#3D3A5C] mb-1">
-                <span>Version</span>
+                <span>{t('register.version')}</span>
                 <span className="font-medium">
                   {isUpgrade
-                    ? `${TIER_INFO[upgradeFrom as 'pro']?.name ?? 'Free'} → ${info.name}`
+                    ? `${upgradeFrom ? t(`tiers.${upgradeFrom}.name`) : t('tiers.free.name')} → ${info.name}`
                     : `${info.name} · ${PERIOD_LABELS[selectedPeriod]}`
                   }
                 </span>
               </div>
               <div className="flex justify-between text-sm text-[#3D3A5C] mb-1">
-                <span>Account</span>
+                <span>{t('register.account')}</span>
                 <span className="font-medium">{isUpgrade ? user?.email : email}</span>
               </div>
               <div className="flex justify-between text-base text-[#3D3A5C] mt-2 pt-2 border-t border-[#5B4FCF]/15">
-                <span className="font-semibold">Amount Due</span>
+                <span className="font-semibold">{t('register.amountDue')}</span>
                 <span className="font-bold text-[#5B4FCF]">{displayPriceStr} USD</span>
               </div>
             </div>
@@ -365,24 +370,13 @@ export default function RegisterPage() {
                 className="sr-only"
               />
               <span className="text-xs text-[#5D5A7C] leading-relaxed">
-                I have read and agree to the{' '}
-                <Link
-                  to="/privacy"
-                  state={{ from: location.pathname + location.search }}
-                  onClick={(e) => e.stopPropagation()}
-                  className="text-[#5B4FCF] font-medium hover:underline"
-                >
-                  Privacy Policy
-                </Link>
-                {' '}and{' '}
-                <Link
-                  to="/terms"
-                  state={{ from: location.pathname + location.search }}
-                  onClick={(e) => e.stopPropagation()}
-                  className="text-[#5B4FCF] font-medium hover:underline"
-                >
-                  Terms of Service
-                </Link>
+                <Trans
+                  i18nKey="register.agreementText"
+                  components={{
+                    privacy: <Link to="/privacy" state={{ from: location.pathname + location.search }} onClick={(e: React.MouseEvent) => e.stopPropagation()} className="text-[#5B4FCF] font-medium hover:underline" />,
+                    terms: <Link to="/terms" state={{ from: location.pathname + location.search }} onClick={(e: React.MouseEvent) => e.stopPropagation()} className="text-[#5B4FCF] font-medium hover:underline" />,
+                  }}
+                />
               </span>
             </label>
 
@@ -390,15 +384,15 @@ export default function RegisterPage() {
               {paying ? (
                 <>
                   <Loader2 className="w-5 h-5 animate-spin" />
-                  Redirecting to payment...
+                  {t('register.paying')}
                 </>
               ) : (
-                `Pay ${displayPriceStr}`
+                t('register.payButton', { amount: displayPriceStr })
               )}
             </Button>
 
             <p className="text-xs text-[#8E8CA8]/80 leading-relaxed">
-              Access enabled immediately after payment
+              {t('register.paymentAccess')}
             </p>
           </div>
         )}

@@ -1,0 +1,635 @@
+{
+  "common": {
+    "back": "戻る",
+    "backToHome": "ホームに戻る",
+    "cancel": "キャンセル",
+    "confirm": "確認",
+    "delete": "削除",
+    "save": "保存",
+    "loading": "読み込み中...",
+    "next": "次へ",
+    "previous": "前へ",
+    "skip": "スキップ",
+    "email": "メール",
+    "password": "パスワード",
+    "nickname": "ニックネーム",
+    "search": "検索",
+    "select": "選択",
+    "selectAll": "すべて選択",
+    "clear": "クリア",
+    "close": "閉じる",
+    "yes": "はい",
+    "no": "いいえ"
+  },
+  "language": {
+    "switch": "言語",
+    "select": "言語を選択"
+  },
+  "disclaimer": {
+    "text": "このアプリは自己探求と娯楽のみを目的としています。専門的な心理評価や医療アドバイスを構成するものではありません。"
+  },
+  "periods": {
+    "monthly": "月額",
+    "6months": "6ヶ月",
+    "yearly": "1年"
+  },
+  "tiers": {
+    "free": {
+      "name": "無料",
+      "subtitle": "個人の気質・能力の探求",
+      "cta": "無料で始める",
+      "feature1": "気質タイプを診断",
+      "feature2": "6つの能力次元を分析"
+    },
+    "pro": {
+      "name": "Pro",
+      "subtitle": "チームの気質・能力のインサイト",
+      "cta": "Proを選択",
+      "feature1": "最大60人の被観察者",
+      "feature2": "チームの気質・能力分析"
+    },
+    "max": {
+      "name": "Max",
+      "subtitle": "タスク完了予測",
+      "cta": "Maxを選択",
+      "feature1": "最大160人の被観察者",
+      "feature2": "チーム集計分析",
+      "feature3": "タスク適合予測"
+    }
+  },
+  "landing": {
+    "badge": "気質インサイト",
+    "titleLine1": "個人の気質インサイトから始め、",
+    "titleLine2": "チームのシナジーを構築 — プランを選択",
+    "privacyPolicy": "プライバシーポリシー",
+    "termsOfService": "利用規約",
+    "footer": "© {{year}} 気質インサイト · 自己探求とチームインサイトの参考のみ",
+    "perPeriod": "/ {{period}}",
+    "billedAs": "{{perMonth}} は {{display}} として請求"
+  },
+  "home": {
+    "selectProfession": "被観察者の職業分野を選択",
+    "selectProfessionHint": "職業によって、より精緻な評価のための異なる実世界シナリオに対応します",
+    "startAssessment": "診断を開始",
+    "pleaseSelectProfession": "まず職業を選択してください",
+    "brandBadge": "気質インサイト",
+    "brandTitle": "気質を理解し、可能性を引き出す",
+    "brandSubtitle": "状況的行動観察に基づく気質・能力診断ツール、他者を客観的に理解するサポート",
+    "introObserverTitle": "観察者視点",
+    "introObserverDesc": "第三者の視点から行動パターンを評価",
+    "introScenariosTitle": "リアルなシナリオ",
+    "introScenariosDesc": "20の実生活シナリオに基づき、自然な行動反応を捉える",
+    "introObjectiveTitle": "客観的評価",
+    "introObjectiveDesc": "気質と能力の多面的分析、ラベル付けしない評価"
+  },
+  "login": {
+    "welcomeBack": "おかえりなさい",
+    "subtitle": "ログインしてチーム管理を続ける",
+    "emailPlaceholder": "example@email.com",
+    "passwordPlaceholder": "パスワードを入力",
+    "loggingIn": "ログイン中...",
+    "loginButton": "ログイン",
+    "noAccount": "Pro / Max アカウントをお持ちでないですか？",
+    "choosePlan": "プランを選んでサインアップ",
+    "support": "サポート"
+  },
+  "register": {
+    "backToHome": "ホームに戻る",
+    "signUpTitle": "サインアップ — {{tier}}",
+    "upgradeTitle": "{{tier}} にアップグレード",
+    "upgradeSubtitle": "{{fromTier}} から · {{amount}} · {{period}} のアクセス",
+    "signUpSubtitle": "{{display}} · {{period}} のアクセス",
+    "nicknameLabel": "ニックネーム",
+    "nicknamePlaceholder": "どのように呼べばよいですか",
+    "emailPlaceholder": "example@email.com",
+    "passwordLabel": "パスワード",
+    "passwordPlaceholder": "6文字以上",
+    "signingUp": "サインアップ中...",
+    "signUpPay": "サインアップ & {{amount}} を支払う",
+    "haveAccount": "すでにアカウントをお持ちですか？",
+    "logIn": "ログイン",
+    "agreementText": "<privacy>プライバシーポリシー</privacy>と<terms>利用規約</terms>を読み、同意しました",
+    "paymentStepTitle": "サインアップ成功、支払いを完了",
+    "upgradeStepTitle": "アップグレードの支払いを完了",
+    "paymentStepDesc": "確認メールを <email>{{email}}</email> に送信しました。<br/>{{amount}} を支払い、{{period}} の {{tier}} 機能すべてにアクセス。",
+    "upgradeStepDesc": "現在 {{fromTier}} ユーザーです。{{tier}} にアップグレードするには差額 {{amount}} が必要です。<br/>被観察者上限は 60 から 160 に拡大し、予測機能が解放されます。",
+    "orderDetails": "注文詳細",
+    "upgradeOrder": "アップグレード注文",
+    "version": "バージョン",
+    "account": "アカウント",
+    "amountDue": "支払金額",
+    "paying": "支払いページへ遷移中...",
+    "payButton": "{{amount}} を支払う",
+    "paymentAccess": "支払い完了後すぐにアクセス可能",
+    "pleaseLoginFirst": "支払い前にログインしてください。",
+    "payInitFailed": "支払いの初期化に失敗しました。再試行してください。",
+    "noCheckoutUrl": "チェックアウト URL が返されませんでした。サポートにお問い合わせください。",
+    "networkError": "ネットワークエラー。接続を確認して再試行してください。"
+  },
+  "paymentCallback": {
+    "backToHome": "← ホームに戻る",
+    "verifying": "支払いを確認中...",
+    "verifyHint": "支払いの確認が完了するまでお待ちください。",
+    "successTitle": "支払い成功！",
+    "upgradeSuccessTitle": "アップグレード完了！",
+    "successDesc": "{{tier}} バージョンが有効になりました。チームの被観察者を管理できるようになります。",
+    "upgradeSuccessDesc": "{{tier}} バージョンが有効になりました。被観察者上限が拡大し、予測機能が解放されました。",
+    "enterWorkspace": "{{tier}} ワークスペースに入る",
+    "pendingTitle": "支払いを処理中",
+    "pendingDesc": "支払いは正常に送信されました。確認まで少し時間がかかる場合があります。アクセスがすぐに有効にならない場合は、サポートにお問い合わせください。",
+    "checkAgain": "再確認",
+    "cancelBack": "キャンセルして登録に戻る",
+    "errorTitle": "支払いが確認されませんでした",
+    "errorDesc": "支払いを確認できませんでした。再試行してください。",
+    "backToRegister": "登録に戻る"
+  },
+  "assessment": {
+    "loading": "読み込み中...",
+    "progressQ": "Q {{current}} / {{total}}",
+    "previous": "前へ",
+    "next": "次へ",
+    "viewResults": "結果を見る",
+    "customOptionDefault": "その他（実状況を記述）",
+    "customPlaceholder": "被観察者の実際の反応を記述...",
+    "customConfirm": "確認",
+    "customCancel": "キャンセル",
+    "selectorTitle": "この行動傾向を評価",
+    "selectorHint": "被観察者の実状況に基づいて判断",
+    "temperamentType": "気質タイプ",
+    "temperamentTypeRequired": "気質タイプ *",
+    "behavioralTendency": "行動傾向",
+    "behavioralTendencyHint": "行動傾向（複数）",
+    "keyAbilities": "主要能力",
+    "keyAbilitiesHint": "主要能力（複数）",
+    "emotionalTone": "感情のトーン",
+    "emotionalToneRequired": "感情のトーン *",
+    "skipAuto": "スキップ（自動分析）",
+    "selectorConfirm": "確認"
+  },
+  "temperament": {
+    "sanguine": {
+      "name": "多血質",
+      "desc": "社交的、迅速な反応",
+      "badge": "San"
+    },
+    "choleric": {
+      "name": "胆汁質",
+      "desc": "決断力、強い推進力",
+      "badge": "Cho"
+    },
+    "phlegmatic": {
+      "name": "粘液質",
+      "desc": "冷静、感情安定",
+      "badge": "Phl"
+    },
+    "melancholic": {
+      "name": "抑鬱質",
+      "desc": "繊細、深く思考",
+      "badge": "Mel"
+    }
+  },
+  "behaviors": {
+    "proactive": "自発的",
+    "proactiveDesc": "自ら取り組み、待たない",
+    "rational": "合理的分析",
+    "rationalDesc": "冷静に思考、メリット・デメリットを比較",
+    "collaborative": "協力的",
+    "collaborativeDesc": "支援を求め、共に解決",
+    "creative": "革新的",
+    "creativeDesc": "新しい方法を試し、慣習を打破"
+  },
+  "emotions": {
+    "positive": "ポジティブ",
+    "neutral": "ニュートラル",
+    "negative": "ネガティブ／回避的",
+    "anxious": "不安",
+    "unknown": "不確定"
+  },
+  "abilities": {
+    "communication": "コミュニケーション",
+    "leadership": "リーダーシップ",
+    "creativity": "創造性",
+    "analysis": "分析力",
+    "resilience": "レジリエンス",
+    "empathy": "共感力"
+  },
+  "professions": {
+    "service": "サービス業",
+    "student": "学生",
+    "office": "オフィスワーカー",
+    "civil": "公務員",
+    "artist": "クリエイティブ職",
+    "media": "コンテンツクリエイター",
+    "teacher": "教育者",
+    "doctor": "医療従事者"
+  },
+  "result": {
+    "loading": "読み込み中...",
+    "temperamentDistribution": "気質分布",
+    "comprehensiveInterpretation": "総合解釈",
+    "abilityRadar": "能力レーダーチャート",
+    "radarStrong": "70+ 強み",
+    "radarBalanced": "40-69 バランス",
+    "radarGrowth": "<40 成長領域",
+    "radarPoints": "点",
+    "dimensionDetails": "次元の詳細",
+    "motivationAnalysis": "💡 モチベーション分析",
+    "dominant": "優位: {{name}}",
+    "secondary": "副次: {{name}}",
+    "thinkingTitle": "🧠 思考・行動傾向",
+    "thinkingBalanced": "バランス",
+    "thinkingLean": "{{name}} 傾向",
+    "thinkingBalancedDesc": "両方の特性を併せ持ち、状況に応じて柔軟に思考と行動を調整できる",
+    "thinkingFooter": "* 思考・行動傾向は固定ではなく、状況や個人の成長によって調整される可能性があります",
+    "retake": "再受験",
+    "share": "共有",
+    "shareSuccess": "リンクをクリップボードにコピーしました。友達と共有しましょう！",
+    "shareFail": "共有機能は現在利用できません",
+    "discard": "破棄",
+    "saveToTeam": "チームに保存",
+    "discardConfirm": "この被観察者の診断結果を破棄しますか？"
+  },
+  "motivations": {
+    "achievement": {
+      "name": "達成",
+      "desc": "卓越を追求、目標志向、成功に駆られる",
+      "high": "被観察者は強い達成動機を持ち、成功と卓越に駆られています。自ら挑戦し、目標達成を追求することを楽しみます。課題に直面すると、高い基準を設定し、それを満たそうと努力します。",
+      "medium": "被観察者は中程度の達成動機を持ち、ワークライフバランスを保ちながら目標に向かって働き、過度な完璧主義にはなりません。",
+      "low": "被観察者は比較的弱い達成動機を持ち、結果志向よりもプロセス体験を重視し、競争や挑戦への関心が低く、安定した快適な状態を好みます。"
+    },
+    "affiliation": {
+      "name": "親和",
+      "desc": "関係、帰属、調和を重視",
+      "high": "被観察者は強い親和動機を持ち、対人関係と帰属感を深く重視します。社交を楽しみ、ソーシャルネットワークの構築と維持に長け、チームで活発です。",
+      "medium": "被観察者は中程度の親和動機を持ち、適度な独立性を保ちながら関係を重視し、社交と独处の両方を楽しみます。",
+      "low": "被観察者は比較的弱い親和動機を持ち、独立した作業を好み、社交活動への必要性が低く、チームワークではより多くの励ましを必要とする場合があります。"
+    },
+    "power": {
+      "name": "権力",
+      "desc": "影響力、統制、意思決定権を追求",
+      "high": "被観察者は強い権力動機を持ち、他者に影響を与え状況を統制したいと願います。意思決定プロセスを主導することを楽しみ、リーダーシップの役割で強みを発揮できます。",
+      "medium": "被観察者は中程度の権力動機を持ち、必要に応じてリーダーシップの責任を負いながら他者の意見を尊重し、過度な支配欲を持ちません。",
+      "low": "被観察者は比較的弱い権力動機を持ち、主導するよりも協調を好み、他者の管理や統制への関心が低く、実行レベルの役割に向いています。"
+    },
+    "security": {
+      "name": "安全",
+      "desc": "安定を追求、リスクを回避、安全と保障を重視",
+      "high": "被観察者は強い安全動機を持ち、安定した予測可能な環境を追求し、慎重に意思決定し、リスクを回避し、長期計画と保障を重視します。",
+      "medium": "被観察者は中程度の安全動機を持ち、過度に保守的になることなく意思決定でリスク要因を考慮し、安全とリスクテイクのバランスを取れます。",
+      "low": "被観察者は比較的弱い安全動機を持ち、リスクを取り新しいことに挑戦する意欲が高く、不確実性への許容度が高く、革新的または挑戦的なタスクに向いています。"
+    }
+  },
+  "thinking": {
+    "proactive": {
+      "name": "自発的",
+      "desc": "自ら取り組み、積極的に解決策を探求"
+    },
+    "reactive": {
+      "name": "受動的",
+      "desc": "待って観察し、自発するよりも反応する傾向"
+    },
+    "rational": {
+      "name": "合理的",
+      "desc": "論理的分析に集中、客観的にメリット・デメリットを比較"
+    },
+    "intuitive": {
+      "name": "直感的",
+      "desc": "感情的体験を重視、直感で判断"
+    },
+    "independent": {
+      "name": "独立",
+      "desc": "独立した思考を好み、自律的にタスクを完了"
+    },
+    "collaborative": {
+      "name": "協力的",
+      "desc": "チームワークに長け、集団の知恵を重視"
+    },
+    "innovative": {
+      "name": "革新的",
+      "desc": "新規で独自のアプローチを追求、慣習を打破"
+    },
+    "conventional": {
+      "name": "慣習的",
+      "desc": "確立された規範に従い、着実で信頼できる"
+    }
+  },
+  "observer": {
+    "add": {
+      "backToWorkspace": "ワークスペースに戻る",
+      "title": "被観察者を追加",
+      "subtitle": "代理モード: 被観察者に対する実際の理解に基づき、各シナリオでの反応を選択",
+      "nameLabel": "被観察者名",
+      "nameHint": "（別名／コード可）",
+      "namePlaceholder": "例: Alex / Obs-001",
+      "gender": "性別",
+      "male": "男性",
+      "female": "女性",
+      "other": "その他",
+      "unknown": "回答しない",
+      "profession": "職業",
+      "professionHint": "職業によって異なるシナリオ問題に対応",
+      "noteLabel": "メモ（任意）",
+      "notePlaceholder": "部署、役割、関係など",
+      "preparing": "問題を準備中...",
+      "startAssessment": "診断を開始"
+    },
+    "save": {
+      "title": "被観察者の保存確認",
+      "subtitle": "チームに保存する前に以下の情報を確認してください",
+      "name": "名前",
+      "gender": "性別",
+      "profession": "職業",
+      "note": "メモ",
+      "dominantTemperament": "優位気質",
+      "currentPlan": "現在のプラン: {{tier}} · 被観察者上限: {{limit}}",
+      "saving": "保存中...",
+      "confirmSave": "チームへの保存を確認",
+      "savedTitle": "被観察者を保存しました",
+      "savedDesc": "<name>{{name}}</name> の診断結果がチームに追加されました。ワークスペースからいつでも確認できます。",
+      "backToWorkspace": "ワークスペースに戻る",
+      "saveFailed": "保存に失敗しました、再試行してください"
+    },
+    "detail": {
+      "backToList": "リストに戻る",
+      "notFound": "被観察者が見つかりません",
+      "professionNotSpecified": "職業が指定されていません"
+    }
+  },
+  "proWorkspace": {
+    "badge": "Pro ワークスペース",
+    "welcome": "ようこそ、{{name}}",
+    "manager": "管理者",
+    "capacity": "被観察者容量: {{usage}}",
+    "signOut": "サインアウト",
+    "addObserver": "被観察者を追加",
+    "observers": "被観察者",
+    "teamProfile": "チームプロフィール",
+    "emptyHint": "まだ被観察者がいません。上のボタンから追加"
+  },
+  "maxWorkspace": {
+    "badge": "Max ワークスペース",
+    "welcome": "ようこそ、{{name}}",
+    "manager": "管理者",
+    "capacity": "被観察者容量: {{usage}}",
+    "signOut": "サインアウト",
+    "addObserver": "被観察者を追加",
+    "newPrediction": "新規予測",
+    "observers": "被観察者",
+    "selectCombine": "選択して結合",
+    "exitSelection": "選択を終了",
+    "selected": "{{count}} 件選択",
+    "selectAll": "すべて選択",
+    "clear": "クリア",
+    "predictTeam": "このチームを予測",
+    "teamProfile": "チームプロフィール",
+    "selectedTeamProfile": "選択されたチームプロフィール ({{count}})",
+    "predictionRecords": "予測記録",
+    "emptyObservers": "まだ被観察者がいません。上のボタンから追加",
+    "emptyPredictions": "まだ予測がありません。上のボタンから開始",
+    "noProfession": "職業が指定されていません",
+    "members": "{{count}} 人",
+    "fitScore": "適合スコア {{score}}",
+    "confirmDeletePrediction": "この予測を削除しますか？"
+  },
+  "teamAggregate": {
+    "empty": "被観察者が追加されておらず、チーム分析を生成できません",
+    "teamTraitProfile": "チーム特性プロフィール",
+    "basedOn": "{{count}} 人の被観察者に基づく",
+    "temperamentDiversity": "気質の多様性",
+    "abilityDiversity": "能力の多様性",
+    "teamAbilityAverage": "チーム能力平均",
+    "temperamentDistribution": "優位気質分布",
+    "motivationAverage": "モチベーション平均",
+    "thinkingStyleAverage": "思考スタイル平均",
+    "percentage": "割合"
+  },
+  "observerList": {
+    "empty": "まだ被観察者がいません",
+    "noProfession": "職業が指定されていません",
+    "delete": "削除",
+    "deleteConfirm": "被観察者「{{name}}」を削除しますか？この操作は取り消せません。"
+  },
+  "taskBuilder": {
+    "backToMax": "Max ワークスペースに戻る",
+    "title": "新規タスク予測",
+    "subtitle": "タスクパラメータとチームを設定すると、システムが気質と能力の次元に基づいて完了を予測します",
+    "taskName": "タスク名",
+    "taskNamePlaceholder": "例: Q4 製品ローンチスプリント",
+    "inputMode": "入力モード",
+    "template": "テンプレート",
+    "custom": "カスタム",
+    "selectTemplate": "タスクテンプレートを選択",
+    "templateHint": "テンプレート選択後にパラメータを微調整できます",
+    "basicParameters": "基本パラメータ",
+    "taskTypes": "タスクタイプ（複数）",
+    "difficulty": "難易度",
+    "collaboration": "コラボレーション",
+    "timePressure": "時間的制約",
+    "riskTolerance": "リスク許容度",
+    "independent": "独立",
+    "fullCollaboration": "完全協力",
+    "relaxed": "ゆったり",
+    "urgent": "緊急",
+    "zeroError": "ゼロエラー",
+    "encourageRisk": "リスク奨励",
+    "abilityRequirements": "能力要件（0-100）",
+    "abilityReqHint": "このタスクの最低能力しきい値、レーダーチャートに重ねてチーム能力と比較",
+    "motivationRequirements": "モチベーション要件（0-100）",
+    "motivationReqHint": "期待されるモチベーションの強さ、高いほどより依存",
+    "thinkingRequirements": "思考スタイル要件（0-100）",
+    "thinkingReqHint": "0=左端、100=右端、50=中立",
+    "teamConfiguration": "チーム設定",
+    "teamConfigHint": "このタスクの被観察者を選択（{{count}} 件選択）",
+    "emptyObservers": "まだ被観察者がいません、まずワークスペースで追加",
+    "assignKeyRole": "キーロールを割り当て（リード、リーダーシップ／レジリエンスは 2 倍重み）",
+    "selectKeyMember": "キーメンバーを選択",
+    "predicting": "予測中...",
+    "generatePrediction": "予測を生成",
+    "predictionFailed": "予測に失敗しました、再試行してください"
+  },
+  "taskTypes": {
+    "creative": "クリエイティブ",
+    "execution": "実行",
+    "communication": "コミュニケーション",
+    "analysis": "分析",
+    "leadership": "リーダーシップ",
+    "resilience": "レジリエンス"
+  },
+  "taskResult": {
+    "backToMax": "Max ワークスペースに戻る",
+    "taskNotFound": "タスクが見つかりません",
+    "deleteTask": "タスクを削除",
+    "badge": "タスク予測結果",
+    "basedOn": "選択された {{count}} 人の被観察者の気質・能力次元に基づく",
+    "completionProbability": "完了確率",
+    "goodProspects": "良好な見通し",
+    "moderateRisk": "中程度のリスク",
+    "poorProspects": "見通し不良",
+    "fitMeta": "適合スコア {{fit}} · 難易度 {{difficulty}} · 時間的制約 {{timePressure}} · リスク許容度 {{riskTolerance}}",
+    "fitRadar": "適合レーダーチャート",
+    "taskRequirements": "タスク要件",
+    "teamActual": "チーム実績",
+    "recommendedMembers": "推奨コアメンバー（適合度上位 3 名）",
+    "overallFitScore": "総合適合スコア",
+    "strengths": "強み",
+    "requiredActual": "要件 {{required}} · 実績 {{actual}}",
+    "riskPoints": "リスクポイント ({{count}})",
+    "riskRequired": "要件 {{required}} · 実績 {{actual}} · ギャップ {{gap}}",
+    "noRisk": "リスクポイントは検出されません、チーム設定はタスク要件にうまく合致",
+    "detailedMatch": "詳細マッチ",
+    "abilityDimensions": "能力次元",
+    "motivationMatch": "モチベーションマッチ",
+    "thinkingStyle": "思考スタイル",
+    "riskLow": "低",
+    "riskMedium": "中",
+    "riskHigh": "高",
+    "confirmDeleteTask": "タスク「{{name}}」を削除しますか？"
+  },
+  "privacy": {
+    "title": "プライバシーポリシー",
+    "back": "戻る",
+    "lastUpdated": "最終更新: 2026年7月30日",
+    "sections": {
+      "infoCollection": {
+        "title": "1. 情報収集",
+        "p1": "メールアドレス、アカウントパスワード（暗号化）、診断結果、チーム管理データなど、これらに限定されない情報を収集します。これらの情報は、パーソナライズされたサービスの提供、ユーザー体験の向上、アカウントセキュリティの保護に使用されます。",
+        "p2": "無料版ユーザーの場合、データはブラウザにローカル保存され、サーバーにアップロードされません。Pro および Max 版ユーザーの場合、データはクロスデバイスアクセスとチームコラボレーション機能を有効にするため、当社のセキュアなサーバーに保存されます。"
+      },
+      "infoUsage": {
+        "title": "2. 情報利用",
+        "p1": "収集した情報を以下の目的に使用します:",
+        "l1": "サービスの提供、維持、改善",
+        "l2": "サブスクリプションと支払いの処理",
+        "l3": "サービス関連の通知と更新の送信",
+        "l4": "利用トレンドの分析による製品機能の最適化",
+        "l5": "不正防止とプラットフォームセキュリティの確保"
+      },
+      "infoSharing": {
+        "title": "3. 情報共有",
+        "p1": "当社はお客様の個人情報を第三者に販売、取引、その他の方法で移転することはありません。ただし、以下の状況では情報を共有する場合があります:",
+        "l1": "お客様の明示的な同意がある場合",
+        "l2": "当社の運営を支援するサービスプロバイダー（決済処理業者、クラウドサービスプロバイダーなど）",
+        "l3": "法的義務の遵守、または法的な政府要請への対応",
+        "l4": "当社の権利、プライバシー、安全、財産の保護"
+      },
+      "dataSecurity": {
+        "title": "4. データセキュリティ",
+        "p1": "当社は業界標準のセキュリティ対策を用いてお客様の情報を保護します。これには、暗号化されたデータ送信（HTTPS）、パスワードハッシュ化、アクセス制御、定期的なセキュリティ監査などが含まれますが、これらに限定されません。ただし、インターネット送信や電子保存方式が 100% 安全であることはなく、絶対的なセキュリティを保証することはできません。"
+      },
+      "cookies": {
+        "title": "5. Cookie とトラッキング技術",
+        "p1": "当社は Cookie や類似のトラッキング技術を使用して情報を収集し、サービスパフォーマンスを向上させ、ユーザー体験をパーソナライズします。ブラウザ設定で Cookie の設定を管理できますが、Cookie を無効にすると一部の機能に影響する可能性があります。"
+      },
+      "rights": {
+        "title": "6. お客様の権利",
+        "p1": "お客様には以下の権利があります:",
+        "l1": "個人情報へのアクセスと更新",
+        "l2": "アカウントおよび関連データの削除要請",
+        "l3": "マーケティング通信のオプトアウト",
+        "l4": "データのコピーの請求",
+        "l5": "特定のデータ処理活動への異議申し立て"
+      },
+      "policyUpdates": {
+        "title": "7. ポリシーの更新",
+        "p1": "当社は本プライバシーポリシーを随時更新する場合があります。重要な変更はこのページで目立つように通知されます。当社サービスの継続利用は、更新されたポリシーへの同意を意味します。"
+      },
+      "contact": {
+        "title": "8. お問い合わせ",
+        "p1": "本プライバシーポリシーに関するご質問やご提案がございましたら、以下までご連絡ください:"
+      }
+    }
+  },
+  "terms": {
+    "title": "利用規約",
+    "back": "戻る",
+    "lastUpdated": "最終更新: 2026年7月30日",
+    "sections": {
+      "serviceDesc": {
+        "title": "1. サービス概要",
+        "p1": "Personality Assessment は心理学理論に基づく性格診断ツールで、ユーザーの自己探求と個人の成長を支援するために設計されています。無料版と有料サブスクリプション版（Pro と Max）を提供しています。",
+        "p2": "<strong>重要な免責事項:</strong> 本アプリケーションは自己探求と娯楽目的のみであり、専門的な心理評価や医療アドバイスを構成するものではありません。診断結果は、臨床診断、医療決定、キャリア選択の唯一の根拠として使用すべきではありません。"
+      },
+      "userAccount": {
+        "title": "2. ユーザーアカウント",
+        "p1": "Pro または Max 版の利用にはアカウント登録が必要です。お客様は以下に同意します:",
+        "l1": "正確で完全かつ最新の登録情報を提供する",
+        "l2": "アカウントパスワードのセキュリティと機密性を保護する",
+        "l3": "アカウント下のすべての活動に対して責任を負う",
+        "l4": "不正利用を発見した場合、直ちに当社に通知する"
+      },
+      "subscriptions": {
+        "title": "3. サブスクリプションと支払い",
+        "p1": "<strong>サブスクリプションプラン:</strong>",
+        "l1": "Pro 版: $5/月、$17/6ヶ月、$27/年",
+        "l2": "Max 版: $12/月、$43/6ヶ月、$79/年",
+        "p2": "<strong>支払いポリシー:</strong>",
+        "l3": "サブスクリプションは更新日前にキャンセルしない限り自動更新されます",
+        "l4": "価格は随時変更される場合があります。既存のサブスクリプションには影響しません",
+        "l5": "すべての料金は米ドルで、税金が含まれる場合があります",
+        "l6": "支払いは第三者決済プラットフォームを通じて処理されます"
+      },
+      "refund": {
+        "title": "4. 返金ポリシー",
+        "p1": "当社は以下の返金ポリシーを提供します:",
+        "l1": "初回サブスクリプションから 7 日以内は全額返金可能",
+        "l2": "サービスに重大な欠陥がない限り、更新料金は返金不可",
+        "l3": "返金リクエストはサポートメールで送信する必要があります",
+        "l4": "返金は承認後 5-10 営業日以内に処理されます"
+      },
+      "acceptableUse": {
+        "title": "5. 許容される利用",
+        "p1": "お客様は以下を行わないことに同意します:",
+        "l1": "違法な目的でのサービス利用、または法令の違反",
+        "l2": "他者の知的財産またはその他の権利の侵害",
+        "l3": "ウイルス、悪意のあるコード、その他の有害なコンテンツの拡散",
+        "l4": "サービス運営の解読、リバースエンジニアリング、干渉の試み",
+        "l5": "他者になりすます、または虚偽の情報を提供する",
+        "l6": "アカウントを他者と共有する"
+      },
+      "intellectualProperty": {
+        "title": "6. 知的財産",
+        "p1": "すべてのコンテンツ、機能、サービスは知的財産法によって保護されています。当社の書面による許可なく、以下を行ってはなりません:",
+        "l1": "コンテンツの複製、変更、配布、表示",
+        "l2": "派生物の作成、またはコンテンツの商用利用",
+        "l3": "著作権表示や所有権マークの削除"
+      },
+      "disclaimer": {
+        "title": "7. 免責事項",
+        "p1": "<strong>サービスは「現状有姿」で提供され、明示または黙示の保証はありません。</strong>当社は以下について責任を負いません:",
+        "l1": "サービスの継続性、セキュリティ、エラーのないこと",
+        "l2": "診断結果の正確性や適用性",
+        "l3": "診断結果に基づいて行われた決定",
+        "l4": "サービスの使用または使用不能に起因する損失",
+        "l5": "第三者の行動やコンテンツ"
+      },
+      "liability": {
+        "title": "8. 責任の制限",
+        "p1": "適用法で許可される最大限の範囲で、当社の総責任は過去 12 ヶ月間にお客様が支払った料金を超えません。当社は間接的、偶発的、特別、結果的損害について責任を負いません。"
+      },
+      "serviceChanges": {
+        "title": "9. サービスの変更と終了",
+        "p1": "当社は以下の権利を留保します:",
+        "l1": "いつでもサービスの（全部または一部の）変更、一時停止、終了",
+        "l2": "アカウントおよび関連すべてのデータの削除",
+        "l3": "特定ユーザーの利用権限の制限",
+        "l4": "価格と機能の変更",
+        "p2": "サービスが終了する場合、30 日前にユーザーに通知し、合理的な返金または補償オプションを提供します。"
+      },
+      "disputes": {
+        "title": "10. 紛争解決",
+        "p1": "本規約から生じる紛争は、まず友好的な協議によって解決されるものとします。協議が不調に終わった場合、紛争はサービスプロバイダーの所在地の管轄裁判所に提起されます。本規約は中華人民共和国の法律に準拠します。"
+      },
+      "miscellaneous": {
+        "title": "11. 雑則",
+        "l1": "本規約はお客様と当社間の完全な合意を構成します",
+        "l2": "当社がいかなる権利を行使しなかったことも、その権利の放棄を構成しません",
+        "l3": "本規約のいずれかの条項が無効とされた場合、残りの条項は引き続き有効です",
+        "l4": "当社は本契約をいつでも譲渡できます。お客様の譲渡には当社の同意が必要です"
+      },
+      "contact": {
+        "title": "12. お問い合わせ",
+        "p1": "ご質問やご提案がございましたら、以下までご連絡ください:"
+      }
+    }
+  }
+}

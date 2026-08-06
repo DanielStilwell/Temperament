@@ -1,31 +1,34 @@
 import { Eye, Users, Target } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 import Card from '../ui/Card';
 
-const introItems = [
-  {
-    icon: Eye,
-    title: 'Observer Perspective',
-    desc: 'Evaluate behavior patterns from a third-party perspective',
-    color: '#E8B4B8',
-    bg: 'bg-[#F5E1E3]/60',
-  },
-  {
-    icon: Users,
-    title: 'Real Scenarios',
-    desc: 'Based on 20 real-life scenarios, capturing natural behavioral responses',
-    color: '#A3C4D9',
-    bg: 'bg-[#DBEAF2]/60',
-  },
-  {
-    icon: Target,
-    title: 'Objective Assessment',
-    desc: 'Multi-dimensional analysis of temperament & abilities, non-labeling evaluation',
-    color: '#B8C9A8',
-    bg: 'bg-[#E5EDDE]/60',
-  },
-];
-
 export default function IntroCards() {
+  const { t } = useTranslation();
+
+  const introItems = [
+    {
+      icon: Eye,
+      title: t('home.introObserverTitle'),
+      desc: t('home.introObserverDesc'),
+      color: '#E8B4B8',
+      bg: 'bg-[#F5E1E3]/60',
+    },
+    {
+      icon: Users,
+      title: t('home.introScenariosTitle'),
+      desc: t('home.introScenariosDesc'),
+      color: '#A3C4D9',
+      bg: 'bg-[#DBEAF2]/60',
+    },
+    {
+      icon: Target,
+      title: t('home.introObjectiveTitle'),
+      desc: t('home.introObjectiveDesc'),
+      color: '#B8C9A8',
+      bg: 'bg-[#E5EDDE]/60',
+    },
+  ];
+
   return (
     <div className="grid grid-cols-3 gap-3">
       {introItems.map((item) => (

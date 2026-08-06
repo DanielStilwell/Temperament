@@ -1,5 +1,6 @@
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import Button from '../ui/Button';
+import { useTranslation } from 'react-i18next';
 
 interface NavigationBarProps {
   onPrev: () => void;
@@ -17,6 +18,7 @@ export default function NavigationBar({
   isLast,
   hasSelected,
 }: NavigationBarProps) {
+  const { t } = useTranslation();
   return (
     <div className="flex items-center gap-3">
       <Button
@@ -27,7 +29,7 @@ export default function NavigationBar({
         className="flex-1 disabled:opacity-30 disabled:cursor-not-allowed"
       >
         <ChevronLeft className="w-4 h-4" />
-        Previous
+        {t('assessment.previous')}
       </Button>
       <Button
         variant="primary"
@@ -36,7 +38,7 @@ export default function NavigationBar({
         disabled={!hasSelected}
         className="flex-1 disabled:opacity-30 disabled:cursor-not-allowed"
       >
-        {isLast ? 'View Results' : 'Next'}
+        {isLast ? t('assessment.viewResults') : t('assessment.next')}
         <ChevronRight className="w-4 h-4" />
       </Button>
     </div>
