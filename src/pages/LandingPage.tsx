@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import { Sparkles, Users, Target } from 'lucide-react';
 import Disclaimer from '../components/ui/Disclaimer';
@@ -67,8 +67,23 @@ const PERIOD_LABELS: Record<BillingPeriod, string> = {
 
 export default function LandingPage() {
   const navigate = useNavigate();
-  const { user, profile } = useAuthStore();
+  const { user, profile, signOut } = useAuthStore();
   const [selectedPeriod, setSelectedPeriod] = useState<BillingPeriod>('yearly');
+
+  // 检测未支付用户访问首页 → 自动清理
+  useEffect(() => {
+    if (user && profile?.paymentStatus === 'pending' && !profile?.tierExpiresAt) {
+      const supabaseUrl = import.meta.env.VITE_SUPABASE_URL;
+      fetch(`${supabaseUrl}/functions/v1/delete-unpaid-user`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          Authorization: `Bearer ${import.meta.env.VITE_SUPABASE_ANON_KEY}`,
+        },
+        body: JSON.stringify({ user_id: user.id }),
+      }).then(() => signOut());
+    }
+  }, [user, profile, signOut]);
 
   const handleSelect = (tier: AccountTier) => {
     if (tier === 'free') {

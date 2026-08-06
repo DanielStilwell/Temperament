@@ -98,6 +98,25 @@ export const useAuthStore = create<AuthState>((set, get) => ({
       return;
     }
     if (data) {
+      // 检测未支付用户：在非注册/支付回调页面自动清理
+      const currentPath = window.location.pathname;
+      const isOnPaymentPage = currentPath.startsWith('/register') || currentPath.startsWith('/payment-callback');
+
+      if (data.payment_status === 'pending' && !data.tier_expires_at && !isOnPaymentPage) {
+        const supabaseUrl = import.meta.env.VITE_SUPABASE_URL;
+        await fetch(`${supabaseUrl}/functions/v1/delete-unpaid-user`, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            Authorization: `Bearer ${import.meta.env.VITE_SUPABASE_ANON_KEY}`,
+          },
+          body: JSON.stringify({ user_id: user.id }),
+        });
+        await supabase.auth.signOut();
+        set({ user: null, session: null, profile: null });
+        return;
+      }
+
       set({ profile: mapProfile(data) });
     }
   },
@@ -111,6 +130,60 @@ export const useAuthStore = create<AuthState>((set, get) => ({
     });
 
     if (error) {
+      // 邮箱已注册 → 尝试登录检测是否为未支付用户，如果是则删除后重试注册
+      if (error.message.includes('already registered') || error.message.includes('already been registered')) {
+        const { data: signInData, error: signInError } = await supabase.auth.signInWithPassword({ email, password });
+        if (!signInError && signInData.user) {
+          const { data: profileRow } = await supabase
+            .from('profiles')
+            .select('payment_status, tier_expires_at')
+            .eq('id', signInData.user.id)
+            .maybeSingle();
+
+          if (profileRow && profileRow.payment_status === 'pending' && !profileRow.tier_expires_at) {
+            // 删除未支付账户
+            const supabaseUrl = import.meta.env.VITE_SUPABASE_URL;
+            await fetch(`${supabaseUrl}/functions/v1/delete-unpaid-user`, {
+              method: 'POST',
+              headers: {
+                'Content-Type': 'application/json',
+                Authorization: `Bearer ${import.meta.env.VITE_SUPABASE_ANON_KEY}`,
+              },
+              body: JSON.stringify({ user_id: signInData.user.id }),
+            });
+            await supabase.auth.signOut();
+
+            // 重试注册
+            const { data: retryData, error: retryError } = await supabase.auth.signUp({
+              email,
+              password,
+              options: { data: { nickname, intended_tier: tier } },
+            });
+
+            if (retryError) {
+              set({ error: retryError.message });
+              return { error: retryError.message };
+            }
+
+            if (retryData.user) {
+              await supabase
+                .from('profiles')
+                .upsert({
+                  id: retryData.user.id,
+                  nickname,
+                  tier,
+                  payment_status: 'pending',
+                }, { onConflict: 'id' });
+            }
+
+            set({ user: retryData.user, session: retryData.session });
+            return { error: null };
+          }
+        }
+        // 无法登录（密码不匹配）→ 提示用户
+        set({ error: 'This email is already registered but unpaid. Please log in with your previous password to cancel, or use a different email.' });
+        return { error: 'This email is already registered but unpaid. Please log in with your previous password to cancel, or use a different email.' };
+      }
       set({ error: error.message });
       return { error: error.message };
     }
