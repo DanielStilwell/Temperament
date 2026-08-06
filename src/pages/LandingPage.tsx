@@ -93,6 +93,21 @@ export default function LandingPage() {
 
     // 已登录用户：根据当前 tier 决定行为
     if (user && profile) {
+      // 未支付用户 → 清理后进入注册页
+      if (profile.paymentStatus === 'pending') {
+        const supabaseUrl = import.meta.env.VITE_SUPABASE_URL;
+        fetch(`${supabaseUrl}/functions/v1/delete-unpaid-user`, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            Authorization: `Bearer ${import.meta.env.VITE_SUPABASE_ANON_KEY}`,
+          },
+          body: JSON.stringify({ user_id: user.id }),
+        }).then(() => signOut());
+        navigate(`/register/${tier}?period=${selectedPeriod}`);
+        return;
+      }
+
       const currentTier = profile.tier;
 
       // 已是该版本或更高版本 → 直接进入工作台

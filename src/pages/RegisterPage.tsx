@@ -56,12 +56,13 @@ export default function RegisterPage() {
     }
   }, [targetTier, navigate]);
 
-  // 已登录用户直接进入支付步骤（无论是升级还是首次付费）
+  // 已登录且已支付的用户直接进入支付步骤（升级或重新选择周期）
+  // pending 用户不跳过注册表单（需重新注册）
   useEffect(() => {
-    if (!!user && step === 'form') {
+    if (!!user && step === 'form' && profile && profile.paymentStatus !== 'pending') {
       setStep('payment');
     }
-  }, [user, step]);
+  }, [user, profile, step]);
 
   const handleRegister = async (e: React.FormEvent) => {
     e.preventDefault();
