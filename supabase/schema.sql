@@ -87,9 +87,17 @@ create trigger tasks_set_updated_at
 -- ----------------------------------------------------------------------
 create or replace function public.handle_new_user()
 returns trigger language plpgsql security definer set search_path = public as $$
+declare
+  v_intended_tier text;
 begin
-  insert into public.profiles (id, nickname)
-  values (new.id, coalesce(new.raw_user_meta_data->>'nickname', ''))
+  v_intended_tier := new.raw_user_meta_data->>'intended_tier';
+  insert into public.profiles (id, nickname, tier, payment_status)
+  values (
+    new.id,
+    coalesce(new.raw_user_meta_data->>'nickname', ''),
+    case when v_intended_tier in ('pro','max') then v_intended_tier else 'free' end,
+    case when v_intended_tier in ('pro','max') then 'pending' else 'none' end
+  )
   on conflict (id) do nothing;
   return new;
 end;

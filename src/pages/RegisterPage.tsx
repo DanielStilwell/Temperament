@@ -56,10 +56,10 @@ export default function RegisterPage() {
     }
   }, [targetTier, navigate]);
 
-  // 已登录且已支付的用户直接进入支付步骤（升级或重新选择周期）
-  // pending 用户不跳过注册表单（需重新注册）
+  // 只有已付费用户（升级）才跳过注册表单
+  // pending 和 none 用户都需要重新填写注册信息
   useEffect(() => {
-    if (!!user && step === 'form' && profile && profile.paymentStatus !== 'pending') {
+    if (!!user && step === 'form' && profile && profile.paymentStatus === 'paid') {
       setStep('payment');
     }
   }, [user, profile, step]);

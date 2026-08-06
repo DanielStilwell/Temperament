@@ -140,8 +140,8 @@ export const useAuthStore = create<AuthState>((set, get) => ({
             .eq('id', signInData.user.id)
             .maybeSingle();
 
-          if (profileRow && profileRow.payment_status === 'pending' && !profileRow.tier_expires_at) {
-            // 删除未支付账户
+          if (profileRow && !profileRow.tier_expires_at) {
+            // 从未付费的用户 → 删除账户
             const supabaseUrl = import.meta.env.VITE_SUPABASE_URL;
             await fetch(`${supabaseUrl}/functions/v1/delete-unpaid-user`, {
               method: 'POST',
@@ -168,12 +168,8 @@ export const useAuthStore = create<AuthState>((set, get) => ({
             if (retryData.user) {
               await supabase
                 .from('profiles')
-                .upsert({
-                  id: retryData.user.id,
-                  nickname,
-                  tier,
-                  payment_status: 'pending',
-                }, { onConflict: 'id' });
+                .update({ nickname })
+                .eq('id', retryData.user.id);
             }
 
             set({ user: retryData.user, session: retryData.session });
@@ -188,21 +184,13 @@ export const useAuthStore = create<AuthState>((set, get) => ({
       return { error: error.message };
     }
 
-    // 创建/更新 profile 行（带上 nickname 与目标 tier）
-    // 注意：tier 升级需要支付成功后才能正式生效，这里先写入目标 tier 但 payment_status='pending'
+    // 触发器 handle_new_user 已根据 intended_tier 自动创建 profile（含 tier 和 payment_status）
+    // 此处仅更新 nickname（RLS 策略禁止前端修改 tier/payment_status）
     if (data.user) {
-      const { error: upsertError } = await supabase
+      await supabase
         .from('profiles')
-        .upsert({
-          id: data.user.id,
-          nickname,
-          tier,
-          payment_status: 'pending',
-        }, { onConflict: 'id' });
-
-      if (upsertError) {
-        console.error('[signUp upsert profile]', upsertError);
-      }
+        .update({ nickname })
+        .eq('id', data.user.id);
     }
 
     set({ user: data.user, session: data.session });
@@ -224,8 +212,8 @@ export const useAuthStore = create<AuthState>((set, get) => ({
       .eq('id', data.user.id)
       .maybeSingle();
 
-    if (profileRow && profileRow.payment_status === 'pending' && !profileRow.tier_expires_at) {
-      // 未支付用户 → 删除账户
+    if (profileRow && !profileRow.tier_expires_at && profileRow.payment_status !== 'paid') {
+      // 从未付费的用户 → 删除账户
       const supabaseUrl = import.meta.env.VITE_SUPABASE_URL;
       await fetch(`${supabaseUrl}/functions/v1/delete-unpaid-user`, {
         method: 'POST',
