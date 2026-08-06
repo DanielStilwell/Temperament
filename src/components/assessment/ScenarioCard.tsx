@@ -1,9 +1,15 @@
+import { useTranslation } from 'react-i18next';
+
 interface ScenarioCardProps {
-  situation: string;
+  profession: string;
+  scenarioId: number;
   index: number;
 }
 
-export default function ScenarioCard({ situation, index }: ScenarioCardProps) {
+export default function ScenarioCard({ profession, scenarioId, index }: ScenarioCardProps) {
+  const { t } = useTranslation();
+  const situation = t(`scenarios.${profession}.${scenarioId}.situation`);
+
   return (
     <div className="rounded-[20px] bg-gradient-to-br from-[#F5F3FF] to-[#EDEAFA] border border-[#E0DCF5] p-6">
       <div className="flex items-start gap-3">

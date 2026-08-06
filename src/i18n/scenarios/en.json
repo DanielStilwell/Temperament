@@ -1,0 +1,1970 @@
+{
+  "default": {
+    "1": {
+      "situation": "During a team meeting, the person notices an obvious flaw in a colleague's proposal, but the colleague is a senior member of the team. What would the person do?",
+      "options": {
+        "1a": "Tactfully point out the issue on the spot, and offer specific suggestions for improvement",
+        "1b": "Directly point out the issue, focusing on the matter rather than the person, prioritizing efficiency",
+        "1c": "Talk to the colleague privately after the meeting, to avoid embarrassing them in front of everyone",
+        "1d": "Observe others' reactions first, and if no one brings it up, stay silent too"
+      }
+    },
+    "2": {
+      "situation": "The person is facing an urgent project with only two days left until the deadline, but a large amount of work remains unfinished. What would they do?",
+      "options": {
+        "2a": "Quickly draw up a plan, prioritize tasks, and focus on completing the core parts",
+        "2b": "Actively seek help from the team and organize everyone to share the workload",
+        "2c": "Calmly analyze what can be simplified, and use alternative solutions to ensure the core goals are met",
+        "2d": "Work overtime alone to complete it, trying not to disturb others"
+      }
+    },
+    "3": {
+      "situation": "The person is at a social gathering, surrounded mostly by strangers. How would they typically behave?",
+      "options": {
+        "3a": "Take the initiative to chat with people, and quickly blend into different conversation circles",
+        "3b": "Find one or two interesting people for in-depth conversation, disliking superficial small talk",
+        "3c": "Observe from the sidelines, waiting for the right moment to join the conversation",
+        "3d": "Stay with familiar friends, or help out with some organizational tasks"
+      }
+    },
+    "4": {
+      "situation": "A project led by the person has failed, and they need to report the reasons to their supervisor. What would their reaction be?",
+      "options": {
+        "4a": "Honestly analyze the reasons for failure, take responsibility, and propose an improvement plan",
+        "4b": "Review the entire process in detail, and use data and facts to objectively explain the issues",
+        "4c": "Emphasize external uncontrollable factors, explaining that the team had done their best",
+        "4d": "Although disappointed, quickly adjust their mindset and start thinking about how to remedy the situation"
+      }
+    },
+    "5": {
+      "situation": "The person sees someone behaving inconsiderately in public (e.g., cutting in line, littering). What would they typically do?",
+      "options": {
+        "5a": "Approach the person directly and politely remind them",
+        "5b": "Feel uncomfortable but choose not to intervene, to avoid conflict",
+        "5c": "Express displeasure through eye contact or facial expressions, hoping the person will notice",
+        "5d": "Quietly pick up the litter or do the right thing, leading by example"
+      }
+    },
+    "6": {
+      "situation": "The person needs to learn a brand-new skill to adapt to changes at work. Which learning approach is closest to theirs?",
+      "options": {
+        "6a": "Enroll in a course or training program, preferring systematic learning with an instructor",
+        "6b": "Dive right into practice, learning by doing and figuring things out along the way",
+        "6c": "Find relevant books and materials, and study deeply on their own to understand the principles",
+        "6d": "Exchange ideas with peers, learning through discussion and sharing"
+      }
+    },
+    "7": {
+      "situation": "A friend confides in the person about a problem that has troubled them for a long time. How would they typically respond?",
+      "options": {
+        "7a": "Listen attentively, first empathize with their feelings, then analyze the problem together",
+        "7b": "Directly offer solutions and advice to help them quickly solve the problem",
+        "7c": "Use light humor to distract them and cheer them up",
+        "7d": "Share their own similar experiences and feelings, letting the person know they're not alone"
+      }
+    },
+    "8": {
+      "situation": "During teamwork, a disagreement arises and both sides stick to their positions. How would the person handle it?",
+      "options": {
+        "8a": "Act as a mediator, helping both sides find common ground and a compromise",
+        "8b": "Stand by their own ideas, using logic and data to persuade the other side",
+        "8c": "Step back first, let everyone calm down, and discuss it later",
+        "8d": "Analyze the pros and cons of each option one by one, letting data and facts speak for themselves"
+      }
+    },
+    "9": {
+      "situation": "The person gets an unexpected three-day vacation, fully free to spend as they wish. How would they most likely spend it?",
+      "options": {
+        "9a": "Make plans with friends, arranging various social activities and gatherings",
+        "9b": "Take on a challenging project, such as learning a new skill or achieving a certain goal",
+        "9c": "Rest well at home, read, watch movies, and enjoy some alone time",
+        "9d": "Travel to a place they've never been, exploring new things"
+      }
+    },
+    "10": {
+      "situation": "The person notices a colleague using a clearly inefficient working method. What would they do?",
+      "options": {
+        "10a": "Proactively share their own efficient methods, and patiently teach the person how to use them",
+        "10b": "Directly tell the person there's a better way, and suggest they improve",
+        "10c": "First observe whether the person is open to suggestions, then decide whether to speak up",
+        "10d": "Not interfere, as everyone has their own way of working"
+      }
+    },
+    "11": {
+      "situation": "When making important decisions, which approach does the person tend to prefer?",
+      "options": {
+        "11a": "Rely on intuition and first impressions, trusting their own judgment",
+        "11b": "Gather a lot of information, using data and analysis to support the decision",
+        "11c": "Seek opinions widely, and make a decision after synthesizing various suggestions",
+        "11d": "Make a pros and cons list, weighing various factors before making a rational choice"
+      }
+    },
+    "12": {
+      "situation": "The person is suddenly asked to give an impromptu speech in public. What would their reaction be?",
+      "options": {
+        "12a": "Gladly accept, seeing it as a good opportunity to showcase themselves",
+        "12b": "Although nervous, quickly organize their thoughts and express themselves in a structured way",
+        "12c": "Feel very nervous, needing some time to prepare before starting",
+        "12d": "Open with a relaxed and casual style, delivering the speech in a conversational tone"
+      }
+    },
+    "13": {
+      "situation": "The person encounters a complex problem and can't immediately find a solution. What would they do?",
+      "options": {
+        "13a": "Set it aside for now, do something else, and wait for inspiration to come naturally",
+        "13b": "Persistently try various methods, not giving up until the goal is reached",
+        "13c": "Break the problem down into smaller parts, and analyze and solve them one by one",
+        "13d": "Find experienced people to discuss it with, and spark new ideas"
+      }
+    },
+    "14": {
+      "situation": "When the person is under a lot of pressure, how would they typically regulate themselves?",
+      "options": {
+        "14a": "Release stress through exercise or outdoor activities",
+        "14b": "Chat with friends and confide in them, talking through their emotions",
+        "14c": "Spend quiet time alone, listening to music, meditating, or writing in a journal",
+        "14d": "Turn pressure into motivation, and focus more intently on work"
+      }
+    },
+    "15": {
+      "situation": "The person notices a new team member who seems out of place and not quite fitting in. What would they do?",
+      "options": {
+        "15a": "Approach them proactively, and help them blend into team activities and conversations",
+        "15b": "Observe quietly, and offer help and encouragement at the right moment",
+        "15c": "Specifically arrange for them to participate in team activities, creating opportunities to fit in",
+        "15d": "Believe everyone has their own pace, and give them time and space"
+      }
+    },
+    "16": {
+      "situation": "The person is working on a creative project but has run out of inspiration. How would they handle it?",
+      "options": {
+        "16a": "Explore content from completely different fields, seeking cross-disciplinary inspiration",
+        "16b": "Brainstorm with team members, sparking new ideas",
+        "16c": "Study successful cases, analyze patterns, and innovate on that basis",
+        "16d": "Apply some pressure, setting a deadline to push themselves to produce"
+      }
+    },
+    "17": {
+      "situation": "The person has a serious disagreement with a close friend, and the relationship has become tense. How would they handle it?",
+      "options": {
+        "17a": "Take the initiative to talk with the person, honestly expressing their own feelings and listening to the other side",
+        "17b": "Give each other some time to cool down, and deal with it after emotions settle",
+        "17c": "Stick to their position, believing time will prove who is right",
+        "17d": "Reflect deeply on whether they have issues, and try to understand from the other person's perspective"
+      }
+    },
+    "18": {
+      "situation": "The person receives multiple tasks at the same time, all needing to be completed in a short time. How would they arrange them?",
+      "options": {
+        "18a": "Quickly assess the importance and urgency of each task, and set priorities",
+        "18b": "Start with the most familiar, quickly completing part of it to gain a sense of achievement",
+        "18c": "Start with the hardest, tackling the difficulties while their energy is at its best",
+        "18d": "Distribute tasks to the team, leveraging everyone's strengths to complete them collaboratively"
+      }
+    },
+    "19": {
+      "situation": "On a day when the person is feeling down, what would they most want the people around them to do?",
+      "options": {
+        "19a": "Take them to do something fun, distracting them from their thoughts",
+        "19b": "Quietly stay by their side, without needing to say much",
+        "19c": "Help them analyze the problem, offering practical advice and direction",
+        "19d": "Patiently listen to their feelings, offering understanding and validation"
+      }
+    },
+    "20": {
+      "situation": "Looking back over the past year, what does the person feel is their biggest growth?",
+      "options": {
+        "20a": "Met more interesting people, and expanded their social circle and network",
+        "20b": "Completed several important goals, with substantial improvement in their abilities",
+        "20c": "Gained a deeper understanding of themselves, with greater inner peace and stability",
+        "20d": "Learned to better handle complex problems, with a breakthrough in their thinking abilities"
+      }
+    }
+  },
+  "service": {
+    "1": {
+      "situation": "A customer is very dissatisfied with the service attitude and is loudly complaining in the lobby. What would the person do?",
+      "options": {
+        "1a": "Immediately approach the customer to calm them down, listen patiently and apologize, and promise to resolve the issue as soon as possible",
+        "1b": "Invite the customer to a quiet area, go through the problem details one by one, and provide a clear solution",
+        "1c": "Immediately notify a supervisor to handle it, and assist by taking notes on the side",
+        "1d": "Ask the customer to calm down first, firmly explain the service policy, and follow the standard procedure",
+        "1e": "Feel the customer is being unreasonable, get emotionally pulled in, and start arguing with them",
+        "1f": "Pretend not to notice, avoid the situation, and let other colleagues handle it"
+      }
+    },
+    "2": {
+      "situation": "During a holiday peak period, the store is severely understaffed and customers are waiting in long lines. What would the person do?",
+      "options": {
+        "2a": "Proactively coordinate across positions, optimize workflows, and juggle multiple roles simultaneously",
+        "2b": "Speed up own work efficiency while comforting the waiting customers",
+        "2c": "Stay calm and follow the established procedure step by step, not letting the rush disrupt the pace",
+        "2d": "Anticipate the peak in advance, proactively arrange staff scheduling and prepare supplies",
+        "2e": "Feel that peak periods are inevitable anyway, follow own pace, and don't strive for perfection",
+        "2f": "Urgently contact other departments or nearby stores to request temporary staff support"
+      }
+    },
+    "3": {
+      "situation": "A regular customer makes an extra request beyond the scope of service. They are very friendly but the request clearly doesn't comply with regulations. What would the person do?",
+      "options": {
+        "3a": "Tactfully explain the policy while offering some alternative solutions within ability",
+        "3b": "Be flexible within reasonable limits and try to meet the customer's needs",
+        "3c": "Strictly follow the policy and explain to the customer the importance of the regulations",
+        "3d": "Ask a supervisor if there's a possibility for special approval",
+        "3e": "Feel that regular customers are hard to come by, quietly accommodate them this once, and remind them not to ask again",
+        "3f": "Don't want to offend anyone or take responsibility, so let other colleagues handle the interaction"
+      }
+    },
+    "4": {
+      "situation": "A colleague has been working overtime consecutively and is visibly low in spirits, with their work performance clearly declining. What would the person do?",
+      "options": {
+        "4a": "Proactively share some of the workload, and find an opportunity to chat with them and offer encouragement",
+        "4b": "Suggest the colleague talk to the supervisor about redistributing the workload",
+        "4c": "Quietly keep an eye on them, and be ready to lend a hand when they need help",
+        "4d": "Organize the team to help out together, fostering a supportive team atmosphere",
+        "4e": "Everyone has their own things to deal with; just focus on doing own work well",
+        "4f": "Feel the colleague's mood will affect the team, so directly report to the supervisor to adjust their schedule"
+      }
+    },
+    "5": {
+      "situation": "The person notices a new colleague making repeated errors in the work process, affecting overall efficiency. What would he/she do?",
+      "options": {
+        "5a": "Patiently guide them privately, walking them through the correct process step by step",
+        "5b": "Directly point out the problem, explain the consequences of the errors, and require immediate correction",
+        "5c": "Create a detailed operation guide and share it with the team to prevent similar issues",
+        "5d": "Gently remind everyone about process standards in a team meeting without singling anyone out",
+        "5e": "Feel that correcting newcomers is someone else's responsibility, as long as it doesn't affect oneself",
+        "5f": "Report directly to the supervisor and let management follow up on the newcomer's training"
+      }
+    },
+    "6": {
+      "situation": "The service area the person is responsible for received a bad review, but it was actually not his/her fault. What would he/she do?",
+      "options": {
+        "6a": "Proactively contact the customer to understand the situation, and communicate sincerely to get the review changed",
+        "6b": "Explain the actual situation to the supervisor and provide evidence proving it wasn't own fault",
+        "6c": "Accept it despite feeling wronged, and make up for it with better performance in future work",
+        "6d": "Analyze the reasons behind the bad review and think about how to improve the service process",
+        "6e": "Feel very wronged, vent to colleagues, but take no action",
+        "6f": "Think one bad review doesn't matter, it'll naturally pass after a while"
+      }
+    },
+    "7": {
+      "situation": "The person receives requests from multiple customers at the same time and is clearly overwhelmed. What would he/she do?",
+      "options": {
+        "7a": "Quickly assess priorities, handle the urgent ones first, and explain and comfort the other customers",
+        "7b": "Smile and ask the customers to wait a moment, speed up and handle them one by one",
+        "7c": "Handle them in order, unhurried, ensuring no compromise on the quality of each service",
+        "7d": "Immediately call for colleague support and distribute tasks reasonably",
+        "7e": "Get nervous and anxious, become flustered, and the busier the more error-prone",
+        "7f": "Feel unable to cope, retreat to the back to take a breather first"
+      }
+    },
+    "8": {
+      "situation": "The person notices a safety hazard in the store (e.g., wet floor without a warning sign). What would he/she do?",
+      "options": {
+        "8a": "Immediately set aside current work, handle the safety hazard first, and ensure customer safety",
+        "8b": "Set up a warning sign and continue working, while reminding colleagues to be careful",
+        "8c": "Take photos, compile improvement suggestions, and submit them to management",
+        "8d": "Handle it immediately and report to the supervisor, suggesting a regular inspection mechanism",
+        "8e": "Feel it's not within own responsibility, wait for the person in charge to handle it",
+        "8f": "Loudly remind nearby customers to be careful, and move away from the hazardous area first"
+      }
+    },
+    "9": {
+      "situation": "The person repeats the same work process every day, feels bored and dull, and gradually loses enthusiasm. What would he/she do?",
+      "options": {
+        "9a": "Proactively talk to the supervisor about participating in new projects or taking on more challenging work",
+        "9b": "Re-examine the work details, find points that can be optimized from the repetition, and set small goals",
+        "9c": "Interact more with colleagues, cheer each other on, and make the work atmosphere lighter",
+        "9d": "Use work breaks to learn new skills or knowledge, paving the way for future development",
+        "9e": "Become increasingly confused, doubt whether this job is right, and show a clear decline in performance",
+        "9f": "It's just that much work every day, do it and be done, don't overcomplicate things",
+        "9g": "Adjust schedule and mindset, tell oneself that work is long-term, and perseverance matters most"
+      }
+    },
+    "10": {
+      "situation": "The person finds that despite working hard, the promotion opportunity went to someone else. What would he/she think and do?",
+      "options": {
+        "10a": "Proactively talk to the supervisor to understand the gap, and make an improvement plan",
+        "10b": "Although disappointed, don't show it and continue working hard at the current job",
+        "10c": "Chat with colleagues, get their perspectives, and adjust own mindset",
+        "10d": "Reflect on own shortcomings, and consider whether there's a more suitable development direction",
+        "10e": "Start considering leaving, feeling there's no room for growth here, and look at outside opportunities",
+        "10f": "Become anxious and self-doubting, feel incapable of anything, and show a clear decline in work performance",
+        "10g": "It doesn't matter, promotion or not it's all the same work, just carry on as usual"
+      }
+    },
+    "11": {
+      "situation": "The person notices that a regular customer seems down today, quite different from usual. What would he/she do?",
+      "options": {
+        "11a": "Proactively check in and greet them, using warm service to brighten their mood a bit",
+        "11b": "Add more smiles and thoughtful little gestures in the service, without deliberately mentioning it",
+        "11c": "Follow the standard service procedure, without getting overly involved in the customer's personal emotions",
+        "11d": "At an appropriate moment, softly ask how they're doing, giving them space to talk if they want",
+        "11e": "Feel the customer's personal emotions are unrelated to work, no need to get involved",
+        "11f": "Get affected by the other person's mood, and feel down as well"
+      }
+    },
+    "12": {
+      "situation": "The service venue where the person works is about to introduce a new service system that requires learning entirely new operational procedures. What would he/she do?",
+      "options": {
+        "12a": "Proactively learn in advance, becoming the first person on the team to master the new system",
+        "12b": "Attend training seriously, take notes, and learn by the book",
+        "12c": "Study together with colleagues, helping each other and making progress together",
+        "12d": "First observe the logic of the new system, understand the design thinking before starting to use it",
+        "12e": "Resist the new system, feel the old one is better, and respond passively",
+        "12f": "Put off learning until the last minute, procrastinate as long as possible, and just muddle through"
+      }
+    },
+    "13": {
+      "situation": "The person sees an elderly customer looking confused and lost in the store. What would he/she do?",
+      "options": {
+        "13a": "Proactively go over and ask if they need help, patiently accompanying them throughout",
+        "13b": "Help them understand using simple, clear language and larger fonts",
+        "13c": "Guide them to a seating area, then address their needs one by one",
+        "13d": "Contact their family or companion to ensure someone is taking care of them",
+        "13e": "Wait until the customer actively asks for help before going over, not wanting to intrude",
+        "13f": "Feel not good at handling this kind of situation, call another colleague to attend to them"
+      }
+    },
+    "14": {
+      "situation": "The person and a shift partner are not working well together, often having service handoff issues that affect the customer experience. What would he/she do?",
+      "options": {
+        "14a": "Proactively have an open and honest conversation with the partner, clarifying each person's responsibilities and boundaries",
+        "14b": "Together map out the entire service process, identify the handoff pain points, and create standardized coordination guidelines",
+        "14c": "Ask the supervisor to coordinate, having a third party help sort out the collaboration",
+        "14d": "Take on more work proactively, fill in the gaps, to avoid errors affecting customers",
+        "14e": "Design a simple set of handoff signals or cues to improve coordination efficiency",
+        "14f": "Feel it's the partner's problem but can't bring it up, feel anxious inside, and performance declines",
+        "14g": "Everyone just does their own thing, if there's a problem it's not solely my responsibility"
+      }
+    },
+    "15": {
+      "situation": "The person is assigned to mentor a new employee, but their own workload is already at capacity. What would he/she do?",
+      "options": {
+        "15a": "Create a mentoring plan, allocate time reasonably, and treat mentoring as a growth opportunity",
+        "15b": "Have the newcomer observe and learn by following along, and provide explanations during free time",
+        "15c": "Have the newcomer familiarize themselves with the basics first, and provide systematic guidance after finishing own work",
+        "15d": "Communicate with the supervisor, explain the situation, and request a workload adjustment",
+        "15e": "Go through the motions with the mentoring, focusing all energy on own work",
+        "15f": "Let the newcomer figure things out on their own, and come ask questions if they have any"
+      }
+    },
+    "16": {
+      "situation": "The person notices a colleague made a small error at work. Although no customer or supervisor has noticed yet, it could affect subsequent service. What would he/she do?",
+      "options": {
+        "16a": "Privately remind the colleague, letting them correct the error themselves",
+        "16b": "Immediately point it out and help correct it, ensuring the service is not affected",
+        "16c": "Document this case for team review to prevent similar errors",
+        "16d": "Quietly help fix the colleague's mistake, and gently remind them to be careful afterward",
+        "16e": "Feel that less trouble is better, pretend not to have seen it",
+        "16f": "Point out the colleague's problem in front of everyone, so everyone can learn from it"
+      }
+    },
+    "17": {
+      "situation": "The person has a good idea that could boost performance, but it requires breaking the existing process. What would he/she do?",
+      "options": {
+        "17a": "First run a small-scale pilot, and promote it after proving effectiveness with data",
+        "17b": "Write a detailed proposal and use data and logic to persuade management",
+        "17c": "Enthusiastically share it at a team meeting, rallying everyone to try it together",
+        "17d": "Believe the existing process exists for a reason, just focus on doing own job well first",
+        "17e": "Feel innovation is too much trouble, just do what the boss asks, don't make extra work",
+        "17f": "Just do it regardless of the process, let the results speak, and report afterward"
+      }
+    },
+    "18": {
+      "situation": "The person notices a new service model emerging in the industry (e.g., smart self-service, online services) that could affect their position. What would he/she do?",
+      "options": {
+        "18a": "Proactively learn the knowledge and skills related to the new model, to avoid being left behind",
+        "18b": "Deeply study the shortcomings of the new model, and find the differentiated advantages of traditional service",
+        "18c": "After organizing thoughts, suggest to management to combine the new model with traditional service",
+        "18d": "First observe what competitors do, and act when the industry trend becomes clearer",
+        "18e": "Think about how to turn the new model into an opportunity, and proactively propose a service upgrade plan",
+        "18f": "Worry about being eliminated and losing the job, become anxious, and work performance declines",
+        "18g": "Can't change the big trends anyway, just carry on as usual, deal with it when the time comes"
+      }
+    },
+    "19": {
+      "situation": "The person discovers that a competitor has launched a similar but cheaper service. What would he/she think and do?",
+      "options": {
+        "19a": "Deeply study the competitor's service details, and identify own advantages and areas for improvement",
+        "19b": "Do better on service details, retaining customers with quality and experience",
+        "19c": "Proactively report market intelligence to management, and suggest adjusting strategy",
+        "19d": "Brainstorm with the team to find differentiated service highlights",
+        "19e": "Feel this is not something one can change, just do own job well",
+        "19f": "Worry that declining performance will affect income, become anxious, and unable to focus on work"
+      }
+    },
+    "20": {
+      "situation": "The person reflects on their career in the service industry. What matters most to them?",
+      "options": {
+        "20a": "Building genuine connections with customers, seeing their satisfied smiles",
+        "20b": "Continuously growing in the role, advancing from frontline to management",
+        "20c": "Stable income and a regular life, just doing the job well",
+        "20d": "Finding areas for improvement in the service, continuously optimizing the service experience",
+        "20e": "Haven't thought about it much, having a job that pays the bills is enough",
+        "20f": "Finding enjoyment in the work, getting along well with colleagues matters most"
+      }
+    }
+  },
+  "student": {
+    "1": {
+      "situation": "Several important exams are approaching and time is tight. How would the person arrange their review?",
+      "options": {
+        "1a": "Create a detailed review schedule, allocate time by priority, and follow it strictly",
+        "1b": "Form a study group with classmates and explain key concepts to each other",
+        "1c": "Settle down, find a quiet place, and review independently in depth",
+        "1d": "Not too stressed, review casually — flip to whatever page, no special preparation",
+        "1e": "Proactively ask teachers or top-performing classmates for review tips and key points",
+        "1f": "Anxious and restless, repeatedly worrying about not finishing the review, affecting sleep and efficiency"
+      }
+    },
+    "2": {
+      "situation": "In a group or class project, one member barely participates and doesn't complete their tasks. What would the person do?",
+      "options": {
+        "2a": "Talk to the member privately, understand the reasons, and encourage them to participate",
+        "2b": "Clarify task assignments within the group, set deadlines, and require everyone to complete their part",
+        "2c": "Take on more to ensure the quality isn't affected, and report to the teacher afterward",
+        "2d": "Reassign tasks, giving the simpler parts to that person to reduce the difficulty of collaboration",
+        "2e": "Call out the member publicly in the group and demand they improve immediately",
+        "2f": "As long as it doesn't affect my own grade, the group member's business is not my concern"
+      }
+    },
+    "3": {
+      "situation": "The person faces a subject they're not good at but must master. How would they handle it?",
+      "options": {
+        "3a": "Start from the basics, make a study plan, and consistently put in time every day",
+        "3b": "Ask classmates who excel in the subject for help and study together",
+        "3c": "Look for various study materials online or in bookstores, trying different learning methods",
+        "3d": "Just aim to pass, cram key points before the exam, and don't spend too much time normally",
+        "3e": "Proactively seek tutoring from the teacher after class for targeted guidance",
+        "3f": "Try my best, and if I really can't learn it, so be it — no point forcing it"
+      }
+    },
+    "4": {
+      "situation": "The person has a very close classmate whose daily habits are completely different, affecting each other's rest or study. How would they handle it?",
+      "options": {
+        "4a": "Have an honest conversation and work out rules that both can accept",
+        "4b": "Adjust and adapt myself, like studying at a different time or doing something else",
+        "4c": "Reduce time together and go to the library or other places to study",
+        "4d": "Report to a teacher or parent and ask them to help coordinate",
+        "4e": "Directly express dissatisfaction and demand the other person adjust, with a tough attitude",
+        "4f": "Silently endure it, feeling anxious and uneasy, but not daring to speak up"
+      }
+    },
+    "5": {
+      "situation": "In class, the teacher raises a controversial viewpoint and asks for everyone's opinion. What would the person do?",
+      "options": {
+        "5a": "Actively raise a hand and clearly express their thoughts, even if they differ from the teacher's",
+        "5b": "Think deeply internally, but not comfortable speaking up in front of everyone",
+        "5c": "Listen to other classmates' opinions first, then decide whether to speak up",
+        "5d": "Whisper and discuss with the classmate next to me, exchanging our ideas",
+        "5e": "Not very interested in the topic, don't want to participate in the discussion, just do my own thing"
+      }
+    },
+    "6": {
+      "situation": "The person's extracurricular activity (club, interest class, volunteer service, etc.) conflicts with class time. What would they do?",
+      "options": {
+        "6a": "Assess the importance of both, prioritize academics, and request leave from the activity",
+        "6b": "Communicate with the activity organizer to see if the schedule can be adjusted",
+        "6c": "Try to juggle both, splitting time to participate in each",
+        "6d": "Explain the situation to the teacher and see if make-up classes can be arranged at another time",
+        "6e": "Directly drop the extracurricular activity and focus on class, not wanting to be distracted",
+        "6f": "Anxious and uneasy, worried about doing poorly on both sides, unable to choose",
+        "6g": "Attend the extracurricular activity first, and explain to the teacher afterward if asked"
+      }
+    },
+    "7": {
+      "situation": "The person discovers a classmate cheating during an exam. What would they do?",
+      "options": {
+        "7a": "Privately remind the person afterward that the consequences of cheating are serious, hoping they'll correct it",
+        "7b": "Torn inside, but ultimately choose not to report it, giving the person a chance",
+        "7c": "Consider it a matter of principle and report it to the exam proctor",
+        "7d": "Pretend not to see it and focus on my own exam",
+        "7e": "Quietly stop the person on the spot, believing this behavior undermines fairness",
+        "7f": "Anxious and unsettled, letting this incident affect my own exam performance",
+        "7g": "Report it to the teacher after the exam — won't expose them on the spot but can't just ignore it either"
+      }
+    },
+    "8": {
+      "situation": "There's an important study task to complete over the weekend, but the person also really wants to relax and rest. What would they do?",
+      "options": {
+        "8a": "Complete the task first, then relax — feeling at ease makes the fun more enjoyable",
+        "8b": "Make a plan, allocate time for both study and rest, and shortchange neither",
+        "8c": "Play first, then rely on inspiration or the pressure of a deadline to get the work done",
+        "8d": "Study a bit then play a bit, can't resist checking my phone, very low efficiency",
+        "8e": "Keep struggling over whether to study or play, and end up doing neither well",
+        "8f": "Feel that rest is more important, studying can wait — don't want to put too much pressure on myself"
+      }
+    },
+    "9": {
+      "situation": "The person is participating in an important competition or performance, but realizes right before that they're underprepared and unlikely to place well. What would they do?",
+      "options": {
+        "9a": "Cram through the night, give it everything, and leave no regrets",
+        "9b": "Adjust my mindset, treat this as experience-building, and prepare for next time",
+        "9c": "Brainstorm with teammates to see if there's a clever strategy",
+        "9d": "Carefully analyze the competition rules and find my relative strengths to focus on",
+        "9e": "Consider withdrawing from the competition, not wanting to participate without adequate preparation",
+        "9f": "Extremely anxious, and ultimately just give up trying — whatever happens, happens"
+      }
+    },
+    "10": {
+      "situation": "The person sees classmates on social media showing off their grades, awards, and talents, while they have nothing impressive to showcase. What would they think?",
+      "options": {
+        "10a": "Use it as motivation, make a self-improvement plan, and work hard quietly",
+        "10b": "Focus on my own pace — everyone's path is different",
+        "10c": "Proactively reach out to classmates, learn how they achieved what they did, and pick up tips",
+        "10d": "Pause and reflect on what I truly want, not getting caught up in momentary comparisons",
+        "10e": "Anxious and full of self-doubt, feeling like I'm worthless, sinking into low spirits",
+        "10f": "Think social media is all showing off, it doesn't matter — just do my own thing"
+      }
+    },
+    "11": {
+      "situation": "The person's class or student organization needs to elect an important representative (class committee, student representative, etc.), and there are multiple candidates. What would they do?",
+      "options": {
+        "11a": "Carefully evaluate each candidate's abilities and philosophy, and vote rationally",
+        "11b": "Support the person I'm close to, emotionally leaning toward someone familiar",
+        "11c": "Run for the position myself, believing I have the ability to serve everyone better",
+        "11d": "Stay neutral, not get involved in internal competition, and just focus on my own things",
+        "11e": "Abstain from voting, feeling the outcome has nothing to do with me",
+        "11f": "Nervous and uneasy, worried that choosing wrong will affect classmate relationships, hesitating"
+      }
+    },
+    "12": {
+      "situation": "The person can't understand the teacher's way of explaining a subject, and their learning effectiveness is very poor. What would they do?",
+      "options": {
+        "12a": "Proactively seek the teacher's help after class to find a learning method that works for me",
+        "12b": "Find other teaching resources online for self-study to supplement what's missing in class",
+        "12c": "Discuss with classmates and supplement each other's understanding",
+        "12d": "Keep paying attention in class, take as many notes as possible, and cram before the final exam",
+        "12e": "Don't care — this subject isn't that important to me, no need to spend too much energy on it"
+      }
+    },
+    "13": {
+      "situation": "The person is invited to attend a lecture or sharing session, but the topic is not in their area of interest. What would they do?",
+      "options": {
+        "13a": "Gladly attend, believing that cross-disciplinary learning broadens horizons",
+        "13b": "Look into the content first, and go if it seems valuable",
+        "13c": "Invite a classmate to go together — having company makes it more motivating",
+        "13d": "Not interested, so don't go — spend the time on things I enjoy",
+        "13e": "Afterward, proactively seek out the speaker to discuss and ask questions in depth",
+        "13f": "Anxious about not understanding, but force myself to go anyway",
+        "13g": "Even if I don't understand, it doesn't matter — going for the fun of it and joining the crowd is fine too"
+      }
+    },
+    "14": {
+      "situation": "The person discovers that the topic they're preparing for an assignment or project is the same as someone else's. What would they do?",
+      "options": {
+        "14a": "Proactively reach out to discuss, seeing if there's room for collaboration or a differentiated approach",
+        "14b": "Immediately pivot and find a unique angle",
+        "14c": "Go deeper on the existing foundation and win with quality",
+        "14d": "Consult the teacher and plan based on professional advice",
+        "14e": "It doesn't matter — same topic is fine, each of us does our own work independently",
+        "14f": "Anxious about being suspected of plagiarism, repeatedly revising the plan late into the night"
+      }
+    },
+    "15": {
+      "situation": "The person's good friend wants to copy their homework. What would they do?",
+      "options": {
+        "15a": "Refuse to let them copy, but offer to spend time teaching them how to do it",
+        "15b": "Directly refuse, believing that copying homework is bad for both sides",
+        "15c": "Let them copy out of friendship, but feel uncomfortable about it",
+        "15d": "Share my completed homework for reference on the approach, but let them write it themselves",
+        "15e": "Strictly criticize them, believing that copying homework is dishonest",
+        "15f": "Torn and anxious — don't want to damage the friendship but also don't want to compromise my principles",
+        "15g": "Just let them copy — helping a good friend out is no big deal"
+      }
+    },
+    "16": {
+      "situation": "In a team project, the group has a fundamental disagreement about the final direction. What would the person do?",
+      "options": {
+        "16a": "Organize everyone to fully express their views, then vote to decide",
+        "16b": "Let data and research results speak — choose whichever direction has supporting evidence",
+        "16c": "Stick to the direction I believe is right and use logic to persuade my teammates",
+        "16d": "Propose a compromise that combines the strengths of both sides' ideas",
+        "16e": "Stand firm and refuse to yield, getting into a heated argument with teammates",
+        "16f": "Back down and go along with the majority, avoiding conflict to preserve relationships"
+      }
+    },
+    "17": {
+      "situation": "The person needs to choose where to focus their main energy for a period (e.g., a semester): core academics, special talents, artistic training, reading accumulation, etc. How would they decide?",
+      "options": {
+        "17a": "List the pros and cons of each direction along with personal conditions, and make a rational assessment",
+        "17b": "Talk to different people and seek advice from teachers, classmates, and parents",
+        "17c": "Follow my heart and choose the direction I most want to try",
+        "17d": "Commit fully to one direction with no backup plan",
+        "17e": "Don't decide yet — try multiple things at once and gradually find the direction through practice"
+      }
+    },
+    "18": {
+      "situation": "The person is called on by the teacher in class to answer a question they completely don't understand. What would they do?",
+      "options": {
+        "18a": "Honestly say I don't know, but offer to look into it and consult the teacher after class",
+        "18b": "Try to reason based on existing knowledge and give an analytical answer",
+        "18c": "Use humor to defuse the awkwardness, then humbly ask the teacher to explain",
+        "18d": "Too nervous to speak, hoping the teacher will skip me",
+        "18e": "Give a random answer based on gut feeling, just to get through the moment"
+      }
+    },
+    "19": {
+      "situation": "The person discovers a classmate who can't even afford basic study materials due to family financial hardship. What would they do?",
+      "options": {
+        "19a": "Quietly share my own study materials without making a fuss, protecting their dignity",
+        "19b": "Help them learn about the school's financial aid policies and provide information",
+        "19c": "Organize a mutual-aid initiative in the class, getting everyone to share resources",
+        "19d": "Privately ask what they need and help as much as I can",
+        "19e": "Report to the teacher and seek help from the school or class",
+        "19f": "Heart aches but don't know how to help, feeling anxious and guilty inside"
+      }
+    },
+    "20": {
+      "situation": "Looking back on their student years, what does the person find most valuable?",
+      "options": {
+        "20a": "Meeting many like-minded friends and building a valuable network",
+        "20b": "Building a solid academic foundation and preparing well for future development",
+        "20c": "Finding what I truly love and excel at through various explorations",
+        "20d": "Learning to think independently and live on my own, becoming more mature and steady",
+        "20e": "The setbacks and challenges experienced, which made me more resilient",
+        "20f": "Exploring various interests on my own — though never achieving mastery, the journey was rewarding"
+      }
+    }
+  },
+  "office": {
+    "1": {
+      "situation": "The person needs to deliver an important presentation to senior management on short notice, but the data is incomplete. What would he/she do?",
+      "options": {
+        "1a": "First outline the core logical framework, use available data to support conclusions, and flag areas needing supplementation",
+        "1b": "Work overtime to fill in all the data, ensuring the presentation is foolproof",
+        "1c": "Ask team members to help divide the work and collect data collaboratively",
+        "1d": "Package the existing data with storytelling, focusing on persuasive delivery",
+        "1e": "Proactively explain the data situation to the supervisor and request an extension or simplified presentation content",
+        "1f": "Anxious and restless, repeatedly worrying that the incomplete data will be questioned by senior management, unable to sleep all night"
+      }
+    },
+    "2": {
+      "situation": "The person discovers that another department is working on something that highly overlaps with their own project. What would he/she do?",
+      "options": {
+        "2a": "Proactively contact the other department's lead, discuss collaboration possibilities, and avoid resource waste",
+        "2b": "Immediately report to their own supervisor, letting them coordinate resource allocation",
+        "2c": "Accelerate their own project's progress to seize the initiative",
+        "2d": "Analyze the differences between the two projects and identify their respective unique values",
+        "2e": "Feel it's not their concern and continue pushing their own project as planned",
+        "2f": "Feel very uneasy, repeatedly agonizing over whether they're being marginalized, but too afraid to ask proactively"
+      }
+    },
+    "3": {
+      "situation": "The person's direct supervisor makes a clearly unreasonable decision. What would he/she do?",
+      "options": {
+        "3a": "Prepare sufficient data and examples, then privately approach the supervisor to politely express disagreement",
+        "3b": "Follow the supervisor's decision but prepare contingency plans in case something goes wrong",
+        "3c": "Directly voice disagreement in the meeting, believing it's about the issue, not the person",
+        "3d": "Execute first, collect feedback during the process, and let the results speak",
+        "3e": "Privately approach a higher-level leader to report the situation, hoping to push for adjustments from above",
+        "3f": "Torn repeatedly over whether to speak up, worried that raising concerns will offend the leader, but also afraid of taking the blame if things go wrong"
+      }
+    },
+    "4": {
+      "situation": "The person is temporarily reassigned to a cross-departmental project team with unfamiliar members. How would he/she integrate?",
+      "options": {
+        "4a": "Proactively greet everyone, quickly build connections, and understand each person's role",
+        "4b": "First observe how the team operates, then find their own position before actively contributing",
+        "4c": "Let professional competence speak, demonstrating value in the very first task",
+        "4d": "First communicate with the project lead to understand expectations and goals",
+        "4e": "Quietly do the tasks assigned, waiting for everyone to gradually get familiar",
+        "4f": "Nervous and restrained, constantly worried about saying or doing the wrong thing, unable to relax all day"
+      }
+    },
+    "5": {
+      "situation": "The person's project budget is cut in half, but the targets remain the same. How would he/she cope?",
+      "options": {
+        "5a": "Reprioritize, cut non-essential parts, and focus on core objectives",
+        "5b": "Find alternative solutions and innovative methods to do more with fewer resources",
+        "5c": "Negotiate with the supervisor for more resources, using data to illustrate the risks of insufficient budget",
+        "5d": "Accept the reality and do their best, completing as much as possible",
+        "5e": "Seek resource support from other departments or external partners through cross-boundary collaboration",
+        "5f": "Anxious to the point of insomnia, repeatedly worrying about being held accountable for failing to meet targets, yet unable to come up with a good solution"
+      }
+    },
+    "6": {
+      "situation": "The person discovers a colleague is slacking off and pushing work onto them. What would he/she do?",
+      "options": {
+        "6a": "Politely but firmly set boundaries, clarifying each person's work responsibilities",
+        "6b": "Endure it for now, but document the colleague's behavior and report to the leader when necessary",
+        "6c": "Directly tell the colleague it's unfair and demand they fulfill their responsibilities",
+        "6d": "Propose clear division of labor at a team meeting, making workload transparent",
+        "6e": "Don't care, doing a bit more won't kill anyone, don't want to ruin the harmony over this",
+        "6f": "Feel very uncomfortable but too embarrassed to refuse, working overtime while suffering mental drain, feeling increasingly wronged"
+      }
+    },
+    "7": {
+      "situation": "The person receives two urgent tasks simultaneously, both requiring completion by the end of the day. How would he/she handle it?",
+      "options": {
+        "7a": "Quickly assess the urgency and importance of both tasks, and negotiate reasonable timelines with the requesters",
+        "7b": "Ask a colleague to help share one task, improving efficiency through teamwork",
+        "7c": "Fully focus on completing one first, then concentrate on the second",
+        "7d": "Alternate between the two tasks, keeping progress on both sides",
+        "7e": "Explain the situation to the supervisor, requesting coordination of priorities or an extension on one of the tasks",
+        "7f": "Too anxious to concentrate, starting both tasks but unable to make progress on either"
+      }
+    },
+    "8": {
+      "situation": "The person is participating in a company promotion interview, and the interviewer asks a completely unprepared question. What would he/she do?",
+      "options": {
+        "8a": "Honestly admit being unprepared, but provide structured thinking based on their understanding",
+        "8b": "Use a familiar area or case as an analogy, demonstrating transferable thinking",
+        "8c": "Confidently improvise, naturally responding based on past experience",
+        "8d": "Ask the interviewer for some hints, showing willingness to learn and think",
+        "8e": "Skillfully steer the conversation toward their area of strength and thorough preparation, showcasing advantages",
+        "8f": "So nervous that their mind goes blank, stammering and unable to form complete sentences",
+        "8g": "Give a perfunctory answer to quickly end the topic, hoping the interview passes soon"
+      }
+    },
+    "9": {
+      "situation": "The person's team has been working overtime for a month straight, and morale is visibly low. What would he/she do?",
+      "options": {
+        "9a": "Propose organizing a team-building activity or dinner to help everyone unwind",
+        "9b": "Proactively check in on colleagues, understand their difficulties and try to help",
+        "9c": "Negotiate with the supervisor for resources or adjusted timelines to reduce team pressure",
+        "9d": "Lead by example, persevering and using action to motivate the team",
+        "9e": "Also feeling exhausted and demoralized, reducing investment to preserve their own state first",
+        "9f": "Worried the team really can't hold on, growing more anxious, yet too afraid to take any initiative"
+      }
+    },
+    "10": {
+      "situation": "The person realizes they cannot achieve their KPI targets, but the annual review is approaching. What would he/she do?",
+      "options": {
+        "10a": "Prepare a detailed review report, analyze the reasons, and demonstrate the effort and results achieved along the way",
+        "10b": "Push hard in the final stage, doing as much as possible",
+        "10c": "Proactively communicate honestly with the supervisor, explain the difficulties and seek support",
+        "10d": "Adjust their mindset, accept the result, and focus energy on planning for next year",
+        "10e": "Look for new breakthroughs or growth points, striving for a comeback in the final stage",
+        "10f": "Repeatedly worry that the evaluation will affect promotion and bonus, unable to focus on anything all day"
+      }
+    },
+    "11": {
+      "situation": "The person is in an important meeting and discovers a colleague has taken credit for their proposal. What would he/she do?",
+      "options": {
+        "11a": "Use facts and data to supplement the discussion during the meeting, naturally demonstrating their own contribution",
+        "11b": "After the meeting, approach the colleague privately and ask them to clarify the facts",
+        "11c": "Keep it to heart, be more careful about protecting their work in the future, but don't confront them on the spot",
+        "11d": "Prove their capability through even better performance in subsequent work",
+        "11e": "Immediately point out on the spot that it is their own proposal, demanding the colleague clarify",
+        "11f": "Feel resentful but dare not speak up on the spot, going home and agonizing over it for days, affecting their mood"
+      }
+    },
+    "12": {
+      "situation": "The person is invited to an industry networking event but isn't very good at socializing. What would he/she do?",
+      "options": {
+        "12a": "Prepare some conversation topics in advance and proactively meet new people",
+        "12b": "Find one or two people who seem to share common interests for in-depth conversation",
+        "12c": "Go with a colleague and let them make introductions",
+        "12d": "Feel it's unnecessary and make an excuse not to go",
+        "12e": "Prepare business cards and a self-introduction, using professional content to attract others to initiate conversation",
+        "12f": "Force themselves to go, but spend the entire time hiding in a corner scrolling on their phone, too anxious to initiate conversation"
+      }
+    },
+    "13": {
+      "situation": "The person faces a career choice: stay at the current company for steady development, or accept an external opportunity (potentially higher salary but requiring leaving their comfort zone). How would they decide?",
+      "options": {
+        "13a": "Comprehensively evaluate the pros and cons of both options: salary, growth, living costs, personal factors",
+        "13b": "Discuss with trusted people and make a decision after gathering multiple perspectives",
+        "13c": "Boldly try the new opportunity, feeling they'd regret it if they didn't",
+        "13d": "Lean toward staying at the current company — stability and familiarity matter more",
+        "13e": "Decide based on intuition and gut feeling, trusting their first instinct",
+        "13f": "Torn and unable to decide for a long time, wanting to stay one day and leave the next, unable to sleep night after night"
+      }
+    },
+    "14": {
+      "situation": "The person's team receives a customer complaint due to a mistake, creating a lot of pressure. What would he/she do?",
+      "options": {
+        "14a": "Apologize to the customer immediately, propose a remediation plan, and show sincerity",
+        "14b": "Organize a team review, identify the root cause, and establish improvement mechanisms",
+        "14c": "Take responsibility and proactively communicate with the customer to resolve the conflict",
+        "14d": "First comfort the team to keep them from self-blame, then handle the situation calmly",
+        "14e": "Deeply analyze the real needs behind the customer complaint and provide a solution that exceeds expectations",
+        "14f": "Blame themselves and feel anxious, repeatedly worrying about losing the customer or being held accountable, highly tense",
+        "14g": "Pretend not to hear it, hoping other colleagues or the leader will handle the customer issue"
+      }
+    },
+    "15": {
+      "situation": "The person needs to collaborate on a project with a domineering, difficult-to-communicate colleague. What would he/she do?",
+      "options": {
+        "15a": "Speak with data and facts, minimize emotional exchanges, and focus on the task itself",
+        "15b": "First understand the colleague's work style and needs, finding common goals",
+        "15c": "Hold their ground without easily yielding, maintaining a professional attitude",
+        "15d": "Avoid direct confrontation as much as possible, communicating through written channels like email",
+        "15e": "Seek coordination from a shared supervisor or third party to avoid direct confrontation that could stall progress",
+        "15f": "Extremely nervous before every conversation, repeatedly weighing their words but still afraid of offending the other person"
+      }
+    },
+    "16": {
+      "situation": "The person is assigned to take over a mess of a project left behind by a colleague. What would he/she do?",
+      "options": {
+        "16a": "Quickly assess the project's current state, identify key issues, and formulate a rescue plan",
+        "16b": "Communicate with the previous colleague to understand the background, but avoid excessive blame and focus on solving the problem",
+        "16c": "Treat the problem as a challenge, using innovative methods to redefine the project",
+        "16d": "Truthfully report the project's condition to the supervisor, clarifying what they can accomplish",
+        "16e": "First assess whether the project is still worth saving, and if necessary, suggest cutting losses promptly rather than pushing through",
+        "16f": "Growing more panicked the more they look at it, worrying they'll be blamed if they mess up, repeatedly agonizing over whether to decline",
+        "16g": "It wasn't their mess anyway — drag it out as long as possible, deal with it only when the leader pushes"
+      }
+    },
+    "17": {
+      "situation": "The person is in a cross-departmental project where colleagues from other departments keep delaying deliverables, affecting overall progress. What would he/she do?",
+      "options": {
+        "17a": "Proactively reach out to the other department's colleagues to understand their difficulties and bottlenecks, and see how to help move things forward",
+        "17b": "Push for clear delivery milestones, agreeing on deadlines and responsible persons for each task",
+        "17c": "Report the situation to the supervisor, requesting resource coordination or adjusted overall timeline",
+        "17d": "Adjust their own work schedule, first advancing the parts that don't depend on the other party, leaving buffer for critical milestones",
+        "17e": "Create a shared progress document, making everyone's tasks and progress transparent to the whole project, enabling mutual accountability",
+        "17f": "Repeatedly worry about being blamed for the project delay, but too embarrassed to push the other party, working overtime while anxiously waiting",
+        "17g": "Since the other party is dragging, they'll also take it slow, proceeding at their own pace"
+      }
+    },
+    "18": {
+      "situation": "The person discovers a fundamental values difference with a colleague, leading to frequent friction. What would he/she do?",
+      "options": {
+        "18a": "Separate the work relationship from personal values, maintaining professional collaboration",
+        "18b": "Try to understand the other person's position and starting point, looking for common ground",
+        "18c": "Reduce non-essential interactions, keeping only the minimum necessary work communication",
+        "18d": "Have a direct, honest conversation with the colleague, expressing their own feelings and expectations",
+        "18e": "Consider requesting a transfer or team change to avoid the mental drain of long-term collaboration",
+        "18f": "Obsess over every word the colleague has said, increasingly feeling targeted, unable to focus at work"
+      }
+    },
+    "19": {
+      "situation": "The person realizes they're stuck in a state of \"pseudo-busyness\" — working overtime every day but producing little output and seeing no growth. What would he/she do?",
+      "options": {
+        "19a": "Stop and spend half a day reviewing where their time has been going, finding the root cause of the \"pseudo-busyness\"",
+        "19b": "Try using time-tracking tools to restructure their workflow, identifying and optimizing inefficient areas",
+        "19c": "Proactively cut out ineffective meetings and low-value socializing, concentrating time on core output",
+        "19d": "Set clear goals and priorities again, focusing on the few tasks that deliver real value",
+        "19e": "Talk to a mentor or senior colleague, asking them to help identify what's wrong with their work approach",
+        "19f": "Increasingly feeling like they're stuck in place, restless and unable to work during overtime, falling into a vicious cycle",
+        "19g": "Everyone else is working overtime anyway, so just tag along and coast through until it's time to leave, by the book"
+      }
+    },
+    "20": {
+      "situation": "The person reflects on their career — what do they value most?",
+      "options": {
+        "20a": "Continuous growth and learning, constantly pushing their boundaries",
+        "20b": "Deep expertise in their field, becoming an industry expert",
+        "20c": "A harmonious work environment and good interpersonal relationships",
+        "20d": "Stable income and good work-life balance",
+        "20e": "A platform and space to unleash creativity and realize self-worth",
+        "20f": "No clear pursuit really, just always worrying about falling behind others, feeling lost and anxious about the future"
+      }
+    }
+  },
+  "civil": {
+    "1": {
+      "situation": "A member of the public comes to handle business but their documents are incomplete, yet they are emotionally agitated, claiming \"I've come three times already.\" What would he/she do?",
+      "options": {
+        "1a": "Calm their emotions first, patiently explain the policy, and list all the supplementary documents needed in one go",
+        "1b": "See if the application can be accepted with missing documents within policy limits, reducing the need for the person to make another trip",
+        "1c": "Strictly follow the regulations — documents are incomplete and the matter truly cannot be processed",
+        "1d": "Proactively help the person sort through existing documents and guide them on how to complete the missing ones",
+        "1e": "Get affected by the person's emotions, become irritable too, and end up arguing with them",
+        "1f": "Ask the duty supervisor or an experienced colleague to help handle the situation"
+      }
+    },
+    "2": {
+      "situation": "The person discovers a colleague showing signs of soliciting bribes or kickbacks during the approval process. What would he/she do?",
+      "options": {
+        "2a": "Privately and seriously warn the colleague, explaining the disciplinary rules and consequences",
+        "2b": "Report through official channels to superiors or the disciplinary inspection department",
+        "2c": "Keep a distance but don't want trouble — stay out of it for now",
+        "2d": "Gather evidence and raise the issue at an appropriate time and place",
+        "2e": "Pretend not to notice and avoid getting involved to stay out of trouble",
+        "2f": "Torn repeatedly over whether to report it — afraid the colleague will find out and make things awkward, but also afraid of being held responsible for not reporting it — unable to settle the mind all day"
+      }
+    },
+    "3": {
+      "situation": "Superiors have issued a policy that is very difficult to implement and has drawn strong opposition from the grassroots level. What would he/she do?",
+      "options": {
+        "3a": "Carefully study the spirit of the policy first and find a way to implement it that fits local realities",
+        "3b": "Report the actual grassroots difficulties truthfully to superiors and push for flexibility in policy implementation",
+        "3c": "Implement it without compromise, believing that the superior's policy must have sound reasoning",
+        "3d": "Convene a meeting with grassroots officials, collect their opinions, and draft a written proposal",
+        "3e": "Voice complaints about the policy privately, grumbling to colleagues that superiors don't understand the grassroots",
+        "3f": "Request instructions from superiors, asking for clearer implementation guidance and resource support"
+      }
+    },
+    "4": {
+      "situation": "The person receives a complaint from a member of the public about poor service attitude, but it wasn't actually his/her fault. What would he/she do?",
+      "options": {
+        "4a": "Sincerely accept the complaint first, understand exactly what the person was unhappy about, and improve service",
+        "4b": "Explain the actual situation to the supervisor and clarify the facts",
+        "4c": "Analyze the underlying service process issues behind the complaint and propose improvements",
+        "4d": "Feel wronged but say little, just keep doing the job well",
+        "4e": "Feel wronged and angry, vent to colleagues",
+        "4f": "Argue forcefully — find the complainant and clarify the truth face to face"
+      }
+    },
+    "5": {
+      "situation": "The person is assigned to a grassroots service window position on rotation; the work is repetitive and tedious, and doesn't match his/her professional background. What would he/she do?",
+      "options": {
+        "5a": "Proactively study the entire workflow of the window services, identify areas for optimization and efficiency improvement, and help the public make fewer trips",
+        "5b": "Calmly identify what the rotation can offer, treating it as a rare opportunity to understand the grassroots and fill in gaps",
+        "5c": "Ask experienced senior colleagues at the window for advice, learning their techniques for dealing with the public and resolving conflicts",
+        "5d": "Explain to superiors that the position doesn't match his/her expertise and proactively request a transfer or early end to the rotation",
+        "5e": "Feel that his/her talents are being wasted, endure daily repetitive tasks with growing frustration, yet dare not speak up to the organization",
+        "5f": "It's just a rotation anyway — coast through this period, follow routine, and aim for nothing more than avoiding mistakes"
+      }
+    },
+    "6": {
+      "situation": "The person's department needs to respond quickly to a sudden public emergency. What would he/she do?",
+      "options": {
+        "6a": "Activate the emergency plan, quickly organize team assignments, and rush to the scene immediately",
+        "6b": "Calmly analyze the situation, gather information, and formulate a plan before taking action",
+        "6c": "Follow superior directives and established procedures to proceed steadily",
+        "6d": "Coordinate resources across departments, establish an information-sharing mechanism, and build collective strength",
+        "6e": "Feel panicked and nervous facing the emergency, needing others to remind him/her before taking action",
+        "6f": "Feel that the leaders will handle the emergency response, there's no need to step up — just stay in the back and do some support work"
+      }
+    },
+    "7": {
+      "situation": "The person is attending an important policy briefing session and needs to explain a new policy to colleagues and service recipients. What would he/she do?",
+      "options": {
+        "7a": "Use plain language and real-life examples to explain the policy clearly and thoroughly",
+        "7b": "Prepare detailed slides and materials, interpreting the policy clause by clause to ensure accuracy",
+        "7c": "Collect questions of concern from the grassroots in advance and address them specifically during the briefing",
+        "7d": "Read directly from the document, conveying the content strictly according to the official text",
+        "7e": "Worry about being held responsible if the explanation is unclear, find an excuse to decline the task",
+        "7f": "Repeatedly worry before going on stage about not explaining well or being stumped by questions, so nervous that sleep is impossible, and voice trembles when finally presenting"
+      }
+    },
+    "8": {
+      "situation": "The person discovers that the department has a problem with \"mountains of documents and seas of meetings,\" with large amounts of time consumed by ineffective meetings. What would he/she do?",
+      "options": {
+        "8a": "Propose streamlining meetings and promote more efficient communication methods",
+        "8b": "Strictly screen meetings that require his/her participation and avoid unnecessary ones as much as possible",
+        "8c": "Express ideas concisely and efficiently during meetings, driving up meeting efficiency by example",
+        "8d": "Adapt to the status quo and use meeting time to handle other tasks",
+        "8e": "Feel irritated by the frequent meetings and show impatience during them",
+        "8f": "Publicly question the necessity of meetings and refuse to attend those deemed ineffective",
+        "8g": "Comply with superior arrangements, believing that meetings are organizational requirements and it's not his/her place to judge their necessity"
+      }
+    },
+    "9": {
+      "situation": "A relative of the person wants to use his/her connections to \"cut corners\" and get something done. What would he/she do?",
+      "options": {
+        "9a": "Firmly refuse, explain the rules, but offer to guide them through the proper process",
+        "9b": "Politely decline, saying he/she can't help, to avoid hurting the relationship",
+        "9c": "Without violating rules, help check the progress of the process",
+        "9d": "Directly refuse, making clear this is a matter of principle with no room for negotiation",
+        "9e": "Agree verbally but drag it out without actually doing anything, letting the person give up on their own",
+        "9f": "Torn repeatedly — afraid that refusing will hurt the relationship, but also afraid that agreeing would violate discipline — unable to sleep all night"
+      }
+    },
+    "10": {
+      "situation": "The person is assigned to a new position or department where the work content and environment are completely different from before. What would he/she do?",
+      "options": {
+        "10a": "Proactively visit and understand the actual conditions of the new position and the needs of those being served",
+        "10b": "First familiarize with the workflow and interpersonal relationships, steadily doing every task well",
+        "10c": "Treat this reassignment as a growth opportunity and proactively take on challenging tasks",
+        "10d": "Combine past experience with the new position's requirements and look for innovative approaches",
+        "10e": "Feel anxious and uneasy about the new environment, worrying about not being up to the task",
+        "10f": "Don't care about the reassignment — the pay is the same regardless of how much or little one does, just clock in and out on time"
+      }
+    },
+    "11": {
+      "situation": "The person is tasked with drafting an important document, but the supervisor's instructions are very vague. What would he/she do?",
+      "options": {
+        "11a": "Research the relevant policies and background independently first, produce a draft, then submit it for the supervisor's review",
+        "11b": "Communicate with the supervisor to clarify the direction and key points before starting to write",
+        "11c": "Reference similar past documents and prepare multiple versions for the supervisor to choose from",
+        "11d": "Write based on his/her own understanding and ideas, boldly experimenting",
+        "11e": "Consult experienced colleagues and draw on their writing approaches and experience",
+        "11f": "Repeatedly second-guess the vague instructions, worrying that misunderstanding will lead to blame, and hesitate to start writing",
+        "11g": "Wait until the supervisor pushes again and then just dash something off — with vague instructions, the blame won't fall on him/her anyway"
+      }
+    },
+    "12": {
+      "situation": "The person is asked to complete a large-scale research project and produce a report within a short timeframe. What would he/she do?",
+      "options": {
+        "12a": "Design a research framework, assign tasks for collaboration, and collect data from multiple sources before aggregating and analyzing",
+        "12b": "Go deep into the field for on-site visits and obtain first-hand information before writing",
+        "12c": "Efficiently use existing data resources and quickly integrate and analyze them",
+        "12d": "Explain the time constraints to superiors and negotiate a reasonable timeline",
+        "12e": "Feel the timeline is too tight to complete, fall into anxiety and be unable to start writing",
+        "12f": "Feel the timeline is too tight to do a good job, just throw together a report to get by — passing is enough"
+      }
+    },
+    "13": {
+      "situation": "The person encounters a member of the public whose request is reasonable but lacks a policy basis. What would he/she do?",
+      "options": {
+        "13a": "Listen patiently, take careful notes, report the situation upward, and push for policy improvement",
+        "13b": "Honestly tell the person that current policy doesn't support it, but suggest other possible avenues",
+        "13c": "Explain strictly according to policy, not giving the person unrealistic expectations",
+        "13d": "Help connect with relevant departments to see if there are other channels to resolve the issue",
+        "13e": "Grow annoyed with the person who keeps coming back, and the attitude becomes cold and rigid",
+        "13f": "Torn repeatedly over whether to bend the rules — afraid of violating regulations but also afraid of disappointing the person — feeling deeply tormented"
+      }
+    },
+    "14": {
+      "situation": "The person's department is advancing a digital reform, but some senior colleagues are strongly resistant. What would he/she do?",
+      "options": {
+        "14a": "Patiently teach them one-on-one, helping senior colleagues gradually adapt to the new system",
+        "14b": "Use real cases to demonstrate the efficiency gains from digitalization and persuade everyone",
+        "14c": "Design a transition plan, keeping traditional and digital methods running in parallel for a period",
+        "14d": "Comply with superior arrangements, push forward by the book — some people not adapting is normal",
+        "14e": "Feel the resistance is too great, just put it on hold for now and wait until superiors push again",
+        "14f": "Worried that pushing digitalization will offend senior colleagues but also afraid that not pushing will be criticized by leadership, torn about what to do"
+      }
+    },
+    "15": {
+      "situation": "The person discovers waste in the department budget, but it involves the interests of multiple colleagues. What would he/she do?",
+      "options": {
+        "15a": "Starting from the angle of optimizing resource allocation, propose reasonable budget adjustment suggestions",
+        "15b": "Raise the issue at an appropriate occasion, using data and facts to persuade everyone",
+        "15c": "Mind his/her own business, make no comments, and don't want to offend anyone",
+        "15d": "Report the issue through an anonymous suggestion channel",
+        "15e": "Feel angry about the waste and publicly complain about it in the office",
+        "15f": "Deeply torn — distressed that public funds are being wasted but afraid of offending colleagues by speaking up — unable to settle the mind all day"
+      }
+    },
+    "16": {
+      "situation": "The person is pushing forward a task as planned, when the other party suddenly makes an additional request outside the original scope. What would he/she do?",
+      "options": {
+        "16a": "Flexibly adjust within resource limits, trying to accommodate reasonable requests",
+        "16b": "Stick to the original plan and politely explain that ad-hoc changes are not feasible",
+        "16c": "Request instructions from superiors and make adjustments only with authorization",
+        "16d": "Actively coordinate, demonstrating a good service attitude",
+        "16e": "Helplessly accept the extra demands, silently working overtime to complete them without any pushback",
+        "16f": "Torn repeatedly over the ad-hoc request — afraid that refusing will offend but also afraid that accepting and failing will bring blame — anxious to the point of insomnia"
+      }
+    },
+    "17": {
+      "situation": "The person needs to express an opinion on a controversial topic at a meeting. What would he/she do?",
+      "options": {
+        "17a": "Prepare thoroughly, speak with facts and data, and not avoid the conflict",
+        "17b": "Observe the main leaders' position first, then decide how to express his/her own views",
+        "17c": "Speak frankly, believing that public servants should express themselves honestly",
+        "17d": "Wait for the right moment and offer suggestions in a constructive way",
+        "17e": "Feel the controversial issue has little to do with him/her and choose to remain silent",
+        "17f": "Repeatedly agonize before the meeting over whether to speak up and what to say, so nervous that he/she can't utter a word when the meeting starts"
+      }
+    },
+    "18": {
+      "situation": "The person discovers that a public welfare policy is not well publicized and many people don't know about it. What would he/she do?",
+      "options": {
+        "18a": "Create easy-to-understand promotional materials and proactively inform the public through multiple channels",
+        "18b": "Organize community outreach sessions to explain the policy and answer questions face to face",
+        "18c": "Report the inadequate publicity to the supervisor and recommend increasing promotional efforts",
+        "18d": "Within the scope of his/her own work, try to inform every person who comes to do business",
+        "18e": "Publicity is the publicity department's job, it's not within his/her responsibilities",
+        "18f": "Torn repeatedly over whether to proactively do publicity — worried about being told he/she is overstepping if he/she does too much, or being criticized by leadership if he/she does too little"
+      }
+    },
+    "19": {
+      "situation": "The person faces a dilemma of \"the more you do, the more mistakes you make; the less you do, the fewer mistakes you make.\" What would he/she choose?",
+      "options": {
+        "19a": "Insist on doing more, believing that the value of a public servant lies in solving problems",
+        "19b": "On the basis of doing his/her job well, cautiously choose innovations that he/she is confident about",
+        "19c": "Follow the rules — aim for nothing more than avoiding mistakes",
+        "19d": "With superior support and institutional safeguards, boldly try new approaches",
+        "19e": "Choose to lie flat — do as little as possible and put energy into personal life",
+        "19f": "Torn repeatedly over whether to act — worried that doing more will lead to mistakes and blame, but also afraid of being criticized for inaction — anxious and mentally drained all day"
+      }
+    },
+    "20": {
+      "situation": "The person reflects on his/her career in public service — what does he/she value most?",
+      "options": {
+        "20a": "Truly solving problems for the public and seeing their satisfied expressions",
+        "20b": "Achieving results in the position and gaining recognition and promotion",
+        "20c": "A stable work and life, being able to balance family and career",
+        "20d": "Pushing institutional improvements that make work more efficient and fair",
+        "20e": "No particular aspirations — just coasting along, getting by is enough",
+        "20f": "Often feel lost about the future, worrying about achieving nothing yet not knowing how to change, repeatedly unable to sleep at night"
+      }
+    }
+  },
+  "artist": {
+    "1": {
+      "situation": "The person is working on a creative piece, but the client has requested numerous revisions, some of which conflict with the original creative vision. What would he/she do?",
+      "options": {
+        "1a": "Deeply understand the client's core needs, and find a balance while maintaining artistic principles",
+        "1b": "Stick to own artistic judgment, and convince the client with professional reasoning",
+        "1c": "Make all the changes as the client requests — after all, they're the one paying",
+        "1d": "Create multiple versions for the client to choose from, letting them compare",
+        "1e": "Consult experienced mentors or peers, learning from how they handle similar situations",
+        "1f": "Feel frustrated, pause the project first, and need time to process the emotions"
+      }
+    },
+    "2": {
+      "situation": "The person has hit a creative block and hasn't produced a satisfying new work in a long time. What would he/she do?",
+      "options": {
+        "2a": "Take a break from work, go traveling, visit exhibitions, experience life, and gather fresh inspiration",
+        "2b": "Keep creating every day, even if not satisfied, believing that quantity will lead to quality",
+        "2c": "Study master works in depth, analyze techniques, and look for a breakthrough direction",
+        "2d": "Exchange ideas with peers, see what others are working on, and spark inspiration",
+        "2e": "Fall into anxiety and self-doubt, unable to create for the time being",
+        "2f": "Let it be, don't force output, wait for inspiration to return naturally"
+      }
+    },
+    "3": {
+      "situation": "The person's work has been harshly criticized by a critic, even called \"worthless.\" How would he/she face it?",
+      "options": {
+        "3a": "Although hurt, rationally analyze the valid parts of the criticism and improve where warranted",
+        "3b": "Remain unaffected, stay on own artistic path, believing that aesthetics is subjective",
+        "3c": "Talk with trusted friends, and regain confidence from their support",
+        "3d": "Use the criticism as motivation, responding with even better work",
+        "3e": "Deeply devastated, fall into self-doubt, even seriously consider whether to continue creating",
+        "3f": "It doesn't matter, what critics say isn't important, as long as I think it's good"
+      }
+    },
+    "4": {
+      "situation": "The person faces a choice: keep making the niche art they love, or pivot to a more commercial direction. What would he/she choose?",
+      "options": {
+        "4a": "Try to find a meeting point between commerce and art, without giving up creative integrity",
+        "4b": "Stick with the art I love, believing time will prove its value",
+        "4c": "Do commercial projects to make a living first, and pursue pure creation in spare time",
+        "4d": "Try both paths, and see which one suits better through practice",
+        "4e": "Feel lost, unable to make a decision for a long time, and just maintain the status quo for now",
+        "4f": "Try new models (e.g., subscriptions, crowdfunding) to monetize niche art"
+      }
+    },
+    "5": {
+      "situation": "In a collaborative project, the person's partner has a completely different creative style and philosophy. What would he/she do?",
+      "options": {
+        "5a": "See the differences as an opportunity, try to merge the two styles to create something unique",
+        "5b": "Communicate openly, and find a creative direction both sides can accept",
+        "5c": "Each take charge of what they're best at, maintaining respective styles",
+        "5d": "Take the lead on the creative direction, and have the partner follow along",
+        "5e": "Minimize communication, each complete their own part, to avoid conflict",
+        "5f": "Think the partner's style is wrong, and actively persuade them to change"
+      }
+    },
+    "6": {
+      "situation": "The person's work has been plagiarized by someone else, spread online, and received a lot of attention. What would he/she do?",
+      "options": {
+        "6a": "Protect intellectual property rights through proper channels, issue a statement",
+        "6b": "Speak out on social media, letting more people know the truth",
+        "6c": "Feel hurt but choose to stay silent, and focus on creating new work",
+        "6d": "Contact the person and request deletion and an apology, starting with diplomacy before escalation",
+        "6e": "Feel angry and wronged, first vent emotions on social media",
+        "6f": "Seize the moment to launch an authorized series or merchandise, converting the attention into a business opportunity"
+      }
+    },
+    "7": {
+      "situation": "The person has been invited to participate in an important exhibition or performance, but preparation time is very tight. What would he/she do?",
+      "options": {
+        "7a": "Assess own capabilities honestly, and politely decline if unable to do it well",
+        "7b": "Go all out, seize every opportunity to showcase oneself",
+        "7c": "Focus on one core concept within the limited time, prioritize quality over quantity",
+        "7d": "Leverage team strength, fully collaborate to complete the work",
+        "7e": "Feel the pressure is too much, make up an excuse to skip the opportunity",
+        "7f": "Present using an unconventional format or medium, generating buzz"
+      }
+    },
+    "8": {
+      "situation": "The person finds that their creative style has been \"typecast\" by the market — everyone only wants \"that style.\" What would he/she do?",
+      "options": {
+        "8a": "Proactively explore new creative areas, break through, and don't set limits on oneself",
+        "8b": "Manage different styles simultaneously, publishing under different identities or channels",
+        "8c": "Accept the typecasting, and push the signature style to the extreme",
+        "8d": "Gradually infuse new elements into the existing style, changing incrementally",
+        "8e": "Don't care about typecasting or not, if there's demand just do it, as long as it pays",
+        "8f": "Publicly announce stopping the typecast work, and forcefully pivot"
+      }
+    },
+    "9": {
+      "situation": "The person enters a creative competition where the judges' aesthetic preferences are completely different from their own. What would he/she do?",
+      "options": {
+        "9a": "Stick to own style, competition results aren't the only measure of artistic value",
+        "9b": "Study the judges' aesthetic tendencies, and make moderate adjustments while staying true to oneself",
+        "9c": "Treat it as an experiment, and see how one performs under a different style",
+        "9d": "Prepare according to competition requirements, treating it as a professional challenge",
+        "9e": "Don't care about the judges' preferences, submit the work in own usual way",
+        "9f": "Feel there's no chance of winning, simply withdraw from the competition"
+      }
+    },
+    "10": {
+      "situation": "The person wants to try a completely new art form or technique, but worries about lacking the fundamentals and not being able to learn it. What would he/she do?",
+      "options": {
+        "10a": "Don't overthink it, just start learning from the basics, learn by doing, truth comes from practice",
+        "10b": "Find an experienced teacher or mentor in that field, having guidance can save a lot of detours",
+        "10c": "Do some small-scale experiments first, integrating the new technique into existing work as a trial",
+        "10d": "Systematically study others' success cases and teaching materials, make a detailed learning plan before starting",
+        "10e": "Worry about wasting effort on something that can't be learned, keep agonizing over whether to start, and delay taking action",
+        "10f": "The current direction is fine, no need to make things hard, just maintain the status quo"
+      }
+    },
+    "11": {
+      "situation": "Peers around the person are getting famous one by one, while they remain relatively unknown. What would he/she think?",
+      "options": {
+        "11a": "Analyze their paths to success, and see what can be learned",
+        "11b": "Trust own pace, good work will eventually be seen",
+        "11c": "Adjust strategy, strengthening promotion and operations while maintaining creative output",
+        "11d": "Feel anxious and disappointed, confide in someone close",
+        "11e": "Refuse to accept it, increase investment, and vow to surpass them",
+        "11f": "Everyone has their own path, just focus on oneself"
+      }
+    },
+    "12": {
+      "situation": "The person has been invited to do a cross-disciplinary collaboration in a field they're unfamiliar with. What would he/she do?",
+      "options": {
+        "12a": "Boldly give it a try, believing cross-disciplinary work can bring fresh creative inspiration",
+        "12b": "First deeply understand the other field, and assess whether it's a good fit",
+        "12c": "Ask a friend who's familiar with that field for advice",
+        "12d": "Politely decline, and focus on the field of expertise",
+        "12e": "Propose a unique collaboration plan, making the other field serve own creative vision",
+        "12f": "Feel anxious about the unknown field, hesitate and can't decide"
+      }
+    },
+    "13": {
+      "situation": "The person needs to take on a leadership role in a creative team, but is more accustomed to working alone. What would he/she do?",
+      "options": {
+        "13a": "Treat it as a growth opportunity, and learn how to lead a creative team",
+        "13b": "Use deep understanding of the creative process to guide the team's direction",
+        "13c": "Break down tasks so everyone plays to their strengths, while controlling the core direction",
+        "13d": "Be honest with the team about not being good at leadership, and try to participate as an advisor instead",
+        "13e": "Anxious about not leading the team well and affecting work quality, agonizing over whether to accept",
+        "13f": "Just want to create alone, go through the motions, and minimize communication with the team"
+      }
+    },
+    "14": {
+      "situation": "The person's creative philosophy conflicts with family expectations. The family wants them to find a \"stable\" job. What would he/she do?",
+      "options": {
+        "14a": "Let the work and achievements speak, showing family the value of creative work",
+        "14b": "Patiently communicate with family, explaining own choices and plans",
+        "14c": "Find a stable part-time job while pursuing art, balancing reality and dreams",
+        "14d": "Stick to own choice, and don't be swayed by outside voices",
+        "14e": "Avoid discussions with family, move out, and reduce conflict",
+        "14f": "Have a heated argument with family, and the relationship reaches a deadlock"
+      }
+    },
+    "15": {
+      "situation": "The person finds that their creative inspiration is increasingly dependent on AI tools. How would he/she view this?",
+      "options": {
+        "15a": "Treat AI as an assistive tool, but insist that core creative ideas must come from oneself",
+        "15b": "Embrace AI actively, exploring new creative models of human-machine collaboration",
+        "15c": "Reduce AI use, deliberately returning to manual creation or traditional techniques",
+        "15d": "Don't really care, use whatever tool works well",
+        "15e": "Resist AI, believing it threatens creators' survival, and publicly oppose it",
+        "15f": "Develop a fear of AI, worry about being replaced, and feel anxious"
+      }
+    },
+    "16": {
+      "situation": "The person is participating in an artist residency program and needs to share a studio with other artists whose creative habits and schedules are completely different. What would he/she do?",
+      "options": {
+        "16a": "Proactively call a meeting to establish shared studio rules and time slot arrangements, building order first",
+        "16b": "Proactively chat with everyone, understand their creative habits and needs, and work out a compromise together",
+        "16c": "Observe everyone's schedule patterns for a few days, and create an off-peak studio usage timetable",
+        "16d": "Treat the different artists' habits and styles as creative inspiration, try incorporating the \"collision\" into the work",
+        "16e": "Worry about not getting along with others and it affecting creative work, feel anxious every day, but don't know how to speak up",
+        "16g": "Adjust own schedule to accommodate everyone, accommodate as much as possible, and avoid conflict"
+      }
+    },
+    "17": {
+      "situation": "The person finds that long hours at the desk have caused health problems (e.g., cervical spine issues, declining vision), and the doctor advises reducing creative time. What would he/she do?",
+      "options": {
+        "17a": "Immediately upgrade the workstation — ergonomic chair, standing desk, and eye-care monitor — solving the problem at the hardware level",
+        "17b": "Systematically study the causes, create a detailed work-rest balance plan, using Pomodoro timers to strictly manage each creative session",
+        "17c": "Consult with a physical therapist and doctor in detail, create a plan for treatment alongside creation, with regular follow-ups",
+        "17d": "Cut creative output in half, but pursue higher completion quality for each piece, opening new possibilities with \"fewer but better\"",
+        "17e": "Worry that health will fail and force giving up creation, become increasingly anxious, but can't bear to reduce creative time",
+        "17f": "It's just a minor issue, every creator has some occupational ailments, create first and deal with it when it really becomes unbearable"
+      }
+    },
+    "18": {
+      "situation": "The person is asked to create for a commercial brand whose values don't fully align with their personal beliefs. What would he/she do?",
+      "options": {
+        "18a": "Decline the project, unwilling to create for a brand that doesn't align with own values",
+        "18b": "Convey positive values through the creative work in own way, trying to influence the brand",
+        "18c": "Separate work from personal values, and professionally complete the creative work",
+        "18d": "First deeply understand the brand, see if there's a misunderstanding, and then decide",
+        "18e": "Take the project for the income, but feel uncomfortable inside",
+        "18f": "Publicly refuse and issue a statement, expressing opposition to the brand's values"
+      }
+    },
+    "19": {
+      "situation": "The person has an opportunity to showcase their work in another city or on a major platform, but would need to bear significant costs. What would he/she do?",
+      "options": {
+        "19a": "Seize the opportunity, find ways to raise the money — it's a rare chance to showcase",
+        "19b": "Evaluate the cost-benefit ratio, and see if it's worth it",
+        "19c": "Look for sponsorship or crowdfunding to share the costs",
+        "19d": "Pass on this opportunity, wait until conditions are more favorable",
+        "19e": "Contact galleries, agents, or sponsors for support",
+        "19f": "Want to seize the opportunity but worry about the costs, caught in agonizing anxiety"
+      }
+    },
+    "20": {
+      "situation": "Looking back on their creative career, what does the person value most?",
+      "options": {
+        "20a": "Creating work that truly touches people's hearts, leaving a mark of one's own",
+        "20b": "Continuously pushing boundaries, exploring the infinite possibilities of art",
+        "20c": "Gaining recognition and respect, having a place in the art world",
+        "20d": "Being able to make a living from creating, enjoying creative freedom",
+        "20e": "Influencing society through art, advancing certain issues",
+        "20f": "Living a quiet life, being able to keep creating is enough, not striving for achievement"
+      }
+    }
+  },
+  "media": {
+    "1": {
+      "situation": "The person posted content that unexpectedly sparked controversy, with a large number of negative comments in the comment section. What would he/she do?",
+      "options": {
+        "1a": "Calmly analyze the points of controversy, post a sincere response explaining original intentions",
+        "1b": "Delete the controversial content and post an apology statement",
+        "1c": "Stick to own viewpoint and engage in rational discussion with commenters",
+        "1d": "Let it cool down for now, wait for the hype to pass before reassessing",
+        "1e": "Ride the wave, leverage the controversy to further amplify reach — bad press is still press",
+        "1f": "Too anxious to sleep, repeatedly refreshing the comments, affected by negative remarks for a long time"
+      }
+    },
+    "2": {
+      "situation": "The person notices their content metrics are steadily declining and follower growth has stagnated. What would he/she do?",
+      "options": {
+        "2a": "Deeply analyze the data, identify the problem, and adjust the content strategy",
+        "2b": "Try entirely new content types and styles, looking for new growth opportunities",
+        "2c": "Return to the original passion, create the content truly wanted — data isn't the only measure",
+        "2d": "Reference competitors, see what content is trending, and replicate hit formats",
+        "2e": "Think data fluctuations are normal, don't dwell on it, keep going at own pace",
+        "2f": "Vent in creator communities, ask peers how they cope with bottlenecks"
+      }
+    },
+    "3": {
+      "situation": "The person receives a brand collaboration invitation, but is unfamiliar with the product. What would he/she do?",
+      "options": {
+        "3a": "First learn about the product in depth, confirm quality before deciding whether to collaborate",
+        "3b": "Accept if the pay is right, just produce the ad content as requested",
+        "3c": "Politely decline unfamiliar products, not wanting to damage followers' trust with ads",
+        "3d": "Communicate with the brand, request to try the product first before making a decision",
+        "3e": "Directly reject all unfamiliar products — not missing this one deal anyway",
+        "3f": "Ask a knowledgeable friend to help evaluate whether the brand is reliable"
+      }
+    },
+    "4": {
+      "situation": "The person's carefully crafted content got a lukewarm response, but a casually posted piece went viral. What would he/she think?",
+      "options": {
+        "4a": "Analyze the characteristics of the viral content, find the pattern and incorporate it into future creations",
+        "4b": "Stay level-headed, virality has an element of chance, keep focusing on good content",
+        "4c": "Ride the momentum, create a series around the viral topic",
+        "4d": "Find it amusing, share the contrast with followers",
+        "4e": "Think data is inherently random anyway, don't care, just post whatever feels right",
+        "4f": "Feel frustrated yet helpless, post a status venting about own luck"
+      }
+    },
+    "5": {
+      "situation": "The person discovers someone is reposting their content on other platforms without credit. What would he/she do?",
+      "options": {
+        "5a": "File a complaint with the platform for copyright infringement, request takedown",
+        "5b": "Reach out to the person first, communicate amicably and request they add credit",
+        "5c": "Add watermarks to own content, strengthen copyright protection",
+        "5d": "Consider being reposted as a form of recognition, don't really mind",
+        "5e": "Publicly call out the reposter, mobilize followers to collectively condemn them",
+        "5f": "Seize the opportunity to create a special episode about copyright awareness, turning a bad thing into content"
+      }
+    },
+    "6": {
+      "situation": "The person receives a private message with vicious personal attacks. What would he/she do?",
+      "options": {
+        "6a": "Ignore and block, not letting negative emotions affect oneself",
+        "6b": "Screenshot and save evidence, report to authorities if necessary",
+        "6c": "Openly discuss cyberbullying in the community, calling for rational online behavior",
+        "6d": "Feel hurt but choose not to respond, let the platform handle it",
+        "6e": "Fire back angrily, letting them know I'm not to be messed with",
+        "6f": "Emotionally devastated by the vicious remarks, too afraid to check messages for days, affecting normal creative work"
+      }
+    },
+    "7": {
+      "situation": "The person is considering whether to \"ride trending topics\" to increase exposure. What would he/she do?",
+      "options": {
+        "7a": "Only ride trends relevant to own content that add value, don't follow trends mindlessly",
+        "7b": "Actively ride trends — in the traffic era, exposure is everything",
+        "7c": "Interpret the trend from own unique angle, providing differentiated content",
+        "7d": "Don't deliberately chase trends, only create content genuinely interested in",
+        "7e": "Find trending topics annoying, never pay attention to bandwagon content",
+        "7f": "Interact with followers, ask what they think of the trend before deciding whether to cover it"
+      }
+    },
+    "8": {
+      "situation": "Since becoming a content creator, the person's schedule has become increasingly irregular — late-night editing is the norm, affecting physical health and social life. What would he/she do?",
+      "options": {
+        "8a": "Set a strict schedule, fix creative work during daytime hours, stop working on time and never stay up late",
+        "8b": "Analyze own content production rhythm, batch record content in advance and stockpile drafts, creating buffer time",
+        "8c": "Hire an assistant to share the editing and operations workload, focus only on core creative work",
+        "8d": "Proactively reduce update frequency, focus energy on crafting premium content — fewer but better",
+        "8e": "Too anxious to sleep, worried about health collapsing but reluctant to give up traffic, torn over whether to take a break",
+        "8f": "Don't care, the body can handle it, keep producing more while the momentum is there"
+      }
+    },
+    "9": {
+      "situation": "The person's account suddenly gets shadowbanned by the platform for unknown reasons. What would he/she do?",
+      "options": {
+        "9a": "Calmly analyze recent content, investigate possible causes",
+        "9b": "Contact platform customer service to understand the specific reasons",
+        "9c": "Explain the situation in the follower group, maintain update frequency and wait for recovery",
+        "9d": "Start operating on other platforms simultaneously, diversifying risk",
+        "9e": "Too anxious to sleep, post a status complaining about the platform's opaque rules",
+        "9f": "Ask peers who have also been shadowbanned for advice on how they resolved it"
+      }
+    },
+    "10": {
+      "situation": "The person needs to decide whether to show their face in content — they've been anonymous until now. What would he/she choose?",
+      "options": {
+        "10a": "First assess the incremental value showing face adds to the content — if it's worth it, do it",
+        "10b": "Boldly give it a try, showing face can bring closer connection with followers",
+        "10c": "Continue staying anonymous, maintaining an air of mystery is also a style",
+        "10d": "Test it on a small scale first, see how followers react",
+        "10e": "Completely don't care, whether to show face or not is unimportant, the content itself is what matters",
+        "10f": "Talk to other creators who have shown their faces about their real experience before deciding"
+      }
+    },
+    "11": {
+      "situation": "The person is asked by followers to evaluate another creator. What would he/she do?",
+      "options": {
+        "11a": "Only evaluate the work, not the person, maintaining professionalism and respect",
+        "11b": "Frankly express own views — praise what's good, objectively point out what's not",
+        "11c": "Politely decline, not wanting to get involved in evaluating fellow creators",
+        "11d": "Deflect with humor, without giving a direct answer",
+        "11e": "Directly refuse, and express displeasure at followers making such requests",
+        "11f": "Bounce the question back to followers, asking what everyone else thinks"
+      }
+    },
+    "12": {
+      "situation": "The person notices their content style has drifted significantly from the original positioning. What would he/she think?",
+      "options": {
+        "12a": "This is a natural process of content evolution, as long as the core values remain unchanged",
+        "12b": "Re-examine own positioning, make a conscious adjustment",
+        "12c": "Go along with followers' preferences, create what they want to see",
+        "12d": "Return to the original passion, create the content initially set out to make",
+        "12e": "Don't care whether the style changes or not, as long as there's traffic, just go with the flow",
+        "12f": "Anxiously apologize to followers, feeling like letting everyone down"
+      }
+    },
+    "13": {
+      "situation": "The person is building a small team (assistant, editor, etc.) for the first time, needing to transition from solo creator to manager. What would he/she do?",
+      "options": {
+        "13a": "Proactively learn team management, establish clear workflows and division of labor",
+        "13b": "Ask peers with team management experience for their practical advice",
+        "13c": "Use collaboration tools to break down and assign tasks, visualize progress so everyone knows what to do",
+        "13d": "Try new work models like remote async collaboration or project-based partnerships, not constrained by traditional employment",
+        "13e": "Hire one person first as a trial, validate the process before gradually expanding the team",
+        "13f": "Too anxious to sleep, worried about not being able to manage the team well and letting everyone down",
+        "13g": "Don't care, let nature take its course — hired people will figure out the work themselves, no need to deliberately manage"
+      }
+    },
+    "14": {
+      "situation": "The person faces a choice: join an MCN agency for more resources, or stay independent. What would he/she choose?",
+      "options": {
+        "14a": "Carefully study the contract terms, evaluate the actual value an MCN can bring",
+        "14b": "Join the MCN, believing a professional team can help grow faster",
+        "14c": "Stay independent, not wanting to be bound by contracts — freedom is most important",
+        "14d": "Chat with peers who have already signed, understand the real situation before deciding",
+        "14e": "Don't care whether to sign or not, decide based on mood, let it be",
+        "14f": "Too anxious to sleep, agonizing over which choice is better"
+      }
+    },
+    "15": {
+      "situation": "The person finds their creative inspiration has dried up and doesn't know what content to make anymore. What would he/she do?",
+      "options": {
+        "15a": "Take a break from posting, go on vacation, experience life and gather material",
+        "15b": "Consume a large amount of peer content, looking for inspiration from it",
+        "15c": "Interact with followers, hear what they want to see",
+        "15d": "Keep posting, even if the quality drops, maintain the frequency",
+        "15e": "If inspiration is gone, it's gone — give up trying for now and lie flat for a while",
+        "15f": "Get other creators together for a brainstorming session, spark inspiration from each other"
+      }
+    },
+    "16": {
+      "situation": "The person is asked by followers to meet in person. What would he/she do?",
+      "options": {
+        "16a": "Organize a fan meetup, interact with followers in a safe and controlled environment",
+        "16b": "Politely decline a personal meeting, maintain appropriate distance between creator and audience",
+        "16c": "Meet in a public place, ensuring safety",
+        "16d": "Happy to be invited, readily agree",
+        "16e": "Directly refuse, feeling that followers asking to meet is inappropriate",
+        "16f": "Ask experienced peers for advice on precautions for in-person meetings"
+      }
+    },
+    "17": {
+      "situation": "The person finds themselves increasingly relying on data and algorithm recommendations in content creation, having lost the joy of creating. What would he/she do?",
+      "options": {
+        "17a": "Rediscover the original passion for creation, make the content truly wanted",
+        "17b": "Find a balance between data-driven decisions and creative expression",
+        "17c": "Accept the reality — being a content creator means having a data-driven mindset",
+        "17d": "Create an alt account specifically for the content truly wanting to make",
+        "17e": "Anxious and lost, post a status venting about how exhausting being a content creator is",
+        "17f": "Talk to fellow content creators about how they balance data and creativity"
+      }
+    },
+    "18": {
+      "situation": "The person wants to learn a new skill (e.g., video editing, data analysis, photography) to improve content quality, but has limited time. What would he/she do?",
+      "options": {
+        "18a": "Resolutely enroll in a systematic course, study step by step, build a solid foundation",
+        "18b": "Find a peer friend skilled in this area, ask them to mentor from scratch",
+        "18c": "Identify weak areas, use fragmented time to watch targeted tutorials and fill gaps",
+        "18d": "Learn by doing in real projects, picking up whatever skills are needed for each project",
+        "18e": "Anxious and agonizing over which skill would be most useful, unable to commit to starting",
+        "18f": "Don't care, current skill level is good enough, learning new things is too tiring — better to refine what already exists"
+      }
+    },
+    "19": {
+      "situation": "Opposing factions have emerged among the person's follower base, attacking each other and even dragging the person into it. What would he/she do?",
+      "options": {
+        "19a": "Immediately issue a statement, urging followers to discuss rationally, clearly opposing personal attacks",
+        "19b": "Listen to both sides' concerns separately, act as a bridge to mediate the conflict",
+        "19c": "Establish community rules explicitly prohibiting personal attacks, ban violators immediately",
+        "19d": "Turn the follower conflict into a discussion piece, guiding everyone toward rational thinking",
+        "19e": "Hold off on responding, wait for the hype to naturally pass, believing time will fade everything",
+        "19f": "Too anxious to check messages, feeling like failing to manage the follower community, falling into self-blame",
+        "19g": "Don't care, follower drama is normal, just watch it as entertainment, don't get involved"
+      }
+    },
+    "20": {
+      "situation": "Looking back on the content creation journey, what does the person value most?",
+      "options": {
+        "20a": "Having influenced many people through content, gained genuine connections",
+        "20b": "Having achieved self-expression, found own voice",
+        "20c": "Having gained financial independence and a free lifestyle",
+        "20d": "Continuous learning and growth, becoming a better version of oneself",
+        "20e": "Don't care about what's most valued, just take it one day at a time, haven't thought that deeply",
+        "20f": "Most value the bond with followers and friends, they're like family"
+      }
+    }
+  },
+  "teacher": {
+    "1": {
+      "situation": "The person notices that a student they are responsible for has been behaving abnormally recently, with grades/status suddenly declining significantly, and frequently zoning out or appearing depressed. What would he/she do?",
+      "options": {
+        "1a": "Talk to the student privately after class to understand the underlying reasons",
+        "1b": "Contact the parents to understand the family situation and jointly find a solution",
+        "1c": "Pay more attention to the student in daily work and interactions, giving more encouragement and opportunities",
+        "1d": "Ask the school counselor or professional to intervene and professionally assess the student's condition",
+        "1e": "Take no action for now, considering the fluctuation normal, and observe for a while",
+        "1f": "Feel very anxious, repeatedly wonder if something is wrong with their own teaching, but don't know where to start, hesitating whether to approach the student"
+      }
+    },
+    "2": {
+      "situation": "The person carefully prepared a public/demonstration/showcase lesson, but the results fell far short of expectations, with very low student engagement. What would he/she do?",
+      "options": {
+        "2a": "Review the lesson carefully afterwards, analyze the problems, and redesign the plan",
+        "2b": "Seek advice from experienced colleagues and learn their methods",
+        "2c": "Adjust mindset — one failure doesn't define everything, try harder next time",
+        "2d": "Try redesigning the content in a more interactive and engaging way",
+        "2e": "Feel frustrated and defeated, unable to let it go for a while, avoiding similar showcase opportunities",
+        "2f": "Keep replaying every detail of the class, worrying about how leaders and colleagues will judge them, unable to eat or sleep well for days"
+      }
+    },
+    "3": {
+      "situation": "The person believes an education reform/policy introduced by the school is unreasonable, but colleagues seem to have accepted it. What would he/she do?",
+      "options": {
+        "3a": "Organize their thoughts and evidence, and present well-reasoned objections at meetings",
+        "3b": "Try optimizing in their own work first, proving feasibility through practice",
+        "3c": "Follow the school's arrangement, trying to optimize during implementation",
+        "3d": "Discuss privately with trusted colleagues to gauge everyone's true opinions",
+        "3e": "Outwardly comply with the requirements but actually continue working the original way",
+        "3f": "Strongly disagree but don't dare to speak up, repeatedly torn about whether to voice their stance, worried that speaking up will offend leaders and staying silent feels oppressive"
+      }
+    },
+    "4": {
+      "situation": "The person discovers that cliques in the student group they are responsible for are excluding individual students. What would he/she do?",
+      "options": {
+        "4a": "Design team collaboration activities to break down barriers through cooperation",
+        "4b": "Talk to each side separately to understand the situation and guide everyone to respect each other",
+        "4c": "Openly discuss the importance of respect and inclusion in a group setting",
+        "4d": "Focus on the excluded student, giving more support and encouragement",
+        "4e": "Consider this a minor issue among students, not proactively intervening, letting it take its course",
+        "4f": "Very worried the situation will escalate, and afraid that improper intervention might worsen the conflict, repeatedly agonizing over how to handle it"
+      }
+    },
+    "5": {
+      "situation": "The person discovers a student cheating/plagiarizing on an exam or assignment. How would they handle it?",
+      "options": {
+        "5a": "Handle according to school rules, but talk to the student afterwards to understand the reasons and provide guidance",
+        "5b": "Handle strictly, making sure the student understands the importance of integrity",
+        "5c": "Give a warning, have the student write a self-criticism and promise not to repeat the offense",
+        "5d": "Anonymously discuss the integrity issue in a group setting, without labeling the specific student",
+        "5e": "Report to relevant leaders or departments, following established procedures",
+        "5f": "Very conflicted — afraid that strict handling will hurt the student's self-esteem, but also that leniency won't serve as a deterrent, repeatedly hesitating over the right approach"
+      }
+    },
+    "6": {
+      "situation": "The person realizes they are experiencing burnout in their teaching work and have lost patience with students. What would he/she do?",
+      "options": {
+        "6a": "Proactively seek professional psychological support, facing their burnout head-on",
+        "6b": "Try new work methods to inject freshness into the daily routine",
+        "6c": "Communicate with colleagues, sharing their work struggles and feelings",
+        "6d": "Temporarily reduce extra work, leaving room for recovery",
+        "6e": "Choose to coast, completing only basic tasks by the book, no longer pursuing breakthroughs",
+        "6f": "Fall into deep self-blame and anxiety, feeling unsuited to be a teacher anymore but not knowing what else to do, repeatedly draining themselves emotionally"
+      }
+    },
+    "7": {
+      "situation": "The person needs to counsel a student with poor behavioral habits who repeatedly fails to improve. What would he/she do?",
+      "options": {
+        "7a": "Thoroughly investigate the student's family background and upbringing to find the root causes of the behavior",
+        "7b": "Build a trust relationship with the student, gradually guiding them with patience and sincerity",
+        "7c": "Establish clear behavioral norms and reward-punishment mechanisms, strictly enforcing them",
+        "7d": "Assign the student positive responsibilities, using motivation to change behavior",
+        "7e": "Contact parents and other relevant teachers to jointly discuss strategies",
+        "7f": "Feel very defeated and powerless, repeatedly doubting their own ability, torn about whether to give up on the student"
+      }
+    },
+    "8": {
+      "situation": "The person is required to participate in an administrative task unrelated to teaching/core duties, which takes up a lot of preparation time for their main work. What would he/she do?",
+      "options": {
+        "8a": "Communicate with leadership, explaining that core duties are already saturated, and request reasonable allocation",
+        "8b": "Try their best to complete it, but improve efficiency to minimize impact on core work",
+        "8c": "Comply with the arrangement, prioritize core work, and delay the administrative task as much as possible",
+        "8d": "Coordinate with colleagues to see if they can share the burden",
+        "8e": "Directly refuse, believing this is outside the scope of an educator's responsibilities",
+        "8f": "Juggle the administrative task while worrying about failing at core duties, unable to manage either well, too anxious to sleep"
+      }
+    },
+    "9": {
+      "situation": "Among the students the person is responsible for, there is one who is very talented but has a poor attitude toward learning. What would he/she do?",
+      "options": {
+        "9a": "Discover the student's interests and use challenging content to ignite their motivation",
+        "9b": "Talk to the student individually, helping them recognize their potential",
+        "9c": "Set higher goals for the student, using moderate pressure to unlock potential",
+        "9d": "Have them take on mentoring or tutoring tasks, building responsibility through teaching",
+        "9e": "Recommend the student for competitions or club activities, giving their talent more room to flourish",
+        "9f": "Feel that talent without the right attitude is useless, and don't want to waste too much energy on an unmotivated student"
+      }
+    },
+    "10": {
+      "situation": "The person receives a complaint from a parent who believes their child has been treated unfairly or graded unreasonably. What would he/she do?",
+      "options": {
+        "10a": "Patiently listen to the parent's concerns, show relevant records and grading criteria, and resolve misunderstandings through rational communication",
+        "10b": "First self-check whether there were any oversights in their work; if yes, sincerely apologize and improve; if not, explain with reasoning",
+        "10c": "Stand by their professional judgment, believing the grading is well-founded, and not accept unreasonable accusations",
+        "10d": "Invite the grade-level coordinator or a leader to join the meeting, as a third party makes it fairer",
+        "10e": "Appropriately soothe the parent's emotions, and in practice give the student more attention and opportunities",
+        "10f": "Very nervous, worried the parent will escalate to leadership and affect them, repeatedly wondering if they actually did something wrong, torn about whether to proactively explain to leadership",
+        "10g": "Think the parent is being unreasonable, don't want to waste breath — let them complain if they want, and continue doing things the same way"
+      }
+    },
+    "11": {
+      "situation": "The person discovers a student is addicted to mobile games or the internet, seriously affecting their learning. What would he/she do?",
+      "options": {
+        "11a": "Communicate with parents, coordinating home-school efforts to manage the student's device usage",
+        "11b": "Discuss the pros and cons of electronic devices in a group setting, guiding students toward self-management",
+        "11c": "Incorporate game elements into teaching/activities, using gamification to spark learning interest",
+        "11d": "Establish strict rules for electronic device usage",
+        "11e": "Report to the school, suggesting a unified school-wide management policy",
+        "11f": "Consider this a widespread phenomenon — impossible to manage, and parents may not listen anyway, so just let it be"
+      }
+    },
+    "12": {
+      "situation": "The person is asked to try a completely new teaching/education model or method in the new semester. What would he/she do?",
+      "options": {
+        "12a": "Embrace the change positively, study the new model carefully, and integrate it with their own work style",
+        "12b": "Pilot on a small scale first, and decide whether to fully adopt after observing the results",
+        "12c": "Execute as required, gradually adjusting in practice",
+        "12d": "Discuss with colleagues and jointly explore the best way to implement it",
+        "12e": "Worry about failure, delay starting, and wait until others have mature experience before trying",
+        "12f": "Very worried about messing up and affecting student grades, repeatedly torn about whether to stick with the old method first, hesitating and not daring to try"
+      }
+    },
+    "13": {
+      "situation": "The person discovers a student showing signs of self-harm or suicidal tendencies. What would he/she do?",
+      "options": {
+        "13a": "Immediately contact the school counselor and parents, initiating crisis intervention procedures",
+        "13b": "First talk to the student privately, understanding the situation before deciding the next step",
+        "13c": "Follow the school's safety procedures, report and document, without handling it independently",
+        "13d": "Create a warm and supportive atmosphere in the group, quietly monitoring the student",
+        "13e": "Mobilize multiple resources (parents, counselor, classmates) to build a comprehensive support system",
+        "13f": "Very afraid that mishandling could lead to a tragedy, repeatedly agonizing over whether to intervene and how to do so without distressing the student, unable to sleep all night"
+      }
+    },
+    "14": {
+      "situation": "The person needs to present an educational activity (such as a public lesson, teaching research activity, or demonstration) before colleagues, with several recognized outstanding peers present. What would he/she do?",
+      "options": {
+        "14a": "Treat it as a learning opportunity, prepare diligently, and not worry about comparisons",
+        "14b": "Go all out, carefully designing the activity to show their best self",
+        "14c": "Innovate in content design, using a unique approach to differentiate",
+        "14d": "Learn from outstanding peers, proactively exchanging insights afterwards",
+        "14e": "Feel nervous and anxious, worrying about performing worse than others, repeatedly agonizing over preparation",
+        "14f": "Indifferent — it's just completing a task, good enough is fine, no need to compete with outstanding peers"
+      }
+    },
+    "15": {
+      "situation": "The person discovers that certain content in the textbook/materials being used may be outdated or inaccurate. What would he/she do?",
+      "options": {
+        "15a": "Research the latest materials, supplementing with updated and more accurate information in class/tutoring",
+        "15b": "Raise the issue in the teaching research group/department, pushing for materials to be updated",
+        "15c": "Teach according to the textbook, believing it has been reviewed and won't have problems",
+        "15d": "Remind students of the textbook's limitations during teaching, cultivating critical thinking",
+        "15e": "Feel this isn't their responsibility — just complete the teaching tasks as required",
+        "15f": "Think there might be an error but aren't sure — afraid that correcting it might teach something wrong, and not correcting it might mislead students, repeatedly torn about whether to raise it"
+      }
+    },
+    "16": {
+      "situation": "The person needs to publish papers or conduct research for professional title evaluation, but daily work is already very busy. What would he/she do?",
+      "options": {
+        "16a": "Proactively carve out dedicated blocks of time, devoting evenings and weekends to research, getting the paper written first",
+        "16b": "Inventory current work and available time, create a detailed schedule, and systematically advance research using fragmented time",
+        "16c": "Find like-minded colleagues to collaborate on research, dividing responsibilities and sharing results to reduce individual pressure",
+        "16d": "Proactively explain the title evaluation needs to the school, requesting reduced teaching hours or adjusted work arrangements to free up research time",
+        "16e": "Integrate research with daily teaching, using action research to make work and research mutually reinforcing",
+        "16f": "Feel anxious just thinking about writing papers — too drained from teaching during the day, staying up late reading materials at night but unable to write anything, repeatedly draining themselves",
+        "16g": "Feel title evaluation is too troublesome, teaching is already exhausting enough, papers can wait, don't want too much pressure"
+      }
+    },
+    "17": {
+      "situation": "The person has a fundamental disagreement with a colleague about teaching philosophy, frequently arguing during teaching research activities. What would he/she do?",
+      "options": {
+        "17a": "Proactively arrange a private conversation, honestly expressing their views while sincerely listening to the other side, striving to find common ground",
+        "17b": "Organize teaching data and student cases behind their philosophy, persuading the other with facts and evidence",
+        "17c": "Stand by their teaching philosophy, arguing forcefully in research discussions, pushing their plan forward",
+        "17d": "Try to merge the reasonable parts of both philosophies, designing a new plan that accommodates all sides",
+        "17e": "Ask the teaching research leader or school expert to mediate, using a third-party perspective to resolve the disagreement",
+        "17f": "Minimize contact with this colleague, speak less during research discussions, avoiding direct confrontation",
+        "17g": "Anxious before every research discussion, fearing another argument, and afterwards repeatedly second-guessing what they said, emotionally exhausted"
+      }
+    },
+    "18": {
+      "situation": "The person discovers two students having a heated argument during class or a group activity. What would he/she do?",
+      "options": {
+        "18a": "First let both sides calm down, then understand the situation from each separately after class, handling it fairly",
+        "18b": "Immediately intervene with stern criticism, making both sides recognize their mistakes",
+        "18c": "Use this as a teachable moment, having the whole class discuss ways to resolve conflicts",
+        "18d": "Have both sides each write an account of what happened, using writing as reflection",
+        "18e": "Get emotionally affected themselves, losing their temper and criticizing both sides on the spot",
+        "18f": "Panicked and at a loss in the moment, afterwards repeatedly second-guessing whether they handled it correctly, worrying that parents will come to complain"
+      }
+    },
+    "19": {
+      "situation": "The person reflects on their teaching career — where does the greatest sense of achievement come from?",
+      "options": {
+        "19a": "Seeing students grow and improve, becoming useful members of society",
+        "19b": "Continuously innovating in their work, developing their own professional style",
+        "19c": "Receiving recognition and respect from students, parents, and peers",
+        "19d": "Having nurtured batches of outstanding students, with former students everywhere",
+        "19e": "Continuously improving through educational research and practical innovation, influencing and inspiring more peers",
+        "19f": "No particular sense of achievement — work is just a job, complete the routine and collect the paycheck"
+      }
+    }
+  },
+  "doctor": {
+    "1": {
+      "situation": "The person faces a patient's family member who is emotionally overwhelmed and unable to accept the current test results or change in condition. What would he/she do?",
+      "options": {
+        "1a": "Explain the situation in gentle yet professional language, while providing emotional support and understanding to the family",
+        "1b": "Give the family some time to calm down, then arrange a detailed follow-up conversation",
+        "1c": "Directly inform them of the situation and next steps, building trust through professionalism",
+        "1d": "Ask other colleagues or dedicated staff to help calm the family, while continuing to treat other patients",
+        "1e": "Also feel very sad, eyes welling up, share the family's grief for a moment before resuming communication",
+        "1f": "The family's emotions make me nervous too, repeatedly worrying that poor communication might lead to complaints, words come to my lips but I hold them back",
+        "1g": "Avoid direct contact with the family, let the head nurse or other colleagues handle the communication, finish my tasks and leave quickly"
+      }
+    },
+    "2": {
+      "situation": "While on duty, multiple critically ill patients arrive at the same time, and staffing is clearly insufficient. What would he/she do?",
+      "options": {
+        "2a": "Quickly assess the urgency of each patient, prioritize by severity, and call for backup simultaneously",
+        "2b": "Stay calm and composed, handle patients one by one, ensuring each receives basic care",
+        "2c": "Coordinate team assignments, taking on the most critical case myself",
+        "2d": "Follow standard procedures while notifying the supervisor or duty manager",
+        "2e": "So panicked that my hands are fumbling, mind goes blank, barely managing but with very low efficiency",
+        "2f": "Only handle the patients I'm responsible for; others can wait until backup arrives"
+      }
+    },
+    "3": {
+      "situation": "The person discovers that the department has a tendency toward over-treatment or unreasonable billing in some workflows, but correcting it would affect the department's performance. What would he/she do?",
+      "options": {
+        "3a": "Stand by my principles and only provide services based on the patient's actual needs",
+        "3b": "Communicate fully with patients and let them decide for themselves whether they need additional services",
+        "3c": "Follow department practice as long as medical safety is ensured",
+        "3d": "Report the conflict to superiors and push for systemic improvement",
+        "3e": "Go along with the crowd — do whatever others in the department do, don't want to stand out",
+        "3f": "Deeply torn — don't want to violate principles but also afraid of offending the department, repeatedly weighing options yet unable to decide, uncomfortable even when following convention"
+      }
+    },
+    "4": {
+      "situation": "The person's own work error has caused an adverse impact on a patient. How would he/she face it?",
+      "options": {
+        "4a": "Face the error honestly, apologize to the patient and family immediately, and actively work to remedy it",
+        "4b": "Conduct an in-depth review, analyze the cause of the error, and establish prevention mechanisms to avoid recurrence",
+        "4c": "Share this case at a department meeting so everyone can learn from it",
+        "4d": "Feel very guilty inside, but try not to let it affect subsequent work",
+        "4e": "Try to avoid the patient and family, hoping time will dilute the matter, unwilling to bring it up proactively",
+        "4f": "Stay awake all night repeatedly replaying the mistake, worried about being held accountable and it affecting my promotion — work as usual but deeply anxious inside"
+      }
+    },
+    "5": {
+      "situation": "The person encounters a patient who refuses a necessary test or treatment, citing \"fear\" or \"distrust.\" What would he/she do?",
+      "options": {
+        "5a": "Explain the necessity and safety of the test or treatment in plain, accessible language to dispel their fear",
+        "5b": "Ask the patient's family to help persuade them, making a joint effort",
+        "5c": "Respect the patient's wishes, but fully inform them of the consequences of declining and get a signed acknowledgment",
+        "5d": "Find successful cases with similar situations and use facts to persuade the patient",
+        "5e": "Invite a patient who went through a similar experience and recovered successfully to share their story, using a real-life account to move them",
+        "5f": "If they won't listen, so be it — the patient signs and takes responsibility, no need to drain myself over someone else's stubbornness",
+        "5g": "Repeatedly worry that something will happen to the patient and I'll be held responsible, yet fear that pushing too hard will cause a conflict, torn inside with no idea what to do"
+      }
+    },
+    "6": {
+      "situation": "The person has been working continuously for a very long time, physically and mentally exhausted, but there are still patients who need attention. What would he/she do?",
+      "options": {
+        "6a": "With patient safety ensured, hand off to a colleague and take a short break",
+        "6b": "Push through — a medical worker's duty is to safeguard patients' health",
+        "6c": "Use coffee or other stimulants to force myself to stay focused",
+        "6d": "Report to leadership that the scheduling is unreasonable and request improvements",
+        "6e": "Accept this work intensity as the norm, just make do — lower efficiency is what it is",
+        "6f": "Push through while repeatedly worrying about making mistakes, the more exhausted the more anxious, efficiency keeps dropping but I can't stop"
+      }
+    },
+    "7": {
+      "situation": "The person notices a colleague not strictly following hand hygiene and infection control protocols before a clinical procedure. What would he/she do?",
+      "options": {
+        "7a": "Remind them immediately — infection control safety is no small matter",
+        "7b": "Remind the colleague privately to avoid embarrassing them in front of others",
+        "7c": "Discuss protocol compliance at a department meeting without targeting anyone personally",
+        "7d": "Observe quietly, and if the person corrects it later, let it go",
+        "7e": "Think that one slip-up won't cause a big problem, better not to rock the boat, so say nothing",
+        "7f": "Want to remind them but worry about damaging the colleague relationship, yet also worry about being held responsible if something goes wrong, agonize for a long time and end up doing nothing"
+      }
+    },
+    "8": {
+      "situation": "The person faces a choice: continue in frontline clinical work or transition to a management role. What would he/she do?",
+      "options": {
+        "8a": "Proactively apply for the management role, hoping to drive department development at the systemic level and impact more people",
+        "8b": "First thoroughly understand the management role's responsibilities and career path, try it out for a period before deciding",
+        "8c": "Talk extensively with experienced mentors and family, seeking advice from different perspectives before deciding",
+        "8d": "Aim to balance both clinical and management, staying on the frontline while participating in department leadership, exploring a hybrid career path",
+        "8e": "Choose to stay in clinical work — directly saving patients is why I entered this field, can't leave the ward and operating table",
+        "8f": "Torn endlessly: worried about losing clinical skills in management, yet feeling limited development staying clinical, agonizing for months without a decision, anxious to the point of insomnia",
+        "8g": "It doesn't matter — whatever leadership arranges, I'll do. It's all work, same wherever I am"
+      }
+    },
+    "9": {
+      "situation": "The person disagrees with the department director on a treatment plan — they believe there's a better approach, but the director's plan is more conservative. What would he/she do?",
+      "options": {
+        "9a": "Review the latest literature and clinical data, compile the evidence, and discuss it with the director face-to-face, using evidence to support my approach",
+        "9b": "Privately and sincerely express my views to the director, while humbly listening to their concerns, seeking common ground",
+        "9c": "Openly present my plan at a department case conference, inviting everyone to evaluate and discuss",
+        "9d": "Follow the director's conservative plan first, while closely monitoring the patient's condition and preparing an alternative, raising it if necessary",
+        "9e": "Think my plan is right but don't dare to insist, also afraid of being held responsible if the director's plan goes wrong, torn but too scared to speak up",
+        "9f": "The director is experienced, just follow their lead — why stick my neck out? Following orders is the easiest"
+      }
+    },
+    "10": {
+      "situation": "The person faces a dilemma: Plan A is better for the patient but carries higher risk, while Plan B is conservative with limited effectiveness. What would he/she do?",
+      "options": {
+        "10a": "Fully inform those involved of the pros and cons of both plans, respecting the patient/family's autonomous choice",
+        "10b": "Recommend the optimal plan based on professional judgment, using data to persuade",
+        "10c": "Discuss with department colleagues and seek consensus",
+        "10d": "Choose the safer Plan B to avoid medical disputes",
+        "10e": "Propose a third combined plan that merges the strengths of both, exploring it together with all parties involved",
+        "10f": "Weigh both options repeatedly, worried about being held responsible if I choose wrong, unable to make a decision, passing it off to superiors or the family"
+      }
+    },
+    "11": {
+      "situation": "The person has an important professional learning opportunity (training, fellowship, academic exchange), but the department is short-staffed and very busy. What would he/she do?",
+      "options": {
+        "11a": "Coordinate schedules with colleagues to try to attend — learning also benefits the work",
+        "11b": "Give up attending — patient care cannot be delayed",
+        "11c": "Learn through online means or study the materials afterward",
+        "11d": "Apply to leadership, requesting someone to cover my duties",
+        "11e": "Privately complain about the unreasonable department scheduling, working grudgingly with resentment",
+        "11f": "Want to go but afraid of burdening colleagues, yet feel it's a shame to miss, torn back and forth until the registration deadline passes, feeling even more down",
+        "11g": "It's the department's arrangement — if I can't go, so be it, there will be other opportunities. Just deal with the work at hand first"
+      }
+    },
+    "12": {
+      "situation": "The person discovers that a patient's family member has secretly offered a red envelope (cash gift) or valuable present as a token of gratitude. What would he/she do?",
+      "options": {
+        "12a": "Firmly decline, explaining medical ethics and professional integrity",
+        "12b": "Politely decline, letting them know I will do my best and no extra gesture is needed",
+        "12c": "If the family insists, accept it temporarily and hand it over to the hospital for processing afterward",
+        "12d": "Understand the family's goodwill, but clearly state it would compromise fairness",
+        "12e": "Consider it an unspoken industry norm, just accept it — everyone knows how it works",
+        "12f": "Afraid of disciplinary action if I accept, but also afraid the family will think I won't try my best if I don't, torn and unsure of the right way to handle it"
+      }
+    },
+    "13": {
+      "situation": "The person encounters a patient who has researched extensive medical information online, questions the doctor's diagnosis and treatment plan, and insists on their own judgment. What would he/she do?",
+      "options": {
+        "13a": "Patiently listen to every question the patient has, addressing each one without avoiding any challenge",
+        "13b": "Use analogies, diagrams, and other accessible methods to explain the professional judgment so the patient truly understands",
+        "13c": "Pull up relevant guidelines and literature, organize the authoritative evidence for the patient to see, letting the evidence speak",
+        "13d": "Ask a senior doctor or department director to join the conversation, leveraging team strength to resolve the disagreement",
+        "13e": "Clearly tell the patient that online information is a mixed bag, insist on the professional judgment, and proactively guide the patient toward standard treatment",
+        "13f": "Feel hurt and nervous facing the patient's questioning, worried that poor communication will lead to a dispute, words come to my lips but I swallow them back, suffering in silence",
+        "13g": "If the patient insists on their own way, let them — just get a signed acknowledgment, no need to drain myself over someone else's stubbornness"
+      }
+    },
+    "14": {
+      "situation": "The person discovers a vulnerability in the hospital's information system that could compromise patient data security. What would he/she do?",
+      "options": {
+        "14a": "Report it immediately to the IT department and supervisors, pushing for a prompt fix",
+        "14b": "Prepare a detailed problem report with a risk assessment attached",
+        "14c": "Remind colleagues in the department to be careful and do what I can to protect data",
+        "14d": "Report it through the proper channels and wait for supervisors to handle it",
+        "14e": "Think it's the IT department's business and has little to do with me, just work as usual",
+        "14f": "Worried that reporting will expose my own system usage issues, yet afraid of being held responsible if I don't report, torn and ultimately did nothing"
+      }
+    },
+    "15": {
+      "situation": "The person is publicly accused by a patient of being \"cold and uncaring.\" What would he/she do?",
+      "options": {
+        "15a": "Sincerely apologize, ask the patient what specifically dissatisfied them, and actively improve",
+        "15b": "Explain my heavy workload but commit to improving my communication style",
+        "15c": "Feel wronged but maintain professionalism, proving myself through subsequent actions",
+        "15d": "Reflect on whether work pressure really has caused me to neglect communication with patients",
+        "15e": "Defend myself on the spot, believing the patient doesn't understand how hard medical workers have it",
+        "15f": "Afterward, keep replaying the patient's words in my head, feeling more wronged and guilty by the minute, worried my reputation is suffering, unable to focus for days"
+      }
+    },
+    "16": {
+      "situation": "The person discovers that a new clinical study or updated industry guideline contradicts their past work habits or experience. What would he/she do?",
+      "options": {
+        "16a": "Carefully study the relevant research or guidelines, evaluating their reliability using scientific methods",
+        "16b": "Cautiously try it out in practice and verify through experience",
+        "16c": "Discuss with peers and hear different perspectives",
+        "16d": "Stick with my past work experience and not fully trust the new findings",
+        "16e": "Don't change my approach yet, wait for more studies to confirm before taking risks",
+        "16f": "The conflict between the new guidelines and my experience makes me very uneasy, yet I don't dare change hastily, torn for a long time without reaching a conclusion"
+      }
+    },
+    "17": {
+      "situation": "One of the person's patients wants to give up treatment or necessary care due to financial hardship. What would he/she do?",
+      "options": {
+        "17a": "Help the patient learn about insurance policies, charitable assistance, and other channels to reduce the financial burden as much as possible",
+        "17b": "Choose a more cost-effective plan while ensuring effectiveness",
+        "17c": "Respect the patient's choice, but clearly explain the consequences of giving up care",
+        "17d": "Rally department colleagues to brainstorm ways to help the patient",
+        "17e": "Feel very sad and regretful about the patient's situation, but powerless to help, only able to sigh",
+        "17f": "If the patient gives up, so be it — I've done my part. I can't solve everyone's financial problems, just write the orders and follow procedure as usual"
+      }
+    },
+    "18": {
+      "situation": "The person's department is implementing a new scheduling system, but most colleagues oppose it. What would he/she do?",
+      "options": {
+        "18a": "Understand everyone's concerns and try to propose a compromise plan",
+        "18b": "Express my opinion at the department meeting and rally support",
+        "18c": "Go along with the arrangement, follow the crowd",
+        "18d": "Analyze the pros and cons of the new system, letting data speak",
+        "18e": "Don't express an opinion, just do whatever leadership arranges, go with the flow",
+        "18f": "Don't want to openly oppose and offend leadership, yet full of anxiety about the new system, complain to colleagues privately but don't dare speak up officially"
+      }
+    },
+    "19": {
+      "situation": "The person's hospital faces a sudden public health emergency or seasonal surge in patient volume, with sharply increased workload and additional health risks. How would he/she face it?",
+      "options": {
+        "19a": "Stay at my post, follow protective measures, and support my colleagues",
+        "19b": "Do my best to treat patients while protecting myself",
+        "19c": "Keep in touch with family and seek emotional support",
+        "19d": "Treat each day as a new challenge, sustaining myself with professional dedication",
+        "19e": "Deeply fearful inside, thought about resigning or taking leave, but ultimately gritted my teeth and went in",
+        "19f": "Show up when scheduled — can't hide anyway. Do what I can, don't proactively take on extra"
+      }
+    },
+    "20": {
+      "situation": "Looking back on their medical career, what does the person value most?",
+      "options": {
+        "20a": "Helping countless patients and seeing them recover or improve",
+        "20b": "Continuously honing my expertise and becoming a trusted medical professional",
+        "20c": "Driving improvements in workflows that benefited more patients",
+        "20d": "Maintaining my healer's compassion and never violating my professional integrity",
+        "20e": "Making contributions in mentoring and passing on knowledge, training the next generation of medical professionals",
+        "20f": "Honestly nothing in particular — just getting off work on time and avoiding trouble is enough, this job is just a paycheck"
+      }
+    }
+  }
+}

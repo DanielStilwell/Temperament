@@ -112,12 +112,14 @@ export default function AssessmentPage() {
 
         <ProgressBar current={currentIndex} total={scenarios.length} />
 
-        <ScenarioCard situation={scenario.situation} index={currentIndex} />
+        <ScenarioCard profession={profession || 'default'} scenarioId={scenario.id} index={currentIndex} />
 
         <OptionList
           options={scenario.options}
           selectedOptionIds={selectedOptionIds}
           customText={customText}
+          profession={profession || 'default'}
+          scenarioId={scenario.id}
           onSelect={handleSelect}
           onCustomSelect={handleCustomSelect}
         />

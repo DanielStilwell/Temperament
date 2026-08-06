@@ -1,0 +1,1970 @@
+{
+  "default": {
+    "1": {
+      "situation": "En una reunión de equipo, la persona observada descubre una falla obvia en la propuesta de un colega, pero ese colega es un miembro con más antigüedad en el equipo. ¿Qué haría la persona observada en esta situación?",
+      "options": {
+        "1a": "Señalar el problema con tacto en el momento, y presentar sugerencias de mejora concretas",
+        "1b": "Señalar el problema directamente, considerando que se trata del asunto y no de la persona, priorizando la eficiencia",
+        "1c": "Hablar con el colega en privado después de la reunión, para evitar avergonzarlo frente a los demás",
+        "1d": "Primero observar las reacciones de los demás; si nadie lo menciona, tampoco decir nada"
+      }
+    },
+    "2": {
+      "situation": "La persona observada enfrenta un proyecto urgente: solo quedan dos días para la entrega, pero aún queda mucho trabajo por completar. ¿Qué haría?",
+      "options": {
+        "2a": "Elaborar rápidamente un plan, establecer prioridades y concentrarse en completar la parte central",
+        "2b": "Buscar activamente la ayuda del equipo y organizar a todos para compartir las tareas",
+        "2c": "Analizar con calma qué se puede simplificar y usar soluciones alternativas para asegurar el cumplimiento del objetivo central",
+        "2d": "Trabajar horas extra para completarlo solo, intentando no molestar a los demás"
+      }
+    },
+    "3": {
+      "situation": "La persona observada se encuentra en una reunión social, rodeada principalmente de desconocidos. ¿Cómo suele comportarse?",
+      "options": {
+        "3a": "Acercarse a conversar con iniciativa y integrarse rápidamente en diferentes círculos de charla",
+        "3b": "Buscar a una o dos personas que parezcan interesantes para conversar en profundidad, sin gustar de las charlas superficiales",
+        "3c": "Quedarse observando a un lado, esperando el momento adecuado para unirse a la conversación",
+        "3d": "Quedarse con amigos conocidos o ayudar con tareas de organización"
+      }
+    },
+    "4": {
+      "situation": "El proyecto que la persona observada lidera ha fracasado y debe informar las razones a sus superiores. ¿Cuál es su reacción?",
+      "options": {
+        "4a": "Analizar con honestidad las razones del fracaso, asumir su responsabilidad y, al mismo tiempo, proponer un plan de mejora",
+        "4b": "Repasar detalladamente todo el proceso y explicar con datos y hechos dónde estuvieron los problemas",
+        "4c": "Destacar los factores externos incontrolables y explicar que el equipo ya hizo todo lo posible",
+        "4d": "Aunque esté frustrada, ajustar rápidamente su mentalidad y empezar a pensar en cómo remediarlo"
+      }
+    },
+    "5": {
+      "situation": "La persona observada ve a alguien comportándose de forma incivilizada en un espacio público (como colarse o tirar basura). ¿Qué suele hacer?",
+      "options": {
+        "5a": "Acercarse directamente y recordarle al otro con educación",
+        "5b": "Aunque se sienta incómoda, decide no intervenir para evitar conflictos",
+        "5c": "Expresar su descontento con la mirada o los gestos, esperando que el otro se dé cuenta",
+        "5d": "Recoger la basura en silencio o hacer lo correcto, dando ejemplo con sus actos"
+      }
+    },
+    "6": {
+      "situation": "La persona observada necesita aprender una habilidad totalmente nueva para adaptarse a los cambios en el trabajo. ¿Cuál es su forma de aprender más cercana?",
+      "options": {
+        "6a": "Inscribirse en un curso o asistir a una formación, prefiere el aprendizaje sistemático con guía de un instructor",
+        "6b": "Empezar a practicar directamente, aprender haciendo y explorar en la práctica",
+        "6c": "Buscar libros y materiales relacionados e investigar por su cuenta para comprender los principios",
+        "6d": "Conversar y consultar con colegas del sector, aprender a través del debate y el intercambio"
+      }
+    },
+    "7": {
+      "situation": "Un amigo le cuenta a la persona observada un problema que lo ha estado preocupando durante mucho tiempo. ¿Cómo suele responder?",
+      "options": {
+        "7a": "Escuchar con atención, primero empatizar con los sentimientos del otro y luego analizar el problema juntos",
+        "7b": "Dar directamente soluciones y consejos para ayudar al otro a resolver el problema rápidamente",
+        "7c": "Usar el humor para desviar la atención del otro y animarlo",
+        "7d": "Compartir sus propias experiencias y sentimientos similares para que el otro sepa que no está solo"
+      }
+    },
+    "8": {
+      "situation": "En el trabajo en equipo surge una discrepancia de opiniones y cada parte defiende su postura. ¿Cómo manejaría la situación la persona observada?",
+      "options": {
+        "8a": "Actuar como mediador, ayudar a ambas partes a encontrar puntos en común y una solución intermedia",
+        "8b": "Mantener su idea y convencer al otro con lógica y datos",
+        "8c": "Retroceder un paso primero, dejar que todos se calmen y discutirlo más tarde",
+        "8d": "Analizar uno por uno los pros y los contras de cada propuesta y dejar que los datos y los hechos hablen"
+      }
+    },
+    "9": {
+      "situation": "La persona observada obtiene unos días de vacaciones inesperados, totalmente libres para organizar. ¿Cómo es más probable que los pase?",
+      "options": {
+        "9a": "Salir con amigos, organizar todo tipo de actividades sociales y reuniones",
+        "9b": "Asignarse un proyecto desafiante, como aprender una habilidad nueva o cumplir algún objetivo",
+        "9c": "Descansar bien en casa, leer, ver películas y disfrutar del tiempo a solas",
+        "9d": "Viajar a un lugar desconocido y explorar cosas nuevas"
+      }
+    },
+    "10": {
+      "situation": "La persona observada descubre que un colega está usando un método de trabajo claramente ineficiente. ¿Qué haría?",
+      "options": {
+        "10a": "Compartir proactivamente su propio método eficiente y enseñar con paciencia al otro cómo usarlo",
+        "10b": "Decirle directamente al otro que existe un mejor método y sugerirle que mejore",
+        "10c": "Observar primero si el otro está dispuesto a aceptar sugerencias antes de decidir si hablar",
+        "10d": "No intervenir, cada persona tiene su propia forma de trabajar"
+      }
+    },
+    "11": {
+      "situation": "Al tomar decisiones importantes, ¿hacia qué estilo tiende la persona observada?",
+      "options": {
+        "11a": "Confiar en la intuición y la primera impresión, creer en el propio juicio",
+        "11b": "Recopilar mucha información y respaldar la decisión con datos y análisis",
+        "11c": "Consultar ampliamente las opiniones de otros y decidir tras integrar las sugerencias de todas las partes",
+        "11d": "Hacer una lista de pros y contras y elegir de forma racional tras sopesar todos los factores"
+      }
+    },
+    "12": {
+      "situation": "A la persona observada le piden de improvisto que dé un discurso espontáneo en público. ¿Cuál es su reacción?",
+      "options": {
+        "12a": "Aceptar con gusto, ya que considera que es una buena oportunidad para darse a conocer",
+        "12b": "Aunque esté nerviosa, organiza rápidamente las ideas y se expresa de forma estructurada",
+        "12c": "Se siente muy nerviosa y necesita algo de tiempo para prepararse antes de empezar",
+        "12d": "Empieza de forma relajada y casual y completa el discurso en estilo conversacional"
+      }
+    },
+    "13": {
+      "situation": "La persona observada se enfrenta a un problema complejo y no encuentra solución por el momento. ¿Qué haría?",
+      "options": {
+        "13a": "Dejarlo temporalmente, hacer otra cosa y esperar que la inspiración surja por sí sola",
+        "13b": "Probar con perseverancia distintos métodos, sin rendirse hasta alcanzar el objetivo",
+        "13c": "Descomponer el problema en partes más pequeñas y analizarlas y resolverlas una por una",
+        "13d": "Buscar a alguien con experiencia para discutirlo y generar ideas conjuntamente"
+      }
+    },
+    "14": {
+      "situation": "Cuando la persona observada se siente bajo mucha presión, ¿cómo suele regularse?",
+      "options": {
+        "14a": "Liberar la presión a través del ejercicio o actividades al aire libre",
+        "14b": "Conversar con amigos y desahogarse, expresar las emociones verbalmente",
+        "14c": "Quedarse a solas en silencio, escuchar música, meditar o escribir un diario",
+        "14d": "Convertir la presión en motivación y concentrarse aún más en el trabajo"
+      }
+    },
+    "15": {
+      "situation": "La persona observada nota que un nuevo miembro del equipo se siente fuera de lugar y no se integra bien en el grupo. ¿Qué haría?",
+      "options": {
+        "15a": "Acercarse proactivamente y ayudarle a integrarse en las actividades y conversaciones del equipo",
+        "15b": "Observar en silencio y brindar ayuda y ánimo en el momento adecuado",
+        "15c": "Incluirlo deliberadamente en las actividades del equipo para crear oportunidades de integración",
+        "15d": "Considerar que cada persona tiene su propio ritmo y darle tiempo y espacio"
+      }
+    },
+    "16": {
+      "situation": "La persona observada está trabajando en un proyecto creativo pero se ha quedado sin inspiración. ¿Cómo lo afrontaría?",
+      "options": {
+        "16a": "Exponerse a contenidos de áreas totalmente diferentes para buscar inspiración interdisciplinaria",
+        "16b": "Hacer una lluvia de ideas con el equipo para generar nuevas ideas",
+        "16c": "Estudiar casos de éxito, analizar patrones e innovar sobre esa base",
+        "16d": "Ejercer cierta presión sobre sí misma y fijar una fecha límite para forzarse a producir"
+      }
+    },
+    "17": {
+      "situation": "La persona observada ha tenido una discrepancia grave con un amigo íntimo y la relación se ha tensado. ¿Cómo manejaría la situación?",
+      "options": {
+        "17a": "Buscar proactivamente al otro para conversar, expresar con sinceridad sus sentimientos y escuchar al otro",
+        "17b": "Dar a ambos algo de tiempo para calmarse y abordarlo cuando las emociones se hayan calmado",
+        "17c": "Mantener su postura, considerando que el tiempo demostrará quién tiene razón",
+        "17d": "Reflexionar a fondo sobre si tiene parte de culpa e intentar comprender desde la perspectiva del otro"
+      }
+    },
+    "18": {
+      "situation": "La persona observada recibe varias tareas a la vez, todas con poco tiempo de entrega. ¿Cómo las organizaría?",
+      "options": {
+        "18a": "Evaluar rápidamente la importancia y la urgencia de cada tarea y establecer prioridades",
+        "18b": "Hacer primero la que mejor domina, completar una parte rápido para ganar sensación de logro",
+        "18c": "Hacer primero la más difícil, aprovechar que tiene la mejor energía para superar el reto",
+        "18d": "Repartir las tareas entre el equipo, aprovechando las fortalezas de cada uno para completarlas en conjunto"
+      }
+    },
+    "19": {
+      "situation": "En un día en que la persona observada se siente desanimada, ¿qué preferiría que hicieran las personas a su alrededor?",
+      "options": {
+        "19a": "Llevarla a hacer algo divertido para distraerla",
+        "19b": "Acompañarla en silencio, sin necesidad de hablar demasiado",
+        "19c": "Ayudarle a analizar el problema y darle consejos prácticos y orientación",
+        "19d": "Escuchar con paciencia sus sentimientos y brindar comprensión y validación"
+      }
+    },
+    "20": {
+      "situation": "Al repasar el último año, ¿qué considera la persona observada que ha sido su mayor crecimiento?",
+      "options": {
+        "20a": "Haber conocido a más personas interesantes y haber ampliado su círculo social y de contactos",
+        "20b": "Haber cumplido varios objetivos importantes y haber mejorado sus capacidades de forma sustancial",
+        "20c": "Haberse conocido mejor a sí misma y sentirse más serena y estable por dentro",
+        "20d": "Haber aprendido a manejar mejor los problemas complejos y haber dado un salto en su capacidad de pensamiento"
+      }
+    }
+  },
+  "service": {
+    "1": {
+      "situation": "Un cliente está muy insatisfecho con la actitud del servicio y se está quejando en voz alta en el lobby. ¿Qué haría la persona?",
+      "options": {
+        "1a": "Acercarse inmediatamente al cliente para calmarlo, escuchar con paciencia y disculparse, y prometer resolver el problema lo antes posible",
+        "1b": "Invitar al cliente a una zona tranquila, revisar los detalles del problema uno por uno y ofrecer una solución clara",
+        "1c": "Notificar de inmediato a un supervisor para que lo maneje y asistir tomando notas al margen",
+        "1d": "Pedirle al cliente que se calme primero, explicar con firmeza la política de servicio y seguir el procedimiento estándar",
+        "1e": "Considerar que el cliente está siendo irracional, dejarse llevar emocionalmente y empezar a discutir con él",
+        "1f": "Fingir no darse cuenta, evitar la situación y dejar que otros colegas se encarguen"
+      }
+    },
+    "2": {
+      "situation": "Durante una temporada pico de festivos, la tienda tiene personal insuficiente y los clientes forman largas colas. ¿Qué haría la persona?",
+      "options": {
+        "2a": "Coordinar proactivamente entre puestos, optimizar los flujos de trabajo y desempeñar varios roles a la vez",
+        "2b": "Acelerar la propia eficiencia laboral mientras consuela a los clientes en espera",
+        "2c": "Mantener la calma y seguir el procedimiento establecido paso a paso, sin dejar que el apuro altere el ritmo",
+        "2d": "Anticiparse al pico, organizar proactivamente los turnos del personal y preparar suministros",
+        "2e": "Considerar que los periodos pico son inevitables de todos modos, seguir su propio ritmo y no preocuparse demasiado",
+        "2f": "Contactar con urgencia a otros departamentos o tiendas cercanas para solicitar apoyo temporal de personal"
+      }
+    },
+    "3": {
+      "situation": "Un cliente habitual hace una solicitud adicional fuera del alcance del servicio. Es muy amable, pero la solicitud claramente no encaja dentro de la política. ¿Qué haría la persona?",
+      "options": {
+        "3a": "Explicar la política con tacto y, al mismo tiempo, ofrecer algunas soluciones alternativas al alcance de sus posibilidades",
+        "3b": "Mostrar flexibilidad dentro de límites razonables e intentar satisfacer las necesidades del cliente en lo posible",
+        "3c": "Seguir estrictamente la política y explicar al cliente la importancia de las normas",
+        "3d": "Preguntar al supervisor si hay algún margen de flexibilidad en la política",
+        "3e": "Considerar que los clientes habituales son difíciles de conseguir, complacerlos en secreto esta vez y recordarles que no lo pidan de nuevo",
+        "3f": "No encargarse del asunto, ignorar la solicitud y no involucrarse"
+      }
+    },
+    "4": {
+      "situation": "Un colega ha trabajado horas extra de forma consecutiva y está visiblemente desanimado, con un rendimiento laboral claramente en declive. ¿Qué haría la persona?",
+      "options": {
+        "4a": "Compartir proactivamente parte de la carga de trabajo y buscar una oportunidad para conversar y animarlo",
+        "4b": "Sugerir al colega que hable con el supervisor sobre redistribuir la carga de trabajo",
+        "4c": "Estar atento a él en silencio y estar listo para echar una mano cuando necesite ayuda",
+        "4d": "Organizar al equipo para ayudar juntos, fomentando un ambiente de apoyo grupal",
+        "4e": "Cada uno tiene sus propios problemas; solo concentrarse en hacer bien el propio trabajo",
+        "4f": "Considerar que el ánimo del colega afectará al equipo, así que reportar directamente al supervisor para ajustar su horario"
+      }
+    },
+    "5": {
+      "situation": "La persona nota que un colega nuevo comete errores repetidos en el proceso de trabajo, lo que afecta la eficiencia general. ¿Qué haría?",
+      "options": {
+        "5a": "Guiarlo con paciencia en privado, recorriendo con él el proceso correcto paso a paso",
+        "5b": "Señalar el problema directamente, explicar las consecuencias de los errores y exigir corrección inmediata",
+        "5c": "Crear una guía de operación detallada y compartirla con el equipo para evitar problemas similares",
+        "5d": "Recordar con suavidad a todos los estándares del proceso en una reunión de equipo sin señalar a nadie",
+        "5e": "Considerar que corregir a los recién llegados es responsabilidad de otro y no involucrarse",
+        "5f": "Reportar directamente al supervisor y dejar que la dirección dé seguimiento al progreso del recién llegado"
+      }
+    },
+    "6": {
+      "situation": "El área de servicio de la que se encarga la persona recibió una mala reseña, pero en realidad no fue culpa suya. ¿Qué haría?",
+      "options": {
+        "6a": "Contactar proactivamente al cliente para entender la situación y comunicarse con sinceridad para que cambie la reseña",
+        "6b": "Explicar la situación real al supervisor y aportar pruebas de que no fue su culpa",
+        "6c": "Aceptarlo a pesar de sentirse injustamente tratado y compensarlo con un mejor desempeño en el trabajo futuro",
+        "6d": "Analizar las razones detrás de la mala reseña y pensar en cómo mejorar el proceso de servicio",
+        "6e": "Sentirse muy injustamente tratado, desahogarse con los colegas, pero no tomar ninguna medida",
+        "6f": "Pensar que una mala reseña no importa mucho y no tomarlo en serio"
+      }
+    },
+    "7": {
+      "situation": "La persona recibe solicitudes de varios clientes al mismo tiempo y está claramente desbordada. ¿Qué haría?",
+      "options": {
+        "7a": "Evaluar rápidamente las prioridades, atender primero las urgentes y explicar y consolar al resto de los clientes",
+        "7b": "Sonreír y pedir a los clientes que esperen un momento, acelerar y atenderlos uno por uno",
+        "7c": "Atenderlos por orden, sin prisas, asegurando no comprometer la calidad de cada servicio",
+        "7d": "Pedir inmediatamente apoyo a un colega y distribuir las tareas de forma razonable",
+        "7e": "Ponerse nerviosa y ansiosa, desconcertarse, y cuanto más ocupada, más propensa a errores",
+        "7f": "Sentir que no puede hacer frente, retirarse a la trastienda para tomar aire primero"
+      }
+    },
+    "8": {
+      "situation": "La persona nota un riesgo de seguridad en la tienda (por ejemplo, suelo mojado sin cartel de advertencia). ¿Qué haría?",
+      "options": {
+        "8a": "Dejar inmediatamente el trabajo actual, ocuparse primero del riesgo de seguridad y garantizar la seguridad del cliente",
+        "8b": "Colocar un cartel de advertencia y seguir trabajando, mientras recuerda a los colegas que tengan cuidado",
+        "8c": "Tomar fotos, recopilar sugerencias de mejora y presentarlas a la dirección",
+        "8d": "Resolverlo de inmediato y reportar al supervisor, sugiriendo un mecanismo de inspección periódica",
+        "8e": "Considerar que no es su responsabilidad y dejar que otros se encarguen",
+        "8f": "Recordar en voz alta a los clientes cercanos que tengan cuidado y alejarse primero de la zona de riesgo"
+      }
+    },
+    "9": {
+      "situation": "La persona repite el mismo proceso de trabajo todos los días, se siente aburrida y desganada, y va perdiendo entusiasmo gradualmente. ¿Qué haría?",
+      "options": {
+        "9a": "Hablar proactivamente con el supervisor sobre participar en nuevos proyectos o asumir trabajo más desafiante",
+        "9b": "Reexaminar los detalles del trabajo, encontrar aspectos que se puedan optimizar en la repetición y fijarse pequeñas metas",
+        "9c": "Interactuar más con los colegas, animarse mutuamente y hacer el ambiente de trabajo más ligero",
+        "9d": "Aprovechar los descansos laborales para aprender nuevas habilidades o conocimientos y prepararse para el desarrollo futuro",
+        "9e": "Sentirse cada vez más confundida, dudar de si este trabajo es el adecuado y mostrar un claro declive en el rendimiento",
+        "9f": "Es que hay tanto trabajo cada día, hacerlo y ya está, no complicarse las cosas",
+        "9g": "Ajustar el horario y la mentalidad, decirse a sí misma que el trabajo es a largo plazo y que la perseverancia es lo más importante"
+      }
+    },
+    "10": {
+      "situation": "La persona descubre que, a pesar de trabajar duro, la oportunidad de ascenso fue para otra persona. ¿Qué pensaría y haría?",
+      "options": {
+        "10a": "Hablar proactivamente con el supervisor para entender la brecha y elaborar un plan de mejora",
+        "10b": "Aunque decepcionada, no dejar que afecte el trabajo y seguir esforzándose",
+        "10c": "Conversar con los colegas, conocer sus perspectivas y ajustar su propia mentalidad",
+        "10d": "Reflexionar sobre sus propias carencias y considerar si hay un lugar donde encaje mejor",
+        "10e": "Empezar a considerar irse, sintiendo que no hay espacio para crecer aquí",
+        "10f": "Volverarse ansiosa y autocompasiva, sentirse incapaz de nada y mostrar un claro declive en el rendimiento laboral",
+        "10g": "No le importa demasiado, solo seguir pasando los días sin más"
+      }
+    },
+    "11": {
+      "situation": "La persona nota que un cliente habitual parece desanimado hoy, bastante diferente de lo habitual. ¿Qué haría?",
+      "options": {
+        "11a": "Acercarse proactivamente a saludarlo y usar un servicio cálido para alegrarle un poco el día",
+        "11b": "Añadir más sonrisas y pequeños gestos atentos en el servicio, sin mencionarlo deliberadamente",
+        "11c": "Seguir el procedimiento de servicio estándar, sin involucrarse demasiado en los asuntos personales del cliente",
+        "11d": "En un momento oportuno, preguntar con suavidad cómo está y ofrecer algo de apoyo",
+        "11e": "Considerar que el estado de ánimo del cliente es asunto suyo y no intervenir",
+        "11f": "Dejarse afectar por las emociones del otro y terminar de mal humor también"
+      }
+    },
+    "12": {
+      "situation": "El establecimiento de servicio donde trabaja la persona está a punto de introducir un nuevo sistema que requiere aprender procedimientos operativos totalmente nuevos. ¿Qué haría?",
+      "options": {
+        "12a": "Aprender proactivamente por adelantado y ser la primera persona del equipo en dominar el nuevo sistema",
+        "12b": "Asistir a la formación con seriedad, tomar notas y aprender según el manual",
+        "12c": "Estudiar junto con los colegas, ayudarse mutuamente y progresar juntos",
+        "12d": "Primero observar la lógica del nuevo sistema y comprender el diseño antes de empezar a usarlo",
+        "12e": "Resistirse al nuevo sistema, considerar que el anterior era mejor y responder de forma pasiva",
+        "12f": "Posponer el aprendizaje hasta el último minuto, procrastinar lo máximo posible y salir del paso como pueda"
+      }
+    },
+    "13": {
+      "situation": "La persona ve a un cliente mayor con aspecto confundido y perdido en la tienda. ¿Qué haría?",
+      "options": {
+        "13a": "Acercarse proactivamente y preguntar si necesita ayuda, acompañándolo con paciencia durante todo el proceso",
+        "13b": "Ayudarle a entender usando un lenguaje sencillo y claro y con letras más grandes",
+        "13c": "Guiarlo a una zona de asientos y luego atender sus necesidades una por una",
+        "13d": "Contactar con su familia o acompañante para asegurarse de que alguien lo está cuidando",
+        "13e": "Esperar a que el cliente pida ayuda activamente antes de acercarse, sin querer entrometerse",
+        "13f": "Sentir que no es buena manejando este tipo de situación y llamar a otro colega para que lo atienda"
+      }
+    },
+    "14": {
+      "situation": "La persona y su compañero de turno no trabajan bien juntos y suelen tener problemas en el traspaso del servicio, lo que afecta la experiencia del cliente. ¿Qué haría?",
+      "options": {
+        "14a": "Conversar de forma abierta y sincera con el compañero, aclarando las responsabilidades y los límites de cada uno",
+        "14b": "Mapear juntos todo el proceso de servicio, identificar los puntos críticos del traspaso y crear pautas de coordinación estandarizadas",
+        "14c": "Pedir al supervisor que coordine y que un tercero ayude a organizar la colaboración",
+        "14d": "Asumir proactivamente más trabajo y cubrir los huecos para evitar que los errores afecten a los clientes",
+        "14e": "Diseñar un conjunto sencillo de señales o claves de traspaso para mejorar la eficiencia de la coordinación",
+        "14f": "Considerar que no vale la pena el esfuerzo y simplemente aguantar la situación",
+        "14g": "Cada uno hace lo suyo; si hay algún problema, se arregla sobre la marcha"
+      }
+    },
+    "15": {
+      "situation": "La persona es asignada para tutorizar a un nuevo empleado, pero su propia carga de trabajo ya está al límite. ¿Qué haría?",
+      "options": {
+        "15a": "Crear un plan de tutoría, asignar el tiempo de forma razonable y tratar la tutoría como una oportunidad de crecimiento",
+        "15b": "Hacer que el recién llegado observe y aprenda siguiéndola y dar explicaciones durante los ratos libres",
+        "15c": "Hacer que el recién llegado se familiarice primero con lo básico y dar guía sistemática tras terminar el propio trabajo",
+        "15d": "Comunicarse con el supervisor, explicar la situación y solicitar un ajuste de la carga de trabajo",
+        "15e": "Cumplir el trámite de la tutoría y concentrar toda la energía en el propio trabajo",
+        "15f": "Dejar que el recién llegado se las arregle solo y que acuda a preguntar si tiene dudas"
+      }
+    },
+    "16": {
+      "situation": "La persona nota que un colega cometió un pequeño error en el trabajo. Aunque ningún cliente ni supervisor lo ha notado todavía, podría afectar al servicio posterior. ¿Qué haría?",
+      "options": {
+        "16a": "Recordárselo al colega en privado para que corrija el error por sí mismo",
+        "16b": "Señalarlo de inmediato y ayudar a corregirlo, asegurando que el servicio no se vea afectado",
+        "16c": "Documentar este caso para revisión del equipo y evitar errores similares",
+        "16d": "Ayudar en silencio a corregir el error del colega sin decirle nada para que no se sienta mal",
+        "16e": "Considerar que menos problemas es mejor y fingir no haberlo visto",
+        "16f": "Señalar el error del colega delante de los demás para que todos aprendan la lección"
+      }
+    },
+    "17": {
+      "situation": "La persona tiene una buena idea que podría mejorar el rendimiento, pero requiere romper el proceso existente. ¿Qué haría?",
+      "options": {
+        "17a": "Hacer primero una prueba a pequeña escala y promoverla tras demostrar su eficacia con datos",
+        "17b": "Escribir una propuesta detallada y usar datos y lógica para convencer a la dirección",
+        "17c": "Compartirla con entusiasmo en una reunión de equipo e impulsar a todos a probarla juntos",
+        "17d": "Considerar que el proceso existente tiene sus razones y limitarse a hacer bien el propio trabajo primero",
+        "17e": "Considerar que innovar es demasiado problema, solo hacer lo que pide el jefe y no complicarse",
+        "17f": "Hacerlo sin importar el proceso, dejar que los resultados hablen y reportar después"
+      }
+    },
+    "18": {
+      "situation": "La persona nota que está surgiendo un nuevo modelo de servicio en el sector (por ejemplo, autoservicio inteligente, servicios en línea) que podría afectar a su puesto. ¿Qué haría?",
+      "options": {
+        "18a": "Aprender proactivamente los conocimientos y habilidades relacionados con el nuevo modelo para no quedarse atrás",
+        "18b": "Estudiar a fondo las deficiencias del nuevo modelo y encontrar las ventajas diferenciadas del servicio tradicional",
+        "18c": "Tras organizar sus ideas, sugerir a la dirección combinar el nuevo modelo con el servicio tradicional",
+        "18d": "Observar primero qué hacen los competidores y actuar cuando la tendencia del sector esté más clara",
+        "18e": "Pensar en cómo convertir el nuevo modelo en una oportunidad y proponer proactivamente un plan de mejora del servicio",
+        "18f": "Preocuparse por ser despedida y perder el trabajo, volverse ansiosa y que el rendimiento laboral disminuya",
+        "18g": "No poder hacer nada al respecto, solo dejar que las cosas sigan su curso"
+      }
+    },
+    "19": {
+      "situation": "La persona descubre que un competidor ha lanzado un servicio similar pero más barato. ¿Qué pensaría y haría?",
+      "options": {
+        "19a": "Estudiar a fondo los detalles del servicio del competidor e identificar las propias ventajas y áreas de mejora",
+        "19b": "Mejorar los detalles del servicio y retener a los clientes con calidad y experiencia",
+        "19c": "Reportar proactivamente la inteligencia de mercado a la dirección y sugerir un ajuste de estrategia",
+        "19d": "Hacer una lluvia de ideas con el equipo para encontrar aspectos diferenciados del servicio",
+        "19e": "Considerar que esto no es algo que uno pueda cambiar y solo hacer bien el propio trabajo",
+        "19f": "Preocuparse de que el descenso del rendimiento afecte a los ingresos, volverse ansiosa e incapaz de concentrarse en el trabajo"
+      }
+    },
+    "20": {
+      "situation": "La persona reflexiona sobre su carrera en el sector servicios. ¿Qué es lo más importante para ella?",
+      "options": {
+        "20a": "Crear conexiones genuinas con los clientes y ver sus sonrisas de satisfacción",
+        "20b": "Crecer continuamente en el rol, avanzando desde la primera línea hasta la gestión",
+        "20c": "Ingresos estables y una vida regular, simplemente hacer bien el trabajo",
+        "20d": "Encontrar aspectos del servicio que se puedan mejorar y optimizar continuamente la experiencia del servicio",
+        "20e": "No haber pensado mucho en el tema, tener un trabajo que pague las cuentas es suficiente",
+        "20f": "Encontrar disfrute en el trabajo y llevarse bien con los colegas es lo más importante"
+      }
+    }
+  },
+  "student": {
+    "1": {
+      "situation": "Se acercan varios exámenes importantes y el tiempo apremia. ¿Cómo organizaría la persona su repaso?",
+      "options": {
+        "1a": "Crear un horario de repaso detallado, asignar el tiempo por prioridades y seguirlo estrictamente",
+        "1b": "Formar un grupo de estudio con compañeros y explicarse mutuamente los conceptos clave",
+        "1c": "Tranquilizarse, buscar un lugar silencioso y repasar de forma independiente y en profundidad",
+        "1d": "Sin demasiado estrés, repasar de forma casual: abrir por la página que sea, sin preparación especial",
+        "1e": "Pedir proactivamente a los profesores o a los compañeros con mejores notas consejos de repaso y puntos clave",
+        "1f": "Ansiosa e inquieta, preocuparse repetidamente de no terminar el repaso, lo que afecta al sueño y a la eficiencia"
+      }
+    },
+    "2": {
+      "situation": "En un proyecto grupal o de clase, un miembro apenas participa y no contribuye. ¿Qué haría la persona?",
+      "options": {
+        "2a": "Hablar con el miembro en privado, entender las razones y animarlo a participar",
+        "2b": "Aclarar la asignación de tareas dentro del grupo, fijar plazos y exigir a todos que completen su parte",
+        "2c": "Asumir más trabajo para asegurar que la calidad no se resienta",
+        "2d": "Reasignar las tareas, dándole a esa persona las partes más sencillas para reducir la dificultad de la colaboración",
+        "2e": "Llamar la atención al miembro públicamente en el grupo y exigirle que mejore de inmediato",
+        "2f": "Mientras no me afecte la nota, dejarlo estar; lo del miembro del grupo no es asunto mío"
+      }
+    },
+    "3": {
+      "situation": "La persona se enfrenta a una asignatura que no se le da bien. ¿Qué haría?",
+      "options": {
+        "3a": "Empezar por lo básico, hacer un plan de estudio y dedicar tiempo de forma constante cada día",
+        "3b": "Pedir ayuda a compañeros que destaquen en la asignatura y estudiar juntos",
+        "3c": "Buscar diversos materiales de estudio en internet o en librerías, probando distintos métodos de aprendizaje",
+        "3d": "Solo buscar aprobar, memorizar los puntos clave antes del examen y no esforzarme demasiado",
+        "3e": "Buscar tutoría proactivamente con el profesor fuera de clase para recibir orientación específica",
+        "3f": "Hacerlo lo mejor posible y, si realmente no puedo, aceptarlo y dejarlo estar"
+      }
+    },
+    "4": {
+      "situation": "La persona tiene un compañero muy cercano cuyos hábitos diarios son completamente distintos, lo que afecta el ritmo de vida de ambos. ¿Qué haría?",
+      "options": {
+        "4a": "Mantener una conversación sincera y acordar reglas que ambos puedan aceptar",
+        "4b": "Ajustarme y adaptarme, como estudiar en otro horario o hacer otra cosa",
+        "4c": "Reducir el tiempo juntos e ir a la biblioteca u otros lugares para estudiar",
+        "4d": "Reportarlo a un profesor o a un padre y pedirles que ayuden a coordinar",
+        "4e": "Expresar el descontento directamente y exigir que el otro se ajuste, con una actitud dura",
+        "4f": "Aguantar en silencio, sentirse ansioso e inquieto, pero sin atreverse a hablar"
+      }
+    },
+    "5": {
+      "situation": "En clase, el profesor plantea un punto de vista controvertido y pide la opinión de todos. ¿Qué haría la persona?",
+      "options": {
+        "5a": "Levantar la mano activamente y expresar sus pensamientos con claridad, incluso si difieren de los del profesor",
+        "5b": "Pensar profundamente por dentro, pero sin sentirse cómodo hablando frente a todos",
+        "5c": "Escuchar las opiniones de otros compañeros y luego decidir si expresar la propia",
+        "5d": "Susurrar y comentar con el compañero de al lado e intercambiar ideas",
+        "5e": "No tener mucho interés en el tema, no querer participar en la discusión, simplemente hacer lo mío"
+      }
+    },
+    "6": {
+      "situation": "La actividad extracurricular de la persona entra en conflicto con una clase importante. ¿Qué haría?",
+      "options": {
+        "6a": "Evaluar la importancia de ambas, priorizar lo académico y pedir permiso para ausentarse de la actividad",
+        "6b": "Comunicarse con el organizador de la actividad para ver si se puede ajustar el horario",
+        "6c": "Intentar compaginar ambas, repartiendo el tiempo para participar en cada una",
+        "6d": "Explicar la situación al profesor y ver si se pueden organizar clases de recuperación en otro momento",
+        "6e": "Dejar directamente la actividad extracurricular y centrarse en la clase, sin querer distraerse",
+        "6f": "Ansiosa e inquieta, preocupada por hacerlo mal en ambos lados e incapaz de elegir",
+        "6g": "Asistir primero a la actividad extracurricular y explicárselo al profesor después si me pregunta"
+      }
+    },
+    "7": {
+      "situation": "La persona descubre a un compañero copiando en un examen. ¿Qué haría?",
+      "options": {
+        "7a": "Recordárselo en privado después, explicando que las consecuencias de copiar son graves, con la esperanza de que no lo repita",
+        "7b": "Dudar internamente, pero finalmente decidir no reportarlo y darle una oportunidad a la persona",
+        "7c": "Considerarlo una cuestión de principios y reportarlo al supervisor del examen",
+        "7d": "Fingir no verlo y centrarme en mi propio examen",
+        "7e": "Detener a la persona discretamente en el momento, considerando que este comportamiento socava la equidad",
+        "7f": "Ansiosa e inquieta, dejar que el incidente afecte a mi propio desempeño en el examen",
+        "7g": "Reportarlo al profesor después del examen; no encubriré este comportamiento"
+      }
+    },
+    "8": {
+      "situation": "Hay una importante tarea de estudio que terminar durante el fin de semana, pero la persona también quiere mucho relajarse y descansar. ¿Qué haría?",
+      "options": {
+        "8a": "Completar la tarea primero y luego relajarse; sentirse tranquilo hace que el disfrute sea mayor",
+        "8b": "Hacer un plan, asignar tiempo tanto para estudiar como para descansar y no descuidar ninguno",
+        "8c": "Jugar primero y luego apoyarse en la inspiración o en la presión de la fecha límite para terminar el trabajo",
+        "8d": "Estudiar un poco y jugar un poco, sin poder concentrarme plenamente en ninguna de las dos cosas",
+        "8e": "Seguir dudando entre estudiar o jugar y terminar sin hacer bien ninguna",
+        "8f": "Considerar que el descanso es más importante, el estudio puede esperar; no agobiarse"
+      }
+    },
+    "9": {
+      "situation": "La persona participa en un concurso o actuación importante, pero se da cuenta justo antes de que no está plenamente preparada. ¿Qué haría?",
+      "options": {
+        "9a": "Repasar toda la noche, darlo todo y no dejar cabos sueltos",
+        "9b": "Ajustar mi mentalidad, tomarlo como una experiencia de aprendizaje y prepararme para la próxima vez",
+        "9c": "Hacer una lluvia de ideas con los compañeros de equipo para ver si hay forma de salvarlo",
+        "9d": "Analizar con cuidado las reglas del concurso y encontrar mis puntos fuertes relativos para centrarme en ellos",
+        "9e": "Considerar retirarme del concurso, sin querer participar sin la preparación adecuada",
+        "9f": "Extremadamente ansiosa y, finalmente, rendirme: pase lo que pase"
+      }
+    },
+    "10": {
+      "situation": "La persona ve a compañeros en redes sociales presumiendo de sus notas, premios y talentos, mientras ella no tiene nada impresionante que mostrar. ¿Qué pensaría?",
+      "options": {
+        "10a": "Usarlo como motivación, hacer un plan de autosuperación y esforzarse en silencio",
+        "10b": "Centrarme en mi propio ritmo; el camino de cada persona es distinto",
+        "10c": "Acercarme proactivamente a los compañeros, aprender cómo lograron lo que hicieron y recoger consejos",
+        "10d": "Hacer una pausa y reflexionar sobre lo que realmente quiero, sin dejarme arrastrar por comparaciones momentáneas",
+        "10e": "Ansiosa y llena de dudas sobre mí misma, sintiéndome como un fracaso",
+        "10f": "Pensar que las redes sociales son todo presunción y que no importa"
+      }
+    },
+    "11": {
+      "situation": "La clase u organización estudiantil de la persona necesita elegir a un representante importante (comité de clase, representante estudiantil, etc.), y hay varios candidatos. ¿Qué haría?",
+      "options": {
+        "11a": "Evaluar cuidadosamente el programa de cada candidato y votar de forma racional",
+        "11b": "Apoyar a la persona que conozco y en la que confío",
+        "11c": "Presentarme yo al puesto, considerando que tengo la capacidad de servir mejor a todos",
+        "11d": "Mantenerme neutral, no involucrarme en la competencia interna y centrarme en mis cosas",
+        "11e": "Abstenerme de votar, considerando que el resultado no tiene nada que ver conmigo",
+        "11f": "Nerviosa e inquieta, preocupada de que elegir mal afecte a las relaciones con los compañeros, dudando"
+      }
+    },
+    "12": {
+      "situation": "La persona no logra entender la forma en que el profesor explica una asignatura, y su eficacia de aprendizaje es muy deficiente. ¿Qué haría la persona?",
+      "options": {
+        "12a": "Buscar proactivamente la ayuda del profesor fuera de clase para resolver las dudas",
+        "12b": "Buscar otros recursos docentes en internet para estudiar por mi cuenta y suplir lo que me falta",
+        "12c": "Discutir con los compañeros y complementar la comprensión de unos y otros",
+        "12d": "Seguir prestando atención en clase, tomar todos los apuntes posibles y repasar intensivamente antes del examen final",
+        "12e": "No importarme — esta asignatura no es tan importante para mí, no hace falta gastar demasiada energía en ella"
+      }
+    },
+    "13": {
+      "situation": "La persona es invitada a asistir a una conferencia o sesión de intercambio, pero el tema no es de su interés. ¿Qué haría?",
+      "options": {
+        "13a": "Asistir con gusto, considerando que el aprendizaje interdisciplinario amplía horizontes",
+        "13b": "Informarse primero del contenido e ir si parece valioso",
+        "13c": "Invitar a un compañero a ir junto; tener compañía lo hace más motivador",
+        "13d": "No tener interés, así que no ir — dedicar el tiempo a cosas que disfruto",
+        "13e": "Después, buscar proactivamente al ponente para discutir y preguntar en profundidad",
+        "13f": "Ansiosa por no entender, pero obligarme a ir de todos modos",
+        "13g": "Aunque no entienda, no importa — ir por la diversión y sumarse a los demás también está bien"
+      }
+    },
+    "14": {
+      "situation": "La persona descubre que el tema que eligió para su proyecto ya ha sido trabajado por otro. ¿Qué haría?",
+      "options": {
+        "14a": "Acercarse proactivamente a discutir, a ver si hay forma de diferenciarlo",
+        "14b": "Cambiar de enfoque de inmediato y encontrar un ángulo único",
+        "14c": "Profundizar sobre la base existente y ganar por calidad",
+        "14d": "Consultar al profesor y planificar basándose en el consejo profesional",
+        "14e": "No importa, el trabajo está hecho y lo entregaré igual",
+        "14f": "Ansiosa por sospecha de plagio, corrigiendo el plan repetidamente hasta altas horas de la noche"
+      }
+    },
+    "15": {
+      "situation": "Un amigo íntimo de la persona le pide copiar los deberes. ¿Qué haría?",
+      "options": {
+        "15a": "Negarme a que copie, pero ofrecerme a dedicar tiempo a enseñarle cómo hacerlo",
+        "15b": "Negarme directamente, considerando que copiar los deberes es malo para ambos",
+        "15c": "Dejarle copiar por amistad, pero sentirme incómoda al respecto",
+        "15d": "Compartir mis deberes completados como referencia del enfoque, pero dejar que los redacte él mismo",
+        "15e": "Criticarle con severidad, considerando que copiar los deberes es deshonesto",
+        "15f": "Dudar y estar ansiosa: no quiero dejar la amistad mal, pero tampoco quiero que copie",
+        "15g": "Dejarle copiar sin más; ayudar a un buen amigo no es para tanto"
+      }
+    },
+    "16": {
+      "situation": "En un proyecto de equipo, el grupo tiene un desacuerdo fundamental sobre la dirección final. ¿Qué haría la persona?",
+      "options": {
+        "16a": "Organizar a todos para que expresen sus opiniones y luego votar para decidir",
+        "16b": "Dejar que los datos y los resultados de la investigación hablen: elegir la dirección que tenga evidencia de apoyo",
+        "16c": "Mantener la dirección que creo correcta y usar la lógica para convencer a mis compañeros",
+        "16d": "Proponer una solución intermedia que combine las fortalezas de las ideas de ambas partes",
+        "16e": "Mantenerme firme y negarme a ceder, entrando en una acalorada discusión con los compañeros",
+        "16f": "Ceder y sumarme a la mayoría, evitando el conflicto para preservar las relaciones"
+      }
+    },
+    "17": {
+      "situation": "La persona necesita elegir dónde centrar su energía principal durante un periodo (por ejemplo, un semestre): asignaturas troncales, talentos especiales, formación artística, lectura, etc. ¿Cómo decidiría?",
+      "options": {
+        "17a": "Hacer una lista de los pros y los contras de cada dirección junto con las condiciones personales y hacer una evaluación racional",
+        "17b": "Hablar con distintas personas y buscar el consejo de profesores, compañeros y padres",
+        "17c": "Seguir mi corazón y elegir la dirección que más quiero probar",
+        "17d": "Entregarme plenamente a una dirección sin un plan de respaldo",
+        "17e": "No decidir todavía — probar varias cosas a la vez e ir encontrando poco a poco la dirección mediante la práctica"
+      }
+    },
+    "18": {
+      "situation": "El profesor le pregunta a la persona en clase para responder a una pregunta que no sabe en absoluto. ¿Qué haría?",
+      "options": {
+        "18a": "Decir con honestidad que no lo sé, pero ofrecerme a investigarlo y consultar al profesor después de clase",
+        "18b": "Intentar razonar a partir del conocimiento existente y dar una respuesta analítica",
+        "18c": "Usar el humor para aliviar la incomodidad y luego pedir humildemente al profesor que lo explique",
+        "18d": "Demasiado nerviosa para hablar, esperando que el profesor me pase a otro",
+        "18e": "Dar una respuesta al azar basada en la intuición, solo para salir del paso"
+      }
+    },
+    "19": {
+      "situation": "La persona descubre a un compañero que no puede permitirse los materiales de estudio. ¿Qué haría?",
+      "options": {
+        "19a": "Compartir discretamente mis propios materiales de estudio sin llamar la atención, protegiendo su dignidad",
+        "19b": "Ayudarle a informarse sobre las becas y ayudas financieras del centro",
+        "19c": "Organizar una iniciativa de ayuda mutua en la clase para que todos compartan recursos",
+        "19d": "Preguntar en privado qué necesita y ayudar todo lo que pueda",
+        "19e": "Reportarlo al profesor y buscar ayuda del centro o de la clase",
+        "19f": "Me duele el corazón, pero no sé cómo ayudar, sintiéndome ansioso y culpable por dentro"
+      }
+    },
+    "20": {
+      "situation": "Al repasar sus años de estudiante, ¿qué encuentra la persona más valioso?",
+      "options": {
+        "20a": "Haber conocido a muchos amigos afines y haber construido una red de contactos valiosa",
+        "20b": "Haber construido una base académica sólida y haberse preparado bien para el desarrollo futuro",
+        "20c": "Haber encontrado lo que realmente amo y en lo que destallo a través de diversas exploraciones",
+        "20d": "Haber aprendido a pensar de forma independiente y a valerme por mí mismo, volviéndome más madura y estable",
+        "20e": "Los reveses y desafíos experimentados, que me hicieron más resiliente",
+        "20f": "Haber explorado diversos intereses por mi cuenta; aunque sin llegar a dominar ninguno, el camino mereció la pena"
+      }
+    }
+  },
+  "office": {
+    "1": {
+      "situation": "La persona debe presentar un informe importante a la alta dirección con poca antelación, pero los datos están incompletos. ¿Qué haría?",
+      "options": {
+        "1a": "Primero esbozar el marco lógico central, usar los datos disponibles para respaldar las conclusiones y marcar las áreas que necesitan completarse",
+        "1b": "Trabajar horas extra para rellenar todos los datos y asegurar que la presentación sea infalible",
+        "1c": "Pedir a los miembros del equipo que ayuden a repartir el trabajo y recopilar datos de forma colaborativa",
+        "1d": "Envolver los datos existentes con narrativa, centrándose en una exposición persuasiva",
+        "1e": "Explicar proactivamente la situación de los datos al supervisor y solicitar una prórroga o un contenido de presentación simplificado",
+        "1f": "Ansiosa e inquieta, preocuparse repetidamente de que los datos incompletos sean cuestionados por la alta dirección, sin poder dormir en toda la noche"
+      }
+    },
+    "2": {
+      "situation": "La persona descubre que otro departamento está trabajando en algo que se solapa mucho con su propio proyecto. ¿Qué haría?",
+      "options": {
+        "2a": "Contactar proactivamente con la persona responsable del otro departamento para entender la situación y explorar una colaboración",
+        "2b": "Reportar de inmediato a su propio supervisor para que coordine la asignación de recursos",
+        "2c": "Acelerar el ritmo de su propio proyecto para llegar primero al resultado",
+        "2d": "Analizar las diferencias entre los dos proyectos e identificar sus respectivos valores únicos",
+        "2e": "Considerar que no es su problema y dejar que otros lo resuelvan",
+        "2f": "Sentirse muy inquieta y agonizar repetidamente sobre si están desperdiciando esfuerzos"
+      }
+    },
+    "3": {
+      "situation": "El supervisor de la persona le asigna un proyecto con el que no está de acuerdo. ¿Qué haría?",
+      "options": {
+        "3a": "Preparar datos y ejemplos suficientes y acercarse en privado al supervisor para expresar su desacuerdo con educación",
+        "3b": "Seguir el arreglo del supervisor y ejecutar según lo solicitado",
+        "3c": "Expresar el desacuerdo directamente en la reunión, considerando que es mejor ser honesto",
+        "3d": "Ejecutar primero, recopilar feedback durante el proceso y dejar que los resultados hablen",
+        "3e": "Acercarse en privado a un líder de nivel superior para reportar la situación, con la esperanza de impulsar ajustes desde arriba",
+        "3f": "Dudar repetidamente sobre si hablar o no, preocupada de que plantear el tema ofenda al líder, pero también temerosa de cargar con la culpa si las cosas salen mal"
+      }
+    },
+    "4": {
+      "situation": "La persona es reasignada temporalmente a un equipo de proyecto interdepartamental con miembros desconocidos. ¿Cómo se integraría?",
+      "options": {
+        "4a": "Saludar a todos con iniciativa, crear conexiones rápidamente y entender el rol de cada persona",
+        "4b": "Observar primero cómo opera el equipo y luego encontrar su propio lugar antes de contribuir activamente",
+        "4c": "Dejar que la competencia profesional hable y demostrar valor en la primera tarea",
+        "4d": "Comunicarse primero con el líder del proyecto para entender expectativas y objetivos",
+        "4e": "Hacer en silencio las tareas asignadas, esperando que todos se familiaricen gradualmente",
+        "4f": "Nerviosa y contenida, preocupada constantemente por decir o hacer algo mal, sin poder relajarse en todo el día"
+      }
+    },
+    "5": {
+      "situation": "El presupuesto del proyecto de la persona es recortado, pero los objetivos no se han ajustado. ¿Qué haría?",
+      "options": {
+        "5a": "Repriorizar, recortar las partes no esenciales y centrarse en los objetivos centrales",
+        "5b": "Buscar soluciones alternativas y métodos innovadores para hacer más con menos recursos",
+        "5c": "Negociar con el supervisor para obtener más recursos, usando datos para ilustrar los riesgos de un presupuesto insuficiente",
+        "5d": "Aceptar la realidad y hacer lo posible, completando todo lo que se pueda",
+        "5e": "Buscar apoyo de recursos de otros departamentos o socios externos mediante la colaboración transversal",
+        "5f": "Ansiosa hasta el punto de sufrir insomnio, preocupada repetidamente de que la culpen por no alcanzar los objetivos, pero sin lograr una buena solución"
+      }
+    },
+    "6": {
+      "situation": "La persona descubre que un colega está holgazaneando y endosándole trabajo. ¿Qué haría?",
+      "options": {
+        "6a": "Establecer límites con educación pero con firmeza, aclarando las responsabilidades de cada uno",
+        "6b": "Aguantar por ahora, pero documentar el comportamiento del colega por si acaso",
+        "6c": "Decirle directamente al colega que no es justo y exigirle que cumpla con sus responsabilidades",
+        "6d": "Proponer una división clara del trabajo en una reunión de equipo, haciendo la carga transparente",
+        "6e": "No querer causar problemas, aguantar y hacer el trabajo extra",
+        "6f": "Sentirse muy incómoda pero demasiado avergonzada para negarse, trabajar horas extra mientras sufre desgaste mental, sintiéndose cada vez más injustamente tratada"
+      }
+    },
+    "7": {
+      "situation": "La persona recibe dos tareas urgentes a la vez, ambas con entrega para final del día. ¿Cómo las manejaría?",
+      "options": {
+        "7a": "Evaluar rápidamente la urgencia y la importancia de ambas tareas y negociar plazos razonables con los solicitantes",
+        "7b": "Pedir a un colega que ayude a compartir una tarea, mejorando la eficiencia mediante el trabajo en equipo",
+        "7c": "Concentrarse plenamente en completar una primero y luego centrarse en la segunda",
+        "7d": "Alternar entre las dos tareas, manteniendo el progreso en ambos lados",
+        "7e": "Explicar la situación al supervisor, pidiendo coordinación de prioridades o una prórroga en una de las tareas",
+        "7f": "Demasiado ansiosa para concentrarse, empezar ambas tareas pero sin lograr avanzar en ninguna"
+      }
+    },
+    "8": {
+      "situation": "La persona participa en una entrevista de ascenso y el entrevistador le hace una pregunta para la que no está preparada en absoluto. ¿Qué haría?",
+      "options": {
+        "8a": "Admitir con honestidad que no está preparada, pero ofrecer un razonamiento estructurado basado en su comprensión",
+        "8b": "Usar un área o caso familiar como analogía, demostrando pensamiento transferible",
+        "8c": "Improvisar con confianza, respondiendo con naturalidad basándose en la experiencia pasada",
+        "8d": "Pedir al entrevistador algunas pistas, mostrando disposición a aprender y a pensar",
+        "8e": "Desviar hábilmente la conversación hacia su área de fortaleza y preparación exhaustiva, mostrando sus ventajas",
+        "8f": "Tanto nervios que la mente se queda en blanco, tartamudeando e incapaz de formar frases completas",
+        "8g": "Dar una respuesta superficial para terminar el tema rápido, esperando que la entrevista pase pronto"
+      }
+    },
+    "9": {
+      "situation": "El equipo de la persona está agotado y desmotivado tras un periodo de trabajo intenso. ¿Qué haría?",
+      "options": {
+        "9a": "Proponer organizar una actividad de cohesión de equipo o una cena para ayudar a todos a desahogarse",
+        "9b": "Interesarse proactivamente por los colegas, entender sus dificultades e intentar ayudar",
+        "9c": "Negociar con el supervisor recursos o plazos ajustados para reducir la presión del equipo",
+        "9d": "Dar ejemplo con perseverancia y usar la acción para motivar al equipo",
+        "9e": "Sentirse también agotada y desmotivada, reducir la inversión para preservar su propio estado primero",
+        "9f": "Preocupada de que el equipo realmente no pueda aguantar, ansiosa e inquieta"
+      }
+    },
+    "10": {
+      "situation": "La persona se da cuenta de que no puede alcanzar sus objetivos de KPI, pero la revisión anual se acerca. ¿Qué haría?",
+      "options": {
+        "10a": "Preparar un informe de revisión detallado, analizar las razones y demostrar el esfuerzo y los resultados obtenidos en el camino",
+        "10b": "Empujar fuerte en la fase final, haciendo todo lo posible",
+        "10c": "Comunicarse proactivamente y con honestidad con el supervisor, explicar las dificultades y buscar apoyo",
+        "10d": "Ajustar la mentalidad, aceptar el resultado y centrar la energía en planificar el próximo año",
+        "10e": "Buscar nuevos avances o puntos de crecimiento, esforzándose por una remontada en la fase final",
+        "10f": "Preocuparse repetidamente de que la evaluación afecte al ascenso y al bonus, sin poder concentrarse en nada en todo el día"
+      }
+    },
+    "11": {
+      "situation": "La persona está en una reunión importante y descubre que un colega se ha atribuido el crédito de su propuesta. ¿Qué haría?",
+      "options": {
+        "11a": "Usar hechos y datos para complementar la discusión durante la reunión, demostrando con naturalidad su propia contribución",
+        "11b": "Después de la reunión, acercarse al colega en privado y pedirle que aclare los hechos",
+        "11c": "Tomárselo a pecho, tener más cuidado en el futuro al proteger su trabajo, pero no confrontar directamente",
+        "11d": "Demostrar su capacidad a través de un rendimiento aún mejor en el trabajo posterior",
+        "11e": "Señalar en el momento que es su propia propuesta y exigir al colega que lo aclare",
+        "11f": "Sentir resentimiento pero no atreverse a hablar en el momento, llegar a casa y agonizar sobre ello durante días, afectando a su estado de ánimo"
+      }
+    },
+    "12": {
+      "situation": "La persona es invitada a un evento de networking del sector, pero no es buena socializando. ¿Qué haría?",
+      "options": {
+        "12a": "Preparar de antemano algunos temas de conversación y conocer proactivamente a gente nueva",
+        "12b": "Buscar a una o dos personas que parezcan compartir intereses comunes para conversar en profundidad",
+        "12c": "Ir con un colega y dejar que haga las presentaciones",
+        "12d": "Considerar que es una pérdida de tiempo e ir a regañadientes",
+        "12e": "Preparar tarjetas de visita y una autopresentación, usando contenido profesional para que otros inicien la conversación",
+        "12f": "Obligarse a ir, pero pasar todo el tiempo escondida en un rincón mirando el móvil, demasiado ansiosa para iniciar una conversación"
+      }
+    },
+    "13": {
+      "situation": "La persona enfrenta una decisión de carrera: quedarse en la empresa actual para un desarrollo estable o aceptar una oportunidad externa (potencialmente con mayor salario pero que requiere salir de la zona de confort). ¿Cómo decidiría?",
+      "options": {
+        "13a": "Evaluar de forma integral los pros y los contras de ambas opciones: salario, crecimiento, coste de vida, factores personales",
+        "13b": "Discutir con personas de confianza y tomar una decisión tras recoger múltiples perspectivas",
+        "13c": "Probar con audacia la nueva oportunidad, considerando que aún es joven",
+        "13d": "Inclinarse por quedarse en la empresa actual; la estabilidad y la familiaridad importan más",
+        "13e": "Decidir basándose en la intuición y el instinto, confiando en la primera impresión",
+        "13f": "Dudar e incapaz de decidir durante mucho tiempo, querer quedarse un día e irse al siguiente, sin poder dormir noche tras noche"
+      }
+    },
+    "14": {
+      "situation": "El equipo de la persona recibe una queja de un cliente debido a un error, lo que genera mucha presión. ¿Qué haría?",
+      "options": {
+        "14a": "Disculparse con el cliente de inmediato, proponer un plan de remedición y mostrar sinceridad",
+        "14b": "Organizar una revisión del equipo, identificar la causa raíz y establecer mecanismos de mejora",
+        "14c": "Asumir la responsabilidad y comunicarse proactivamente con el cliente para resolver el conflicto",
+        "14d": "Primero consolar al equipo para que no se culpe a sí mismo y luego manejar la situación con calma",
+        "14e": "Analizar en profundidad las necesidades reales detrás de la queja del cliente y ofrecer una solución que supere las expectativas",
+        "14f": "Culparse a sí misma y sentirse ansiosa, preocuparse repetidamente de perder al cliente o de que la culpen, muy tensa",
+        "14g": "Fingir no oírlo, esperando que otros colegas o el líder manejen el problema del cliente"
+      }
+    },
+    "15": {
+      "situation": "La persona debe colaborar en un proyecto con un colega dominante y difícil de comunicar. ¿Qué haría?",
+      "options": {
+        "15a": "Hablar con datos y hechos, minimizar los intercambios emocionales y centrarse en la tarea en sí",
+        "15b": "Entender primero las preocupaciones del colega y buscar puntos en común",
+        "15c": "Mantener su postura sin ceder fácilmente, manteniendo una actitud profesional",
+        "15d": "Evitar el enfrentamiento directo en lo posible y comunicarse a través de canales escritos como el correo electrónico",
+        "15e": "Buscar la coordinación de un supervisor compartido o de un tercero para evitar un enfrentamiento directo que pueda estancar el progreso",
+        "15f": "Extremadamente nerviosa antes de cada conversación, sopesando repetidamente sus palabras pero aún con miedo de ofender al otro"
+      }
+    },
+    "16": {
+      "situation": "La persona es asignada para tomar el relevo de un proyecto desordenado que dejó un colega. ¿Qué haría?",
+      "options": {
+        "16a": "Evaluar rápidamente el estado del proyecto y priorizar los problemas más urgentes",
+        "16b": "Comunicarse con el colega anterior para entender el contexto, pero evitar culpar en exceso y centrarse en resolver el problema",
+        "16c": "Tratar el problema como un desafío y usar métodos innovadores para redefinir el proyecto",
+        "16d": "Reportar con veracidad los problemas del proyecto a los superiores",
+        "16e": "Evaluar primero si el proyecto merece la pena salvarse y, si es necesario, sugerir cortar las pérdidas a tiempo en lugar de seguir adelante",
+        "16f": "Cada vez más en pánico cuanto más lo mira, preocupándose de que está asumiendo un desastre",
+        "16g": "Tampoco era mi desastre — alargarlo lo máximo posible, abordarlo solo cuando el jefe presione"
+      }
+    },
+    "17": {
+      "situation": "La persona está en un proyecto interdepartamental y los colegas de otros departments siguen retrasando las entregas, lo que afecta al progreso general. ¿Qué haría?",
+      "options": {
+        "17a": "Acercarse proactivamente a la persona responsable del otro departamento para entender las dificultades y ofrecer ayuda",
+        "17b": "Impulsar hitos de entrega claros, acordando plazos y responsables para cada tarea",
+        "17c": "Reportar la situación al supervisor, pidiendo coordinación de recursos o un ajuste del calendario general",
+        "17d": "Ajustar el propio horario de trabajo, avanzando primero las partes que no dependen del otro departamento",
+        "17e": "Crear un documento de progreso compartido para que las tareas y el avance de todos sean transparentes para todo el proyecto, permitiendo la responsabilidad mutua",
+        "17f": "Preocuparse repetidamente de que la culpen por el retraso del proyecto, pero demasiado avergonzada para presionar al otro, trabajando horas extra mientras espera con ansiedad",
+        "17g": "Como la otra parte se retrasa, también ir a paso lento, avanzando a mi propio ritmo"
+      }
+    },
+    "18": {
+      "situation": "La persona descubre una diferencia fundamental de valores con un colega, lo que genera fricción frecuente. ¿Qué haría?",
+      "options": {
+        "18a": "Separar la relación laboral de los valores personales y mantener la colaboración profesional",
+        "18b": "Intentar comprender la perspectiva del otro y buscar formas de colaborar pese a las diferencias",
+        "18c": "Reducir las interacciones no esenciales y mantener solo la comunicación laboral mínima necesaria",
+        "18d": "Tener una conversación directa y sincera con el colega, expresando sus propios sentimientos y expectativas",
+        "18e": "Considerar solicitar un traslado o cambio de equipo para evitar el desgaste mental de una colaboración a largo plazo",
+        "18f": "Obsesionarse con cada palabra que ha dicho el colega, sintiéndose cada vez más atacada, incapaz de concentrarse en el trabajo"
+      }
+    },
+    "19": {
+      "situation": "La persona se da cuenta de que está atrapada en un estado de «seudoocupación» — trabaja horas extra todos los días pero produce pocos resultados y no ve crecimiento. ¿Qué haría?",
+      "options": {
+        "19a": "Parar y dedicar media jornada a revisar en qué se ha ido el tiempo y encontrar la causa raíz de la \"pseudofragmentación\"",
+        "19b": "Probar herramientas de gestión del tiempo para reestructurar su flujo de trabajo e identificar y optimizar las áreas ineficientes",
+        "19c": "Recortar proactivamente las reuniones ineficaces y las relaciones sociales de bajo valor, concentrando el tiempo en la producción central",
+        "19d": "Fijar de nuevo objetivos y prioridades claros y centrarse en las pocas tareas que aportan valor real",
+        "19e": "Hablar con un mentor o colega senior, pidiéndole que ayude a identificar qué va mal",
+        "19f": "Sintiéndose cada vez más como si se estuviera quedando atrás, sin poder resolverlo",
+        "19g": "Los demás trabajan horas extra de todos modos, así que simplemente sumarse y dejar pasar el tiempo hasta que sea hora de irse"
+      }
+    },
+    "20": {
+      "situation": "La persona reflexiona sobre su carrera: ¿qué valora más?",
+      "options": {
+        "20a": "Crecimiento y aprendizaje continuos, ampliando constantemente sus límites",
+        "20b": "Experiencia profunda en su campo, convirtiéndose en un experto del sector",
+        "20c": "Un ambiente de trabajo armonioso y buenas relaciones interpersonales",
+        "20d": "Ingresos estables y un buen equilibrio entre trabajo y vida personal",
+        "20e": "Una plataforma y un espacio para liberar la creatividad y realizar el valor personal",
+        "20f": "Ninguna búsqueda clara en realidad, solo preocuparse siempre de quedarse atrás de los demás, sentirse perdida y ansiosa sobre el futuro"
+      }
+    }
+  },
+  "civil": {
+    "1": {
+      "situation": "Un ciudadano acude a realizar un trámite pero su documentación está incompleta; aun así, está alterado emocionalmente y reclama: \"Llevo esperando mucho tiempo\". ¿Qué haría la persona?",
+      "options": {
+        "1a": "Calmar primero sus emociones, explicar con paciencia la política y listar de una vez todos los documentos complementarios necesarios",
+        "1b": "Ver si la solicitud se puede aceptar con documentos faltantes dentro de los límites de la política, reduciendo la necesidad de que el ciudadano haga otro viaje",
+        "1c": "Seguir estrictamente la normativa: la documentación está incompleta y el trámite no se puede procesar",
+        "1d": "Ayudar proactivamente al ciudadano a revisar los documentos existentes y guiarlo sobre cómo completar los que faltan",
+        "1e": "Dejarse afectar por las emociones del ciudadano y entrar en discusión con él",
+        "1f": "Pedir al supervisor de guardia o a un colega con experiencia que ayude a manejar la situación"
+      }
+    },
+    "2": {
+      "situation": "La persona descubre que un colega muestra signos de solicitar sobornos o comisiones durante el proceso de aprobación. ¿Qué haría?",
+      "options": {
+        "2a": "Advertir al colega de forma privada y seria, explicando las normas disciplinarias y las consecuencias",
+        "2b": "Reportar a través de los canales oficiales a los superiores o al departamento de inspección disciplinaria",
+        "2c": "Mantener distancia, pero no querer problemas — mantenerse al margen por ahora",
+        "2d": "Recopilar pruebas y plantear el problema en un momento y lugar adecuados",
+        "2e": "Fingir no darse cuenta y evitar involucrarse para mantenerse al margen",
+        "2f": "Dudar repetidamente sobre si reportarlo: temerosa de que el colega se entere y cree una situación incómoda, pero también temerosa de ser considerada responsable por no reportarlo; incapaz de tranquilizarse en todo el día"
+      }
+    },
+    "3": {
+      "situation": "Los superiores han emitido una política muy difícil de implementar que ha generado una fuerte oposición desde la base. ¿Qué haría la persona?",
+      "options": {
+        "3a": "Estudiar primero con cuidado el espíritu de la política y buscar una forma de implementarla que se ajuste a la realidad local",
+        "3b": "Reportar con veracidad las dificultades reales de la base a los superiores e impulsar flexibilidad en la implementación de la política",
+        "3c": "Implementarla sin concesiones, considerando que la decisión del superior tiene sus razones",
+        "3d": "Convocar una reunión con los funcionarios de base, recoger sus opiniones y redactar una propuesta por escrito",
+        "3e": "Expresar quejas sobre la política en privado, murmurando a los colegas que los superiores no entienden la realidad de la base",
+        "3f": "Solicitar instrucciones a los superiores, pidiendo una guía de implementación más clara y apoyo de recursos"
+      }
+    },
+    "4": {
+      "situation": "La persona recibe una queja de un ciudadano por una mala actitud de servicio, pero no fue culpa suya. ¿Qué haría?",
+      "options": {
+        "4a": "Aceptar la queja con sinceridad primero, entender exactamente qué le disgustó al ciudadano y mejorar el servicio",
+        "4b": "Explicar la situación real al supervisor y aclarar los hechos",
+        "4c": "Analizar los problemas del proceso de servicio subyacentes a la queja y proponer mejoras",
+        "4d": "Sentirse injustamente tratada pero decir poco, simplemente seguir haciendo bien el trabajo",
+        "4e": "Sentirse injustamente tratada y enfadada, desahogarse con los colegas",
+        "4f": "Discutir con firmeza: buscar al quejoso y aclarar la verdad cara a cara"
+      }
+    },
+    "5": {
+      "situation": "La persona es asignada por rotación a un puesto de ventanilla de atención al ciudadano de base; el trabajo es repetitivo y tedioso, y no se ajusta a su desarrollo profesional. ¿Qué haría?",
+      "options": {
+        "5a": "Estudiar proactivamente todo el flujo de trabajo de los servicios de ventanilla, identificar áreas de optimización y mejora de eficiencia y ayudar al público a hacer menos viajes",
+        "5b": "Identificar con calma lo que la rotación puede ofrecer, tratándola como una oportunidad para entender la base y cubrir carencias",
+        "5c": "Pedir consejo a colegas veteranos con experiencia en la ventanilla y aprender sus técnicas para tratar con el público y resolver conflictos",
+        "5d": "Explicar a los superiores que el puesto no se ajusta a su especialidad y solicitar un ajuste",
+        "5e": "Sentir que sus talentos se están desperdiciando, soportar las tareas repetitivas diarias con frustración creciente, pero sin atreverse a hablar con la organización",
+        "5f": "Solo es una rotación — pasar este período sin esfuerzo, seguir la rutina y no aspirar a más que evitar errores"
+      }
+    },
+    "6": {
+      "situation": "El departamento de la persona necesita responder rápidamente a una emergencia pública repentina. ¿Qué haría?",
+      "options": {
+        "6a": "Activar el plan de emergencia, organizar rápidamente las asignaciones del equipo y acudir de inmediato al lugar",
+        "6b": "Analizar la situación con calma, recopilar información y formular un plan antes de actuar",
+        "6c": "Seguir las directivas superiores y los procedimientos establecidos y proceder con steadiness",
+        "6d": "Coordinar recursos entre departamentos, establecer un mecanismo de intercambio de información y construir fuerza colectiva",
+        "6e": "Sentir pánico y nerviosismo ante la emergencia, necesitando que otros le recuerden antes de actuar",
+        "6f": "Considerar que los líderes se encargarán de la respuesta de emergencia y que no hay motivo de preocupación"
+      }
+    },
+    "7": {
+      "situation": "La persona asiste a una sesión importante de presentación de políticas y debe explicar una nueva política a colegas y destinatarios del servicio. ¿Qué haría?",
+      "options": {
+        "7a": "Usar lenguaje llano y ejemplos de la vida real para explicar la política con claridad y de forma exhaustiva",
+        "7b": "Preparar diapositivas y materiales detallados, interpretando la política cláusula por cláusula para asegurar precisión",
+        "7c": "Recoger de antemano las preguntas de interés de la base y abordarlas específicamente durante la presentación",
+        "7d": "Leer directamente del documento, transmitiendo el contenido estrictamente según el texto oficial",
+        "7e": "Preocuparse de que la culpen si la explicación no es clara y buscar una excusa para declinar la tarea",
+        "7f": "Preocuparse repetidamente antes de subir al escenario de no explicar bien o de quedar bloqueado por las preguntas, tan nervioso que le es imposible dormir y la voz le tiembla al presentar"
+      }
+    },
+    "8": {
+      "situation": "La persona descubre que el departamento tiene un problema de \"montañas de documentos y mares de reuniones\", con grandes cantidades de tiempo consumidas por reuniones ineficaces. ¿Qué haría?",
+      "options": {
+        "8a": "Proponer racionalizar las reuniones y promover métodos de comunicación más eficientes",
+        "8b": "Filtrar estrictamente las reuniones que requieren su participación y evitar en lo posible las innecesarias",
+        "8c": "Expresar las ideas de forma concisa y eficiente durante las reuniones, mejorando la eficiencia de las reuniones con el ejemplo",
+        "8d": "Adaptarse al statu quo y usar el tiempo de reuniones para gestionar otras tareas",
+        "8e": "Sentir irritación por las frecuentes reuniones y mostrar impaciencia durante las mismas",
+        "8f": "Cuestionar públicamente la necesidad de las reuniones y negarse a asistir a las consideradas ineficaces",
+        "8g": "Cumplir con los arreglos superiores, considerando que las reuniones son un requisito organizativo y que no le corresponde cambiarlo"
+      }
+    },
+    "9": {
+      "situation": "Un familiar de la persona quiere usar sus contactos para \"saltarse los trámites\" y conseguir algo. ¿Qué haría?",
+      "options": {
+        "9a": "Negarse con firmeza, explicar las normas, pero ofrecerle orientación sobre el proceso adecuado",
+        "9b": "Declinar con cortesía, diciendo que no puede ayudar",
+        "9c": "Sin violar las normas, ayudarle a consultar el progreso del trámite",
+        "9d": "Negarse directamente, dejando claro que es una cuestión de principios sin margen de negociación",
+        "9e": "Aceptar de palabra pero alargarlo sin hacer nada, dejando que la persona desista por sí sola",
+        "9f": "Dudar repetidamente: temerosa de que negarse dañe la relación, pero también temerosa de que aceptar viole la disciplina; incapaz de dormir en toda la noche"
+      }
+    },
+    "10": {
+      "situation": "La persona es asignada a un nuevo puesto o departamento donde el contenido del trabajo y el entorno son completamente distintos a los de antes. ¿Qué haría?",
+      "options": {
+        "10a": "Visitar y conocer proactivamente las condiciones reales del nuevo puesto y las necesidades de quienes son atendidos",
+        "10b": "Familiarizarse primero con el flujo de trabajo y las relaciones interpersonales, haciendo con steadiness cada tarea bien",
+        "10c": "Tratar esta reasignación como una oportunidad de crecimiento y asumir proactivamente tareas desafiantes",
+        "10d": "Combinar la experiencia previa con las características del nuevo puesto",
+        "10e": "Sentir ansiedad e inquietud por el nuevo entorno, preocupándose de no estar a la altura",
+        "10f": "No le importa la reasignación —el sueldo es el mismo sin importar cuánto o cuán poco se haga, simplemente fichar y salir a tiempo"
+      }
+    },
+    "11": {
+      "situation": "La persona debe redactar un documento importante, pero las instrucciones del supervisor son vagas. ¿Qué haría?",
+      "options": {
+        "11a": "Investigar de forma independiente las políticas y el contexto relevantes primero, producir un borrador y luego presentarlo para la revisión del supervisor",
+        "11b": "Comunicarse con el supervisor para aclarar la dirección y los puntos clave antes de empezar a escribir",
+        "11c": "Consultar documentos similares del pasado y preparar varias versiones para que el supervisor elija",
+        "11d": "Escribir basándose en su propia comprensión e ideas, experimentando con audacia",
+        "11e": "Consultar a colegas con experiencia y aprovechar sus enfoques y experiencia de redacción",
+        "11f": "Dudar repetidamente de las instrucciones vagas, preocupándose de que un malentendido conduzca a la culpa, y dudar en empezar a escribir",
+        "11g": "Esperar a que el supervisor insista de nuevo y luego redactar algo rápidamente; con instrucciones vagas, la culpa no caerá sobre mí"
+      }
+    },
+    "12": {
+      "situation": "La persona debe completar un proyecto de investigación a gran escala y producir un informe en un plazo breve. ¿Qué haría?",
+      "options": {
+        "12a": "Diseñar un marco de investigación, asignar tareas para la colaboración y recopilar datos de múltiples fuentes antes de agregarlos y analizarlos",
+        "12b": "Profundizar en el terreno con visitas sobre el ground y obtener información de primera mano antes de redactar",
+        "12c": "Usar de forma eficiente los recursos de datos existentes e integrarlos y analizarlos rápidamente",
+        "12d": "Explicar las restricciones de tiempo a los superiores y negociar un calendario razonable",
+        "12e": "Considerar que el plazo es demasiado ajustado para completarlo, caer en la ansiedad y ser incapaz de empezar a escribir",
+        "12f": "Considerar que el plazo es demasiado ajustado para hacerlo bien, juntar un informe de cualquier manera para salir del paso; aprobar es suficiente"
+      }
+    },
+    "13": {
+      "situation": "La persona se encuentra con un ciudadano cuya solicitud es razonable pero carece de base normativa. ¿Qué haría?",
+      "options": {
+        "13a": "Escuchar con paciencia, tomar notas cuidadosas, reportar la situación a los superiores e impulsar la mejora de la política",
+        "13b": "Decir con honestidad al ciudadano que la política actual no cubre esta situación",
+        "13c": "Explicar estrictamente según la política, sin dar al ciudadano expectativas poco realistas",
+        "13d": "Ayudar a conectar con los departamentos pertinentes para ver si hay otros canales para resolver el problema",
+        "13e": "Irritarse con el ciudadano que sigue volviendo y que la actitud se vuelva fría y rígida",
+        "13f": "Dudar repetidamente sobre si flexibilizar las normas: temerosa de violar la normativa pero también de defraudar al ciudadano; sentirse profundamente atormentada"
+      }
+    },
+    "14": {
+      "situation": "El departamento de la persona está impulsando la digitalización, pero los colegas veteranos se resisten. ¿Qué haría?",
+      "options": {
+        "14a": "Enseñarles con paciencia uno a uno, ayudando a los colegas veteranos a adaptarse gradualmente al nuevo sistema",
+        "14b": "Usar casos reales para demostrar las mejoras de eficiencia de la digitalización y persuadir a todos",
+        "14c": "Diseñar un plan de transición, manteniendo los métodos tradicionales y digitales funcionando en paralelo durante un tiempo",
+        "14d": "Cumplir con los arreglos superiores y avanzar según el manual; que algunas personas no se adapten es normal",
+        "14e": "Considerar que la resistencia es demasiado grande, aparcarlo por ahora y esperar a que los superiores insistan de nuevo",
+        "14f": "Preocupada de que impulsar la digitalización ofenda a los colegas veteranos, pero también temerosa de que no impulsarla sea criticada por el liderazgo, dudando sobre qué hacer"
+      }
+    },
+    "15": {
+      "situation": "La persona descubre despilfarro en el presupuesto del departamento, pero afecta a los intereses de varios colegas. ¿Qué haría?",
+      "options": {
+        "15a": "Desde el ángulo de optimizar la asignación de recursos, proponer sugerencias razonables de ajuste del presupuesto",
+        "15b": "Plantear el problema en una ocasión adecuada, usando datos y hechos para persuadir a todos",
+        "15c": "No meterse en lo que no le incumbe, no hacer comentarios y no involucrarse",
+        "15d": "Reportar el problema a través de un canal de sugerencias anónimo",
+        "15e": "Sentir indignación por el despilfarro y quejarse públicamente en la oficina",
+        "15f": "Profundamente dividida: angustiada de que los fondos públicos se despilfarren, pero temerosa de ofender a los colegas al hablar; incapaz de tranquilizarse en todo el día"
+      }
+    },
+    "16": {
+      "situation": "La persona está avanzando en una tarea según lo previsto, cuando la otra parte hace de repente una solicitud adicional fuera del alcance original. ¿Qué haría?",
+      "options": {
+        "16a": "Ajustarse con flexibilidad dentro de los límites de recursos, intentando acomodar las solicitudes razonables",
+        "16b": "Atenerse al plan original y explicar con cortesía que los cambios sobre la marcha no son factibles",
+        "16c": "Solicitar instrucciones a los superiores y hacer ajustes solo con autorización",
+        "16d": "Coordinar de forma activa, demostrando una buena actitud de servicio",
+        "16e": "Aceptar impotente las demandas adicionales, trabajar horas extra en silencio para completarlas sin oponerse",
+        "16f": "Dudar repetidamente sobre la solicitud sobre la marcha: temerosa de que negarse ofenda, pero también de que aceptar y fracasar atraiga la culpa; ansiosa hasta el insomnio"
+      }
+    },
+    "17": {
+      "situation": "La persona debe expresar una opinión sobre un tema controvertido en una reunión. ¿Qué haría?",
+      "options": {
+        "17a": "Prepararse a fondo, hablar con hechos y datos y no evitar el conflicto",
+        "17b": "Observar la actitud de los líderes principales y hablar después de evaluar el ambiente",
+        "17c": "Hablar con franqueza, considerando que los funcionarios públicos deben expresarse con honestidad",
+        "17d": "Esperar el momento adecuado y ofrecer sugerencias de forma constructiva",
+        "17e": "Considerar que el tema controvertido tiene poco que ver con ella y elegir quedarse en silencio",
+        "17f": "Agonizar repetidamente antes de la reunión sobre si hablar y qué decir, tan nerviosa que no puede dormir"
+      }
+    },
+    "18": {
+      "situation": "La persona descubre que una política de bienestar público no está bien difundida y mucha gente no la conoce. ¿Qué haría?",
+      "options": {
+        "18a": "Crear materiales divulgativos fáciles de entender e informar proactivamente al público a través de múltiples canales",
+        "18b": "Organizar sesiones de divulgación comunitaria para explicar la política y responder preguntas en persona",
+        "18c": "Reportar la publicidad inadecuada al supervisor y recomendar aumentar los esfuerzos de divulgación",
+        "18d": "Dentro del alcance de su propio trabajo, intentar informar a cada ciudadano que acuda a realizar trámites",
+        "18e": "La divulgación es responsabilidad del departamento de comunicación, no mía",
+        "18f": "Dudar repetidamente sobre si hacer divulgación proactiva: preocupada de que le digan que se excede si hace demasiado, o de que la critique el liderazgo si hace muy poco"
+      }
+    },
+    "19": {
+      "situation": "La persona se enfrenta al dilema de \"cuanto más haces, más errores cometes; cuanto menos haces, menos errores cometes\". ¿Qué elegiría?",
+      "options": {
+        "19a": "Insistir en hacer más, considerando que el valor de un funcionario público radica en resolver problemas",
+        "19b": "Sobre la base de hacer bien su trabajo, elegir con cautela las innovaciones en las que confía",
+        "19c": "Atenerse a las normas: no aspirar a más que evitar errores",
+        "19d": "Con el apoyo de los superiores y las garantías institucionales, probar con audacia nuevos enfoques",
+        "19e": "Elegir pasar de largo: hacer lo mínimo posible y dedicar la energía a la vida personal",
+        "19f": "Dudar repetidamente sobre si actuar: preocupada de que hacer más conduzca a errores y a culpa, pero también temerosa de que la critiquen por inacción; ansiosa y mentalmente agotada todo el día"
+      }
+    },
+    "20": {
+      "situation": "La persona reflexiona sobre su carrera en el servicio público: ¿qué valora más?",
+      "options": {
+        "20a": "Resolver de verdad los problemas del público y ver sus expresiones de satisfacción",
+        "20b": "Lograr resultados en el puesto y obtener reconocimiento y ascenso",
+        "20c": "Un trabajo y una vida estables, poder equilibrar familia y carrera",
+        "20d": "Impulsar mejoras institucionales que hagan el trabajo más eficiente y justo",
+        "20e": "Ninguna aspiración en particular: simplemente ir tirando, salir adelante es suficiente",
+        "20f": "Sentirse a menudo perdida sobre el futuro, preocupándose de no lograr nada y, sin embargo, no saber cómo cambiar, repitiéndose incapaz de dormir por las noches"
+      }
+    }
+  },
+  "artist": {
+    "1": {
+      "situation": "La persona está trabajando en una obra creativa, pero el cliente ha solicitado numerosas revisiones, algunas de las cuales entran en conflicto con la visión creativa original. ¿Qué haría?",
+      "options": {
+        "1a": "Comprender en profundidad las necesidades reales del cliente y encontrar un equilibrio entre la visión creativa y las exigencias comerciales",
+        "1b": "Mantener su propio juicio artístico y convencer al cliente con razonamiento profesional",
+        "1c": "Hacer todos los cambios que pide el cliente; al fin y al cabo, él paga",
+        "1d": "Crear varias versiones para que el cliente elija y las compare",
+        "1e": "Consultar a mentores o colegas con experiencia y aprender de cómo manejan situaciones similares",
+        "1f": "Sentirse frustrada, pausar el proyecto primero y necesitar tiempo para procesar las emociones"
+      }
+    },
+    "2": {
+      "situation": "La persona ha entrado en un bloqueo creativo y no ha producido obra en mucho tiempo. ¿Qué haría?",
+      "options": {
+        "2a": "Tomarse un descanso del trabajo, viajar, visitar exposiciones, experimentar la vida y recoger inspiración fresca",
+        "2b": "Seguir creando cada día, aunque no esté satisfecha, considerando que la cantidad conducirá a la calidad",
+        "2c": "Estudiar a fondo las obras de los maestros, analizar las técnicas y buscar una dirección de avance",
+        "2d": "Intercambiar ideas con colegas, ver en qué están trabajando y despertar inspiración",
+        "2e": "Caer en la ansiedad y la autocompasión, incapaz de crear por el momento",
+        "2f": "Dejarlo estar, no forzar la salida, esperar a que la inspiración vuelva naturalmente"
+      }
+    },
+    "3": {
+      "situation": "La obra de la persona ha sido duramente criticada por un crítico, incluso llamada «sin valor». ¿Cómo la enfrentaría?",
+      "options": {
+        "3a": "Aunque dolida, analizar racionalmente las partes válidas de la crítica y mejorar donde proceda",
+        "3b": "Permanecer imperturbable, seguir su propio camino artístico, considerando que la estética es subjetiva",
+        "3c": "Conversar con amigos de confianza y recuperar la confianza con su apoyo",
+        "3d": "Usar la crítica como motivación y responder con una obra aún mejor",
+        "3e": "Profundamente devastada, caer en la autocompasión, incluso considerar seriamente si seguir creando",
+        "3f": "No importa, lo que dicen los críticos no es importante, siempre y cuando yo crea que es bueno"
+      }
+    },
+    "4": {
+      "situation": "La persona enfrenta una decisión: seguir haciendo el arte de nicho que ama o reorientarse hacia una dirección más comercial. ¿Qué elegiría?",
+      "options": {
+        "4a": "Intentar encontrar un punto de encuentro entre el comercio y el arte, sin renunciar a la integridad creativa",
+        "4b": "Mantenerme en el arte que amo, considerando que el tiempo demostrará su valor",
+        "4c": "Hacer proyectos comerciales para ganarme la vida primero y dedicarme a la creación pura en mi tiempo libre",
+        "4d": "Probar ambos caminos y ver cuál se adapta mejor a través de la práctica",
+        "4e": "Sentirme perdida, incapaz de tomar una decisión durante mucho tiempo y simplemente mantener el statu quo por ahora",
+        "4f": "Probar nuevos modelos (por ejemplo, suscripciones, micromecenazgo) para monetizar el arte de nicho"
+      }
+    },
+    "5": {
+      "situation": "En un proyecto colaborativo, el estilo de la persona difiere mucho del de su socio. ¿Qué haría?",
+      "options": {
+        "5a": "Ver las diferencias como una oportunidad, intentar fusionar los dos estilos para crear algo único",
+        "5b": "Comunicarse con franqueza y encontrar una dirección creativa que ambas partes puedan aceptar",
+        "5c": "Encargarse cada uno de lo que mejor se le da, manteniendo los estilos respectivos",
+        "5d": "Liderar la dirección creativa y que el socio le siga",
+        "5e": "Minimizar la comunicación y que cada uno complete su parte, para evitar conflictos",
+        "5f": "Considerar que el estilo del socio no funciona e insistir en el propio"
+      }
+    },
+    "6": {
+      "situation": "La obra de la persona ha sido plagiada por otra persona, difundida en línea y ha recibido mucha atención. ¿Qué haría?",
+      "options": {
+        "6a": "Proteger los derechos de propiedad intelectual a través de los canales adecuados y emitir un comunicado",
+        "6b": "Denunciarlo en redes sociales para que más gente conozca la verdad",
+        "6c": "Sentirme dolido pero elegir permanecer en silencio y centrarme en crear obra nueva",
+        "6d": "Contactar con la persona y solicitar la retirada y una disculpa, empezando por la diplomacia antes de escalar",
+        "6e": "Sentirme indignada y agraviada, desahogar primero las emociones en redes sociales",
+        "6f": "Aprovechar el momento para lanzar una serie o mercancía autorizada, convirtiendo la atención en una oportunidad de negocio"
+      }
+    },
+    "7": {
+      "situation": "La persona ha sido invitada a participar en una exposición o actuación importante, pero el tiempo de preparación es muy ajustado. ¿Qué haría?",
+      "options": {
+        "7a": "Evaluar con honestidad las propias capacidades y declinar con cortesía si no puede hacerlo bien",
+        "7b": "Darlo todo y aprovechar toda oportunidad para mostrarse",
+        "7c": "Centrarse en un concepto central dentro del tiempo limitado, priorizar la calidad sobre la cantidad",
+        "7d": "Aprovechar la fuerza del equipo y colaborar plenamente para completar la obra",
+        "7e": "Sentir que la presión es excesiva, inventar una excusa para saltarse la oportunidad",
+        "7f": "Presentar usando un formato o medio poco convencional y generar revuelo"
+      }
+    },
+    "8": {
+      "situation": "La persona descubre que su estilo creativo ha sido \"encasillado\" por el mercado: todos solo quieren \"ese estilo\". ¿Qué haría?",
+      "options": {
+        "8a": "Explorar proactivamente nuevas áreas creativas, romper el molde y no encasillarse",
+        "8b": "Gestionar distintos estilos a la vez y publicar bajo diferentes identidades o canales",
+        "8c": "Aceptar el encasillamiento y llevar el estilo característico al extremo",
+        "8d": "Incorporar gradualmente nuevos elementos al estilo existente, cambiando de forma incremental",
+        "8e": "No importarme el encasillamiento o no, si hay demanda hacerlo, mientras pague",
+        "8f": "Anunciar públicamente el cese del trabajo encasillado y reorientarse con fuerza"
+      }
+    },
+    "9": {
+      "situation": "La persona participa en un concurso creativo donde el gusto de los jueces difiere del suyo. ¿Qué haría?",
+      "options": {
+        "9a": "Mantener su estilo; los resultados del concurso no son lo más importante",
+        "9b": "Estudiar las preferencias de los jueces y adaptar la obra para el concurso",
+        "9c": "Tratarlo como un experimento y ver cómo se desempeña uno bajo un estilo distinto",
+        "9d": "Preparar según los requisitos del concurso, tomándolo como un desafío profesional",
+        "9e": "No me importan las preferencias de los jueces, presentar la obra de mi forma habitual",
+        "9f": "Considerar que no tiene sentido y no participar"
+      }
+    },
+    "10": {
+      "situation": "La persona quiere probar una forma o técnica artística totalmente nueva, pero le preocupa no tener las bases y no poder aprenderla. ¿Qué haría?",
+      "options": {
+        "10a": "No pensarlo demasiado, empezar a aprender desde lo básico, aprender haciendo, la verdad viene de la práctica",
+        "10b": "Buscar a un profesor o mentor con experiencia en ese campo; tener guía puede ahorrar muchos desvíos",
+        "10c": "Hacer primero pequeños experimentos e integrar la nueva técnica en el trabajo existente como prueba",
+        "10d": "Estudiar sistemáticamente los casos de éxito y materiales didácticos de otros, hacer un plan de aprendizaje detallado antes de empezar",
+        "10e": "Preocuparse de desperdiciar esfuerzo en algo que no se puede aprender y renunciar",
+        "10f": "La dirección actual está bien, no hace falta complicarse, simplemente mantener el statu quo"
+      }
+    },
+    "11": {
+      "situation": "Los colegas de la persona se están haciendo famosos uno tras otro, mientras ella sigue siendo relativamente desconocida. ¿Qué pensaría?",
+      "options": {
+        "11a": "Analizar sus caminos hacia el éxito y ver qué se puede aprender",
+        "11b": "Confiar en mi propio ritmo; la buena obra terminará viéndose",
+        "11c": "Ajustar la estrategia, reforzando la promoción y la gestión manteniendo la producción creativa",
+        "11d": "Sentir ansiedad y decepción y confiarlo a alguien cercano",
+        "11e": "No aceptarlo, aumentar la inversión y jurar superarlos",
+        "11f": "Cada uno tiene su camino, solo centrarse en uno mismo"
+      }
+    },
+    "12": {
+      "situation": "La persona ha sido invitada a una colaboración interdisciplinaria en un campo que no domina. ¿Qué haría?",
+      "options": {
+        "12a": "Atraverse a probarlo con audacia, considerando que el trabajo interdisciplinario puede aportar inspiración creativa fresca",
+        "12b": "Entender primero a fondo el otro campo y evaluar si encaja bien",
+        "12c": "Preguntar a un amigo que tenga experiencia en ese campo",
+        "12d": "Declinar con cortesía y centrarse en el campo de especialización",
+        "12e": "Proponer un plan de colaboración único, haciendo que el otro campo sirva a la propia visión creativa",
+        "12f": "Sentir ansiedad por el campo desconocido, dudar y no poder decidir"
+      }
+    },
+    "13": {
+      "situation": "La persona debe asumir un rol de liderazgo en un equipo creativo, pero está más acostumbrada a trabajar sola. ¿Qué haría?",
+      "options": {
+        "13a": "Tratarlo como una oportunidad de crecimiento y aprender a liderar un equipo creativo",
+        "13b": "Usar la comprensión profunda del proceso creativo para guiar la dirección del equipo",
+        "13c": "Descomponer las tareas para que cada uno aproveche sus fortalezas, controlando la dirección central",
+        "13d": "Ser honesta con el equipo sobre no ser buena liderando y tratar de participar como asesora",
+        "13e": "Ansiosa por no liderar bien al equipo y afectar la calidad del trabajo, dudando sobre si aceptar",
+        "13f": "Solo querer crear a solas, cumplir el trámite y minimizar la comunicación con el equipo"
+      }
+    },
+    "14": {
+      "situation": "La filosofía creativa de la persona entra en conflicto con las expectativas familiares. La familia quiere que encuentre un trabajo «estable». ¿Qué haría?",
+      "options": {
+        "14a": "Dejar que la obra y los logros hablen y mostrar a la familia el valor del trabajo creativo",
+        "14b": "Comunicarse con paciencia con la familia y explicar sus elecciones y planes",
+        "14c": "Buscar un trabajo estable a tiempo parcial mientras persigue el arte, equilibrando realidad y sueños",
+        "14d": "Mantener mi elección y no importarme lo que piensen",
+        "14e": "Evitar las conversaciones con la familia, irse de casa y reducir el conflicto",
+        "14f": "Tener una discusión acalorada con la familia y que la relación llegue a un punto muerto"
+      }
+    },
+    "15": {
+      "situation": "La persona descubre que su inspiración creativa depende cada vez más de las herramientas de IA. ¿Cómo lo vería?",
+      "options": {
+        "15a": "Tratar la IA como una herramienta de asistencia, pero insistir en que las ideas creativas centrales deben salir de uno mismo",
+        "15b": "Abrazarse activamente a la IA y explorar nuevos modelos creativos de colaboración humano-máquina",
+        "15c": "Reducir el uso de la IA y volver deliberadamente a la creación manual o a las técnicas tradicionales",
+        "15d": "No preocuparse demasiado, la IA es solo una herramienta",
+        "15e": "Resistirse a la IA, considerando que amenaza el sustento de los creadores",
+        "15f": "Desarrollar miedo a la IA, preocuparse de ser sustituida y sentir ansiedad"
+      }
+    },
+    "16": {
+      "situation": "La persona participa en una residencia de artistas y debe compartir estudio con otros artistas cuyos hábitos creativos y horarios son completamente distintos. ¿Qué haría?",
+      "options": {
+        "16a": "Convocar proactivamente una reunión para establecer reglas compartidas del estudio y acuerdos de franjas horarias, creando orden primero",
+        "16b": "Conversar proactivamente con todos, entender sus hábitos creativos y necesidades y llegar a un compromiso juntos",
+        "16c": "Observar los hábitos de todos y ajustar mi propio horario para evitar conflictos",
+        "16d": "Tratar los hábitos y estilos de los distintos artistas como inspiración creativa, intentar incorporar el «choque» a la obra",
+        "16e": "Preocuparse de no llevarse bien con los demás y de que afecte al trabajo creativo, sentir ansiedad diaria, pero no atreverse a comunicarse",
+        "16g": "Ajustar mi propio horario para acomodar a todos, ceder todo lo posible y evitar el conflicto"
+      }
+    },
+    "17": {
+      "situation": "La persona descubre que las largas horas en el escritorio le han causado problemas de salud (por ejemplo, problemas cervicales, visión decreciente) y el médico le aconseja reducir el tiempo creativo. ¿Qué haría?",
+      "options": {
+        "17a": "Mejorar inmediatamente el puesto de trabajo: silla ergonómica, escritorio de pie y monitor de cuidado ocular, resolviendo el problema a nivel de hardware",
+        "17b": "Estudiar sistemáticamente las causas, crear un plan detallado de equilibrio trabajo-descanso y usar temporizadores Pomodoro para gestionar estrictamente cada sesión creativa",
+        "17c": "Consultar en detalle con un fisioterapeuta y un médico, crear un plan de tratamiento junto con la creación y hacer seguimientos periódicos",
+        "17d": "Reducir la producción creativa a la mitad, pero buscar una mayor calidad de terminación para cada obra, abriendo nuevas posibilidades con \"menos pero mejor\"",
+        "17e": "Preocuparse de que la salud falle y le obligue a renunciar a la creación, volverse cada vez más ansiosa, pero sin poder parar",
+        "17f": "Es solo un problema menor, todo creador tiene algunas dolencias profesionales, crear primero y lidiar con ello cuando sea realmente insoportable"
+      }
+    },
+    "18": {
+      "situation": "La persona es invitada a crear para una marca comercial cuyos valores no se alinean con los suyos. ¿Qué haría?",
+      "options": {
+        "18a": "Declinar el proyecto, sin querer crear para una marca que no se alinea con sus valores",
+        "18b": "Transmitir valores positivos a través de la obra creativa a su manera, intentando influir en la marca",
+        "18c": "Separar el trabajo de los valores personales y completar la obra creativa de forma profesional",
+        "18d": "Entender primero a fondo la marca y ver si hay puntos en común",
+        "18e": "Aceptar el proyecto por los ingresos, pero sentirse incómoda por dentro",
+        "18f": "Negarse públicamente y emitir un comunicado expresando oposición a los valores de la marca"
+      }
+    },
+    "19": {
+      "situation": "La persona tiene la oportunidad de mostrar su obra en otra ciudad o en una plataforma importante, pero tendría que asumir costes significativos. ¿Qué haría?",
+      "options": {
+        "19a": "Aprovechar la oportunidad y buscar formas de recaudar el dinero; merece la pena",
+        "19b": "Evaluar la relación coste-beneficio y ver si vale la pena",
+        "19c": "Buscar patrocinio o micromecenazgo para compartir los costes",
+        "19d": "Dejar pasar esta oportunidad y esperar a que las condiciones sean más favorables",
+        "19e": "Contactar con galerías, agentes o patrocinadores para buscar apoyo",
+        "19f": "Querer aprovechar la oportunidad pero preocuparse por los costes, atrapada en ansiedad"
+      }
+    },
+    "20": {
+      "situation": "Al repasar su carrera creativa, ¿qué valora más la persona?",
+      "options": {
+        "20a": "Haber creado obra que realmente conmueve a la gente",
+        "20b": "Hablar empujado los límites de forma continua y explorado las infinitas posibilidades del arte",
+        "20c": "Haber obtenido reconocimiento y respeto y tener un lugar en el mundo del arte",
+        "20d": "Poder ganarse la vida creando y disfrutar de libertad creativa",
+        "20e": "Influencer en la sociedad a través del arte y avanzar en ciertas cuestiones",
+        "20f": "Llevar una vida tranquila, poder seguir creando es suficiente, sin aspirar a logros"
+      }
+    }
+  },
+  "media": {
+    "1": {
+      "situation": "La persona publicó contenido que desató una polémica inesperada, con un gran número de comentarios negativos en la sección de comentarios. ¿Qué haría?",
+      "options": {
+        "1a": "Analizar con calma los puntos de controversia y publicar una respuesta sincera explicando las intenciones originales",
+        "1b": "Borrar el contenido controvertido y publicar una disculpa",
+        "1c": "Mantener su punto de vista y participar en un debate racional con los comentaristas",
+        "1d": "Dejar que se enfríe por ahora, esperar a que pase el revuelo antes de reevaluar",
+        "1e": "Surfar la ola y aprovechar la controversia para amplificar aún más el alcance; mala prensa también es prensa",
+        "1f": "Demasiado ansiosa para dormir, actualizar los comentarios repetidamente, afectada por los comentarios negativos durante mucho tiempo"
+      }
+    },
+    "2": {
+      "situation": "La persona nota que las métricas de su contenido están disminuyendo de forma constante y el crecimiento de seguidores se ha estancado. ¿Qué haría?",
+      "options": {
+        "2a": "Analizar a fondo los datos, identificar el problema y ajustar la estrategia de contenido",
+        "2b": "Probar tipos y estilos de contenido totalmente nuevos en busca de nuevas oportunidades de crecimiento",
+        "2c": "Volver a la pasión original y crear el contenido que realmente quiere; los datos no lo son todo",
+        "2d": "Referenciar a los competidores, ver qué contenido está en tendencia y replicar formatos exitosos",
+        "2e": "Considerar que las fluctuaciones de datos son normales y no preocuparse",
+        "2f": "Desahogarse en comunidades de creadores y preguntar a los colegas cómo afrontan los callejones sin salida"
+      }
+    },
+    "3": {
+      "situation": "La persona recibe una invitación de colaboración de marca, pero no conoce el producto. ¿Qué haría?",
+      "options": {
+        "3a": "Informarse primero a fondo sobre el producto y confirmar la calidad antes de decidir si colabora",
+        "3b": "Aceptar si el pago es adecuado, solo producir el contenido publicitario según lo solicitado",
+        "3c": "Declinar con cortesía los productos desconocidos, sin querer dañar la confianza de los seguidores",
+        "3d": "Comunicarse con la marca y solicitar probar el producto antes de tomar una decisión",
+        "3e": "Rechazar directamente todos los productos desconocidos; no voy a perder este contrato de todos modos",
+        "3f": "Pedir a un amigo experto que ayude a evaluar si la marca es fiable"
+      }
+    },
+    "4": {
+      "situation": "El contenido cuidadosamente elaborado por la persona tuvo una respuesta tibia, pero una pieza publicada casualmente se volvió viral. ¿Qué pensaría?",
+      "options": {
+        "4a": "Analizar las características del contenido viral, encontrar el patrón e incorporarlo a futuras creaciones",
+        "4b": "Mantener la cabeza fría; la viralidad tiene un elemento de azar, seguir centrándose en buen contenido",
+        "4c": "Aprovechar el impulso y crear una serie en torno al tema viral",
+        "4d": "Encontrarlo divertido y compartir el contraste con los seguidores",
+        "4e": "Considerar que los datos son inherentemente aleatorios y no analizarlo",
+        "4f": "Sentirse frustrada pero impotente y publicar un estado desahogándose de su mala suerte"
+      }
+    },
+    "5": {
+      "situation": "La persona descubre que alguien está republicando su contenido en otras plataformas sin darle crédito. ¿Qué haría?",
+      "options": {
+        "5a": "Presentar una queja a la plataforma por infracción de derechos de autor y solicitar la retirada",
+        "5b": "Contactar primero con la persona, comunicarse de forma amistosa y solicitar que añada el crédito",
+        "5c": "Añadir marcas de agua al contenido propio y reforzar la protección de derechos de autor",
+        "5d": "Considerar que la republicación es una forma de reconocimiento y no perseguirlo",
+        "5e": "Llamar públicamente la atención sobre el republicador y movilizar a los seguidores para condenarlo colectivamente",
+        "5f": "Aprovechar la oportunidad para crear un episodio especial sobre conciencia de derechos de autor, convirtiendo algo malo en contenido"
+      }
+    },
+    "6": {
+      "situation": "La persona recibe un mensaje privado con ataques personales viciosos. ¿Qué haría?",
+      "options": {
+        "6a": "Ignorar y bloquear, sin dejar que las emociones negativas le afecten",
+        "6b": "Hacer capturas de pantalla y guardar pruebas y reportar a las autoridades si es necesario",
+        "6c": "Debatir abiertamente sobre ciberacoso en la comunidad, pidiendo un comportamiento en línea racional",
+        "6d": "Sentirse dolido pero elegir no responder, dejar que la plataforma lo maneje",
+        "6e": "Responder con indignación, haciéndoles saber que conmigo no se meten",
+        "6f": "Emocionalmente devastada por los comentarios viciosos, con demasiado miedo para mirar los mensajes durante días, afectando al trabajo creativo normal"
+      }
+    },
+    "7": {
+      "situation": "La persona está considerando si \"aprovechar los temas en tendencia\" para aumentar la exposición. ¿Qué haría?",
+      "options": {
+        "7a": "Solo aprovechar las tendencias relevantes para su contenido que aporten valor, sin forzarlo",
+        "7b": "Aprovechar activamente las tendencias; en la era del tráfico, la exposición lo es todo",
+        "7c": "Interpretar la tendencia desde un ángulo único y ofrecer contenido diferenciado",
+        "7d": "No aprovechar las tendencias; mantenerse fiel al estilo propio",
+        "7e": "Considerar los temas en tendencia molestos y nunca prestar atención al contenido que sigue la moda",
+        "7f": "Interactuar con los seguidores y preguntarles qué piensan de la tendencia antes de decidir si cubrirla"
+      }
+    },
+    "8": {
+      "situation": "Desde que se convirtió en creador de contenido, el horario de la persona se ha vuelto cada vez más irregular — la edición nocturna es la norma, lo que afecta su salud física y su vida social. ¿Qué haría?",
+      "options": {
+        "8a": "Fijar un horario estricto, acotar el trabajo creativo a las horas del día, parar a tiempo y no trasnochar nunca",
+        "8b": "Analizar el propio ritmo de producción de contenido, grabar contenido en lotes por adelantado y acumular borradores para crear tiempo de respiración",
+        "8c": "Contratar a un asistente para compartir la carga de edición y gestión y centrarse solo en el trabajo creativo central",
+        "8d": "Reducir proactivamente la frecuencia de actualización y centrar la energía en elaborar contenido premium: menos pero mejor",
+        "8e": "Demasiado ansiosa para dormir, preocupada de que la salud colapse pero reacia a renunciar al tráfico, dudando sobre si tomar un descanso",
+        "8f": "No me importa, el cuerpo puede soportarlo, seguir produciendo más mientras haya impulso"
+      }
+    },
+    "9": {
+      "situation": "La cuenta de la persona recibe repentinamente un shadowban de la plataforma por razones desconocidas. ¿Qué haría?",
+      "options": {
+        "9a": "Analizar con calma el contenido reciente e investigar las posibles causas",
+        "9b": "Contactar con el servicio de atención al cliente de la plataforma para entender las razones concretas",
+        "9c": "Explicar la situación en el grupo de seguidores, mantener la frecuencia de actualización y esperar la recuperación",
+        "9d": "Empezar a operar en otras plataformas simultáneamente para diversificar el riesgo",
+        "9e": "Demasiado ansiosa para dormir, publicar un estado quejándose de la injusticia de la plataforma",
+        "9f": "Pedir consejo a colegas que también han sido sometidos a shadowban sobre cómo lo resolvieron"
+      }
+    },
+    "10": {
+      "situation": "La persona debe decidir si mostrar su rostro en el contenido; está dudándolo. ¿Qué haría?",
+      "options": {
+        "10a": "Evaluar primero el valor incremental que mostrar el rostro aporta al contenido; si vale la pena, intentarlo",
+        "10b": "Atraverse a probarlo con audacia; mostrar el rostro puede acercar la conexión con los seguidores",
+        "10c": "Seguir en el anonimato; mantener un aire de misterio también es un estilo",
+        "10d": "Probarlo a pequeña escala primero y ver cómo reaccionan los seguidores",
+        "10e": "No importarle en absoluto, mostrar o no el rostro es indiferente, lo que importa es el contenido en sí",
+        "10f": "Hablar con otros creadores que ya han mostrado su rostro sobre su experiencia real antes de decidir"
+      }
+    },
+    "11": {
+      "situation": "Los seguidores piden a la persona que evalúe a otro creador. ¿Qué haría?",
+      "options": {
+        "11a": "Evaluar solo la obra, no la persona, manteniendo profesionalidad y respeto",
+        "11b": "Expresar con franqueza mis opiniones: elogiar lo bueno y criticar lo malo",
+        "11c": "Declinar con cortesía, sin querer involucrarse en la evaluación de compañeros creadores",
+        "11d": "Desviar con humor, sin dar una respuesta directa",
+        "11e": "Negarse directamente y expresar desagrado por las peticiones de los seguidores",
+        "11f": "Devolver la pregunta a los seguidores, preguntando qué piensan los demás"
+      }
+    },
+    "12": {
+      "situation": "La persona nota que su estilo de contenido se ha desviado de forma significativa del posicionamiento original. ¿Qué pensaría?",
+      "options": {
+        "12a": "Es un proceso natural de evolución del contenido, siempre que los valores centrales no cambien",
+        "12b": "Reexaminar mi propio posicionamiento y hacer un ajuste consciente",
+        "12c": "Seguir las preferencias de los seguidores y el algoritmo",
+        "12d": "Volver a la pasión original y crear el contenido que me propuse hacer al principio",
+        "12e": "No importarle si el estilo cambia o no, siempre que haya tráfico, simplemente ir con la corriente",
+        "12f": "Disculparse ansiosamente con los seguidores, sintiendo que he defraudado a todos"
+      }
+    },
+    "13": {
+      "situation": "La persona está formando un equipo pequeño (asistente, editor, etc.) por primera vez y necesita pasar de creadora en solitario a gestora. ¿Qué haría?",
+      "options": {
+        "13a": "Aprender proactivamente gestión de equipos y establecer flujos de trabajo y división del labor claros",
+        "13b": "Pedir consejo práctico a colegas con experiencia en gestión de equipos",
+        "13c": "Usar herramientas de colaboración para descomponer y asignar tareas y visualizar el progreso para que todos sepan qué hacer",
+        "13d": "Probar modelos de trabajo nuevos como la colaboración remota asíncrona o las sociedades por proyecto, sin limitarse al empleo tradicional",
+        "13e": "Contratar primero a una persona como prueba, validar el proceso antes de expandir gradualmente el equipo",
+        "13f": "Demasiado ansiosa para dormir, preocupada de no poder gestionar bien el equipo y de defraudar a todos",
+        "13g": "No importarle, dejar que las cosas sigan su curso — las personas contratadas averiguarán el trabajo por sí mismas, no hace falta gestionarlas deliberadamente"
+      }
+    },
+    "14": {
+      "situation": "La persona enfrenta una decisión: unirse a una agencia MCN para obtener más recursos o mantenerse independiente. ¿Qué elegiría?",
+      "options": {
+        "14a": "Estudiar con cuidado las cláusulas del contrato y evaluar el valor real que puede aportar una MCN",
+        "14b": "Unirse a la MCN, considerando que un equipo profesional puede ayudar a crecer más rápido",
+        "14c": "Mantenerme independiente, sin querer estar atada por contratos; la libertad es lo más importante",
+        "14d": "Conversar con colegas que ya han firmado y entender la situación real antes de decidir",
+        "14e": "No importarme si firmar o no, decidir según el humor, dejarlo estar",
+        "14f": "Demasiado ansiosa para dormir, agonizando sobre qué elección es mejor"
+      }
+    },
+    "15": {
+      "situation": "La persona descubre que su inspiración creativa se ha agotado y no sabe qué crear. ¿Qué haría?",
+      "options": {
+        "15a": "Tomarse un descanso de la publicación, ir de vacaciones, experimentar la vida y recopilar material",
+        "15b": "Consumir una gran cantidad de contenido de colegas en busca de inspiración",
+        "15c": "Interactuar con los seguidores y escuchar lo que quieren ver",
+        "15d": "Seguir publicando, aunque baje la calidad, mantener la frecuencia",
+        "15e": "Si la inspiración se ha ido, se ha ido — dejar de intentarlo por ahora y tumbarse un rato",
+        "15f": "Reunir a otros creadores para una sesión de lluvia de ideas y despertar inspiración mutuamente"
+      }
+    },
+    "16": {
+      "situation": "Los seguidores piden a la persona verse en persona. ¿Qué haría?",
+      "options": {
+        "16a": "Organizar un encuentro con seguidores e interactuar con ellos en un entorno seguro y controlado",
+        "16b": "Declinar con cortesía un encuentro personal y mantener una distancia adecuada entre creador y audiencia",
+        "16c": "Quedar en un lugar público, asegurando la seguridad",
+        "16d": "Contenta de recibir la invitación y aceptar de buena gana",
+        "16e": "Negarse directamente, considerando que los seguidores pidan verse es inapropiado",
+        "16f": "Pedir consejo a colegas con experiencia sobre las precauciones para encuentros en persona"
+      }
+    },
+    "17": {
+      "situation": "La persona se descubre cada vez más dependiente de los datos y las recomendaciones del algoritmo en la creación de contenido, habiendo perdido el disfrute de crear. ¿Qué haría?",
+      "options": {
+        "17a": "Redescubrir la pasión original por la creación y hacer el contenido que realmente quiere",
+        "17b": "Encontrar un equilibrio entre las decisiones basadas en datos y la expresión creativa",
+        "17c": "Aceptar la realidad: ser creador de contenido significa tener una mentalidad orientada a los datos",
+        "17d": "Crear una cuenta secundaria específicamente para el contenido que realmente quiere hacer",
+        "17e": "Ansiosa y perdida, publicar un estado desahogándose de lo agotador que es ser creador de contenido",
+        "17f": "Hablar con otros creadores de contenido sobre cómo equilibran los datos y la creatividad"
+      }
+    },
+    "18": {
+      "situation": "La persona quiere aprender una habilidad nueva (por ejemplo, edición de vídeo, análisis de datos, fotografía) para mejorar la calidad del contenido, pero dispone de tiempo limitado. ¿Qué haría?",
+      "options": {
+        "18a": "Matricularme resueltamente en un curso sistemático, estudiar paso a paso y construir una base sólida",
+        "18b": "Buscar a un colega experto en esta área y pedirle que me tutorice desde cero",
+        "18c": "Identificar las áreas débiles y usar tiempo fragmentado para ver tutoriales específicos y cubrir carencias",
+        "18d": "Aprender haciendo en proyectos reales, adquiriendo las habilidades necesarias para cada proyecto",
+        "18e": "Ansiosa y agonizando sobre qué habilidad sería más útil, incapaz de comprometerse a empezar",
+        "18f": "No me importa, el nivel de habilidad actual es suficiente, aprender cosas nuevas es demasiado agotador —mejor refinar lo que ya existe"
+      }
+    },
+    "19": {
+      "situation": "Han surgido facciones opuestas entre los seguidores de la persona, que se atacan mutuamente e incluso la arrastran a ella. ¿Qué haría?",
+      "options": {
+        "19a": "Emitir de inmediato un comunicado, instando a los seguidores a discutir racionalmente y oponiéndose claramente a los ataques personales",
+        "19b": "Escuchar por separado las preocupaciones de ambas partes, actuar como puente para mediar el conflicto",
+        "19c": "Establecer normas de comunidad que prohíban explícitamente los ataques personales y banear inmediatamente a los infractores",
+        "19d": "Convertir el conflicto de seguidores en un tema de discusión, guiando a todos hacia el pensamiento racional",
+        "19e": "No responder por ahora, esperar a que el revuelo pase por sí solo, considerando que el tiempo lo difumina todo",
+        "19f": "Demasiado ansiosa para mirar los mensajes, sintiendo que ha fracasado en gestionar la comunidad de seguidores, cayendo en la autoculpabilidad",
+        "19g": "No importarle, el drama entre seguidores es normal, solo verlo como entretenimiento, no involucrarse"
+      }
+    },
+    "20": {
+      "situation": "Al repasar el camino de creación de contenido, ¿qué valora más la persona?",
+      "options": {
+        "20a": "Haber influenciado a muchas personas a través del contenido y haber forjado conexiones genuinas",
+        "20b": "Haber logrado la autoexpresión y haber encontrado mi propia voz",
+        "20c": "Haber obtenido independencia financiera y un estilo de vida libre",
+        "20d": "Aprendizaje y crecimiento continuos, convertirme en una versión mejor de mí misma",
+        "20e": "No importarle lo que se valore más, simplemente vivir al día, no haber pensado tan profundamente",
+        "20f": "Valorar sobre todo el vínculo con los seguidores y los amigos; son lo más importante"
+      }
+    }
+  },
+  "teacher": {
+    "1": {
+      "situation": "La persona nota que un estudiante del que es responsable tiene un comportamiento anormal últimamente, con notas y estado que han disminuido significativamente de forma repentina, y que se desconecta con frecuencia o parece deprimido. ¿Qué haría?",
+      "options": {
+        "1a": "Hablar con el estudiante en privado después de clase para entender las razones subyacentes",
+        "1b": "Contactar con los padres para entender la situación familiar y buscar conjuntamente una solución",
+        "1c": "Prestar más atención al estudiante en el trabajo diario y las interacciones, dándole más ánimo y oportunidades",
+        "1d": "Pedir al orientador escolar o a un profesional que intervenga y evalúe de forma profesional la situación del estudiante",
+        "1e": "No actuar por ahora, considerar la fluctuación normal y observar durante un tiempo",
+        "1f": "Sentir mucha ansiedad, preguntarse repetidamente si algo va mal en su propia enseñanza, pero no saber cómo ayudar"
+      }
+    },
+    "2": {
+      "situation": "La persona preparó con esmero una clase pública/de muestra/exhibición, pero los resultados quedaron muy por debajo de las expectativas, con una participación estudiantil muy baja. ¿Qué haría?",
+      "options": {
+        "2a": "Repasar la clase con cuidado después, analizar los problemas y rediseñar el plan",
+        "2b": "Pedir consejo a colegas con experiencia y aprender de sus métodos",
+        "2c": "Ajustar la mentalidad; un fracaso no lo define todo",
+        "2d": "Probar a rediseñar el contenido de una forma más interactiva y atractiva",
+        "2e": "Sentirse frustrada y derrotada, sin poder superarlo durante un tiempo, evitando oportunidades similares de exhibición",
+        "2f": "Repasar mentalmente cada detalle de la clase, preocupándose por cómo la juzgarán los líderes y los colegas, sin poder comer ni dormir bien durante días"
+      }
+    },
+    "3": {
+      "situation": "La persona considera que una reforma o política educativa introducida por el centro es poco razonable, pero los colegas parecen haberla aceptado. ¿Qué haría?",
+      "options": {
+        "3a": "Organizar sus ideas y pruebas y presentar objeciones razonadas en las reuniones",
+        "3b": "Probar a optimizar primero en su propio trabajo y demostrar la viabilidad con la práctica",
+        "3c": "Seguir el arreglo del centro y ejecutar según lo solicitado",
+        "3d": "Discutir en privado con colegas de confianza para sondear lo que piensan todos",
+        "3e": "Cumplir exteriormente con los requisitos pero en realidad seguir trabajando como antes",
+        "3f": "Estar muy en desacuerdo pero no atreverse a hablar, dudar repetidamente sobre si expresar su postura, preocupada de que hablar ofenda a los líderes y que guardar silencio se sienta opresivo"
+      }
+    },
+    "4": {
+      "situation": "La persona descubre que en el grupo de estudiantes del que es responsable se están formando camarillas que excluyen a estudiantes individuales. ¿Qué haría?",
+      "options": {
+        "4a": "Diseñar actividades de colaboración en equipo para romper barreras a través de la cooperación",
+        "4b": "Hablar con cada parte por separado para entender la situación y guiar a todos a respetarse mutuamente",
+        "4c": "Debatir abiertamente la importancia del respeto y la inclusión en el grupo",
+        "4d": "Centrarse en el estudiante excluido, dándole más apoyo y ánimo",
+        "4e": "Considerar que es un problema menor entre estudiantes y no intervenir proactivamente, dejar que siga su curso",
+        "4f": "Muy preocupada de que la situación se agrave y temerosa de que una intervención inadecuada pueda empeorar el conflicto, agonizando repetidamente sobre cómo manejarlo"
+      }
+    },
+    "5": {
+      "situation": "La persona descubre a un estudiante copiando o plagiando en un examen o trabajo. ¿Cómo lo manejaría?",
+      "options": {
+        "5a": "Actuar según las normas del centro, pero hablar después con el estudiante para entender las razones y orientarlo",
+        "5b": "Actuar con rigor, asegurándose de que el estudiante entienda la importancia de la integridad",
+        "5c": "Dar una advertencia, hacer que el estudiante escriba una autocrítica y prometa no reincidir",
+        "5d": "Debatir anónimamente la cuestión de la integridad en el grupo, sin señalar al estudiante concreto",
+        "5e": "Reportarlo a los líderes o departamentos pertinentes, siguiendo los procedimientos establecidos",
+        "5f": "Muy conflictiva: temerosa de que un manejo estricto dañe la autoestima del estudiante, pero también de que la indulgencia no sirva de disuasivo, dudando repetidamente sobre el enfoque correcto"
+      }
+    },
+    "6": {
+      "situation": "La persona se da cuenta de que sufre agotamiento en su trabajo docente y ha perdido la paciencia con los estudiantes. ¿Qué haría?",
+      "options": {
+        "6a": "Buscar proactivamente apoyo psicológico profesional y afrontar el agotamiento de frente",
+        "6b": "Probar nuevos métodos de trabajo para inyectar frescura en la rutina diaria",
+        "6c": "Comunicarse con los colegas y compartir sus problemas laborales y sentimientos",
+        "6d": "Reducir temporalmente el trabajo adicional y dejar margen para la recuperación",
+        "6e": "Elegir pasar de largo, completando solo las tareas básicas según el manual, sin buscar más avances",
+        "6f": "Caer en la autoculpabilidad y la ansiedad profundas, sentirse incapacitada para ser profesora pero sin saber qué más hacer, drenándose emocionalmente de forma repetida"
+      }
+    },
+    "7": {
+      "situation": "La persona debe orientar a un estudiante con malos hábitos de comportamiento que no mejora a pesar de los intentos. ¿Qué haría?",
+      "options": {
+        "7a": "Investigar a fondo los antecedentes familiares y la crianza del estudiante para encontrar las causas raíz del comportamiento",
+        "7b": "Construir una relación de confianza con el estudiante y guiarlo gradualmente con paciencia y sinceridad",
+        "7c": "Establecer normas de comportamiento claras y mecanismos de recompensa y castigo, aplicándolos con rigor",
+        "7d": "Asignar al estudiante responsabilidades positivas, usando la motivación para cambiar el comportamiento",
+        "7e": "Contactar con los padres y otros profesores relevantes para discutir estrategias conjuntamente",
+        "7f": "Sentirse muy derrotada e impotente, dudando repetidamente de su propia capacidad, dividida sobre si rendirse con el estudiante"
+      }
+    },
+    "8": {
+      "situation": "La persona debe participar en una tarea administrativa no relacionada con la enseñanza ni con las funciones centrales, lo que le quita mucho tiempo de preparación del trabajo principal. ¿Qué haría?",
+      "options": {
+        "8a": "Comunicarse con el liderazgo, explicando que las funciones centrales ya están saturadas, y solicitar una asignación razonable",
+        "8b": "Hacerlo lo mejor posible, pero mejorar la eficiencia para minimizar el impacto en el trabajo central",
+        "8c": "Cumplir con el arreglo, priorizar el trabajo central y retrasar la tarea administrativa todo lo posible",
+        "8d": "Coordinar con los colegas para ver si pueden compartir la carga",
+        "8e": "Negarse directamente, considerando que está fuera del alcance de las responsabilidades de un educador",
+        "8f": "Compaginar la tarea administrativa mientras se preocupa por fracasar en las funciones centrales, sin gestionar bien ninguna, demasiado ansiosa para dormir"
+      }
+    },
+    "9": {
+      "situation": "Entre los estudiantes de los que la persona es responsable, hay uno muy talentoso pero con mala actitud hacia el aprendizaje. ¿Qué haría?",
+      "options": {
+        "9a": "Descubrir los intereses del estudiante y usar contenido desafiante para encender su motivación",
+        "9b": "Hablar con el estudiante individualmente y ayudarle a reconocer su potencial",
+        "9c": "Fijar metas más altas para el estudiante y usar una presión moderada para desbloquear su potencial",
+        "9d": "Hacer que asuma tareas de tutoría, construyendo responsabilidad a través de la enseñanza",
+        "9e": "Recomendar al estudiante para concursos o clubes, dándole más espacio para desarrollar su talento",
+        "9f": "Considerar que el talento sin la actitud adecuada no sirve de nada y no querer molestarse"
+      }
+    },
+    "10": {
+      "situation": "La persona recibe una queja de un padre que cree que su hijo ha sido tratado de forma injusta o calificado de manera poco razonable. ¿Qué haría?",
+      "options": {
+        "10a": "Escuchar con paciencia las preocupaciones del padre, mostrar los registros y criterios de calificación pertinentes, y resolver los malentendidos mediante comunicación racional",
+        "10b": "Autoexaminarme primero si hubo alguna omisión en mi trabajo; si la hubo, disculparme con sinceridad y mejorar; si no, explicar con razonamiento",
+        "10c": "Mantener mi juicio profesional, considerando que la calificación está bien fundamentada y no aceptar acusaciones poco razonables",
+        "10d": "Invitar al coordinador de curso o a un líder a unirse a la reunión, ya que un tercero la hace más justa",
+        "10e": "Calmar adecuadamente las emociones del padre y, en la práctica, prestar más atención y dar más oportunidades al estudiante",
+        "10f": "Muy nerviosa, preocupada de que el padre escale el asunto al liderazgo y le afecte, dudando repetidamente si hizo algo mal, dividida sobre si explicárselo proactivamente al liderazgo",
+        "10g": "Considerar que el padre es poco razonable, no querer perder el aliento —que se queje si quiere, y seguir haciendo las cosas de la misma manera"
+      }
+    },
+    "11": {
+      "situation": "La persona descubre a un estudiante adicto a los juegos de móvil o a internet, lo que afecta seriamente a su aprendizaje. ¿Qué haría?",
+      "options": {
+        "11a": "Comunicarse con los padres y coordinar los esfuerzos de escuela y familia para gestionar el uso de dispositivos del estudiante",
+        "11b": "Debatir los pros y los contras de los dispositivos electrónicos en grupo, guiando a los estudiantes hacia la autogestión",
+        "11c": "Incorporar elementos de juego en la enseñanza o las actividades, usando la gamificación para despertar el interés por aprender",
+        "11d": "Establecer normas estrictas para el uso de dispositivos electrónicos",
+        "11e": "Reportarlo al centro y sugerir una política de gestión unificada para toda la escuela",
+        "11f": "Considerar que es un fenómeno generalizado, imposible de gestionar y que los padres pueden no hacer caso, así que dejarlo estar"
+      }
+    },
+    "12": {
+      "situation": "A la persona le piden que pruebe un modelo o método de enseñanza totalmente nuevo en el nuevo semestre. ¿Qué haría?",
+      "options": {
+        "12a": "Abrazar el cambio con positividad, estudiar con cuidado el nuevo modelo e integrarlo con su propio estilo de trabajo",
+        "12b": "Probarlo primero a pequeña escala y decidir si adoptarlo por completo tras observar los resultados",
+        "12c": "Ejecutar según lo requerido y ajustar gradualmente en la práctica",
+        "12d": "Discutir con los colegas y explorar conjuntamente la mejor forma de implementarlo",
+        "12e": "Preocuparse por el fracaso, retrasar el inicio y esperar a que otros tengan experiencia madura antes de probar",
+        "12f": "Muy preocupada de equivocarse y afectar a las notas de los estudiantes, dudando repetidamente sobre si mantener primero el método antiguo, vacilando y sin atreverse a probar"
+      }
+    },
+    "13": {
+      "situation": "La persona descubre a un estudiante que muestra signos de autolesión o tendencias suicidas. ¿Qué haría?",
+      "options": {
+        "13a": "Contactar de inmediato con el orientador escolar y los padres e iniciar los procedimientos de intervención en crisis",
+        "13b": "Hablar primero con el estudiante en privado y entender la situación antes de decidir el siguiente paso",
+        "13c": "Seguir los procedimientos de seguridad del centro, reportar y documentar, sin manejarlo de forma independiente",
+        "13d": "Crear un ambiente cálido y de apoyo en el grupo y vigilar discretamente al estudiante",
+        "13e": "Movilizar múltiples recursos (padres, orientador, compañeros) para construir un sistema de apoyo integral",
+        "13f": "Muy temerosa de que un manejo inadecuado pueda derivar en una tragedia, agonizando repetidamente sobre si intervenir y cómo hacerlo sin angustiar al estudiante, sin poder dormir en toda la noche"
+      }
+    },
+    "14": {
+      "situation": "La persona debe presentar una actividad educativa (como una clase pública, una actividad de investigación didáctica o una demostración) ante colegas, con varios compañeros destacados reconocidos presentes. ¿Qué haría?",
+      "options": {
+        "14a": "Tratarlo como una oportunidad de aprendizaje, prepararse con diligencia y no preocuparse por las comparaciones",
+        "14b": "Darlo todo y diseñar con cuidado la actividad para mostrar su mejor versión",
+        "14c": "Innovar en el diseño del contenido y usar un enfoque único para diferenciarse",
+        "14d": "Aprender de los compañeros destacados e intercambiar ideas proactivamente después",
+        "14e": "Sentirse nerviosa y ansiosa, preocupándose de rendir peor que los demás, agonizando repetidamente sobre la preparación",
+        "14f": "Indiferente —es solo completar una tarea, bastante bien está bien, no hay necesidad de competir con los compañeros destacados"
+      }
+    },
+    "15": {
+      "situation": "La persona descubre que ciertos contenidos del libro de texto o los materiales en uso pueden estar desactualizados o ser inexactos. ¿Qué haría?",
+      "options": {
+        "15a": "Investigar los materiales más recientes y complementar en clase o tutorías con información actualizada y más precisa",
+        "15b": "Plantear el problema en el grupo de investigación didáctica o departamento e impulsar la actualización de los materiales",
+        "15c": "Enseñar según el libro de texto, considerando que ha sido revisado y no causará problemas",
+        "15d": "Recordar a los estudiantes las limitaciones del libro de texto",
+        "15e": "Considerar que no es mi responsabilidad y no involucrarme",
+        "15f": "Pensar que puede haber un error pero no estar segura —temerosa de que corregirlo pueda enseñar algo equivocado, y de que no corregirlo pueda engañar a los estudiantes, dudando repetidamente sobre si plantearlo"
+      }
+    },
+    "16": {
+      "situation": "La persona debe publicar artículos o investigar para la evaluación de su título profesional, pero el trabajo diario ya es muy ocupado. ¿Qué haría?",
+      "options": {
+        "16a": "Reservar proactivamente bloques de tiempo dedicados y dedicar tardes y fines de semana a la investigación, redactar el artículo primero",
+        "16b": "Hacer un inventario del trabajo actual y del tiempo disponible, crear un calendario detallado y avanzar sistemáticamente en la investigación con tiempo fragmentado",
+        "16c": "Buscar colegas afines para colaborar en la investigación, repartir responsabilidades y compartir resultados para reducir la presión individual",
+        "16d": "Explicar proactivamente al centro las necesidades de evaluación del título y solicitar una reducción de horas lectivas o un ajuste del trabajo para liberar tiempo de investigación",
+        "16e": "Integrar la investigación con la enseñanza diaria, usando la investigación-acción para que trabajo e investigación se refuercen mutuamente",
+        "16f": "Sentir ansiedad solo de pensar en redactar artículos; demasiado agotada por la enseñanza durante el día, trasnochar leyendo materiales por la noche sin lograr escribir nada, drenándose repetidamente",
+        "16g": "Considerar que la evaluación del título es demasiado problemática, que la enseñanza ya es bastante agotadora, que los artículos pueden esperar y no complicarse"
+      }
+    },
+    "17": {
+      "situation": "La persona tiene un desacuerdo fundamental con un colega sobre la filosofía de enseñanza y discute con frecuencia durante las actividades de investigación didáctica. ¿Qué haría?",
+      "options": {
+        "17a": "Concertar proactivamente una conversación privada, expresar sus puntos de vista con honestidad y escuchar con sinceridad a la otra parte, esforzándose por encontrar terreno común",
+        "17b": "Organizar los datos didácticos y los casos de estudiantes detrás de su filosofía y persuadir al otro con hechos y evidencia",
+        "17c": "Mantener su filosofía de enseñanza y argumentar con firmeza en los debates de investigación, impulsando su plan",
+        "17d": "Intentar fusionar las partes razonables de ambas filosofías y diseñar un nuevo plan que acomode a todas las partes",
+        "17e": "Pedir al líder de investigación didáctica o a un experto del centro que medie, usando una perspectiva de tercero para resolver el desacuerdo",
+        "17f": "Minimizar el contacto con este colega, hablar menos durante los debates de investigación y evitar el enfrentamiento directo",
+        "17g": "Ansiosa antes de cada debate de investigación, temiendo otra discusión, y después dudando repetidamente de lo que dijo, emocionalmente agotada"
+      }
+    },
+    "18": {
+      "situation": "La persona descubre a dos estudiantes teniendo una acalorada discusión durante la clase o una actividad grupal. ¿Qué haría?",
+      "options": {
+        "18a": "Dejar primero que ambas partes se calmen y luego entender la situación de cada una por separado después de clase, manejándolo con justicia",
+        "18b": "Intervenir de inmediato con una crítica severa y hacer que ambas partes reconozcan sus errores",
+        "18c": "Usar esto como momento educativo y hacer que toda la clase debata formas de resolver conflictos",
+        "18d": "Hacer que cada parte escriba un relato de lo ocurrido, usando la escritura como reflexión",
+        "18e": "Dejarse afectar emocionalmente, perder los estribos y criticar a ambas partes en el momento",
+        "18f": "En pánico y sin saber qué hacer en el momento, después dudando repetidamente de si lo manejó correctamente, preocupándose de que los padres vengan a quejarse"
+      }
+    },
+    "19": {
+      "situation": "La persona reflexiona sobre su carrera docente: ¿de dónde proviene su mayor sensación de logro?",
+      "options": {
+        "19a": "Ver a los estudiantes crecer y mejorar y convertirse en miembros útiles de la sociedad",
+        "19b": "Innovar de forma continua en su trabajo y desarrollar su propio estilo profesional",
+        "19c": "Recibir el reconocimiento y el respeto de los estudiantes, los padres y los colegas",
+        "19d": "Haber formado promociones de estudiantes destacados, con antiguos alumnos por todas partes",
+        "19e": "Mejorar de forma continua a través de la investigación educativa y la innovación práctica e influir e inspirar a más colegas",
+        "19f": "Ninguna sensación de logro en particular; el trabajo es solo un empleo, completar la rutina y cobrar el salario"
+      }
+    }
+  },
+  "doctor": {
+    "1": {
+      "situation": "La persona se enfrenta al familiar de un paciente que está emocionalmente abrumado e incapaz de aceptar los resultados actuales de las pruebas o el cambio en su estado. ¿Qué haría?",
+      "options": {
+        "1a": "Explicar la situación en un lenguaje amable pero profesional, brindando al mismo tiempo apoyo emocional y comprensión a la familia",
+        "1b": "Dar a la familia algo de tiempo para calmarse y luego organizar una conversación de seguimiento detallada",
+        "1c": "Informarles directamente de la situación y de los próximos pasos, generando confianza a través del profesionalismo",
+        "1d": "Pedir a otros colegas o personal dedicado que ayuden a calmar a la familia mientras sigue atendiendo a otros pacientes",
+        "1e": "Sentirse también muy triste, con los ojos llorosos, compartir el dolor de la familia",
+        "1f": "Las emociones de la familia también me ponen nervioso, preocupándome repetidamente de que una mala comunicación pueda llevar a quejas, las palabras me llegan a los labios pero las contengo",
+        "1g": "Evitar el contacto directo con la familia, dejar que el supervisor de enfermería u otros colegas se encarguen de la comunicación, terminar mis tareas e irme rápido"
+      }
+    },
+    "2": {
+      "situation": "Mientras está de guardia, llegan varios pacientes en estado crítico al mismo tiempo y el personal es claramente insuficiente. ¿Qué haría?",
+      "options": {
+        "2a": "Evaluar rápidamente la urgencia de cada paciente, priorizar por gravedad y pedir refuerzos al mismo tiempo",
+        "2b": "Mantener la calma y la compostura, atender a los pacientes uno por uno, asegurando que cada uno reciba atención básica",
+        "2c": "Coordinar las asignaciones del equipo y asumir yo mismo el caso más crítico",
+        "2d": "Seguir los procedimientos estándar mientras notifico al supervisor o al responsable de guardia",
+        "2e": "Tan en pánico que las manos me tiemblan, la mente se queda en blanco, apenas gestionando pero con muy baja eficiencia",
+        "2f": "Atender solo a los pacientes de los que soy responsable"
+      }
+    },
+    "3": {
+      "situation": "La persona descubre que el departamento tiene tendencia al sobretratamiento o a la facturación poco razonable en algunos flujos de trabajo, pero corregirlo afectaría a los ingresos del departamento. ¿Qué haría?",
+      "options": {
+        "3a": "Mantener mis principios y ofrecer solo los servicios basados en las necesidades reales del paciente",
+        "3b": "Comunicarme con los pacientes y dejar que ellos decidan si necesitan servicios adicionales",
+        "3c": "Seguir la práctica del departamento siempre que se garantice la seguridad médica",
+        "3d": "Reportar el conflicto a los superiores e impulsar una mejora sistémica",
+        "3e": "Sumarme a la mayoría: hacer lo que hacen los demás en el departamento y no destacar",
+        "3f": "Profundamente dividida —no quiere violar los principios pero también teme ofender al departamento, sopesando repetidamente las opciones sin lograr decidirse, incómoda incluso cuando sigue la convención"
+      }
+    },
+    "4": {
+      "situation": "El propio error laboral de la persona ha causado un impacto adverso en un paciente. ¿Cómo lo enfrentaría?",
+      "options": {
+        "4a": "Afrontar el error con honestidad, disculparse de inmediato con el paciente y la familia y trabajar activamente para remediarlo",
+        "4b": "Realizar una revisión en profundidad, analizar la causa del error y establecer mecanismos de prevención para evitar reincidencias",
+        "4c": "Compartir este caso en una reunión del departamento para que todos aprendan de él",
+        "4d": "Sentirse muy culpable por dentro, pero intentar que no afecte al trabajo posterior",
+        "4e": "Intentar evitar al paciente y a la familia, esperando que el tiempo diluya el asunto, sin querer plantearlo proactivamente",
+        "4f": "Trasnochar repitiendo el error mentalmente, preocupada de que la culpen y de que afecte a mi ascenso; trabajar como siempre pero profundamente ansiosa por dentro"
+      }
+    },
+    "5": {
+      "situation": "La persona se encuentra con un paciente que rechaza una prueba o tratamiento necesario, alegando \"miedo\" o \"desconfianza\". ¿Qué haría?",
+      "options": {
+        "5a": "Explicar la necesidad y la seguridad de la prueba o tratamiento en lenguaje llano y accesible para disipar su miedo",
+        "5b": "Pedir a la familia del paciente que ayude a persuadirlo",
+        "5c": "Respetar los deseos del paciente, pero informarle plenamente de las consecuencias de rechazar y obtener una firma de acuse de recibo",
+        "5d": "Encontrar casos de éxito con situaciones similares y usar los hechos para persuadir al paciente",
+        "5e": "Invitar a un paciente que pasó por una experiencia similar y se recuperó con éxito a que comparta su historia, usando un testimonio real para conmoverlo",
+        "5f": "Si no quiere escuchar, así sea —el paciente firma y asume la responsabilidad, no hace falta agotarme por la terquedad de otra persona",
+        "5g": "Preocuparse repetidamente de que le pase algo al paciente y de que me culpen, pero temer que presionar demasiado cause un conflicto, dividida por dentro sin saber qué hacer"
+      }
+    },
+    "6": {
+      "situation": "La persona lleva trabajando de forma continuada durante mucho tiempo, física y mentalmente agotada, pero todavía hay pacientes que necesitan atención. ¿Qué haría?",
+      "options": {
+        "6a": "Con la seguridad del paciente garantizada, pasar el relevo a un colega y tomar un breve descanso",
+        "6b": "Resistir; el deber de un profesional médico es priorizar al paciente",
+        "6c": "Usar café u otros estimulantes para forzarme a mantener la concentración",
+        "6d": "Reportar al liderazgo que la programación de turnos es poco razonable y solicitar mejoras",
+        "6e": "Aceptar esta intensidad de trabajo como la norma, simplemente aguantar; una eficiencia menor es lo que hay",
+        "6f": "Resistir mientras me preocupan repetidamente los errores, cuanto más agotada más ansiosa, la eficiencia sigue bajando pero no puedo parar"
+      }
+    },
+    "7": {
+      "situation": "La persona nota que un colega no sigue estrictamente los protocolos de higiene de manos y control de infecciones antes de un procedimiento clínico. ¿Qué haría?",
+      "options": {
+        "7a": "Recordárselo de inmediato; la seguridad del control de infecciones no es asunto menor",
+        "7b": "Recordárselo al colega en privado para evitar avergonzarlo frente a los demás",
+        "7c": "Debatir el cumplimiento de los protocolos en una reunión del departamento sin señalar a nadie",
+        "7d": "Observar en silencio y, si la persona lo corrige después, dejarlo pasar",
+        "7e": "Pensar que un pequeño desliz no causará un gran problema, mejor no hacer olas, así que no decir nada",
+        "7f": "Querérselo recordar pero preocuparse de dañar la relación con el colega, y a la vez preocuparse de que me culpen si algo sale mal, agonizar mucho y acabar sin hacer nada"
+      }
+    },
+    "8": {
+      "situation": "La persona enfrenta una decisión: continuar en el trabajo clínico de primera línea o pasar a un rol de gestión. ¿Qué haría?",
+      "options": {
+        "8a": "Solicitar proactivamente el rol de gestión, con la esperanza de impulsar el desarrollo del departamento a nivel sistémico e impactar a más personas",
+        "8b": "Primero entender a fondo las responsabilidades del rol de gestión y la trayectoria profesional, probarlo durante un período antes de decidir",
+        "8c": "Conversar extensamente con mentores con experiencia y con la familia, buscando consejo desde distintas perspectivas antes de decidir",
+        "8d": "Buscar compaginar lo clínico y lo gestor, mantenerse en primera línea participando en el liderazgo del departamento y explorar una carrera híbrida",
+        "8e": "Elegir quedarme en el trabajo clínico; salvar pacientes directamente es por lo que entré en esta profesión y no puedo renunciar a la clínica",
+        "8f": "Dividida sin fin: preocupada de perder las habilidades clínicas en la gestión, pero sintiendo un desarrollo limitado si se queda en lo clínico, agonizando durante meses sin decidir, ansiosa hasta el insomnio",
+        "8g": "No importa —lo que el líder disponga, lo haré. Todo es trabajo, igual vaya donde vaya"
+      }
+    },
+    "9": {
+      "situation": "La persona discrepa con el director del departamento sobre un plan de tratamiento; considera que hay un enfoque mejor. ¿Qué haría?",
+      "options": {
+        "9a": "Revisar la literatura y los datos clínicos más recientes, recopilar la evidencia y discutirlo con el director cara a cara, usando la evidencia para respaldar mi enfoque",
+        "9b": "Expresar mis opiniones de forma privada y sincera al director, escuchando con humildad sus preocupaciones y buscando terreno común",
+        "9c": "Presentar mi plan abiertamente en una sesión de casos del departamento, invitando a todos a evaluarlo y debatirlo",
+        "9d": "Seguir primero el plan conservador del director, mientras se monitorea de cerca el estado del paciente y se prepara una alternativa, planteándola si es necesario",
+        "9e": "Pensar que mi plan es correcto pero no atreverme a insistir, también temerosa de que me culpen si el plan del director sale mal, dividida pero demasiado asustada para hablar",
+        "9f": "El director tiene experiencia, solo seguir su guía; ¿para qué arriesgarme? Seguir órdenes es lo más fácil"
+      }
+    },
+    "10": {
+      "situation": "La persona enfrenta un dilema: el Plan A es mejor para el paciente pero conlleva mayor riesgo, mientras que el Plan B es conservador con eficacia limitada. ¿Qué haría?",
+      "options": {
+        "10a": "Informar plenamente a los implicados de los pros y los contras de ambos planes, respetando la elección del paciente o la familia",
+        "10b": "Recomendar el plan óptimo basándose en el juicio profesional y usar datos para persuadir",
+        "10c": "Discutir con los colegas del departamento y buscar consenso",
+        "10d": "Elegir el Plan B más seguro para evitar disputas médicas",
+        "10e": "Proponer un tercer plan combinado que fusione las fortalezas de ambos y explorarlo junto con todas las partes implicadas",
+        "10f": "Sopesar ambas opciones repetidamente, preocupada de que me culpen si elijo mal, incapaz de decidir y pasárselo a los superiores o a la familia"
+      }
+    },
+    "11": {
+      "situation": "La persona tiene una oportunidad importante de formación profesional (curso, beca, intercambio académico), pero el departamento está corto de personal y muy ocupado. ¿Qué haría?",
+      "options": {
+        "11a": "Coordinar los horarios con los colegas para intentar asistir; el aprendizaje también beneficia al trabajo",
+        "11b": "Renunciar a asistir; la atención al paciente no puede retrasarse",
+        "11c": "Aprender a través de medios en línea o estudiar los materiales después",
+        "11d": "Solicitar al liderazgo que alguien cubra mis funciones",
+        "11e": "Quejarse en privado de la programación poco razonable del departamento y trabajar de mala gana con resentimiento",
+        "11f": "Querer ir pero temer cargar a los colegas, pero a la vez sentir que es una lástima perdérselo, debatiéndose hasta que pasa la fecha límite de inscripción, sintiéndose aún más deprimido",
+        "11g": "Es el arreglo del departamento — si no puedo ir, que así sea, habrá otras oportunidades. Solo lidiar con el trabajo en mano primero"
+      }
+    },
+    "12": {
+      "situation": "La persona descubre que el familiar de un paciente le ha ofrecido en secreto un sobre rojo (regalo en efectivo) o un presente valioso como muestra de gratitud. ¿Qué haría?",
+      "options": {
+        "12a": "Declinar con firmeza, explicando la ética médica y la integridad profesional",
+        "12b": "Declinar con cortesía, haciéndoles saber que haré lo posible y que ningún gesto adicional es necesario",
+        "12c": "Si la familia insiste, aceptarlo temporalmente y entregarlo al hospital para su procesamiento después",
+        "12d": "Entender la buena intención de la familia, pero declarar claramente que comprometería la equidad",
+        "12e": "Considerar que es una norma tácita del sector, simplemente aceptarlo; todos saben cómo funciona",
+        "12f": "Temer la acción disciplinaria si lo acepto, pero también temer que la familia piense que no atenderé bien al paciente si no lo acepto"
+      }
+    },
+    "13": {
+      "situation": "La persona se encuentra con un paciente que ha investigado mucha información médica en internet, cuestiona el juicio del médico y exige un plan de tratamiento específico. ¿Qué haría?",
+      "options": {
+        "13a": "Escuchar con paciencia cada pregunta del paciente y responder una por una sin evitar ningún reto",
+        "13b": "Usar analogías, esquemas y otros métodos accesibles para explicar el juicio profesional para que el paciente lo entienda de verdad",
+        "13c": "Mostrar las guías y la literatura relevantes y organizar la evidencia autorizada para que el paciente la vea, dejando que la evidencia hable",
+        "13d": "Pedir a un médico senior o al director del departamento que se sume a la conversación, aprovechando la fuerza del equipo para resolver el desacuerdo",
+        "13e": "Decirle claramente al paciente que la información en internet es de calidad desigual, mantener el juicio profesional y guiar activamente al paciente hacia el tratamiento estándar",
+        "13f": "Sentirse dolido y nervioso ante el cuestionamiento del paciente, preocupado de que una comunicación deficiente lleve a una disputa, las palabras me llegan a los labios pero me las trago, sufriendo en silencio",
+        "13g": "Si el paciente insiste en su manera, que sea; solo conseguir una firma de consentimiento, no hace falta agotarme por la salud de otro"
+      }
+    },
+    "14": {
+      "situation": "La persona descubre una vulnerabilidad en el sistema de información del hospital que podría comprometer la seguridad de los datos de los pacientes. ¿Qué haría?",
+      "options": {
+        "14a": "Reportarlo de inmediato al departamento de TI y a los superiores e impulsar una pronta solución",
+        "14b": "Preparar un informe detallado del problema con una evaluación de riesgos adjunta",
+        "14c": "Recordar a los colegas del departamento que tengan cuidado y hacer lo que pueda para proteger los datos",
+        "14d": "Reportarlo a través de los canales adecuados y esperar a que los superiores lo manejen",
+        "14e": "Pensar que es asunto del departamento de TI y tiene poco que ver conmigo, solo trabajar como siempre",
+        "14f": "Preocuparse de que reportar exponga mis propios problemas de uso del sistema, pero temerosa de que me culpen si no lo hago"
+      }
+    },
+    "15": {
+      "situation": "La persona es acusada públicamente por un paciente de ser \"fría y poco empática\". ¿Qué haría?",
+      "options": {
+        "15a": "Disculparse con sinceridad, preguntar al paciente qué le disgustó específicamente y mejorar activamente",
+        "15b": "Explicar mi carga de trabajo elevada pero comprometerme a mejorar mi estilo de comunicación",
+        "15c": "Sentirse injustamente tratada pero mantener el profesionalismo y demostrar mi valía con acciones posteriores",
+        "15d": "Reflexionar sobre si la presión laboral realmente me ha hecho descuidar la comunicación con los pacientes",
+        "15e": "Defenderme en el momento, considerando que el paciente no entiende",
+        "15f": "Después, repasar mentalmente las palabras del paciente repetidamente, sintiéndome cada vez más agraviado y culpable, preocupado de que mi reputación sufra, incapaz de concentrarme durante días"
+      }
+    },
+    "16": {
+      "situation": "La persona descubre que un nuevo estudio clínico o una guía del sector actualizada contradice sus hábitos o experiencia de trabajo anteriores. ¿Qué haría?",
+      "options": {
+        "16a": "Estudiar con cuidado la investigación o las guías relevantes y evaluar su fiabilidad usando métodos científicos",
+        "16b": "Probarlo con cautela en la práctica y verificarlo a través de la experiencia",
+        "16c": "Discutir con colegas y escuchar distintas perspectivas",
+        "16d": "Mantener mi experiencia de trabajo anterior y no confiar plenamente en los nuevos hallazgos",
+        "16e": "No cambiar mi enfoque todavía, esperar a que más estudios lo confirmen antes de asumir riesgos",
+        "16f": "El conflicto entre las nuevas guías y mi experiencia me produce mucha inquietud, pero no me atrevo a cambiar a la ligera, debatiéndome mucho tiempo sin llegar a una conclusión"
+      }
+    },
+    "17": {
+      "situation": "Uno de los pacientes de la persona no puede permitirse un tratamiento. ¿Qué haría?",
+      "options": {
+        "17a": "Ayudar al paciente a informarse sobre las pólizas de seguros, la asistencia benéfica y otros canales para reducir la carga económica todo lo posible",
+        "17b": "Elegir un plan más rentable garantizando la eficacia",
+        "17c": "Respetar la decisión del paciente, pero explicar claramente las consecuencias de renunciar al cuidado",
+        "17d": "Movilizar a los colegas del departamento para hacer una lluvia de ideas sobre cómo ayudar al paciente",
+        "17e": "Sentirse muy triste y lamentar la situación del paciente, pero impotente para ayudar, solo poder suspirar",
+        "17f": "Si el paciente desiste, que así sea — he hecho mi parte. No puedo resolver los problemas económicos de todos, solo escribir las órdenes y seguir el procedimiento como siempre"
+      }
+    },
+    "18": {
+      "situation": "El hospital de la persona está implementando un nuevo sistema que el personal rechaza. ¿Qué haría?",
+      "options": {
+        "18a": "Entender las preocupaciones de todos e intentar proponer un plan de compromiso",
+        "18b": "Expresar mi opinión en la reunión del departamento y buscar apoyos",
+        "18c": "Sumarme al arreglo y seguir a la mayoría",
+        "18d": "Analizar los pros y los contras del nuevo sistema y dejar que los datos hablen",
+        "18e": "No expresar una opinión, simplemente hacer lo que el liderazgo disponga, ir a remolque",
+        "18f": "No querer oponerse abiertamente y ofender al liderazgo, pero llena de ansiedad por el nuevo sistema, quejarse a los colegas en privado sin atreverse a hablar oficialmente"
+      }
+    },
+    "19": {
+      "situation": "El hospital de la persona se enfrenta a una emergencia de salud pública repentina o un aumento estacional en el volumen de pacientes, con una carga de trabajo muy aumentada y riesgos adicionales para la salud. ¿Cómo lo enfrentaría?",
+      "options": {
+        "19a": "Mantenerse en el puesto, seguir las medidas de protección y apoyar a los colegas",
+        "19b": "Hacer lo posible por tratar a los pacientes mientras me protejo",
+        "19c": "Mantener el contacto con la familia y buscar apoyo emocional",
+        "19d": "Tratar cada día como un nuevo desafío y sostenerme con la dedicación profesional",
+        "19e": "Profundamente temerosa por dentro, haber pensado en dimitir o pedir permiso, pero finalmente apretar los dientes y acudir",
+        "19f": "Presentarme cuando toque turno — no puedo esconderme de todos modos. Hacer lo que pueda, no asumir proactivamente trabajo extra"
+      }
+    },
+    "20": {
+      "situation": "Al repasar su carrera médica, ¿qué valora más la persona?",
+      "options": {
+        "20a": "Haber ayudado a innumerables pacientes y verlos recuperarse o mejorar",
+        "20b": "Haber pulido continuamente mi especialización y convertirme en un profesional médico de confianza",
+        "20c": "Haber impulsado mejoras en los flujos de trabajo que beneficiaron a más pacientes",
+        "20d": "Mantener mi compasión de sanador y no violar nunca mi integridad profesional",
+        "20e": "Haber contribuido a la tutoría y a transmitir conocimientos, formando a la próxima generación de profesionales médicos",
+        "20f": "Sinceramente nada en particular; solo salir a tiempo del trabajo y evitar problemas es suficiente, este empleo es solo un salario"
+      }
+    }
+  }
+}

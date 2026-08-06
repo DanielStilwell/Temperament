@@ -1,15 +1,21 @@
+import { useTranslation } from 'react-i18next';
 import type { ScenarioOption } from '../../types';
 
 interface OptionItemProps {
   option: ScenarioOption;
   index: number;
+  profession: string;
+  scenarioId: number;
   isSelected: boolean;
   onSelect: (optionId: string) => void;
 }
 
 const optionLabels = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H'];
 
-export default function OptionItem({ option, index, isSelected, onSelect }: OptionItemProps) {
+export default function OptionItem({ option, index, profession, scenarioId, isSelected, onSelect }: OptionItemProps) {
+  const { t } = useTranslation();
+  const text = t(`scenarios.${profession}.${scenarioId}.options.${option.id}`);
+
   return (
     <button
       onClick={() => onSelect(option.id)}
@@ -33,7 +39,7 @@ export default function OptionItem({ option, index, isSelected, onSelect }: Opti
           isSelected ? 'text-[#3D3A5C] font-medium' : 'text-[#6B6990]'
         }`}
       >
-        {option.text}
+        {text}
       </span>
     </button>
   );

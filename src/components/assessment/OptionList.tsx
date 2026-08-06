@@ -13,11 +13,13 @@ interface OptionListProps {
   options: ScenarioOption[];
   selectedOptionIds: string[];
   customText: string;
+  profession: string;
+  scenarioId: number;
   onSelect: (optionId: string) => void;
   onCustomSelect: (customText: string, evaluation: ComprehensiveEvaluation) => void;
 }
 
-export default function OptionList({ options, selectedOptionIds, customText, onSelect, onCustomSelect }: OptionListProps) {
+export default function OptionList({ options, selectedOptionIds, customText, profession, scenarioId, onSelect, onCustomSelect }: OptionListProps) {
   return (
     <div className="flex flex-col gap-3">
       {options.map((option, i) => (
@@ -25,6 +27,8 @@ export default function OptionList({ options, selectedOptionIds, customText, onS
           key={option.id}
           option={option}
           index={i}
+          profession={profession}
+          scenarioId={scenarioId}
           isSelected={selectedOptionIds.includes(option.id)}
           onSelect={onSelect}
         />

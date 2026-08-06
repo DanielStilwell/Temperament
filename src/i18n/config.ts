@@ -2,13 +2,29 @@ import i18n from 'i18next';
 import { initReactI18next } from 'react-i18next';
 import LanguageDetector from 'i18next-browser-languagedetector';
 
-import en from './locales/en.json';
-import zh from './locales/zh.json';
-import es from './locales/es.json';
-import de from './locales/de.json';
-import fr from './locales/fr.json';
-import ja from './locales/ja.json';
-import ko from './locales/ko.json';
+import enUI from './locales/en.json';
+import zhUI from './locales/zh.json';
+import esUI from './locales/es.json';
+import deUI from './locales/de.json';
+import frUI from './locales/fr.json';
+import jaUI from './locales/ja.json';
+import koUI from './locales/ko.json';
+
+import enScenarios from './scenarios/en.json';
+import zhScenarios from './scenarios/zh.json';
+import esScenarios from './scenarios/es.json';
+import deScenarios from './scenarios/de.json';
+import frScenarios from './scenarios/fr.json';
+import jaScenarios from './scenarios/ja.json';
+import koScenarios from './scenarios/ko.json';
+
+const en = { ...enUI, scenarios: enScenarios };
+const zh = { ...zhUI, scenarios: zhScenarios };
+const es = { ...esUI, scenarios: esScenarios };
+const de = { ...deUI, scenarios: deScenarios };
+const fr = { ...frUI, scenarios: frScenarios };
+const ja = { ...jaUI, scenarios: jaScenarios };
+const ko = { ...koUI, scenarios: koScenarios };
 
 export const SUPPORTED_LANGUAGES = [
   { code: 'en', label: 'English', flag: '🇬🇧' },
