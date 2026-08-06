@@ -11,10 +11,13 @@ export default function PaymentCallbackPage() {
   const [searchParams] = useSearchParams();
   const { fetchProfile, user, signOut } = useAuthStore();
 
-  const [status, setStatus] = useState<'checking' | 'success' | 'pending' | 'error' | 'cleaned'>('checking');
+  const [status, setStatus] = useState<'checking' | 'success' | 'pending' | 'error'>('checking');
   const orderId = searchParams.get('order');
   const tier = searchParams.get('tier') as 'pro' | 'max' | null;
   const isUpgrade = searchParams.get('upgrade') === '1';
+
+  // 构建返回注册页的 URL
+  const registerUrl = `/register/${tier}${isUpgrade ? '?upgrade=true&period=yearly' : '?period=yearly'}`;
 
   // 删除未支付用户（仅首次注册用户，非升级用户）
   const cleanupUnpaidUser = async () => {
@@ -66,7 +69,7 @@ export default function PaymentCallbackPage() {
       }
 
       if (data?.status === 'failed') {
-        // 支付失败 → 自动删除未支付用户
+        // 支付失败 → 删除未支付用户并跳转回注册页
         await cleanupUnpaidUser();
         setStatus('error');
         return;
@@ -89,10 +92,15 @@ export default function PaymentCallbackPage() {
     checkPaymentStatus();
   };
 
-  // 用户主动放弃支付 → 删除账户并返回首页
+  // 用户主动放弃支付 → 删除账户并返回注册页
   const handleGiveUp = async () => {
     await cleanupUnpaidUser();
-    setStatus('cleaned');
+    navigate(registerUrl);
+  };
+
+  // 支付失败 → 返回注册页
+  const handleBackToRegister = () => {
+    navigate(registerUrl);
   };
 
   return (
@@ -141,13 +149,8 @@ export default function PaymentCallbackPage() {
             <Button variant="primary" size="lg" fullWidth onClick={handleRetry}>
               Check Again
             </Button>
-            {!isUpgrade && (
-              <Button variant="secondary" size="lg" fullWidth onClick={handleGiveUp}>
-                Cancel &amp; Delete Account
-              </Button>
-            )}
-            <Button variant="secondary" size="lg" fullWidth onClick={() => navigate('/')}>
-              Back to Home
+            <Button variant="secondary" size="lg" fullWidth onClick={handleGiveUp}>
+              Cancel &amp; Back to Register
             </Button>
           </div>
         )}
@@ -159,26 +162,10 @@ export default function PaymentCallbackPage() {
             </div>
             <h3 className="text-xl font-bold text-[#3D3A5C]">Payment not confirmed</h3>
             <p className="text-sm text-[#8E8CA8] leading-relaxed">
-              We could not confirm your payment. If you believe this is an error, please contact support
-              or try again.
+              We could not confirm your payment. Please try again.
             </p>
-            <Button variant="primary" size="lg" fullWidth onClick={() => navigate('/')}>
-              Back to Home
-            </Button>
-          </div>
-        )}
-
-        {status === 'cleaned' && (
-          <div className="rounded-[20px] bg-white/60 backdrop-blur-[10px] border border-white/50 p-8 flex flex-col gap-4 text-center">
-            <div className="w-14 h-14 rounded-full bg-[#5B4FCF]/10 flex items-center justify-center mx-auto">
-              <AlertCircle className="w-7 h-7 text-[#5B4FCF]" />
-            </div>
-            <h3 className="text-xl font-bold text-[#3D3A5C]">Account deleted</h3>
-            <p className="text-sm text-[#8E8CA8] leading-relaxed">
-              Your unpaid account has been removed. You can register again anytime.
-            </p>
-            <Button variant="primary" size="lg" fullWidth onClick={() => navigate('/')}>
-              Back to Home
+            <Button variant="primary" size="lg" fullWidth onClick={handleBackToRegister}>
+              Back to Register
             </Button>
           </div>
         )}
