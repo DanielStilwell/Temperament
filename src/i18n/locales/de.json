@@ -170,22 +170,34 @@
     "sanguine": {
       "name": "Sanguinisch",
       "desc": "Gesellig, schnelle Reaktion",
-      "badge": "San"
+      "badge": "San",
+      "animal": "Delfin",
+      "features": ["Gesellig", "Schnelle Reaktion", "Aufgeschlossen", "Anpassungsfähig", "Optimistisch"],
+      "description": "Der Beobachtete zeigt eine ausgeprägte sanguinische Tendenz. Menschen mit diesem Temperament sind typischerweise energiegeladen und sozial kompetent, fähig, sich schnell an Umweltveränderungen anzupassen. Sie denken schnell und sind neugierig auf Neues und fungieren oft als Schlüsselrolle bei der Belebung der Teamatmosphäre. Beachten Sie, dass sie aufgrund breiter Interessen ihre Aufmerksamkeit manchmal leicht abwenden und bei Aufgaben, die anhaltende Konzentration erfordern, möglicherweise zusätzlichen Selbstmanagementbedarf haben."
     },
     "choleric": {
       "name": "Cholerisch",
       "desc": "Entschieden, starker Antrieb",
-      "badge": "Cho"
+      "badge": "Cho",
+      "animal": "Löwe",
+      "features": ["Energiegeladen", "Direkt", "Entschieden", "Zielorientiert", "Starker Anführer"],
+      "description": "Der Beobachtete zeigt eine ausgeprägte cholerische Tendenz. Menschen mit diesem Temperament besitzen von Natur aus einen starken Sinn für Zweck und Antrieb und zeigen Entschlossenheit und Mut bei Herausforderungen. Sie sind offen und direkt, schlagen nicht um den heißen Brei herum — natürliche Führer und Treiber. Beachten Sie, dass sie manchmal durch zu große Direktheit zwischenmenschliche Beziehungen beeinträchtigen können; zu lernen, die eigenen Ansichten mit den Gefühlen anderer in Einklang zu bringen, wäre eine wertvolle Wachstumsrichtung."
     },
     "phlegmatic": {
       "name": "Phlegmatisch",
       "desc": "Ruhig, emotional stabil",
-      "badge": "Phl"
+      "badge": "Phl",
+      "animal": "Elefant",
+      "features": ["Ruhig", "Geduldig", "Emotional stabil", "Konzentriert", "Zuverlässig"],
+      "description": "Der Beobachtete zeigt eine ausgeprägte phlegmatische Tendenz. Menschen mit diesem Temperament sind wie stille Gewässer, die tief fließen — äußerlich ruhig, aber innerlich standhaft. Sie arbeiten stetig und zuverlässig, lassen sich nicht leicht von Emotionen beeinflussen und dienen als stabilisierende Kraft im Team. Bei Aufgaben, die Geduld und Ausdauer erfordern, zeigen sie oft außergewöhnliche Belastbarkeit. Ihr sanfter Ansatz macht sie auch zu ausgezeichneten Zuhörern und Vermittlern."
     },
     "melancholic": {
       "name": "Melancholisch",
       "desc": "Sensibel, tiefer Denker",
-      "badge": "Mel"
+      "badge": "Mel",
+      "animal": "Eule",
+      "features": ["Sensibel", "Wahrnehmungsfähig", "Tiefer Denker", "Perfektionist", "Kreativ"],
+      "description": "Der Beobachtete zeigt eine ausgeprägte melancholische Tendenz. Beachten Sie, dass \"Melancholisch\" hier ein psychologischer Temperamentsbegriff ist und keinen Verweis auf den emotionalen Zustand darstellt. Menschen mit diesem Temperament besitzen scharfe Einsicht und tiefes Denkvermögen und können Details bemerken, die andere leicht übersehen. Sie erleben Emotionen tief und haben reiche innere Welten, oft herausragend in künstlerischer Kreation und tiefgehender Analyse. Sie brauchen ein Umfeld, das Sicherheit vermittelt, um ihre Talente voll zu entfalten."
     }
   },
   "behaviors": {
@@ -213,6 +225,14 @@
     "resilience": "Widerstandsfähigkeit",
     "empathy": "Empathie"
   },
+  "abilityDescription": {
+    "communication": "Die Fähigkeit, Ideen effektiv auszudrücken, anderen zuzuhören und den Informationsaustausch zu fördern. Kommunikationsstarke können Standpunkte klar vermitteln, die Absichten anderer verstehen und positive zwischenmenschliche Interaktionen aufbauen.",
+    "leadership": "Die Fähigkeit, andere zu beeinflussen und Teams auf ihre Ziele auszurichten. Führungskräfte mit hoher Ausprägung besitzen Vision, Entschlossenheit und die Fähigkeit, andere zu motivieren und Teams durch Schwierigkeiten zu steuern.",
+    "creativity": "Die Fähigkeit, neuartige Ideen zu generieren, Probleme flexibel zu lösen und konventionelles Denken zu durchbrechen. Kreativitätsstarke sind darin hervorragend, neue Möglichkeiten zu entdecken, ungebunden von traditionellen Methoden.",
+    "analysis": "Die Fähigkeit, logisch zu schließen, systematisch zu denken und Probleme zu zerlegen. Analysestarke können aus komplexen Informationen Schlüsselelemente extrahieren und rationale Urteile fällen.",
+    "resilience": "Die Fähigkeit, in Widrigkeiten emotionale Stabilität zu bewahren, sich an Wandel anzupassen und sich schnell zu erholen. Widerstandsfähige bleiben unter Rückschlägen ruhig und wandeln Druck in Vorwärtsdrang um.",
+    "empathy": "Die Fähigkeit, die Emotionen anderer zu verstehen, aus ihrer Perspektive zu denken und mit Mitgefühl zu antworten. Empathiestarke können die emotionalen Zustände anderer scharf wahrnehmen und tiefe emotionale Verbindungen aufbauen."
+  },
   "professions": {
     "service": "Service-Mitarbeiter",
     "student": "Student/Schüler",
@@ -227,6 +247,11 @@
     "loading": "Wird geladen...",
     "temperamentDistribution": "Temperament-Verteilung",
     "comprehensiveInterpretation": "Umfassende Interpretation",
+    "interpretation": {
+      "secondary": "Zusätzlich zeigt der Beobachtete auch bestimmte {{secondaryName}}-Merkmale, wie {{features}} usw. Diese Temperamentkombination verleiht dem Beobachteten sowohl die Kernmerkmale von {{primaryName}} als auch bestimmte Vorteile von {{secondaryName}}, was reichhaltigere Verhaltensmuster zeigt.",
+      "ability": "Hinsichtlich der Fähigkeitsdimensionen schneidet der Beobachtete bei \"{{topName}}\" am besten ab. Gleichzeitig gibt es bei \"{{bottomName}}\" Raum für weiteres Wachstum — dies ist kein Mangel, sondern eine natürliche Tendenz, die aus dem einzigartigen Temperament jeder Person resultiert.",
+      "footer": "Es sei betont, dass Temperaments- und Fähigkeitsbewertungen auf den Verhaltensentscheidungen des Beobachteten in spezifischen Szenarien basieren und Verhaltenstendenzen statt fester Etiketten widerspiegeln. Jeder Mensch ist formbar; in unterschiedlichen Umgebungen und Erfahrungen werden sich unser Temperament und unsere Fähigkeiten weiterhin entwickeln und verändern. Diese Bewertung zielt darauf ab, eine Referenzperspektive zu bieten, die Beobachtern hilft, die Verhaltensmuster der beobachteten Person besser zu verstehen."
+    },
     "abilityRadar": "Fähigkeits-Radar Diagramm",
     "radarStrong": "70+ Stark",
     "radarBalanced": "40-69 Ausgewogen",

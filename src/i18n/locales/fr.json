@@ -170,22 +170,34 @@
     "sanguine": {
       "name": "Sanguin",
       "desc": "Sociable, réaction rapide",
-      "badge": "San"
+      "badge": "San",
+      "animal": "Dauphin",
+      "features": ["Sociable", "Réponse rapide", "Extraverti", "Adaptable", "Optimiste"],
+      "description": "L'observé présente une tendance Sanguine distincte. Les personnes de ce tempérament sont généralement énergiques et habiles socialement, capables de s'adapter rapidement aux changements de l'environnement. Elles pensent vite et sont curieuses de nouveautés, jouant souvent le rôle clé pour animer l'ambiance de l'équipe. À noter qu'en raison de leurs centres d'intérêt étendus, elles détournent parfois facilement leur attention et peuvent nécessiter une autogestion supplémentaire pour les tâches exigeant une concentration soutenue."
     },
     "choleric": {
       "name": "Colérique",
       "desc": "Décisif, forte détermination",
-      "badge": "Col"
+      "badge": "Col",
+      "animal": "Lion",
+      "features": ["Énergique", "Direct", "Décisif", "Orienté objectifs", "Fort leader"],
+      "description": "L'observé présente une tendance Colérique distincte. Les personnes de ce tempérament possèdent naturellement un fort sens du but et de la détermination, faisant preuve de décision et de courage face aux défis. Elles sont franches et directes, ne tournant pas autour du pot — des leaders et des moteurs naturels. À noter qu'elles peuvent parfois affecter les relations interpersonnelles par une trop grande directivité ; apprendre à équilibrer leurs propres points de vue avec les sentiments des autres serait une précieuse direction de croissance."
     },
     "phlegmatic": {
       "name": "Phlegmatique",
       "desc": "Calme, émotionnellement stable",
-      "badge": "Phl"
+      "badge": "Phl",
+      "animal": "Éléphant",
+      "features": ["Calme", "Patient", "Émotionnellement stable", "Concentré", "Fiable"],
+      "description": "L'observé présente une tendance Phlegmatique distincte. Les personnes de ce tempérament sont comme des eaux tranquilles profondes — calmes à l'extérieur mais inébranlables à l'intérieur. Elles travaillent de manière constante et fiable, ne se laissent pas facilement influencer par les émotions, et servent de force stabilisatrice dans l'équipe. Dans les tâches nécessitant patience et persévérance, elles font souvent preuve d'une résilience extraordinaire. Leur approche douce en fait aussi d'excellents auditeurs et médiateurs."
     },
     "melancholic": {
       "name": "Mélancolique",
       "desc": "Sensible, penseur profond",
-      "badge": "Mél"
+      "badge": "Mél",
+      "animal": "Hibou",
+      "features": ["Sensible", "Perceptif", "Penseur profond", "Perfectionniste", "Créatif"],
+      "description": "L'observé présente une tendance Mélancolique distincte. À noter que « Mélancolique » ici est un terme psychologique de tempérament, et non une référence à un état émotionnel. Les personnes de ce tempérament possèdent une perspicacité aiguë et une capacité de réflexion profonde, capables de remarquer des détails que d'autres ignorent facilement. Elles vivent les émotions de manière intense et possèdent une riche vie intérieure, excellant souvent dans la création artistique et l'analyse approfondie. Elles ont besoin d'un environnement offrant un sentiment de sécurité pour exprimer pleinement leurs talents."
     }
   },
   "behaviors": {
@@ -213,6 +225,14 @@
     "resilience": "Résilience",
     "empathy": "Empathie"
   },
+  "abilityDescription": {
+    "communication": "La capacité à exprimer efficacement des idées, à écouter les autres et à faciliter l'échange d'informations. Les personnes à forte communication peuvent transmettre clairement des points de vue, comprendre les intentions d'autrui et bâtir des interactions interpersonnelles positives.",
+    "leadership": "La capacité à influencer les autres et à guider les équipes vers leurs objectifs. Les leaders à forte capacité possèdent de la vision, de la décision et la capacité de motiver les autres, menant les équipes à travers les difficultés.",
+    "creativity": "La capacité à générer des idées nouvelles, à résoudre les problèmes avec flexibilité et à briser la pensée conventionnelle. Les personnes à forte créativité excellent à découvrir de nouvelles possibilités, sans être liées par les méthodes traditionnelles.",
+    "analysis": "La capacité à raisonner logiquement, à penser de manière systématique et à décomposer les problèmes. Les analystes à forte capacité peuvent extraire les éléments clés d'informations complexes et poser des jugements rationnels.",
+    "resilience": "La capacité à maintenir la stabilité émotionnelle face à l'adversité, à s'adapter au changement et à se rétablir rapidement. Les personnes à forte résilience restent calmes face aux revers, transformant la pression en élan vers l'avant.",
+    "empathy": "La capacité à comprendre les émotions des autres, à penser de leur point de vue et à répondre avec compassion. Les personnes à forte empathie peuvent percevoir finement les états émotionnels d'autrui et établir des connexions émotionnelles profondes."
+  },
   "professions": {
     "service": "Professionnel du service",
     "student": "Étudiant",
@@ -227,6 +247,11 @@
     "loading": "Chargement...",
     "temperamentDistribution": "Distribution du tempérament",
     "comprehensiveInterpretation": "Interprétation globale",
+    "interpretation": {
+      "secondary": "De plus, l'observé présente également certains traits de {{secondaryName}}, tels que {{features}}, etc. Cette combinaison de tempéraments donne à l'observé à la fois les caractéristiques centrales de {{primaryName}} et certains avantages de {{secondaryName}}, présentant des schémas comportementaux plus riches.",
+      "ability": "En termes de dimensions d'aptitude, l'observé performe le mieux en \"{{topName}}\". Parallèlement, il y a une marge de progression en \"{{bottomName}}\" — ce n'est pas une déficience, mais une tendance naturelle résultant du tempérament unique de chaque personne.",
+      "footer": "Il convient de souligner que les évaluations de tempérament et d'aptitudes sont fondées sur les choix comportementaux de l'observé dans des scénarios spécifiques, reflétant des tendances comportementales plutôt que des étiquettes fixes. Chacun est malléable ; dans des environnements et expériences différents, notre tempérament et nos aptitudes continueront de se développer et de changer. Cette évaluation vise à offrir une perspective de référence pour aider les observateurs à mieux comprendre les schémas comportementaux de la personne observée."
+    },
     "abilityRadar": "Diagramme radar des aptitudes",
     "radarStrong": "70+ Fort",
     "radarBalanced": "40-69 Équilibré",

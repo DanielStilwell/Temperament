@@ -2,7 +2,6 @@ import { useState } from 'react';
 import { ChevronDown } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import type { AbilityScores, AbilityDimension } from '../../types';
-import { abilityMap } from '../../data/results';
 
 interface DimensionDetailsProps {
   scores: AbilityScores;
@@ -21,7 +20,6 @@ export default function DimensionDetails({ scores }: DimensionDetailsProps) {
       <h3 className="text-sm font-semibold text-[#3D3A5C] mb-3">{t('result.dimensionDetails')}</h3>
       <div className="space-y-2">
         {(Object.keys(scores) as AbilityDimension[]).map((key) => {
-          const info = abilityMap[key];
           const isExpanded = expanded === key;
           return (
             <div
@@ -52,7 +50,7 @@ export default function DimensionDetails({ scores }: DimensionDetailsProps) {
               </button>
               {isExpanded && (
                 <div className="px-4 pb-4 pt-0 text-sm text-[#6B6990] leading-[1.7]">
-                  {info.description}
+                  {t(`abilityDescription.${key}`)}
                 </div>
               )}
             </div>

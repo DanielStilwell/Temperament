@@ -170,22 +170,34 @@
     "sanguine": {
       "name": "Sanguíneo",
       "desc": "Sociable, respuesta rápida",
-      "badge": "San"
+      "badge": "San",
+      "animal": "Delfín",
+      "features": ["Sociable", "Respuesta rápida", "Extrovertido", "Adaptable", "Optimista"],
+      "description": "El observado muestra una clara tendencia Sanguínea. Las personas con este temperamento suelen ser enérgicas y socialmente hábiles, capaces de adaptarse rápidamente a los cambios del entorno. Piensan con rapidez y son curiosas por las novedades, a menudo actuando como el rol clave para animar el ambiente del equipo. Nótese que, debido a sus amplios intereses, a veces desvían la atención con facilidad y pueden requerir autogestión adicional en tareas que exigen concentración sostenida."
     },
     "choleric": {
       "name": "Colérico",
       "desc": "Decidido, gran determinación",
-      "badge": "Col"
+      "badge": "Col",
+      "animal": "León",
+      "features": ["Energético", "Directo", "Decisivo", "Orientado a objetivos", "Líder nato"],
+      "description": "El observado muestra una clara tendencia Colérica. Las personas con este temperamento poseen de forma natural un fuerte sentido de propósito y determinación, mostrando decisión y valentía ante los desafíos. Son francos y directos, sin andarse por las ramas — líderes e impulsores natos. Nótese que a veces pueden afectar las relaciones interpersonales por ser excesivamente directos; aprender a equilibrar sus propios puntos de vista con los sentimientos de los demás sería una valiosa dirección de crecimiento."
     },
     "phlegmatic": {
       "name": "Flemático",
       "desc": "Tranquilo, emocionalmente estable",
-      "badge": "Fle"
+      "badge": "Fle",
+      "animal": "Elefante",
+      "features": ["Tranquilo", "Paciente", "Emocionalmente estable", "Concentrado", "Fiable"],
+      "description": "El observado muestra una clara tendencia Flemática. Las personas con este temperamento son como aguas tranquilas de gran profundidad — calmadas por fuera pero firmes por dentro. Trabajan de forma constante y fiable, no se dejan llevar fácilmente por las emociones, y sirven como fuerza estabilizadora del equipo. En tareas que requieren paciencia y perseverancia, a menudo muestran una resistencia extraordinaria. Su enfoque amable también los convierte en excelentes oyentes y mediadores."
     },
     "melancholic": {
       "name": "Melancólico",
       "desc": "Sensible, pensador profundo",
-      "badge": "Mel"
+      "badge": "Mel",
+      "animal": "Búho",
+      "features": ["Sensible", "Perceptivo", "Pensador profundo", "Perfeccionista", "Creativo"],
+      "description": "El observado muestra una clara tendencia Melancólica. Nótese que \"Melancólico\" aquí es un término psicológico de temperamento, no una referencia a un estado emocional. Las personas con este temperamento poseen una perspicacia aguda y una capacidad de pensamiento profundo, capaces de notar detalles que otros pasan por alto. Experimentan las emociones de forma profunda y tienen un mundo interior rico, destacando a menudo en la creación artística y el análisis profundo. Necesitan un entorno que les proporcione seguridad para expresar plenamente sus talentos."
     }
   },
   "behaviors": {
@@ -213,6 +225,14 @@
     "resilience": "Resiliencia",
     "empathy": "Empatía"
   },
+  "abilityDescription": {
+    "communication": "La capacidad de expresar ideas con eficacia, escuchar a los demás y facilitar el intercambio de información. Las personas con alta comunicación pueden transmitir puntos de vista con claridad, comprender las intenciones de los demás y construir interacciones interpersonales positivas.",
+    "leadership": "La capacidad de influir en los demás y guiar a los equipos hacia sus objetivos. Los líderes con puntuación alta poseen visión, decisión y la capacidad de motivar a otros, llevando a los equipos a través de las dificultades.",
+    "creativity": "La capacidad de generar ideas novedosas, resolver problemas con flexibilidad y romper el pensamiento convencional. Las personas con alta creatividad destacan en descubrir nuevas posibilidades, sin estar atadas a los métodos tradicionales.",
+    "analysis": "La capacidad de razonar lógicamente, pensar de forma sistemática y descomponer problemas. Los analistas con puntuación alta pueden extraer elementos clave de información compleja y emitir juicios racionales.",
+    "resilience": "La capacidad de mantener la estabilidad emocional ante la adversidad, adaptarse al cambio y recuperarse rápidamente. Las personas con alta resiliencia se mantienen calmadas ante los contratiempos, transformando la presión en impulso hacia adelante.",
+    "empathy": "La capacidad de comprender las emociones de los demás, pensar desde su perspectiva y responder con compasión. Las personas con alta empatía pueden percibir agudamente los estados emocionales de los demás y establecer conexiones emocionales profundas."
+  },
   "professions": {
     "service": "Trabajador de servicios",
     "student": "Estudiante",
@@ -227,6 +247,11 @@
     "loading": "Cargando...",
     "temperamentDistribution": "Distribución de temperamento",
     "comprehensiveInterpretation": "Interpretación integral",
+    "interpretation": {
+      "secondary": "Además, el observado también muestra ciertos rasgos de {{secondaryName}}, como {{features}}, etc. Esta combinación de temperamentos otorga al observado tanto las características centrales de {{primaryName}} como ciertas ventajas de {{secondaryName}}, presentando patrones conductuales más ricos.",
+      "ability": "En cuanto a las dimensiones de habilidad, el observado destaca más en \"{{topName}}\". Al mismo tiempo, hay margen de crecimiento adicional en \"{{bottomName}}\" — esto no es una deficiencia, sino una tendencia natural resultante del temperamento único de cada persona.",
+      "footer": "Cabe destacar que las evaluaciones de temperamento y habilidades se basan en las elecciones conductuales del observado en escenarios específicos, reflejando tendencias conductuales más que etiquetas fijas. Todo el mundo es moldeable; en distintos entornos y experiencias, nuestro temperamento y habilidades seguirán desarrollándose y cambiando. Esta evaluación pretende ofrecer una perspectiva de referencia para ayudar a los observadores a comprender mejor los patrones conductuales del individuo observado."
+    },
     "abilityRadar": "Gráfico radar de habilidades",
     "radarStrong": "70+ Fuerte",
     "radarBalanced": "40-69 Equilibrado",

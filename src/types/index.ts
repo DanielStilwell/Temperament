@@ -112,20 +112,13 @@ export interface AssessmentResult {
   thinkingScores: ThinkingScores;
 }
 
-// 气质信息
+// 气质信息（仅保留与语言无关的结构字段，文案走 i18n）
 export interface TemperamentInfo {
-  name: string;
-  englishName: string;
   color: string;
   gradient: string;
-  animal: string;
-  features: string[];
-  description: string;
 }
 
-// 能力信息
+// 能力信息（仅保留与语言无关的结构字段，文案走 i18n）
 export interface AbilityInfo {
-  name: string;
   icon: string;
-  description: string;
 }

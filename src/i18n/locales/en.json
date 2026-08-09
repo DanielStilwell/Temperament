@@ -170,22 +170,34 @@
     "sanguine": {
       "name": "Sanguine",
       "desc": "Sociable, quick response",
-      "badge": "San"
+      "badge": "San",
+      "animal": "Dolphin",
+      "features": ["Sociable", "Quick Response", "Outgoing", "Adaptable", "Optimistic"],
+      "description": "The observer exhibits a distinct Sanguine tendency. People with this temperament are typically energetic and socially adept, able to quickly adapt to environmental changes. They think quickly and are curious about new things, often serving as the key role in enlivening team atmosphere. Note that they may sometimes shift attention easily due to wide interests, and tasks requiring sustained focus may need extra self-management."
     },
     "choleric": {
       "name": "Choleric",
       "desc": "Decisive, strong drive",
-      "badge": "Cho"
+      "badge": "Cho",
+      "animal": "Lion",
+      "features": ["Energetic", "Direct", "Decisive", "Goal-Oriented", "Strong Leader"],
+      "description": "The observer exhibits a distinct Choleric tendency. People with this temperament naturally possess a strong sense of purpose and drive, showing decisiveness and courage when facing challenges. They are frank and straightforward, not beating around the bush — natural leaders and drivers. Note that they may sometimes affect interpersonal relationships by being overly direct; learning to balance their own views with others' feelings would be a valuable growth direction."
     },
     "phlegmatic": {
       "name": "Phlegmatic",
       "desc": "Calm, emotionally stable",
-      "badge": "Phl"
+      "badge": "Phl",
+      "animal": "Elephant",
+      "features": ["Calm", "Patient", "Emotionally Stable", "Focused", "Reliable"],
+      "description": "The observer exhibits a distinct Phlegmatic tendency. People with this temperament are like still waters running deep — calm on the outside but steadfast within. They work steadily and reliably, not easily swayed by emotions, serving as the stabilizing force in a team. In tasks requiring patience and persistence, they often demonstrate extraordinary resilience. Their gentle approach also makes them excellent listeners and mediators."
     },
     "melancholic": {
       "name": "Melancholic",
       "desc": "Sensitive, deep thinker",
-      "badge": "Mel"
+      "badge": "Mel",
+      "animal": "Owl",
+      "features": ["Sensitive", "Perceptive", "Deep Thinker", "Perfectionist", "Creative"],
+      "description": "The observer exhibits a distinct Melancholic tendency. Note that \"Melancholic\" here is a psychological temperament term, not a reference to emotional state. People with this temperament possess keen insight and deep thinking ability, able to notice details others easily overlook. They experience emotions profoundly and have rich inner worlds, often excelling in artistic creation and in-depth analysis. They need an environment that provides a sense of security to fully express their talents."
     }
   },
   "behaviors": {
@@ -213,6 +225,14 @@
     "resilience": "Resilience",
     "empathy": "Empathy"
   },
+  "abilityDescription": {
+    "communication": "The ability to express ideas effectively, listen to others, and facilitate information exchange. High communicators can convey viewpoints clearly, understand others' intentions, and build positive interpersonal interactions.",
+    "leadership": "The ability to influence others and guide teams toward goals. High leaders possess vision, decisiveness, and the ability to motivate others, steering teams through difficulties.",
+    "creativity": "The ability to generate novel ideas, solve problems flexibly, and break through conventional thinking. High creatives excel at discovering new possibilities, unbound by traditional methods.",
+    "analysis": "The ability to reason logically, think systematically, and decompose problems. High analysts can extract key elements from complex information and make rational judgments.",
+    "resilience": "The ability to maintain emotional stability in adversity, adapt to change, and recover quickly. High resilience individuals stay calm under setbacks, transforming pressure into forward momentum.",
+    "empathy": "The ability to understand others' emotions, think from their perspective, and respond with compassion. High empathy individuals can keenly sense others' emotional states and build deep emotional connections."
+  },
   "professions": {
     "service": "Service Worker",
     "student": "Student",
@@ -227,6 +247,11 @@
     "loading": "Loading...",
     "temperamentDistribution": "Temperament Distribution",
     "comprehensiveInterpretation": "Comprehensive Interpretation",
+    "interpretation": {
+      "secondary": "Additionally, the observer also exhibits certain {{secondaryName}} traits, such as {{features}}, etc. This temperament combination gives the observer both the core characteristics of {{primaryName}} and certain advantages of {{secondaryName}}, presenting richer behavioral patterns.",
+      "ability": "In terms of ability dimensions, the observer performs most outstandingly in \"{{topName}}\". At the same time, there is room for further growth in \"{{bottomName}}\" — this is not a deficiency, but a natural tendency resulting from each person's unique temperament.",
+      "footer": "It should be emphasized that temperament and ability assessments are based on behavioral choices in specific scenarios by the observer, reflecting behavioral tendencies rather than fixed labels. Everyone is malleable; in different environments and experiences, our temperament and abilities will continue to develop and change. This assessment aims to provide a reference perspective to help observers better understand the behavioral patterns of the observed individual."
+    },
     "abilityRadar": "Ability Radar Chart",
     "radarStrong": "70+ Strong",
     "radarBalanced": "40-69 Balanced",

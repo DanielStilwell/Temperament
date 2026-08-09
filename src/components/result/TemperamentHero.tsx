@@ -11,7 +11,8 @@ interface TemperamentHeroProps {
 export default function TemperamentHero({ temperament, temperamentScores, abilityScores }: TemperamentHeroProps) {
   const { t } = useTranslation();
   const info = temperamentMap[temperament];
-  const interpretation = getInterpretation(temperament, temperamentScores, abilityScores);
+  const interpretation = getInterpretation(temperament, temperamentScores, abilityScores, t);
+  const features = t(`temperament.${temperament}.features`, { returnObjects: true }) as string[];
 
   return (
     <div className="space-y-4">
@@ -30,10 +31,10 @@ export default function TemperamentHero({ temperament, temperamentScores, abilit
           <h2 className="text-2xl font-bold mb-1" style={{ fontFamily: "'Nunito', 'PingFang SC', sans-serif" }}>
             {t(`temperament.${temperament}.name`)}
           </h2>
-          <p className="text-white/70 text-sm mb-4">{t(`temperament.${temperament}.name`)}</p>
+          <p className="text-white/70 text-sm mb-4">{t(`temperament.${temperament}.animal`)}</p>
 
           <div className="flex flex-wrap justify-center gap-2">
-            {info.features.map((f) => (
+            {features.map((f) => (
               <span
                 key={f}
                 className="px-3 py-1 rounded-full bg-white/20 text-sm text-white/90"
