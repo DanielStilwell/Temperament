@@ -1,11 +1,5 @@
 import { useEffect, useState, forwardRef } from 'react';
 import { useTranslation } from 'react-i18next';
-import {
-  RadarChart as RechartsRadar,
-  PolarGrid,
-  PolarAngleAxis,
-  Radar,
-} from 'recharts';
 import QRCode from 'qrcode';
 import { temperamentMap } from '../../data/results';
 import type {
@@ -30,6 +24,24 @@ const ANIMAL_EMOJI: Record<TemperamentType, string> = {
 
 const APP_URL = 'https://www.dsrtempe.top';
 
+// 雷达图参数
+const RADAR_CX = 187.5;
+const RADAR_CY = 85;
+const RADAR_R = 58;
+const ANGLES = [-90, -30, 30, 90, 150, 210]; // 6 个轴角度（度）
+
+function polarPoint(cx: number, cy: number, r: number, angleDeg: number) {
+  const rad = (angleDeg * Math.PI) / 180;
+  return { x: cx + r * Math.cos(rad), y: cy + r * Math.sin(rad) };
+}
+
+function hexagonPath(cx: number, cy: number, r: number): string {
+  return ANGLES.map((a, i) => {
+    const p = polarPoint(cx, cy, r, a);
+    return `${i === 0 ? 'M' : 'L'}${p.x.toFixed(1)},${p.y.toFixed(1)}`;
+  }).join('') + 'Z';
+}
+
 const ShareCard = forwardRef<HTMLDivElement, ShareCardProps>(
   ({ temperament, temperamentScores, abilityScores }, ref) => {
     const { t } = useTranslation();
@@ -47,17 +59,29 @@ const ShareCard = forwardRef<HTMLDivElement, ShareCardProps>(
       }).then(setQrDataUrl).catch(() => {});
     }, []);
 
-    // 能力雷达数据
-    const radarData = (Object.keys(abilityScores) as AbilityDimension[]).map(
-      (key) => ({
-        dimension: t(`abilities.${key}`),
-        score: abilityScores[key],
-        fullMark: 100,
-      })
-    );
+    // 能力维度数据
+    const dimensions = Object.keys(abilityScores) as AbilityDimension[];
+    const scores = dimensions.map((d) => abilityScores[d]);
 
-    // 取前 3 项能力得分（用于展示）
-    const topAbilities = (Object.keys(abilityScores) as AbilityDimension[])
+    // 数据多边形顶点
+    const dataPoints = ANGLES.map((a, i) =>
+      polarPoint(RADAR_CX, RADAR_CY, (RADAR_R * scores[i]) / 100, a)
+    );
+    const dataPolygon = dataPoints
+      .map((p, i) => `${i === 0 ? 'M' : 'L'}${p.x.toFixed(1)},${p.y.toFixed(1)}`)
+      .join('') + 'Z';
+
+    // 标签位置（在轴端外侧）
+    const labelPoints = ANGLES.map((a, i) => {
+      const p = polarPoint(RADAR_CX, RADAR_CY, RADAR_R + 14, a);
+      let anchor: 'start' | 'middle' | 'end' = 'middle';
+      if (Math.abs(a) < 90) anchor = 'start';
+      else if (Math.abs(a) > 90) anchor = 'end';
+      return { ...p, anchor, label: t(`abilities.${dimensions[i]}`) };
+    });
+
+    // 取前 3 项能力得分
+    const topAbilities = dimensions
       .map((key) => ({
         key,
         label: t(`abilities.${key}`),
@@ -77,7 +101,6 @@ const ShareCard = forwardRef<HTMLDivElement, ShareCardProps>(
           className="relative px-6 pt-8 pb-6 text-white text-center overflow-hidden"
           style={{ background: info.gradient }}
         >
-          {/* 装饰圆 */}
           <div className="absolute top-3 right-5 w-20 h-20 rounded-full bg-white opacity-10" />
           <div className="absolute bottom-1 left-3 w-14 h-14 rounded-full bg-white opacity-10" />
 
@@ -90,7 +113,6 @@ const ShareCard = forwardRef<HTMLDivElement, ShareCardProps>(
               {t(`temperament.${temperament}.animal`)}
             </p>
 
-            {/* 特征标签 */}
             <div className="flex flex-wrap justify-center gap-1.5">
               {features.map((f) => (
                 <span
@@ -104,44 +126,78 @@ const ShareCard = forwardRef<HTMLDivElement, ShareCardProps>(
           </div>
         </div>
 
-        {/* 中部：能力雷达图 */}
+        {/* 中部：能力雷达图（纯手写 SVG，避免 Recharts 序列化问题） */}
         <div className="px-6 py-4">
           <h3 className="text-xs font-semibold text-[#3D3A5C] mb-1 text-center">
             {t('result.abilityRadar')}
           </h3>
-          <div className="w-full h-[160px]">
-            <RechartsRadar
-              data={radarData}
-              cx="50%"
-              cy="50%"
-              outerRadius="68%"
-              width={375}
-              height={160}
-            >
-              <PolarGrid stroke="#E0DCF5" strokeWidth={1} />
-              <PolarAngleAxis
-                dataKey="dimension"
-                tick={{ fill: '#5A5880', fontSize: 10, fontWeight: 500 }}
+          <svg viewBox="0 0 375 170" width="375" height="170" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="radarFill" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stopColor="#5B4FCF" stopOpacity="0.35" />
+                <stop offset="100%" stopColor="#8B7FD4" stopOpacity="0.15" />
+              </linearGradient>
+            </defs>
+
+            {/* 网格六边形 */}
+            {[0.25, 0.5, 0.75, 1].map((lvl) => (
+              <path
+                key={lvl}
+                d={hexagonPath(RADAR_CX, RADAR_CY, RADAR_R * lvl)}
+                fill="none"
+                stroke="#E0DCF5"
+                strokeWidth="1"
               />
-              <Radar
-                dataKey="score"
-                stroke="#5B4FCF"
-                strokeWidth={2}
-                fill="url(#shareCardGradient)"
-                fillOpacity={1}
-                dot={{ r: 3, fill: '#5B4FCF' }}
+            ))}
+
+            {/* 轴线 */}
+            {ANGLES.map((a) => {
+              const p = polarPoint(RADAR_CX, RADAR_CY, RADAR_R, a);
+              return (
+                <line
+                  key={a}
+                  x1={RADAR_CX}
+                  y1={RADAR_CY}
+                  x2={p.x.toFixed(1)}
+                  y2={p.y.toFixed(1)}
+                  stroke="#E0DCF5"
+                  strokeWidth="1"
+                />
+              );
+            })}
+
+            {/* 数据多边形 */}
+            <path d={dataPolygon} fill="url(#radarFill)" stroke="#5B4FCF" strokeWidth="2" />
+
+            {/* 数据点 */}
+            {dataPoints.map((p, i) => (
+              <circle
+                key={i}
+                cx={p.x.toFixed(1)}
+                cy={p.y.toFixed(1)}
+                r="3"
+                fill="#5B4FCF"
               />
-              <defs>
-                <linearGradient id="shareCardGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                  <stop offset="0%" stopColor="#5B4FCF" stopOpacity={0.35} />
-                  <stop offset="100%" stopColor="#8B7FD4" stopOpacity={0.15} />
-                </linearGradient>
-              </defs>
-            </RechartsRadar>
-          </div>
+            ))}
+
+            {/* 标签 */}
+            {labelPoints.map((p, i) => (
+              <text
+                key={i}
+                x={p.x.toFixed(1)}
+                y={(p.y + 3).toFixed(1)}
+                textAnchor={p.anchor}
+                fontSize="10"
+                fontWeight="500"
+                fill="#5A5880"
+              >
+                {p.label}
+              </text>
+            ))}
+          </svg>
 
           {/* Top 3 能力 */}
-          <div className="flex justify-around mt-2">
+          <div className="flex justify-around -mt-2">
             {topAbilities.map((a) => (
               <div key={a.key} className="text-center">
                 <p className="text-lg font-bold" style={{ color: info.color }}>
@@ -168,7 +224,7 @@ const ShareCard = forwardRef<HTMLDivElement, ShareCardProps>(
             </p>
           </div>
           {qrDataUrl && (
-            <img src={qrDataUrl} alt="QR" className="w-[56px] h-[56px] ml-3" />
+            <img src={qrDataUrl} alt="QR" className="w-[56px] h-[56px] ml-3" crossOrigin="anonymous" />
           )}
         </div>
       </div>
