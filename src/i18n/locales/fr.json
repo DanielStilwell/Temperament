@@ -280,7 +280,9 @@
     "saveImage": "Enregistrer l'image",
     "saving": "Enregistrement...",
     "shareText": "J'ai découvert mon type de tempérament sur Tempe. Découvrez le vôtre !",
-    "saveFail": "Échec de l'enregistrement de l'image. Veuillez réessayer."
+    "saveFail": "Échec de l'enregistrement de l'image. Veuillez réessayer.",
+    "regenerate": "Régénérer",
+    "download": "Télécharger l'image"
   },
   "motivations": {
     "achievement": {

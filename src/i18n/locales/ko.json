@@ -280,7 +280,9 @@
     "saveImage": "이미지 저장",
     "saving": "저장 중...",
     "shareText": "Tempe에서 기질 유형을 테스트했습니다. 당신도 해보세요!",
-    "saveFail": "이미지 저장에 실패했습니다. 다시 시도해주세요."
+    "saveFail": "이미지 저장에 실패했습니다. 다시 시도해주세요.",
+    "regenerate": "다시 생성",
+    "download": "이미지 다운로드"
   },
   "motivations": {
     "achievement": {

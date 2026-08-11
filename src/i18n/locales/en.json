@@ -280,7 +280,9 @@
     "saveImage": "Save Image",
     "saving": "Saving...",
     "shareText": "I found my temperament type on Tempe. Come discover yours!",
-    "saveFail": "Failed to save image. Please try again."
+    "saveFail": "Failed to save image. Please try again.",
+    "regenerate": "Regenerate",
+    "download": "Download Image"
   },
   "motivations": {
     "achievement": {

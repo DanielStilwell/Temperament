@@ -280,7 +280,9 @@
     "saveImage": "Bild speichern",
     "saving": "Speichern...",
     "shareText": "Ich habe meinen Temperamentstyp bei Tempe getestet. Entdecke deinen!",
-    "saveFail": "Bild konnte nicht gespeichert werden. Bitte erneut versuchen."
+    "saveFail": "Bild konnte nicht gespeichert werden. Bitte erneut versuchen.",
+    "regenerate": "Neu generieren",
+    "download": "Bild herunterladen"
   },
   "motivations": {
     "achievement": {

@@ -280,7 +280,9 @@
     "saveImage": "画像を保存",
     "saving": "保存中...",
     "shareText": "Tempeで気質タイプを診断しました。あなたもやってみよう！",
-    "saveFail": "画像の保存に失敗しました。もう一度お試しください。"
+    "saveFail": "画像の保存に失敗しました。もう一度お試しください。",
+    "regenerate": "再生成",
+    "download": "画像をダウンロード"
   },
   "motivations": {
     "achievement": {

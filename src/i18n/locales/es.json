@@ -280,7 +280,9 @@
     "saveImage": "Guardar imagen",
     "saving": "Guardando...",
     "shareText": "Descubrí mi tipo de temperamento en Tempe. ¡Descubre el tuyo!",
-    "saveFail": "Error al guardar la imagen. Inténtalo de nuevo."
+    "saveFail": "Error al guardar la imagen. Inténtalo de nuevo.",
+    "regenerate": "Regenerar",
+    "download": "Descargar imagen"
   },
   "motivations": {
     "achievement": {

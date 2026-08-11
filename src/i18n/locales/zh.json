@@ -280,7 +280,9 @@
     "saveImage": "保存图片",
     "saving": "保存中...",
     "shareText": "我在 Tempe 测了气质类型，快来看看你的吧！",
-    "saveFail": "图片保存失败，请重试"
+    "saveFail": "图片保存失败，请重试",
+    "regenerate": "重新生成",
+    "download": "下载图片"
   },
   "motivations": {
     "achievement": {
