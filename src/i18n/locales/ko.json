@@ -274,6 +274,14 @@
     "saveToTeam": "팀에 저장",
     "discardConfirm": "이 피관찰자의 진단 결과를 폐기하시겠습니까?"
   },
+  "shareCard": {
+    "tagline": "당신의 기질 유형을 발견하세요",
+    "disclaimer": "자기 탐색 및 오락 참고용",
+    "saveImage": "이미지 저장",
+    "saving": "저장 중...",
+    "shareText": "Tempe에서 기질 유형을 테스트했습니다. 당신도 해보세요!",
+    "saveFail": "이미지 저장에 실패했습니다. 다시 시도해주세요."
+  },
   "motivations": {
     "achievement": {
       "name": "성취",

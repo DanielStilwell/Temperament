@@ -274,6 +274,14 @@
     "saveToTeam": "チームに保存",
     "discardConfirm": "この被観察者の診断結果を破棄しますか？"
   },
+  "shareCard": {
+    "tagline": "あなたの気質タイプを発見",
+    "disclaimer": "自己探求と娯楽参考のみ",
+    "saveImage": "画像を保存",
+    "saving": "保存中...",
+    "shareText": "Tempeで気質タイプを診断しました。あなたもやってみよう！",
+    "saveFail": "画像の保存に失敗しました。もう一度お試しください。"
+  },
   "motivations": {
     "achievement": {
       "name": "達成",

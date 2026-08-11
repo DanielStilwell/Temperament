@@ -274,6 +274,14 @@
     "saveToTeam": "Im Team speichern",
     "discardConfirm": "Bewertungsergebnis dieses Beobachteten verwerfen?"
   },
+  "shareCard": {
+    "tagline": "Entdecke dein Temperament",
+    "disclaimer": "Nur zur Selbsterforschung und Unterhaltung",
+    "saveImage": "Bild speichern",
+    "saving": "Speichern...",
+    "shareText": "Ich habe meinen Temperamentstyp bei Tempe getestet. Entdecke deinen!",
+    "saveFail": "Bild konnte nicht gespeichert werden. Bitte erneut versuchen."
+  },
   "motivations": {
     "achievement": {
       "name": "Leistung",

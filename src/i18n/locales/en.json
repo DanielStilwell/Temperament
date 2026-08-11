@@ -274,6 +274,14 @@
     "saveToTeam": "Save to Team",
     "discardConfirm": "Discard this observer's assessment result?"
   },
+  "shareCard": {
+    "tagline": "Discover your temperament",
+    "disclaimer": "For self-exploration and entertainment only",
+    "saveImage": "Save Image",
+    "saving": "Saving...",
+    "shareText": "I found my temperament type on Tempe. Come discover yours!",
+    "saveFail": "Failed to save image. Please try again."
+  },
   "motivations": {
     "achievement": {
       "name": "Achievement",

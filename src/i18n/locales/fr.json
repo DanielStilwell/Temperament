@@ -274,6 +274,14 @@
     "saveToTeam": "Enregistrer dans l'équipe",
     "discardConfirm": "Abandonner le résultat d'évaluation de cet observé ?"
   },
+  "shareCard": {
+    "tagline": "Découvrez votre tempérament",
+    "disclaimer": "Pour l'auto-exploration et le divertissement uniquement",
+    "saveImage": "Enregistrer l'image",
+    "saving": "Enregistrement...",
+    "shareText": "J'ai découvert mon type de tempérament sur Tempe. Découvrez le vôtre !",
+    "saveFail": "Échec de l'enregistrement de l'image. Veuillez réessayer."
+  },
   "motivations": {
     "achievement": {
       "name": "Accomplissement",

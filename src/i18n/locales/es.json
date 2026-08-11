@@ -274,6 +274,14 @@
     "saveToTeam": "Guardar en el equipo",
     "discardConfirm": "¿Descartar el resultado de la evaluación de este observado?"
   },
+  "shareCard": {
+    "tagline": "Descubre tu temperamento",
+    "disclaimer": "Solo para autoexploración y entretenimiento",
+    "saveImage": "Guardar imagen",
+    "saving": "Guardando...",
+    "shareText": "Descubrí mi tipo de temperamento en Tempe. ¡Descubre el tuyo!",
+    "saveFail": "Error al guardar la imagen. Inténtalo de nuevo."
+  },
   "motivations": {
     "achievement": {
       "name": "Logro",

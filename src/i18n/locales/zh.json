@@ -274,6 +274,14 @@
     "saveToTeam": "保存到团队",
     "discardConfirm": "确定丢弃这位被观察者的评估结果吗？"
   },
+  "shareCard": {
+    "tagline": "发现你的气质类型",
+    "disclaimer": "仅供自我探索和娱乐参考",
+    "saveImage": "保存图片",
+    "saving": "保存中...",
+    "shareText": "我在 Tempe 测了气质类型，快来看看你的吧！",
+    "saveFail": "图片保存失败，请重试"
+  },
   "motivations": {
     "achievement": {
       "name": "成就动机",
