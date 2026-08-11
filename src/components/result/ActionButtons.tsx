@@ -31,9 +31,16 @@ export default function ActionButtons() {
     if (!cardRef.current) return;
     setSaving(true);
     try {
+      // 等待字体加载完成，避免 html-to-image 嵌入字体时 CORS 失败
+      if (document.fonts?.ready) {
+        await document.fonts.ready;
+      }
+
       const dataUrl = await toPng(cardRef.current, {
         pixelRatio: 2,
-        cacheBust: true,
+        cacheBust: false,
+        skipFonts: true,
+        backgroundColor: '#ffffff',
       });
 
       // 尝试调用系统分享（移动端）
@@ -57,7 +64,8 @@ export default function ActionButtons() {
       link.download = 'tempe-result.png';
       link.href = dataUrl;
       link.click();
-    } catch {
+    } catch (err) {
+      console.error('Share card save error:', err);
       alert(t('shareCard.saveFail'));
     } finally {
       setSaving(false);
