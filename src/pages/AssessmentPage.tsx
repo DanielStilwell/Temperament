@@ -7,7 +7,7 @@ import ScenarioCard from '../components/assessment/ScenarioCard';
 import OptionList from '../components/assessment/OptionList';
 import NavigationBar from '../components/assessment/NavigationBar';
 import LanguageSwitcher from '../components/ui/LanguageSwitcher';
-import { analyzeTemperamentFromText, getWeightsFromEvaluation } from '../data/keywordMatching';
+import { analyzeFromText, getWeightsFromEvaluation } from '../data/keywordMatching';
 import type { TemperamentType, AbilityDimension, DimensionWeights } from '../types';
 
 // 综合评价结构
@@ -67,12 +67,16 @@ export default function AssessmentPage() {
   };
 
   const handleCustomSelect = (text: string, evaluation: ComprehensiveEvaluation) => {
-    // 如果用户选择"跳过"（temperament为'unknown'），使用关键词匹配
+    // 如果用户选择"跳过"（temperament为'unknown'），使用多维度关键词分析
     if (evaluation.temperament === 'unknown') {
-      const detectedTemperament = analyzeTemperamentFromText(text);
-      // 为自动分析生成默认权重
-      const weights = getWeightsFromEvaluation(detectedTemperament, [], [], 'neutral');
-      setCustomAnswer(scenario.id, text, { ...evaluation, temperament: detectedTemperament }, weights);
+      const analysis = analyzeFromText(text);
+      const weights = getWeightsFromEvaluation(
+        analysis.temperament,
+        analysis.behaviors,
+        analysis.abilities,
+        analysis.emotion
+      );
+      setCustomAnswer(scenario.id, text, analysis, weights);
     } else {
       // 用户手动评价，根据评价生成权重
       const weights = getWeightsFromEvaluation(
