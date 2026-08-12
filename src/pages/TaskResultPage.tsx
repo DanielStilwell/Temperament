@@ -10,7 +10,9 @@ import {
 import Button from '../components/ui/Button';
 import Disclaimer from '../components/ui/Disclaimer';
 import LanguageSwitcher from '../components/ui/LanguageSwitcher';
+import CombinationRecommender from '../components/workspace/CombinationRecommender';
 import { listTasks, deleteTask } from '../lib/tasks';
+import { useAuthStore } from '../stores/auth';
 import type { TaskRecord } from '../types/account';
 import type { AbilityDimension } from '../types';
 
@@ -33,9 +35,13 @@ export default function TaskResultPage() {
   const { t } = useTranslation();
   const { id } = useParams<{ id: string }>();
   const navigate = useNavigate();
+  const { profile } = useAuthStore();
   const [task, setTask] = useState<TaskRecord | null>(null);
   const [loading, setLoading] = useState(true);
   const [deleting, setDeleting] = useState(false);
+
+  const backUrl = profile?.tier === 'max' ? '/max' : '/pro';
+  const isMaxTier = profile?.tier === 'max';
 
   useEffect(() => {
     (async () => {
@@ -51,7 +57,7 @@ export default function TaskResultPage() {
     setDeleting(true);
     try {
       await deleteTask(task.id);
-      navigate('/max');
+      navigate(backUrl);
     } finally {
       setDeleting(false);
     }
@@ -69,7 +75,7 @@ export default function TaskResultPage() {
     return (
       <div className="min-h-screen flex flex-col items-center justify-center gap-3">
         <p className="text-sm text-[#8E8CA8]">{t('taskResult.taskNotFound')}</p>
-        <Link to="/max" className="text-sm text-[#5B4FCF] hover:underline">{t('taskResult.backToMax')}</Link>
+        <Link to={backUrl} className="text-sm text-[#5B4FCF] hover:underline">{t('taskResult.backToMax')}</Link>
       </div>
     );
   }
@@ -90,7 +96,7 @@ export default function TaskResultPage() {
       <div className="max-w-[420px] md:max-w-[820px] lg:max-w-[960px] mx-auto flex flex-col gap-5">
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <Link to="/max" className="inline-flex items-center gap-1.5 text-sm text-[#8E8CA8] hover:text-[#5B4FCF] transition-colors">
+            <Link to={backUrl} className="inline-flex items-center gap-1.5 text-sm text-[#8E8CA8] hover:text-[#5B4FCF] transition-colors">
               <ArrowLeft className="w-4 h-4" />
               {t('taskResult.backToMax')}
             </Link>
@@ -237,9 +243,12 @@ export default function TaskResultPage() {
           <MatchTable title={t('taskResult.thinkingStyle')} matches={p.thinkingMatches} />
         </div>
 
+        {/* Max 版：最优人员组合推荐 */}
+        {isMaxTier && <CombinationRecommender taskParams={task.params} />}
+
         <Disclaimer />
 
-        <Button variant="outline" size="md" fullWidth onClick={() => navigate('/max')}>
+        <Button variant="outline" size="md" fullWidth onClick={() => navigate(backUrl)}>
           {t('taskResult.backToMax')}
         </Button>
       </div>

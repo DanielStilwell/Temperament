@@ -72,11 +72,11 @@ export default function App() {
           {/* 被观察者详情（运行时按 profile.tier 跳转回去，这里做软保护） */}
           <Route path="/observer/:id" element={<ObserverDetailPage />} />
 
-          {/* Max 任务预判 */}
+          {/* 任务预判（Pro 和 Max 共用） */}
           <Route
             path="/task/new"
             element={
-              <AuthGuard tier="max">
+              <AuthGuard tier="pro" shared>
                 <TaskBuilderPage />
               </AuthGuard>
             }
@@ -84,7 +84,7 @@ export default function App() {
           <Route
             path="/task/:id"
             element={
-              <AuthGuard tier="max">
+              <AuthGuard tier="pro" shared>
                 <TaskResultPage />
               </AuthGuard>
             }

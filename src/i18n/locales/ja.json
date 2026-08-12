@@ -424,7 +424,13 @@
     "addObserver": "被観察者を追加",
     "observers": "被観察者",
     "teamProfile": "チームプロフィール",
-    "emptyHint": "まだ被観察者がいません。上のボタンから追加"
+    "emptyHint": "まだ被観察者がいません。上のボタンから追加",
+    "newPrediction": "新規予測",
+    "predictionRecords": "予測記録",
+    "emptyPredictions": "予測記録がありません。上のボタンをクリックして開始",
+    "confirmDeletePrediction": "この予測を削除しますか？",
+    "members": "{{count}} 名",
+    "fitScore": "適合度 {{score}}"
   },
   "maxWorkspace": {
     "badge": "Max ワークスペース",
@@ -803,6 +809,29 @@
         ],
         "conflict": "敏感さが批判の影響を拡大する可能性あり、建設的なフィードバックと励ましを組み合わせる"
       }
+    }
+  },
+  "combination": {
+    "title": "最適チーム組み合わせ",
+    "subtitle": "タスクパラメータに基づき2-3の最適なチーム構成を自動生成",
+    "loading": "組み合わせを生成中...",
+    "empty": "組み合わせ推奨には3名以上の被観察者が必要です",
+    "synergyScore": "シナジー",
+    "completionProb": "達成確率",
+    "strategy": {
+      "top-performers": "最強メンバー",
+      "complementary": "補完型",
+      "role-based": "役割別"
+    },
+    "rationale": {
+      "top-performers": "{{topMember}}が牽引、個人適合度平均{{avgScore}}で全次元の基礎力が強力。",
+      "complementary": "{{diversity}}種類の気質タイプをカバーし、補完的な強みで弱点を補う。",
+      "role-based": "タスクに必要な{{roleCount}}つの主要役割をカバーし、役割分担が明確。"
+    },
+    "risk": {
+      "top-performers": "{{count}}名が類似次元で重複する可能性、弱い次元のカバー要確認。",
+      "complementary": "シナジーは{{count}}名の異なる特質を持つメンバーの協力に依存、コミュニケーション強化が必要。",
+      "role-based": "役割カバーは充実だが{{count}}人チームは追加の調整コストが発生する可能性。"
     }
   }
 }

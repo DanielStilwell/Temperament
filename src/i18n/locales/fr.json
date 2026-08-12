@@ -424,7 +424,13 @@
     "addObserver": "Ajouter un observé",
     "observers": "Observés",
     "teamProfile": "Profil d'équipe",
-    "emptyHint": "Aucun observé pour le moment. Cliquez sur le bouton ci-dessus pour en ajouter"
+    "emptyHint": "Aucun observé pour le moment. Cliquez sur le bouton ci-dessus pour en ajouter",
+    "newPrediction": "Nouvelle Prédiction",
+    "predictionRecords": "Dossiers de Prédiction",
+    "emptyPredictions": "Aucune prédiction. Cliquez sur le bouton ci-dessus pour commencer",
+    "confirmDeletePrediction": "Confirmer la suppression de cette prédiction ?",
+    "members": "{{count}} membres",
+    "fitScore": "Score {{score}}"
   },
   "maxWorkspace": {
     "badge": "Espace Max",
@@ -803,6 +809,29 @@
         ],
         "conflict": "La sensibilité peut amplifier l'impact des critiques; utiliser un retour constructif accompagné d'encouragement"
       }
+    }
+  },
+  "combination": {
+    "title": "Combinaisons d'Équipe Optimales",
+    "subtitle": "2-3 configurations optimales générées automatiquement",
+    "loading": "Génération des combinaisons...",
+    "empty": "Au moins 3 observateurs nécessaires",
+    "synergyScore": "Synergie",
+    "completionProb": "Prob. de Réussite",
+    "strategy": {
+      "top-performers": "Meilleurs",
+      "complementary": "Complémentaire",
+      "role-based": "Par Rôles"
+    },
+    "rationale": {
+      "top-performers": "Dirigé par {{topMember}}, moyenne de {{avgScore}} en adéquation individuelle avec une base solide.",
+      "complementary": "L'équipe couvre {{diversity}} types de tempérament, équilibrant les forces complémentaires.",
+      "role-based": "Couvre {{roleCount}} rôles clés requis par la tâche avec une répartition claire."
+    },
+    "risk": {
+      "top-performers": "{{count}} membres peuvent se chevaucher dans des dimensions similaires.",
+      "complementary": "La synergie dépend de la collaboration entre {{count}} membres aux profils différents.",
+      "role-based": "Couverture de rôles solide, mais une équipe de {{count}} personnes peut nécessiter une coordination supplémentaire."
     }
   }
 }

@@ -424,7 +424,13 @@
     "addObserver": "Añadir observado",
     "observers": "Observados",
     "teamProfile": "Perfil del equipo",
-    "emptyHint": "Aún no hay observados. Haz clic en el botón superior para añadir"
+    "emptyHint": "Aún no hay observados. Haz clic en el botón superior para añadir",
+    "newPrediction": "Nueva Predicción",
+    "predictionRecords": "Registros de Predicción",
+    "emptyPredictions": "Aún no hay predicciones. Haz clic en el botón de arriba para empezar",
+    "confirmDeletePrediction": "¿Confirmar eliminar esta predicción?",
+    "members": "{{count}} miembros",
+    "fitScore": "Puntuación {{score}}"
   },
   "maxWorkspace": {
     "badge": "Espacio Max",
@@ -803,6 +809,29 @@
         ],
         "conflict": "La sensibilidad puede amplificar el impacto de las críticas; usar retroalimentación constructiva con estímulo"
       }
+    }
+  },
+  "combination": {
+    "title": "Combinaciones Óptimas de Equipo",
+    "subtitle": "2-3 configuraciones óptimas generadas automáticamente según los parámetros de la tarea",
+    "loading": "Generando combinaciones...",
+    "empty": "Se necesitan al menos 3 observadores para generar recomendaciones",
+    "synergyScore": "Sinergia",
+    "completionProb": "Prob. de Éxito",
+    "strategy": {
+      "top-performers": "Mejores",
+      "complementary": "Complementario",
+      "role-based": "Por Roles"
+    },
+    "rationale": {
+      "top-performers": "Liderado por {{topMember}}, el equipo promedia {{avgScore}} en aptitud individual con base sólida.",
+      "complementary": "El equipo abarca {{diversity}} tipos de temperamento, equilibrando fortalezas complementarias.",
+      "role-based": "Cubre {{roleCount}} roles clave requeridos por la tarea con clara división de responsabilidades."
+    },
+    "risk": {
+      "top-performers": "{{count}} miembros pueden superponerse en dimensiones similares; verificar áreas débiles.",
+      "complementary": "La sinergia depende de la colaboración entre {{count}} miembros con perfiles diferentes.",
+      "role-based": "Cobertura de roles sólida, pero un equipo de {{count}} personas puede requerir coordinación adicional."
     }
   }
 }

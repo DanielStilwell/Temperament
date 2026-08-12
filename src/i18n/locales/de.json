@@ -424,7 +424,13 @@
     "addObserver": "Beobachteten hinzufügen",
     "observers": "Beobachtete",
     "teamProfile": "Teamprofil",
-    "emptyHint": "Noch keine Beobachteten. Klicken Sie auf die Schaltfläche oben, um hinzuzufügen"
+    "emptyHint": "Noch keine Beobachteten. Klicken Sie auf die Schaltfläche oben, um hinzuzufügen",
+    "newPrediction": "Neue Vorhersage",
+    "predictionRecords": "Vorhersageaufzeichnungen",
+    "emptyPredictions": "Noch keine Vorhersagen. Klicken Sie oben auf die Schaltfläche, um zu starten",
+    "confirmDeletePrediction": "Diese Vorhersage wirklich löschen?",
+    "members": "{{count}} Mitglieder",
+    "fitScore": "Punktzahl {{score}}"
   },
   "maxWorkspace": {
     "badge": "Max-Arbeitsbereich",
@@ -803,6 +809,29 @@
         ],
         "conflict": "Sensibilität kann die Auswirkung von Kritik verstärken; konstruktives Feedback mit Ermutigung kombinieren"
       }
+    }
+  },
+  "combination": {
+    "title": "Optimale Team-Kombinationen",
+    "subtitle": "Automatisch generierte 2-3 optimale Teamkonfigurationen",
+    "loading": "Kombinationen werden erstellt...",
+    "empty": "Mindestens 3 Beobachter erforderlich",
+    "synergyScore": "Synergie",
+    "completionProb": "Erfolgswahrsch.",
+    "strategy": {
+      "top-performers": "Top-Performer",
+      "complementary": "Komplementär",
+      "role-based": "Rollenbasiert"
+    },
+    "rationale": {
+      "top-performers": "Angeführt von {{topMember}}, durchschnittliche individuelle Eignung {{avgScore}} mit starker Basis.",
+      "complementary": "Team umfasst {{diversity}} Temperamentstypen mit komplementären Stärken.",
+      "role-based": "Deckt {{roleCount}} Schlüsselrollen der Aufgabe mit klarer Verantwortungsteilung ab."
+    },
+    "risk": {
+      "top-performers": "{{count}} Mitglieder überschneiden sich möglicherweise in ähnlichen Dimensionen.",
+      "complementary": "Synergie hängt von der Zusammenarbeit zwischen {{count}} Mitgliedern mit verschiedenen Profilen ab.",
+      "role-based": "Solide Rollenabdeckung, aber ein {{count}}-Personen-Team kann zusätzlichen Koordinationsaufwand erfordern."
     }
   }
 }

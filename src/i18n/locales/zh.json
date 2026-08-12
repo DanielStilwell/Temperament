@@ -424,7 +424,13 @@
     "addObserver": "添加被观察者",
     "observers": "被观察者",
     "teamProfile": "团队画像",
-    "emptyHint": "暂无被观察者，点击上方按钮添加"
+    "emptyHint": "暂无被观察者，点击上方按钮添加",
+    "newPrediction": "新建预测",
+    "predictionRecords": "预测记录",
+    "emptyPredictions": "暂无预测记录，点击上方按钮开始",
+    "confirmDeletePrediction": "确认删除此预测吗？",
+    "members": "{{count}} 位成员",
+    "fitScore": "匹配度 {{score}}"
   },
   "maxWorkspace": {
     "badge": "Max 工作台",
@@ -803,6 +809,29 @@
         ],
         "conflict": "敏感特质可能放大批评的影响，建议以建设性方式反馈并搭配鼓励"
       }
+    }
+  },
+  "combination": {
+    "title": "最优人员组合推荐",
+    "subtitle": "基于任务参数和团队画像自动生成 2-3 个最优组合方案",
+    "loading": "正在生成组合方案...",
+    "empty": "至少需要 3 名被观察者才能生成组合推荐",
+    "synergyScore": "协同度",
+    "completionProb": "完成概率",
+    "strategy": {
+      "top-performers": "最强阵容",
+      "complementary": "互补阵容",
+      "role-based": "角色覆盖"
+    },
+    "rationale": {
+      "top-performers": "由 {{topMember}} 领衔，团队平均个人匹配度 {{avgScore}} 分，各维度基础实力强劲。",
+      "complementary": "团队覆盖 {{diversity}} 种气质类型，通过优势互补弥补各自短板。",
+      "role-based": "覆盖任务所需的 {{roleCount}} 个关键角色，角色分工明确。"
+    },
+    "risk": {
+      "top-performers": "{{count}} 名成员可能在相似维度上重叠，需关注弱势维度的覆盖。",
+      "complementary": "协同度依赖 {{count}} 名不同特质成员的配合，执行中需加强沟通。",
+      "role-based": "角色覆盖全面，但 {{count}} 人团队可能需要额外的协调成本。"
     }
   }
 }

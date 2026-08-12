@@ -48,8 +48,12 @@ export default function TaskBuilderPage() {
   const { t } = useTranslation();
   const navigate = useNavigate();
   const [searchParams] = useSearchParams();
+  const { profile } = useAuthStore();
   const [observers, setObservers] = useState<Observer[]>([]);
   const [loadingObservers, setLoadingObservers] = useState(true);
+
+  const backUrl = profile?.tier === 'max' ? '/max' : '/pro';
+
   const [name, setName] = useState('');
   const [params, setParams] = useState<TaskParams>(emptyTaskParams());
   const [selectedIds, setSelectedIds] = useState<string[]>([]);
@@ -135,7 +139,7 @@ export default function TaskBuilderPage() {
     <div className="min-h-screen p-4 pb-10">
       <div className="max-w-[420px] md:max-w-[820px] lg:max-w-[960px] mx-auto flex flex-col gap-5">
         <div className="flex items-center justify-between">
-          <Link to="/max" className="inline-flex items-center gap-1.5 text-sm text-[#8E8CA8] hover:text-[#5B4FCF] transition-colors w-fit">
+          <Link to={backUrl} className="inline-flex items-center gap-1.5 text-sm text-[#8E8CA8] hover:text-[#5B4FCF] transition-colors w-fit">
             <ArrowLeft className="w-4 h-4" />
             {t('taskBuilder.backToMax')}
           </Link>

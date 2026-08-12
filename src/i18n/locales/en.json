@@ -424,7 +424,13 @@
     "addObserver": "Add Observer",
     "observers": "Observers",
     "teamProfile": "Team Profile",
-    "emptyHint": "No observers yet. Click the button above to add"
+    "emptyHint": "No observers yet. Click the button above to add",
+    "newPrediction": "New Prediction",
+    "predictionRecords": "Prediction Records",
+    "emptyPredictions": "No predictions yet. Click the button above to start",
+    "confirmDeletePrediction": "Confirm delete this prediction?",
+    "members": "{{count}} members",
+    "fitScore": "Fit Score {{score}}"
   },
   "maxWorkspace": {
     "badge": "Max Workspace",
@@ -803,6 +809,29 @@
         ],
         "conflict": "Sensitivity may amplify the impact of criticism; use constructive feedback paired with encouragement"
       }
+    }
+  },
+  "combination": {
+    "title": "Optimal Team Combinations",
+    "subtitle": "Auto-generated 2-3 optimal team configurations based on task parameters",
+    "loading": "Generating combinations...",
+    "empty": "Need at least 3 observers to generate combination recommendations",
+    "synergyScore": "Synergy",
+    "completionProb": "Completion Prob.",
+    "strategy": {
+      "top-performers": "Top Performers",
+      "complementary": "Complementary",
+      "role-based": "Role-Based"
+    },
+    "rationale": {
+      "top-performers": "Led by {{topMember}}, the team averages {{avgScore}} in individual fit with strong baseline across all dimensions.",
+      "complementary": "Team spans {{diversity}} temperament types, balancing complementary strengths to cover gaps.",
+      "role-based": "Covers {{roleCount}} key roles required by the task with clear division of responsibilities."
+    },
+    "risk": {
+      "top-performers": "{{count}} members may overlap in similar dimensions; verify coverage of weaker areas.",
+      "complementary": "Synergy depends on collaboration among {{count}} members with different profiles; extra communication needed.",
+      "role-based": "Solid role coverage, but a {{count}}-person team may need additional coordination overhead."
     }
   }
 }

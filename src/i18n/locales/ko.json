@@ -424,7 +424,13 @@
     "addObserver": "피관찰자 추가",
     "observers": "피관찰자",
     "teamProfile": "팀 프로필",
-    "emptyHint": "아직 피관찰자가 없습니다. 위 버튼을 눌러 추가"
+    "emptyHint": "아직 피관찰자가 없습니다. 위 버튼을 눌러 추가",
+    "newPrediction": "새 예측",
+    "predictionRecords": "예측 기록",
+    "emptyPredictions": "예측 기록이 없습니다. 위 버튼을 클릭하여 시작하세요",
+    "confirmDeletePrediction": "이 예측을 삭제하시겠습니까?",
+    "members": "{{count}}명",
+    "fitScore": "적합도 {{score}}"
   },
   "maxWorkspace": {
     "badge": "Max 워크스페이스",
@@ -803,6 +809,29 @@
         ],
         "conflict": "민감성이 비판의 영향을 증폭할 수 있음, 건설적 피드백과 격려를 병행할 것"
       }
+    }
+  },
+  "combination": {
+    "title": "최적 팀 조합",
+    "subtitle": "작업 매개변수를 기반으로 2-3개의 최적 팀 구성을 자동 생성",
+    "loading": "조합 생성 중...",
+    "empty": "조합 추천을 위해 최소 3명의 피관찰자가 필요합니다",
+    "synergyScore": "시너지",
+    "completionProb": "달성 확률",
+    "strategy": {
+      "top-performers": "최강 멤버",
+      "complementary": "보완형",
+      "role-based": "역할별"
+    },
+    "rationale": {
+      "top-performers": "{{topMember}} 주도, 개인 적합도 평균 {{avgScore}}로 모든 차원의 기초력이 강함.",
+      "complementary": "{{diversity}}가지 기질 유형을 커버하여 상호 보완적인 강점으로 약점을 보완.",
+      "role-based": "작업에 필요한 {{roleCount}}개 핵심 역할을 커버하여 역할 분담이 명확."
+    },
+    "risk": {
+      "top-performers": "{{count}}명이 유사한 차원에서 중복될 수 있음, 약한 차원 커버 확인 필요.",
+      "complementary": "시너지는 {{count}}명의 다른 특성을 가진 멤버의 협력에 의존, 의사소통 강화 필요.",
+      "role-based": "역할 커버는 견고하지만 {{count}}인 팀은 추가 조정 비용이 발생할 수 있음."
     }
   }
 }
