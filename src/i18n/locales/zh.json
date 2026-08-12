@@ -549,7 +549,8 @@
     "riskLow": "低",
     "riskMedium": "中",
     "riskHigh": "高",
-    "confirmDeleteTask": "确认删除任务 \"{{name}}\" 吗？"
+    "confirmDeleteTask": "确认删除任务 \"{{name}}\" 吗？",
+    "forReferenceOnly": "基于任务参数与团队能力的估算值，仅供参考"
   },
   "privacy": {
     "title": "隐私政策",
@@ -816,7 +817,7 @@
     "subtitle": "基于任务参数和团队画像自动生成 2-3 个最优组合方案",
     "loading": "正在生成组合方案...",
     "empty": "至少需要 3 名被观察者才能生成组合推荐",
-    "synergyScore": "协同度",
+    "synergyScore": "团队适配度",
     "completionProb": "完成概率",
     "strategy": {
       "top-performers": "最强阵容",
@@ -832,6 +833,7 @@
       "top-performers": "{{count}} 名成员可能在相似维度上重叠，需关注弱势维度的覆盖。",
       "complementary": "协同度依赖 {{count}} 名不同特质成员的配合，执行中需加强沟通。",
       "role-based": "角色覆盖全面，但 {{count}} 人团队可能需要额外的协调成本。"
-    }
+    },
+    "forReferenceOnly": "基于任务参数与团队能力的估算值，仅供参考"
   }
 }

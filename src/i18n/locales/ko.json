@@ -549,7 +549,8 @@
     "riskLow": "낮음",
     "riskMedium": "중간",
     "riskHigh": "높음",
-    "confirmDeleteTask": "작업 \"{{name}}\" 을(를) 삭제하시겠습니까?"
+    "confirmDeleteTask": "작업 \"{{name}}\" 을(를) 삭제하시겠습니까?",
+    "forReferenceOnly": "작업 매개변수와 팀 역량 기반 추정치, 참고용"
   },
   "privacy": {
     "title": "개인정보 처리방침",
@@ -816,7 +817,7 @@
     "subtitle": "작업 매개변수를 기반으로 2-3개의 최적 팀 구성을 자동 생성",
     "loading": "조합 생성 중...",
     "empty": "조합 추천을 위해 최소 3명의 피관찰자가 필요합니다",
-    "synergyScore": "시너지",
+    "synergyScore": "팀 적합도",
     "completionProb": "달성 확률",
     "strategy": {
       "top-performers": "최강 멤버",
@@ -832,6 +833,7 @@
       "top-performers": "{{count}}명이 유사한 차원에서 중복될 수 있음, 약한 차원 커버 확인 필요.",
       "complementary": "시너지는 {{count}}명의 다른 특성을 가진 멤버의 협력에 의존, 의사소통 강화 필요.",
       "role-based": "역할 커버는 견고하지만 {{count}}인 팀은 추가 조정 비용이 발생할 수 있음."
-    }
+    },
+    "forReferenceOnly": "작업 매개변수와 팀 역량 기반 추정치, 참고용"
   }
 }

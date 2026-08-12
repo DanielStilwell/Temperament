@@ -549,7 +549,8 @@
     "riskLow": "Niedrig",
     "riskMedium": "Mittel",
     "riskHigh": "Hoch",
-    "confirmDeleteTask": "Aufgabe \"{{name}}\" wirklich löschen?"
+    "confirmDeleteTask": "Aufgabe \"{{name}}\" wirklich löschen?",
+    "forReferenceOnly": "Basierend auf Aufgabenparametern und Teamfähigkeiten geschätzt, nur Referenz"
   },
   "privacy": {
     "title": "Datenschutzerklärung",
@@ -816,7 +817,7 @@
     "subtitle": "Automatisch generierte 2-3 optimale Teamkonfigurationen",
     "loading": "Kombinationen werden erstellt...",
     "empty": "Mindestens 3 Beobachter erforderlich",
-    "synergyScore": "Synergie",
+    "synergyScore": "Team-Eignung",
     "completionProb": "Erfolgswahrsch.",
     "strategy": {
       "top-performers": "Top-Performer",
@@ -832,6 +833,7 @@
       "top-performers": "{{count}} Mitglieder überschneiden sich möglicherweise in ähnlichen Dimensionen.",
       "complementary": "Synergie hängt von der Zusammenarbeit zwischen {{count}} Mitgliedern mit verschiedenen Profilen ab.",
       "role-based": "Solide Rollenabdeckung, aber ein {{count}}-Personen-Team kann zusätzlichen Koordinationsaufwand erfordern."
-    }
+    },
+    "forReferenceOnly": "Basierend auf Aufgabenparametern und Teamfähigkeiten geschätzt, nur Referenz"
   }
 }

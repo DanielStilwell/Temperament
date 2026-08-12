@@ -549,7 +549,8 @@
     "riskLow": "Bajo",
     "riskMedium": "Medio",
     "riskHigh": "Alto",
-    "confirmDeleteTask": "¿Confirmar eliminación de la tarea \"{{name}}\"?"
+    "confirmDeleteTask": "¿Confirmar eliminación de la tarea \"{{name}}\"?",
+    "forReferenceOnly": "Estimado según parámetros de tarea y habilidades del equipo, solo referencia"
   },
   "privacy": {
     "title": "Política de Privacidad",
@@ -816,7 +817,7 @@
     "subtitle": "2-3 configuraciones óptimas generadas automáticamente según los parámetros de la tarea",
     "loading": "Generando combinaciones...",
     "empty": "Se necesitan al menos 3 observadores para generar recomendaciones",
-    "synergyScore": "Sinergia",
+    "synergyScore": "Adecuación",
     "completionProb": "Prob. de Éxito",
     "strategy": {
       "top-performers": "Mejores",
@@ -832,6 +833,7 @@
       "top-performers": "{{count}} miembros pueden superponerse en dimensiones similares; verificar áreas débiles.",
       "complementary": "La sinergia depende de la colaboración entre {{count}} miembros con perfiles diferentes.",
       "role-based": "Cobertura de roles sólida, pero un equipo de {{count}} personas puede requerir coordinación adicional."
-    }
+    },
+    "forReferenceOnly": "Estimado según parámetros de tarea y habilidades del equipo, solo referencia"
   }
 }

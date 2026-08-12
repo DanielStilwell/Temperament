@@ -549,7 +549,8 @@
     "riskLow": "Low",
     "riskMedium": "Medium",
     "riskHigh": "High",
-    "confirmDeleteTask": "Confirm delete task \"{{name}}\"?"
+    "confirmDeleteTask": "Confirm delete task \"{{name}}\"?",
+    "forReferenceOnly": "Estimated based on task parameters and team abilities, for reference only"
   },
   "privacy": {
     "title": "Privacy Policy",
@@ -816,7 +817,7 @@
     "subtitle": "Auto-generated 2-3 optimal team configurations based on task parameters",
     "loading": "Generating combinations...",
     "empty": "Need at least 3 observers to generate combination recommendations",
-    "synergyScore": "Synergy",
+    "synergyScore": "Team Fit",
     "completionProb": "Completion Prob.",
     "strategy": {
       "top-performers": "Top Performers",
@@ -832,6 +833,7 @@
       "top-performers": "{{count}} members may overlap in similar dimensions; verify coverage of weaker areas.",
       "complementary": "Synergy depends on collaboration among {{count}} members with different profiles; extra communication needed.",
       "role-based": "Solid role coverage, but a {{count}}-person team may need additional coordination overhead."
-    }
+    },
+    "forReferenceOnly": "Estimated based on task parameters and team abilities, for reference only"
   }
 }

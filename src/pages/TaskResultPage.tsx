@@ -138,6 +138,9 @@ export default function TaskResultPage() {
           <div className="mt-3 text-xs text-[#8E8CA8] leading-relaxed max-w-md mx-auto">
             {t('taskResult.fitMeta', { fit: p.overallFit, difficulty: task.params.base.difficulty, timePressure: task.params.base.timePressure, riskTolerance: task.params.base.riskTolerance })}
           </div>
+          <div className="mt-1.5 text-[10px] text-[#8E8CA8]/70 italic">
+            {t('taskResult.forReferenceOnly')}
+          </div>
         </div>
 
         {/* 适配度雷达图 */}

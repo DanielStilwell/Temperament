@@ -549,7 +549,8 @@
     "riskLow": "Faible",
     "riskMedium": "Moyen",
     "riskHigh": "Élevé",
-    "confirmDeleteTask": "Confirmer la suppression de la tâche « {{name}} » ?"
+    "confirmDeleteTask": "Confirmer la suppression de la tâche « {{name}} » ?",
+    "forReferenceOnly": "Estimation basée sur les paramètres de tâche et compétences d équipe, référence uniquement"
   },
   "privacy": {
     "title": "Politique de confidentialité",
@@ -816,7 +817,7 @@
     "subtitle": "2-3 configurations optimales générées automatiquement",
     "loading": "Génération des combinaisons...",
     "empty": "Au moins 3 observateurs nécessaires",
-    "synergyScore": "Synergie",
+    "synergyScore": "Aptitude",
     "completionProb": "Prob. de Réussite",
     "strategy": {
       "top-performers": "Meilleurs",
@@ -832,6 +833,7 @@
       "top-performers": "{{count}} membres peuvent se chevaucher dans des dimensions similaires.",
       "complementary": "La synergie dépend de la collaboration entre {{count}} membres aux profils différents.",
       "role-based": "Couverture de rôles solide, mais une équipe de {{count}} personnes peut nécessiter une coordination supplémentaire."
-    }
+    },
+    "forReferenceOnly": "Estimation basée sur les paramètres de tâche et compétences d équipe, référence uniquement"
   }
 }

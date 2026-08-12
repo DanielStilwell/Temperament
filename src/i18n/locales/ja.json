@@ -549,7 +549,8 @@
     "riskLow": "低",
     "riskMedium": "中",
     "riskHigh": "高",
-    "confirmDeleteTask": "タスク「{{name}}」を削除しますか？"
+    "confirmDeleteTask": "タスク「{{name}}」を削除しますか？",
+    "forReferenceOnly": "タスクパラメータとチーム能力に基づく推定値、参考目的のみ"
   },
   "privacy": {
     "title": "プライバシーポリシー",
@@ -816,7 +817,7 @@
     "subtitle": "タスクパラメータに基づき2-3の最適なチーム構成を自動生成",
     "loading": "組み合わせを生成中...",
     "empty": "組み合わせ推奨には3名以上の被観察者が必要です",
-    "synergyScore": "シナジー",
+    "synergyScore": "チーム適合度",
     "completionProb": "達成確率",
     "strategy": {
       "top-performers": "最強メンバー",
@@ -832,6 +833,7 @@
       "top-performers": "{{count}}名が類似次元で重複する可能性、弱い次元のカバー要確認。",
       "complementary": "シナジーは{{count}}名の異なる特質を持つメンバーの協力に依存、コミュニケーション強化が必要。",
       "role-based": "役割カバーは充実だが{{count}}人チームは追加の調整コストが発生する可能性。"
-    }
+    },
+    "forReferenceOnly": "タスクパラメータとチーム能力に基づく推定値、参考目的のみ"
   }
 }

@@ -97,6 +97,9 @@ export default function CombinationRecommender({ taskParams }: Props) {
                     style={{ width: `${combo.completionProbability}%`, background: synergyColor }}
                   />
                 </div>
+                <div className="mt-1 text-[10px] text-[#8E8CA8]/70 italic">
+                  {t('combination.forReferenceOnly')}
+                </div>
               </div>
 
               {/* Members */}
