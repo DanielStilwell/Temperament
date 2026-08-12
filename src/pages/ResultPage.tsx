@@ -8,6 +8,7 @@ import RadarChart from '../components/result/RadarChart';
 import DimensionDetails from '../components/result/DimensionDetails';
 import MotivationAnalysis from '../components/result/MotivationAnalysis';
 import ThinkingAnalysis from '../components/result/ThinkingAnalysis';
+import StrategyPanel from '../components/result/StrategyPanel';
 import ActionButtons from '../components/result/ActionButtons';
 import LanguageSwitcher from '../components/ui/LanguageSwitcher';
 
@@ -50,6 +51,12 @@ export default function ResultPage() {
         <MotivationAnalysis scores={result.motivationScores} />
 
         <ThinkingAnalysis scores={result.thinkingScores} />
+
+        <StrategyPanel
+          temperament={result.temperament}
+          abilityScores={result.abilityScores}
+          motivationScores={result.motivationScores}
+        />
 
         <Disclaimer />
 

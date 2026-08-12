@@ -262,6 +262,18 @@ export default function LandingPage() {
           </Link>
         </div>
 
+        {/* 更多策略按钮 */}
+        <div className="flex justify-center">
+          <a
+            href="https://www.dsrsilk.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-1.5 px-5 py-2 rounded-full bg-gradient-to-r from-[#5B4FCF] to-[#7B6FE0] text-white text-xs font-medium shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all duration-300"
+          >
+            {t('landing.moreStrategies')}
+          </a>
+        </div>
+
         <Disclaimer />
 
         <footer className="text-center text-xs text-[#8E8CA8]/70">

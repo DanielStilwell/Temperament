@@ -65,7 +65,8 @@
     "termsOfService": "Términos del Servicio",
     "footer": "© {{year}} Perspicacia del Temperamento · Solo para referencia de autoexploración e insights de equipo",
     "perPeriod": "/ {{period}}",
-    "billedAs": "{{perMonth}} facturado como {{display}}"
+    "billedAs": "{{perMonth}} facturado como {{display}}",
+    "moreStrategies": "Más Estrategias"
   },
   "home": {
     "selectProfession": "Selecciona el campo profesional del observado",
@@ -172,7 +173,13 @@
       "desc": "Sociable, respuesta rápida",
       "badge": "San",
       "animal": "Delfín",
-      "features": ["Sociable", "Respuesta rápida", "Extrovertido", "Adaptable", "Optimista"],
+      "features": [
+        "Sociable",
+        "Respuesta rápida",
+        "Extrovertido",
+        "Adaptable",
+        "Optimista"
+      ],
       "description": "El observado muestra una clara tendencia Sanguínea. Las personas con este temperamento suelen ser enérgicas y socialmente hábiles, capaces de adaptarse rápidamente a los cambios del entorno. Piensan con rapidez y son curiosas por las novedades, a menudo actuando como el rol clave para animar el ambiente del equipo. Nótese que, debido a sus amplios intereses, a veces desvían la atención con facilidad y pueden requerir autogestión adicional en tareas que exigen concentración sostenida."
     },
     "choleric": {
@@ -180,7 +187,13 @@
       "desc": "Decidido, gran determinación",
       "badge": "Col",
       "animal": "León",
-      "features": ["Energético", "Directo", "Decisivo", "Orientado a objetivos", "Líder nato"],
+      "features": [
+        "Energético",
+        "Directo",
+        "Decisivo",
+        "Orientado a objetivos",
+        "Líder nato"
+      ],
       "description": "El observado muestra una clara tendencia Colérica. Las personas con este temperamento poseen de forma natural un fuerte sentido de propósito y determinación, mostrando decisión y valentía ante los desafíos. Son francos y directos, sin andarse por las ramas — líderes e impulsores natos. Nótese que a veces pueden afectar las relaciones interpersonales por ser excesivamente directos; aprender a equilibrar sus propios puntos de vista con los sentimientos de los demás sería una valiosa dirección de crecimiento."
     },
     "phlegmatic": {
@@ -188,7 +201,13 @@
       "desc": "Tranquilo, emocionalmente estable",
       "badge": "Fle",
       "animal": "Elefante",
-      "features": ["Tranquilo", "Paciente", "Emocionalmente estable", "Concentrado", "Fiable"],
+      "features": [
+        "Tranquilo",
+        "Paciente",
+        "Emocionalmente estable",
+        "Concentrado",
+        "Fiable"
+      ],
       "description": "El observado muestra una clara tendencia Flemática. Las personas con este temperamento son como aguas tranquilas de gran profundidad — calmadas por fuera pero firmes por dentro. Trabajan de forma constante y fiable, no se dejan llevar fácilmente por las emociones, y sirven como fuerza estabilizadora del equipo. En tareas que requieren paciencia y perseverancia, a menudo muestran una resistencia extraordinaria. Su enfoque amable también los convierte en excelentes oyentes y mediadores."
     },
     "melancholic": {
@@ -196,7 +215,13 @@
       "desc": "Sensible, pensador profundo",
       "badge": "Mel",
       "animal": "Búho",
-      "features": ["Sensible", "Perceptivo", "Pensador profundo", "Perfeccionista", "Creativo"],
+      "features": [
+        "Sensible",
+        "Perceptivo",
+        "Pensador profundo",
+        "Perfeccionista",
+        "Creativo"
+      ],
       "description": "El observado muestra una clara tendencia Melancólica. Nótese que \"Melancólico\" aquí es un término psicológico de temperamento, no una referencia a un estado emocional. Las personas con este temperamento poseen una perspicacia aguda y una capacidad de pensamiento profundo, capaces de notar detalles que otros pasan por alto. Experimentan las emociones de forma profunda y tienen un mundo interior rico, destacando a menudo en la creación artística y el análisis profundo. Necesitan un entorno que les proporcione seguridad para expresar plenamente sus talentos."
     }
   },
@@ -664,6 +689,119 @@
       "contact": {
         "title": "12. Contacto",
         "p1": "Para cualquier pregunta o sugerencia, contáctanos en:"
+      }
+    }
+  },
+  "strategy": {
+    "title": "Estrategia de Interacción",
+    "subtitle": "Consejos personalizados basados en los resultados",
+    "strengths": "Fortalezas Naturales",
+    "growthAreas": "Áreas de Desarrollo",
+    "communication": "Consejos de Comunicación",
+    "motivation": {
+      "achievement": {
+        "tip": "Proporcionar metas desafiantes y estándares claros de logro para perseguir la excelencia"
+      },
+      "affiliation": {
+        "tip": "Fomentar un ambiente de equipo armonioso, asignar tareas colaborativas y valorar las necesidades sociales"
+      },
+      "power": {
+        "tip": "Conceder autoridad adecuada para tomar decisiones y oportunidades de liderazgo, respetando su influencia"
+      },
+      "security": {
+        "tip": "Proporcionar un entorno estable y predecible con reglas y expectativas claras"
+      }
+    },
+    "collaboration": "Consejos de Colaboración",
+    "conflictWarning": "Fricción Potencial",
+    "temperament": {
+      "sanguine": {
+        "strengths": [
+          "Hábil para crear un ambiente relajado y aliviar tensiones",
+          "Rápido en responder y muy adaptable",
+          "Fuerte influencia social"
+        ],
+        "growthAreas": [
+          "Puede necesitar más paciencia para planes a largo plazo",
+          "Puede necesitar más enfoque en gestión de detalles"
+        ],
+        "communication": [
+          "Mantener un tono relajado y amigable",
+          "Proporcionar comentarios positivos y reconocimiento",
+          "Evitar un lenguaje demasiado serio o crítico"
+        ],
+        "collaboration": [
+          "Adecuado como regulador del ambiente del equipo",
+          "Dar más espacio en lluvias de ideas creativas",
+          "Ideal para comunicación externa y tareas sociales"
+        ],
+        "conflict": "Puede sentirse limitado en tareas que requieren enfoque intenso y control de detalles; considere emparejar con compañeros complementarios"
+      },
+      "choleric": {
+        "strengths": [
+          "Decisivo y orientado a la acción",
+          "Influencia de liderazgo natural",
+          "Orientado a objetivos con fuerte ejecución"
+        ],
+        "growthAreas": [
+          "Puede necesitar más paciencia al escuchar a otros",
+          "Puede necesitar suavizar el estilo de comunicación"
+        ],
+        "communication": [
+          "Expresar metas y expectativas directamente",
+          "Evitar explicaciones largas y declaraciones vagas",
+          "Respetar su autonomía en la toma de decisiones"
+        ],
+        "collaboration": [
+          "Adecuado como tomador de decisiones y líder",
+          "Proporcionar metas claras y ámbito de autoridad",
+          "Aprovechar fortalezas orientadas a la acción en tareas urgentes"
+        ],
+        "conflict": "Las opiniones fuertes pueden chocar con otros; permitir espacio de compromiso en discusiones"
+      },
+      "phlegmatic": {
+        "strengths": [
+          "Ejecución estable y confiable",
+          "Hábil en coordinar y resolver conflictos",
+          "Paciente, detallista y adaptable"
+        ],
+        "growthAreas": [
+          "Puede necesitar más tiempo para adaptarse al cambio",
+          "Puede necesitar estímulo para expresar opiniones"
+        ],
+        "communication": [
+          "Permitir tiempo amplio para pensar y responder",
+          "Usar un tono tranquilo y estable",
+          "Evitar presión o prisa"
+        ],
+        "collaboration": [
+          "Adecuado como coordinador y estabilizador",
+          "Destacar en tareas que requieren paciencia y detalle",
+          "Servir como presencia equilibradora en equipos"
+        ],
+        "conflict": "Las tendencias pasivas pueden llevar a que se pasen por alto sus necesidades; preguntar activamente por sus pensamientos"
+      },
+      "melancholic": {
+        "strengths": [
+          "Pensador profundo con fuertes habilidades analíticas",
+          "Orientado al detalle, buscando calidad",
+          "Excelente perspicacia y empatía"
+        ],
+        "growthAreas": [
+          "Puede necesitar más confianza y apoyo en la toma de decisiones",
+          "Puede necesitar más apoyo emocional bajo presión"
+        ],
+        "communication": [
+          "Usar un lenguaje suave y preciso",
+          "Permitir suficiente tiempo de preparación y reflexión",
+          "Reconocer sus contribuciones y esfuerzos"
+        ],
+        "collaboration": [
+          "Adecuado para roles de análisis y control de calidad",
+          "Destacar en tareas que requieren pensamiento profundo",
+          "Proporcionar descripciones claras de tareas y expectativas"
+        ],
+        "conflict": "La sensibilidad puede amplificar el impacto de las críticas; usar retroalimentación constructiva con estímulo"
       }
     }
   }

@@ -65,7 +65,8 @@
     "termsOfService": "Terms of Service",
     "footer": "© {{year}} Temperament Insight · For self-exploration & team insight reference only",
     "perPeriod": "/ {{period}}",
-    "billedAs": "{{perMonth}} billed as {{display}}"
+    "billedAs": "{{perMonth}} billed as {{display}}",
+    "moreStrategies": "More Strategies"
   },
   "home": {
     "selectProfession": "Select the observer's professional field",
@@ -172,7 +173,13 @@
       "desc": "Sociable, quick response",
       "badge": "San",
       "animal": "Dolphin",
-      "features": ["Sociable", "Quick Response", "Outgoing", "Adaptable", "Optimistic"],
+      "features": [
+        "Sociable",
+        "Quick Response",
+        "Outgoing",
+        "Adaptable",
+        "Optimistic"
+      ],
       "description": "The observer exhibits a distinct Sanguine tendency. People with this temperament are typically energetic and socially adept, able to quickly adapt to environmental changes. They think quickly and are curious about new things, often serving as the key role in enlivening team atmosphere. Note that they may sometimes shift attention easily due to wide interests, and tasks requiring sustained focus may need extra self-management."
     },
     "choleric": {
@@ -180,7 +187,13 @@
       "desc": "Decisive, strong drive",
       "badge": "Cho",
       "animal": "Lion",
-      "features": ["Energetic", "Direct", "Decisive", "Goal-Oriented", "Strong Leader"],
+      "features": [
+        "Energetic",
+        "Direct",
+        "Decisive",
+        "Goal-Oriented",
+        "Strong Leader"
+      ],
       "description": "The observer exhibits a distinct Choleric tendency. People with this temperament naturally possess a strong sense of purpose and drive, showing decisiveness and courage when facing challenges. They are frank and straightforward, not beating around the bush — natural leaders and drivers. Note that they may sometimes affect interpersonal relationships by being overly direct; learning to balance their own views with others' feelings would be a valuable growth direction."
     },
     "phlegmatic": {
@@ -188,7 +201,13 @@
       "desc": "Calm, emotionally stable",
       "badge": "Phl",
       "animal": "Elephant",
-      "features": ["Calm", "Patient", "Emotionally Stable", "Focused", "Reliable"],
+      "features": [
+        "Calm",
+        "Patient",
+        "Emotionally Stable",
+        "Focused",
+        "Reliable"
+      ],
       "description": "The observer exhibits a distinct Phlegmatic tendency. People with this temperament are like still waters running deep — calm on the outside but steadfast within. They work steadily and reliably, not easily swayed by emotions, serving as the stabilizing force in a team. In tasks requiring patience and persistence, they often demonstrate extraordinary resilience. Their gentle approach also makes them excellent listeners and mediators."
     },
     "melancholic": {
@@ -196,7 +215,13 @@
       "desc": "Sensitive, deep thinker",
       "badge": "Mel",
       "animal": "Owl",
-      "features": ["Sensitive", "Perceptive", "Deep Thinker", "Perfectionist", "Creative"],
+      "features": [
+        "Sensitive",
+        "Perceptive",
+        "Deep Thinker",
+        "Perfectionist",
+        "Creative"
+      ],
       "description": "The observer exhibits a distinct Melancholic tendency. Note that \"Melancholic\" here is a psychological temperament term, not a reference to emotional state. People with this temperament possess keen insight and deep thinking ability, able to notice details others easily overlook. They experience emotions profoundly and have rich inner worlds, often excelling in artistic creation and in-depth analysis. They need an environment that provides a sense of security to fully express their talents."
     }
   },
@@ -664,6 +689,119 @@
       "contact": {
         "title": "12. Contact Us",
         "p1": "For any questions or suggestions, please contact:"
+      }
+    }
+  },
+  "strategy": {
+    "title": "Interaction Strategy",
+    "subtitle": "Personalized advice based on assessment results",
+    "strengths": "Natural Strengths",
+    "growthAreas": "Areas for Growth",
+    "communication": "Communication Tips",
+    "motivation": {
+      "achievement": {
+        "tip": "Provide challenging goals and clear achievement standards to pursue excellence"
+      },
+      "affiliation": {
+        "tip": "Foster a harmonious team atmosphere, assign collaborative tasks, and value social needs"
+      },
+      "power": {
+        "tip": "Grant appropriate decision-making authority and leadership opportunities, respecting their influence"
+      },
+      "security": {
+        "tip": "Provide a stable and predictable environment with clear rules and expectations"
+      }
+    },
+    "collaboration": "Collaboration Tips",
+    "conflictWarning": "Potential Friction",
+    "temperament": {
+      "sanguine": {
+        "strengths": [
+          "Skilled at creating a relaxed atmosphere and easing tension",
+          "Quick to respond and highly adaptable",
+          "Strong social influence"
+        ],
+        "growthAreas": [
+          "May need more patience for long-term plan execution",
+          "May need more focus on detail management"
+        ],
+        "communication": [
+          "Maintain a relaxed and friendly tone",
+          "Provide positive feedback and recognition",
+          "Avoid overly serious or critical language"
+        ],
+        "collaboration": [
+          "Suited as team atmosphere regulator",
+          "Give more space in creative brainstorming",
+          "Ideal for external communication and social tasks"
+        ],
+        "conflict": "May feel constrained in tasks requiring intense focus and detail control; consider pairing with complementary partners"
+      },
+      "choleric": {
+        "strengths": [
+          "Decisive and action-oriented",
+          "Natural leadership influence",
+          "Goal-driven with strong execution"
+        ],
+        "growthAreas": [
+          "May need more patience when listening to others",
+          "May need to soften communication style"
+        ],
+        "communication": [
+          "State goals and expectations directly",
+          "Avoid lengthy explanations and vague statements",
+          "Respect their autonomy in decision-making"
+        ],
+        "collaboration": [
+          "Suited as decision-maker and leader",
+          "Provide clear goals and authority scope",
+          "Leverage action-oriented strengths in urgent tasks"
+        ],
+        "conflict": "Strong opinions may clash with others; allow buffer room and compromise in discussions"
+      },
+      "phlegmatic": {
+        "strengths": [
+          "Steady and reliable execution",
+          "Skilled at coordinating and resolving conflicts",
+          "Patient, detail-oriented, and adaptable"
+        ],
+        "growthAreas": [
+          "May need more time to adapt to change",
+          "May need encouragement to voice opinions"
+        ],
+        "communication": [
+          "Allow ample time for thinking and response",
+          "Use a calm and steady tone",
+          "Avoid pressure or rushing"
+        ],
+        "collaboration": [
+          "Suited as coordinator and stabilizer",
+          "Excel in tasks requiring patience and detail",
+          "Serve as a balancing and buffering presence in teams"
+        ],
+        "conflict": "Passive tendencies may lead to needs being overlooked; proactively ask for their thoughts and feelings"
+      },
+      "melancholic": {
+        "strengths": [
+          "Deep thinker with strong analytical skills",
+          "Detail-oriented, pursuing quality",
+          "Outstanding insight and empathy"
+        ],
+        "growthAreas": [
+          "May need more confidence and support in decision-making",
+          "May need more emotional support under pressure"
+        ],
+        "communication": [
+          "Use gentle and precise wording",
+          "Allow sufficient preparation and thinking time",
+          "Acknowledge their contributions and efforts"
+        ],
+        "collaboration": [
+          "Suited for analysis and quality control roles",
+          "Excel in tasks requiring deep thinking",
+          "Provide clear task descriptions and expectations"
+        ],
+        "conflict": "Sensitivity may amplify the impact of criticism; use constructive feedback paired with encouragement"
       }
     }
   }
