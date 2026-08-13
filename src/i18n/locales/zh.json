@@ -39,22 +39,24 @@
       "subtitle": "个人气质与能力探索",
       "cta": "免费开始",
       "feature1": "评估气质类型",
-      "feature2": "分析 6 项能力维度"
+      "feature2": "分析 6 项能力维度",
+      "feature3": "相处策略 + 结果分享"
     },
     "pro": {
       "name": "Pro",
-      "subtitle": "团队气质与能力洞察",
+      "subtitle": "团队洞察 + 任务匹配预测",
       "cta": "选择 Pro",
       "feature1": "最多 60 位被观察者",
-      "feature2": "团队气质与能力分析"
+      "feature2": "团队聚合分析",
+      "feature3": "任务匹配度预测"
     },
     "max": {
       "name": "Max",
-      "subtitle": "任务完成度预测",
+      "subtitle": "最优团队编排引擎",
       "cta": "选择 Max",
       "feature1": "最多 160 位被观察者",
-      "feature2": "团队聚合分析",
-      "feature3": "任务匹配度预测"
+      "feature2": "含 Pro 全部功能",
+      "feature3": "最优人员组合推荐"
     }
   },
   "landing": {

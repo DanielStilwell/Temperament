@@ -39,22 +39,24 @@
       "subtitle": "Persönliche Temperament- & Fähigkeitsforschung",
       "cta": "Kostenlos starten",
       "feature1": "Temperamentstyp bewerten",
-      "feature2": "6 Fähigkeitsdimensionen analysieren"
+      "feature2": "6 Fähigkeitsdimensionen analysieren",
+      "feature3": "Strategie-Tipps + Teilen"
     },
     "pro": {
       "name": "Pro",
-      "subtitle": "Team-Temperament- & Fähigkeits-Einblicke",
+      "subtitle": "Team-Einblicke + Aufgaben-Passung",
       "cta": "Pro auswählen",
       "feature1": "Bis zu 60 Beobachtete",
-      "feature2": "Team-Temperament- & Fähigkeitsanalyse"
+      "feature2": "Team-Aggregatanalyse",
+      "feature3": "Vorhersage der Aufgabe-Passung"
     },
     "max": {
       "name": "Max",
-      "subtitle": "Vorhersage der Aufgabenerledigung",
+      "subtitle": "Optimale Team-Orchestrierung",
       "cta": "Max auswählen",
       "feature1": "Bis zu 160 Beobachtete",
-      "feature2": "Team-Aggregatanalyse",
-      "feature3": "Vorhersage der Aufgabe-Passung"
+      "feature2": "Alle Pro-Funktionen enthalten",
+      "feature3": "Optimale Team-Kombination"
     }
   },
   "landing": {

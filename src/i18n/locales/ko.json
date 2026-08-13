@@ -39,22 +39,24 @@
       "subtitle": "개인 기질·능력 탐색",
       "cta": "무료로 시작",
       "feature1": "기질 유형 진단",
-      "feature2": "6가지 능력 차원 분석"
+      "feature2": "6가지 능력 차원 분석",
+      "feature3": "전략 팁 + 공유"
     },
     "pro": {
       "name": "Pro",
-      "subtitle": "팀 기질·능력 인사이트",
+      "subtitle": "팀 인사이트 + 작업 적합도 예측",
       "cta": "Pro 선택",
       "feature1": "최대 60명 피관찰자",
-      "feature2": "팀 기질·능력 분석"
+      "feature2": "팀 종합 분석",
+      "feature3": "작업 적합도 예측"
     },
     "max": {
       "name": "Max",
-      "subtitle": "작업 완료 예측",
+      "subtitle": "최적 팀 편성 엔진",
       "cta": "Max 선택",
       "feature1": "최대 160명 피관찰자",
-      "feature2": "팀 종합 분석",
-      "feature3": "작업 적합도 예측"
+      "feature2": "Pro의 모든 기능 포함",
+      "feature3": "최적 팀 조합 추천"
     }
   },
   "landing": {

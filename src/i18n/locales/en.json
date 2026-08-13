@@ -39,22 +39,24 @@
       "subtitle": "Personal temperament & ability exploration",
       "cta": "Start Free",
       "feature1": "Assess temperament type",
-      "feature2": "Analyze 6 ability dimensions"
+      "feature2": "Analyze 6 ability dimensions",
+      "feature3": "Strategy tips + share card"
     },
     "pro": {
       "name": "Pro",
-      "subtitle": "Team temperament & ability insights",
+      "subtitle": "Team insights + task fit prediction",
       "cta": "Select Pro",
       "feature1": "Up to 60 observers",
-      "feature2": "Team temperament & ability analysis"
+      "feature2": "Team aggregate analysis",
+      "feature3": "Task fit prediction"
     },
     "max": {
       "name": "Max",
-      "subtitle": "Task completion prediction",
+      "subtitle": "Optimal team orchestration",
       "cta": "Select Max",
       "feature1": "Up to 160 observers",
-      "feature2": "Team aggregate analysis",
-      "feature3": "Task fit prediction"
+      "feature2": "Includes all Pro features",
+      "feature3": "Optimal team combination"
     }
   },
   "landing": {

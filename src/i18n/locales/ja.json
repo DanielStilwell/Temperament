@@ -39,22 +39,24 @@
       "subtitle": "個人の気質・能力の探求",
       "cta": "無料で始める",
       "feature1": "気質タイプを診断",
-      "feature2": "6つの能力次元を分析"
+      "feature2": "6つの能力次元を分析",
+      "feature3": "戦略アドバイス + シェア"
     },
     "pro": {
       "name": "Pro",
-      "subtitle": "チームの気質・能力のインサイト",
+      "subtitle": "チーム洞察 + タスク適合予測",
       "cta": "Proを選択",
       "feature1": "最大60人の被観察者",
-      "feature2": "チームの気質・能力分析"
+      "feature2": "チーム集計分析",
+      "feature3": "タスク適合予測"
     },
     "max": {
       "name": "Max",
-      "subtitle": "タスク完了予測",
+      "subtitle": "最適チーム編成エンジン",
       "cta": "Maxを選択",
       "feature1": "最大160人の被観察者",
-      "feature2": "チーム集計分析",
-      "feature3": "タスク適合予測"
+      "feature2": "Proの全機能を含む",
+      "feature3": "最適チーム組み合わせ推奨"
     }
   },
   "landing": {

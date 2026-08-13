@@ -173,7 +173,7 @@ export default function LandingPage() {
             const features: string[] = [
               t(`tiers.${tierKey}.feature1`),
               t(`tiers.${tierKey}.feature2`),
-              ...(tierKey === 'max' ? [t('tiers.max.feature3')] : []),
+              t(`tiers.${tierKey}.feature3`),
             ];
 
             return (

@@ -39,22 +39,24 @@
       "subtitle": "Exploración de temperamento y habilidades personales",
       "cta": "Comenzar gratis",
       "feature1": "Evaluar tipo de temperamento",
-      "feature2": "Analizar 6 dimensiones de habilidades"
+      "feature2": "Analizar 6 dimensiones de habilidades",
+      "feature3": "Consejos de estrategia + compartir"
     },
     "pro": {
       "name": "Pro",
-      "subtitle": "Insights de temperamento y habilidades del equipo",
+      "subtitle": "Insights de equipo + predicción de tareas",
       "cta": "Seleccionar Pro",
       "feature1": "Hasta 60 observados",
-      "feature2": "Análisis de temperamento y habilidades del equipo"
+      "feature2": "Análisis agregado del equipo",
+      "feature3": "Predicción de ajuste de tareas"
     },
     "max": {
       "name": "Max",
-      "subtitle": "Predicción de finalización de tareas",
+      "subtitle": "Orquestación óptima de equipos",
       "cta": "Seleccionar Max",
       "feature1": "Hasta 160 observados",
-      "feature2": "Análisis agregado del equipo",
-      "feature3": "Predicción de ajuste de tareas"
+      "feature2": "Incluye todas las funciones Pro",
+      "feature3": "Combinación óptima de equipo"
     }
   },
   "landing": {

@@ -39,22 +39,24 @@
       "subtitle": "Exploration personnelle du tempérament et des aptitudes",
       "cta": "Commencer gratuitement",
       "feature1": "Évaluer le type de tempérament",
-      "feature2": "Analyser 6 dimensions d'aptitude"
+      "feature2": "Analyser 6 dimensions d'aptitude",
+      "feature3": "Conseils de stratégie + partage"
     },
     "pro": {
       "name": "Pro",
-      "subtitle": "Aperçus du tempérament et des aptitudes d'équipe",
+      "subtitle": "Insights d'équipe + prédiction de tâches",
       "cta": "Choisir Pro",
       "feature1": "Jusqu'à 60 observés",
-      "feature2": "Analyse du tempérament et des aptitudes d'équipe"
+      "feature2": "Analyse agrégée de l'équipe",
+      "feature3": "Prédiction de l'adéquation aux tâches"
     },
     "max": {
       "name": "Max",
-      "subtitle": "Prédiction de l'accomplissement des tâches",
+      "subtitle": "Orchestration optimale d'équipe",
       "cta": "Choisir Max",
       "feature1": "Jusqu'à 160 observés",
-      "feature2": "Analyse agrégée de l'équipe",
-      "feature3": "Prédiction de l'adéquation aux tâches"
+      "feature2": "Toutes les fonctionnalités Pro incluses",
+      "feature3": "Combinaison d'équipe optimale"
     }
   },
   "landing": {
